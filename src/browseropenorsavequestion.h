@@ -25,7 +25,8 @@
 #include "browserrun.h"
 #include <kservice.h>
 
-namespace KParts {
+namespace KParts
+{
 
 class BrowserOpenOrSaveQuestionPrivate;
 
@@ -45,14 +46,14 @@ public:
      * @param url the URL in question
      * @param mimeType the mimetype of the URL
      */
-    BrowserOpenOrSaveQuestion(QWidget* parent, const QUrl& url, const QString& mimeType);
+    BrowserOpenOrSaveQuestion(QWidget *parent, const QUrl &url, const QString &mimeType);
     ~BrowserOpenOrSaveQuestion();
 
     /**
      * Sets the suggested filename, shown in the dialog.
      * @param suggestedFileName optional file name suggested by the server (HTTP Content-Disposition)
      */
-    void setSuggestedFileName(const QString& suggestedFileName);
+    void setSuggestedFileName(const QString &suggestedFileName);
 
     /**
      * Set of features that should be enabled in this dialog.
@@ -62,7 +63,7 @@ public:
      */
     enum Feature { BasicFeatures = 0, /**< Only the basic save, open, embed, cancel button */
                    ServiceSelection = 1 /**< Shows "Open With..." with the associated applications for the mimetype */
-    };
+                 };
     Q_DECLARE_FLAGS(Features, Feature)
 
     /**
@@ -71,7 +72,7 @@ public:
     void setFeatures(Features features);
 
     enum Result { Save, Open, Embed, Cancel };
-    
+
     /**
      * Ask the user whether to save or open a url in another application.
      * @param parent parent widget for the dialog
@@ -89,7 +90,7 @@ public:
      */
     Result askEmbedOrSave(int flags = 0);
     // KDE5 TODO: move BrowserRun::AskEmbedOrSaveFlags to this class.
-    
+
     // TODO askOpenEmbedOrSave
 
     /**
@@ -103,7 +104,7 @@ public:
     KService::Ptr selectedService() const;
 
 private:
-    BrowserOpenOrSaveQuestionPrivate* const d;
+    BrowserOpenOrSaveQuestionPrivate *const d;
 };
 
 }

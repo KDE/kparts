@@ -46,14 +46,14 @@ class KPARTS_EXPORT HtmlExtension : public QObject
 {
     Q_OBJECT
 public:
-    HtmlExtension(KParts::ReadOnlyPart* parent);
+    HtmlExtension(KParts::ReadOnlyPart *parent);
     ~HtmlExtension();
 
     /**
      * Queries @p obj for a child object which inherits from this
      * HtmlExtension class.
      */
-    static HtmlExtension *childObject( QObject *obj );
+    static HtmlExtension *childObject(QObject *obj);
 
     /**
      * Returns the current base url of the part that implements this extension.
@@ -73,7 +73,7 @@ public:
 
 private:
     // for future extensions
-    HtmlExtensionPrivate* const d;
+    HtmlExtensionPrivate *const d;
 };
 
 /**
@@ -109,9 +109,9 @@ public:
 
     /**
      * Returns the supported query methods.
-     * 
+     *
      * By default this function returns None.
-     * 
+     *
      * @see QueryMethod
      */
     virtual QueryMethods supportedQueryMethods() const;
@@ -119,34 +119,35 @@ public:
     /**
      * Returns the first (in document order) element in this fragment matching
      * the given CSS selector @p query and querying method @p method.
-     * 
+     *
      * Note that since the returned item is static snapshot, i.e. not live, it
      * will not be updated when the document changes.
-     * 
+     *
      * If the quering method specified by @p method is not supported or cannot be
      * handled, then a null element is returned.
-     * 
+     *
      * @see supportedQueryMethods
      * @see QueryMethod
      */
-    virtual Element querySelector(const QString& query, QueryMethod method) const = 0;
+    virtual Element querySelector(const QString &query, QueryMethod method) const = 0;
 
     /**
      * Returns all (in document order) elements in this fragment matching the
      * given CSS selector @p query and querying method @p method.
-     * 
-     * Note that since the returned list is static snapshot, i.e. not live, it 
+     *
+     * Note that since the returned list is static snapshot, i.e. not live, it
      * will not be updated when the document changes.
-     * 
+     *
      * If the quering method specified by @p method is not supported or cannot be
      * handled, then an empty list is returned.
-     * 
+     *
      * @see supportedQueryMethods
      * @see QueryMethod
      */
-    virtual QList<Element> querySelectorAll(const QString& query, QueryMethod method) const = 0;
+    virtual QList<Element> querySelectorAll(const QString &query, QueryMethod method) const = 0;
 
-    class KPARTS_EXPORT Element {
+    class KPARTS_EXPORT Element
+    {
     public:
         /**
          * Constructor
@@ -156,7 +157,7 @@ public:
         /**
          * Copy constructor
          */
-        Element(const Element& other);
+        Element(const Element &other);
 
         /**
          * Destructor
@@ -171,7 +172,7 @@ public:
         /**
          * Sets the tag name of this element.
          */
-        void setTagName(const QString& tag);
+        void setTagName(const QString &tag);
 
         /**
          * Returns the tag name of this element.
@@ -182,7 +183,7 @@ public:
          * Adds an attribute with the given name and value.
          * If an attribute with the same name exists, its value is replaced by value.
          */
-        void setAttribute(const QString& name, const QString& value);
+        void setAttribute(const QString &name, const QString &value);
 
         /**
          * Returns the list of attributes in this element.
@@ -192,29 +193,31 @@ public:
         /**
          * Returns the attribute with the given name. If the attribute does not exist, defaultValue is returned.
          */
-        QString attribute(const QString& name, const QString& defaultValue = QString()) const;
+        QString attribute(const QString &name, const QString &defaultValue = QString()) const;
 
         /**
          * Returns true if the attribute with the given @p name exists.
          */
-        bool hasAttribute(const QString& name) const;
+        bool hasAttribute(const QString &name) const;
 
         // No namespace support yet, could be added with attributeNS, setAttributeNS
 
         /**
          * Swaps the contents of @p other with the contents of this.
          */
-        void swap( Element& other ) {
-            d.swap( other.d );
+        void swap(Element &other)
+        {
+            d.swap(other.d);
         }
 
         /**
          * Assignment operator
          */
-        Element& operator=(const Element& other) {
-            if ( this != &other ) {
-                Element copy( other );
-                swap( copy );
+        Element &operator=(const Element &other)
+        {
+            if (this != &other) {
+                Element copy(other);
+                swap(copy);
             }
             return *this;
         }
@@ -268,7 +271,7 @@ public:
      * @since 4.8.2
      */
     enum JavaScriptAdvice {
-        JavaScriptDunno=0,
+        JavaScriptDunno = 0,
         JavaScriptAccept,
         JavaScriptReject
     };
@@ -279,7 +282,7 @@ public:
      * @since 4.8.2
      */
     enum JSWindowOpenPolicy {
-        JSWindowOpenAllow=0,
+        JSWindowOpenAllow = 0,
         JSWindowOpenAsk,
         JSWindowOpenDeny,
         JSWindowOpenSmart
@@ -291,7 +294,7 @@ public:
      * @since 4.8.2
      */
     enum JSWindowStatusPolicy {
-        JSWindowStatusAllow=0,
+        JSWindowStatusAllow = 0,
         JSWindowStatusIgnore
     };
 
@@ -301,7 +304,7 @@ public:
      * @since 4.8.2
      */
     enum JSWindowMovePolicy {
-        JSWindowMoveAllow=0,
+        JSWindowMoveAllow = 0,
         JSWindowMoveIgnore
     };
 
@@ -311,7 +314,7 @@ public:
      * @since 4.8.2
      */
     enum JSWindowResizePolicy {
-        JSWindowResizeAllow=0,
+        JSWindowResizeAllow = 0,
         JSWindowResizeIgnore
     };
 
@@ -321,7 +324,7 @@ public:
      * @since 4.8.2
      */
     enum JSWindowFocusPolicy {
-        JSWindowFocusAllow=0,
+        JSWindowFocusAllow = 0,
         JSWindowFocusIgnore
     };
 
@@ -338,49 +341,49 @@ public:
     /**
      * Sets the value of the browser engine's attribute @p type to @p value.
      */
-    virtual bool setHtmlSettingsProperty(HtmlSettingsType type, const QVariant& value) = 0;
+    virtual bool setHtmlSettingsProperty(HtmlSettingsType type, const QVariant &value) = 0;
 
-   /**
-    * A convenience function that returns the javascript advice for @p text.
-    *
-    * If text is not either "accept" or "reject", this function returns
-    * @ref JavaScriptDunno.
-    *
-    *  @since 4.8.2
-    */
-    static JavaScriptAdvice textToJavascriptAdvice(const QString& text);
+    /**
+     * A convenience function that returns the javascript advice for @p text.
+     *
+     * If text is not either "accept" or "reject", this function returns
+     * @ref JavaScriptDunno.
+     *
+     *  @since 4.8.2
+     */
+    static JavaScriptAdvice textToJavascriptAdvice(const QString &text);
 
-   /**
-    * A convenience function Returns the text for the given JavascriptAdvice @p advice.
-    *
-    * If @p advice is not either JavaScriptAccept or JavaScriptReject, this
-    * function returns a NULL string.
-    *
-    *  @since 4.8.2
-    */
-    static const char* javascriptAdviceToText(JavaScriptAdvice advice);
+    /**
+     * A convenience function Returns the text for the given JavascriptAdvice @p advice.
+     *
+     * If @p advice is not either JavaScriptAccept or JavaScriptReject, this
+     * function returns a NULL string.
+     *
+     *  @since 4.8.2
+     */
+    static const char *javascriptAdviceToText(JavaScriptAdvice advice);
 
-   /**
-    * A convenience function that splits @p text into @p domain, @p javaAdvice
-    * and @p jScriptAdvice.
-    *
-    * If @p text is empty or does not contain the proper delimiter (':'), this
-    * function will set @p domain to @p text and the other two parameters to
-    * JavaScriptDunno.
-    *
-    *  @since 4.8.2
-    */
-    static void splitDomainAdvice(const QString& text,
-                                  QString& domain,
-                                  JavaScriptAdvice& javaAdvice,
-                                  JavaScriptAdvice& javaScriptAdvice);
+    /**
+     * A convenience function that splits @p text into @p domain, @p javaAdvice
+     * and @p jScriptAdvice.
+     *
+     * If @p text is empty or does not contain the proper delimiter (':'), this
+     * function will set @p domain to @p text and the other two parameters to
+     * JavaScriptDunno.
+     *
+     *  @since 4.8.2
+     */
+    static void splitDomainAdvice(const QString &text,
+                                  QString &domain,
+                                  JavaScriptAdvice &javaAdvice,
+                                  JavaScriptAdvice &javaScriptAdvice);
 };
 
 } // namespace KParts
 
-inline void qSwap( KParts::SelectorInterface::Element & lhs, KParts::SelectorInterface::Element & rhs )
+inline void qSwap(KParts::SelectorInterface::Element &lhs, KParts::SelectorInterface::Element &rhs)
 {
-    lhs.swap( rhs );
+    lhs.swap(rhs);
 }
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KParts::SelectorInterface::QueryMethods)
@@ -391,6 +394,5 @@ Q_DECLARE_INTERFACE(KParts::SelectorInterface,
                     "org.kde.KParts.SelectorInterface")
 Q_DECLARE_INTERFACE(KParts::HtmlSettingsInterface,
                     "org.kde.KParts.HtmlSettingsInterface")
-
 
 #endif /* KPARTS_HTMLEXTENSION_H */

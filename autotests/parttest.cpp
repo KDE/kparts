@@ -29,15 +29,20 @@ QTEST_MAIN(PartTest)
 class TestPart : public KParts::ReadOnlyPart
 {
 public:
-    TestPart(QObject* parent, QWidget* parentWidget)
+    TestPart(QObject *parent, QWidget *parentWidget)
         : KParts::ReadOnlyPart(parent),
-          m_openFileCalled(false) {
+          m_openFileCalled(false)
+    {
         setWidget(new QWidget(parentWidget));
     }
 
-    bool openFileCalled() const { return m_openFileCalled; }
+    bool openFileCalled() const
+    {
+        return m_openFileCalled;
+    }
 protected:
-    /*reimp*/ bool openFile() {
+    /*reimp*/ bool openFile()
+    {
         m_openFileCalled = true;
         return true;
     }
@@ -47,7 +52,7 @@ private:
 
 void PartTest::testAutoDeletePart()
 {
-    KParts::Part* part = new TestPart(0, 0);
+    KParts::Part *part = new TestPart(0, 0);
     QPointer<KParts::Part> partPointer(part);
     delete part->widget();
     QVERIFY(partPointer.isNull());
@@ -55,7 +60,7 @@ void PartTest::testAutoDeletePart()
 
 void PartTest::testAutoDeleteWidget()
 {
-    KParts::Part* part = new TestPart(0, 0);
+    KParts::Part *part = new TestPart(0, 0);
     QPointer<KParts::Part> partPointer(part);
     QPointer<QWidget> widgetPointer(part->widget());
     delete part;
@@ -64,40 +69,40 @@ void PartTest::testAutoDeleteWidget()
 
 void PartTest::testNoAutoDeletePart()
 {
-    KParts::Part* part = new TestPart(0, 0);
+    KParts::Part *part = new TestPart(0, 0);
     part->setAutoDeletePart(false);
     QPointer<KParts::Part> partPointer(part);
     delete part->widget();
     QVERIFY(part->widget() == 0);
-    QCOMPARE(static_cast<KParts::Part*>(partPointer), part);
+    QCOMPARE(static_cast<KParts::Part *>(partPointer), part);
     delete part;
 }
 
 void PartTest::testNoAutoDeleteWidget()
 {
-    KParts::Part* part = new TestPart(0, 0);
+    KParts::Part *part = new TestPart(0, 0);
     part->setAutoDeleteWidget(false);
-    QWidget* widget = part->widget();
+    QWidget *widget = part->widget();
     QVERIFY(widget);
     QPointer<QWidget> widgetPointer(part->widget());
     delete part;
-    QCOMPARE(static_cast<QWidget*>(widgetPointer), widget);
+    QCOMPARE(static_cast<QWidget *>(widgetPointer), widget);
     delete widget;
 }
 
 // There is no operator== in OpenUrlArguments because it's only useful in unit tests
-static bool compareArgs(const KParts::OpenUrlArguments& arg1,
-                        const KParts::OpenUrlArguments& arg2)
+static bool compareArgs(const KParts::OpenUrlArguments &arg1,
+                        const KParts::OpenUrlArguments &arg2)
 {
     return arg1.mimeType() == arg2.mimeType() &&
-        arg1.xOffset() == arg2.xOffset() &&
-        arg1.yOffset() == arg2.yOffset() &&
-        arg1.reload() == arg2.reload();
+           arg1.xOffset() == arg2.xOffset() &&
+           arg1.yOffset() == arg2.yOffset() &&
+           arg1.reload() == arg2.reload();
 }
 
 void PartTest::testOpenUrlArguments()
 {
-    TestPart* part = new TestPart(0, 0);
+    TestPart *part = new TestPart(0, 0);
     QVERIFY(part->closeUrl()); // nothing to do, no error
     QVERIFY(part->arguments().mimeType().isEmpty());
     KParts::OpenUrlArguments args;
@@ -125,7 +130,7 @@ void PartTest::testOpenUrlArguments()
 
 void PartTest::testAutomaticMimeType()
 {
-    TestPart* part = new TestPart(0, 0);
+    TestPart *part = new TestPart(0, 0);
     QVERIFY(part->closeUrl()); // nothing to do, no error
     QVERIFY(part->arguments().mimeType().isEmpty());
     // open a file, and test the detected mimetype
@@ -169,7 +174,8 @@ void PartTest::testAutomaticMimeType()
 class MyMainWindow : public KParts::MainWindow
 {
 public:
-    MyMainWindow() : KParts::MainWindow() {
+    MyMainWindow() : KParts::MainWindow()
+    {
         tb = new KToolBar(this);
         tb->setObjectName(QStringLiteral("testtbvisibility"));
     }
@@ -179,7 +185,7 @@ public:
     {
         QVERIFY(tb->isVisible());
 
-        TestPart* part = new TestPart(0, 0);
+        TestPart *part = new TestPart(0, 0);
         // TODO define xml with a toolbar for the part
         // and put some saved settings into qttestrc in order to test
         // r347935+r348051, i.e. the fact that KParts::MainWindow::createGUI
@@ -209,7 +215,7 @@ public:
         close();
     }
 private:
-    KToolBar* tb;
+    KToolBar *tb;
 };
 
 // A KParts::MainWindow unit test

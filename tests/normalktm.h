@@ -30,29 +30,29 @@ class QWidget;
 
 class TestMainWindow : public KXmlGuiWindow
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  TestMainWindow();
-  virtual ~TestMainWindow();
+    TestMainWindow();
+    virtual ~TestMainWindow();
 
 protected Q_SLOTS:
-  void slotFileOpen();
-  void slotFileOpenRemote();
-  void slotFileEdit();
-  void slotFileCloseEditor();
+    void slotFileOpen();
+    void slotFileOpenRemote();
+    void slotFileEdit();
+    void slotFileCloseEditor();
 
 protected:
-  void embedEditor();
+    void embedEditor();
 
 private:
 
-  QAction * m_paEditFile;
-  QAction * m_paCloseEditor;
+    QAction *m_paEditFile;
+    QAction *m_paCloseEditor;
 
-  KParts::ReadOnlyPart *m_part1;
-  KParts::Part *m_part2;
-  KParts::ReadWritePart *m_editorpart;
-  QWidget *m_splitter;
+    KParts::ReadOnlyPart *m_part1;
+    KParts::Part *m_part2;
+    KParts::ReadWritePart *m_editorpart;
+    QWidget *m_splitter;
 };
 
 #endif

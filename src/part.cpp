@@ -50,7 +50,6 @@
 #include <QDebug>
 #include <kiconloader.h>
 
-
 using namespace KParts;
 
 namespace KParts
@@ -62,10 +61,10 @@ public:
     Q_DECLARE_PUBLIC(PartBase)
 
     PartBasePrivate(PartBase *q): q_ptr(q),
-          m_pluginLoadingMode(PartBase::LoadPlugins),
-          m_pluginInterfaceVersion(0),
-          m_obj(0),
-          m_componentData(KAboutData::applicationData())
+        m_pluginLoadingMode(PartBase::LoadPlugins),
+        m_pluginInterfaceVersion(0),
+        m_obj(0),
+        m_componentData(KAboutData::applicationData())
     {
     }
 
@@ -99,11 +98,11 @@ public:
     {
     }
 
-    KIconLoader* m_iconLoader;
+    KIconLoader *m_iconLoader;
     bool m_bSelectable;
     bool m_autoDeleteWidget;
     bool m_autoDeletePart;
-    PartManager * m_manager;
+    PartManager *m_manager;
     QPointer<QWidget> m_widget;
 };
 
@@ -124,7 +123,7 @@ PartBase::~PartBase()
     delete d_ptr;
 }
 
-void PartBase::setPartObject( QObject *obj )
+void PartBase::setPartObject(QObject *obj)
 {
     Q_D(PartBase);
 
@@ -165,34 +164,35 @@ void PartBase::loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient, cons
 {
     Q_D(PartBase);
 
-    if( d->m_pluginLoadingMode != DoNotLoadPlugins )
-        Plugin::loadPlugins( parent, parentGUIClient, instance.componentName(), d->m_pluginLoadingMode == LoadPlugins, d->m_pluginInterfaceVersion );
+    if (d->m_pluginLoadingMode != DoNotLoadPlugins) {
+        Plugin::loadPlugins(parent, parentGUIClient, instance.componentName(), d->m_pluginLoadingMode == LoadPlugins, d->m_pluginInterfaceVersion);
+    }
 }
 
-void PartBase::setPluginLoadingMode( PluginLoadingMode loadingMode )
+void PartBase::setPluginLoadingMode(PluginLoadingMode loadingMode)
 {
     Q_D(PartBase);
 
     d->m_pluginLoadingMode = loadingMode;
 }
 
-void KParts::PartBase::setPluginInterfaceVersion( int version )
+void KParts::PartBase::setPluginInterfaceVersion(int version)
 {
     Q_D(PartBase);
 
     d->m_pluginInterfaceVersion = version;
 }
 
-Part::Part( QObject *parent )
-    : QObject( parent ), PartBase( *new PartPrivate(this) )
+Part::Part(QObject *parent)
+    : QObject(parent), PartBase(*new PartPrivate(this))
 {
-    PartBase::setPartObject( this );
+    PartBase::setPartObject(this);
 }
 
 Part::Part(PartPrivate &dd, QObject *parent)
-    : QObject( parent ), PartBase( dd )
+    : QObject(parent), PartBase(dd)
 {
-    PartBase::setPartObject( this );
+    PartBase::setPartObject(this);
 }
 
 Part::~Part()
@@ -201,31 +201,29 @@ Part::~Part()
 
     //qDebug() << this;
 
-    if ( d->m_widget )
-    {
+    if (d->m_widget) {
         // We need to disconnect first, to avoid calling it !
-        disconnect( d->m_widget, SIGNAL(destroyed()),
-                    this, SLOT(slotWidgetDestroyed()) );
+        disconnect(d->m_widget, SIGNAL(destroyed()),
+                   this, SLOT(slotWidgetDestroyed()));
     }
 
-    if ( d->m_manager )
+    if (d->m_manager) {
         d->m_manager->removePart(this);
+    }
 
-    if ( d->m_widget && d->m_autoDeleteWidget )
-    {
+    if (d->m_widget && d->m_autoDeleteWidget) {
         // qDebug() << "deleting widget" << d->m_widget << d->m_widget->objectName();
-        delete static_cast<QWidget*>(d->m_widget);
+        delete static_cast<QWidget *>(d->m_widget);
     }
 
     delete d->m_iconLoader;
 }
 
-void Part::embed( QWidget * parentWidget )
+void Part::embed(QWidget *parentWidget)
 {
-    if ( widget() )
-    {
-        widget()->setParent( parentWidget, 0 );
-        widget()->setGeometry( 0, 0, widget()->width(), widget()->height() );
+    if (widget()) {
+        widget()->setParent(parentWidget, 0);
+        widget()->setGeometry(0, 0, widget()->width(), widget()->height());
         widget()->show();
     }
 }
@@ -249,9 +247,7 @@ void Part::setAutoDeletePart(bool autoDeletePart)
     d->m_autoDeletePart = autoDeletePart;
 }
 
-
-
-KIconLoader* Part::iconLoader()
+KIconLoader *Part::iconLoader()
 {
     Q_D(Part);
 
@@ -261,7 +257,7 @@ KIconLoader* Part::iconLoader()
     return d->m_iconLoader;
 }
 
-void Part::setManager( PartManager *manager )
+void Part::setManager(PartManager *manager)
 {
     Q_D(Part);
 
@@ -275,25 +271,26 @@ PartManager *Part::manager() const
     return d->m_manager;
 }
 
-Part *Part::hitTest( QWidget *widget, const QPoint & )
+Part *Part::hitTest(QWidget *widget, const QPoint &)
 {
     Q_D(Part);
 
-    if ( (QWidget *)d->m_widget != widget )
+    if ((QWidget *)d->m_widget != widget) {
         return 0;
+    }
 
     return this;
 }
 
-void Part::setWidget( QWidget *widget )
+void Part::setWidget(QWidget *widget)
 {
     Q_D(Part);
     d->m_widget = widget;
-    connect( d->m_widget, SIGNAL(destroyed()),
-             this, SLOT(slotWidgetDestroyed()), Qt::UniqueConnection );
+    connect(d->m_widget, SIGNAL(destroyed()),
+            this, SLOT(slotWidgetDestroyed()), Qt::UniqueConnection);
 }
 
-void Part::setSelectable( bool selectable )
+void Part::setSelectable(bool selectable)
 {
     Q_D(Part);
 
@@ -307,47 +304,45 @@ bool Part::isSelectable() const
     return d->m_bSelectable;
 }
 
-void Part::customEvent( QEvent *ev )
+void Part::customEvent(QEvent *ev)
 {
-    if ( PartActivateEvent::test( ev ) )
-    {
-        partActivateEvent( static_cast<PartActivateEvent *>(ev) );
+    if (PartActivateEvent::test(ev)) {
+        partActivateEvent(static_cast<PartActivateEvent *>(ev));
         return;
     }
 
-    if ( PartSelectEvent::test( ev ) )
-    {
-        partSelectEvent( static_cast<PartSelectEvent *>(ev) );
+    if (PartSelectEvent::test(ev)) {
+        partSelectEvent(static_cast<PartSelectEvent *>(ev));
         return;
     }
 
-    if ( GUIActivateEvent::test( ev ) )
-    {
-        guiActivateEvent( static_cast<GUIActivateEvent *>(ev) );
+    if (GUIActivateEvent::test(ev)) {
+        guiActivateEvent(static_cast<GUIActivateEvent *>(ev));
         return;
     }
 
-    QObject::customEvent( ev );
+    QObject::customEvent(ev);
 }
 
-void Part::partActivateEvent( PartActivateEvent * )
+void Part::partActivateEvent(PartActivateEvent *)
 {
 }
 
-void Part::partSelectEvent( PartSelectEvent * )
+void Part::partSelectEvent(PartSelectEvent *)
 {
 }
 
-void Part::guiActivateEvent( GUIActivateEvent * )
+void Part::guiActivateEvent(GUIActivateEvent *)
 {
 }
 
-QWidget *Part::hostContainer( const QString &containerName )
+QWidget *Part::hostContainer(const QString &containerName)
 {
-    if ( !factory() )
+    if (!factory()) {
         return 0;
+    }
 
-    return factory()->container( containerName, this );
+    return factory()->container(containerName, this);
 }
 
 void Part::slotWidgetDestroyed()
@@ -393,15 +388,15 @@ public:
     {
     }
 
-    void _k_slotJobFinished( KJob * job );
-    void _k_slotStatJobFinished(KJob * job);
+    void _k_slotJobFinished(KJob *job);
+    void _k_slotStatJobFinished(KJob *job);
     void _k_slotGotMimeType(KIO::Job *job, const QString &mime);
     bool openLocalFile();
     void openRemoteFile();
 
-    KIO::FileCopyJob * m_job;
-    KIO::StatJob * m_statJob;
-    KIO::FileCopyJob * m_uploadJob;
+    KIO::FileCopyJob *m_job;
+    KIO::StatJob *m_statJob;
+    KIO::FileCopyJob *m_uploadJob;
     QUrl m_originalURL; // for saveAs
     QString m_originalFilePath; // for saveAs
     bool m_showProgressInfo : 1;
@@ -442,7 +437,7 @@ public:
         m_bClosing = false;
     }
 
-    void _k_slotUploadFinished( KJob * job );
+    void _k_slotUploadFinished(KJob *job);
 
     void prepareSaving();
 
@@ -454,13 +449,13 @@ public:
 
 }
 
-ReadOnlyPart::ReadOnlyPart( QObject *parent )
-    : Part( *new ReadOnlyPartPrivate(this), parent )
+ReadOnlyPart::ReadOnlyPart(QObject *parent)
+    : Part(*new ReadOnlyPartPrivate(this), parent)
 {
 }
 
-ReadOnlyPart::ReadOnlyPart( ReadOnlyPartPrivate &dd, QObject *parent )
-    : Part( dd, parent )
+ReadOnlyPart::ReadOnlyPart(ReadOnlyPartPrivate &dd, QObject *parent)
+    : Part(dd, parent)
 {
 }
 
@@ -481,7 +476,7 @@ void ReadOnlyPart::setUrl(const QUrl &url)
     Q_D(ReadOnlyPart);
 
     d->m_url = url;
-    emit urlChanged( url );
+    emit urlChanged(url);
 }
 
 QString ReadOnlyPart::localFilePath() const
@@ -491,7 +486,7 @@ QString ReadOnlyPart::localFilePath() const
     return d->m_file;
 }
 
-void ReadOnlyPart::setLocalFilePath( const QString &localFilePath )
+void ReadOnlyPart::setLocalFilePath(const QString &localFilePath)
 {
     Q_D(ReadOnlyPart);
 
@@ -508,7 +503,7 @@ bool ReadOnlyPart::isLocalFileTemporary() const
 #endif
 
 #ifndef KDE_NO_DEPRECATED
-void ReadOnlyPart::setLocalFileTemporary( bool temp )
+void ReadOnlyPart::setLocalFileTemporary(bool temp)
 {
     Q_D(ReadOnlyPart);
 
@@ -516,7 +511,7 @@ void ReadOnlyPart::setLocalFileTemporary( bool temp )
 }
 #endif
 
-void ReadOnlyPart::setProgressInfoEnabled( bool show )
+void ReadOnlyPart::setProgressInfoEnabled(bool show)
 {
     Q_D(ReadOnlyPart);
 
@@ -531,7 +526,7 @@ bool ReadOnlyPart::isProgressInfoEnabled() const
 }
 
 #ifndef KDE_NO_COMPAT
-void ReadOnlyPart::showProgressInfo( bool show )
+void ReadOnlyPart::showProgressInfo(bool show)
 {
     Q_D(ReadOnlyPart);
 
@@ -539,19 +534,21 @@ void ReadOnlyPart::showProgressInfo( bool show )
 }
 #endif
 
-bool ReadOnlyPart::openUrl( const QUrl &url )
+bool ReadOnlyPart::openUrl(const QUrl &url)
 {
     Q_D(ReadOnlyPart);
 
-    if ( !url.isValid() )
+    if (!url.isValid()) {
         return false;
+    }
     if (d->m_bAutoDetectedMime) {
         d->m_arguments.setMimeType(QString());
         d->m_bAutoDetectedMime = false;
     }
     OpenUrlArguments args = d->m_arguments;
-    if ( !closeUrl() )
+    if (!closeUrl()) {
         return false;
+    }
     d->m_arguments = args;
     setUrl(url);
 
@@ -576,14 +573,14 @@ bool ReadOnlyPart::openUrl( const QUrl &url )
 bool ReadOnlyPart::openFile()
 {
     qWarning() << "Default implementation of ReadOnlyPart::openFile called!"
-                   << metaObject()->className() << "should reimplement either openUrl or openFile.";
+               << metaObject()->className() << "should reimplement either openUrl or openFile.";
     return false;
 }
 
 bool ReadOnlyPartPrivate::openLocalFile()
 {
     Q_Q(ReadOnlyPart);
-    emit q->started( 0 );
+    emit q->started(0);
     m_bTemp = false;
     // set the mimetype only if it was not already set (for example, by the host application)
     if (m_arguments.mimeType().isEmpty()) {
@@ -615,8 +612,9 @@ void ReadOnlyPartPrivate::openRemoteFile()
     QFileInfo fileInfo(fileName);
     QString ext = fileInfo.completeSuffix();
     QString extension;
-    if (!ext.isEmpty() && !m_url.hasQuery()) // not if the URL has a query, e.g. cgi.pl?something
-        extension = QLatin1Char('.') + ext; // keep the '.'
+    if (!ext.isEmpty() && !m_url.hasQuery()) { // not if the URL has a query, e.g. cgi.pl?something
+        extension = QLatin1Char('.') + ext;    // keep the '.'
+    }
     QTemporaryFile tempFile(QDir::tempPath() + QLatin1Char('/') + q->componentData().componentName() + QLatin1String("XXXXXX") + extension);
     tempFile.setAutoRemove(false);
     tempFile.open();
@@ -637,12 +635,12 @@ void ReadOnlyPart::abortLoad()
 {
     Q_D(ReadOnlyPart);
 
-    if ( d->m_statJob ) {
+    if (d->m_statJob) {
         //qDebug() << "Aborting job" << d->m_statJob;
         d->m_statJob->kill();
         d->m_statJob = 0;
     }
-    if ( d->m_job ) {
+    if (d->m_job) {
         //qDebug() << "Aborting job" << d->m_job;
         d->m_job->kill();
         d->m_job = 0;
@@ -657,9 +655,8 @@ bool ReadOnlyPart::closeUrl()
 
     d->m_arguments = KParts::OpenUrlArguments();
 
-    if ( d->m_bTemp )
-    {
-        QFile::remove( d->m_file );
+    if (d->m_bTemp) {
+        QFile::remove(d->m_file);
         d->m_bTemp = false;
     }
     // It always succeeds for a read-only part,
@@ -668,7 +665,7 @@ bool ReadOnlyPart::closeUrl()
     return true;
 }
 
-void ReadOnlyPartPrivate::_k_slotStatJobFinished(KJob * job)
+void ReadOnlyPartPrivate::_k_slotStatJobFinished(KJob *job)
 {
     Q_ASSERT(job == m_statJob);
     m_statJob = 0;
@@ -677,7 +674,7 @@ void ReadOnlyPartPrivate::_k_slotStatJobFinished(KJob * job)
     // this could maybe confuse some apps? So for now we'll just fallback to KIO::get
     // and error again. Well, maybe this even helps with wrong stat results.
     if (!job->error()) {
-        const QUrl localUrl = static_cast<KIO::StatJob*>(job)->mostLocalUrl();
+        const QUrl localUrl = static_cast<KIO::StatJob *>(job)->mostLocalUrl();
         if (localUrl.isLocalFile()) {
             m_file = localUrl.toLocalFile();
             (void)openLocalFile();
@@ -687,20 +684,21 @@ void ReadOnlyPartPrivate::_k_slotStatJobFinished(KJob * job)
     openRemoteFile();
 }
 
-void ReadOnlyPartPrivate::_k_slotJobFinished( KJob * job )
+void ReadOnlyPartPrivate::_k_slotJobFinished(KJob *job)
 {
     Q_Q(ReadOnlyPart);
 
-    assert( job == m_job );
+    assert(job == m_job);
     m_job = 0;
-    if (job->error())
-        emit q->canceled( job->errorString() );
-    else
-    {
-        if ( q->openFile() ) {
+    if (job->error()) {
+        emit q->canceled(job->errorString());
+    } else {
+        if (q->openFile()) {
             emit q->setWindowCaption(m_url.toDisplayString());
             emit q->completed();
-        } else emit q->canceled(QString());
+        } else {
+            emit q->canceled(QString());
+        }
     }
 }
 
@@ -715,7 +713,7 @@ void ReadOnlyPartPrivate::_k_slotGotMimeType(KIO::Job *job, const QString &mime)
     }
 }
 
-void ReadOnlyPart::guiActivateEvent( GUIActivateEvent * event )
+void ReadOnlyPart::guiActivateEvent(GUIActivateEvent *event)
 {
     Q_D(ReadOnlyPart);
 
@@ -729,21 +727,22 @@ void ReadOnlyPart::guiActivateEvent( GUIActivateEvent * event )
     }
 }
 
-bool ReadOnlyPart::openStream( const QString& mimeType, const QUrl & url )
+bool ReadOnlyPart::openStream(const QString &mimeType, const QUrl &url)
 {
     Q_D(ReadOnlyPart);
 
     OpenUrlArguments args = d->m_arguments;
-    if ( !closeUrl() )
+    if (!closeUrl()) {
         return false;
+    }
     d->m_arguments = args;
-    setUrl( url );
-    return doOpenStream( mimeType );
+    setUrl(url);
+    return doOpenStream(mimeType);
 }
 
-bool ReadOnlyPart::writeStream( const QByteArray& data )
+bool ReadOnlyPart::writeStream(const QByteArray &data)
 {
-    return doWriteStream( data );
+    return doWriteStream(data);
 }
 
 bool ReadOnlyPart::closeStream()
@@ -751,12 +750,12 @@ bool ReadOnlyPart::closeStream()
     return doCloseStream();
 }
 
-BrowserExtension* ReadOnlyPart::browserExtension() const
+BrowserExtension *ReadOnlyPart::browserExtension() const
 {
     return findChild<KParts::BrowserExtension *>();
 }
 
-void KParts::ReadOnlyPart::setArguments(const OpenUrlArguments& arguments)
+void KParts::ReadOnlyPart::setArguments(const OpenUrlArguments &arguments)
 {
     Q_D(ReadOnlyPart);
     d->m_arguments = arguments;
@@ -771,9 +770,8 @@ OpenUrlArguments KParts::ReadOnlyPart::arguments() const
 
 //////////////////////////////////////////////////
 
-
-ReadWritePart::ReadWritePart( QObject *parent )
-    : ReadOnlyPart( *new ReadWritePartPrivate(this), parent )
+ReadWritePart::ReadWritePart(QObject *parent)
+    : ReadOnlyPart(*new ReadWritePartPrivate(this), parent)
 {
 }
 
@@ -785,7 +783,7 @@ ReadWritePart::~ReadWritePart()
     // the app called closeUrl() before destroying us.
 }
 
-void ReadWritePart::setReadWrite( bool readwrite )
+void ReadWritePart::setReadWrite(bool readwrite)
 {
     Q_D(ReadWritePart);
 
@@ -793,13 +791,12 @@ void ReadWritePart::setReadWrite( bool readwrite )
     d->m_bReadWrite = readwrite;
 }
 
-void ReadWritePart::setModified( bool modified )
+void ReadWritePart::setModified(bool modified)
 {
     Q_D(ReadWritePart);
 
     // qDebug() << "setModified(" << (modified ? "true" : "false") << ")";
-    if ( !d->m_bReadWrite && modified )
-    {
+    if (!d->m_bReadWrite && modified) {
         qCritical() << "Can't set a read-only document to 'modified' !" << endl;
         return;
     }
@@ -808,48 +805,52 @@ void ReadWritePart::setModified( bool modified )
 
 void ReadWritePart::setModified()
 {
-    setModified( true );
+    setModified(true);
 }
 
 bool ReadWritePart::queryClose()
 {
     Q_D(ReadWritePart);
 
-    if ( !isReadWrite() || !isModified() )
+    if (!isReadWrite() || !isModified()) {
         return true;
+    }
 
     QString docName = url().fileName();
-    if (docName.isEmpty()) docName = i18n( "Untitled" );
+    if (docName.isEmpty()) {
+        docName = i18n("Untitled");
+    }
 
-    QWidget *parentWidget=widget();
-    if(!parentWidget) parentWidget=QApplication::activeWindow();
+    QWidget *parentWidget = widget();
+    if (!parentWidget) {
+        parentWidget = QApplication::activeWindow();
+    }
 
-    int res = KMessageBox::warningYesNoCancel( parentWidget,
-                                               i18n( "The document \"%1\" has been modified.\n"
-                                                     "Do you want to save your changes or discard them?" ,  docName ),
-                                               i18n( "Close Document" ), KStandardGuiItem::save(), KStandardGuiItem::discard() );
+    int res = KMessageBox::warningYesNoCancel(parentWidget,
+              i18n("The document \"%1\" has been modified.\n"
+                   "Do you want to save your changes or discard them?",  docName),
+              i18n("Close Document"), KStandardGuiItem::save(), KStandardGuiItem::discard());
 
-    bool abortClose=false;
-    bool handled=false;
+    bool abortClose = false;
+    bool handled = false;
 
-    switch(res) {
+    switch (res) {
     case KMessageBox::Yes :
-        sigQueryClose(&handled,&abortClose);
-        if (!handled)
-        {
-            if (d->m_url.isEmpty())
-            {
+        sigQueryClose(&handled, &abortClose);
+        if (!handled) {
+            if (d->m_url.isEmpty()) {
                 QUrl url = QFileDialog::getSaveFileUrl(parentWidget);
-                if (url.isEmpty())
+                if (url.isEmpty()) {
                     return false;
+                }
 
-                saveAs( url );
-            }
-            else
-            {
+                saveAs(url);
+            } else {
                 save();
             }
-        } else if (abortClose) return false;
+        } else if (abortClose) {
+            return false;
+        }
         return waitSaveComplete();
     case KMessageBox::No :
         return true;
@@ -861,16 +862,16 @@ bool ReadWritePart::queryClose()
 bool ReadWritePart::closeUrl()
 {
     abortLoad(); //just in case
-    if ( isReadWrite() && isModified() )
-    {
-        if (!queryClose())
+    if (isReadWrite() && isModified()) {
+        if (!queryClose()) {
             return false;
+        }
     }
     // Not modified => ok and delete temp file.
     return ReadOnlyPart::closeUrl();
 }
 
-bool ReadWritePart::closeUrl( bool promptToSave )
+bool ReadWritePart::closeUrl(bool promptToSave)
 {
     return promptToSave ? closeUrl() : ReadOnlyPart::closeUrl();
 }
@@ -880,21 +881,22 @@ bool ReadWritePart::save()
     Q_D(ReadWritePart);
 
     d->m_saveOk = false;
-    if ( d->m_file.isEmpty() ) // document was created empty
+    if (d->m_file.isEmpty()) { // document was created empty
         d->prepareSaving();
-    if( saveFile() )
+    }
+    if (saveFile()) {
         return saveToUrl();
-    else
+    } else {
         emit canceled(QString());
+    }
     return false;
 }
 
-bool ReadWritePart::saveAs(const QUrl & url)
+bool ReadWritePart::saveAs(const QUrl &url)
 {
     Q_D(ReadWritePart);
 
-    if (!url.isValid())
-    {
+    if (!url.isValid()) {
         qCritical() << "saveAs: Malformed URL " << url << endl;
         return false;
     }
@@ -922,20 +924,17 @@ bool ReadWritePart::saveAs(const QUrl & url)
 void ReadWritePartPrivate::prepareSaving()
 {
     // Local file
-    if ( m_url.isLocalFile() )
-    {
-        if ( m_bTemp ) // get rid of a possible temp file first
-        {              // (happens if previous url was remote)
-            QFile::remove( m_file );
+    if (m_url.isLocalFile()) {
+        if (m_bTemp) { // get rid of a possible temp file first
+            // (happens if previous url was remote)
+            QFile::remove(m_file);
             m_bTemp = false;
         }
         m_file = m_url.toLocalFile();
-    }
-    else
-    { // Remote file
+    } else {
+        // Remote file
         // We haven't saved yet, or we did but locally - provide a temp file
-        if ( m_file.isEmpty() || !m_bTemp )
-        {
+        if (m_file.isEmpty() || !m_bTemp) {
             QTemporaryFile tempFile;
             tempFile.setAutoRemove(false);
             tempFile.open();
@@ -950,22 +949,18 @@ bool ReadWritePart::saveToUrl()
 {
     Q_D(ReadWritePart);
 
-    if ( d->m_url.isLocalFile() )
-    {
-        setModified( false );
+    if (d->m_url.isLocalFile()) {
+        setModified(false);
         emit completed();
         // if m_url is a local file there won't be a temp file -> nothing to remove
-        assert( !d->m_bTemp );
+        assert(!d->m_bTemp);
         d->m_saveOk = true;
         d->m_duringSaveAs = false;
         d->m_originalURL = QUrl();
         d->m_originalFilePath.clear();
         return true; // Nothing to do
-    }
-    else
-    {
-        if (d->m_uploadJob)
-        {
+    } else {
+        if (d->m_uploadJob) {
             QFile::remove(d->m_uploadJob->srcUrl().toLocalFile());
             d->m_uploadJob->kill();
             d->m_uploadJob = 0;
@@ -976,24 +971,22 @@ bool ReadWritePart::saveToUrl()
         delete tempFile;
         QUrl uploadUrl = QUrl::fromLocalFile(uploadFile);
         // Create hardlink
-        if (::link(QFile::encodeName(d->m_file).constData(), QFile::encodeName(uploadFile).constData()) != 0)
-        {
+        if (::link(QFile::encodeName(d->m_file).constData(), QFile::encodeName(uploadFile).constData()) != 0) {
             // Uh oh, some error happened.
             return false;
         }
-        d->m_uploadJob = KIO::file_move( uploadUrl, d->m_url, -1, KIO::Overwrite );
+        d->m_uploadJob = KIO::file_move(uploadUrl, d->m_url, -1, KIO::Overwrite);
         KJobWidgets::setWindow(d->m_uploadJob, widget());
-        connect( d->m_uploadJob, SIGNAL(result(KJob*)), this, SLOT(_k_slotUploadFinished(KJob*)) );
+        connect(d->m_uploadJob, SIGNAL(result(KJob*)), this, SLOT(_k_slotUploadFinished(KJob*)));
         return true;
     }
 }
 
-void ReadWritePartPrivate::_k_slotUploadFinished( KJob * )
+void ReadWritePartPrivate::_k_slotUploadFinished(KJob *)
 {
     Q_Q(ReadWritePart);
 
-    if (m_uploadJob->error())
-    {
+    if (m_uploadJob->error()) {
         QFile::remove(m_uploadJob->srcUrl().toLocalFile());
         QString error = m_uploadJob->errorString();
         m_uploadJob = 0;
@@ -1001,14 +994,12 @@ void ReadWritePartPrivate::_k_slotUploadFinished( KJob * )
             q->setUrl(m_originalURL);
             m_file = m_originalFilePath;
         }
-        emit q->canceled( error );
-    }
-    else
-    {
+        emit q->canceled(error);
+    } else {
         ::org::kde::KDirNotify::emitFilesAdded(m_url.adjusted(QUrl::RemoveFilename));
 
         m_uploadJob = 0;
-        q->setModified( false );
+        q->setModified(false);
         emit q->completed();
         m_saveOk = true;
     }
@@ -1038,8 +1029,9 @@ bool ReadWritePart::waitSaveComplete()
 {
     Q_D(ReadWritePart);
 
-    if (!d->m_uploadJob)
+    if (!d->m_uploadJob) {
         return d->m_saveOk;
+    }
 
     d->m_waitForSave = true;
 
@@ -1081,7 +1073,7 @@ KParts::OpenUrlArguments::OpenUrlArguments(const OpenUrlArguments &other)
 {
 }
 
-KParts::OpenUrlArguments & KParts::OpenUrlArguments::operator=( const OpenUrlArguments &other)
+KParts::OpenUrlArguments &KParts::OpenUrlArguments::operator=(const OpenUrlArguments &other)
 {
     d = other.d;
     return *this;
@@ -1126,17 +1118,17 @@ QString KParts::OpenUrlArguments::mimeType() const
     return d->mimeType;
 }
 
-void KParts::OpenUrlArguments::setMimeType(const QString& mime)
+void KParts::OpenUrlArguments::setMimeType(const QString &mime)
 {
     d->mimeType = mime;
 }
 
-QMap<QString, QString> & KParts::OpenUrlArguments::metaData()
+QMap<QString, QString> &KParts::OpenUrlArguments::metaData()
 {
     return d->metaData;
 }
 
-const QMap<QString, QString> & KParts::OpenUrlArguments::metaData() const
+const QMap<QString, QString> &KParts::OpenUrlArguments::metaData() const
 {
     return d->metaData;
 }

@@ -32,7 +32,7 @@ int main(int argc, char **argv)
     // A test for both 1) "unknown mimetype"  2) no associated app
     {
         BrowserOpenOrSaveQuestion questionOpenUnknownMimeType(0, QUrl(QStringLiteral("http://www.example.com/foo.foo")),
-                                                              QString::fromLatin1("application/foo"));
+                QString::fromLatin1("application/foo"));
         BrowserOpenOrSaveQuestion::Result res = questionOpenUnknownMimeType.askOpenOrSave();
         qDebug() << res;
     }
@@ -45,8 +45,9 @@ int main(int argc, char **argv)
         questionOpen.setFeatures(BrowserOpenOrSaveQuestion::ServiceSelection);
         BrowserOpenOrSaveQuestion::Result res = questionOpen.askOpenOrSave();
         qDebug() << res;
-        if (res == BrowserOpenOrSaveQuestion::Open && questionOpen.selectedService())
+        if (res == BrowserOpenOrSaveQuestion::Open && questionOpen.selectedService()) {
             qDebug() << "Selected service:" << questionOpen.selectedService()->entryPath();
+        }
     }
 
     // Trying a case with only one app associated
@@ -56,8 +57,9 @@ int main(int argc, char **argv)
         questionOpen.setFeatures(BrowserOpenOrSaveQuestion::ServiceSelection);
         BrowserOpenOrSaveQuestion::Result res = questionOpen.askOpenOrSave();
         qDebug() << res;
-        if (res == BrowserOpenOrSaveQuestion::Open && questionOpen.selectedService())
+        if (res == BrowserOpenOrSaveQuestion::Open && questionOpen.selectedService()) {
             qDebug() << "Selected service:" << questionOpen.selectedService()->entryPath();
+        }
     }
 
     return 0;

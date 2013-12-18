@@ -43,14 +43,14 @@ class KPARTS_EXPORT TextExtension : public QObject
 {
     Q_OBJECT
 public:
-    TextExtension(KParts::ReadOnlyPart* parent);
+    TextExtension(KParts::ReadOnlyPart *parent);
     ~TextExtension();
 
     /**
      * Queries @p obj for a child object which inherits from this
      * TextExtension class.
      */
-    static TextExtension *childObject( QObject *obj );
+    static TextExtension *childObject(QObject *obj);
 
     enum Format { PlainText, HTML };
 
@@ -69,7 +69,6 @@ public:
      */
     virtual QString completeText(Format format) const;
 
-
     /**
      * Returns the number of pages, for parts who support the concept of pages.
      * Otherwise returns 0.
@@ -85,21 +84,21 @@ public:
      * Returns the text in a given page, in the requested format.
      */
     virtual QString pageText(Format format) const;
-   
+
     /**
      * Returns true if @p string is found using the given @p options.
      *
      * If any text matches @p string, then it will be selected/highlighted.
      * To find the next matching text, simply call this function again with the
      * same search text until it returns false.
-     * 
+     *
      * To clear a selection, just pass an empty string.
-     * 
+     *
      * Note that parts that implement this extension might not support all the
      * options available in @ref KFind::SearchOptions.
      */
-    virtual bool findText(const QString& string, KFind::SearchOptions options) const;
-    
+    virtual bool findText(const QString &string, KFind::SearchOptions options) const;
+
     // for future extensions can be made via slots
 
 Q_SIGNALS:
@@ -110,7 +109,7 @@ Q_SIGNALS:
 
 private:
     // for future extensions
-    TextExtensionPrivate* const d;
+    TextExtensionPrivate *const d;
 };
 
 }

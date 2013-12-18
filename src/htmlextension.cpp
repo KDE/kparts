@@ -25,7 +25,7 @@
 
 using namespace KParts;
 
-KParts::HtmlExtension::HtmlExtension(KParts::ReadOnlyPart* parent)
+KParts::HtmlExtension::HtmlExtension(KParts::ReadOnlyPart *parent)
     : QObject(parent), d(0)
 {
 }
@@ -39,7 +39,7 @@ bool HtmlExtension::hasSelection() const
     return false;
 }
 
-HtmlExtension * KParts::HtmlExtension::childObject( QObject *obj )
+HtmlExtension *KParts::HtmlExtension::childObject(QObject *obj)
 {
     return obj->findChild<KParts::HtmlExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }
@@ -61,7 +61,7 @@ SelectorInterface::Element::Element()
 {
 }
 
-SelectorInterface::Element::Element(const SelectorInterface::Element& other)
+SelectorInterface::Element::Element(const SelectorInterface::Element &other)
     : d(other.d)
 {
 }
@@ -75,7 +75,7 @@ bool SelectorInterface::Element::isNull() const
     return d->tag.isNull();
 }
 
-void SelectorInterface::Element::setTagName(const QString& tag)
+void SelectorInterface::Element::setTagName(const QString &tag)
 {
     d->tag = tag;
 }
@@ -85,7 +85,7 @@ QString SelectorInterface::Element::tagName() const
     return d->tag;
 }
 
-void SelectorInterface::Element::setAttribute(const QString& name, const QString& value)
+void SelectorInterface::Element::setAttribute(const QString &name, const QString &value)
 {
     d->attributes[name] = value; // insert or replace
 }
@@ -95,17 +95,17 @@ QStringList SelectorInterface::Element::attributeNames() const
     return d->attributes.keys();
 }
 
-QString SelectorInterface::Element::attribute(const QString& name, const QString& defaultValue) const
+QString SelectorInterface::Element::attribute(const QString &name, const QString &defaultValue) const
 {
     return d->attributes.value(name, defaultValue);
 }
 
-bool SelectorInterface::Element::hasAttribute(const QString& name) const
+bool SelectorInterface::Element::hasAttribute(const QString &name) const
 {
     return d->attributes.contains(name);
 }
 
-const char* HtmlSettingsInterface::javascriptAdviceToText(HtmlSettingsInterface::JavaScriptAdvice advice)
+const char *HtmlSettingsInterface::javascriptAdviceToText(HtmlSettingsInterface::JavaScriptAdvice advice)
 {
     // NOTE: The use of I18N_NOOP below is intended to allow GUI code to call
     // i18n on the returned text without affecting use of untranslated text in
@@ -122,7 +122,7 @@ const char* HtmlSettingsInterface::javascriptAdviceToText(HtmlSettingsInterface:
     return 0;
 }
 
-HtmlSettingsInterface::JavaScriptAdvice HtmlSettingsInterface::textToJavascriptAdvice(const QString& text)
+HtmlSettingsInterface::JavaScriptAdvice HtmlSettingsInterface::textToJavascriptAdvice(const QString &text)
 {
     JavaScriptAdvice ret = JavaScriptDunno;
 
@@ -137,7 +137,7 @@ HtmlSettingsInterface::JavaScriptAdvice HtmlSettingsInterface::textToJavascriptA
     return ret;
 }
 
-void HtmlSettingsInterface::splitDomainAdvice(const QString& adviceStr, QString& domain, HtmlSettingsInterface::JavaScriptAdvice& javaAdvice, HtmlSettingsInterface::JavaScriptAdvice& javaScriptAdvice)
+void HtmlSettingsInterface::splitDomainAdvice(const QString &adviceStr, QString &domain, HtmlSettingsInterface::JavaScriptAdvice &javaAdvice, HtmlSettingsInterface::JavaScriptAdvice &javaScriptAdvice)
 {
     const QString tmp(adviceStr);
     const int splitIndex = tmp.indexOf(QLatin1Char(':'));
@@ -148,7 +148,7 @@ void HtmlSettingsInterface::splitDomainAdvice(const QString& adviceStr, QString&
         javaScriptAdvice = JavaScriptDunno;
     } else {
         domain = tmp.left(splitIndex).toLower();
-        const QString adviceString = tmp.mid(splitIndex+1, tmp.length());
+        const QString adviceString = tmp.mid(splitIndex + 1, tmp.length());
         const int splitIndex2 = adviceString.indexOf(QLatin1Char(':'));
         if (splitIndex2 == -1) {
             // Java advice only
@@ -157,8 +157,8 @@ void HtmlSettingsInterface::splitDomainAdvice(const QString& adviceStr, QString&
         } else {
             // Java and JavaScript advice
             javaAdvice = textToJavascriptAdvice(adviceString.left(splitIndex2));
-            javaScriptAdvice = textToJavascriptAdvice(adviceString.mid(splitIndex2+1,
-                                                      adviceString.length()));
+            javaScriptAdvice = textToJavascriptAdvice(adviceString.mid(splitIndex2 + 1,
+                               adviceString.length()));
         }
     }
 }

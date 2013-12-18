@@ -38,27 +38,27 @@
 #include <QDebug>
 #include <klocalizedstring.h>
 
-Part1::Part1( QObject *parent, QWidget * parentWidget )
+Part1::Part1(QObject *parent, QWidget *parentWidget)
     : KParts::ReadOnlyPart(parent),
-    m_componentData(QStringLiteral("kpartstestpart"), QString(), i18n("KParts test part"), QStringLiteral("0.1"))
+      m_componentData(QStringLiteral("kpartstestpart"), QString(), i18n("KParts test part"), QStringLiteral("0.1"))
 {
     setComponentData(m_componentData, false);
-    m_edit = new QTextEdit( parentWidget );
-    setWidget( m_edit );
+    m_edit = new QTextEdit(parentWidget);
+    setWidget(m_edit);
 
     setXMLFile(QFINDTESTDATA("kpartstest_part1.rc"));
 
     // An action and an action menu (test code for #70459)
 
-    QAction* testAction = actionCollection()->addAction(QStringLiteral("p1_blah"));
+    QAction *testAction = actionCollection()->addAction(QStringLiteral("p1_blah"));
     testAction->setText(QStringLiteral("Part1's action"));
     testAction->setShortcut(Qt::CTRL + Qt::Key_B);
     connect(testAction, SIGNAL(triggered()), this, SLOT(slotBlah()));
 
-    KActionMenu * menu = new KActionMenu(QIcon::fromTheme(QStringLiteral("mail_forward")), QStringLiteral("Foo"), this);
+    KActionMenu *menu = new KActionMenu(QIcon::fromTheme(QStringLiteral("mail_forward")), QStringLiteral("Foo"), this);
     actionCollection()->addAction(QStringLiteral("p1_foo"), menu);
 
-    QAction* mailForward = new QAction(QIcon::fromTheme(QStringLiteral("mail_forward")), QStringLiteral("Bar"), this);
+    QAction *mailForward = new QAction(QIcon::fromTheme(QStringLiteral("mail_forward")), QStringLiteral("Bar"), this);
     mailForward->setShortcut(Qt::CTRL + Qt::Key_F);
     connect(mailForward, SIGNAL(triggered()), this, SLOT(slotFooBar()));
     actionCollection()->addAction(QStringLiteral("p1_foo_bar"), mailForward);
@@ -73,12 +73,12 @@ Part1::~Part1()
 
 void Part1::slotBlah()
 {
-  m_edit->setText( QStringLiteral("Blah") );
+    m_edit->setText(QStringLiteral("Blah"));
 }
 
 void Part1::slotFooBar()
 {
-  m_edit->setText( QStringLiteral("FooBar") );
+    m_edit->setText(QStringLiteral("FooBar"));
 }
 
 bool Part1::openFile()
@@ -87,14 +87,15 @@ bool Part1::openFile()
     // Hehe this is from a tutorial I did some time ago :)
     QFile f(localFilePath());
     QString s;
-    if ( f.open(QIODevice::ReadOnly) ) {
-        QTextStream t( &f );
-        while ( !t.atEnd() ) {
+    if (f.open(QIODevice::ReadOnly)) {
+        QTextStream t(&f);
+        while (!t.atEnd()) {
             s += t.readLine() + QStringLiteral("\n");
         }
         f.close();
-    } else
+    } else {
         return false;
+    }
     m_edit->setPlainText(s);
 
     emit setStatusBarText(url().toString());
@@ -102,25 +103,25 @@ bool Part1::openFile()
     return true;
 }
 
-Part2::Part2( QObject *parent, QWidget * parentWidget )
+Part2::Part2(QObject *parent, QWidget *parentWidget)
     : KParts::Part(parent),
-    m_componentData(QStringLiteral("part2"), QString(), QStringLiteral("Part 2"), QStringLiteral("0.2"))
+      m_componentData(QStringLiteral("part2"), QString(), QStringLiteral("Part 2"), QStringLiteral("0.2"))
 {
     setComponentData(m_componentData, false);
-    QWidget * w = new QWidget( parentWidget );
-    w->setObjectName( QStringLiteral("Part2Widget") );
-    setWidget( w );
+    QWidget *w = new QWidget(parentWidget);
+    w->setObjectName(QStringLiteral("Part2Widget"));
+    setWidget(w);
 
     setXMLFile(QFINDTESTDATA("kpartstest_part2.rc"));
 
-    /*QCheckBox * cb =*/ new QCheckBox( QStringLiteral("something"), w );
+    /*QCheckBox * cb =*/ new QCheckBox(QStringLiteral("something"), w);
 
     //QLineEdit * l = new QLineEdit( "something", widget() );
     //l->move(0,50);
     // Since the main widget is a dummy one, we HAVE to set
     // strong focus for it, otherwise we get the
     // the famous activating-file-menu-switches-part bug.
-    w->setFocusPolicy( Qt::ClickFocus );
+    w->setFocusPolicy(Qt::ClickFocus);
 
     // loadPlugins(); // in case we want to allow plugins for this part.
 }
@@ -129,9 +130,10 @@ Part2::~Part2()
 {
 }
 
-void Part2::guiActivateEvent( KParts::GUIActivateEvent * event )
+void Part2::guiActivateEvent(KParts::GUIActivateEvent *event)
 {
-    if (event->activated())
+    if (event->activated()) {
         emit setWindowCaption(QStringLiteral("[part2 activated]"));
+    }
 }
 

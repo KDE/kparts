@@ -39,82 +39,85 @@
 
 K_PLUGIN_FACTORY(NotepadFactory, registerPlugin<NotepadPart>();)
 
-NotepadPart::NotepadPart( QWidget* parentWidget,
-                          QObject* parent,
-                          const QVariantList& )
- : KParts::ReadWritePart( parent )
+NotepadPart::NotepadPart(QWidget *parentWidget,
+                         QObject *parent,
+                         const QVariantList &)
+    : KParts::ReadWritePart(parent)
 {
     KAboutData aboutData(QStringLiteral("notepadpart"), QString(), QStringLiteral("Notepad Part"), QStringLiteral("0.1"));
     setComponentData(aboutData, false);
 
-  m_edit = new QTextEdit( parentWidget );
-  m_edit->setPlainText( QStringLiteral("NotepadPart's multiline edit") );
-  setWidget( m_edit );
+    m_edit = new QTextEdit(parentWidget);
+    m_edit->setPlainText(QStringLiteral("NotepadPart's multiline edit"));
+    setWidget(m_edit);
 
-  QAction* searchReplace = new QAction( QStringLiteral("Search and replace"), this );
-  actionCollection()->addAction( QStringLiteral("searchreplace"), searchReplace );
-  connect(searchReplace, SIGNAL(triggered()), this, SLOT(slotSearchReplace()));
+    QAction *searchReplace = new QAction(QStringLiteral("Search and replace"), this);
+    actionCollection()->addAction(QStringLiteral("searchreplace"), searchReplace);
+    connect(searchReplace, SIGNAL(triggered()), this, SLOT(slotSearchReplace()));
 
-  setXMLFile(QFINDTESTDATA("notepadpart.rc"));
+    setXMLFile(QFINDTESTDATA("notepadpart.rc"));
 
-  setReadWrite( true );
+    setReadWrite(true);
 
-  // Always write this as the last line of your constructor
-  loadPlugins();
+    // Always write this as the last line of your constructor
+    loadPlugins();
 }
 
 NotepadPart::~NotepadPart()
 {
 }
 
-void NotepadPart::setReadWrite( bool rw )
+void NotepadPart::setReadWrite(bool rw)
 {
-    m_edit->setReadOnly( !rw );
-    if (rw)
-        connect( m_edit, SIGNAL(textChanged()), this, SLOT(setModified()) );
-    else
-        disconnect( m_edit, SIGNAL(textChanged()), this, SLOT(setModified()) );
+    m_edit->setReadOnly(!rw);
+    if (rw) {
+        connect(m_edit, SIGNAL(textChanged()), this, SLOT(setModified()));
+    } else {
+        disconnect(m_edit, SIGNAL(textChanged()), this, SLOT(setModified()));
+    }
 
-    ReadWritePart::setReadWrite( rw );
+    ReadWritePart::setReadWrite(rw);
 }
 
-KAboutData* NotepadPart::createAboutData()
+KAboutData *NotepadPart::createAboutData()
 {
-  return new KAboutData( QStringLiteral("notepadpart"), QString(), i18n( "Notepad" ), QStringLiteral("2.0") );
+    return new KAboutData(QStringLiteral("notepadpart"), QString(), i18n("Notepad"), QStringLiteral("2.0"));
 }
 
 bool NotepadPart::openFile()
 {
-  // qDebug() << "NotepadPart: opening " << localFilePath();
-  QFile f(localFilePath());
-  QString s;
-  if ( f.open(QIODevice::ReadOnly) ) {
-    QTextStream t( &f );
-    t.setCodec( "UTF-8" );
-    s = t.readAll();
-    f.close();
-  }
-  m_edit->setPlainText(s);
+    // qDebug() << "NotepadPart: opening " << localFilePath();
+    QFile f(localFilePath());
+    QString s;
+    if (f.open(QIODevice::ReadOnly)) {
+        QTextStream t(&f);
+        t.setCodec("UTF-8");
+        s = t.readAll();
+        f.close();
+    }
+    m_edit->setPlainText(s);
 
-  emit setStatusBarText(url().toString());
+    emit setStatusBarText(url().toString());
 
-  return true;
+    return true;
 }
 
 bool NotepadPart::saveFile()
 {
-  if ( !isReadWrite() )
-    return false;
-  QFile f(localFilePath());
-  QString s;
-  if ( f.open(QIODevice::WriteOnly) ) {
-    QTextStream t( &f );
-    t.setCodec( "UTF-8" );
-    t << m_edit->toPlainText();
-    f.close();
-    return true;
-  } else
-    return false;
+    if (!isReadWrite()) {
+        return false;
+    }
+    QFile f(localFilePath());
+    QString s;
+    if (f.open(QIODevice::WriteOnly)) {
+        QTextStream t(&f);
+        t.setCodec("UTF-8");
+        t << m_edit->toPlainText();
+        f.close();
+        return true;
+    } else {
+        return false;
+    }
 }
 
 void NotepadPart::slotSearchReplace()

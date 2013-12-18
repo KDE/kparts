@@ -28,12 +28,12 @@
 #include <klocalizedstring.h>
 #include <QDebug>
 
-PluginSpellCheck::PluginSpellCheck( QObject* parent,
-                                    const QVariantList& )
-    : Plugin( parent )
+PluginSpellCheck::PluginSpellCheck(QObject *parent,
+                                   const QVariantList &)
+    : Plugin(parent)
 {
-    QAction* act = new QAction( QStringLiteral("&Select current line (plugin)"), this );
-    actionCollection()->addAction( QStringLiteral("spellcheck"), act );
+    QAction *act = new QAction(QStringLiteral("&Select current line (plugin)"), this);
+    actionCollection()->addAction(QStringLiteral("spellcheck"), act);
     connect(act, SIGNAL(triggered()), this, SLOT(slotSpellCheck()));
 }
 
@@ -46,14 +46,13 @@ void PluginSpellCheck::slotSpellCheck()
     // qDebug() << "Plugin parent : " << parent()->objectName() << " (" << parent()->metaObject()->className() << ")";
     // The parent is assumed to be a NotepadPart
     // Can't use qobject_cast here, we would need NotepadPart to be in a shared library.
-    if ( !parent()->inherits("NotepadPart") )
+    if (!parent()->inherits("NotepadPart")) {
         KMessageBox::error(0, QStringLiteral("You just called the spell-check action on a wrong part (not NotepadPart)"));
-    else
-    {
-         NotepadPart * part = (NotepadPart *) parent();
-         QTextEdit * widget = qobject_cast<QTextEdit *>(part->widget());
-         Q_ASSERT(widget);
-         widget->selectAll();
+    } else {
+        NotepadPart *part = (NotepadPart *) parent();
+        QTextEdit *widget = qobject_cast<QTextEdit *>(part->widget());
+        Q_ASSERT(widget);
+        widget->selectAll();
     }
 }
 

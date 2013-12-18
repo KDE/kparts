@@ -24,7 +24,6 @@
 
 #include <kparts/kparts_export.h>
 
-
 class KFileItemList;
 
 namespace KParts
@@ -99,7 +98,7 @@ public:
     Q_DECLARE_FLAGS(FilterModes, FilterMode)
 
     /*! Constructor */
-    ListingFilterExtension(KParts::ReadOnlyPart* parent);
+    ListingFilterExtension(KParts::ReadOnlyPart *parent);
 
     /*! Destructor */
     virtual ~ListingFilterExtension();
@@ -107,7 +106,7 @@ public:
     /**
      * Queries @p obj for a child object which inherits from this class.
      */
-    static ListingFilterExtension *childObject(QObject* obj);
+    static ListingFilterExtension *childObject(QObject *obj);
 
     /**
      * Returns the OR'ed value of the file filter modes supported by the part
@@ -144,11 +143,11 @@ public:
      * @param mode the desired filter mode as specified in @ref FilterMode.
      * @param filters a list of filter texts based on the selected mode.
      */
-    virtual void setFilter(FilterMode mode, const QVariant& filter) = 0;
+    virtual void setFilter(FilterMode mode, const QVariant &filter) = 0;
 
 private:
     class ListingFilterExtensionPrivate;
-    ListingFilterExtension* const d;
+    ListingFilterExtension *const d;
 };
 
 /**
@@ -179,7 +178,7 @@ public:
     Q_DECLARE_FLAGS(NotificationEventTypes, NotificationEventType)
 
     /*! Constructor */
-    ListingNotificationExtension(KParts::ReadOnlyPart* parent);
+    ListingNotificationExtension(KParts::ReadOnlyPart *parent);
 
     /*! Destructor */
     virtual ~ListingNotificationExtension();
@@ -195,18 +194,18 @@ public:
     /**
       * Queries @p obj for a child object which inherits from this class.
       */
-    static ListingNotificationExtension *childObject(QObject* obj);
+    static ListingNotificationExtension *childObject(QObject *obj);
 
 Q_SIGNALS:
     /**
       * This signal is emitted when one of the notification events listed
       * in @ref NotificationEventType occur.
       */
-    void listingEvent(KParts::ListingNotificationExtension::NotificationEventType, const KFileItemList&);
+    void listingEvent(KParts::ListingNotificationExtension::NotificationEventType, const KFileItemList &);
 
 private:
     class ListingNotificationExtensionPrivate;
-    ListingNotificationExtension* const d;
+    ListingNotificationExtension *const d;
 };
 
 }

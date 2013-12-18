@@ -42,7 +42,7 @@ public:
 
 Q_GLOBAL_STATIC(HistoryProviderPrivate, historyProviderPrivate)
 
-HistoryProvider * HistoryProvider::self()
+HistoryProvider *HistoryProvider::self()
 {
     if (!historyProviderPrivate()->q) {
         new HistoryProvider;
@@ -56,8 +56,8 @@ bool HistoryProvider::exists()
     return historyProviderPrivate()->q;
 }
 
-HistoryProvider::HistoryProvider( QObject *parent )
-    : QObject( parent ), d(historyProviderPrivate)
+HistoryProvider::HistoryProvider(QObject *parent)
+    : QObject(parent), d(historyProviderPrivate)
 {
     Q_ASSERT(!historyProviderPrivate()->q);
     historyProviderPrivate()->q = this;
@@ -67,24 +67,25 @@ HistoryProvider::HistoryProvider( QObject *parent )
 HistoryProvider::~HistoryProvider()
 {
     if (!historyProviderPrivate.isDestroyed() &&
-        historyProviderPrivate()->q == this)
+            historyProviderPrivate()->q == this) {
         historyProviderPrivate()->q = 0;
+    }
 }
 
-bool HistoryProvider::contains( const QString& item ) const
+bool HistoryProvider::contains(const QString &item) const
 {
-    return d->dict.contains( item );
+    return d->dict.contains(item);
 }
 
-void HistoryProvider::insert( const QString& item )
+void HistoryProvider::insert(const QString &item)
 {
-    d->dict.insert( item );
-    emit inserted( item );
+    d->dict.insert(item);
+    emit inserted(item);
 }
 
-void HistoryProvider::remove( const QString& item )
+void HistoryProvider::remove(const QString &item)
 {
-    d->dict.remove( item );
+    d->dict.remove(item);
 }
 
 void HistoryProvider::clear()

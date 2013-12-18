@@ -26,7 +26,8 @@
 #include <QVariant>
 #include <kparts/part.h>
 
-namespace KParts {
+namespace KParts
+{
 
 class  ScriptableExtension;
 struct ScriptableExtensionPrivate;
@@ -72,7 +73,7 @@ public:
         QString message;
 
         Exception() {}
-        Exception(const QString& msg): message(msg) {}
+        Exception(const QString &msg): message(msg) {}
     };
 
     /// Objects are abstracted away as a pair of the ScriptableExtension
@@ -89,12 +90,15 @@ public:
     ///
     /// @see acquire, acquireValue, release, releaseValue
     struct Object {
-        ScriptableExtension* owner;
+        ScriptableExtension *owner;
         quint64              objId;
 
         Object(): owner(0), objId(0) {}
-        Object(ScriptableExtension* o, quint64 id): owner(o), objId(id) {}
-        bool operator==(const Object& other) const { return owner == other.owner && objId == other.objId; }
+        Object(ScriptableExtension *o, quint64 id): owner(o), objId(id) {}
+        bool operator==(const Object &other) const
+        {
+            return owner == other.owner && objId == other.objId;
+        }
     };
 
     /// Function references are a pair of an object and a field in it.
@@ -106,17 +110,19 @@ public:
         QString  field;
 
         FunctionRef() {}
-        FunctionRef(const Object& b, const QString&f): base(b), field(f) {}
-        bool operator==(const FunctionRef& other) const { return base == other.base && field == other.field; }
+        FunctionRef(const Object &b, const QString &f): base(b), field(f) {}
+        bool operator==(const FunctionRef &other) const
+        {
+            return base == other.base && field == other.field;
+        }
     };
 
     //@}
 
-
     ///@name lifetime
     //@{
 protected:
-    ScriptableExtension(QObject* parent);
+    ScriptableExtension(QObject *parent);
 public:
     virtual ~ScriptableExtension();
 
@@ -124,18 +130,17 @@ public:
     * Queries @p obj for a child object which inherits from this
     * ScriptableExtension class. Convenience method.
     */
-    static ScriptableExtension* childObject(QObject* obj);
+    static ScriptableExtension *childObject(QObject *obj);
 
     /**
     * This returns a bridge object that permits KParts implementing the older
     * LiveConnectExtension to be used via the ScriptableExtension API.
     * The bridge's parent will be the @p parentObj.
     */
-    static ScriptableExtension* adapterFromLiveConnect(QObject* parentObj,
-                                                       LiveConnectExtension* oldApi);
+    static ScriptableExtension *adapterFromLiveConnect(QObject *parentObj,
+            LiveConnectExtension *oldApi);
 
     //@}
-
 
     ///@name Object Hierarchy
     //@{
@@ -145,13 +150,13 @@ public:
      * of a parent part to call this method on all of its kids' ScriptableExtensions
      * as soon as possible.
      */
-    void setHost(ScriptableExtension* host);
+    void setHost(ScriptableExtension *host);
 
     /**
      * Returns any registered parent scripting context. May be 0 if setHost
      * was not called (or not call yet).
      */
-    ScriptableExtension* host() const;
+    ScriptableExtension *host() const;
 
     /**
      * Return the root scriptable object of this KPart.
@@ -194,55 +199,54 @@ public:
     /**
       Try to use the object @p objId associated with 'this' as a function.
     */
-    virtual QVariant callAsFunction(ScriptableExtension* callerPrincipal, quint64 objId, const ArgList& args);
+    virtual QVariant callAsFunction(ScriptableExtension *callerPrincipal, quint64 objId, const ArgList &args);
 
     /**
      Try to use a function reference to field @p f of object @objId as a function
      */
-    virtual QVariant callFunctionReference(ScriptableExtension* callerPrincipal, quint64 objId,
-                                           const QString& f, const ArgList& args);
+    virtual QVariant callFunctionReference(ScriptableExtension *callerPrincipal, quint64 objId,
+                                           const QString &f, const ArgList &args);
 
     /**
       Try to use the object @p objId associated with 'this' as a constructor
       (corresponding to ECMAScript's new foo(bar, baz, glarch) expression).
     */
-    virtual QVariant callAsConstructor(ScriptableExtension* callerPrincipal, quint64 objId, const ArgList& args);
+    virtual QVariant callAsConstructor(ScriptableExtension *callerPrincipal, quint64 objId, const ArgList &args);
 
     /**
      Returns true if the object @p objId associated with 'this' has the property
      @p propName.
     */
-    virtual bool hasProperty(ScriptableExtension* callerPrincipal, quint64 objId, const QString& propName);
+    virtual bool hasProperty(ScriptableExtension *callerPrincipal, quint64 objId, const QString &propName);
 
     /**
      Tries to get field @p propName from object @p objId associated with 'this'.
     */
-    virtual QVariant get(ScriptableExtension* callerPrincipal, quint64 objId, const QString& propName);
+    virtual QVariant get(ScriptableExtension *callerPrincipal, quint64 objId, const QString &propName);
 
     /**
      Tries to set the field @p propName from object @p objId associated with 'this'
      to @p value. Returns true on success
     */
-    virtual bool put(ScriptableExtension* callerPrincipal, quint64 objId, const QString& propName, const QVariant& value);
+    virtual bool put(ScriptableExtension *callerPrincipal, quint64 objId, const QString &propName, const QVariant &value);
 
     /**
      Tries to remove the field d @p propName from object @p objId associated with 'this'.
      Returns true on success
     */
-    virtual bool removeProperty(ScriptableExtension* callerPrincipal, quint64 objId, const QString& propName);
+    virtual bool removeProperty(ScriptableExtension *callerPrincipal, quint64 objId, const QString &propName);
 
     /**
      Tries to enumerate all fields of object @p objId associated with this to
      @p result. Returns true on success
     */
-    virtual bool enumerateProperties(ScriptableExtension* callerPrincipal, quint64 objId, QStringList* result);
+    virtual bool enumerateProperties(ScriptableExtension *callerPrincipal, quint64 objId, QStringList *result);
 
     /**
      Tries to raise an exception with given message in this extension's scripting
      context. Returns true on success
     */
-    virtual bool setException(ScriptableExtension* callerPrincipal, const QString& message);
-
+    virtual bool setException(ScriptableExtension *callerPrincipal, const QString &message);
 
     enum ScriptLanguage {
         ECMAScript, /// < also known as JavaScript
@@ -254,9 +258,9 @@ public:
      The parameter @p language specifies the language to execute it as.
      Use isScriptLanguageSupported to check for support.
     */
-    virtual QVariant evaluateScript(ScriptableExtension* callerPrincipal,
+    virtual QVariant evaluateScript(ScriptableExtension *callerPrincipal,
                                     quint64 contextObjectId,
-                                    const QString& code,
+                                    const QString &code,
                                     ScriptLanguage language = ECMAScript);
 
     /** returns true if this extension can execute scripts in the given
@@ -274,7 +278,7 @@ public:
 
       @return a copy of the passed in value
     */
-    static QVariant acquireValue(const QVariant& v);
+    static QVariant acquireValue(const QVariant &v);
 
     /**
       decreases reference count of object @p objId
@@ -287,7 +291,7 @@ public:
 
       @return a copy of the passed in value
     */
-    static QVariant releaseValue(const QVariant& v);
+    static QVariant releaseValue(const QVariant &v);
 
     //@}
 private:
@@ -296,14 +300,14 @@ private:
      *  to each kid, override this method to provide it.
      *  @see enclosingObject
      */
-    virtual QVariant encloserForKid(KParts::ScriptableExtension* kid);
+    virtual QVariant encloserForKid(KParts::ScriptableExtension *kid);
 
-    ScriptableExtensionPrivate* const d;
+    ScriptableExtensionPrivate *const d;
 };
 
-KPARTS_EXPORT unsigned int qHash(const KParts::ScriptableExtension::Object& o, uint seed = 0);
+KPARTS_EXPORT unsigned int qHash(const KParts::ScriptableExtension::Object &o, uint seed = 0);
 
-KPARTS_EXPORT unsigned int qHash(const KParts::ScriptableExtension::FunctionRef& f);
+KPARTS_EXPORT unsigned int qHash(const KParts::ScriptableExtension::FunctionRef &f);
 
 } // namespace KParts
 
@@ -315,4 +319,3 @@ Q_DECLARE_METATYPE(KParts::ScriptableExtension::FunctionRef)
 
 #endif
 
-// kate: indent-width 4; replace-tabs on; tab-width 4; space-indent on;

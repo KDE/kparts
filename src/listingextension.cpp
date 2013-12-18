@@ -21,10 +21,9 @@
 
 #include "part.h"
 
-
-KParts::ListingFilterExtension::ListingFilterExtension (KParts::ReadOnlyPart* parent)
-      : QObject(parent),
-        d(0)
+KParts::ListingFilterExtension::ListingFilterExtension(KParts::ReadOnlyPart *parent)
+    : QObject(parent),
+      d(0)
 {
 }
 
@@ -32,9 +31,9 @@ KParts::ListingFilterExtension::~ListingFilterExtension()
 {
 }
 
-KParts::ListingFilterExtension* KParts::ListingFilterExtension::childObject (QObject* obj)
+KParts::ListingFilterExtension *KParts::ListingFilterExtension::childObject(QObject *obj)
 {
-    return obj->findChild<KParts::ListingFilterExtension*>(QString(), Qt::FindDirectChildrenOnly);
+    return obj->findChild<KParts::ListingFilterExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }
 
 KParts::ListingFilterExtension::FilterModes KParts::ListingFilterExtension::supportedFilterModes() const
@@ -42,15 +41,14 @@ KParts::ListingFilterExtension::FilterModes KParts::ListingFilterExtension::supp
     return None;
 }
 
-bool KParts::ListingFilterExtension::supportsMultipleFilters (KParts::ListingFilterExtension::FilterMode) const
+bool KParts::ListingFilterExtension::supportsMultipleFilters(KParts::ListingFilterExtension::FilterMode) const
 {
     return false;
 }
 
-
-KParts::ListingNotificationExtension::ListingNotificationExtension(KParts::ReadOnlyPart* parent)
-      :QObject(parent),
-        d(0)
+KParts::ListingNotificationExtension::ListingNotificationExtension(KParts::ReadOnlyPart *parent)
+    : QObject(parent),
+      d(0)
 {
 }
 
@@ -58,9 +56,9 @@ KParts::ListingNotificationExtension::~ListingNotificationExtension()
 {
 }
 
-KParts::ListingNotificationExtension* KParts::ListingNotificationExtension::childObject(QObject* obj)
+KParts::ListingNotificationExtension *KParts::ListingNotificationExtension::childObject(QObject *obj)
 {
-    return obj->findChild<KParts::ListingNotificationExtension*>(QString(), Qt::FindDirectChildrenOnly);
+    return obj->findChild<KParts::ListingNotificationExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }
 
 KParts::ListingNotificationExtension::NotificationEventTypes KParts::ListingNotificationExtension::supportedNotificationEventTypes() const

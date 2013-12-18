@@ -21,9 +21,9 @@
 
 #include "part.h"
 
-KParts::FileInfoExtension::FileInfoExtension(KParts::ReadOnlyPart* parent)
-                          : QObject(parent),
-                            d(0)
+KParts::FileInfoExtension::FileInfoExtension(KParts::ReadOnlyPart *parent)
+    : QObject(parent),
+      d(0)
 
 {
 }
@@ -32,9 +32,9 @@ KParts::FileInfoExtension::~FileInfoExtension()
 {
 }
 
-KParts::FileInfoExtension* KParts::FileInfoExtension::childObject(QObject* obj)
+KParts::FileInfoExtension *KParts::FileInfoExtension::childObject(QObject *obj)
 {
-    return obj->findChild<KParts::FileInfoExtension*>(QString(), Qt::FindDirectChildrenOnly);
+    return obj->findChild<KParts::FileInfoExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }
 
 KParts::FileInfoExtension::QueryModes KParts::FileInfoExtension::supportedQueryModes() const

@@ -85,44 +85,44 @@ class QStringList;
 class TerminalInterface
 {
 public:
-  virtual ~TerminalInterface(){}
-  /**
-   * This starts @p program, with arguments @p args
-   */
-  virtual void startProgram( const QString& program,
-                             const QStringList& args ) = 0;
-  /**
-   * If no shell is running, this starts a shell with the
-   * @dir as the starting directory.
-   * If a shell is already running, nothing is done.
-   */
-  virtual void showShellInDir( const QString& dir ) = 0;
+    virtual ~TerminalInterface() {}
+    /**
+     * This starts @p program, with arguments @p args
+     */
+    virtual void startProgram(const QString &program,
+                              const QStringList &args) = 0;
+    /**
+     * If no shell is running, this starts a shell with the
+     * @dir as the starting directory.
+     * If a shell is already running, nothing is done.
+     */
+    virtual void showShellInDir(const QString &dir) = 0;
 
-  /**
-   * This sends @param text as input to the currently running
-   * program..
-   */
-  virtual void sendInput( const QString& text ) = 0;
+    /**
+     * This sends @param text as input to the currently running
+     * program..
+     */
+    virtual void sendInput(const QString &text) = 0;
 
-  /**
-   * Return terminal PID
-   */
-  virtual int terminalProcessId() = 0;
+    /**
+     * Return terminal PID
+     */
+    virtual int terminalProcessId() = 0;
 
-  /**
-   * Return foregound PID, If there is no foreground process running, returns -1
-   */
-  virtual int foregroundProcessId() = 0;
+    /**
+     * Return foregound PID, If there is no foreground process running, returns -1
+     */
+    virtual int foregroundProcessId() = 0;
 
-  /**
-   * Returns sub process name. If there is no sub process running, returns empty QString
-   */
-  virtual QString foregroundProcessName() = 0;
+    /**
+     * Returns sub process name. If there is no sub process running, returns empty QString
+     */
+    virtual QString foregroundProcessName() = 0;
 
-  /**
-   * Returns the current working directory
-   */
-  virtual QString currentWorkingDirectory() const = 0;
+    /**
+     * Returns the current working directory
+     */
+    virtual QString currentWorkingDirectory() const = 0;
 };
 
 Q_DECLARE_INTERFACE(TerminalInterface, "org.kde.TerminalInterface")

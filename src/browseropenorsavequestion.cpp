@@ -55,7 +55,7 @@ public:
         Cancel = QDialog::Rejected
     };
 
-    BrowserOpenOrSaveQuestionPrivate(QWidget* parent, const QUrl& url, const QString& mimeType)
+    BrowserOpenOrSaveQuestionPrivate(QWidget *parent, const QUrl &url, const QString &mimeType)
         : QDialog(parent), url(url), mimeType(mimeType),
           features(0)
     {
@@ -85,7 +85,7 @@ public:
         hLayout->addWidget(iconLabel, 0, Qt::AlignCenter);
         hLayout->addSpacing(spacingHint);
 
-        QVBoxLayout* textVLayout = new QVBoxLayout;
+        QVBoxLayout *textVLayout = new QVBoxLayout;
         questionLabel = new KSqueezedTextLabel(this);
         textVLayout->addWidget(questionLabel);
 
@@ -95,17 +95,17 @@ public:
 
         QMimeDatabase db;
         mime = db.mimeTypeForName(mimeType);
-        QString mimeDescription (mimeType);
+        QString mimeDescription(mimeType);
         if (mime.isValid()) {
             // Always prefer the mime-type comment over the raw type for display
             mimeDescription = (mime.comment().isEmpty() ? mime.name() : mime.comment());
         }
-        QLabel* mimeTypeLabel = new QLabel(this);
+        QLabel *mimeTypeLabel = new QLabel(this);
         mimeTypeLabel->setText(i18nc("@label Type of file", "Type: %1", mimeDescription));
         mimeTypeLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
         textVLayout->addWidget(mimeTypeLabel);
 
-        hLayout->addLayout(textVLayout,5);
+        hLayout->addLayout(textVLayout, 5);
 
         mainLayout->addStretch(15);
         dontAskAgainCheckBox = new QCheckBox(this);
@@ -140,7 +140,7 @@ public:
 
     bool autoEmbedMimeType(int flags);
 
-    int executeDialog(const QString& dontShowAgainName)
+    int executeDialog(const QString &dontShowAgainName)
     {
         KConfigGroup cg(dontAskConfig, "Notification Messages"); // group name comes from KMessageBox
         const QString dontAsk = cg.readEntry(dontShowAgainName, QString()).toLower();
@@ -173,16 +173,16 @@ public:
     QString mimeType;
     QMimeType mime;
     KService::Ptr selectedService;
-    KSqueezedTextLabel* questionLabel;
+    KSqueezedTextLabel *questionLabel;
     BrowserOpenOrSaveQuestion::Features features;
-    QLabel* fileNameLabel;
+    QLabel *fileNameLabel;
     QDialogButtonBox *buttonBox;
     QPushButton *saveButton;
     QPushButton *openDefaultButton;
     QPushButton *openWithButton;
 
 private:
-    QCheckBox* dontAskAgainCheckBox;
+    QCheckBox *dontAskAgainCheckBox;
     KSharedConfig::Ptr dontAskConfig;
 
 public Q_SLOTS:
@@ -211,7 +211,7 @@ public Q_SLOTS:
         }
     }
 
-    void slotAppSelected(QAction* action)
+    void slotAppSelected(QAction *action)
     {
         selectedService = action->data().value<KService::Ptr>();
         //showService(selectedService);
@@ -219,8 +219,7 @@ public Q_SLOTS:
     }
 };
 
-
-BrowserOpenOrSaveQuestion::BrowserOpenOrSaveQuestion(QWidget* parent, const QUrl& url, const QString& mimeType)
+BrowserOpenOrSaveQuestion::BrowserOpenOrSaveQuestion(QWidget *parent, const QUrl &url, const QString &mimeType)
     : d(new BrowserOpenOrSaveQuestionPrivate(parent, url, mimeType))
 {
 }
@@ -230,7 +229,7 @@ BrowserOpenOrSaveQuestion::~BrowserOpenOrSaveQuestion()
     delete d;
 }
 
-static QAction* createAppAction(const KService::Ptr& service, QObject* parent)
+static QAction *createAppAction(const KService::Ptr &service, QObject *parent)
 {
     QString actionName(service->name().replace(QLatin1Char('&'), QStringLiteral("&&")));
     actionName = i18nc("@action:inmenu", "Open &with %1", actionName);
@@ -254,7 +253,7 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askOpenOrSave()
     // and we want no menu at all if there's only one offer.
     // TODO: we probably need a setTraderConstraint(), to exclude the current application?
     const KService::List apps = KFileItemActions::associatedApplications(QStringList() << d->mimeType,
-                                                                         QString() /* TODO trader constraint */);
+                                QString() /* TODO trader constraint */);
     if (apps.isEmpty()) {
         KGuiItem::assign(d->openDefaultButton, openWithDialogItem);
     } else {
@@ -265,7 +264,7 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askOpenOrSave()
             // OpenDefault shall use this service
             d->selectedService = apps.first();
             d->openWithButton->show();
-            QMenu* menu = new QMenu(d);
+            QMenu *menu = new QMenu(d);
             if (apps.count() > 1) {
                 // Provide an additional button with a menu of associated apps
                 KGuiItem openWithItem(i18nc("@label:button", "&Open with"), QStringLiteral("document-open"));
@@ -273,10 +272,10 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askOpenOrSave()
                 d->openWithButton->setMenu(menu);
                 QObject::connect(menu, SIGNAL(triggered(QAction*)), d, SLOT(slotAppSelected(QAction*)));
                 for (KService::List::const_iterator it = apps.begin(); it != apps.end(); ++it) {
-                    QAction* act = createAppAction(*it, d);
+                    QAction *act = createAppAction(*it, d);
                     menu->addAction(act);
                 }
-                QAction* openWithDialogAction = new QAction(d);
+                QAction *openWithDialogAction = new QAction(d);
                 openWithDialogAction->setIcon(QIcon::fromTheme(QStringLiteral("document-open")));
                 openWithDialogAction->setText(openWithDialogItem.text());
                 menu->addAction(openWithDialogAction);
@@ -294,7 +293,7 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askOpenOrSave()
 
     const int choice = d->executeDialog(dontAskAgain);
     return choice == BrowserOpenOrSaveQuestionPrivate::Save ? Save
-        : (choice == BrowserOpenOrSaveQuestionPrivate::Cancel ? Cancel : Open);
+           : (choice == BrowserOpenOrSaveQuestionPrivate::Cancel ? Cancel : Open);
 }
 
 KService::Ptr BrowserOpenOrSaveQuestion::selectedService() const
@@ -318,20 +317,22 @@ bool BrowserOpenOrSaveQuestionPrivate::autoEmbedMimeType(int flags)
     // - multipart/* ("server push", see kmultipart)
     // KEEP IN SYNC!!!
     if (flags != (int)BrowserRun::AttachmentDisposition && mime.isValid() && (
-            mime.inherits(QStringLiteral("text/html")) ||
-            mime.inherits(QStringLiteral("application/xml")) ||
-            mime.inherits(QStringLiteral("inode/directory")) ||
-            mimeType.startsWith(QLatin1String("image")) ||
-            mime.inherits(QStringLiteral("multipart/x-mixed-replace")) ||
-            mime.inherits(QStringLiteral("multipart/replace"))))
+                mime.inherits(QStringLiteral("text/html")) ||
+                mime.inherits(QStringLiteral("application/xml")) ||
+                mime.inherits(QStringLiteral("inode/directory")) ||
+                mimeType.startsWith(QLatin1String("image")) ||
+                mime.inherits(QStringLiteral("multipart/x-mixed-replace")) ||
+                mime.inherits(QStringLiteral("multipart/replace")))) {
         return true;
+    }
     return false;
 }
 
 BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askEmbedOrSave(int flags)
 {
-    if (d->autoEmbedMimeType(flags))
+    if (d->autoEmbedMimeType(flags)) {
         return Embed;
+    }
 
     // don't use KStandardGuiItem::open() here which has trailing ellipsis!
     KGuiItem::assign(d->openDefaultButton, KGuiItem(i18nc("@label:button", "&Open"), QStringLiteral("document-open")));
@@ -340,12 +341,12 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askEmbedOrSave(int 
     d->questionLabel->setText(i18nc("@info", "Open '%1'?", d->url.toDisplayString(QUrl::PreferLocalFile)));
     d->questionLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
 
-    const QString dontAskAgain = QLatin1String("askEmbedOrSave")+ d->mimeType; // KEEP IN SYNC!!!
+    const QString dontAskAgain = QLatin1String("askEmbedOrSave") + d->mimeType; // KEEP IN SYNC!!!
     // SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC
 
     const int choice = d->executeDialog(dontAskAgain);
     return choice == BrowserOpenOrSaveQuestionPrivate::Save ? Save
-        : (choice == BrowserOpenOrSaveQuestionPrivate::Cancel ? Cancel : Embed);
+           : (choice == BrowserOpenOrSaveQuestionPrivate::Cancel ? Cancel : Embed);
 }
 
 void BrowserOpenOrSaveQuestion::setFeatures(Features features)
@@ -353,7 +354,7 @@ void BrowserOpenOrSaveQuestion::setFeatures(Features features)
     d->features = features;
 }
 
-void BrowserOpenOrSaveQuestion::setSuggestedFileName(const QString& suggestedFileName)
+void BrowserOpenOrSaveQuestion::setSuggestedFileName(const QString &suggestedFileName)
 {
     if (suggestedFileName.isEmpty()) {
         return;

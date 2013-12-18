@@ -54,18 +54,17 @@ class KPARTS_EXPORT Plugin : public QObject, virtual public KXMLGUIClient
 {
     Q_OBJECT
 public:
-    struct PluginInfo
-    {
+    struct PluginInfo {
         QString m_relXMLFileName; // relative filename, i.e. kpartplugins/name
         QString m_absXMLFileName; // full path of most recent filename matching the relative
-                                  // filename
+        // filename
         QDomDocument m_document;
     };
 
     /**
      * Construct a new KParts plugin.
      */
-    Plugin( QObject* parent = 0 );
+    Plugin(QObject *parent = 0);
     /**
      * Destructor.
      */
@@ -88,7 +87,7 @@ public:
      * It is recommended to use the last loadPlugins method instead,
      * to support enabling and disabling of plugins.
      */
-    static void loadPlugins( QObject *parent, const QString &instance );
+    static void loadPlugins(QObject *parent, const QString &instance);
 
     /**
      * Load the plugin libraries specified by the list @p docs and make the
@@ -97,7 +96,7 @@ public:
      * It is recommended to use the last loadPlugins method instead,
      * to support enabling and disabling of plugins.
      */
-    static void loadPlugins( QObject *parent, const QList<PluginInfo> &pluginInfos );
+    static void loadPlugins(QObject *parent, const QList<PluginInfo> &pluginInfos);
 
     /**
      * Load the plugin libraries specified by the list @p pluginInfos, make the
@@ -106,8 +105,8 @@ public:
      * It is recommended to use the last loadPlugins method instead,
      * to support enabling and disabling of plugins.
      */
-    static void loadPlugins( QObject *parent, const QList<PluginInfo> &pluginInfos, const
-            QString &instance );
+    static void loadPlugins(QObject *parent, const QList<PluginInfo> &pluginInfos, const
+                            QString &instance);
 
     /**
      * Load the plugin libraries for the given @p instance, make the
@@ -146,16 +145,16 @@ public:
      * }
      * \endcode
      */
-    static void loadPlugins(QObject *parent, KXMLGUIClient* parentGUIClient,
-            const QString &instance, bool enableNewPluginsByDefault = true,
-            int interfaceVersionRequired = 0);
+    static void loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient,
+                            const QString &instance, bool enableNewPluginsByDefault = true,
+                            int interfaceVersionRequired = 0);
 
     /**
      * Returns a list of plugin objects loaded for @p parent. This
      * functions basically iterates over the children of the given object
      * and returns those that inherit from KParts::Plugin.
      **/
-    static QList<Plugin *> pluginObjects( QObject *parent );
+    static QList<Plugin *> pluginObjects(QObject *parent);
 
 protected:
     virtual void setComponentData(const KAboutData &pluginData);
@@ -172,12 +171,12 @@ private:
      * @internal
      * @return The plugin created from the library @p libname
      */
-    static Plugin* loadPlugin(QObject * parent, const QString &libname, const QString &keyword = QString());
+    static Plugin *loadPlugin(QObject *parent, const QString &libname, const QString &keyword = QString());
 
 private:
-    static bool hasPlugin( QObject* parent, const QString& library );
+    static bool hasPlugin(QObject *parent, const QString &library);
     class PluginPrivate;
-    PluginPrivate* const d;
+    PluginPrivate *const d;
 };
 
 }

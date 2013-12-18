@@ -42,7 +42,7 @@ class ReadOnlyPart;
  * The main purpose of for this extension is to provide information about
  * files and directories located on remote servers so that download managers
  * such as kget can easily retrieve these resources.
- * 
+ *
  * @since 4.6
  */
 class KPARTS_EXPORT FileInfoExtension : public QObject
@@ -63,7 +63,7 @@ public:
     Q_DECLARE_FLAGS(QueryModes, QueryMode)
 
     /*! Constructor */
-    FileInfoExtension(KParts::ReadOnlyPart* parent);
+    FileInfoExtension(KParts::ReadOnlyPart *parent);
 
     /*! Destructor */
     virtual ~FileInfoExtension();
@@ -71,7 +71,7 @@ public:
     /**
      * Queries @p obj for a child object which inherits from this class.
      */
-    static FileInfoExtension *childObject( QObject *obj );
+    static FileInfoExtension *childObject(QObject *obj);
 
     /**
      * Returns true if any of the items in the current view of the part that
@@ -98,7 +98,7 @@ public:
     virtual KFileItemList queryFor(QueryMode mode) const = 0;
 
 private:
-    FileInfoExtensionPrivate* const d;
+    FileInfoExtensionPrivate *const d;
 };
 
 }

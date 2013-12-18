@@ -26,18 +26,18 @@
 
 class PartViewer : public KParts::MainWindow
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  PartViewer();
-  virtual ~PartViewer();
+    PartViewer();
+    virtual ~PartViewer();
 
-  void openUrl( const QUrl & url );
+    void openUrl(const QUrl &url);
 
 protected Q_SLOTS:
-  void slotFileOpen();
+    void slotFileOpen();
 
 private:
-  KParts::ReadOnlyPart *m_part;
+    KParts::ReadOnlyPart *m_part;
 };
 
 #endif

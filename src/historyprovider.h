@@ -24,7 +24,8 @@
 
 #include <kparts/kparts_export.h>
 
-namespace KParts {
+namespace KParts
+{
 
 class HistoryProviderPrivate;
 
@@ -45,7 +46,7 @@ class KPARTS_EXPORT HistoryProvider : public QObject
     friend class ::KParts::HistoryProviderPrivate;
 
 public:
-    static HistoryProvider * self();
+    static HistoryProvider *self();
 
     /**
      * @returns true if a provider has already been created.
@@ -56,17 +57,17 @@ public:
     /**
      * @returns true if @p item is present in the history.
      */
-    virtual bool contains( const QString& item ) const;
+    virtual bool contains(const QString &item) const;
 
     /**
      * Inserts @p item into the history.
      */
-    virtual void insert( const QString& item );
+    virtual void insert(const QString &item);
 
     /**
      * Removes @p item from the history.
      */
-    virtual void remove( const QString& item );
+    virtual void remove(const QString &item);
 
     /**
      * Clears the history. The cleared() signal is emitted after clearing.
@@ -85,12 +86,12 @@ Q_SIGNALS:
      * history has changed. Put those items that were added or removed from the
      * history into @p items.
      */
-    void updated( const QStringList& items );
+    void updated(const QStringList &items);
 
     /**
      * Emitted after the item has been inserted
      */
-    void inserted( const QString& item );
+    void inserted(const QString &item);
 
 protected:
     /**
@@ -104,7 +105,7 @@ protected:
     virtual ~HistoryProvider();
 
 private:
-    HistoryProviderPrivate* const d;
+    HistoryProviderPrivate *const d;
 };
 
 }

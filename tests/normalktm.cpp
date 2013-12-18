@@ -43,43 +43,43 @@ TestMainWindow::TestMainWindow()
     // We can do this "switch active part" because we have a splitter with
     // two items in it.
     // I wonder what kdevelop uses/will use to embed kedit, BTW.
-    m_splitter = new QSplitter( this );
+    m_splitter = new QSplitter(this);
 
     m_part1 = new Part1(this, m_splitter);
     m_part2 = new Part2(this, m_splitter);
 
-    QMenu * pFile = new QMenu( QStringLiteral("File"), menuBar() );
-    KActionCollection * coll = actionCollection();
-    QAction * paLocal = new QAction( QStringLiteral("&View local file"), this );
-    coll->addAction( QStringLiteral("open_local_file"), paLocal );
+    QMenu *pFile = new QMenu(QStringLiteral("File"), menuBar());
+    KActionCollection *coll = actionCollection();
+    QAction *paLocal = new QAction(QStringLiteral("&View local file"), this);
+    coll->addAction(QStringLiteral("open_local_file"), paLocal);
     connect(paLocal, SIGNAL(triggered()), this, SLOT(slotFileOpen()));
     // No XML: we need to add our actions to the menus ourselves
     pFile->addAction(paLocal);
 
-    QAction * paRemote = new QAction( QStringLiteral("&View remote file"), this );
-    coll->addAction( QStringLiteral("open_remote_file"), paRemote );
+    QAction *paRemote = new QAction(QStringLiteral("&View remote file"), this);
+    coll->addAction(QStringLiteral("open_remote_file"), paRemote);
     connect(paRemote, SIGNAL(triggered()), this, SLOT(slotFileOpenRemote()));
     pFile->addAction(paRemote);
 
-    m_paEditFile = new QAction( QStringLiteral("&Edit file"), this );
-    coll->addAction( QStringLiteral("edit_file"), m_paEditFile );
+    m_paEditFile = new QAction(QStringLiteral("&Edit file"), this);
+    coll->addAction(QStringLiteral("edit_file"), m_paEditFile);
     connect(m_paEditFile, SIGNAL(triggered()), this, SLOT(slotFileEdit()));
     pFile->addAction(m_paEditFile);
 
-    m_paCloseEditor = new QAction( QStringLiteral("&Close file editor"), this );
-    coll->addAction( QStringLiteral("close_editor"), m_paCloseEditor );
+    m_paCloseEditor = new QAction(QStringLiteral("&Close file editor"), this);
+    coll->addAction(QStringLiteral("close_editor"), m_paCloseEditor);
     connect(m_paCloseEditor, SIGNAL(triggered()), this, SLOT(slotFileCloseEditor()));
     m_paCloseEditor->setEnabled(false);
     pFile->addAction(m_paCloseEditor);
 
-    QAction * paQuit = new QAction( QStringLiteral("&Quit"), this );
-    coll->addAction( QStringLiteral("shell_quit"), paQuit );
+    QAction *paQuit = new QAction(QStringLiteral("&Quit"), this);
+    coll->addAction(QStringLiteral("shell_quit"), paQuit);
     connect(paQuit, SIGNAL(triggered()), this, SLOT(close()));
     paQuit->setIcon(QIcon::fromTheme(QStringLiteral("application-exit")));
     pFile->addAction(paQuit);
 
-    setCentralWidget( m_splitter );
-    m_splitter->setMinimumSize( 400, 300 );
+    setCentralWidget(m_splitter);
+    m_splitter->setMinimumSize(400, 300);
 
     m_splitter->show();
 
@@ -92,16 +92,18 @@ TestMainWindow::~TestMainWindow()
 
 void TestMainWindow::slotFileOpen()
 {
-    const QString file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QCoreApplication::instance()->applicationName()+QStringLiteral("/kpartstest_shell.rc") );
-    if (!m_part1->openUrl(QUrl::fromLocalFile(file)))
+    const QString file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QCoreApplication::instance()->applicationName() + QStringLiteral("/kpartstest_shell.rc"));
+    if (!m_part1->openUrl(QUrl::fromLocalFile(file))) {
         KMessageBox::error(this, QStringLiteral("Couldn't open file !"));
+    }
 }
 
 void TestMainWindow::slotFileOpenRemote()
 {
     QUrl u(QStringLiteral("http://www.kde.org/index.html"));
-    if ( !m_part1->openUrl( u ) )
+    if (!m_part1->openUrl(u)) {
         KMessageBox::error(this, QStringLiteral("Couldn't open file !"));
+    }
 }
 
 void TestMainWindow::embedEditor()
@@ -109,7 +111,7 @@ void TestMainWindow::embedEditor()
     // replace part2 with the editor part
     delete m_part2;
     m_part2 = 0;
-    m_editorpart = new NotepadPart( m_splitter, this );
+    m_editorpart = new NotepadPart(m_splitter, this);
     m_editorpart->setReadWrite(); // read-write mode
     ////// m_manager->addPart( m_editorpart );
     m_editorpart->widget()->show(); //// we need to do this in a normal KTM....
@@ -130,14 +132,16 @@ void TestMainWindow::slotFileCloseEditor()
 
 void TestMainWindow::slotFileEdit()
 {
-    if ( !m_editorpart )
+    if (!m_editorpart) {
         embedEditor();
+    }
     // TODO use KFileDialog to allow testing remote files
-    if (!m_editorpart->openUrl(QUrl::fromLocalFile(QDir::current().absolutePath()+QStringLiteral("/kpartstest_shell.rc"))))
+    if (!m_editorpart->openUrl(QUrl::fromLocalFile(QDir::current().absolutePath() + QStringLiteral("/kpartstest_shell.rc")))) {
         KMessageBox::error(this, QStringLiteral("Couldn't open file!"));
+    }
 }
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
     // we cheat and call ourselves kpartstest for TestMainWindow::slotFileOpen()
     QApplication::setApplicationName(QStringLiteral("kpartstest"));

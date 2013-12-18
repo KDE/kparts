@@ -45,10 +45,10 @@ class PartManagerPrivate;
 class KPARTS_EXPORT PartManager : public QObject
 {
     Q_OBJECT
-    Q_ENUMS( SelectionPolicy )
-    Q_PROPERTY( SelectionPolicy selectionPolicy READ selectionPolicy WRITE setSelectionPolicy )
-    Q_PROPERTY( bool allowNestedParts READ allowNestedParts WRITE setAllowNestedParts )
-    Q_PROPERTY( bool ignoreScrollBars READ ignoreScrollBars WRITE setIgnoreScrollBars )
+    Q_ENUMS(SelectionPolicy)
+    Q_PROPERTY(SelectionPolicy selectionPolicy READ selectionPolicy WRITE setSelectionPolicy)
+    Q_PROPERTY(bool allowNestedParts READ allowNestedParts WRITE setAllowNestedParts)
+    Q_PROPERTY(bool ignoreScrollBars READ ignoreScrollBars WRITE setIgnoreScrollBars)
 public:
     /// Selection policy. The default policy of a PartManager is Direct.
     enum SelectionPolicy { Direct, TriState };
@@ -67,7 +67,7 @@ public:
      *               partmanager should monitor for activation/selection
      *               events
      */
-    PartManager( QWidget * parent );
+    PartManager(QWidget *parent);
     /**
      * Constructs a part manager.
      *
@@ -76,13 +76,13 @@ public:
      *                 events
      * @param parent   The parent QObject.
      */
-    PartManager( QWidget * topLevel, QObject *parent );
+    PartManager(QWidget *topLevel, QObject *parent);
     virtual ~PartManager();
 
     /**
      * Sets the selection policy of the partmanager.
      */
-    void setSelectionPolicy( SelectionPolicy policy );
+    void setSelectionPolicy(SelectionPolicy policy);
     /**
      * Returns the current selection policy.
      */
@@ -100,7 +100,7 @@ public:
      * nested parts are not allowed/handled, then the top parent part in
      * the tree is activated.
      */
-    void setAllowNestedParts( bool allow );
+    void setAllowNestedParts(bool allow);
     /**
      * @see setAllowNestedParts
      */
@@ -114,7 +114,7 @@ public:
      *
      * The default value is false (read: scrollbars are NOT ignored).
      */
-    void setIgnoreScrollBars( bool ignore );
+    void setIgnoreScrollBars(bool ignore);
     /**
      * @see setIgnoreScrollBars
      */
@@ -125,7 +125,7 @@ public:
      * By default it reacts on all mouse buttons (LMB/MMB/RMB).
      * @param buttonMask a combination of Qt::ButtonState values e.g. Qt::LeftButton | Qt::MidButton
      */
-    void setActivationButtonMask( short int buttonMask );
+    void setActivationButtonMask(short int buttonMask);
     /**
      * @see setActivationButtonMask
      */
@@ -134,7 +134,7 @@ public:
     /**
      * @internal
      */
-    virtual bool eventFilter( QObject *obj, QEvent *ev );
+    virtual bool eventFilter(QObject *obj, QEvent *ev);
 
     /**
      * Adds a part to the manager.
@@ -143,21 +143,21 @@ public:
      * Behavior fix in KDE3.4: the part's widget is shown only if setActive is true,
      * it used to be shown in all cases before.
      */
-    virtual void addPart( Part *part, bool setActive = true );
+    virtual void addPart(Part *part, bool setActive = true);
 
     /**
      * Removes a part from the manager (this does not delete the object) .
      *
      * Sets the active part to 0 if @p part is the activePart() .
      */
-    virtual void removePart( Part *part );
+    virtual void removePart(Part *part);
 
     /**
      * Replaces @p oldPart with @p newPart, and sets @p newPart as active if
      * @p setActive is true.
      * This is an optimised version of removePart + addPart
      */
-    virtual void replacePart( Part * oldPart, Part * newPart, bool setActive = true );
+    virtual void replacePart(Part *oldPart, Part *newPart, bool setActive = true);
 
     /**
      * Sets the active part.
@@ -167,7 +167,7 @@ public:
      * @p widget can be used to specify which widget was responsible for the activation.
      * This is important if you have multiple views for a document/part , like in KOffice .
      */
-    virtual void setActivePart( Part *part, QWidget *widget = 0 );
+    virtual void setActivePart(Part *part, QWidget *widget = 0);
 
     /**
      * Returns the active part.
@@ -187,7 +187,7 @@ public:
      * @p widget can be used to specify which widget was responsible for the selection.
      * This is important if you have multiple views for a document/part , like in KOffice .
      */
-    virtual void setSelectedPart( Part *part, QWidget *widget = 0 );
+    virtual void setSelectedPart(Part *part, QWidget *widget = 0);
 
     /**
      * Returns the current selected part.
@@ -211,12 +211,12 @@ public:
      * constructor. Sometimes however (like for example when using the KDE dockwidget
      * library) , it is necessary to extend this.
      */
-    void addManagedTopLevelWidget( const QWidget *topLevel );
+    void addManagedTopLevelWidget(const QWidget *topLevel);
     /**
      * Removes the @p topLevel widget from the list of managed toplevel widgets.
      * @see addManagedTopLevelWidget
      */
-    void removeManagedTopLevelWidget( const QWidget *topLevel );
+    void removeManagedTopLevelWidget(const QWidget *topLevel);
 
     /**
      * @return the reason for the last activePartChanged signal emitted.
@@ -229,17 +229,17 @@ Q_SIGNALS:
      * Emitted when a new part has been added.
      * @see addPart()
      **/
-    void partAdded( KParts::Part *part );
+    void partAdded(KParts::Part *part);
     /**
      * Emitted when a part has been removed.
      * @see removePart()
      **/
-    void partRemoved( KParts::Part *part );
+    void partRemoved(KParts::Part *part);
     /**
      * Emitted when the active part has changed.
      * @see setActivePart()
      **/
-    void activePartChanged( KParts::Part *newPart );
+    void activePartChanged(KParts::Part *newPart);
 
 protected:
 
@@ -271,11 +271,11 @@ protected Q_SLOTS:
      */
     void slotManagedTopLevelWidgetDestroyed();
 private:
-    Part * findPartFromWidget( QWidget * widget, const QPoint &pos );
-    Part * findPartFromWidget( QWidget * widget );
+    Part *findPartFromWidget(QWidget *widget, const QPoint &pos);
+    Part *findPartFromWidget(QWidget *widget);
 
 private:
-    PartManagerPrivate* const d;
+    PartManagerPrivate *const d;
 };
 
 }

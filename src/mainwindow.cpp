@@ -37,7 +37,6 @@
 #include <QStatusBar>
 #include <qstandardpaths.h>
 
-
 #include <assert.h>
 
 using namespace KParts;
@@ -63,83 +62,79 @@ public:
 };
 }
 
-MainWindow::MainWindow( QWidget* parent, Qt::WindowFlags f )
-    : KXmlGuiWindow( parent, f ), d(new MainWindowPrivate())
+MainWindow::MainWindow(QWidget *parent, Qt::WindowFlags f)
+    : KXmlGuiWindow(parent, f), d(new MainWindowPrivate())
 {
-  PartBase::setPartObject( this );
+    PartBase::setPartObject(this);
 }
 
 MainWindow::~MainWindow()
 {
-  delete d;
+    delete d;
 }
 
-void MainWindow::createGUI( Part * part )
+void MainWindow::createGUI(Part *part)
 {
 #if 0
-  // qDebug() << "part=" << part
-                << ( part ? part->metaObject()->className() : "" )
-                << ( part ? part->objectName() : "" );
+    // qDebug() << "part=" << part
+            << (part ? part->metaObject()->className() : "")
+            << (part ? part->objectName() : "");
 #endif
-  KXMLGUIFactory *factory = guiFactory();
+    KXMLGUIFactory *factory = guiFactory();
 
-  assert( factory );
+    assert(factory);
 
-  if ( d->m_activePart )
-  {
+    if (d->m_activePart) {
 #if 0
-    // qDebug() << "deactivating GUI for" << d->m_activePart
-                  << d->m_activePart->metaObject()->className()
-                  << d->m_activePart->objectName();
+        // qDebug() << "deactivating GUI for" << d->m_activePart
+                << d->m_activePart->metaObject()->className()
+                << d->m_activePart->objectName();
 #endif
 
-    GUIActivateEvent ev( false );
-    QApplication::sendEvent( d->m_activePart, &ev );
+        GUIActivateEvent ev(false);
+        QApplication::sendEvent(d->m_activePart, &ev);
 
-    factory->removeClient( d->m_activePart );
+        factory->removeClient(d->m_activePart);
 
-    disconnect( d->m_activePart, SIGNAL(setWindowCaption(QString)),
-             this, SLOT(setCaption(QString)) );
-    disconnect( d->m_activePart, SIGNAL(setStatusBarText(QString)),
-             this, SLOT(slotSetStatusBarText(QString)) );
-  }
+        disconnect(d->m_activePart, SIGNAL(setWindowCaption(QString)),
+                   this, SLOT(setCaption(QString)));
+        disconnect(d->m_activePart, SIGNAL(setStatusBarText(QString)),
+                   this, SLOT(slotSetStatusBarText(QString)));
+    }
 
-  if ( !d->m_bShellGUIActivated )
-  {
-    loadPlugins(this, this, KAboutData::applicationData());
-    createShellGUI();
-    d->m_bShellGUIActivated = true;
-  }
+    if (!d->m_bShellGUIActivated) {
+        loadPlugins(this, this, KAboutData::applicationData());
+        createShellGUI();
+        d->m_bShellGUIActivated = true;
+    }
 
-  if ( part )
-  {
-    // do this before sending the activate event
-    connect( part, SIGNAL(setWindowCaption(QString)),
-             this, SLOT(setCaption(QString)) );
-    connect( part, SIGNAL(setStatusBarText(QString)),
-             this, SLOT(slotSetStatusBarText(QString)) );
+    if (part) {
+        // do this before sending the activate event
+        connect(part, SIGNAL(setWindowCaption(QString)),
+                this, SLOT(setCaption(QString)));
+        connect(part, SIGNAL(setStatusBarText(QString)),
+                this, SLOT(slotSetStatusBarText(QString)));
 
-    factory->addClient( part );
+        factory->addClient(part);
 
-    GUIActivateEvent ev( true );
-    QApplication::sendEvent( part, &ev );
-  }
+        GUIActivateEvent ev(true);
+        QApplication::sendEvent(part, &ev);
+    }
 
-  d->m_activePart = part;
+    d->m_activePart = part;
 }
 
-void MainWindow::slotSetStatusBarText( const QString & text )
+void MainWindow::slotSetStatusBarText(const QString &text)
 {
-  statusBar()->showMessage( text );
+    statusBar()->showMessage(text);
 }
 
-void MainWindow::createShellGUI( bool create )
+void MainWindow::createShellGUI(bool create)
 {
-    assert( d->m_bShellGUIActivated != create );
+    assert(d->m_bShellGUIActivated != create);
     d->m_bShellGUIActivated = create;
-    if ( create )
-    {
-        if ( isHelpMenuEnabled() && !d->m_helpMenu ) {
+    if (create) {
+        if (isHelpMenuEnabled() && !d->m_helpMenu) {
             d->m_helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
 
             KActionCollection *actions = actionCollection();
@@ -150,18 +145,24 @@ void MainWindow::createShellGUI( bool create )
             QAction *aboutAppAction = d->m_helpMenu->action(KHelpMenu::menuAboutApp);
             QAction *aboutKdeAction = d->m_helpMenu->action(KHelpMenu::menuAboutKDE);
 
-            if (helpContentsAction)
+            if (helpContentsAction) {
                 actions->addAction(helpContentsAction->objectName(), helpContentsAction);
-            if (whatsThisAction)
+            }
+            if (whatsThisAction) {
                 actions->addAction(whatsThisAction->objectName(), whatsThisAction);
-            if (reportBugAction)
+            }
+            if (reportBugAction) {
                 actions->addAction(reportBugAction->objectName(), reportBugAction);
-            if (switchLanguageAction)
+            }
+            if (switchLanguageAction) {
                 actions->addAction(switchLanguageAction->objectName(), switchLanguageAction);
-            if (aboutAppAction)
+            }
+            if (aboutAppAction) {
                 actions->addAction(aboutAppAction->objectName(), aboutAppAction);
-            if (aboutKdeAction)
+            }
+            if (aboutKdeAction) {
                 actions->addAction(aboutKdeAction->objectName(), aboutKdeAction);
+            }
         }
 
         QString f = xmlFile();
@@ -170,20 +171,18 @@ void MainWindow::createShellGUI( bool create )
             setXMLFile(f, true);
         } else {
             QString auto_file(componentName() + QStringLiteral("ui.rc"));
-            setXMLFile( auto_file, true );
+            setXMLFile(auto_file, true);
         }
 
-        GUIActivateEvent ev( true );
-        QApplication::sendEvent( this, &ev );
+        GUIActivateEvent ev(true);
+        QApplication::sendEvent(this, &ev);
 
-        guiFactory()->addClient( this );
-    }
-    else
-    {
-        GUIActivateEvent ev( false );
-        QApplication::sendEvent( this, &ev );
+        guiFactory()->addClient(this);
+    } else {
+        GUIActivateEvent ev(false);
+        QApplication::sendEvent(this, &ev);
 
-        guiFactory()->removeClient( this );
+        guiFactory()->removeClient(this);
     }
 }
 

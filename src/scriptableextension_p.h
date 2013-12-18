@@ -22,29 +22,30 @@
 
 #include "browserextension.h"
 
-namespace KParts {
+namespace KParts
+{
 
-// LiveConnectExtension -> ScriptableExtension adapter. 
+// LiveConnectExtension -> ScriptableExtension adapter.
 class ScriptableLiveConnectExtension: public ScriptableExtension
 {
     Q_OBJECT
 public:
-    ScriptableLiveConnectExtension(QObject* parent, LiveConnectExtension* old);
+    ScriptableLiveConnectExtension(QObject *parent, LiveConnectExtension *old);
 
     QVariant rootObject();
     // enclosingObject: not applicable, plugins wouldn't have children
 
     // callAsFunction: we only have function rereferences.
-    QVariant callFunctionReference(ScriptableExtension* callerPrincipal, quint64 objId,
-                                   const QString& f, const ArgList& args);
+    QVariant callFunctionReference(ScriptableExtension *callerPrincipal, quint64 objId,
+                                   const QString &f, const ArgList &args);
 
     // callAsConstructor: unsupported by LC
 
-    bool hasProperty(ScriptableExtension* callerPrincipal, quint64 objId, const QString& propName);
+    bool hasProperty(ScriptableExtension *callerPrincipal, quint64 objId, const QString &propName);
 
-    QVariant get(ScriptableExtension* callerPrincipal, quint64 objId, const QString& propName);
+    QVariant get(ScriptableExtension *callerPrincipal, quint64 objId, const QString &propName);
 
-    bool put(ScriptableExtension* callerPrincipal, quint64 objId, const QString& propName, const QVariant& value);
+    bool put(ScriptableExtension *callerPrincipal, quint64 objId, const QString &propName, const QVariant &value);
 
     // removeProperty: unsupported by LC
     // enumerateProperties: unsupported by LC
@@ -59,19 +60,17 @@ private:
     // LC uses 0-1 refcounting, we use arbitrary, so we need to call
     // unregister when done.
     QHash<quint64, int>     refCounts;
-    LiveConnectExtension* wrapee;
+    LiveConnectExtension *wrapee;
 
     // also registers when needed
-    QVariant fromLC(const QString& name, LiveConnectExtension::Type type,
-                    unsigned long objId, const QString& value);
+    QVariant fromLC(const QString &name, LiveConnectExtension::Type type,
+                    unsigned long objId, const QString &value);
 
-    QString toLC(const QVariant& in, bool* ok);
+    QString toLC(const QVariant &in, bool *ok);
 public Q_SLOTS:
-    void liveConnectEvent(const unsigned long, const QString&, const KParts::LiveConnectExtension::ArgList&);
+    void liveConnectEvent(const unsigned long, const QString &, const KParts::LiveConnectExtension::ArgList &);
 };
-
 
 } // namespace KParts
 
 #endif
-// kate: indent-width 4; replace-tabs on; tab-width 4; space-indent on;

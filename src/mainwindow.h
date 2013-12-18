@@ -43,54 +43,54 @@ class MainWindowPrivate;
  */
 class KPARTS_EXPORT MainWindow : public KXmlGuiWindow, virtual public PartBase
 {
-  Q_OBJECT
- public:
-  /**
-   * Constructor, same signature as KMainWindow.
-   */
-  explicit MainWindow( QWidget* parent = 0, Qt::WindowFlags f = KDE_DEFAULT_WINDOWFLAGS );
-  /**
-   * Destructor.
-   */
-  virtual ~MainWindow();
+    Q_OBJECT
+public:
+    /**
+     * Constructor, same signature as KMainWindow.
+     */
+    explicit MainWindow(QWidget *parent = 0, Qt::WindowFlags f = KDE_DEFAULT_WINDOWFLAGS);
+    /**
+     * Destructor.
+     */
+    virtual ~MainWindow();
 
 public Q_SLOTS:
-  virtual void configureToolbars();
+    virtual void configureToolbars();
 
 protected Q_SLOTS:
 
-  /**
-   * Create the GUI (by merging the host's and the active part's)
-   * You _must_ call this in order to see any GUI being created.
-   *
-   * In a main window with multiple parts being shown (e.g. as in Konqueror)
-   * you need to connect this slot to the
-   * KPartManager::activePartChanged() signal
-   *
-   * @param part The active part (set to 0L if no part).
-   */
-  void createGUI( KParts::Part * part );
+    /**
+     * Create the GUI (by merging the host's and the active part's)
+     * You _must_ call this in order to see any GUI being created.
+     *
+     * In a main window with multiple parts being shown (e.g. as in Konqueror)
+     * you need to connect this slot to the
+     * KPartManager::activePartChanged() signal
+     *
+     * @param part The active part (set to 0L if no part).
+     */
+    void createGUI(KParts::Part *part);
 
-  /**
-   * Called when the active part wants to change the statusbar message
-   * Reimplement if your mainwindow has a complex statusbar
-   * (with several items)
-   */
-  virtual void slotSetStatusBarText( const QString & );
+    /**
+     * Called when the active part wants to change the statusbar message
+     * Reimplement if your mainwindow has a complex statusbar
+     * (with several items)
+     */
+    virtual void slotSetStatusBarText(const QString &);
 
-  /**
-   * Rebuilds the GUI after KEditToolbar changed the toolbar layout.
-   * @see configureToolbars()
-   * KDE4: make this virtual. (For now we rely on the fact that it's called
-   * as a slot, so the metaobject finds it here).
-   */
-  void saveNewToolbarConfig();
+    /**
+     * Rebuilds the GUI after KEditToolbar changed the toolbar layout.
+     * @see configureToolbars()
+     * KDE4: make this virtual. (For now we rely on the fact that it's called
+     * as a slot, so the metaobject finds it here).
+     */
+    void saveNewToolbarConfig();
 
 protected:
-  virtual void createShellGUI( bool create = true );
+    virtual void createShellGUI(bool create = true);
 
 private:
-  MainWindowPrivate* const d;
+    MainWindowPrivate *const d;
 };
 
 }

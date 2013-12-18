@@ -26,43 +26,44 @@
 #include <kaboutdata.h>
 
 class QTextEdit;
-namespace KParts {
+namespace KParts
+{
 class GUIActivateEvent;
 }
 
 class Part1 : public KParts::ReadOnlyPart
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  Part1( QObject *parent, QWidget * parentWidget );
-  virtual ~Part1();
+    Part1(QObject *parent, QWidget *parentWidget);
+    virtual ~Part1();
 
 public Q_SLOTS:
- void slotBlah();
- void slotFooBar();
+    void slotBlah();
+    void slotFooBar();
 
 protected:
-  virtual bool openFile();
+    virtual bool openFile();
 
 protected:
-  QTextEdit * m_edit;
-  KAboutData m_componentData;
+    QTextEdit *m_edit;
+    KAboutData m_componentData;
 };
 
 class Part2 : public KParts::Part
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  Part2( QObject *parent, QWidget * parentWidget );
-  virtual ~Part2();
+    Part2(QObject *parent, QWidget *parentWidget);
+    virtual ~Part2();
 
 protected:
-  // This is not mandatory - only if you care about setting the
-  // part caption when the part is used in a multi-part environment
-  // (i.e. in a part manager)
-  // There is a default impl for ReadOnlyPart...
-  virtual void guiActivateEvent( KParts::GUIActivateEvent * );
-  KAboutData m_componentData;
+    // This is not mandatory - only if you care about setting the
+    // part caption when the part is used in a multi-part environment
+    // (i.e. in a part manager)
+    // There is a default impl for ReadOnlyPart...
+    virtual void guiActivateEvent(KParts::GUIActivateEvent *);
+    KAboutData m_componentData;
 };
 
 #endif

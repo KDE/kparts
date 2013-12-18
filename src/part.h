@@ -40,8 +40,9 @@ class QPoint;
 struct QUnknownInterface;
 
 class KJob;
-namespace KIO {
-  class Job;
+namespace KIO
+{
+class Job;
 }
 
 namespace KParts
@@ -64,126 +65,126 @@ class KPARTS_EXPORT PartBase : virtual public KXMLGUIClient
 
 public:
 
-  /**
-   *  Constructor.
-   */
-  PartBase();
+    /**
+     *  Constructor.
+     */
+    PartBase();
 
-  /**
-   *  Destructor.
-   */
-  virtual ~PartBase();
+    /**
+     *  Destructor.
+     */
+    virtual ~PartBase();
 
-  /**
-   *  Internal method. Called by KParts::Part to specify the parent object for plugin objects.
-   *
-   * @internal
-   */
-  void setPartObject( QObject *object );
-  QObject *partObject() const;
+    /**
+     *  Internal method. Called by KParts::Part to specify the parent object for plugin objects.
+     *
+     * @internal
+     */
+    void setPartObject(QObject *object);
+    QObject *partObject() const;
 
-  KAboutData componentData() const;
+    KAboutData componentData() const;
 
 protected:
-  /**
-   * Set the componentData(KAboutData) for this part.
-   *
-   * Call this *first* in the inherited class constructor,
-   * because it loads the i18n catalogs.
-   */
-  virtual void setComponentData(const KAboutData &componentData);
+    /**
+     * Set the componentData(KAboutData) for this part.
+     *
+     * Call this *first* in the inherited class constructor,
+     * because it loads the i18n catalogs.
+     */
+    virtual void setComponentData(const KAboutData &componentData);
 
-  /**
-   * Set the componentData(KAboutData) for this part.
-   *
-   * Call this *first* in the inherited class constructor,
-   * because it loads the i18n catalogs.
-   *
-   * It is recommended to call setComponentData with loadPlugins set to false,
-   * and to load plugins at the end of your part constructor (in the case of
-   * KParts::MainWindow, plugins are automatically loaded in createGUI anyway,
-   * so set loadPlugins to false for KParts::MainWindow as well).
-   */
-  virtual void setComponentData(const KAboutData &pluginData, bool loadPlugins);
-  // TODO KDE5: merge the above two methods, using loadPlugins=true. Or better, remove loadPlugins
-  // altogether and change plugins to call loadPlugins() manually at the end of their ctor.
+    /**
+     * Set the componentData(KAboutData) for this part.
+     *
+     * Call this *first* in the inherited class constructor,
+     * because it loads the i18n catalogs.
+     *
+     * It is recommended to call setComponentData with loadPlugins set to false,
+     * and to load plugins at the end of your part constructor (in the case of
+     * KParts::MainWindow, plugins are automatically loaded in createGUI anyway,
+     * so set loadPlugins to false for KParts::MainWindow as well).
+     */
+    virtual void setComponentData(const KAboutData &pluginData, bool loadPlugins);
+    // TODO KDE5: merge the above two methods, using loadPlugins=true. Or better, remove loadPlugins
+    // altogether and change plugins to call loadPlugins() manually at the end of their ctor.
     // In the case of KParts MainWindows, plugins are automatically loaded in createGUI anyway,
     // so setComponentData() should really not load the plugins.
 
-  /**
-   * We have three different policies, whether to load new plugins or not. The
-   * value in the KConfig object of the KAboutData object always overrides
-   * LoadPlugins and LoadPluginsIfEnabled.
-   */
-  enum PluginLoadingMode {
     /**
-     * Don't load any plugins at all.
+     * We have three different policies, whether to load new plugins or not. The
+     * value in the KConfig object of the KAboutData object always overrides
+     * LoadPlugins and LoadPluginsIfEnabled.
      */
-    DoNotLoadPlugins = 0,
+    enum PluginLoadingMode {
+        /**
+         * Don't load any plugins at all.
+         */
+        DoNotLoadPlugins = 0,
+        /**
+         * Load new plugins automatically. Can be
+         * overridden by the plugin if it sets
+         * EnabledByDefault=false in the corresponding
+         * .desktop file.
+         */
+        LoadPlugins = 1,
+        /**
+         * New plugins are disabled by default. Can be
+         * overridden by the plugin if it sets
+         * EnabledByDefault=true in the corresponding
+         * .desktop file.
+         */
+        LoadPluginsIfEnabled = 2
+    };
+
     /**
-     * Load new plugins automatically. Can be
-     * overridden by the plugin if it sets
-     * EnabledByDefault=false in the corresponding
-     * .desktop file.
+     * Load the Plugins honoring the PluginLoadingMode.
+     *
+     * If you call this method in an already constructed GUI (like when the user
+     * has changed which plugins are enabled) you need to add the new plugins to
+     * the KXMLGUIFactory:
+     * \code
+     * if( factory() )
+     * {
+     *   QList<KParts::Plugin *> plugins = KParts::Plugin::pluginObjects( this );
+     *   for(int i = 0; i != plugins.size(); ++i) {
+     *      factory()->addClient( plugins[i] );
+     *   }
+     * }
+     * \endcode
      */
-    LoadPlugins = 1,
+    void loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient, const KAboutData &aboutData);
+
     /**
-     * New plugins are disabled by default. Can be
-     * overridden by the plugin if it sets
-     * EnabledByDefault=true in the corresponding
-     * .desktop file.
+     * Set how plugins should be loaded
+     * @param loadingMode see PluginLoadingMode
+     *
+     * For a KParts::Part: call this before setComponentData.
+     * For a KParts::MainWindow: call this before createGUI.
      */
-    LoadPluginsIfEnabled = 2
-  };
+    void setPluginLoadingMode(PluginLoadingMode loadingMode);
 
-  /**
-   * Load the Plugins honoring the PluginLoadingMode.
-   *
-   * If you call this method in an already constructed GUI (like when the user
-   * has changed which plugins are enabled) you need to add the new plugins to
-   * the KXMLGUIFactory:
-   * \code
-   * if( factory() )
-   * {
-   *   QList<KParts::Plugin *> plugins = KParts::Plugin::pluginObjects( this );
-   *   for(int i = 0; i != plugins.size(); ++i) {
-   *      factory()->addClient( plugins[i] );
-   *   }
-   * }
-   * \endcode
-   */
-  void loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient, const KAboutData &aboutData);
-
-  /**
-   * Set how plugins should be loaded
-   * @param loadingMode see PluginLoadingMode
-   *
-   * For a KParts::Part: call this before setComponentData.
-   * For a KParts::MainWindow: call this before createGUI.
-   */
-  void setPluginLoadingMode( PluginLoadingMode loadingMode );
-
-  /**
-   * If you change the binary interface offered by your part, you can avoid crashes
-   * from old plugins lying around by setting X-KDE-InterfaceVersion=2 in the
-   * .desktop files of the plugins, and calling setPluginInterfaceVersion( 2 ), so that
-   * the old plugins are not loaded. Increase both numbers every time a
-   * binary incompatible change in the application's plugin interface is made.
-   *
-   * @param version the interface version that plugins must have in order to be loaded.
-   *
-   * For a KParts::Part: call this before setComponentData.
-   * For a KParts::MainWindow: call this before createGUI.
-   */
-  void setPluginInterfaceVersion( int version );
+    /**
+     * If you change the binary interface offered by your part, you can avoid crashes
+     * from old plugins lying around by setting X-KDE-InterfaceVersion=2 in the
+     * .desktop files of the plugins, and calling setPluginInterfaceVersion( 2 ), so that
+     * the old plugins are not loaded. Increase both numbers every time a
+     * binary incompatible change in the application's plugin interface is made.
+     *
+     * @param version the interface version that plugins must have in order to be loaded.
+     *
+     * For a KParts::Part: call this before setComponentData.
+     * For a KParts::MainWindow: call this before createGUI.
+     */
+    void setPluginInterfaceVersion(int version);
 
 protected:
-  PartBase(PartBasePrivate &dd);
+    PartBase(PartBasePrivate &dd);
 
-  PartBasePrivate *d_ptr;
+    PartBasePrivate *d_ptr;
 
 private:
-  Q_DISABLE_COPY(PartBase)
+    Q_DISABLE_COPY(PartBase)
 };
 
 /**
@@ -224,7 +225,7 @@ public:
      *
      *  @param parent Parent object of the part.
      */
-    explicit Part( QObject *parent = 0 );
+    explicit Part(QObject *parent = 0);
 
     /**
      *  Destructor.
@@ -242,7 +243,7 @@ public:
      * This method is not recommended since creating the widget with the correct
      * parent is simpler anyway.
      */
-    virtual void embed( QWidget * parentWidget );
+    virtual void embed(QWidget *parentWidget);
 
     /**
      * @return The widget defined by this part, set by setWidget().
@@ -253,12 +254,12 @@ public:
      * @internal
      * Used by the part manager.
      */
-    virtual void setManager( PartManager * manager );
+    virtual void setManager(PartManager *manager);
 
     /**
      * Returns the part manager handling this part, if any (0L otherwise).
      */
-    PartManager * manager() const;
+    PartManager *manager() const;
 
     /**
      * By default, the widget is deleted by the part when the part is deleted.
@@ -288,12 +289,12 @@ public:
      * @param widget the part widget being clicked - usually the same as widget(), except in koffice.
      * @param globalPos the mouse coordinates in global coordinates
      */
-    virtual Part *hitTest( QWidget *widget, const QPoint &globalPos );
+    virtual Part *hitTest(QWidget *widget, const QPoint &globalPos);
 
     /**
      *  @param selectable Indicates whether the part is selectable or not.
      */
-    virtual void setSelectable( bool selectable );
+    virtual void setSelectable(bool selectable);
 
     /**
      *  Returns whether the part is selectable or not.
@@ -307,19 +308,19 @@ public:
      *
      * Make sure to call setComponentData before calling iconLoader.
      */
-    KIconLoader* iconLoader();
+    KIconLoader *iconLoader();
 
 Q_SIGNALS:
     /**
      * Emitted by the part, to set the caption of the window(s)
      * hosting this part
      */
-    void setWindowCaption( const QString & caption );
+    void setWindowCaption(const QString &caption);
     /**
      * Emitted by the part, to set a text in the statusbar of the window(s)
      * hosting this part
      */
-    void setStatusBarText( const QString & text );
+    void setStatusBarText(const QString &text);
 
 protected:
     /**
@@ -327,19 +328,19 @@ protected:
      *
      * Call this in the Part-inherited class constructor.
      */
-    virtual void setWidget( QWidget * widget );
+    virtual void setWidget(QWidget *widget);
 
     /**
      * @internal
      */
-    virtual void customEvent( QEvent *event );
+    virtual void customEvent(QEvent *event);
 
     /**
      * Convenience method which is called when the Part received a PartActivateEvent .
      * Reimplement this if you don't want to reimplement event and test for the event yourself
      * or even install an event filter.
      */
-    virtual void partActivateEvent( PartActivateEvent *event );
+    virtual void partActivateEvent(PartActivateEvent *event);
 
     /**
      * Convenience method which is called when the Part received a
@@ -347,7 +348,7 @@ protected:
      * Reimplement this if you don't want to reimplement event and
      * test for the event yourself or even install an event filter.
      */
-    virtual void partSelectEvent( PartSelectEvent *event );
+    virtual void partSelectEvent(PartSelectEvent *event);
 
     /**
      * Convenience method which is called when the Part received a
@@ -355,13 +356,13 @@ protected:
      * Reimplement this if you don't want to reimplement event and
      * test for the event yourself or even install an event filter.
      */
-    virtual void guiActivateEvent( GUIActivateEvent *event );
+    virtual void guiActivateEvent(GUIActivateEvent *event);
 
     /**
      * Convenience method for KXMLGUIFactory::container.
      * @return a container widget owned by the Part's GUI.
      */
-    QWidget *hostContainer( const QString &containerName );
+    QWidget *hostContainer(const QString &containerName);
 
     /**
      * Load this part's plugins now.
@@ -405,7 +406,7 @@ class KPARTS_EXPORT OpenUrlArguments
 public:
     OpenUrlArguments();
     OpenUrlArguments(const OpenUrlArguments &other);
-    OpenUrlArguments &operator=( const OpenUrlArguments &other);
+    OpenUrlArguments &operator=(const OpenUrlArguments &other);
     ~OpenUrlArguments();
 
     /**
@@ -439,7 +440,7 @@ public:
      * The mimetype to use when opening the url, when known by the calling application.
      */
     QString mimeType() const;
-    void setMimeType(const QString& mime);
+    void setMimeType(const QString &mime);
 
     /**
      * True if the user requested that the URL be opened.
@@ -462,7 +463,6 @@ public:
 private:
     QSharedDataPointer<OpenUrlArgumentsPrivate> d;
 };
-
 
 /**
  * Base class for any "viewer" part.
@@ -488,7 +488,7 @@ class KPARTS_EXPORT ReadOnlyPart : public Part
 {
     Q_OBJECT
 
-    Q_PROPERTY( QUrl url READ url )
+    Q_PROPERTY(QUrl url READ url)
 
     KPARTS_DECLARE_PRIVATE(ReadOnlyPart)
 
@@ -497,7 +497,7 @@ public:
      * Constructor
      * See also Part for the setXXX methods to call.
      */
-    explicit ReadOnlyPart( QObject *parent = 0 );
+    explicit ReadOnlyPart(QObject *parent = 0);
 
     /**
      * Destructor
@@ -511,7 +511,7 @@ public:
      * signals emitted by this class, and/or those emitted by
      * the Job given by started.
      */
-    void setProgressInfoEnabled( bool show );
+    void setProgressInfoEnabled(bool show);
 
     /**
      * Returns whether the part shows the progress info dialog used by internal
@@ -520,7 +520,7 @@ public:
     bool isProgressInfoEnabled() const;
 
 #ifndef KDE_NO_COMPAT
-    void showProgressInfo( bool show );
+    void showProgressInfo(bool show);
 #endif
 
 public Q_SLOTS:
@@ -532,7 +532,7 @@ public Q_SLOTS:
      * If you reimplement it, don't forget to set the caption, usually with
      * emit setWindowCaption( url.prettyUrl() );
      */
-    virtual bool openUrl( const QUrl &url );
+    virtual bool openUrl(const QUrl &url);
 
 public:
     /**
@@ -556,16 +556,15 @@ public:
      * This convenience method returns the browserExtension for this part,
      * or 0 if there isn't any.
      */
-    BrowserExtension* browserExtension() const;
+    BrowserExtension *browserExtension() const;
 
     /**
      * Sets the arguments to use for the next openUrl call.
      */
-    void setArguments(const OpenUrlArguments& arguments);
+    void setArguments(const OpenUrlArguments &arguments);
     // TODO to avoid problems with the case where the loading fails, this could also be a openUrl() argument (heavy porting!).
     // However we need to have setArguments in any case for updated made by the part, see e.g. KHTMLPart::openUrl.
     // Well, maybe we should have setArguments (affects next openurl call) and updateArguments?
-
 
     /**
      * @return the arguments that were used to open this URL.
@@ -583,7 +582,7 @@ public:
      * every ReadOnlyPart has a URL (see url()), so this simply sets it.
      * @return true if the part supports progressive loading and accepts data, false otherwise.
      */
-    bool openStream( const QString& mimeType, const QUrl & url );
+    bool openStream(const QString &mimeType, const QUrl &url);
 
     /**
      * Send some data to the part. openStream must have been called previously,
@@ -591,7 +590,7 @@ public:
      * @return true if the data was accepted by the part. If false is returned,
      * the application should stop sending data, and doesn't have to call closeStream.
      */
-    bool writeStream( const QByteArray& data );
+    bool writeStream(const QByteArray &data);
 
     /**
      * Terminate the sending of data to the part.
@@ -607,20 +606,29 @@ private: // Makes no sense for inherited classes to call those. But make it prot
      * Parts which implement progress loading should check the @p mimeType
      * parameter, and return true if they can accept a data stream of that type.
      */
-    virtual bool doOpenStream( const QString& /*mimeType*/ ) { return false; }
+    virtual bool doOpenStream(const QString & /*mimeType*/)
+    {
+        return false;
+    }
     /**
      * Receive some data from the hosting application.
      * In this method the part should attempt to display the data progressively.
      * With some data types (text, html...) closeStream might never actually be called,
      * in the case of continuous streams. This can't happen with e.g. images.
      */
-    virtual bool doWriteStream( const QByteArray& /*data*/ ) { return false; }
+    virtual bool doWriteStream(const QByteArray & /*data*/)
+    {
+        return false;
+    }
     /**
      * This is called by closeStream(), to indicate that all the data has been sent.
      * Parts should ensure that all of the data is displayed at this point.
      * @return whether the data could be displayed correctly.
      */
-    virtual bool doCloseStream() { return false; }
+    virtual bool doCloseStream()
+    {
+        return false;
+    }
 
 Q_SIGNALS:
     /**
@@ -628,7 +636,7 @@ Q_SIGNALS:
      * If using a KIO::Job, it sets the job in the signal, so that
      * progress information can be shown. Otherwise, job is 0.
      **/
-    void started( KIO::Job * );
+    void started(KIO::Job *);
 
     /**
      * Emit this when you have completed loading data.
@@ -646,19 +654,19 @@ Q_SIGNALS:
      *
      * @p pendingAction true if a pending action exists, false otherwise.
      */
-    void completed( bool pendingAction );
+    void completed(bool pendingAction);
 
     /**
      * Emit this if loading is canceled by the user or by an error.
      * @param errMsg the error message, empty if the user canceled the loading voluntarily.
      */
-    void canceled( const QString &errMsg );
+    void canceled(const QString &errMsg);
 
     /**
      * Emitted by the part when url() changes
      * @since 4.10
      */
-    void urlChanged( const QUrl & url );
+    void urlChanged(const QUrl &url);
 
 protected:
     /**
@@ -683,7 +691,7 @@ protected:
      * PartActivateEvent because it's handled by the mainwindow
      * (which gets the even after the PartActivateEvent events have been sent)
      */
-    virtual void guiActivateEvent( GUIActivateEvent *event );
+    virtual void guiActivateEvent(GUIActivateEvent *event);
 
     /**
      * @internal
@@ -696,7 +704,7 @@ protected:
      * @internal
      */
 #ifndef KDE_NO_DEPRECATED
-    KPARTS_DEPRECATED void setLocalFileTemporary( bool temp );
+    KPARTS_DEPRECATED void setLocalFileTemporary(bool temp);
 #endif
 
     /**
@@ -712,14 +720,14 @@ protected:
     /**
      * Sets the local file path associated with this part.
      */
-    void setLocalFilePath( const QString &localFilePath );
+    void setLocalFilePath(const QString &localFilePath);
 
 protected:
     ReadOnlyPart(ReadOnlyPartPrivate &dd, QObject *parent);
 
 private:
-    Q_PRIVATE_SLOT(d_func(), void _k_slotJobFinished( KJob * job ))
-    Q_PRIVATE_SLOT(d_func(), void _k_slotStatJobFinished(KJob*))
+    Q_PRIVATE_SLOT(d_func(), void _k_slotJobFinished(KJob *job))
+    Q_PRIVATE_SLOT(d_func(), void _k_slotStatJobFinished(KJob *))
     Q_PRIVATE_SLOT(d_func(), void _k_slotGotMimeType(KIO::Job *job, const QString &mime))
 
     Q_DISABLE_COPY(ReadOnlyPart)
@@ -752,7 +760,7 @@ public:
      * Constructor
      * See parent constructor for instructions.
      */
-    explicit ReadWritePart( QObject *parent = 0 );
+    explicit ReadWritePart(QObject *parent = 0);
     /**
      * Destructor
      * Applications using a ReadWritePart should make sure, before
@@ -772,7 +780,7 @@ public:
      * Changes the behavior of this part to readonly or readwrite.
      * @param readwrite set to true to enable readwrite mode
      */
-    virtual void setReadWrite ( bool readwrite = true );
+    virtual void setReadWrite(bool readwrite = true);
 
     /**
      * @return true if the document has been modified.
@@ -810,19 +818,19 @@ public:
      *
      * Equivalent to promptToSave ? closeUrl() : ReadOnlyPart::closeUrl()
      */
-    virtual bool closeUrl( bool promptToSave );
+    virtual bool closeUrl(bool promptToSave);
 
     /**
      * Save the file to a new location.
      *
      * Calls save(), no need to reimplement
      */
-    virtual bool saveAs( const QUrl &url );
+    virtual bool saveAs(const QUrl &url);
 
     /**
      *  Sets the modified flag of the part.
      */
-    virtual void setModified( bool modified );
+    virtual void setModified(bool modified);
 
 Q_SIGNALS:
     /**
@@ -830,7 +838,7 @@ Q_SIGNALS:
      * set abortClosing to true, if you handled the request,
      * but for any reason don't  want to allow closing the document
      */
-    void sigQueryClose(bool *handled, bool* abortClosing);
+    void sigQueryClose(bool *handled, bool *abortClosing);
 
 public Q_SLOTS:
     /**
@@ -878,13 +886,12 @@ protected:
     virtual bool saveToUrl();
 
 private:
-    Q_PRIVATE_SLOT(d_func(), void _k_slotUploadFinished( KJob * job ))
+    Q_PRIVATE_SLOT(d_func(), void _k_slotUploadFinished(KJob *job))
 
     Q_DISABLE_COPY(ReadWritePart)
 };
 
 } // namespace
-
 
 #undef KPARTS_DECLARE_PRIVATE
 

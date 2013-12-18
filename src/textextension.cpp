@@ -20,7 +20,7 @@
 #include "textextension.h"
 #include "part.h"
 
-KParts::TextExtension::TextExtension(KParts::ReadOnlyPart* parent)
+KParts::TextExtension::TextExtension(KParts::ReadOnlyPart *parent)
     : QObject(parent), d(0)
 {
 }
@@ -44,7 +44,7 @@ QString KParts::TextExtension::completeText(Format) const
     return QString();
 }
 
-KParts::TextExtension * KParts::TextExtension::childObject(QObject *obj)
+KParts::TextExtension *KParts::TextExtension::childObject(QObject *obj)
 {
     return obj->findChild<KParts::TextExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }
@@ -64,7 +64,7 @@ QString KParts::TextExtension::pageText(Format) const
     return QString();
 }
 
-bool KParts::TextExtension::findText(const QString&, KFind::SearchOptions) const
+bool KParts::TextExtension::findText(const QString &, KFind::SearchOptions) const
 {
     return false;
 }

@@ -31,7 +31,8 @@
 #include "../nepomuk/utils/utils.h"
 #endif
 
-namespace KParts {
+namespace KParts
+{
 
 /**
  * This watcher is notified when the "download" job is done,
@@ -41,20 +42,20 @@ class DownloadJobWatcher : public QObject
 {
     Q_OBJECT
 public:
-    DownloadJobWatcher(KIO::FileCopyJob* job, const QMap<QString, QString> &metaData)
+    DownloadJobWatcher(KIO::FileCopyJob *job, const QMap<QString, QString> &metaData)
         : QObject(job), m_metaData(metaData), m_downloadJobStartTime(QDateTime::currentDateTime())
     {
         // qDebug() << "download started: srcUrl=" << job->srcUrl()
         //         << "destUrl=" << job->destUrl()
         //         << "referrer=" << m_metaData.value("referrer");
-        connect(job, SIGNAL(result(KJob*)), this, SLOT(slotDownloadFinished(KJob*)));
+        connect(job, SIGNAL(result(KJob *)), this, SLOT(slotDownloadFinished(KJob *)));
     }
 
 private Q_SLOTS:
-    void slotDownloadFinished(KJob* job)
+    void slotDownloadFinished(KJob *job)
     {
 #ifdef HAVE_NEPOMUK
-        KIO::FileCopyJob* fileCopyJob = static_cast<KIO::FileCopyJob *>(job);
+        KIO::FileCopyJob *fileCopyJob = static_cast<KIO::FileCopyJob *>(job);
         if (job->error()) {
             // qDebug() << "error during download: srcUrl=" << fileCopyJob->srcUrl()
             //         << "destUrl=" << fileCopyJob->destUrl()
@@ -64,10 +65,10 @@ private Q_SLOTS:
             // qDebug() << "download finished: srcUrl=" << fileCopyJob->srcUrl()
             //         << "destUrl=" << fileCopyJob->destUrl()
             //         << "referrer=" << m_metaData.value("referrer");
-            Nepomuk::Utils::createCopyEvent( fileCopyJob->srcUrl(),
-                                             fileCopyJob->destUrl(),
-                                             m_downloadJobStartTime,
-                                             QUrl(m_metaData.value("referrer")) );
+            Nepomuk::Utils::createCopyEvent(fileCopyJob->srcUrl(),
+                                            fileCopyJob->destUrl(),
+                                            m_downloadJobStartTime,
+                                            QUrl(m_metaData.value("referrer")));
         }
 #else
         Q_UNUSED(job);

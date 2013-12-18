@@ -37,15 +37,15 @@ class EventPrivate;
 class KPARTS_EXPORT Event : public QEvent
 {
 public:
-  Event( const char *eventName );
-  virtual ~Event();
-  virtual const char *eventName() const;
+    Event(const char *eventName);
+    virtual ~Event();
+    virtual const char *eventName() const;
 
-  static bool test( const QEvent *event );
-  static bool test( const QEvent *event, const char *name );
+    static bool test(const QEvent *event);
+    static bool test(const QEvent *event, const char *name);
 
 private:
-  EventPrivate * const d;
+    EventPrivate *const d;
 };
 
 class GUIActivateEventPrivate;
@@ -59,15 +59,15 @@ class GUIActivateEventPrivate;
 class KPARTS_EXPORT GUIActivateEvent : public Event
 {
 public:
-  GUIActivateEvent( bool activated );
-  virtual ~GUIActivateEvent();
+    GUIActivateEvent(bool activated);
+    virtual ~GUIActivateEvent();
 
-  bool activated() const;
+    bool activated() const;
 
-  static bool test( const QEvent *event );
+    static bool test(const QEvent *event);
 
 private:
-  GUIActivateEventPrivate * const d;
+    GUIActivateEventPrivate *const d;
 };
 
 class PartActivateEventPrivate;
@@ -82,17 +82,17 @@ class PartActivateEventPrivate;
 class KPARTS_EXPORT PartActivateEvent : public Event
 {
 public:
-  PartActivateEvent( bool activated, Part *part, QWidget *widget );
-  virtual ~PartActivateEvent();
-  bool activated() const;
+    PartActivateEvent(bool activated, Part *part, QWidget *widget);
+    virtual ~PartActivateEvent();
+    bool activated() const;
 
-  Part *part() const;
-  QWidget *widget() const;
+    Part *part() const;
+    QWidget *widget() const;
 
-  static bool test( const QEvent *event );
+    static bool test(const QEvent *event);
 
 private:
-  PartActivateEventPrivate * const d;
+    PartActivateEventPrivate *const d;
 };
 
 class PartSelectEventPrivate;
@@ -103,17 +103,17 @@ class PartSelectEventPrivate;
 class KPARTS_EXPORT PartSelectEvent : public Event
 {
 public:
-  PartSelectEvent( bool selected, Part *part, QWidget *widget );
-  virtual ~PartSelectEvent();
-  bool selected() const;
+    PartSelectEvent(bool selected, Part *part, QWidget *widget);
+    virtual ~PartSelectEvent();
+    bool selected() const;
 
-  Part *part() const;
-  QWidget *widget() const;
+    Part *part() const;
+    QWidget *widget() const;
 
-  static bool test( const QEvent *event );
+    static bool test(const QEvent *event);
 
 private:
-  PartSelectEventPrivate * const d;
+    PartSelectEventPrivate *const d;
 };
 
 } // namespace

@@ -54,16 +54,16 @@ class KPARTS_EXPORT BrowserInterface : public QObject
 {
     Q_OBJECT
 public:
-    explicit BrowserInterface( QObject *parent );
+    explicit BrowserInterface(QObject *parent);
     virtual ~BrowserInterface();
 
     /**
      * Perform a dynamic invocation of a method in the BrowserInterface
      * implementation. Methods are to be implemented as simple Qt slots.
-     * You should only include the method name, and not the signature, 
+     * You should only include the method name, and not the signature,
      * in the name argument.
      */
-    void callMethod( const char *name, const QVariant &argument );
+    void callMethod(const char *name, const QVariant &argument);
 };
 
 }
