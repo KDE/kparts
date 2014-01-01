@@ -21,7 +21,7 @@
 #ifndef BROWSERRUN_P_H
 #define BROWSERRUN_P_H
 
-#include <kio/copyjob.h>
+#include <kio/filecopyjob.h>
 #include <QDebug>
 
 #include <QtCore/QDateTime>
