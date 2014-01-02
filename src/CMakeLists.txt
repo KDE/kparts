@@ -45,6 +45,8 @@ generate_export_header(KF5Parts EXPORT_FILE_NAME ${KParts_BINARY_DIR}/kparts/kpa
 add_library(KF5::Parts ALIAS KF5Parts)
 
 target_include_directories(KF5Parts PUBLIC "$<BUILD_INTERFACE:${KParts_BINARY_DIR}>")
+target_include_directories(KF5Parts INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/kparts>" "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/KParts>" )
+
 target_link_libraries(KF5Parts PUBLIC  KF5::KIOWidgets #browserrun.h uses krun.h
                                        KF5::XmlGui # essential to the technology
                                        KF5::TextWidgets # needed for KFind, as interface
