@@ -20,9 +20,9 @@
 #ifndef __MAINWINDOW_H
 #define __MAINWINDOW_H
 
-#include <kxmlguiwindow.h>
-
 #include <kparts/part.h>
+
+#include <kxmlguiwindow.h>
 
 class QString;
 

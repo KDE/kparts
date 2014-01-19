@@ -19,7 +19,7 @@
 
 #include "fileinfoextension.h"
 
-#include "part.h"
+#include "readonlypart.h"
 
 KParts::FileInfoExtension::FileInfoExtension(KParts::ReadOnlyPart *parent)
     : QObject(parent),

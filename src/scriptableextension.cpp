@@ -19,6 +19,7 @@
 */
 #include "scriptableextension.h"
 #include "scriptableextension_p.h"
+
 #include <QDebug>
 
 namespace KParts

@@ -19,9 +19,10 @@
 #ifndef kparts_browserrun_h
 #define kparts_browserrun_h
 
+#include <kparts/browserextension.h>
+
 #include <krun.h>
 #include <kservice.h>
-#include <kparts/browserextension.h>
 
 namespace KParts
 {

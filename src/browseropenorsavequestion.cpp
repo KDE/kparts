@@ -19,8 +19,8 @@
 */
 
 #include "browseropenorsavequestion.h"
+
 #include <kconfiggroup.h>
-#include <QDebug>
 #include <klocalizedstring.h>
 #include <kfileitemactions.h>
 #include <ksqueezedtextlabel.h>
@@ -29,7 +29,8 @@
 #include <kstandardguiitem.h>
 #include <kguiitem.h>
 #include <kmessagebox.h>
-#include <qmimedatabase.h>
+
+#include <QMimeDatabase>
 #include <QAction>
 #include <QDialog>
 #include <QDialogButtonBox>
@@ -40,6 +41,8 @@
 #include <QVBoxLayout>
 #include <QCheckBox>
 #include <QLabel>
+
+#include <QDebug>
 
 using namespace KParts;
 Q_DECLARE_METATYPE(KService::Ptr)

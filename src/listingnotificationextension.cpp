@@ -17,34 +17,10 @@
    Boston, MA 02110-1301, USA.
  */
 
-#include "listingextension.h"
+#include "listingnotificationextension.h"
 
-#include "part.h"
+#include "readonlypart.h"
 
-KParts::ListingFilterExtension::ListingFilterExtension(KParts::ReadOnlyPart *parent)
-    : QObject(parent),
-      d(0)
-{
-}
-
-KParts::ListingFilterExtension::~ListingFilterExtension()
-{
-}
-
-KParts::ListingFilterExtension *KParts::ListingFilterExtension::childObject(QObject *obj)
-{
-    return obj->findChild<KParts::ListingFilterExtension *>(QString(), Qt::FindDirectChildrenOnly);
-}
-
-KParts::ListingFilterExtension::FilterModes KParts::ListingFilterExtension::supportedFilterModes() const
-{
-    return None;
-}
-
-bool KParts::ListingFilterExtension::supportsMultipleFilters(KParts::ListingFilterExtension::FilterMode) const
-{
-    return false;
-}
 
 KParts::ListingNotificationExtension::ListingNotificationExtension(KParts::ReadOnlyPart *parent)
     : QObject(parent),

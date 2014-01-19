@@ -20,10 +20,11 @@
 #ifndef KPARTS_BROWSERINTERFACE_H
 #define KPARTS_BROWSERINTERFACE_H
 
-#include <QtCore/QObject>
-#include <QtCore/QVariant>
-
 #include <kparts/kparts_export.h>
+
+#include <QObject>
+
+class QVariant;
 
 namespace KParts
 {

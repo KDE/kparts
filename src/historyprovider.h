@@ -20,9 +20,9 @@
 #ifndef KHISTORYPROVIDER_H
 #define KHISTORYPROVIDER_H
 
-#include <QtCore/QObject>
-
 #include <kparts/kparts_export.h>
+
+#include <QObject>
 
 namespace KParts
 {

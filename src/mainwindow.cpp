@@ -19,25 +19,26 @@
 */
 
 #include "mainwindow.h"
+
+#include "guiactivateevent.h"
+#include "part.h"
+#include "plugin.h"
+
 #include <kactioncollection.h>
 #include <kedittoolbar.h>
-#include <kparts/event.h>
-#include <kparts/part.h>
-#include <kparts/plugin.h>
 #include <khelpmenu.h>
 #include <kaboutdata.h>
 #include <kxmlguifactory.h>
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
-#include <QDebug>
 
 #include <QAction>
 #include <QApplication>
 #include <QPointer>
 #include <QStatusBar>
-#include <qstandardpaths.h>
+#include <QStandardPaths>
 
-#include <assert.h>
+#include <QDebug>
 
 using namespace KParts;
 
@@ -82,7 +83,7 @@ void MainWindow::createGUI(Part *part)
 #endif
     KXMLGUIFactory *factory = guiFactory();
 
-    assert(factory);
+    Q_ASSERT(factory);
 
     if (d->m_activePart) {
 #if 0
@@ -131,7 +132,7 @@ void MainWindow::slotSetStatusBarText(const QString &text)
 
 void MainWindow::createShellGUI(bool create)
 {
-    assert(d->m_bShellGUIActivated != create);
+    Q_ASSERT(d->m_bShellGUIActivated != create);
     d->m_bShellGUIActivated = create;
     if (create) {
         if (isHelpMenuEnabled() && !d->m_helpMenu) {

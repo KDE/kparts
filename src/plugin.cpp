@@ -18,25 +18,25 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include <kparts/plugin.h>
-#include <kparts/part.h>
+#include "plugin.h"
+
+#include "part.h"
+
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
-
-#include <assert.h>
-
-#include <QtCore/QFile>
-#include <QtCore/QObject>
-#include <QtCore/QFileInfo>
-#include <QDir>
-
-#include <kaboutdata.h>
-#include <QDebug>
 #include <kxmlguifactory.h>
 #include <klocalizedstring.h>
 #include <kdesktopfile.h>
 #include <kconfiggroup.h>
-#include <qstandardpaths.h>
+#include <kaboutdata.h>
+
+#include <QFile>
+#include <QObject>
+#include <QFileInfo>
+#include <QDir>
+#include <QStandardPaths>
+
+#include <QDebug>
 
 using namespace KParts;
 
@@ -67,7 +67,7 @@ QString Plugin::xmlFile() const
     }
 
     QString absPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, d->m_parentInstance + QLatin1Char('/') + path);
-    assert(!absPath.isEmpty());
+    Q_ASSERT(!absPath.isEmpty());
     return absPath;
 }
 

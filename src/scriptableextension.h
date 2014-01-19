@@ -21,10 +21,11 @@
 #ifndef kparts_scriptableextension_h
 #define kparts_scriptableextension_h
 
+#include <kparts/part.h>
+
 #include <QtGlobal>
 #include <QObject>
 #include <QVariant>
-#include <kparts/part.h>
 
 namespace KParts
 {

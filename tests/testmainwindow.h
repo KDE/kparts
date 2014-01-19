@@ -23,6 +23,7 @@
 #define TESTMAINWINDOW_H
 
 #include <kparts/mainwindow.h>
+#include <kparts/readwritepart.h>
 
 namespace KParts
 {

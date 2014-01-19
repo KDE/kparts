@@ -10,7 +10,7 @@ public:
 #include <QtCore/QDir>
 
 #include <kde_terminal_interface.h>
-#include <kparts/part.h>
+#include <kparts/readonlypart.h>
 #include <kservice.h>
 #include <QApplication>
 

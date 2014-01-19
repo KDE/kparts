@@ -20,9 +20,10 @@
 #ifndef KPARTS_TEXTEXTENSION_H
 #define KPARTS_TEXTEXTENSION_H
 
-#include <QtCore/QObject>
 #include <kparts/kparts_export.h>
+
 #include <kfind.h>
+#include <QObject>
 
 namespace KParts
 {

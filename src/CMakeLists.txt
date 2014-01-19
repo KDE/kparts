@@ -1,10 +1,22 @@
 set(KParts_LIB_SRCS
+    partbase.cpp
     part.cpp
+    openurlarguments.cpp
+    readonlypart.cpp
+    readwritepart.cpp
     plugin.cpp
     partmanager.cpp
     mainwindow.cpp
     event.cpp
+    guiactivateevent.cpp
+    partactivateevent.cpp
+    partselectevent.cpp
     browserextension.cpp
+    browserhostextension.cpp
+    browserarguments.cpp
+    liveconnectextension.cpp
+    openurlevent.cpp
+    windowargs.cpp
     historyprovider.cpp
     browserinterface.cpp
     browserrun.cpp
@@ -13,28 +25,46 @@ set(KParts_LIB_SRCS
     scriptableextension.cpp
     textextension.cpp
     htmlextension.cpp
+    htmlsettingsinterface.cpp
+    selectorinterface.cpp
     fileinfoextension.cpp
-    listingextension.cpp
+    listingfilterextension.cpp
+    listingnotificationextension.cpp
 )
 
 include(ECMGenerateHeaders)
 ecm_generate_headers(
-    Part
-    Plugin
-    PartManager
-    MainWindow
-    Event
+    BrowserArguments
     BrowserExtension
-    HistoryProvider
+    BrowserHostExtension
     BrowserInterface
-    BrowserRun
-    StatusBarExtension
     BrowserOpenOrSaveQuestion
-    ScriptableExtension
-    TextExtension
-    HtmlExtension
+    BrowserRun
+    Event
     FileInfoExtension
-    ListingExtension
+    GUIActivateEvent
+    HistoryProvider
+    HtmlExtension
+    HtmlSettingsInterface
+    ListingFilterExtension
+    ListingNotificationExtension
+    LiveConnectExtension
+    MainWindow
+    OpenUrlArguments
+    OpenUrlEvent
+    Part
+    PartActivateEvent
+    PartBase
+    PartManager
+    PartSelectEvent
+    Plugin
+    ReadOnlyPart
+    ReadWritePart
+    ScriptableExtension
+    SelectorInterface
+    StatusBarExtension
+    TextExtension
+    WindowArgs
 
     REQUIRED_HEADERS KParts_HEADERS
     PREFIX KParts

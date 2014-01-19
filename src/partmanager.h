@@ -20,9 +20,9 @@
 #ifndef __kpartmanager_h__
 #define __kpartmanager_h__
 
-#include <QWidget>
-
 #include <kparts/kparts_export.h>
+
+#include <QWidget>
 
 namespace KParts
 {

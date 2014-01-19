@@ -22,9 +22,9 @@
 #define BROWSERRUN_P_H
 
 #include <kio/filecopyjob.h>
-#include <QDebug>
 
-#include <QtCore/QDateTime>
+#include <QDateTime>
+#include <QDebug>
 
 #ifdef HAVE_NEPOMUK
 #include "config-nepomuk.h"

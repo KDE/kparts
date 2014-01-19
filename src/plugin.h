@@ -20,11 +20,11 @@
 #ifndef PLUGIN_H
 #define PLUGIN_H
 
-#include <QtXml/QDomElement>
-#include <QtCore/QObject>
-#include <kxmlguiclient.h>
-
 #include <kparts/kparts_export.h>
+
+#include <kxmlguiclient.h>
+#include <QDomElement>
+#include <QObject>
 
 class KAboutData;
 

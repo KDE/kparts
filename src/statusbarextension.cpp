@@ -19,15 +19,17 @@
  */
 
 #include "statusbarextension.h"
-#include <QPointer>
 
-#include <QtCore/QObject>
-#include <QStatusBar>
+#include "readonlypart.h"
+#include "guiactivateevent.h"
 
 #include <kmainwindow.h>
+
+#include <QPointer>
+#include <QObject>
+#include <QStatusBar>
+
 #include <QDebug>
-#include <kparts/part.h>
-#include <kparts/event.h>
 
 using namespace KParts;
 

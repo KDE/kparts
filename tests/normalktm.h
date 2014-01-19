@@ -22,7 +22,7 @@
 #ifndef __normalktm_h__
 #define __normalktm_h__
 
-#include <kparts/part.h>
+#include <kparts/readwritepart.h>
 #include <kxmlguiwindow.h>
 
 class QAction;

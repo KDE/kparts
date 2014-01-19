@@ -21,8 +21,9 @@
 #ifndef BROWSEROPENORSAVEQUESTION_H
 #define BROWSEROPENORSAVEQUESTION_H
 
-#include "kparts/kparts_export.h"
-#include "browserrun.h"
+#include <kparts/kparts_export.h>
+#include <kparts/browserrun.h>
+
 #include <kservice.h>
 
 namespace KParts

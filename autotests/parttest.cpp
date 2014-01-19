@@ -20,7 +20,8 @@
 #include <qtest_widgets.h>
 
 #include <ksharedconfig.h>
-#include <kparts/part.h>
+#include <kparts/readonlypart.h>
+#include <kparts/openurlarguments.h>
 #include <QTest>
 #include <QWidget>
 

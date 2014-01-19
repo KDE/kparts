@@ -20,15 +20,14 @@
 #ifndef __kparts_event_h__
 #define __kparts_event_h__
 
-#include <QKeyEvent>
-
 #include <kparts/kparts_export.h>
+
+#include <QEvent>
 
 class QWidget;
 
 namespace KParts
 {
-class Part;
 
 class EventPrivate;
 /**
@@ -46,74 +45,6 @@ public:
 
 private:
     EventPrivate *const d;
-};
-
-class GUIActivateEventPrivate;
-/**
- * This event is sent to a Part when its GUI has been activated or deactivated.
- * This is related to PartActivateEvent, but the difference is that
- * GUIActivateEvent happens later (when the GUI is actually built),
- * only for parts that have GUI elements, and only if using KParts::MainWindow.
- * @see KParts::Part::guiActivateEvent()
- */
-class KPARTS_EXPORT GUIActivateEvent : public Event
-{
-public:
-    GUIActivateEvent(bool activated);
-    virtual ~GUIActivateEvent();
-
-    bool activated() const;
-
-    static bool test(const QEvent *event);
-
-private:
-    GUIActivateEventPrivate *const d;
-};
-
-class PartActivateEventPrivate;
-/**
- * This event is sent by the part manager when the active part changes.
- * Each time the active part changes, it will send first a PartActivateEvent
- * with activated=false, part=oldActivePart, widget=oldActiveWidget
- * and then another PartActivateEvent
- * with activated=true, part=newPart, widget=newWidget.
- * @see KParts::Part::partActivateEvent
- */
-class KPARTS_EXPORT PartActivateEvent : public Event
-{
-public:
-    PartActivateEvent(bool activated, Part *part, QWidget *widget);
-    virtual ~PartActivateEvent();
-    bool activated() const;
-
-    Part *part() const;
-    QWidget *widget() const;
-
-    static bool test(const QEvent *event);
-
-private:
-    PartActivateEventPrivate *const d;
-};
-
-class PartSelectEventPrivate;
-/**
- * This event is sent when a part is selected or deselected.
- * @see KParts::PartManager::setSelectionPolicy
- */
-class KPARTS_EXPORT PartSelectEvent : public Event
-{
-public:
-    PartSelectEvent(bool selected, Part *part, QWidget *widget);
-    virtual ~PartSelectEvent();
-    bool selected() const;
-
-    Part *part() const;
-    QWidget *widget() const;
-
-    static bool test(const QEvent *event);
-
-private:
-    PartSelectEventPrivate *const d;
 };
 
 } // namespace

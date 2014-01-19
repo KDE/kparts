@@ -20,10 +20,10 @@
 #ifndef KPARTS_FILEINFOEXTENSION_H
 #define KPARTS_FILEINFOEXTENSION_H
 
-#include <QtCore/QObject>
+#include <kparts/kparts_export.h>
 
 #include <kfileitem.h>
-#include <kparts/kparts_export.h>
+#include <QObject>
 
 class KFileItemList;
 class FileInfoExtensionPrivate;

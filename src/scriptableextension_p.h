@@ -20,7 +20,8 @@
 #ifndef kparts_scriptableextension_p_h
 #define kparts_scriptableextension_p_h
 
-#include "browserextension.h"
+#include "scriptableextension.h"
+#include "liveconnectextension.h"
 
 namespace KParts
 {

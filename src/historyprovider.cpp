@@ -19,7 +19,7 @@
 
 #include "historyprovider.h"
 
-#include <QtCore/QSet>
+#include <QSet>
 
 using namespace KParts;
 

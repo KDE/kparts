@@ -19,6 +19,8 @@
 #include "browserrun.h"
 #include "browserrun_p.h"
 
+#include "browseropenorsavequestion.h"
+
 #include <kconfiggroup.h>
 #include <kmessagebox.h>
 #include <kio/job.h>
@@ -29,7 +31,6 @@
 #include <klocalizedstring.h>
 #include <kshell.h>
 #include <kmimetypetrader.h>
-#include "browseropenorsavequestion.h"
 #include <kprotocolmanager.h>
 
 #include <QTemporaryFile>

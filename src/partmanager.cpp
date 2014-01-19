@@ -19,12 +19,17 @@
 */
 
 #include "partmanager.h"
-#include <kparts/event.h>
-#include <kparts/part.h>
-#include <QDebug>
+
+#include "partactivateevent.h"
+#include "partselectevent.h"
+#include "guiactivateevent.h"
+#include "part.h"
 
 #include <QApplication>
 #include <QScrollBar>
+#include <QKeyEvent>
+
+#include <QDebug>
 
 //#define DEBUG_PARTMANAGER
 

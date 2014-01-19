@@ -23,6 +23,7 @@
 #define PARTVIEWER_H
 
 #include <kparts/mainwindow.h>
+#include <kparts/readonlypart.h>
 
 class PartViewer : public KParts::MainWindow
 {

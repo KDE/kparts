@@ -21,10 +21,10 @@
 #ifndef KPARTS_STATUSBAREXTENSION_H
 #define KPARTS_STATUSBAREXTENSION_H
 
-#include <QWidget>
-
 #include <kparts/kparts_export.h>
-#include <QtCore/QList>
+
+#include <QWidget>
+#include <QList>
 
 class QStatusBar;
 class KMainWindow;

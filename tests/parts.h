@@ -22,7 +22,7 @@
 #ifndef __parts_h__
 #define __parts_h__
 
-#include <kparts/part.h>
+#include <kparts/readonlypart.h>
 #include <kaboutdata.h>
 
 class QTextEdit;
