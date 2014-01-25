@@ -2,4 +2,7 @@
 Type=ServiceType
 X-KDE-ServiceType=KPart
 Comment=KDE Component
+Comment[pt_BR]=Componente do KDE
+Comment[sk]=KDE komponent
+Comment[uk]=Компонент KDE
 Comment[x-test]=xxKDE Componentxx

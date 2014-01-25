@@ -3,6 +3,9 @@ Type=ServiceType
 X-KDE-ServiceType=Browser/View
 X-KDE-Derived=KParts/ReadOnlyPart
 Name=Browser View
+Name[pt_BR]=Navegador
+Name[sk]=Pohľad prehliadača
+Name[uk]=Перегляд «Навігація»
 Name[x-test]=xxBrowser Viewxx
 
 # Arguments passed to the factory (e.g. view sub-type)
