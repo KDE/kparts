@@ -3,6 +3,7 @@ Type=ServiceType
 X-KDE-ServiceType=Browser/View
 X-KDE-Derived=KParts/ReadOnlyPart
 Name=Browser View
+Name[x-test]=xxBrowser Viewxx
 
 # Arguments passed to the factory (e.g. view sub-type)
 [PropertyDef::X-KDE-BrowserView-Args]
