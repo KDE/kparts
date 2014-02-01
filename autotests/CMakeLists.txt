@@ -1,3 +1,6 @@
+find_package(Qt5Test ${REQUIRED_QT_VERSION} REQUIRED)
+set_package_properties(Qt5Test PROPERTIES PURPOSE "Required for tests")
+
 set(PARTS_TEST_LIBRARY_DEPENDENCIES KF5::Parts Qt5::Test KF5::XmlGui)
 
 include(ECMMarkAsTest)
