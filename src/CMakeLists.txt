@@ -33,49 +33,51 @@ set(KParts_LIB_SRCS
 )
 
 include(ECMGenerateHeaders)
-ecm_generate_headers(
-    BrowserArguments
-    BrowserExtension
-    BrowserHostExtension
-    BrowserInterface
-    BrowserOpenOrSaveQuestion
-    BrowserRun
-    Event
-    FileInfoExtension
-    GUIActivateEvent
-    HistoryProvider
-    HtmlExtension
-    HtmlSettingsInterface
-    ListingFilterExtension
-    ListingNotificationExtension
-    LiveConnectExtension
-    MainWindow
-    OpenUrlArguments
-    OpenUrlEvent
-    Part
-    PartActivateEvent
-    PartBase
-    PartManager
-    PartSelectEvent
-    Plugin
-    ReadOnlyPart
-    ReadWritePart
-    ScriptableExtension
-    SelectorInterface
-    StatusBarExtension
-    TextExtension
-    WindowArgs
-
+ecm_generate_headers(KParts_CamelCase_HEADERS
+    HEADER_NAMES
+        BrowserArguments
+        BrowserExtension
+        BrowserHostExtension
+        BrowserInterface
+        BrowserOpenOrSaveQuestion
+        BrowserRun
+        Event
+        FileInfoExtension
+        GUIActivateEvent
+        HistoryProvider
+        HtmlExtension
+        HtmlSettingsInterface
+        ListingFilterExtension
+        ListingNotificationExtension
+        LiveConnectExtension
+        MainWindow
+        OpenUrlArguments
+        OpenUrlEvent
+        Part
+        PartActivateEvent
+        PartBase
+        PartManager
+        PartSelectEvent
+        Plugin
+        ReadOnlyPart
+        ReadWritePart
+        ScriptableExtension
+        SelectorInterface
+        StatusBarExtension
+        TextExtension
+        WindowArgs
     REQUIRED_HEADERS KParts_HEADERS
     PREFIX KParts
 )
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/KParts DESTINATION  ${INCLUDE_INSTALL_DIR} COMPONENT Devel )
+install(FILES ${KParts_CamelCase_HEADERS}
+        DESTINATION ${INCLUDE_INSTALL_DIR}/KParts/KParts
+        COMPONENT Devel)
 
 add_library(KF5Parts ${KParts_LIB_SRCS})
 generate_export_header(KF5Parts EXPORT_FILE_NAME ${KParts_BINARY_DIR}/kparts/kparts_export.h BASE_NAME KParts)
 add_library(KF5::Parts ALIAS KF5Parts)
 
-target_include_directories(KF5Parts PUBLIC "$<BUILD_INTERFACE:${KParts_BINARY_DIR}>")
+target_include_directories(KF5Parts PUBLIC "$<BUILD_INTERFACE:${KParts_BINARY_DIR};${CMAKE_CURRENT_BINARY_DIR}>")
 target_include_directories(KF5Parts INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/KParts>" )
 
 target_link_libraries(KF5Parts PUBLIC  KF5::KIOWidgets #browserrun.h uses krun.h
