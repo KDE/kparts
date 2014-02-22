@@ -33,7 +33,11 @@
 
 #include <QDebug>
 
-#include <unistd.h>
+#include <qplatformdefs.h>
+
+#ifdef Q_OS_WIN
+#include <qt_windows.h> //CreateHardLink()
+#endif
 
 
 using namespace KParts;
@@ -216,6 +220,15 @@ void ReadWritePartPrivate::prepareSaving()
     }
 }
 
+static inline bool makeHardLink(const QString& src, const QString& dest)
+{
+#ifndef Q_OS_WIN
+    return ::link(QFile::encodeName(src).constData(), QFile::encodeName(dest).constData()) == 0;
+#else
+    return CreateHardLinkW((LPCWSTR)dest.utf16(), (LPCWSTR)src.utf16(), nullptr) != 0;
+#endif
+}
+
 bool ReadWritePart::saveToUrl()
 {
     Q_D(ReadWritePart);
@@ -242,7 +255,7 @@ bool ReadWritePart::saveToUrl()
         delete tempFile;
         QUrl uploadUrl = QUrl::fromLocalFile(uploadFile);
         // Create hardlink
-        if (::link(QFile::encodeName(d->m_file).constData(), QFile::encodeName(uploadFile).constData()) != 0) {
+        if (!makeHardLink(d->m_file, uploadFile)) {
             // Uh oh, some error happened.
             return false;
         }

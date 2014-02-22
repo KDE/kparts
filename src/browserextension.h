@@ -26,6 +26,8 @@
 #include <kparts/browserarguments.h>
 #include <kparts/windowargs.h>
 
+#include <qplatformdefs.h> //mode_t
+
 template <class Key, class T> class QMap;
 template<typename T> class QList;
 
