@@ -125,25 +125,15 @@ BrowserExtension::BrowserExtension(KParts::ReadOnlyPart *parent)
         BrowserExtensionPrivate::createActionSlotMap();
     }
 
-    // Build list with this extension's slot names.
-    QList<QByteArray> slotNames;
-    int methodCount = metaObject()->methodCount();
-    int methodOffset = metaObject()->methodOffset();
-    for (int i = 0; i < methodCount; ++i) {
-        QMetaMethod method = metaObject()->method(methodOffset + i);
-        if (method.methodType() == QMetaMethod::Slot) {
-            slotNames.append(method.methodSignature());
-        }
-    }
-
     // Set the initial status of the actions depending on whether
     // they're supported or not
+    const QMetaObject *metaobj = metaObject();
     ActionSlotMap::ConstIterator it = s_actionSlotMap()->constBegin();
     ActionSlotMap::ConstIterator itEnd = s_actionSlotMap()->constEnd();
     for (int i = 0; it != itEnd; ++it, ++i) {
         // Does the extension have a slot with the name of this action ?
-        // ######### KDE4 TODO: use QMetaObject::indexOfMethod() #######
-        d->m_actionStatus.setBit(i, slotNames.contains(it.key() + "()"));
+        QByteArray slotSig = it.key() + "()";
+        d->m_actionStatus.setBit(i, metaobj->indexOfMethod(slotSig.constData()) != -1);
     }
 
     connect(d->m_part, SIGNAL(completed()),
