@@ -513,11 +513,6 @@ QUrl BrowserRun::makeErrorUrl(int error, const QString &errorText, const QUrl &i
 
     newURL.setFragment(cleanedOrigUrl);
     return newURL;
-
-    // The kde3 approach broke with invalid urls, now that they become empty in qt4.
-    //QList<QUrl> lst;
-    //lst << newURL << runURL;
-    //return KUrl::join(lst);
 }
 
 void BrowserRun::redirectToError(int error, const QString &errorText)

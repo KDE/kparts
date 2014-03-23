@@ -81,10 +81,8 @@ protected Q_SLOTS:
     /**
      * Rebuilds the GUI after KEditToolbar changed the toolbar layout.
      * @see configureToolbars()
-     * KDE4: make this virtual. (For now we rely on the fact that it's called
-     * as a slot, so the metaobject finds it here).
      */
-    void saveNewToolbarConfig();
+    void saveNewToolbarConfig() Q_DECL_OVERRIDE;
 
 protected:
     virtual void createShellGUI(bool create = true);
