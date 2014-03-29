@@ -21,6 +21,7 @@
 #include "browseropenorsavequestion.h"
 
 #include <kconfiggroup.h>
+#include <ksharedconfig.h>
 #include <klocalizedstring.h>
 #include <kfileitemactions.h>
 #include <ksqueezedtextlabel.h>

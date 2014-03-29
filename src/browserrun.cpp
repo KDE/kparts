@@ -22,6 +22,7 @@
 #include "browseropenorsavequestion.h"
 
 #include <kconfiggroup.h>
+#include <ksharedconfig.h>
 #include <kmessagebox.h>
 #include <kio/job.h>
 #include <kio/jobuidelegate.h>

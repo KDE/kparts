@@ -23,6 +23,7 @@
 #include <qtest_widgets.h>
 
 #include <kconfiggroup.h>
+#include <ksharedconfig.h>
 #include <QDebug>
 
 #include <QDialog>

@@ -27,6 +27,7 @@
 #include <kxmlguifactory.h>
 #include <klocalizedstring.h>
 #include <kdesktopfile.h>
+#include <ksharedconfig.h>
 #include <kconfiggroup.h>
 #include <kaboutdata.h>
 
