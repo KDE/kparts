@@ -46,16 +46,15 @@ struct BrowserArgumentsPrivate;
  * This can also be used the other way round, when a part asks
  * for a URL to be opened (with openUrlRequest or createNewWindow).
  */
+// KF6 TODO: move variables to private class and add accessors instead,
+//           for consistency
+// KF6 TODO: make class instead of struct
 struct KPARTS_EXPORT BrowserArguments {
     BrowserArguments();
     BrowserArguments(const BrowserArguments &args);
     BrowserArguments &operator=(const BrowserArguments &args);
 
     virtual ~BrowserArguments();
-
-    // KDE4: a struct has the problem that the stuff added after BC-freeze uses methods
-    // so it looks inconsistent with the member vars. -> better use methods for everything,
-    // even if they are inline.
 
     /**
      * This buffer can be used by the part to save and restore its contents.
