@@ -70,7 +70,7 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
     PREFIX KParts
 )
 install(FILES ${KParts_CamelCase_HEADERS}
-        DESTINATION ${INCLUDE_INSTALL_DIR}/KParts/KParts
+        DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KParts/KParts
         COMPONENT Devel)
 
 add_library(KF5Parts ${KParts_LIB_SRCS})
@@ -78,7 +78,7 @@ generate_export_header(KF5Parts EXPORT_FILE_NAME ${KParts_BINARY_DIR}/kparts/kpa
 add_library(KF5::Parts ALIAS KF5Parts)
 
 target_include_directories(KF5Parts PUBLIC "$<BUILD_INTERFACE:${KParts_BINARY_DIR};${CMAKE_CURRENT_BINARY_DIR}>")
-target_include_directories(KF5Parts INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/KParts>" )
+target_include_directories(KF5Parts INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KParts>" )
 
 target_link_libraries(KF5Parts PUBLIC  KF5::KIOWidgets #browserrun.h uses krun.h
                                        KF5::XmlGui # essential to the technology
@@ -97,7 +97,7 @@ set_target_properties(KF5Parts PROPERTIES VERSION   ${KPARTS_VERSION_STRING}
                                           EXPORT_NAME Parts
 )
 
-install(TARGETS KF5Parts EXPORT KF5PartsTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5Parts EXPORT KF5PartsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
    kpart.desktop
@@ -109,10 +109,10 @@ install(FILES
 install(FILES
   ${KParts_BINARY_DIR}/kparts/kparts_export.h
   ${KParts_HEADERS}
-  DESTINATION ${INCLUDE_INSTALL_DIR}/KParts/kparts COMPONENT Devel
+  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KParts/kparts COMPONENT Devel
 )
 
-install(FILES kde_terminal_interface.h DESTINATION ${INCLUDE_INSTALL_DIR}/KParts )
+install(FILES kde_terminal_interface.h DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KParts )
 
 
 include(ECMGeneratePriFile)
