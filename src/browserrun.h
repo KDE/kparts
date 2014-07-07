@@ -93,7 +93,7 @@ public:
      *  const BrowserOpenOrSaveQuestion::Result res = dlg.askOpenOrSave();
      * @endcode
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KPARTS_NO_DEPRECATED
     static KPARTS_DEPRECATED AskSaveResult askSave(const QUrl &url, KService::Ptr offer, const QString &mimeType, const QString &suggestedFileName = QString());
 #endif
 
@@ -113,7 +113,7 @@ public:
      *  // Important: returns Embed now, not Open!
      * @endcode
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KPARTS_NO_DEPRECATED
     static KPARTS_DEPRECATED AskSaveResult askEmbedOrSave(const QUrl &url, const QString &mimeType, const QString &suggestedFileName = QString(), int flags = 0);
 #endif
 

@@ -84,7 +84,7 @@ void ReadOnlyPart::setLocalFilePath(const QString &localFilePath)
     d->m_file = localFilePath;
 }
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KPARTS_NO_DEPRECATED
 bool ReadOnlyPart::isLocalFileTemporary() const
 {
     Q_D(const ReadOnlyPart);
@@ -93,7 +93,7 @@ bool ReadOnlyPart::isLocalFileTemporary() const
 }
 #endif
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KPARTS_NO_DEPRECATED
 void ReadOnlyPart::setLocalFileTemporary(bool temp)
 {
     Q_D(ReadOnlyPart);

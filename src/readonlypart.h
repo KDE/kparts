@@ -271,14 +271,14 @@ protected:
     /**
      * @internal
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KPARTS_NO_DEPRECATED
     KPARTS_DEPRECATED bool isLocalFileTemporary() const;
 #endif
 
     /**
      * @internal
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KPARTS_NO_DEPRECATED
     KPARTS_DEPRECATED void setLocalFileTemporary(bool temp);
 #endif
 
