@@ -1,0 +1,159 @@
+# Translation of kparts5.po to Catalan
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007.
+# Antoni Bella Pérez <antonibella5@orange.es>, 2003, 2006, 2011, 2012, 2013, 2014.
+# Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2007.
+# Josep Ma. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+# Robert Millan <rmh@aybabtu.com>, 2009.
+# Orestes Mas <orestes@tsc.upc.edu>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kparts5\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:57+0000\n"
+"PO-Revision-Date: 2014-07-04 16:57+0200\n"
+"Last-Translator: Antoni Bella Pérez <antonibella5@orange.es>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sebastià Pla,Antoni Bella,Albert Astals,Josep Ma. Ferrer"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sps@sastia.com,antonibella5@orange.es,aacid@kde.org,txemaq@gmail.com"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Voleu cercar a Internet <b>«%1»</b>?</qt>"
+
+#: browserextension.cpp:242
+msgid "Internet Search"
+msgstr "Cerca a Internet"
+
+#: browserextension.cpp:242
+msgid "&Search"
+msgstr "&Cerca"
+
+#: browseropenorsavequestion.cpp:108
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Tipus: %1"
+
+#: browseropenorsavequestion.cpp:116
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Recorda l'acció per a fitxers d'aquest tipus"
+
+#: browseropenorsavequestion.cpp:172 browseropenorsavequestion.cpp:265
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&Obre amb %1"
+
+#: browseropenorsavequestion.cpp:239
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Obre &amb %1"
+
+#: browseropenorsavequestion.cpp:250 browseropenorsavequestion.cpp:345
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Obro «%1»?"
+
+#: browseropenorsavequestion.cpp:254
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Obre amb..."
+
+#: browseropenorsavequestion.cpp:274
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Obre amb"
+
+#: browseropenorsavequestion.cpp:342
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Obre"
+
+#: browseropenorsavequestion.cpp:367
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Nom: %1"
+
+#: browseropenorsavequestion.cpp:369
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Aquest és el nom de fitxer suggerit pel servidor"
+
+#: browserrun.cpp:344
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Esteu segur que voleu executar «%1»?"
+
+#: browserrun.cpp:345
+msgid "Execute File?"
+msgstr "Executo el fitxer?"
+
+#: browserrun.cpp:345
+msgid "Execute"
+msgstr "Executa"
+
+#: browserrun.cpp:403
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "El gestor de baixades (%1) no s'ha pogut trobar a la vostra $PATH "
+
+#: browserrun.cpp:404
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Proveu a reinstal·lar-lo \n"
+"\n"
+"Es deshabilitarà la integració amb el Konqueror."
+
+#: browserrun.cpp:430
+msgid "Save As"
+msgstr "Desa com a"
+
+#: htmlsettingsinterface.cpp:34
+msgid "Accept"
+msgstr "Accepta"
+
+#: htmlsettingsinterface.cpp:36
+msgid "Reject"
+msgstr "Rebutja"
+
+#: readwritepart.cpp:93
+msgid "Untitled"
+msgstr "Sense títol"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"El document «%1» ha estat modificat.\n"
+"Voleu desar els canvis o descartar-los?"
+
+#: readwritepart.cpp:104
+msgid "Close Document"
+msgstr "Tanca el document"
