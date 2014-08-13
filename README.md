@@ -39,9 +39,3 @@ any kind of file (i.e. making a generic viewer), see the documentation for
 KParts::ComponentFactory::createPartInstanceFromQuery.
 
 
-## Links
-
-- Home page: <https://projects.kde.org/projects/frameworks/kparts>
-- Mailing list: <https://mail.kde.org/mailman/listinfo/kde-frameworks-devel>
-- IRC channel: #kde-devel on Freenode
-- Git repository: <https://projects.kde.org/projects/frameworks/kparts/repository>
