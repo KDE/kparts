@@ -41,14 +41,14 @@ public:
     ~OpenUrlEventPrivate()
     {
     }
-    static const char *s_strOpenUrlEvent;
+    static const char* const s_strOpenUrlEvent;
     ReadOnlyPart *m_part;
     QUrl m_url;
     OpenUrlArguments m_args;
     BrowserArguments m_browserArgs;
 };
 
-const char *OpenUrlEvent::OpenUrlEventPrivate::s_strOpenUrlEvent =
+const char* const OpenUrlEvent::OpenUrlEventPrivate::s_strOpenUrlEvent =
     "KParts/BrowserExtension/OpenURLevent";
 
 

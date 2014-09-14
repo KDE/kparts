@@ -33,13 +33,13 @@ public:
         m_widget(widget)
     {
     }
-    static const char *s_strPartActivateEvent;
+    static const char* const s_strPartActivateEvent;
     bool m_bActivated;
     Part *m_part;
     QWidget *m_widget;
 };
 
-const char *PartActivateEventPrivate::s_strPartActivateEvent = "KParts/PartActivateEvent";
+const char* const PartActivateEventPrivate::s_strPartActivateEvent = "KParts/PartActivateEvent";
 
 PartActivateEvent::PartActivateEvent(bool activated,
                                      Part *part,
