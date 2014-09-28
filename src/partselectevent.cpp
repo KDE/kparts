@@ -34,13 +34,13 @@ public:
         m_widget(widget)
     {
     }
-    static const char* const s_strPartSelectEvent;
+    static const char s_strPartSelectEvent[];
     bool m_bSelected;
     Part *m_part;
     QWidget *m_widget;
 };
 
-const char* const PartSelectEventPrivate::s_strPartSelectEvent =
+const char PartSelectEventPrivate::s_strPartSelectEvent[] =
     "KParts/PartSelectEvent";
 
 PartSelectEvent::PartSelectEvent(bool selected,

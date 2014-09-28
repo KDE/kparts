@@ -29,11 +29,11 @@ public:
         : m_bActivated(activated)
     {
     }
-    static const char* const s_strGUIActivateEvent;
+    static const char s_strGUIActivateEvent[];
     bool m_bActivated;
 };
 
-const char* const GUIActivateEventPrivate::s_strGUIActivateEvent = "KParts/GUIActivate";
+const char GUIActivateEventPrivate::s_strGUIActivateEvent[] = "KParts/GUIActivate";
 
 GUIActivateEvent::GUIActivateEvent(bool activated) :
     Event(GUIActivateEventPrivate::s_strGUIActivateEvent),
