@@ -1,0 +1,156 @@
+# translation of kdelibs4.po to Tajik Language
+# 2004, 2005, 2006, 2007 infoDev, a World Bank organization.
+# 2004, 2005, 2006, 2007 Khujand Computer Technologies, Inc.
+# 2004, 2005, 2006, 2007 Youth Opportunities, NGO, 2005.
+# Roger Kovacs <rkovacs@khujand.org>, 2003.
+# Thomas Diehl <thd@kde.org>, 2003.
+# Akmal Vatanshoev <akmalvatanshoev@yahoo.com>, 2004.
+# Victor Ibragimov <youth_opportunities@tajikngo.org>, 2003, 2004, 2005, 2006, 2007, 2008.
+# Copyright (C) 2004, 2002, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:57+0000\n"
+"PO-Revision-Date: 2013-06-04 17:36+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: Tajik Language\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Victor Ibragimov"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "victor.ibragimov@gmail.com"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Оё воқеъан мехоҳед дар интернет ҷустуҷӯ кунед<b>%1</b>?</qt>"
+
+#: browserextension.cpp:242
+msgid "Internet Search"
+msgstr "Ҷустуҷӯи интернет"
+
+#: browserextension.cpp:242
+msgid "&Search"
+msgstr "&Ҷустуҷӯ"
+
+#: browseropenorsavequestion.cpp:108
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Намуд: %1"
+
+#: browseropenorsavequestion.cpp:116
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "В будущем поступать с файлами этого типа также"
+
+#: browseropenorsavequestion.cpp:172 browseropenorsavequestion.cpp:265
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&Открыть в программе «%1»"
+
+#: browseropenorsavequestion.cpp:239
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Открыть &в программе «%1»"
+
+#: browseropenorsavequestion.cpp:250 browseropenorsavequestion.cpp:345
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Кушодани '%1'?"
+
+#: browseropenorsavequestion.cpp:254
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Кушодан бо..."
+
+#: browseropenorsavequestion.cpp:274
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Кушодан бо..."
+
+#: browseropenorsavequestion.cpp:342
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Кушодан"
+
+#: browseropenorsavequestion.cpp:367
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Ном: %1"
+
+#: browseropenorsavequestion.cpp:369
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Имя файла, предложенное сервером."
+
+#: browserrun.cpp:344
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Оё воқеъан мехоҳед '%1'-ро иҷро кунед? "
+
+#: browserrun.cpp:345
+msgid "Execute File?"
+msgstr "Ҷойнавишти файл?"
+
+#: browserrun.cpp:345
+msgid "Execute"
+msgstr "Иҷро кардан"
+
+#: browserrun.cpp:403
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Не удаётся найти программу менеджера загрузки (%1) в пути $PATH."
+
+#: browserrun.cpp:404
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Попробуйте переустановить программу.\n"
+"\n"
+"Интеграция с Konqueror будет выключена."
+
+#: browserrun.cpp:430
+msgid "Save As"
+msgstr "Нигоҳ доштан ҳамчун"
+
+#: htmlsettingsinterface.cpp:34
+msgid "Accept"
+msgstr "Қабул кардан"
+
+#: htmlsettingsinterface.cpp:36
+msgid "Reject"
+msgstr "Рад кардан"
+
+#: readwritepart.cpp:93
+msgid "Untitled"
+msgstr "Бесарлавҳа"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Ҳуҷҷат \"%1\" дигаргун карда шуд.\n"
+"Оё мехоҳед нигоҳаш доред?"
+
+#: readwritepart.cpp:104
+msgid "Close Document"
+msgstr "Пӯшидани Ҳуҷҷат"
