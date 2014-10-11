@@ -53,14 +53,14 @@ Part1::Part1(QObject *parent, QWidget *parentWidget)
 
     QAction *testAction = actionCollection()->addAction(QStringLiteral("p1_blah"));
     testAction->setText(QStringLiteral("Part1's action"));
-    testAction->setShortcut(Qt::CTRL + Qt::Key_B);
+    actionCollection()->setDefaultShortcut(testAction, Qt::CTRL + Qt::Key_B);
     connect(testAction, SIGNAL(triggered()), this, SLOT(slotBlah()));
 
     KActionMenu *menu = new KActionMenu(QIcon::fromTheme(QStringLiteral("mail_forward")), QStringLiteral("Foo"), this);
     actionCollection()->addAction(QStringLiteral("p1_foo"), menu);
 
     QAction *mailForward = new QAction(QIcon::fromTheme(QStringLiteral("mail_forward")), QStringLiteral("Bar"), this);
-    mailForward->setShortcut(Qt::CTRL + Qt::Key_F);
+    actionCollection()->setDefaultShortcut(mailForward, Qt::CTRL + Qt::Key_F);
     connect(mailForward, SIGNAL(triggered()), this, SLOT(slotFooBar()));
     actionCollection()->addAction(QStringLiteral("p1_foo_bar"), mailForward);
     menu->addAction(mailForward);
