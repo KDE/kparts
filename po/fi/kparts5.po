@@ -1,0 +1,179 @@
+# Finnish messages for kdelibs4.
+# Copyright © 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdelibs package.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2002,2003, 2005, 2006, 2007.
+# Tapio Kautto <eleknader@phnet.fi>, 2003, 2004.
+# Mikko Ikola <kola@netikka.fi>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2003, 2008.
+# Mikko Ikola <ikola@iki.fi>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2004, 2008.
+# Niklas Laxström <niklas.laxstrom+kdetrans@gmail.com>, 2006, 2007.
+# Joonas Niilola <juippis@roskakori.org>, 2006.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
+# Teemu Rytilahti <tpr@d5k.net>, 2008.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2011.
+# Tommi Nieminen <tommi.nieminen@legisign.org>, 2009.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2006, 2010, 2011, 2012, 2013, 2014.
+#
+# KDE Finnish translation sprint participants:
+# Author: Artnay
+# Author: Jl
+# Author: Lliehu
+# Author: Niklas Laxström
+# Author: Suhviksi
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:57+0000\n"
+"PO-Revision-Date: 2014-03-24 21:09+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
+"Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+"X-POT-Import-Date: 2013-01-13 20:43:21+0000\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Kim Enkovaara, Tapio Kautto, Mikko Ikola, Teemu Rytilahti, Lasse Liehu, "
+"Niklas Laxström, Joonas Niilola, Mikko Piippo, Tommi Nieminen, Jorma Karvonen"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"kim.enkovaara@iki.fi, eleknader@phnet.fi, ikola@iki.fi, tpr@d5k.net, lasse."
+"liehu@gmail.com, niklas.laxstrom+kdetrans@gmail.com, juippis@roskakori.org, "
+"piippo@cc.helsinki.fi, translator@legisign.org, karvonen.jorma@gmail.com"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Haluatko etsiä Internetistä hakusanalla <b>%1</b>?</qt>"
+
+#: browserextension.cpp:242
+msgid "Internet Search"
+msgstr "Internet-haku"
+
+#: browserextension.cpp:242
+msgid "&Search"
+msgstr "&Haku"
+
+#: browseropenorsavequestion.cpp:108
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Tyyppi: %1"
+
+#: browseropenorsavequestion.cpp:116
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Muista toiminto tälle tiedostotyypille"
+
+#: browseropenorsavequestion.cpp:172 browseropenorsavequestion.cpp:265
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "A&vaa ohjelmalla %1"
+
+#: browseropenorsavequestion.cpp:239
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "A&vaa ohjelmalla %1"
+
+#: browseropenorsavequestion.cpp:250 browseropenorsavequestion.cpp:345
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Avataanko ”%1”?"
+
+#: browseropenorsavequestion.cpp:254
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Avaa ohjelmalla…"
+
+#: browseropenorsavequestion.cpp:274
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Avaa ohjelmalla"
+
+#: browseropenorsavequestion.cpp:342
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Avaa"
+
+#: browseropenorsavequestion.cpp:367
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Nimi: %1"
+
+#: browseropenorsavequestion.cpp:369
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Tämä on palvelimen ehdottama tiedostonimi"
+
+#: browserrun.cpp:344
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Haluatko varmasti suorittaa %1? "
+
+#: browserrun.cpp:345
+msgid "Execute File?"
+msgstr "Suorita tiedosto?"
+
+#: browserrun.cpp:345
+msgid "Execute"
+msgstr "Suorita"
+
+#: browserrun.cpp:403
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr ""
+"Tiedostojen latauksen hallintaohjelmaa (%1) ei löytynyt $PATH -"
+"ympäristömuuttujasta"
+
+#: browserrun.cpp:404
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Yritä asentaa se uudelleen \n"
+"\n"
+"Yhteistoiminta Konquerorin kanssa poistetaan käytöstä."
+
+#: browserrun.cpp:430
+msgid "Save As"
+msgstr "Tallenna nimellä"
+
+#: htmlsettingsinterface.cpp:34
+msgid "Accept"
+msgstr "Hyväksy"
+
+#: htmlsettingsinterface.cpp:36
+msgid "Reject"
+msgstr "Hylkää"
+
+#: readwritepart.cpp:93
+msgid "Untitled"
+msgstr "Nimetön"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Tiedostoa ”%1” on muutettu.\n"
+"Haluatko tallentaa vai hylätä muutokset?"
+
+#: readwritepart.cpp:104
+msgid "Close Document"
+msgstr "Sulje tiedosto"
