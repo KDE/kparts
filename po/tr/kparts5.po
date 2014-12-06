@@ -1,0 +1,168 @@
+# translation of kdelibs4.po to Turkish
+# translation of kdelibs4.po to
+# Kdelibs Turkish translation file
+# Copyright (C) 2000,2003, 2004, 2005, 2007, 2008 Free Software Foundation, Inc.
+#
+# Ömer Fadıl USTA <omer_fad@hotmail.com>,1999-2002.
+# Görkem Çetin <gorkem@kde.org>, 2002,2003, 2004.
+# Tuncay YENİAY <tuncayyeniay@mynet.com>,2002.
+# Ayşe Genç <ayse@uludag.org.tr>, 2005.
+# Görkem Çetin <gorkem@kde.org.tr>, 2005.
+# Görkem Çetin <gorkem@gorkemcetin.com>, 2005.
+# Bekir SONAT <cortexbs@yahoo.com>, 2005.
+# Serdar Soytetir <tulliana@gmail.com>, 2007.
+# Serdar Soytetir <tulliana@gmail.com>, 2007, 2008, 2009, 2011.
+# H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010, 2011.
+# Ozan Çağlayan <ozan@pardus.org.tr>, 2010, 2011.
+# Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
+# Volkan Gezer <volkangezer@gmail.com>, 2013, 2014.
+# Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:57+0000\n"
+"PO-Revision-Date: 2014-11-12 00:33+0200\n"
+"Last-Translator: Kaan Ozdincer <kaanozdincer@gmail.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.4\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Serdar Soytetir, Görkem Çetin, H. İbrahim Güngör, Volkan Gezer"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"tulliana@gmail.com, gorkem@kde.org, ibrahim@pardus.org.tr, volkangezer@gmail."
+"com"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt><b>%1</b> ögesini İnternet'te aramak ister misiniz?</qt>"
+
+#: browserextension.cpp:242
+msgid "Internet Search"
+msgstr "İnternet Araması"
+
+#: browserextension.cpp:242
+msgid "&Search"
+msgstr "&Ara"
+
+#: browseropenorsavequestion.cpp:108
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Tür: %1"
+
+#: browseropenorsavequestion.cpp:116
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Bu dosya türü için bu eylemi anımsa"
+
+#: browseropenorsavequestion.cpp:172 browseropenorsavequestion.cpp:265
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "'%1' ile &Aç"
+
+#: browseropenorsavequestion.cpp:239
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "%1 &ile Aç"
+
+#: browseropenorsavequestion.cpp:250 browseropenorsavequestion.cpp:345
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "'%1' Açılsın mı?"
+
+#: browseropenorsavequestion.cpp:254
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Birlikte aç..."
+
+#: browseropenorsavequestion.cpp:274
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Birlikte aç"
+
+#: browseropenorsavequestion.cpp:342
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Aç"
+
+#: browseropenorsavequestion.cpp:367
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "İsim: %1"
+
+#: browseropenorsavequestion.cpp:369
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Bu, sunucu tarafından önerilen dosya adıdır"
+
+#: browserrun.cpp:344
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Gerçekten '%1' dosyasını çalıştırmak istiyor musunuz?"
+
+#: browserrun.cpp:345
+msgid "Execute File?"
+msgstr "Program Çalıştırılsın mı?"
+
+#: browserrun.cpp:345
+msgid "Execute"
+msgstr "Çalıştır"
+
+#: browserrun.cpp:403
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "$PATH içinde İndirme Yöneticisi (%1) bulunamadı"
+
+#: browserrun.cpp:404
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Bunu yeniden kurmayı deneyin  \n"
+"\n"
+"Konqueror bütünleşmesi kapatılacak."
+
+#: browserrun.cpp:430
+msgid "Save As"
+msgstr "Farklı Kaydet"
+
+#: htmlsettingsinterface.cpp:34
+msgid "Accept"
+msgstr "Kabul et"
+
+#: htmlsettingsinterface.cpp:36
+msgid "Reject"
+msgstr "Reddet"
+
+#: readwritepart.cpp:93
+msgid "Untitled"
+msgstr "Adsız"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"\"%1\" dosyası değiştirildi.\n"
+"Kaydetmek mi, yoksa değişiklikleri silmek mi istiyorsunuz?"
+
+#: readwritepart.cpp:104
+msgid "Close Document"
+msgstr "Belgeyi Kapat"
