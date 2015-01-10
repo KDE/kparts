@@ -23,13 +23,13 @@ target_link_libraries(normalktmtest ${PARTS_TEST_LIBRARY_DEPENDENCIES})
 
 add_library(spellcheckplugin MODULE plugin_spellcheck.cpp)
 target_link_libraries(spellcheckplugin ${PARTS_TEST_LIBRARY_DEPENDENCIES} )
-install(TARGETS spellcheckplugin  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS spellcheckplugin  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 ########### next target ###############
 
 add_library(notepadpart MODULE notepad.cpp)
 target_link_libraries(notepadpart ${PARTS_TEST_LIBRARY_DEPENDENCIES})
-install(TARGETS notepadpart  DESTINATION ${PLUGIN_INSTALL_DIR} )
+install(TARGETS notepadpart  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 
 ########### unit tests ###############
@@ -51,10 +51,10 @@ KPARTS_EXECUTABLE_TESTS(
 ########### install files ###############
 
 # Normally this would be needed. For the test programs we can avoid that, see addResourceDir.
-#install( FILES notepadpart.rc  DESTINATION  ${KXMLGUI_INSTALL_DIR}/notepadpart )
-#install( FILES partviewer_shell.rc  DESTINATION  ${KXMLGUI_INSTALL_DIR}/partviewer )
-#install( FILES kpartstest_shell.rc  DESTINATION  ${KXMLGUI_INSTALL_DIR}/kpartstest )
-#install( FILES kpartstest_part1.rc  DESTINATION  ${KXMLGUI_INSTALL_DIR}/kpartstestpart )
+#install( FILES notepadpart.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/notepadpart )
+#install( FILES partviewer_shell.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/partviewer )
+#install( FILES kpartstest_shell.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/kpartstest )
+#install( FILES kpartstest_part1.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/kpartstestpart )
 
 # To test plugins without installing them, try "ln -s kpartplugins <srcdir>"
-#install( FILES plugin_foobar.rc plugin_spellcheck.rc  DESTINATION  ${KXMLGUI_INSTALL_DIR}/notepadpart/kpartplugins )
+#install( FILES plugin_foobar.rc plugin_spellcheck.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/notepadpart/kpartplugins )

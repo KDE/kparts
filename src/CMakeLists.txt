@@ -70,7 +70,7 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
     PREFIX KParts
 )
 install(FILES ${KParts_CamelCase_HEADERS}
-        DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KParts/KParts
+        DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts/KParts
         COMPONENT Devel)
 
 add_library(KF5Parts ${KParts_LIB_SRCS})
@@ -78,7 +78,7 @@ generate_export_header(KF5Parts EXPORT_FILE_NAME ${KParts_BINARY_DIR}/kparts/kpa
 add_library(KF5::Parts ALIAS KF5Parts)
 
 target_include_directories(KF5Parts PUBLIC "$<BUILD_INTERFACE:${KParts_BINARY_DIR};${CMAKE_CURRENT_BINARY_DIR}>")
-target_include_directories(KF5Parts INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KParts>" )
+target_include_directories(KF5Parts INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KParts>" )
 
 target_link_libraries(KF5Parts PUBLIC  KF5::KIOWidgets #browserrun.h uses krun.h
                                        KF5::XmlGui # essential to the technology
@@ -104,17 +104,17 @@ install(FILES
    krop.desktop
    krwp.desktop
    browserview.desktop
-   DESTINATION ${SERVICETYPES_INSTALL_DIR}
+   DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR}
 )
 install(FILES
   ${KParts_BINARY_DIR}/kparts/kparts_export.h
   ${KParts_HEADERS}
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KParts/kparts COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts/kparts COMPONENT Devel
 )
 
-install(FILES kde_terminal_interface.h DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KParts )
+install(FILES kde_terminal_interface.h DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts )
 
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KParts LIB_NAME KF5Parts DEPS "KIOWidgets KXmlGui KTextWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/KParts)
+ecm_generate_pri_file(BASE_NAME KParts LIB_NAME KF5Parts DEPS "KIOWidgets KXmlGui KTextWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
