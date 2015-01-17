@@ -23,6 +23,8 @@
 
 #include <kparts/kparts_export.h>
 
+#include <QObject>
+
 #include <kxmlguiclient.h>
 
 
