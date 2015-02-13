@@ -73,12 +73,12 @@ public:
     /**
      * Reimplemented for internal reasons
      */
-    virtual QString xmlFile() const;
+    QString xmlFile() const Q_DECL_OVERRIDE;
 
     /**
      * Reimplemented for internal reasons
      */
-    virtual QString localXMLFile() const;
+    QString localXMLFile() const Q_DECL_OVERRIDE;
 
     /**
      * Load the plugin libraries from the directories appropriate

@@ -190,7 +190,7 @@ private:
     KSharedConfig::Ptr dontAskConfig;
 
 public Q_SLOTS:
-    virtual void reject()
+    void reject() Q_DECL_OVERRIDE
     {
         selectedService = 0;
         QDialog::reject();

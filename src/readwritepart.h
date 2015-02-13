@@ -103,7 +103,7 @@ public:
      *
      * @return false on cancel
      */
-    virtual bool closeUrl();
+    bool closeUrl() Q_DECL_OVERRIDE;
 
     /**
      * Call this method instead of the above if you need control if

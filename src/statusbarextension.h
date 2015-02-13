@@ -110,7 +110,7 @@ public:
     static StatusBarExtension *childObject(QObject *obj);
 
     /** @internal */
-    virtual bool eventFilter(QObject *watched, QEvent *ev);
+    bool eventFilter(QObject *watched, QEvent *ev) Q_DECL_OVERRIDE;
 
 private:
     // for future extensions

@@ -55,7 +55,7 @@ public:
     virtual ~MainWindow();
 
 public Q_SLOTS:
-    virtual void configureToolbars();
+    void configureToolbars() Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
 

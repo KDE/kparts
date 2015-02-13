@@ -42,7 +42,7 @@ public:
         return m_openFileCalled;
     }
 protected:
-    /*reimp*/ bool openFile()
+    /*reimp*/ bool openFile() Q_DECL_OVERRIDE
     {
         m_openFileCalled = true;
         return true;

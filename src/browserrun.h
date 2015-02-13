@@ -157,11 +157,11 @@ protected:
     /**
      * Reimplemented from KRun
      */
-    virtual void scanFile();
+    void scanFile() Q_DECL_OVERRIDE;
     /**
      * Reimplemented from KRun
      */
-    virtual void init();
+    void init() Q_DECL_OVERRIDE;
     /**
      * Reimplemented from KRun
      */

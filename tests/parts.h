@@ -43,7 +43,7 @@ public Q_SLOTS:
     void slotFooBar();
 
 protected:
-    virtual bool openFile();
+    bool openFile() Q_DECL_OVERRIDE;
 
 protected:
     QTextEdit *m_edit;
@@ -62,7 +62,7 @@ protected:
     // part caption when the part is used in a multi-part environment
     // (i.e. in a part manager)
     // There is a default impl for ReadOnlyPart...
-    virtual void guiActivateEvent(KParts::GUIActivateEvent *);
+    void guiActivateEvent(KParts::GUIActivateEvent *) Q_DECL_OVERRIDE;
     KAboutData m_componentData;
 };
 

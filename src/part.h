@@ -184,7 +184,7 @@ protected:
     /**
      * @internal
      */
-    virtual void customEvent(QEvent *event);
+    void customEvent(QEvent *event) Q_DECL_OVERRIDE;
 
     /**
      * Convenience method which is called when the Part received a PartActivateEvent .

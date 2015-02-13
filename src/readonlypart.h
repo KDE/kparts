@@ -266,7 +266,7 @@ protected:
      * PartActivateEvent because it's handled by the mainwindow
      * (which gets the even after the PartActivateEvent events have been sent)
      */
-    virtual void guiActivateEvent(GUIActivateEvent *event);
+    void guiActivateEvent(GUIActivateEvent *event) Q_DECL_OVERRIDE;
 
     /**
      * @internal
