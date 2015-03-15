@@ -1,7 +1,6 @@
 @PACKAGE_INIT@
 
 find_dependency(KF5KIO "@KF5_DEP_VERSION@")
-find_dependency(KF5Notifications "@KF5_DEP_VERSION@")
 find_dependency(KF5TextWidgets "@KF5_DEP_VERSION@")
 find_dependency(KF5XmlGui "@KF5_DEP_VERSION@")
 
