@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# GunChleoc <fios@foramnagaidhlig.net>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kparts5\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-04-27 20:57+0000\n"
+"PO-Revision-Date: 2014-12-09 12:47+0100\n"
+"Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
+"Language-Team: Fòram na Gàidhlig\n"
+"Language: gd\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
+"(n > 2 && n < 20) ? 2 : 3;\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: kde\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "GunChleoc"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "fios@foramnagaidhlig.net"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>A bheil thu airson <b>%1</b> a lorg an eadar-lìon?</qt>"
+
+#: browserextension.cpp:242
+msgid "Internet Search"
+msgstr "Lorg san eadar-lìon"
+
+#: browserextension.cpp:242
+msgid "&Search"
+msgstr "&Lorg"
+
+#: browseropenorsavequestion.cpp:108
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Seòrsa: %1"
+
+#: browseropenorsavequestion.cpp:116
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Cuimhnich an gnìomh airson an seòrsa fhaidhle seo"
+
+#: browseropenorsavequestion.cpp:172 browseropenorsavequestion.cpp:265
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "F&osgail le %1"
+
+#: browseropenorsavequestion.cpp:239
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "F&osgail le %1"
+
+#: browseropenorsavequestion.cpp:250 browseropenorsavequestion.cpp:345
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "A bheil thu airson \"%1\" fhosgladh?"
+
+#: browseropenorsavequestion.cpp:254
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "F&osgail le..."
+
+#: browseropenorsavequestion.cpp:274
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "F&osgail le"
+
+#: browseropenorsavequestion.cpp:342
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "F&osgail"
+
+#: browseropenorsavequestion.cpp:367
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Ainm: %1"
+
+#: browseropenorsavequestion.cpp:369
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Seo an t-ainm fhaidhle a mhol am frithealaiche"
+
+#: browserrun.cpp:344
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "A bheil thu cinnteach gu bheil thu airson \"%1\" a ruith?"
+
+#: browserrun.cpp:345
+msgid "Execute File?"
+msgstr "A bheil thu airson an còd san fhaidhle a ruith?"
+
+#: browserrun.cpp:345
+msgid "Execute"
+msgstr "Ruith"
+
+#: browserrun.cpp:403
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Cha deach manaidsear nan luchdaidhean a-nuas (%1) a lorg sa $PATH agad"
+
+#: browserrun.cpp:404
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Feuch an stàlaich thu às ùr e\n"
+"\n"
+"Cuiridh sinn an t-amalachadh le Konqueror à comas."
+
+#: browserrun.cpp:430
+msgid "Save As"
+msgstr "Sàbhail mar"
+
+#: htmlsettingsinterface.cpp:34
+msgid "Accept"
+msgstr "Gabh ris"
+
+#: htmlsettingsinterface.cpp:36
+msgid "Reject"
+msgstr "Diùlt"
+
+#: readwritepart.cpp:93
+msgid "Untitled"
+msgstr "Gun tiotal"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Chaidh an sgrìobhainn \"%1\" atharrachadh.\n"
+"A bheil thu airson na h-atharraichean agad a shàbhaladh no a leigeil seachad?"
+
+#: readwritepart.cpp:104
+msgid "Close Document"
+msgstr "Dùin an sgrìobhainn"
