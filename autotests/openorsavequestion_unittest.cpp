@@ -45,6 +45,11 @@ class OpenOrSaveTest : public QObject
 {
     Q_OBJECT
 private Q_SLOTS:
+    void initTestCase()
+    {
+        extern KSERVICE_EXPORT bool kservice_require_kded;
+        kservice_require_kded = false;
+    }
     void testAutoEmbed()
     {
         // This one should get the fast path, no dialog should show up.
