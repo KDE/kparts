@@ -105,7 +105,7 @@ public:
     virtual void sendInput(const QString &text) = 0;
 
     /**
-     * Return terminal PID
+     * Return terminal PID.  If no process is currently running, returns 0.
      */
     virtual int terminalProcessId() = 0;
 
