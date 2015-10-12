@@ -36,7 +36,6 @@
 #include <QApplication>
 #include <QPointer>
 #include <QStatusBar>
-#include <QStandardPaths>
 
 #include <QDebug>
 
@@ -167,7 +166,7 @@ void MainWindow::createShellGUI(bool create)
         }
 
         QString f = xmlFile();
-        setXMLFile(QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("ui/ui_standards.rc")));
+        setXMLFile(KXMLGUIClient::standardsXmlFileLocation());
         if (!f.isEmpty()) {
             setXMLFile(f, true);
         } else {
