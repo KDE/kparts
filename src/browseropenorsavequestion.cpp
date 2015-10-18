@@ -25,7 +25,6 @@
 #include <klocalizedstring.h>
 #include <kfileitemactions.h>
 #include <ksqueezedtextlabel.h>
-#include <knotification.h>
 #include <kmimetypetrader.h>
 #include <kstandardguiitem.h>
 #include <kguiitem.h>
@@ -154,10 +153,6 @@ public:
             return OpenDefault;
         }
 
-        KNotification::event(QStringLiteral("messageQuestion"), // why does KMessageBox uses Information for questionYesNoCancel?
-                             questionLabel->text(), // also include mimetype?
-                             QPixmap(),
-                             window());
         const int result = exec();
 
         if (dontAskAgainCheckBox->isChecked()) {
