@@ -201,7 +201,7 @@ void Part::slotWidgetDestroyed()
     d->m_widget = 0;
     if (d->m_autoDeletePart) {
         // qDebug() << "deleting part" << objectName();
-        delete this; // ouch, this should probably be deleteLater()
+        this->deleteLater();
     }
 }
 
