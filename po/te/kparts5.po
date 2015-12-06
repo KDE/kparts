@@ -1,0 +1,158 @@
+# translation of kdelibs4.po to Telugu
+#
+#
+# Purushottam Boyanapalli <boyanapalli@gmail.com>, 2005.
+# విజయ్ కిరణ్ కముజు <infyquest@gmail.com>, 2007.
+# pavithran <pavithran.s@gmail.com>, 2007.
+# Krishna Babu K <kkrothap@redhat.com>, 2008, 2009.
+# sreekalyanbapatla <sreekalyan3@gmail.com>, 2013.
+# GVS.Giri <gvs.giri@swecha.net>, 2013.
+# Bhuvan Krishna <bhuvan@swecha.org>,2013.
+# Naveen Kandimalla <naveen@swecha.net>,2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-10-19 08:08+0000\n"
+"PO-Revision-Date: 2013-11-04 23:55+0630\n"
+"Last-Translator: Bhuvan Krishna <bhuvan@swecha.org>\n"
+"Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : "
+"4;\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "విజయ్ కిరణ్ కముజు,కృష్ణబాబు కె, భువన్ కృష్ణ, జి వి యస్ గిరి, శ్రీ కళ్యన్న్, ననిన్"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"infyquest@gmail.com,kkrothap@redhat.com,bhuvan@swecha.org,gvs.giri@swecha."
+"net,sreekalyan3@gmail.com,naveen@swecha.net"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt><b>%1</b> కోసం ఇంటర్నెట్ లో అన్వేషించనా?</qt>"
+
+#: browserextension.cpp:242
+msgid "Internet Search"
+msgstr "ఇంటర్ నెట్ అన్వెషణ"
+
+#: browserextension.cpp:242
+msgid "&Search"
+msgstr "(&S) అన్వెషణ"
+
+#: browseropenorsavequestion.cpp:107
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "రక: %1"
+
+#: browseropenorsavequestion.cpp:115
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "ఈ  పనిని ఈ రకమైన దస్త్రాలకు వాడటం గుర్తుంచు"
+
+#: browseropenorsavequestion.cpp:167 browseropenorsavequestion.cpp:260
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&దీనితో తెరువండి '%1'"
+
+#: browseropenorsavequestion.cpp:234
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "దీనితో  &w తెరువండి '%1'"
+
+#: browseropenorsavequestion.cpp:245 browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "%1 ను తెరుస్తారా?"
+
+#: browseropenorsavequestion.cpp:249
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&O దీనితో తెరువండి...."
+
+#: browseropenorsavequestion.cpp:269
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&O దీనితో తెరువండి"
+
+#: browseropenorsavequestion.cpp:337
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Oతెరువండి"
+
+#: browseropenorsavequestion.cpp:362
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "పేరు:%1"
+
+#: browseropenorsavequestion.cpp:364
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "ఈ సర్వర్నుండి   ఈ దస్త్రం పేరుని సూచించారు  "
+
+#: browserrun.cpp:344
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "'%1' ను నిజంగా నడపమంటారా?"
+
+#: browserrun.cpp:345
+msgid "Execute File?"
+msgstr "దస్త్రాన్ని నడపమంటారా?"
+
+#: browserrun.cpp:345
+msgid "Execute"
+msgstr "నడుపు"
+
+#: browserrun.cpp:403
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "మీ $PATH లో డౌన్ లోడ్ అభికర్త (%1) లో కనపడుటలేదు "
+
+#: browserrun.cpp:404
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr "మరలా నిక్షిప్తం చేయుటకు ప్రయత్నించండి"
+
+#: browserrun.cpp:430
+msgid "Save As"
+msgstr "ఇలా దాచు"
+
+#: htmlsettingsinterface.cpp:34
+msgid "Accept"
+msgstr "అంగీకరించు"
+
+#: htmlsettingsinterface.cpp:36
+msgid "Reject"
+msgstr "తిరస్కరించు"
+
+#: readwritepart.cpp:93
+msgid "Untitled"
+msgstr "పేరులేనిది"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"\"%1\" పత్రం మార్చడినది\n"
+"మార్పులను దాచనా లేక విస్మరించనా?"
+
+#: readwritepart.cpp:104
+msgid "Close Document"
+msgstr "పత్రం మూసివేయి"
