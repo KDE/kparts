@@ -136,14 +136,14 @@ BrowserExtension::BrowserExtension(KParts::ReadOnlyPart *parent)
         d->m_actionStatus.setBit(i, metaobj->indexOfMethod(slotSig.constData()) != -1);
     }
 
-    connect(d->m_part, SIGNAL(completed()),
-            this, SLOT(slotCompleted()));
-    connect(this, SIGNAL(openUrlRequest(QUrl,KParts::OpenUrlArguments,KParts::BrowserArguments)),
-            this, SLOT(slotOpenUrlRequest(QUrl,KParts::OpenUrlArguments,KParts::BrowserArguments)));
-    connect(this, SIGNAL(enableAction(const char*,bool)),
-            this, SLOT(slotEnableAction(const char*,bool)));
-    connect(this, SIGNAL(setActionText(const char*,QString)),
-            this, SLOT(slotSetActionText(const char*,QString)));
+    connect(d->m_part, static_cast<void (KParts::ReadOnlyPart::*)()>(&KParts::ReadOnlyPart::completed),
+            this, &BrowserExtension::slotCompleted);
+    connect(this, &BrowserExtension::openUrlRequest,
+            this, &BrowserExtension::slotOpenUrlRequest);
+    connect(this, &BrowserExtension::enableAction,
+            this, &BrowserExtension::slotEnableAction);
+    connect(this, &BrowserExtension::setActionText,
+            this, &BrowserExtension::slotSetActionText);
 }
 
 BrowserExtension::~BrowserExtension()

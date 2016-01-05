@@ -84,7 +84,7 @@ QVariant ScriptableExtension::encloserForKid(KParts::ScriptableExtension *kid)
 
 static QVariant unimplemented()
 {
-    ScriptableExtension::Exception except(QString::fromLatin1("[unimplemented]"));
+    ScriptableExtension::Exception except(QStringLiteral("[unimplemented]"));
     return QVariant::fromValue(except);
 }
 
@@ -230,9 +230,9 @@ ScriptableLiveConnectExtension::ScriptableLiveConnectExtension(QObject *p, LiveC
     ScriptableExtension(p), wrapee(old)
 {
     connect(wrapee,
-            SIGNAL(partEvent(ulong,QString,KParts::LiveConnectExtension::ArgList)),
+            &LiveConnectExtension::partEvent,
             this,
-            SLOT(liveConnectEvent(ulong,QString,KParts::LiveConnectExtension::ArgList)));
+            &ScriptableLiveConnectExtension::liveConnectEvent);
 }
 
 QVariant ScriptableLiveConnectExtension::rootObject()
@@ -256,6 +256,7 @@ QVariant ScriptableLiveConnectExtension::callFunctionReference(ScriptableExtensi
 {
     QStringList qargs;
     // Convert args to strings for LC use.
+    qargs.reserve(a.size());
     for (int i = 0; i < a.size(); ++i) {
         bool ok;
         qargs.append(toLC(a[i], &ok));
@@ -356,15 +357,15 @@ QString ScriptableLiveConnectExtension::toLC(const QVariant &in, bool *ok)
     // Convert null and undefined to appropriate strings
     // ### this matches old KHTML behavior, but is this sensible?
     if (in.canConvert<ScriptableExtension::Null>()) {
-        return QString::fromLatin1("null");
+        return QStringLiteral("null");
     }
 
     if (in.canConvert<ScriptableExtension::Undefined>()) {
-        return QString::fromLatin1("undefined");
+        return QStringLiteral("undefined");
     }
 
     if (in.type() == QVariant::Bool) {
-        return in.toBool() ? QString::fromLatin1("true") : QString::fromLatin1("false");
+        return in.toBool() ? QStringLiteral("true") : QStringLiteral("false");
     }
 
     // Just stringify everything else, makes sense for nums as well.

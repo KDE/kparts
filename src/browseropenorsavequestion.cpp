@@ -133,10 +133,10 @@ public:
         QPushButton *cancelButton = buttonBox->addButton(QDialogButtonBox::Cancel);
         cancelButton->setObjectName(QStringLiteral("cancelButton"));
 
-        connect(saveButton, SIGNAL(clicked()), this, SLOT(slotYesClicked()));
-        connect(openDefaultButton, SIGNAL(clicked()), this, SLOT(slotOpenDefaultClicked()));
-        connect(openWithButton, SIGNAL(clicked()), this, SLOT(slotOpenWithClicked()));
-        connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+        connect(saveButton, &QPushButton::clicked, this, &BrowserOpenOrSaveQuestionPrivate::slotYesClicked);
+        connect(openDefaultButton, &QPushButton::clicked, this, &BrowserOpenOrSaveQuestionPrivate::slotOpenDefaultClicked);
+        connect(openWithButton, &QPushButton::clicked, this, &BrowserOpenOrSaveQuestionPrivate::slotOpenWithClicked);
+        connect(buttonBox, &QDialogButtonBox::rejected, this, &BrowserOpenOrSaveQuestionPrivate::reject);
 
         mainLayout->addWidget(buttonBox);
     }
@@ -269,7 +269,7 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askOpenOrSave()
                 KGuiItem openWithItem(i18nc("@label:button", "&Open with"), QStringLiteral("document-open"));
                 KGuiItem::assign(d->openWithButton, openWithItem);
                 d->openWithButton->setMenu(menu);
-                QObject::connect(menu, SIGNAL(triggered(QAction*)), d, SLOT(slotAppSelected(QAction*)));
+                QObject::connect(menu, &QMenu::triggered, d, &BrowserOpenOrSaveQuestionPrivate::slotAppSelected);
                 for (KService::List::const_iterator it = apps.begin(); it != apps.end(); ++it) {
                     QAction *act = createAppAction(*it, d);
                     menu->addAction(act);

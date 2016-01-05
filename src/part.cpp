@@ -52,8 +52,8 @@ Part::~Part()
 
     if (d->m_widget) {
         // We need to disconnect first, to avoid calling it !
-        disconnect(d->m_widget, SIGNAL(destroyed()),
-                   this, SLOT(slotWidgetDestroyed()));
+        disconnect(d->m_widget, &QWidget::destroyed,
+                   this, &Part::slotWidgetDestroyed);
     }
 
     if (d->m_manager) {
@@ -135,8 +135,8 @@ void Part::setWidget(QWidget *widget)
 {
     Q_D(Part);
     d->m_widget = widget;
-    connect(d->m_widget, SIGNAL(destroyed()),
-            this, SLOT(slotWidgetDestroyed()), Qt::UniqueConnection);
+    connect(d->m_widget, &QWidget::destroyed,
+            this, &Part::slotWidgetDestroyed, Qt::UniqueConnection);
 }
 
 void Part::setSelectable(bool selectable)

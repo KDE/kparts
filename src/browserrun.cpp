@@ -170,10 +170,10 @@ void BrowserRun::scanFile()
 
     job->addMetaData(metaData);
     KJobWidgets::setWindow(job, d->m_window);
-    connect(job, SIGNAL(result(KJob*)),
-            this, SLOT(slotBrowserScanFinished(KJob*)));
-    connect(job, SIGNAL(mimetype(KIO::Job*,QString)),
-            this, SLOT(slotBrowserMimetype(KIO::Job*,QString)));
+    connect(job, &KIO::TransferJob::result,
+            this, &BrowserRun::slotBrowserScanFinished);
+    connect(job, static_cast<void (KIO::TransferJob::*)(KIO::Job*,const QString &)>(&KIO::TransferJob::mimetype),
+            this, &BrowserRun::slotBrowserMimetype);
     setJob(job);
 }
 
@@ -229,7 +229,7 @@ void BrowserRun::slotBrowserMimetype(KIO::Job *_job, const QString &type)
 
         const QString modificationTime = job->queryMetaData(QStringLiteral("content-disposition-modification-date"));
         if (!modificationTime.isEmpty()) {
-            d->m_args.metaData().insert(QLatin1String("content-disposition-modification-date"), modificationTime);
+            d->m_args.metaData().insert(QStringLiteral("content-disposition-modification-date"), modificationTime);
         }
 
         QMapIterator<QString, QString> it(job->metaData());
@@ -269,7 +269,7 @@ BrowserRun::NonEmbeddableResult BrowserRun::handleNonEmbeddable(const QString &_
     if (mimeType != QLatin1String("inode/directory") && // dirs can't be saved
             !KRun::url().isLocalFile()) {
         if (isTextExecutable(mimeType)) {
-            mimeType = QLatin1String("text/plain");    // view, don't execute
+            mimeType = QStringLiteral("text/plain");    // view, don't execute
         }
         // ... -> ask whether to save
         BrowserOpenOrSaveQuestion question(d->m_window, KRun::url(), mimeType);
@@ -306,8 +306,8 @@ BrowserRun::NonEmbeddableResult BrowserRun::handleNonEmbeddable(const QString &_
                 QUrl destURL = QUrl::fromLocalFile(tempFile.fileName());
                 KIO::Job *job = KIO::file_copy(KRun::url(), destURL, 0600, KIO::Overwrite);
                 KJobWidgets::setWindow(job, d->m_window);
-                connect(job, SIGNAL(result(KJob*)),
-                        this, SLOT(slotCopyToTempFileResult(KJob*)));
+                connect(job, &KIO::Job::result,
+                        this, &BrowserRun::slotCopyToTempFileResult);
                 return Delayed; // We'll continue after the job has finished
             }
             if (selectedService && question.selectedService()) {
@@ -439,7 +439,7 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
 
     dlg->selectFile(name);
     if (dlg->exec()) {
-        QUrl destURL(dlg->selectedUrls().first());
+        QUrl destURL(dlg->selectedUrls().at(0));
         if (destURL.isValid()) {
             saveUrlUsingKIO(url, destURL, window, args.metaData());
         }
@@ -452,7 +452,7 @@ void BrowserRun::saveUrlUsingKIO(const QUrl &srcUrl, const QUrl &destUrl,
 {
     KIO::FileCopyJob *job = KIO::file_copy(srcUrl, destUrl, -1, KIO::Overwrite);
 
-    const QString modificationTime = metaData[QLatin1String("content-disposition-modification-date")];
+    const QString modificationTime = metaData[QStringLiteral("content-disposition-modification-date")];
     if (!modificationTime.isEmpty()) {
         job->setModificationTime(QDateTime::fromString(modificationTime, Qt::RFC2822Date));
     }
@@ -501,7 +501,7 @@ QUrl BrowserRun::makeErrorUrl(int error, const QString &errorText, const QUrl &i
      * error = int kio error code, errText = QString error text from kio
      * The sub-url is the URL that we were trying to open.
      */
-    QUrl newURL(QString::fromLatin1("error:/?error=%1&errText=%2")
+    QUrl newURL(QStringLiteral("error:/?error=%1&errText=%2")
                 .arg(error)
                 .arg(QString::fromUtf8(QUrl::toPercentEncoding(errorText))));
 

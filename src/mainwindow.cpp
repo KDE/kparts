@@ -96,10 +96,10 @@ void MainWindow::createGUI(Part *part)
 
         factory->removeClient(d->m_activePart);
 
-        disconnect(d->m_activePart, SIGNAL(setWindowCaption(QString)),
-                   this, SLOT(setCaption(QString)));
-        disconnect(d->m_activePart, SIGNAL(setStatusBarText(QString)),
-                   this, SLOT(slotSetStatusBarText(QString)));
+        disconnect(d->m_activePart, &Part::setWindowCaption,
+                   this, static_cast<void (MainWindow::*)(const QString &)>(&MainWindow::setCaption));
+        disconnect(d->m_activePart, &Part::setStatusBarText,
+                   this, &MainWindow::slotSetStatusBarText);
     }
 
     if (!d->m_bShellGUIActivated) {
@@ -110,10 +110,10 @@ void MainWindow::createGUI(Part *part)
 
     if (part) {
         // do this before sending the activate event
-        connect(part, SIGNAL(setWindowCaption(QString)),
-                this, SLOT(setCaption(QString)));
-        connect(part, SIGNAL(setStatusBarText(QString)),
-                this, SLOT(slotSetStatusBarText(QString)));
+        connect(part, &Part::setWindowCaption,
+                this, static_cast<void (MainWindow::*)(const QString &)>(&MainWindow::setCaption));
+        connect(part, &Part::setStatusBarText,
+                this, &MainWindow::slotSetStatusBarText);
 
         factory->addClient(part);
 

@@ -106,6 +106,7 @@ public:
 
 private:
     BrowserOpenOrSaveQuestionPrivate *const d;
+    Q_DISABLE_COPY(BrowserOpenOrSaveQuestion)
 };
 
 }

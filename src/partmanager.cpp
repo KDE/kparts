@@ -132,8 +132,8 @@ PartManager::PartManager(QWidget *topLevel, QObject *parent)
 PartManager::~PartManager()
 {
     foreach (const QWidget *w, d->m_managedTopLevelWidgets) {
-        disconnect(w, SIGNAL(destroyed()),
-                   this, SLOT(slotManagedTopLevelWidgetDestroyed()));
+        disconnect(w, &QWidget::destroyed,
+                   this, &PartManager::slotManagedTopLevelWidgetDestroyed);
     }
 
     foreach (Part *it, d->m_parts) {
@@ -454,8 +454,8 @@ void PartManager::setActivePart(Part *part, QWidget *widget)
         PartActivateEvent ev(false, oldActivePart, oldActiveWidget);
         QApplication::sendEvent(oldActivePart, &ev);
         if (oldActiveWidget) {
-            disconnect(oldActiveWidget, SIGNAL(destroyed()),
-                       this, SLOT(slotWidgetDestroyed()));
+            disconnect(oldActiveWidget, &QWidget::destroyed,
+                       this, &PartManager::slotWidgetDestroyed);
             QApplication::sendEvent(oldActiveWidget, &ev);
         }
 
@@ -471,8 +471,8 @@ void PartManager::setActivePart(Part *part, QWidget *widget)
         PartActivateEvent ev(true, d->m_activePart, d->m_activeWidget);
         QApplication::sendEvent(d->m_activePart, &ev);
         if (d->m_activeWidget) {
-            connect(d->m_activeWidget, SIGNAL(destroyed()),
-                    this, SLOT(slotWidgetDestroyed()));
+            connect(d->m_activeWidget, &QWidget::destroyed,
+                    this, &PartManager::slotWidgetDestroyed);
             QApplication::sendEvent(d->m_activeWidget, &ev);
         }
     }
@@ -565,8 +565,8 @@ void PartManager::addManagedTopLevelWidget(const QWidget *topLevel)
     }
 
     d->m_managedTopLevelWidgets.append(topLevel);
-    connect(topLevel, SIGNAL(destroyed()),
-            this, SLOT(slotManagedTopLevelWidgetDestroyed()));
+    connect(topLevel, &QWidget::destroyed,
+            this, &PartManager::slotManagedTopLevelWidgetDestroyed);
 }
 
 void PartManager::removeManagedTopLevelWidget(const QWidget *topLevel)

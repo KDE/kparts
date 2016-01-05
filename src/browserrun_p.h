@@ -48,7 +48,7 @@ public:
         // qDebug() << "download started: srcUrl=" << job->srcUrl()
         //         << "destUrl=" << job->destUrl()
         //         << "referrer=" << m_metaData.value("referrer");
-        connect(job, SIGNAL(result(KJob *)), this, SLOT(slotDownloadFinished(KJob *)));
+        connect(job, &KIO::FileCopyJob::result, this, &DownloadJobWatcher::slotDownloadFinished);
     }
 
 private Q_SLOTS:
