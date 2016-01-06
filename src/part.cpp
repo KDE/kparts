@@ -52,7 +52,7 @@ Part::~Part()
 
     if (d->m_widget) {
         // We need to disconnect first, to avoid calling it !
-        disconnect(d->m_widget, &QWidget::destroyed,
+        disconnect(d->m_widget.data(), &QWidget::destroyed,
                    this, &Part::slotWidgetDestroyed);
     }
 
@@ -135,7 +135,7 @@ void Part::setWidget(QWidget *widget)
 {
     Q_D(Part);
     d->m_widget = widget;
-    connect(d->m_widget, &QWidget::destroyed,
+    connect(d->m_widget.data(), &QWidget::destroyed,
             this, &Part::slotWidgetDestroyed, Qt::UniqueConnection);
 }
 

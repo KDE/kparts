@@ -96,9 +96,9 @@ void MainWindow::createGUI(Part *part)
 
         factory->removeClient(d->m_activePart);
 
-        disconnect(d->m_activePart, &Part::setWindowCaption,
+        disconnect(d->m_activePart.data(), &Part::setWindowCaption,
                    this, static_cast<void (MainWindow::*)(const QString &)>(&MainWindow::setCaption));
-        disconnect(d->m_activePart, &Part::setStatusBarText,
+        disconnect(d->m_activePart.data(), &Part::setStatusBarText,
                    this, &MainWindow::slotSetStatusBarText);
     }
 
