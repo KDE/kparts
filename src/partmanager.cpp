@@ -571,10 +571,6 @@ void PartManager::addManagedTopLevelWidget(const QWidget *topLevel)
 
 void PartManager::removeManagedTopLevelWidget(const QWidget *topLevel)
 {
-    if (!topLevel->isTopLevel()) {
-        return;
-    }
-
     d->m_managedTopLevelWidgets.removeAll(topLevel);
 }
 
