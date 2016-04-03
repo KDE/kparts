@@ -1,0 +1,160 @@
+# Translation of kparts5 to Norwegian Bokmål
+#
+# Knut Yrvin <knut.yrvin@gmail.com>, 2002, 2003, 2004, 2005.
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2002, 2003, 2004, 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+# Eskild Hustvedt <zerodogg@skolelinux.no>, 2004, 2005.
+# Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2004, 2005.
+# Axel Bojer <fri_programvare@bojer.no>, 2005, 2006.
+# Nils Kristian Tomren <slx@nilsk.net>, 2005, 2007.
+# Øyvind A. Holm <sunny@sunbase.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-10-19 08:08+0000\n"
+"PO-Revision-Date: 2014-11-05 13:40+0100\n"
+"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Knut Yrvin,Axel Bojer,Bjørn Steensrud"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"knut.yrvin@gmail.com,fri_programvare@bojer.no,bjornst@skogkatt.homelinux.org"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Vil du søke på Internett etter <b>%1</b>?</qt>"
+
+#: browserextension.cpp:242
+msgid "Internet Search"
+msgstr "Internettsøk"
+
+#: browserextension.cpp:242
+msgid "&Search"
+msgstr "&Søk"
+
+#: browseropenorsavequestion.cpp:107
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Type: %1"
+
+#: browseropenorsavequestion.cpp:115
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Husk handling for filer av denne typen"
+
+#: browseropenorsavequestion.cpp:167 browseropenorsavequestion.cpp:260
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&Åpne med %1"
+
+#: browseropenorsavequestion.cpp:234
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Åpne &med %1"
+
+#: browseropenorsavequestion.cpp:245 browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Åpne «%1»?"
+
+#: browseropenorsavequestion.cpp:249
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Åpne med …"
+
+#: browseropenorsavequestion.cpp:269
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Åpne med"
+
+#: browseropenorsavequestion.cpp:337
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Åpne"
+
+#: browseropenorsavequestion.cpp:362
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Navn: %1"
+
+#: browseropenorsavequestion.cpp:364
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Dette er filnavnet som tjeneren foreslår"
+
+#: browserrun.cpp:344
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Ønsker du å kjøre '%1'?"
+
+#: browserrun.cpp:345
+msgid "Execute File?"
+msgstr "Kjør fila?"
+
+#: browserrun.cpp:345
+msgid "Execute"
+msgstr "Kjør"
+
+#: browserrun.cpp:403
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Fant ikke nedlastingsbehandleren (%1) i søkestien "
+
+#: browserrun.cpp:404
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Forsøk å installere programmet på nytt \n"
+"\n"
+"Tilknytningen til Konqueror blir slått av."
+
+#: browserrun.cpp:430
+msgid "Save As"
+msgstr "Lagre som"
+
+#: htmlsettingsinterface.cpp:34
+msgid "Accept"
+msgstr "Godta"
+
+#: htmlsettingsinterface.cpp:36
+msgid "Reject"
+msgstr "Avvis"
+
+#: readwritepart.cpp:93
+msgid "Untitled"
+msgstr "Uten tittel"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Dokumentet «%1» er blitt endret.\n"
+"Vil du lagre endringene eller forkaste dem?"
+
+#: readwritepart.cpp:104
+msgid "Close Document"
+msgstr "Lukk dokumentet"
