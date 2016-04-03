@@ -1,0 +1,155 @@
+# translation of kdelibs4.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Umesh Rudrapatna <urudrapatna@yahoo.com>, 2007.
+# Umesh Rudrapatna <umeshrs@gmail.com>, 2007, 2008, 2009.
+# Shankar Prasad <svenkate@redhat.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-10-19 08:08+0000\n"
+"PO-Revision-Date: 2010-06-24 18:32+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: kn_IN <kde-i18n-doc@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"X-Generator: Lokalize 1.0\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ಉಮೇಶ್ ರುದ್ರಪಟ್ಟಣ, ಸಿದ್ಧಾರೂಢ ಪಿ ಟಿ, ಶಂಕರ ಪ್ರಸಾದ್ ಎಂ ವಿ"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "umeshrs@gmail.com, siddharudh@gmail.com, svenkate@redhat.com"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>ನೀವು <b>'%1'</b> ಗಾಗಿ ಜಾಲವನ್ನು ಹುಡುಕಬೇಕೆಂದಿದ್ದೀರೇನು?</qt>"
+
+#: browserextension.cpp:242
+msgid "Internet Search"
+msgstr "ಅಂತರ್ಜಾಲ ಹುಡುಕಾಟ"
+
+#: browserextension.cpp:242
+msgid "&Search"
+msgstr "ಹುಡುಕು(&H)"
+
+#: browseropenorsavequestion.cpp:107
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "ಬಗೆ: %1"
+
+#: browseropenorsavequestion.cpp:115
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "ಈ ಬಗೆಯ ಕಡತಗಳಿಗೆ ಈ ಕ್ರಿಯೆಯನ್ನು ನೆನಪಿಟ್ಟುಕೊ"
+
+#: browseropenorsavequestion.cpp:167 browseropenorsavequestion.cpp:260
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "%1 ದೊಂದಿಗೆ ತೆರೆ(&O)"
+
+#: browseropenorsavequestion.cpp:234
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "%1 ದೊಂದಿಗೆ ತೆರೆ(&w)"
+
+#: browseropenorsavequestion.cpp:245 browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "'%1' ಅನ್ನು ತೆರೆಯ ಬೇಕೆ?"
+
+#: browseropenorsavequestion.cpp:249
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "ಇದರೊಂದಿಗೆ ತೆರೆ (&O)..."
+
+#: browseropenorsavequestion.cpp:269
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "ಇದರೊಂದಿಗೆ ತೆರೆ (&O)"
+
+#: browseropenorsavequestion.cpp:337
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "ತೆರೆ(&O)"
+
+#: browseropenorsavequestion.cpp:362
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "ಹೆಸರು: %1"
+
+#: browseropenorsavequestion.cpp:364
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "ಈ ಕಡತದ ಹೆಸರನ್ನು ಪರಿಚಾರಕದಿಂದ ಸೂಚಿಸಲಾಗಿದೆ"
+
+#: browserrun.cpp:344
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "'%1' ನ್ನು ನೀವು ನಿಜವಾಗಿಯೂ ನಿರ್ವಹಿಸಬೇಕೆಂದ್ದೀರೇನು?"
+
+#: browserrun.cpp:345
+msgid "Execute File?"
+msgstr "ಕಡತವನ್ನು ನಿರ್ವಹಿಸಬೇಕೇ?"
+
+#: browserrun.cpp:345
+msgid "Execute"
+msgstr "ನಿರ್ವಹಿಸು"
+
+#: browserrun.cpp:403
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "ನಿಮ್ಮ $PATH ನಲ್ಲಿ ನಕಲಿಳಿಪು ವ್ಯವಸ್ಥಾಪಕ (download manager) (%1) ಕಂಡುಬರಲಿಲ್ಲ"
+
+#: browserrun.cpp:404
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"ಅದನ್ನು ಪುನರನುಸ್ಥಾಪಿಸಲು ಪ್ರಯತ್ನಿಸಿ \n"
+"\n"
+"Konqueror ನೊಡನೆ ಸಮಗ್ರೀಕರಣವನ್ನು (integration) ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗುವುದು."
+
+#: browserrun.cpp:430
+msgid "Save As"
+msgstr "ಹೀಗೆ ಉಳಿಸು"
+
+#: htmlsettingsinterface.cpp:34
+msgid "Accept"
+msgstr "ಸ್ವೀಕರಿಸು"
+
+#: htmlsettingsinterface.cpp:36
+msgid "Reject"
+msgstr "ನಿರಾಕರಿಸು"
+
+#: readwritepart.cpp:93
+msgid "Untitled"
+msgstr "ಹೆಸರಿಲ್ಲದ"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"ದಸ್ತಾವೇಜು \"%1\" ಬದಲಾಗಿದೆ.\n"
+"ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಬೇಕೇ ಅಥವಾ ತಿರಸ್ಕರಿಸಬೇಕೇ?"
+
+#: readwritepart.cpp:104
+msgid "Close Document"
+msgstr "ದಸ್ತವೇಜನ್ನು ಮುಚ್ಚು"
