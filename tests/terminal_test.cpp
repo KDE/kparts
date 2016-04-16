@@ -39,6 +39,6 @@ int main(int argc, char **argv)
     Window *window = new Window();
     window->show();
     return app.exec();
-};
+}
 
 #include "terminal_test.moc"
