@@ -72,11 +72,8 @@ public:
 
         QVBoxLayout *mainLayout = new QVBoxLayout(this);
         mainLayout->setSpacing(spacingHint * 2); // provide extra spacing
-        mainLayout->setMargin(0);
 
         QHBoxLayout *hLayout = new QHBoxLayout();
-        hLayout->setMargin(0);
-        hLayout->setSpacing(-1); // use default spacing
         mainLayout->addLayout(hLayout, 5);
 
         QLabel *iconLabel = new QLabel(this);
