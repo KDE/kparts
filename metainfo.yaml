@@ -11,3 +11,7 @@ libraries:
  - qmake: KParts
    cmake: "KF5::Parts"
 cmakename: KF5Parts
+
+public_lib: true
+group: Frameworks
+subgroup: Tier 3
