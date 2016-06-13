@@ -34,12 +34,24 @@ class MainWindowPrivate;
 /**
  * A KPart-aware main window, whose user interface is described in XML.
  *
- * Inherit your main window from this class
- * and don't forget to call setXMLFile() in the inherited constructor.
- *
  * It implements all internal interfaces in the case of a
  * KMainWindow as host: the builder and servant interface (for menu
  * merging).
+ *
+ * Inherit your main window from this class
+ * and don't forget to call setupGUI() before you call createGUI()
+ * on the KPart. For example:
+ *
+ * \code
+ * setCentralWidget(m_part->widget());
+ * setupGUI(ToolBar | Keys | StatusBar | Save, "appui.rc");
+ * createGUI(m_part);
+ * \endcode
+ *
+ * @warning you should not pass the Default flag to setupGUI(), since it contains
+ * the Create flag that is not supposed to be used from this class.
+ * @see setupGUI, @see createGUI
+ *
  */
 class KPARTS_EXPORT MainWindow : public KXmlGuiWindow, virtual public PartBase
 {
