@@ -144,6 +144,7 @@ void MainWindow::createShellGUI(bool create)
             QAction *switchLanguageAction = d->m_helpMenu->action(KHelpMenu::menuSwitchLanguage);
             QAction *aboutAppAction = d->m_helpMenu->action(KHelpMenu::menuAboutApp);
             QAction *aboutKdeAction = d->m_helpMenu->action(KHelpMenu::menuAboutKDE);
+            QAction *donateAction = d->m_helpMenu->action(KHelpMenu::menuDonate);
 
             if (helpContentsAction) {
                 actions->addAction(helpContentsAction->objectName(), helpContentsAction);
@@ -162,6 +163,9 @@ void MainWindow::createShellGUI(bool create)
             }
             if (aboutKdeAction) {
                 actions->addAction(aboutKdeAction->objectName(), aboutKdeAction);
+            }
+            if (donateAction) {
+                actions->addAction(donateAction->objectName(), donateAction);
             }
         }
 
