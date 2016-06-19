@@ -49,7 +49,8 @@ public:
     MainWindowPrivate()
         : m_activePart(0),
           m_bShellGUIActivated(false),
-          m_helpMenu(0)
+          m_helpMenu(0),
+          m_manageWindowTitle(true)
     {
     }
     ~MainWindowPrivate()
@@ -59,6 +60,7 @@ public:
     QPointer<Part> m_activePart;
     bool m_bShellGUIActivated;
     KHelpMenu *m_helpMenu;
+    bool m_manageWindowTitle;
 };
 }
 
@@ -110,8 +112,10 @@ void MainWindow::createGUI(Part *part)
 
     if (part) {
         // do this before sending the activate event
-        connect(part, &Part::setWindowCaption,
-                this, static_cast<void (MainWindow::*)(const QString &)>(&MainWindow::setCaption));
+        if (d->m_manageWindowTitle) {
+            connect(part, &Part::setWindowCaption,
+                    this, static_cast<void (MainWindow::*)(const QString &)>(&MainWindow::setCaption));
+        }
         connect(part, &Part::setStatusBarText,
                 this, &MainWindow::slotSetStatusBarText);
 
@@ -188,6 +192,11 @@ void MainWindow::createShellGUI(bool create)
 
         guiFactory()->removeClient(this);
     }
+}
+
+void KParts::MainWindow::setWindowTitleHandling(bool enabled)
+{
+    d->m_manageWindowTitle = enabled;
 }
 
 void KParts::MainWindow::saveNewToolbarConfig()

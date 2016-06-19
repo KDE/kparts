@@ -84,6 +84,16 @@ protected Q_SLOTS:
     void createGUI(KParts::Part *part);
 
     /**
+     * Enable or disable the automatic setting of window titles by the part's document title.
+     * By default, a part always changes the window title when the document changes.
+     * @note This value must be set before calling @see createGUI.
+     *
+     * @param enabled boolean to enable or disable the window title handling
+     * @since 5.24
+     */
+    void setWindowTitleHandling(bool enabled);
+
+    /**
      * Called when the active part wants to change the statusbar message
      * Reimplement if your mainwindow has a complex statusbar
      * (with several items)

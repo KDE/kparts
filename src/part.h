@@ -165,6 +165,9 @@ Q_SIGNALS:
     /**
      * Emitted by the part, to set the caption of the window(s)
      * hosting this part
+     *
+     * @note this signal has only an effect on the window title if window title
+     *       handling is enabled @see KParts::MainWindow::setWindowTitleHandling
      */
     void setWindowCaption(const QString &caption);
     /**
