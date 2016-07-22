@@ -71,7 +71,7 @@ public:
      * @param stretch the stretch factor. 0 for a minimum size.
      * @param permanent passed to QStatusBar::addWidget as the "permanent" bool.
      * Note that the item isn't really permanent though, it goes away when
-     * the part is unactivated. This simply controls where temporary messages
+     * the part is unactivated. This simply controls whether temporary messages
      * hide the @p widget, and whether it's added to the left or to the right side.
      *
      * @Note that the widget does not technically become a child of the
