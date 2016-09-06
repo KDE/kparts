@@ -1,0 +1,164 @@
+# translation of kdelibs4.po to Italian
+# Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005.
+# Federico Cozzi <federicocozzi@federicocozzi.it>, 2004.
+# Federico Zenith <federico.zenith@member.fsf.org>, 2004, 2008, 2009, 2010, 2011.
+# Andrea Rizzi <Andrea.Rizzi@sns.it>, 2004.
+# Nicola Ruggero <nixprog.adsl@tiscali.it>, 2005, 2006.
+# Nicola Ruggero <nicola@nxnt.org>, 2006, 2007, 2010.
+# Luciano Montanaro <mikelima@cirulla.net>, 2007.
+# Dario Panico <Dareus_Persarumrex@fastwebnet.it>, 2008.
+# Pino Toscano <toscano.pino@tiscali.it>, 2008.
+# Federico Zenith <federico.zenith@member.fsf.org>, 2008, 2012, 2013, 2014, 2015.
+# Innocenzo Ventre <innocenzo.ventre@gmail.com>, 2012.
+# Vincenzo Reale <smart2128@baslug.org>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-04-17 07:24+0000\n"
+"PO-Revision-Date: 2015-01-11 20:36+0100\n"
+"Last-Translator: Federico Zenith <zenith.federico@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Federico Zenith,Vincenzo Reale,Dario Panico,Nicola Ruggero,Federico Cozzi"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "federico.zenith@member.fsf.org,,,,"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Vuoi cercare <b>%1</b> su Internet?</qt>"
+
+#: browserextension.cpp:242
+msgid "Internet Search"
+msgstr "Ricerca Internet"
+
+#: browserextension.cpp:242
+msgid "&Search"
+msgstr "&Cerca"
+
+# È il soggetto di un'email. Usiamo l'intestazione internazionale
+# «Re:», non quelle della Microsoft («SV:», «AW:» e così via; no,
+# non mi ricordo com'era in italiano).
+#: browseropenorsavequestion.cpp:104
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Tipo: %1"
+
+#: browseropenorsavequestion.cpp:112
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Ricorda l'azione per file di questo tipo"
+
+#: browseropenorsavequestion.cpp:164 browseropenorsavequestion.cpp:257
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&Apri con %1"
+
+#: browseropenorsavequestion.cpp:231
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Apri &con %1"
+
+#: browseropenorsavequestion.cpp:242 browseropenorsavequestion.cpp:337
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Aprire con «%1»?"
+
+#: browseropenorsavequestion.cpp:246
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Apri con..."
+
+#: browseropenorsavequestion.cpp:266
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Apri con"
+
+#: browseropenorsavequestion.cpp:334
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Apri"
+
+#: browseropenorsavequestion.cpp:359
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Nome: %1"
+
+#: browseropenorsavequestion.cpp:361
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Questo è il nome del file suggerito dal server"
+
+#: browserrun.cpp:344
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Vuoi veramente eseguire «%1»?"
+
+#: browserrun.cpp:345
+msgid "Execute File?"
+msgstr "Eseguire il file?"
+
+#: browserrun.cpp:345
+msgid "Execute"
+msgstr "Esegui"
+
+#: browserrun.cpp:403
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Impossibile trovare il gestore degli scaricamenti (%1) nel tuo $PATH"
+
+#: browserrun.cpp:404
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Prova a reinstallarlo.\n"
+"\n"
+"L'integrazione con Konqueror sarà disabilitata."
+
+#: browserrun.cpp:430
+msgid "Save As"
+msgstr "Salva come"
+
+#: htmlsettingsinterface.cpp:34
+msgid "Accept"
+msgstr "Accetta"
+
+#: htmlsettingsinterface.cpp:36
+msgid "Reject"
+msgstr "Rifiuta"
+
+#: readwritepart.cpp:93
+msgid "Untitled"
+msgstr "Senza titolo"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Il documento «%1» è stato modificato.\n"
+"Vuoi salvare o scartare le modifiche?"
+
+#: readwritepart.cpp:104
+msgid "Close Document"
+msgstr "Chiudi documento"
