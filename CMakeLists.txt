@@ -21,7 +21,7 @@ include(GenerateExportHeader)
 
 include(ECMSetupVersion)
 
-set(KF5_VERSION "5.26.0") # handled by release scripts
+set(KF5_VERSION "5.27.0") # handled by release scripts
 set(KF5_DEP_VERSION "5.26.0") # handled by release scripts
 ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KPARTS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kparts_version.h"
