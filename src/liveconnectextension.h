@@ -73,11 +73,6 @@ public:
 
     static LiveConnectExtension *childObject(QObject *obj);
 Q_SIGNALS:
-#if QT_VERSION < QT_VERSION_CHECK(5, 0, 0)
-#if !defined(Q_MOC_RUN) && !defined(DOXYGEN_SHOULD_SKIP_THIS) && !defined(IN_IDE_PARSER)
-public:  // yes, those signals are public; don't tell moc, doxygen or kdevelop :)
-#endif
-#endif
     /**
      * notify a event from the part of object objid
      */
