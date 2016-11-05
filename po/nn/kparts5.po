@@ -1,0 +1,156 @@
+# Translation of kparts5 to Norwegian Nynorsk
+#
+# Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2003, 2004, 2005, 2006.
+# Håvard Korsvoll <korsvoll@skulelinux.no>, 2003, 2005.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+# Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-09-07 06:58+0000\n"
+"PO-Revision-Date: 2013-05-12 14:38+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Gaute Hvoslef Kvalnes,Karl Ove Hufthammer"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "gaute@verdsveven.com,karl@huftis.org"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Vil du søkja på Internett etter <b>%1</b>?</qt>"
+
+#: browserextension.cpp:242
+msgid "Internet Search"
+msgstr "Internett-søk"
+
+#: browserextension.cpp:242
+msgid "&Search"
+msgstr "&Søk"
+
+#: browseropenorsavequestion.cpp:104
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Type: %1"
+
+#: browseropenorsavequestion.cpp:112
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Hugs handlinga for denne filtypen"
+
+#: browseropenorsavequestion.cpp:164 browseropenorsavequestion.cpp:257
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&Opna med «%1»"
+
+#: browseropenorsavequestion.cpp:231
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Opna &med «%1»"
+
+#: browseropenorsavequestion.cpp:242 browseropenorsavequestion.cpp:337
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Vil du opna «%1»?"
+
+#: browseropenorsavequestion.cpp:246
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Opna med …"
+
+#: browseropenorsavequestion.cpp:266
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Opna med"
+
+#: browseropenorsavequestion.cpp:334
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Opna"
+
+#: browseropenorsavequestion.cpp:359
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Namn: %1"
+
+#: browseropenorsavequestion.cpp:361
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Dette er filnamnet tenaren foreslo"
+
+#: browserrun.cpp:346
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Er du sikker på at du vil køyra «%1»?"
+
+#: browserrun.cpp:347
+msgid "Execute File?"
+msgstr "Køyr fil?"
+
+#: browserrun.cpp:347
+msgid "Execute"
+msgstr "Køyr"
+
+#: browserrun.cpp:405
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Fann ikkje nedlastingshandteraren (%1) i søkjestien (PATH)."
+
+#: browserrun.cpp:406
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Prøv å installera programmet på nytt.\n"
+"\n"
+"Integrasjonen med Konqueror vert slått av."
+
+#: browserrun.cpp:432
+msgid "Save As"
+msgstr "Lagra som"
+
+#: htmlsettingsinterface.cpp:34
+msgid "Accept"
+msgstr "Godta"
+
+#: htmlsettingsinterface.cpp:36
+msgid "Reject"
+msgstr "Avvis"
+
+#: readwritepart.cpp:93
+msgid "Untitled"
+msgstr "Namnlaus"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Dokumentet «%1» er endra.\n"
+"Vil du lagra endringane?"
+
+#: readwritepart.cpp:104
+msgid "Close Document"
+msgstr "Lukk dokument"
