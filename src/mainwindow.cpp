@@ -186,6 +186,8 @@ void MainWindow::createShellGUI(bool create)
         QApplication::sendEvent(this, &ev);
 
         guiFactory()->addClient(this);
+
+        checkAmbiguousShortcuts();
     } else {
         GUIActivateEvent ev(false);
         QApplication::sendEvent(this, &ev);
