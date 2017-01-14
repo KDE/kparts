@@ -45,13 +45,13 @@ class PartManagerPrivate;
 class KPARTS_EXPORT PartManager : public QObject
 {
     Q_OBJECT
-    Q_ENUMS(SelectionPolicy)
     Q_PROPERTY(SelectionPolicy selectionPolicy READ selectionPolicy WRITE setSelectionPolicy)
     Q_PROPERTY(bool allowNestedParts READ allowNestedParts WRITE setAllowNestedParts)
     Q_PROPERTY(bool ignoreScrollBars READ ignoreScrollBars WRITE setIgnoreScrollBars)
 public:
     /// Selection policy. The default policy of a PartManager is Direct.
     enum SelectionPolicy { Direct, TriState };
+    Q_ENUM(SelectionPolicy)
 
     /**
      * This extends QFocusEvent::Reason with the non-focus-event reasons for partmanager to activate a part.
