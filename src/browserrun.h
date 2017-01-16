@@ -122,7 +122,7 @@ public:
 
     // static so that it can be called from other classes
     static void simpleSave(const QUrl &url, const QString &suggestedFileName,
-                           QWidget *window = 0); // KDE5: remove
+                           QWidget *window = nullptr); // KDE5: remove
     /**
      * If kget integration is enabled, passes the url to kget.
      * Otherwise, asks the user for a destination url, and calls saveUrlUsingKIO.

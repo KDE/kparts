@@ -43,10 +43,10 @@ class PartManagerPrivate
 public:
     PartManagerPrivate()
     {
-        m_activeWidget = 0;
-        m_activePart = 0;
-        m_selectedPart = 0;
-        m_selectedWidget = 0;
+        m_activeWidget = nullptr;
+        m_activePart = nullptr;
+        m_selectedPart = nullptr;
+        m_selectedWidget = nullptr;
         m_bAllowNestedParts = false;
         m_bIgnoreScrollBars = false;
         m_activationButtonMask = Qt::LeftButton | Qt::MidButton | Qt::RightButton;
@@ -137,7 +137,7 @@ PartManager::~PartManager()
     }
 
     foreach (Part *it, d->m_parts) {
-        it->setManager(0);
+        it->setManager(nullptr);
     }
 
     // core dumps ... setActivePart( 0 );
@@ -205,7 +205,7 @@ bool PartManager::eventFilter(QObject *obj, QEvent *ev)
         return false;
     }
 
-    QMouseEvent *mev = 0;
+    QMouseEvent *mev = nullptr;
     if (ev->type() == QEvent::MouseButtonPress || ev->type() == QEvent::MouseButtonDblClick) {
         mev = static_cast<QMouseEvent *>(ev);
 #ifdef DEBUG_PARTMANAGER
@@ -278,7 +278,7 @@ bool PartManager::eventFilter(QObject *obj, QEvent *ev)
                     d->m_reason = NoReason;
                     return true;
                 } else if (d->m_activeWidget == w && d->m_activePart == part) {
-                    setSelectedPart(0);
+                    setSelectedPart(nullptr);
                     return false;
                 }
 
@@ -321,7 +321,7 @@ Part *PartManager::findPartFromWidget(QWidget *widget, const QPoint &pos)
             return part;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 Part *PartManager::findPartFromWidget(QWidget *widget)
@@ -331,7 +331,7 @@ Part *PartManager::findPartFromWidget(QWidget *widget)
             return (*it);
         }
     }
-    return 0;
+    return nullptr;
 }
 
 void PartManager::addPart(Part *part, bool setActive)
@@ -381,15 +381,15 @@ void PartManager::removePart(Part *part)
     const int nb = d->m_parts.removeAll(part);
     Q_ASSERT(nb == 1);
     Q_UNUSED(nb); // no warning in release mode
-    part->setManager(0);
+    part->setManager(nullptr);
 
     emit partRemoved(part);
 
     if (part == d->m_activePart) {
-        setActivePart(0);
+        setActivePart(nullptr);
     }
     if (part == d->m_selectedPart) {
-        setSelectedPart(0);
+        setSelectedPart(nullptr);
     }
 }
 
@@ -403,7 +403,7 @@ void PartManager::replacePart(Part *oldPart, Part *newPart, bool setActive)
     }
 
     d->m_parts.removeAll(oldPart);
-    oldPart->setManager(0);
+    oldPart->setManager(nullptr);
 
     emit partRemoved(oldPart);
 
@@ -442,7 +442,7 @@ void PartManager::setActivePart(Part *part, QWidget *widget)
     KParts::Part *oldActivePart = d->m_activePart;
     QWidget *oldActiveWidget = d->m_activeWidget;
 
-    setSelectedPart(0);
+    setSelectedPart(nullptr);
 
     d->m_activePart = part;
     d->m_activeWidget = widget;
@@ -544,7 +544,7 @@ void PartManager::slotWidgetDestroyed()
 {
     // qDebug();
     if (static_cast<const QWidget *>(sender()) == d->m_activeWidget) {
-        setActivePart(0);    //do not remove the part because if the part's widget dies, then the
+        setActivePart(nullptr);    //do not remove the part because if the part's widget dies, then the
     }
     //part will delete itself anyway, invoking removePart() in its destructor
 }

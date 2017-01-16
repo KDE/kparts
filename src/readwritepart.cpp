@@ -247,7 +247,7 @@ bool ReadWritePart::saveToUrl()
         if (d->m_uploadJob) {
             QFile::remove(d->m_uploadJob->srcUrl().toLocalFile());
             d->m_uploadJob->kill();
-            d->m_uploadJob = 0;
+            d->m_uploadJob = nullptr;
         }
         QTemporaryFile *tempFile = new QTemporaryFile();
         tempFile->open();
@@ -273,7 +273,7 @@ void ReadWritePartPrivate::_k_slotUploadFinished(KJob *)
     if (m_uploadJob->error()) {
         QFile::remove(m_uploadJob->srcUrl().toLocalFile());
         QString error = m_uploadJob->errorString();
-        m_uploadJob = 0;
+        m_uploadJob = nullptr;
         if (m_duringSaveAs) {
             q->setUrl(m_originalURL);
             m_file = m_originalFilePath;
@@ -282,7 +282,7 @@ void ReadWritePartPrivate::_k_slotUploadFinished(KJob *)
     } else {
         ::org::kde::KDirNotify::emitFilesAdded(m_url.adjusted(QUrl::RemoveFilename));
 
-        m_uploadJob = 0;
+        m_uploadJob = nullptr;
         q->setModified(false);
         emit q->completed();
         m_saveOk = true;

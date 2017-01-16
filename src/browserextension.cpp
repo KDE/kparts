@@ -66,7 +66,7 @@ class BrowserExtension::BrowserExtensionPrivate
 public:
     BrowserExtensionPrivate(KParts::ReadOnlyPart *parent)
         : m_urlDropHandlingEnabled(false),
-          m_browserInterface(0),
+          m_browserInterface(nullptr),
           m_part(parent)
     {}
 

@@ -354,7 +354,7 @@ public:  // yes, those signals are public; don't tell moc, doxygen or kdevelop :
                          const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments(),
                          const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments(),
                          const KParts::WindowArgs &windowArgs = KParts::WindowArgs(),
-                         KParts::ReadOnlyPart **part = 0);  // TODO consider moving to BrowserHostExtension?
+                         KParts::ReadOnlyPart **part = nullptr);  // TODO consider moving to BrowserHostExtension?
 
     /**
      * Since the part emits the jobid in the started() signal,

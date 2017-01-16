@@ -41,9 +41,9 @@ public:
 
     ReadOnlyPartPrivate(ReadOnlyPart *q): PartPrivate(q)
     {
-        m_job = 0;
-        m_statJob = 0;
-        m_uploadJob = 0;
+        m_job = nullptr;
+        m_statJob = nullptr;
+        m_uploadJob = nullptr;
         m_showProgressInfo = true;
         m_saveOk = false;
         m_waitForSave = false;

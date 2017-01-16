@@ -53,37 +53,37 @@ private:
 
 void PartTest::testAutoDeletePart()
 {
-    KParts::Part *part = new TestPart(0, 0);
+    KParts::Part *part = new TestPart(nullptr, nullptr);
     QPointer<KParts::Part> partPointer(part);
     delete part->widget();
-    QCoreApplication::sendPostedEvents(0, QEvent::DeferredDelete);
+    QCoreApplication::sendPostedEvents(nullptr, QEvent::DeferredDelete);
     QVERIFY(partPointer.isNull());
 }
 
 void PartTest::testAutoDeleteWidget()
 {
-    KParts::Part *part = new TestPart(0, 0);
+    KParts::Part *part = new TestPart(nullptr, nullptr);
     QPointer<KParts::Part> partPointer(part);
     QPointer<QWidget> widgetPointer(part->widget());
     delete part;
-    QCoreApplication::sendPostedEvents(0, QEvent::DeferredDelete);
+    QCoreApplication::sendPostedEvents(nullptr, QEvent::DeferredDelete);
     QVERIFY(widgetPointer.isNull());
 }
 
 void PartTest::testNoAutoDeletePart()
 {
-    KParts::Part *part = new TestPart(0, 0);
+    KParts::Part *part = new TestPart(nullptr, nullptr);
     part->setAutoDeletePart(false);
     QPointer<KParts::Part> partPointer(part);
     delete part->widget();
-    QVERIFY(part->widget() == 0);
+    QVERIFY(part->widget() == nullptr);
     QCOMPARE(static_cast<KParts::Part *>(partPointer), part);
     delete part;
 }
 
 void PartTest::testNoAutoDeleteWidget()
 {
-    KParts::Part *part = new TestPart(0, 0);
+    KParts::Part *part = new TestPart(nullptr, nullptr);
     part->setAutoDeleteWidget(false);
     QWidget *widget = part->widget();
     QVERIFY(widget);
@@ -105,7 +105,7 @@ static bool compareArgs(const KParts::OpenUrlArguments &arg1,
 
 void PartTest::testOpenUrlArguments()
 {
-    TestPart *part = new TestPart(0, 0);
+    TestPart *part = new TestPart(nullptr, nullptr);
     QVERIFY(part->closeUrl()); // nothing to do, no error
     QVERIFY(part->arguments().mimeType().isEmpty());
     KParts::OpenUrlArguments args;
@@ -133,7 +133,7 @@ void PartTest::testOpenUrlArguments()
 
 void PartTest::testAutomaticMimeType()
 {
-    TestPart *part = new TestPart(0, 0);
+    TestPart *part = new TestPart(nullptr, nullptr);
     QVERIFY(part->closeUrl()); // nothing to do, no error
     QVERIFY(part->arguments().mimeType().isEmpty());
     // open a file, and test the detected mimetype
@@ -188,7 +188,7 @@ public:
     {
         QVERIFY(tb->isVisible());
 
-        TestPart *part = new TestPart(0, 0);
+        TestPart *part = new TestPart(nullptr, nullptr);
         // TODO define xml with a toolbar for the part
         // and put some saved settings into qttestrc in order to test
         // r347935+r348051, i.e. the fact that KParts::MainWindow::createGUI
@@ -200,14 +200,14 @@ public:
         this->saveAutoSaveSettings();
 
         // Hide the toolbar using the action (so that setSettingsDirty is called, too)
-        KToggleToolBarAction action(tb, QString(), 0);
+        KToggleToolBarAction action(tb, QString(), nullptr);
         action.trigger();
         QVERIFY(!tb->isVisible());
 
         // Switch the active part, and check that
         // the toolbar doesn't magically reappear,
         // as it did when createGUI was calling applyMainWindowSettings
-        this->createGUI(0);
+        this->createGUI(nullptr);
         QVERIFY(!tb->isVisible());
         this->createGUI(part);
         QVERIFY(!tb->isVisible());

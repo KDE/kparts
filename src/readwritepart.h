@@ -55,7 +55,7 @@ public:
      * Constructor
      * See parent constructor for instructions.
      */
-    explicit ReadWritePart(QObject *parent = 0);
+    explicit ReadWritePart(QObject *parent = nullptr);
     /**
      * Destructor
      * Applications using a ReadWritePart should make sure, before

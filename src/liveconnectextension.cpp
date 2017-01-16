@@ -26,7 +26,7 @@ using namespace KParts;
 
 
 LiveConnectExtension::LiveConnectExtension(KParts::ReadOnlyPart *parent)
-    : QObject(parent), d(0) {}
+    : QObject(parent), d(nullptr) {}
 
 LiveConnectExtension::~LiveConnectExtension() {}
 

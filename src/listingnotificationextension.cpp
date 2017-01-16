@@ -24,7 +24,7 @@
 
 KParts::ListingNotificationExtension::ListingNotificationExtension(KParts::ReadOnlyPart *parent)
     : QObject(parent),
-      d(0)
+      d(nullptr)
 {
 }
 

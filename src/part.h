@@ -76,7 +76,7 @@ public:
      *
      *  @param parent Parent object of the part.
      */
-    explicit Part(QObject *parent = 0);
+    explicit Part(QObject *parent = nullptr);
 
     /**
      *  Destructor.

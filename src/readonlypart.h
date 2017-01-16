@@ -72,7 +72,7 @@ public:
      * Constructor
      * See also Part for the setXXX methods to call.
      */
-    explicit ReadOnlyPart(QObject *parent = 0);
+    explicit ReadOnlyPart(QObject *parent = nullptr);
 
     /**
      * Destructor

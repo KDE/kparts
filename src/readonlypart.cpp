@@ -171,7 +171,7 @@ bool ReadOnlyPart::openFile()
 bool ReadOnlyPartPrivate::openLocalFile()
 {
     Q_Q(ReadOnlyPart);
-    emit q->started(0);
+    emit q->started(nullptr);
     m_bTemp = false;
     // set the mimetype only if it was not already set (for example, by the host application)
     if (m_arguments.mimeType().isEmpty()) {
@@ -229,12 +229,12 @@ void ReadOnlyPart::abortLoad()
     if (d->m_statJob) {
         //qDebug() << "Aborting job" << d->m_statJob;
         d->m_statJob->kill();
-        d->m_statJob = 0;
+        d->m_statJob = nullptr;
     }
     if (d->m_job) {
         //qDebug() << "Aborting job" << d->m_job;
         d->m_job->kill();
-        d->m_job = 0;
+        d->m_job = nullptr;
     }
 }
 
@@ -259,7 +259,7 @@ bool ReadOnlyPart::closeUrl()
 void ReadOnlyPartPrivate::_k_slotStatJobFinished(KJob *job)
 {
     Q_ASSERT(job == m_statJob);
-    m_statJob = 0;
+    m_statJob = nullptr;
 
     // We could emit canceled on error, but we haven't even emitted started yet,
     // this could maybe confuse some apps? So for now we'll just fallback to KIO::get
@@ -280,7 +280,7 @@ void ReadOnlyPartPrivate::_k_slotJobFinished(KJob *job)
     Q_Q(ReadOnlyPart);
 
     Q_ASSERT(job == m_job);
-    m_job = 0;
+    m_job = nullptr;
     if (job->error()) {
         emit q->canceled(job->errorString());
     } else {

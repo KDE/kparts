@@ -46,7 +46,7 @@ PartViewer::PartViewer()
     actionCollection()->addAction(QStringLiteral("file_quit"), paQuit);
     connect(paQuit, SIGNAL(triggered()), this, SLOT(close()));
 
-    m_part = 0;
+    m_part = nullptr;
 
     // Set a reasonable size
     resize(600, 350);

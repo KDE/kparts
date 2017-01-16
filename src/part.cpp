@@ -71,7 +71,7 @@ Part::~Part()
 void Part::embed(QWidget *parentWidget)
 {
     if (widget()) {
-        widget()->setParent(parentWidget, 0);
+        widget()->setParent(parentWidget, nullptr);
         widget()->setGeometry(0, 0, widget()->width(), widget()->height());
         widget()->show();
     }
@@ -125,7 +125,7 @@ Part *Part::hitTest(QWidget *widget, const QPoint &)
     Q_D(Part);
 
     if ((QWidget *)d->m_widget != widget) {
-        return 0;
+        return nullptr;
     }
 
     return this;
@@ -188,7 +188,7 @@ void Part::guiActivateEvent(GUIActivateEvent *)
 QWidget *Part::hostContainer(const QString &containerName)
 {
     if (!factory()) {
-        return 0;
+        return nullptr;
     }
 
     return factory()->container(containerName, this);
@@ -198,7 +198,7 @@ void Part::slotWidgetDestroyed()
 {
     Q_D(Part);
 
-    d->m_widget = 0;
+    d->m_widget = nullptr;
     if (d->m_autoDeletePart) {
         // qDebug() << "deleting part" << objectName();
         this->deleteLater();

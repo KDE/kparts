@@ -28,7 +28,7 @@ namespace KParts
 struct ScriptableExtensionPrivate {
     ScriptableExtension *hostContext;
 
-    ScriptableExtensionPrivate(): hostContext(0)
+    ScriptableExtensionPrivate(): hostContext(nullptr)
     {}
 };
 
@@ -243,7 +243,7 @@ QVariant ScriptableLiveConnectExtension::rootObject()
 
 bool ScriptableLiveConnectExtension::hasProperty(ScriptableExtension *, quint64 objId, const QString &propName)
 {
-    QVariant val = get(0, objId, propName);
+    QVariant val = get(nullptr, objId, propName);
     bool ok = !val.canConvert<ScriptableExtension::Exception>();
     releaseValue(val);
     return ok;

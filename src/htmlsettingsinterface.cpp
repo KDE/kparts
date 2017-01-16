@@ -38,7 +38,7 @@ const char *HtmlSettingsInterface::javascriptAdviceToText(HtmlSettingsInterface:
         break;
     }
 
-    return 0;
+    return nullptr;
 }
 
 HtmlSettingsInterface::JavaScriptAdvice HtmlSettingsInterface::textToJavascriptAdvice(const QString &text)

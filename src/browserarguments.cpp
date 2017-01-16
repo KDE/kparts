@@ -48,12 +48,12 @@ BrowserArguments::BrowserArguments()
 {
     softReload = false;
     trustedSource = false;
-    d = 0; // Let's build it on demand for now
+    d = nullptr; // Let's build it on demand for now
 }
 
 BrowserArguments::BrowserArguments(const BrowserArguments &args)
 {
-    d = 0;
+    d = nullptr;
     (*this) = args;
 }
 
@@ -63,7 +63,7 @@ BrowserArguments &BrowserArguments::operator=(const BrowserArguments &args)
         return *this;
     }
 
-    delete d; d = 0;
+    delete d; d = nullptr;
 
     softReload = args.softReload;
     postData = args.postData;
@@ -81,7 +81,7 @@ BrowserArguments &BrowserArguments::operator=(const BrowserArguments &args)
 BrowserArguments::~BrowserArguments()
 {
     delete d;
-    d = 0;
+    d = nullptr;
 }
 
 void BrowserArguments::setContentType(const QString &contentType)

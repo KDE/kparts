@@ -53,7 +53,7 @@ private Q_SLOTS:
     void testAutoEmbed()
     {
         // This one should get the fast path, no dialog should show up.
-        BrowserOpenOrSaveQuestion questionEmbedHtml(0, QUrl(QStringLiteral("http://www.example.com/")),
+        BrowserOpenOrSaveQuestion questionEmbedHtml(nullptr, QUrl(QStringLiteral("http://www.example.com/")),
                 QString::fromLatin1("text/html"));
         QCOMPARE(questionEmbedHtml.askEmbedOrSave(), BrowserOpenOrSaveQuestion::Embed);
 
@@ -62,7 +62,7 @@ private Q_SLOTS:
     {
         KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("filetypesrc"), KConfig::NoGlobals);
         cfg->group("Notification Messages").writeEntry("askSave" "text/plain", "false");
-        BrowserOpenOrSaveQuestion question(0, QUrl(QStringLiteral("http://www.example.com/")),
+        BrowserOpenOrSaveQuestion question(nullptr, QUrl(QStringLiteral("http://www.example.com/")),
                                            QString::fromLatin1("text/plain"));
         QCOMPARE((int)question.askOpenOrSave(), (int)BrowserOpenOrSaveQuestion::Open);
         cfg->group("Notification Messages").writeEntry("askSave" "text/plain", "true");

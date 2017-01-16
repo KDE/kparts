@@ -47,7 +47,7 @@ void PluginSpellCheck::slotSpellCheck()
     // The parent is assumed to be a NotepadPart
     // Can't use qobject_cast here, we would need NotepadPart to be in a shared library.
     if (!parent()->inherits("NotepadPart")) {
-        KMessageBox::error(0, QStringLiteral("You just called the spell-check action on a wrong part (not NotepadPart)"));
+        KMessageBox::error(nullptr, QStringLiteral("You just called the spell-check action on a wrong part (not NotepadPart)"));
     } else {
         NotepadPart *part = (NotepadPart *) parent();
         QTextEdit *widget = qobject_cast<QTextEdit *>(part->widget());

@@ -25,7 +25,7 @@
 using namespace KParts;
 
 KParts::HtmlExtension::HtmlExtension(KParts::ReadOnlyPart *parent)
-    : QObject(parent), d(0)
+    : QObject(parent), d(nullptr)
 {
 }
 

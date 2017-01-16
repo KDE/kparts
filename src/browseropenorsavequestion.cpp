@@ -60,7 +60,7 @@ public:
 
     BrowserOpenOrSaveQuestionPrivate(QWidget *parent, const QUrl &url, const QString &mimeType)
         : QDialog(parent), url(url), mimeType(mimeType),
-          features(0)
+          features(nullptr)
     {
         const int spacingHint = style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
 
@@ -184,13 +184,13 @@ private:
 public Q_SLOTS:
     void reject() Q_DECL_OVERRIDE
     {
-        selectedService = 0;
+        selectedService = nullptr;
         QDialog::reject();
     }
 
     void slotYesClicked()
     {
-        selectedService = 0;
+        selectedService = nullptr;
         done(Save);
     }
 
@@ -202,7 +202,7 @@ public Q_SLOTS:
     void slotOpenWithClicked()
     {
         if (!openWithButton->menu()) {
-            selectedService = 0;
+            selectedService = nullptr;
             done(OpenWith);
         }
     }

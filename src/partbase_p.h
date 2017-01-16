@@ -36,7 +36,7 @@ public:
     PartBasePrivate(PartBase *q): q_ptr(q),
         m_pluginLoadingMode(PartBase::LoadPlugins),
         m_pluginInterfaceVersion(0),
-        m_obj(0),
+        m_obj(nullptr),
         m_componentData(KAboutData::applicationData())
     {
     }

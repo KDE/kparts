@@ -83,7 +83,7 @@ TestMainWindow::TestMainWindow()
 
     m_splitter->show();
 
-    m_editorpart = 0;
+    m_editorpart = nullptr;
 }
 
 TestMainWindow::~TestMainWindow()
@@ -110,7 +110,7 @@ void TestMainWindow::embedEditor()
 {
     // replace part2 with the editor part
     delete m_part2;
-    m_part2 = 0;
+    m_part2 = nullptr;
     m_editorpart = new NotepadPart(m_splitter, this);
     m_editorpart->setReadWrite(); // read-write mode
     ////// m_manager->addPart( m_editorpart );
@@ -122,7 +122,7 @@ void TestMainWindow::embedEditor()
 void TestMainWindow::slotFileCloseEditor()
 {
     delete m_editorpart;
-    m_editorpart = 0;
+    m_editorpart = nullptr;
     m_part2 = new Part2(this, m_splitter);
     ////// m_manager->addPart( m_part2 );
     m_part2->widget()->show(); //// we need to do this in a normal KTM....

@@ -94,7 +94,7 @@ public:
         ScriptableExtension *owner;
         quint64              objId;
 
-        Object(): owner(0), objId(0) {}
+        Object(): owner(nullptr), objId(0) {}
         Object(ScriptableExtension *o, quint64 id): owner(o), objId(id) {}
         bool operator==(const Object &other) const
         {

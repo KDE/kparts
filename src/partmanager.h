@@ -165,7 +165,7 @@ public:
      * @p widget can be used to specify which widget was responsible for the activation.
      * This is important if you have multiple views for a document/part , like in KOffice .
      */
-    virtual void setActivePart(Part *part, QWidget *widget = 0);
+    virtual void setActivePart(Part *part, QWidget *widget = nullptr);
 
     /**
      * Returns the active part.
@@ -185,7 +185,7 @@ public:
      * @p widget can be used to specify which widget was responsible for the selection.
      * This is important if you have multiple views for a document/part , like in KOffice .
      */
-    virtual void setSelectedPart(Part *part, QWidget *widget = 0);
+    virtual void setSelectedPart(Part *part, QWidget *widget = nullptr);
 
     /**
      * Returns the current selected part.

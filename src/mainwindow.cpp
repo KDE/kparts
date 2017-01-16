@@ -47,9 +47,9 @@ class MainWindowPrivate
 {
 public:
     MainWindowPrivate()
-        : m_activePart(0),
+        : m_activePart(nullptr),
           m_bShellGUIActivated(false),
-          m_helpMenu(0),
+          m_helpMenu(nullptr),
           m_manageWindowTitle(true)
     {
     }

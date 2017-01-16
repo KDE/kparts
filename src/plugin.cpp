@@ -167,12 +167,12 @@ Plugin *Plugin::loadPlugin(QObject *parent, const QString &libname, const QStrin
     KPluginFactory *factory = loader.factory();
 
     if (!factory) {
-        return 0;
+        return nullptr;
     }
 
     Plugin *plugin = factory->create<Plugin>(keyword, parent);
     if (!plugin) {
-        return 0;
+        return nullptr;
     }
     plugin->d->m_library = libname;
     return plugin;

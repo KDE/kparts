@@ -97,7 +97,7 @@ protected:
     /**
      * Creates a KHistoryProvider with an optional parent and name
      */
-    HistoryProvider(QObject *parent = 0);
+    HistoryProvider(QObject *parent = nullptr);
 
     /**
      * Destroys the provider.

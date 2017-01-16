@@ -23,7 +23,7 @@
 
 KParts::ListingFilterExtension::ListingFilterExtension(KParts::ReadOnlyPart *parent)
     : QObject(parent),
-      d(0)
+      d(nullptr)
 {
 }
 

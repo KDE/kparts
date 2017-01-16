@@ -22,7 +22,7 @@
 #include "readonlypart.h"
 
 KParts::TextExtension::TextExtension(KParts::ReadOnlyPart *parent)
-    : QObject(parent), d(0)
+    : QObject(parent), d(nullptr)
 {
 }
 

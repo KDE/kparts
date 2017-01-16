@@ -81,5 +81,5 @@ BrowserHostExtension::findFrameParent(KParts::ReadOnlyPart *callingPart, const Q
 {
     Q_UNUSED(callingPart);
     Q_UNUSED(frame);
-    return 0;
+    return nullptr;
 }

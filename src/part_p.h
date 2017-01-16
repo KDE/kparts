@@ -38,11 +38,11 @@ public:
 
     PartPrivate(Part *q)
         : PartBasePrivate(q),
-          m_iconLoader(0),
+          m_iconLoader(nullptr),
           m_bSelectable(true),
           m_autoDeleteWidget(true),
           m_autoDeletePart(true),
-          m_manager(0)
+          m_manager(nullptr)
     {
     }
 

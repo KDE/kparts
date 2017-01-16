@@ -189,7 +189,7 @@ void BrowserRun::slotBrowserScanFinished(KJob *job)
         // qDebug() << "It is in fact a directory!";
         // Update our URL in case of a redirection
         KRun::setUrl(static_cast<KIO::TransferJob *>(job)->url());
-        setJob(0);
+        setJob(nullptr);
         mimeTypeDetermined(QStringLiteral("inode/directory"));
     } else {
         KRun::slotScanFinished(job);
@@ -218,7 +218,7 @@ void BrowserRun::slotBrowserMimetype(KIO::Job *_job, const QString &type)
     if (job->isErrorPage()) {
         d->m_mimeType = type;
         handleError(job);
-        setJob(0);
+        setJob(nullptr);
     } else {
         // qDebug() << "found" << type << "for" << KRun::url();
 
@@ -245,7 +245,7 @@ void BrowserRun::slotBrowserMimetype(KIO::Job *_job, const QString &type)
         // Make a copy to avoid a dead reference
         QString _type = type;
         job->putOnHold();
-        setJob(0);
+        setJob(nullptr);
 
         // If the current mime-type is the default mime-type, then attempt to
         // determine the "real" mimetype from the file name.
@@ -260,7 +260,7 @@ void BrowserRun::slotBrowserMimetype(KIO::Job *_job, const QString &type)
 
 BrowserRun::NonEmbeddableResult BrowserRun::handleNonEmbeddable(const QString &mimeType)
 {
-    return handleNonEmbeddable(mimeType, NULL);
+    return handleNonEmbeddable(mimeType, nullptr);
 }
 
 BrowserRun::NonEmbeddableResult BrowserRun::handleNonEmbeddable(const QString &_mimeType, KService::Ptr *selectedService)
@@ -342,7 +342,7 @@ bool BrowserRun::allowExecution(const QString &mimeType, const QUrl &url)
         return false;
     }
 
-    return (KMessageBox::warningContinueCancel(0,
+    return (KMessageBox::warningContinueCancel(nullptr,
             i18n("Do you really want to execute '%1'?", url.toDisplayString()),
             i18n("Execute File?"), KGuiItem(i18n("Execute"))) == KMessageBox::Continue);
 }
@@ -352,7 +352,7 @@ bool BrowserRun::allowExecution(const QString &mimeType, const QUrl &url)
 BrowserRun::AskSaveResult BrowserRun::askSave(const QUrl &url, KService::Ptr offer, const QString &mimeType, const QString &suggestedFileName)
 {
     Q_UNUSED(offer);
-    BrowserOpenOrSaveQuestion question(0, url, mimeType);
+    BrowserOpenOrSaveQuestion question(nullptr, url, mimeType);
     question.setSuggestedFileName(suggestedFileName);
     const BrowserOpenOrSaveQuestion::Result result = question.askOpenOrSave();
     return result == BrowserOpenOrSaveQuestion::Save ? Save
@@ -365,7 +365,7 @@ BrowserRun::AskSaveResult BrowserRun::askSave(const QUrl &url, KService::Ptr off
 #ifndef KPARTS_NO_DEPRECATED
 BrowserRun::AskSaveResult BrowserRun::askEmbedOrSave(const QUrl &url, const QString &mimeType, const QString &suggestedFileName, int flags)
 {
-    BrowserOpenOrSaveQuestion question(0, url, mimeType);
+    BrowserOpenOrSaveQuestion question(nullptr, url, mimeType);
     question.setSuggestedFileName(suggestedFileName);
     const BrowserOpenOrSaveQuestion::Result result = question.askEmbedOrSave(flags);
     return result == BrowserOpenOrSaveQuestion::Save ? Save
@@ -404,7 +404,7 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
             if (cmd.isEmpty()) {
                 QString errMsg = i18n("The Download Manager (%1) could not be found in your $PATH ", downloadManger);
                 QString errMsgEx = i18n("Try to reinstall it  \n\nThe integration with Konqueror will be disabled.");
-                KMessageBox::detailedSorry(0, errMsg, errMsgEx);
+                KMessageBox::detailedSorry(nullptr, errMsg, errMsgEx);
                 cfg.writePathEntry("DownloadManager", QString());
                 cfg.sync();
             } else {
@@ -478,7 +478,7 @@ void BrowserRun::handleError(KJob *job)
         // The default handling of error pages is to show them like normal pages
         // But this is done here in handleError so that KHTMLRun can reimplement it
         tjob->putOnHold();
-        setJob(0);
+        setJob(nullptr);
         if (!d->m_mimeType.isEmpty()) {
             mimeTypeDetermined(d->m_mimeType);
         }
@@ -526,7 +526,7 @@ void BrowserRun::redirectToError(int error, const QString &errorText)
      * an error:/ URL that sends the info to khtml.
      */
     KRun::setUrl(makeErrorUrl(error, errorText, url()));
-    setJob(0);
+    setJob(nullptr);
     mimeTypeDetermined(QStringLiteral("text/html"));
 }
 

@@ -41,7 +41,7 @@ class KParts::StatusBarItem
 {
 public:
     StatusBarItem() // for QValueList
-        : m_widget(0), m_visible(false)
+        : m_widget(nullptr), m_visible(false)
     {}
     StatusBarItem(QWidget *widget, int stretch, bool permanent)
         : m_widget(widget), m_stretch(stretch), m_permanent(permanent), m_visible(false)
@@ -83,7 +83,7 @@ class KParts::StatusBarExtensionPrivate
 {
 public:
     StatusBarExtensionPrivate(StatusBarExtension *q): q(q),
-        m_statusBar(0),
+        m_statusBar(nullptr),
         m_activated(true) {}
 
     StatusBarExtension *q;
@@ -155,8 +155,8 @@ QStatusBar *StatusBarExtension::statusBar() const
 {
     if (!d->m_statusBar)  {
         KParts::ReadOnlyPart *part = qobject_cast<KParts::ReadOnlyPart *>(parent());
-        QWidget *w = part ? part->widget() : 0;
-        KMainWindow *mw = w ? qobject_cast<KMainWindow *>(w->topLevelWidget()) : 0;
+        QWidget *w = part ? part->widget() : nullptr;
+        KMainWindow *mw = w ? qobject_cast<KMainWindow *>(w->topLevelWidget()) : nullptr;
         if (mw) {
             d->m_statusBar = mw->statusBar();
         }

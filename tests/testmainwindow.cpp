@@ -90,12 +90,12 @@ TestMainWindow::TestMainWindow()
 
     m_manager->addPart(m_part1, true);   // sets part 1 as the active part
     m_manager->addPart(m_part2, false);
-    m_editorpart = 0;
+    m_editorpart = nullptr;
 }
 
 TestMainWindow::~TestMainWindow()
 {
-    disconnect(m_manager, 0, this, 0);
+    disconnect(m_manager, nullptr, this, nullptr);
 }
 
 void TestMainWindow::slotFileOpen()
@@ -117,12 +117,12 @@ void TestMainWindow::slotFileOpenRemote()
 void TestMainWindow::embedEditor()
 {
     if (m_manager->activePart() == m_part2) {
-        createGUI(0);
+        createGUI(nullptr);
     }
 
     // replace part2 with the editor part
     delete m_part2;
-    m_part2 = 0;
+    m_part2 = nullptr;
     m_editorpart = new NotepadPart(m_splitter, this);
     m_editorpart->setReadWrite(); // read-write mode
     m_manager->addPart(m_editorpart);
@@ -141,11 +141,11 @@ void TestMainWindow::slotFileCloseEditor()
 
     // Is this necessary ? (David)
     if (m_manager->activePart() == m_editorpart) {
-        createGUI(0);
+        createGUI(nullptr);
     }
 
     delete m_editorpart;
-    m_editorpart = 0;
+    m_editorpart = nullptr;
     m_part2 = new Part2(this, m_splitter);
     m_manager->addPart(m_part2);
     m_paEditFile->setEnabled(true);

@@ -27,7 +27,7 @@ class KParts::HistoryProviderPrivate
 {
 public:
     HistoryProviderPrivate()
-        : q(0)
+        : q(nullptr)
     {
     }
 
@@ -68,7 +68,7 @@ HistoryProvider::~HistoryProvider()
 {
     if (!historyProviderPrivate.isDestroyed() &&
             historyProviderPrivate()->q == this) {
-        historyProviderPrivate()->q = 0;
+        historyProviderPrivate()->q = nullptr;
     }
 }
 
