@@ -39,18 +39,21 @@ class MainWindowPrivate;
  * merging).
  *
  * Inherit your main window from this class
- * and don't forget to call setupGUI() before you call createGUI()
- * on the KPart. For example:
+ * and make sure to call @c setXMLFile() and @c setupGUI() before you
+ * call @c createGUI() on the KPart.
  *
+ * For example:
  * \code
  * setCentralWidget(m_part->widget());
- * setupGUI(ToolBar | Keys | StatusBar | Save, "appui.rc");
+ * setXMLFile(QStringLiteral("appui.rc"));
+ * setupGUI(ToolBar | Keys | StatusBar | Save); // Never Create flag here
  * createGUI(m_part);
  * \endcode
  *
- * @warning you should not pass the Default flag to setupGUI(), since it contains
- * the Create flag that is not supposed to be used from this class.
- * @see setupGUI, @see createGUI
+ * @warning You should not pass the @c Default flag set to @c setupGUI(),
+ * since it contains the @c Create flag, which is not supposed to be used
+ * from this class.
+ * @see KXmlGuiWindow::Create, @see setupGUI, @see createGUI
  *
  */
 class KPARTS_EXPORT MainWindow : public KXmlGuiWindow, virtual public PartBase
