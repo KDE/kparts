@@ -1,5 +1,5 @@
-<!DOCTYPE kpartgui>
-<kpartgui name="KGVShell" version="0">
+<!DOCTYPE gui SYSTEM "kpartgui.dtd">
+<gui name="KGVShell" version="0">
 <MenuBar>
  <Menu name="file"><text>&amp;File</text>
   <Action name="file_open"/>
@@ -10,5 +10,5 @@
  <Action name="file_open"/>
  <Action name="file_quit"/>
 </ToolBar>
-</kpartgui>
+</gui>
 

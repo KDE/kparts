@@ -1,5 +1,5 @@
-<!DOCTYPE kpartgui>
-<kpartgui name="Part" version="4">
+<!DOCTYPE gui SYSTEM "kpartgui.dtd">
+<gui name="Part" version="4">
 <MenuBar>
  <Menu name="file"><text>&amp;File</text>
   <Action name="p1_blah"/>
@@ -18,4 +18,4 @@
 <ToolBar name="Part1-ToolBar">
  <Action name="p1_blah"/>
 </ToolBar>
-</kpartgui>
+</gui>
