@@ -17,11 +17,14 @@ find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Widgets Xml)
 include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
-
+include(ECMAddQch)
 
 include(GenerateExportHeader)
 
 include(ECMSetupVersion)
+
+option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
+add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KPARTS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kparts_version.h"
@@ -54,6 +57,16 @@ add_subdirectory( src )
 
 # create a Config.cmake and a ConfigVersion.cmake file and install them
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5Parts")
+
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KF5Parts_QCH
+        FILE KF5PartsQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PartsQchTargets.cmake\")")
+endif()
 
 include(CMakePackageConfigHelpers)
 

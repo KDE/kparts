@@ -114,6 +114,31 @@ install(FILES
 install(FILES kde_terminal_interface.h DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts )
 
 
+if(BUILD_QCH)
+    ecm_add_qch(
+        KF5Parts_QCH
+        NAME KParts
+        BASE_NAME KF5Parts
+        VERSION ${KF5_VERSION}
+        ORG_DOMAIN org.kde
+        SOURCES # using only public headers, to cover only public API
+            ${KParts_HEADERS}
+            kde_terminal_interface.h
+        MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
+        LINK_QCHS
+            KF5KIO_QCH
+            KF5XmlGui_QCH
+            KF5TextWidgets_QCH
+        BLANK_MACROS
+            KPARTS_EXPORT
+            KPARTS_DEPRECATED
+            KPARTS_DEPRECATED_EXPORT
+        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        COMPONENT Devel
+    )
+endif()
+
 include(ECMGeneratePriFile)
 ecm_generate_pri_file(BASE_NAME KParts LIB_NAME KF5Parts DEPS "KIOWidgets KXmlGui KTextWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
