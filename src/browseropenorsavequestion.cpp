@@ -60,7 +60,7 @@ public:
 
     BrowserOpenOrSaveQuestionPrivate(QWidget *parent, const QUrl &url, const QString &mimeType)
         : QDialog(parent), url(url), mimeType(mimeType),
-          features(nullptr)
+          features(BrowserOpenOrSaveQuestion::BasicFeatures)
     {
         const int spacingHint = style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
 

@@ -71,7 +71,7 @@ Part::~Part()
 void Part::embed(QWidget *parentWidget)
 {
     if (widget()) {
-        widget()->setParent(parentWidget, nullptr);
+        widget()->setParent(parentWidget, Qt::WindowFlags());
         widget()->setGeometry(0, 0, widget()->width(), widget()->height());
         widget()->show();
     }
