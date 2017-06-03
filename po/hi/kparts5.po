@@ -1,0 +1,171 @@
+# translation of kdelibs4.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2007.
+# Ravishankar Shrivastava <raviratlami@aol.in>, 2008.
+# G Karunakar <karunakar@indlinux.org>, 2009, 2010, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-11-19 20:12+0100\n"
+"PO-Revision-Date: 2012-06-25 15:27+0530\n"
+"Last-Translator: G Karunakar <karunakar@indlinux.org>\n"
+"Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 1.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "करुणाकर गुंटुपल्ली"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "karunakar@indlinux.org"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>क्या आप इंटरनेट की छानबीन <b>%1</b> के लिए करना चाहते हैं?</qt>"
+
+#: browserextension.cpp:242
+#, kde-format
+msgid "Internet Search"
+msgstr "इंटरनेट में ढूंढें"
+
+#: browserextension.cpp:242
+#, kde-format
+msgid "&Search"
+msgstr "ढूंढें (&S)"
+
+#: browseropenorsavequestion.cpp:104
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "प्रकार: %1"
+
+#: browseropenorsavequestion.cpp:112
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "इस प्रकार की फ़ाइलों के लिए क्रिया याद रखें"
+
+#: browseropenorsavequestion.cpp:164 browseropenorsavequestion.cpp:257
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "%1 के साथ खोलें (&O)"
+
+#: browseropenorsavequestion.cpp:231
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr " %1 के साथ खोलें (&w)"
+
+#: browseropenorsavequestion.cpp:242 browseropenorsavequestion.cpp:337
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "'%1' खोलें ?"
+
+#: browseropenorsavequestion.cpp:246
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "के साथ खोलें...(&O)"
+
+#: browseropenorsavequestion.cpp:266
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "के साथ खोलें...(&O)"
+
+#: browseropenorsavequestion.cpp:334
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "खोलें (&O)"
+
+#: browseropenorsavequestion.cpp:359
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "नामः %1"
+
+#: browseropenorsavequestion.cpp:361
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "सर्वर द्वारा सुझाया फ़ाइल नाम यह है"
+
+#: browserrun.cpp:346
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "क्या आप '%1' को सचमुच चलाना चाहेंगे? "
+
+#: browserrun.cpp:347
+#, kde-format
+msgid "Execute File?"
+msgstr "फ़ाइल चलाएँ?"
+
+#: browserrun.cpp:347
+#, kde-format
+msgid "Execute"
+msgstr "चलाएँ"
+
+#: browserrun.cpp:405
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "डाउनलोड प्रबंधक (%1) आपके पथ ($PATH ) पर ढूंढा नहीं जा सका"
+
+#: browserrun.cpp:406
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"इसे फिर से  स्थापित करने की कोशिश करें \n"
+"\n"
+" के-कॉन्करर के साथ एकीकरण अक्षम रहेगा."
+
+#: browserrun.cpp:432
+#, kde-format
+msgid "Save As"
+msgstr "ऐसे सहेजें"
+
+#: htmlsettingsinterface.cpp:34
+#, kde-format
+msgid "Accept"
+msgstr "स्वीकृत"
+
+#: htmlsettingsinterface.cpp:36
+#, kde-format
+msgid "Reject"
+msgstr "अस्वीकृत"
+
+#: readwritepart.cpp:93
+#, kde-format
+msgid "Untitled"
+msgstr "बिना शीर्षक"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"दस्तावेज़ \"%1\" परिवर्तित किया गया है.\n"
+"क्या आप इसे सहेजना चाहेंगे या परिवर्तनों को फेंक दें?"
+
+#: readwritepart.cpp:104
+#, kde-format
+msgid "Close Document"
+msgstr "दस्तावेज़ बन्द करें"
