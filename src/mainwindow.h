@@ -63,7 +63,7 @@ public:
     /**
      * Constructor, same signature as KMainWindow.
      */
-    explicit MainWindow(QWidget *parent = nullptr, Qt::WindowFlags f = KDE_DEFAULT_WINDOWFLAGS);
+    explicit MainWindow(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
     /**
      * Destructor.
      */
