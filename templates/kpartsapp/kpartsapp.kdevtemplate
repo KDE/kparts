@@ -1,0 +1,7 @@
+# KDE Config File
+[General]
+Name=KParts Application
+Comment=Generate an application built on the KParts framwork. using CMake.
+Category=Qt/Graphical
+Icon=kpartsapp.png
+ShowFilesAfterGeneration=%{dest}/src/shell/main.cpp

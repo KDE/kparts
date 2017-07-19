@@ -1,0 +1,16 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"%{APPNAMELC}part\")
+
+set(%{APPNAMELC}_PART_SRCS
+   %{APPNAMELC}part.cpp
+)
+
+add_library(%{APPNAMELC}part MODULE ${%{APPNAMELC}_PART_SRCS})
+
+target_link_libraries(%{APPNAMELC}part
+    KF5::I18n
+    KF5::Parts
+)
+
+install(TARGETS %{APPNAMELC}part  DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(PROGRAMS %{APPNAMELC}part.desktop  DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES %{APPNAMELC}partui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/%{APPNAMELC}part)

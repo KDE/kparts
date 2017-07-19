@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Service
+Name=%{APPNAME}Part
+Icon=%{APPNAMELC}
+# TODO: replace with your custom supported mime types
+MimeType=text/plain;
+X-KDE-ServiceTypes=KParts/ReadOnlyPart,KParts/ReadWritePart
+X-KDE-Library=%{APPNAMELC}part

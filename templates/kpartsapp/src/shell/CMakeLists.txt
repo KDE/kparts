@@ -1,0 +1,15 @@
+set(%{APPNAMELC}_SRCS
+   main.cpp
+   %{APPNAMELC}shell.cpp
+)
+
+add_executable(%{APPNAMELC} ${%{APPNAMELC}_SRCS})
+
+target_link_libraries(%{APPNAMELC}
+    KF5::I18n
+    KF5::Parts
+)
+
+install(TARGETS %{APPNAMELC} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(PROGRAMS %{APPNAMELC}.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
+install(FILES %{APPNAMELC}ui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/%{APPNAMELC})
