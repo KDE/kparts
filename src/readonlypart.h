@@ -248,6 +248,11 @@ protected:
      * If the part uses the standard implementation of openUrl(),
      * it must reimplement this, to open the local file.
      * The default implementation is simply { return false; }
+     *
+     * If this method returns true, the part emits completed(),
+     * otherwise it emits canceled().
+     *
+     * @see completed(), canceled()
      */
     virtual bool openFile();
 
