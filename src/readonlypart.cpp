@@ -137,7 +137,10 @@ bool ReadOnlyPart::openUrl(const QUrl &url)
         d->m_bAutoDetectedMime = false;
     }
     OpenUrlArguments args = d->m_arguments;
-    if (!closeUrl()) {
+    d->m_closeUrlFromOpenUrl = true;
+    const bool closed = closeUrl();
+    d->m_closeUrlFromOpenUrl = false;
+    if (!closed) {
         return false;
     }
     d->m_arguments = args;
@@ -245,6 +248,9 @@ bool ReadOnlyPart::closeUrl()
     abortLoad(); //just in case
 
     d->m_arguments = KParts::OpenUrlArguments();
+    if (!d->m_closeUrlFromOpenUrl) {
+        setUrl(QUrl());
+    }
 
     if (d->m_bTemp) {
         QFile::remove(d->m_file);

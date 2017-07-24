@@ -111,7 +111,9 @@ public Q_SLOTS:
 
 public:
     /**
-     *  Returns the URL currently opened in this part.
+     * Returns the URL currently opened in (or being opened by) this part.
+     * @note url() is not cleared if openUrl() fails to load the URL.
+     *       Call closeUrl() if you need to explicitly reset it.
      *
      *  @return The current URL.
      */
@@ -123,6 +125,7 @@ public:
      * automatically in this case).
      * If the current URL is not fully loaded yet, aborts loading.
      * Deletes the temporary file used when the url is remote.
+     * Resets the current url() to QUrl().
      * @return always true, but the return value exists for reimplementations
      */
     virtual bool closeUrl();

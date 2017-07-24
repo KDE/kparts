@@ -22,6 +22,7 @@
 #include <ksharedconfig.h>
 #include <kparts/readonlypart.h>
 #include <kparts/openurlarguments.h>
+#include <QSignalSpy>
 #include <QTest>
 #include <QWidget>
 
@@ -166,6 +167,23 @@ void PartTest::testAutomaticMimeType()
     part->openUrl(QUrl::fromLocalFile(QFINDTESTDATA("notepad.desktop")));
     // test again its (autdetected) mimetype
     QCOMPARE(part->arguments().mimeType(), QString::fromLatin1("application/x-desktop"));
+
+    delete part;
+}
+
+void PartTest::testEmptyUrlAfterCloseUrl()
+{
+    TestPart *part = new TestPart(nullptr, nullptr);
+
+    QVERIFY(part->openUrl(QUrl::fromLocalFile(QFINDTESTDATA("notepad.desktop"))));
+    QSignalSpy spy(part, &KParts::ReadOnlyPart::urlChanged);
+    QVERIFY(part->openUrl(QUrl::fromLocalFile(QFINDTESTDATA("parttest.cpp"))));
+    QVERIFY(!part->url().isEmpty());
+    QCOMPARE(spy.count(), 1);
+    spy.clear();
+    QVERIFY(part->closeUrl());
+    QVERIFY(part->url().isEmpty());
+    QCOMPARE(spy.count(), 1);
 
     delete part;
 }

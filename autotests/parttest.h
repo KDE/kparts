@@ -33,6 +33,7 @@ private Q_SLOTS:
 
     void testOpenUrlArguments();
     void testAutomaticMimeType();
+    void testEmptyUrlAfterCloseUrl();
 
     void testToolbarVisibility();
 };

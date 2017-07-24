@@ -50,6 +50,7 @@ public:
         m_duringSaveAs = false;
         m_bTemp = false;
         m_bAutoDetectedMime = false;
+        m_closeUrlFromOpenUrl = false;
     }
 
     ~ReadOnlyPartPrivate()
@@ -79,6 +80,8 @@ public:
 
     // whether the mimetype in the arguments was detected by the part itself
     bool m_bAutoDetectedMime : 1;
+    // Whether we are calling closeUrl() from openUrl().
+    bool m_closeUrlFromOpenUrl;
 
     /**
      * Remote (or local) url - the one displayed to the user.
