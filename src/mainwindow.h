@@ -89,7 +89,7 @@ protected Q_SLOTS:
     /**
      * Enable or disable the automatic setting of window titles by the part's document title.
      * By default, a part always changes the window title when the document changes.
-     * @note This value must be set before calling @see createGUI.
+     * @note This value must be set before calling createGUI().
      *
      * @param enabled boolean to enable or disable the window title handling
      * @since 5.24
@@ -104,7 +104,7 @@ protected Q_SLOTS:
     virtual void slotSetStatusBarText(const QString &);
 
     /**
-     * Rebuilds the GUI after KEditToolbar changed the toolbar layout.
+     * Rebuilds the GUI after KEditToolBar changed the toolbar layout.
      * @see configureToolbars()
      */
     void saveNewToolbarConfig() Q_DECL_OVERRIDE;
