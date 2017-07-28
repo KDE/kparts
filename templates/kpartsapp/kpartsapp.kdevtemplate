@@ -1,6 +1,13 @@
 # KDE Config File
 [General]
 Name=KParts Application
+Name[ca]=Aplicació de les KParts
+Name[nl]=KParts-toepassing
+Name[pt]=Aplicação do KParts
+Name[sl]=Program KParts
+Name[sv]=KParts-program
+Name[uk]=Програма KParts
+Name[x-test]=xxKParts Applicationxx
 Comment=Generate an application built on the KParts framework, using CMake.
 Category=Qt/Graphical
 Icon=kpartsapp.png

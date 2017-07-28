@@ -1,6 +1,14 @@
 [Desktop Entry]
 Type=Application
 Name=%{APPNAME}
+Name[ca]=%{APPNAME}
+Name[cs]=%{APPNAME}
+Name[nl]=%{APPNAME}
+Name[pt]=%{APPNAME}
+Name[sl]=%{APPNAME}
+Name[sv]=%{APPNAME}
+Name[uk]=%{APPNAME}
+Name[x-test]=xx%{APPNAME}xx
 Icon=%{APPNAMELC}
 # TODO: replace with your custom supported mime types
 MimeType=text/plain;
