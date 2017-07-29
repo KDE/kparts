@@ -2,6 +2,7 @@
 Type=Service
 Name=%{APPNAME}Part
 Name[ca]=%{APPNAME}Part
+Name[ca@valencia]=%{APPNAME}Part
 Name[cs]=%{APPNAME}Part
 Name[nl]=%{APPNAME}Part
 Name[pt]=%{APPNAME}Part

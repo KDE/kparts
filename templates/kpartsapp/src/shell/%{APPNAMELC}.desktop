@@ -2,6 +2,7 @@
 Type=Application
 Name=%{APPNAME}
 Name[ca]=%{APPNAME}
+Name[ca@valencia]=%{APPNAME}
 Name[cs]=%{APPNAME}
 Name[nl]=%{APPNAME}
 Name[pt]=%{APPNAME}
