@@ -3,6 +3,7 @@
 Name=KParts Application
 Name[ca]=Aplicació de les KParts
 Name[ca@valencia]=Aplicació de les KParts
+Name[gl]=Aplicativo de KParts
 Name[nl]=KParts-toepassing
 Name[pt]=Aplicação do KParts
 Name[sl]=Program KParts
@@ -12,6 +13,8 @@ Name[x-test]=xxKParts Applicationxx
 Comment=Generate an application built on the KParts framework, using CMake.
 Comment[ca]=Genera una construcció d'aplicació en el Framework KParts, usant el CMake.
 Comment[ca@valencia]=Genera una construcció d'aplicació en el Framework KParts, usant el CMake.
+Comment[gl]=Xerar un apliactivo construído coa infraestrutura KParts, usando CMake.
+Comment[nl]=Genereer een toepassing gebouwd op het KParts-framework met CMake.
 Comment[pt]=Gera uma aplicação compilada com a plataforma do KParts, usando o CMake.
 Comment[sv]=Skapa ett program byggt på KParts-ramverket, med användning av CMake.
 Comment[uk]=Створити програму на основі бібліотек KParts з використанням CMake.
