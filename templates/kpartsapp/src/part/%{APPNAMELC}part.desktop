@@ -13,6 +13,7 @@ Name[sl]=%{APPNAME}Part
 Name[sv]=%{APPNAME}-delprogram
 Name[uk]=%{APPNAME}Part
 Name[x-test]=xx%{APPNAME}Partxx
+Name[zh_TW]=%{APPNAME}Part
 Icon=%{APPNAMELC}
 # TODO: replace with your custom supported mime types
 MimeType=text/plain;
