@@ -4,6 +4,7 @@ Name=%{APPNAME}
 Name[ca]=%{APPNAME}
 Name[ca@valencia]=%{APPNAME}
 Name[cs]=%{APPNAME}
+Name[es]=%{APPNAME}
 Name[gl]=%{APPNAME}
 Name[nb]=%{APPNAME}
 Name[nl]=%{APPNAME}
