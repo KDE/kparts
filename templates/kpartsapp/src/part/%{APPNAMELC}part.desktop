@@ -7,6 +7,7 @@ Name[cs]=%{APPNAME}Part
 Name[es]=%{APPNAME}Part
 Name[eu]=%{APPNAME}Part
 Name[fi]=%{APPNAME}-osa
+Name[fr]=%{APPNAME}Part
 Name[gl]=%{APPNAME}Part
 Name[it]=%{APPNAME}Part
 Name[nb]=%{APPNAME}-del
