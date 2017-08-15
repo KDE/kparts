@@ -41,7 +41,7 @@
 
 using namespace KParts;
 
-class Plugin::PluginPrivate
+class Q_DECL_HIDDEN Plugin::PluginPrivate
 {
 public:
     QString m_parentInstance;

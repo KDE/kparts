@@ -29,7 +29,7 @@ SelectorInterface::QueryMethods SelectorInterface::supportedQueryMethods() const
     return KParts::SelectorInterface::None;
 }
 
-class SelectorInterface::ElementPrivate : public QSharedData
+class Q_DECL_HIDDEN SelectorInterface::ElementPrivate : public QSharedData
 {
 public:
     QString tag;

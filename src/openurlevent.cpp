@@ -25,7 +25,7 @@
 using namespace KParts;
 
 
-class OpenUrlEvent::OpenUrlEventPrivate
+class Q_DECL_HIDDEN OpenUrlEvent::OpenUrlEventPrivate
 {
 public:
     OpenUrlEventPrivate(ReadOnlyPart *part,

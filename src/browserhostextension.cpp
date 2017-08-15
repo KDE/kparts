@@ -28,7 +28,7 @@ using namespace KParts;
 namespace KParts
 {
 
-class BrowserHostExtension::BrowserHostExtensionPrivate
+class Q_DECL_HIDDEN BrowserHostExtension::BrowserHostExtensionPrivate
 {
 public:
     BrowserHostExtensionPrivate()

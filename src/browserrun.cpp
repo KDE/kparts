@@ -42,7 +42,7 @@
 
 using namespace KParts;
 
-class BrowserRun::BrowserRunPrivate
+class Q_DECL_HIDDEN BrowserRun::BrowserRunPrivate
 {
 public:
     bool m_bHideErrorDialog;

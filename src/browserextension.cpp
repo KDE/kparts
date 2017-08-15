@@ -61,7 +61,7 @@ public:
     }
 };
 
-class BrowserExtension::BrowserExtensionPrivate
+class Q_DECL_HIDDEN BrowserExtension::BrowserExtensionPrivate
 {
 public:
     BrowserExtensionPrivate(KParts::ReadOnlyPart *parent)
