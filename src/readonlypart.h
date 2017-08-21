@@ -177,7 +177,11 @@ public:
      */
     bool closeStream();
 
+#ifdef DOXYGEN_SHOULD_SKIP_THIS
+protected: // are parsed by doxygen (kapidox/ecm_add_qch): unhide for doxygen configured to skip private methods
+#else
 private: // Makes no sense for inherited classes to call those. But make it protected there.
+#endif // DOXYGEN_SHOULD_SKIP_THIS
 
     /**
      * Called by openStream to initiate sending of data.
