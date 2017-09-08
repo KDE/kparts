@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Service
 Name=%{APPNAME}Part
+Name[ast]=%{APPNAME}Part
 Name[ca]=%{APPNAME}Part
 Name[ca@valencia]=%{APPNAME}Part
 Name[cs]=%{APPNAME}Part

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=%{APPNAME}
+Name[ast]=%{APPNAME}
 Name[ca]=%{APPNAME}
 Name[ca@valencia]=%{APPNAME}
 Name[cs]=%{APPNAME}
