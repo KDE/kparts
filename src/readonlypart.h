@@ -188,8 +188,9 @@ private: // Makes no sense for inherited classes to call those. But make it prot
      * Parts which implement progress loading should check the @p mimeType
      * parameter, and return true if they can accept a data stream of that type.
      */
-    virtual bool doOpenStream(const QString & /*mimeType*/)
+    virtual bool doOpenStream(const QString &mimeType)
     {
+        Q_UNUSED(mimeType);
         return false;
     }
     /**
@@ -198,8 +199,9 @@ private: // Makes no sense for inherited classes to call those. But make it prot
      * With some data types (text, html...) closeStream might never actually be called,
      * in the case of continuous streams. This can't happen with e.g. images.
      */
-    virtual bool doWriteStream(const QByteArray & /*data*/)
+    virtual bool doWriteStream(const QByteArray &data)
     {
+        Q_UNUSED(data);
         return false;
     }
     /**
