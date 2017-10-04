@@ -18,6 +18,7 @@ Name[nl]=%{APPNAME}Part
 Name[nn]=%{APPNAME}-del
 Name[pl]=%{APPNAME}Part
 Name[pt]=%{APPNAME}Part
+Name[ru]=Компонент %{APPNAME}
 Name[sl]=%{APPNAME}Part
 Name[sr]=%{APPNAME}Part
 Name[sr@ijekavian]=%{APPNAME}Part
