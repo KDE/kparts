@@ -25,6 +25,7 @@ Name[sr@ijekavian]=%{APPNAME}Part
 Name[sr@ijekavianlatin]=%{APPNAME}Part
 Name[sr@latin]=%{APPNAME}Part
 Name[sv]=%{APPNAME}-delprogram
+Name[tr]=%{APPNAME}Part
 Name[uk]=%{APPNAME}Part
 Name[x-test]=xx%{APPNAME}Partxx
 Name[zh_CN]=%{APPNAME}Part
