@@ -1,36 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=%{APPNAME}
-Name[ast]=%{APPNAME}
-Name[ca]=%{APPNAME}
-Name[ca@valencia]=%{APPNAME}
-Name[cs]=%{APPNAME}
-Name[da]=%{APPNAME}
-Name[de]=%{APPNAME}
-Name[es]=%{APPNAME}
-Name[eu]=%{APPNAME}
-Name[fi]=%{APPNAME}
-Name[fr]=%{APPNAME}
-Name[gl]=%{APPNAME}
-Name[ia]=%{APPNAME}
-Name[it]=%{APPNAME}
-Name[nb]=%{APPNAME}
-Name[nl]=%{APPNAME}
-Name[nn]=%{APPNAME}
-Name[pl]=%{APPNAME}
-Name[pt]=%{APPNAME}
-Name[ru]=%{APPNAME}
-Name[sl]=%{APPNAME}
-Name[sr]=%{APPNAME}
-Name[sr@ijekavian]=%{APPNAME}
-Name[sr@ijekavianlatin]=%{APPNAME}
-Name[sr@latin]=%{APPNAME}
-Name[sv]=%{APPNAME}
-Name[tr]=%{APPNAME}
-Name[uk]=%{APPNAME}
-Name[x-test]=xx%{APPNAME}xx
-Name[zh_CN]=%{APPNAME}
-Name[zh_TW]=%{APPNAME}
 Icon=%{APPNAMELC}
 # TODO: replace with your custom supported mime types
 MimeType=text/plain;

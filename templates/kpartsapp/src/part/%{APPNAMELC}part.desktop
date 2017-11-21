@@ -1,36 +1,6 @@
 [Desktop Entry]
 Type=Service
 Name=%{APPNAME}Part
-Name[ast]=%{APPNAME}Part
-Name[ca]=%{APPNAME}Part
-Name[ca@valencia]=%{APPNAME}Part
-Name[cs]=%{APPNAME}Part
-Name[da]=%{APPNAME}Part
-Name[de]=%{APPNAME}Part
-Name[es]=%{APPNAME}Part
-Name[eu]=%{APPNAME}Part
-Name[fi]=%{APPNAME}-osa
-Name[fr]=%{APPNAME}Part
-Name[gl]=%{APPNAME}Part
-Name[ia]=%{APPNAME}Part
-Name[it]=%{APPNAME}Part
-Name[nb]=%{APPNAME}-del
-Name[nl]=%{APPNAME}Part
-Name[nn]=%{APPNAME}-del
-Name[pl]=%{APPNAME}Part
-Name[pt]=%{APPNAME}Part
-Name[ru]=Компонент %{APPNAME}
-Name[sl]=%{APPNAME}Part
-Name[sr]=%{APPNAME}Part
-Name[sr@ijekavian]=%{APPNAME}Part
-Name[sr@ijekavianlatin]=%{APPNAME}Part
-Name[sr@latin]=%{APPNAME}Part
-Name[sv]=%{APPNAME}-delprogram
-Name[tr]=%{APPNAME}Part
-Name[uk]=%{APPNAME}Part
-Name[x-test]=xx%{APPNAME}Partxx
-Name[zh_CN]=%{APPNAME}Part
-Name[zh_TW]=%{APPNAME}Part
 Icon=%{APPNAMELC}
 # TODO: replace with your custom supported mime types
 MimeType=text/plain;
