@@ -36,6 +36,7 @@ Comment[ca]=Genera una construcció d'aplicació en el Framework KParts, usant e
 Comment[ca@valencia]=Genera una construcció d'aplicació en el Framework KParts, usant el CMake.
 Comment[cs]=Generovat aplikaci postavenou na frameworku KParts pomocí CMake.
 Comment[da]=Generer et program bygget på KParts-systemet med brug af CMake.
+Comment[de]=Generiert ein Programm auf der Basis von KParts-Framework und verwendet CMake.
 Comment[en_GB]=Generate an application built on the KParts framework, using CMake.
 Comment[es]=Generar una construcción de aplicación sobre la infraestructura KParts, usando CMake.
 Comment[eu]=Sortu aplikazio bat KParts-framework azpiegituran eraikia, CMake erabiliz.
