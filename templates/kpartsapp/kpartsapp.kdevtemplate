@@ -58,6 +58,7 @@ Comment[pl]=Stwórz aplikację zbudowaną na szkieletach KParts, przy użyciu CM
 Comment[pt]=Gera uma aplicação compilada com a plataforma do KParts, usando o CMake.
 Comment[pt_BR]=Gera um aplicativo construido no frameworks KParts, usando CMake.
 Comment[ru]=Приложение на основе библиотеки KParts, собираемое при помощи CMake.
+Comment[sl]=Ustvari program, ki je izgrajen na ogrodjih KParts, z uporabo CMake.
 Comment[sr]=Генерише програм над радним оквиром К‑делова, користећи Ц‑мејк
 Comment[sr@ijekavian]=Генерише програм над радним оквиром К‑дијелова, користећи Ц‑мејк
 Comment[sr@ijekavianlatin]=Generiše program nad radnim okvirom K‑dijelova, koristeći CMake
