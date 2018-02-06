@@ -26,11 +26,6 @@
 #include <QDateTime>
 #include <QDebug>
 
-#ifdef HAVE_NEPOMUK
-#include "config-nepomuk.h"
-#include "../nepomuk/utils/utils.h"
-#endif
-
 namespace KParts
 {
 
@@ -54,25 +49,7 @@ public:
 private Q_SLOTS:
     void slotDownloadFinished(KJob *job)
     {
-#ifdef HAVE_NEPOMUK
-        KIO::FileCopyJob *fileCopyJob = static_cast<KIO::FileCopyJob *>(job);
-        if (job->error()) {
-            // qDebug() << "error during download: srcUrl=" << fileCopyJob->srcUrl()
-            //         << "destUrl=" << fileCopyJob->destUrl()
-            //         << "referrer=" << m_metaData.value("referrer");
-            // TODO: test whether destUrl+".part" exists
-        } else {
-            // qDebug() << "download finished: srcUrl=" << fileCopyJob->srcUrl()
-            //         << "destUrl=" << fileCopyJob->destUrl()
-            //         << "referrer=" << m_metaData.value("referrer");
-            Nepomuk::Utils::createCopyEvent(fileCopyJob->srcUrl(),
-                                            fileCopyJob->destUrl(),
-                                            m_downloadJobStartTime,
-                                            QUrl(m_metaData.value("referrer")));
-        }
-#else
         Q_UNUSED(job);
-#endif
     }
 
 private:

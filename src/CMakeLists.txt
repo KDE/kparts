@@ -87,10 +87,6 @@ target_link_libraries(KF5Parts PUBLIC  KF5::KIOWidgets #browserrun.h uses krun.h
                                        KF5::IconThemes #only used by KPart::iconLoader()
                       )
 
-if(HAVE_NEPOMUK)
-    target_link_libraries(KF5Parts PRIVATE nepomuk nepomukutils)
-endif()
-
 set_target_properties(KF5Parts PROPERTIES VERSION   ${KPARTS_VERSION_STRING}
                                           SOVERSION ${KPARTS_SOVERSION}
                                           EXPORT_NAME Parts
