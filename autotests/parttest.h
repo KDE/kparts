@@ -20,7 +20,7 @@
 #ifndef PARTTEST_H
 #define PARTTEST_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class PartTest : public QObject
 {

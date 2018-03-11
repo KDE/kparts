@@ -27,8 +27,8 @@
 #include <QApplication>
 #include <QFileDialog>
 #include <QWidget>
-#include <QtCore/QDir>
-#include <QtCore/QFile>
+#include <QDir>
+#include <QFile>
 #include <QTest>
 
 #include "partviewer.h"

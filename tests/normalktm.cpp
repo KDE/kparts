@@ -25,7 +25,7 @@
 
 #include <QSplitter>
 #include <QCheckBox>
-#include <QtCore/QDir>
+#include <QDir>
 #include <QCoreApplication>
 #include <QMenu>
 #include <QMenuBar>

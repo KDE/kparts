@@ -25,8 +25,8 @@
 
 #include <QAction>
 #include <QSplitter>
-#include <QtCore/QFile>
-#include <QtCore/QTextStream>
+#include <QFile>
+#include <QTextStream>
 #include <QTest>
 #include <QStatusBar>
 #include <QTextEdit>

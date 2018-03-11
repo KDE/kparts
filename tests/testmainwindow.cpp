@@ -26,7 +26,7 @@
 #include <QAction>
 #include <QSplitter>
 #include <QCheckBox>
-#include <QtCore/QDir>
+#include <QDir>
 #include <QCoreApplication>
 #include <QApplication>
 #include <kxmlguifactory.h>

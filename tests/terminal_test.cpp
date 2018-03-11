@@ -7,7 +7,7 @@ public:
     Window();
 };
 
-#include <QtCore/QDir>
+#include <QDir>
 
 #include <kde_terminal_interface.h>
 #include <kparts/readonlypart.h>
