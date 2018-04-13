@@ -98,7 +98,7 @@ public:
     Q_DECLARE_FLAGS(FilterModes, FilterMode)
 
     /*! Constructor */
-    ListingFilterExtension(KParts::ReadOnlyPart *parent);
+    explicit ListingFilterExtension(KParts::ReadOnlyPart *parent);
 
     /*! Destructor */
     virtual ~ListingFilterExtension();

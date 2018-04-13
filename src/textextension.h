@@ -44,7 +44,7 @@ class KPARTS_EXPORT TextExtension : public QObject
 {
     Q_OBJECT
 public:
-    TextExtension(KParts::ReadOnlyPart *parent);
+    explicit TextExtension(KParts::ReadOnlyPart *parent);
     ~TextExtension();
 
     /**

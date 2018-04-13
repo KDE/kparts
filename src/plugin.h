@@ -68,7 +68,7 @@ public:
     /**
      * Destructor.
      */
-    virtual ~Plugin();
+    ~Plugin() Q_DECL_OVERRIDE;
 
     /**
      * Reimplemented for internal reasons

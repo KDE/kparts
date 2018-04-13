@@ -175,7 +175,7 @@ int BrowserExtension::yOffset()
 void BrowserExtension::saveState(QDataStream &stream)
 {
     // TODO add d->m_part->mimeType()
-    stream << d->m_part->url() << (qint32)xOffset() << (qint32)yOffset();
+    stream << d->m_part->url() << static_cast<qint32>(xOffset()) << static_cast<qint32>(yOffset());
 }
 
 void BrowserExtension::restoreState(QDataStream &stream)

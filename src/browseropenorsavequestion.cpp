@@ -312,7 +312,7 @@ bool BrowserOpenOrSaveQuestionPrivate::autoEmbedMimeType(int flags)
     // it's more likely that the user might want to save it.
     // - multipart/* ("server push", see kmultipart)
     // KEEP IN SYNC!!!
-    if (flags != (int)BrowserRun::AttachmentDisposition && mime.isValid() && (
+    if (flags != static_cast<int>(BrowserRun::AttachmentDisposition) && mime.isValid() && (
                 mime.inherits(QStringLiteral("text/html")) ||
                 mime.inherits(QStringLiteral("application/xml")) ||
                 mime.inherits(QStringLiteral("inode/directory")) ||

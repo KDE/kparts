@@ -77,7 +77,7 @@ public:
     /**
      * Destructor
      */
-    virtual ~ReadOnlyPart();
+    ~ReadOnlyPart() Q_DECL_OVERRIDE;
 
     /**
      * Call this to turn off the progress info dialog used by
