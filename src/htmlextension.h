@@ -44,7 +44,7 @@ class KPARTS_EXPORT HtmlExtension : public QObject
 {
     Q_OBJECT
 public:
-    HtmlExtension(KParts::ReadOnlyPart *parent);
+    explicit HtmlExtension(KParts::ReadOnlyPart *parent);
     ~HtmlExtension();
 
     /**

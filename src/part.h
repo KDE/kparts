@@ -81,7 +81,7 @@ public:
     /**
      *  Destructor.
      */
-    virtual ~Part();
+    ~Part() Q_DECL_OVERRIDE;
 
     /**
      * Embed this part into a host widget.

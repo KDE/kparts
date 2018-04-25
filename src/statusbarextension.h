@@ -53,8 +53,8 @@ class KPARTS_EXPORT StatusBarExtension : public QObject
     Q_OBJECT
 
 public:
-    StatusBarExtension(KParts::ReadOnlyPart *parent);
-    ~StatusBarExtension();
+    explicit StatusBarExtension(KParts::ReadOnlyPart *parent);
+    ~StatusBarExtension() Q_DECL_OVERRIDE;
 
     /**
      * This adds a widget to the statusbar for this part.

@@ -67,7 +67,7 @@ public:
     /**
      * Destructor.
      */
-    virtual ~MainWindow();
+    ~MainWindow() Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     void configureToolbars() Q_DECL_OVERRIDE;

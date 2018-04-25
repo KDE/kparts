@@ -63,7 +63,7 @@ public:
     Q_DECLARE_FLAGS(QueryModes, QueryMode)
 
     /*! Constructor */
-    FileInfoExtension(KParts::ReadOnlyPart *parent);
+    explicit FileInfoExtension(KParts::ReadOnlyPart *parent);
 
     /*! Destructor */
     virtual ~FileInfoExtension();
