@@ -68,17 +68,17 @@ public:
     /**
      * Destructor.
      */
-    ~Plugin() Q_DECL_OVERRIDE;
+    ~Plugin() override;
 
     /**
      * Reimplemented for internal reasons
      */
-    QString xmlFile() const Q_DECL_OVERRIDE;
+    QString xmlFile() const override;
 
     /**
      * Reimplemented for internal reasons
      */
-    QString localXMLFile() const Q_DECL_OVERRIDE;
+    QString localXMLFile() const override;
 
     /**
      * Load the plugin libraries from the directories appropriate

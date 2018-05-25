@@ -67,10 +67,10 @@ public:
     /**
      * Destructor.
      */
-    ~MainWindow() Q_DECL_OVERRIDE;
+    ~MainWindow() override;
 
 public Q_SLOTS:
-    void configureToolbars() Q_DECL_OVERRIDE;
+    void configureToolbars() override;
 
 protected Q_SLOTS:
 
@@ -107,7 +107,7 @@ protected Q_SLOTS:
      * Rebuilds the GUI after KEditToolBar changed the toolbar layout.
      * @see configureToolbars()
      */
-    void saveNewToolbarConfig() Q_DECL_OVERRIDE;
+    void saveNewToolbarConfig() override;
 
 protected:
     virtual void createShellGUI(bool create = true);

@@ -64,7 +64,7 @@ public:
      * closing only if the return value of closeUrl() was true.
      * This allows to cancel.
      */
-    ~ReadWritePart() Q_DECL_OVERRIDE;
+    ~ReadWritePart() override;
 
     /**
      * @return true if the part is in read-write mode
@@ -103,7 +103,7 @@ public:
      *
      * @return false on cancel
      */
-    bool closeUrl() Q_DECL_OVERRIDE;
+    bool closeUrl() override;
 
     /**
      * Call this method instead of the above if you need control if

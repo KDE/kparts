@@ -134,7 +134,7 @@ public:
     /**
      * @internal
      */
-    bool eventFilter(QObject *obj, QEvent *ev) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *obj, QEvent *ev) override;
 
     /**
      * Adds a part to the manager.

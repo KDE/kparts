@@ -33,23 +33,23 @@ class ScriptableLiveConnectExtension: public ScriptableExtension
 public:
     ScriptableLiveConnectExtension(QObject *parent, LiveConnectExtension *old);
 
-    QVariant rootObject() Q_DECL_OVERRIDE;
+    QVariant rootObject() override;
     // enclosingObject: not applicable, plugins wouldn't have children
 
     // callAsFunction: we only have function rereferences.
     QVariant callFunctionReference(ScriptableExtension *callerPrincipal, quint64 objId,
-                                   const QString &f, const ArgList &args) Q_DECL_OVERRIDE;
+                                   const QString &f, const ArgList &args) override;
 
     // callAsConstructor: unsupported by LC
 
     bool hasProperty(ScriptableExtension *callerPrincipal, quint64 objId,
-                     const QString &propName) Q_DECL_OVERRIDE;
+                     const QString &propName) override;
 
     QVariant get(ScriptableExtension *callerPrincipal, quint64 objId,
-                 const QString &propName) Q_DECL_OVERRIDE;
+                 const QString &propName) override;
 
     bool put(ScriptableExtension *callerPrincipal, quint64 objId,
-             const QString &propName, const QVariant &value) Q_DECL_OVERRIDE;
+             const QString &propName, const QVariant &value) override;
 
     // removeProperty: unsupported by LC
     // enumerateProperties: unsupported by LC
@@ -58,8 +58,8 @@ public:
     //                 route LC evaluation requests to our parent
     //                 as appropriate
 
-    void acquire(quint64 objid) Q_DECL_OVERRIDE;
-    void release(quint64 objid) Q_DECL_OVERRIDE;
+    void acquire(quint64 objid) override;
+    void release(quint64 objid) override;
 private:
     // LC uses 0-1 refcounting, we use arbitrary, so we need to call
     // unregister when done.

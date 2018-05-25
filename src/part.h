@@ -81,7 +81,7 @@ public:
     /**
      *  Destructor.
      */
-    ~Part() Q_DECL_OVERRIDE;
+    ~Part() override;
 
     /**
      * Embed this part into a host widget.
@@ -187,7 +187,7 @@ protected:
     /**
      * @internal
      */
-    void customEvent(QEvent *event) Q_DECL_OVERRIDE;
+    void customEvent(QEvent *event) override;
 
     /**
      * Convenience method which is called when the Part received a PartActivateEvent .

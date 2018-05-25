@@ -157,15 +157,15 @@ protected:
     /**
      * Reimplemented from KRun
      */
-    void scanFile() Q_DECL_OVERRIDE;
+    void scanFile() override;
     /**
      * Reimplemented from KRun
      */
-    void init() Q_DECL_OVERRIDE;
+    void init() override;
     /**
      * Reimplemented from KRun
      */
-    void handleError(KJob *job) Q_DECL_OVERRIDE;
+    void handleError(KJob *job) override;
 
     /**
      * NotHandled means that foundMimeType should call KRun::foundMimeType,

@@ -42,13 +42,13 @@ public:
                 const QVariantList &args = QVariantList());
     virtual ~NotepadPart();
 
-    void setReadWrite(bool rw) Q_DECL_OVERRIDE;
+    void setReadWrite(bool rw) override;
 
     static KAboutData *createAboutData();
 
 protected:
-    bool openFile() Q_DECL_OVERRIDE;
-    bool saveFile() Q_DECL_OVERRIDE;
+    bool openFile() override;
+    bool saveFile() override;
 
 protected Q_SLOTS:
     void slotSearchReplace();

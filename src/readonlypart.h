@@ -77,7 +77,7 @@ public:
     /**
      * Destructor
      */
-    ~ReadOnlyPart() Q_DECL_OVERRIDE;
+    ~ReadOnlyPart() override;
 
     /**
      * Call this to turn off the progress info dialog used by
@@ -280,7 +280,7 @@ protected:
      * PartActivateEvent because it's handled by the mainwindow
      * (which gets the even after the PartActivateEvent events have been sent)
      */
-    void guiActivateEvent(GUIActivateEvent *event) Q_DECL_OVERRIDE;
+    void guiActivateEvent(GUIActivateEvent *event) override;
 
     /**
      * @internal

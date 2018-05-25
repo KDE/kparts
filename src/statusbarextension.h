@@ -54,7 +54,7 @@ class KPARTS_EXPORT StatusBarExtension : public QObject
 
 public:
     explicit StatusBarExtension(KParts::ReadOnlyPart *parent);
-    ~StatusBarExtension() Q_DECL_OVERRIDE;
+    ~StatusBarExtension() override;
 
     /**
      * This adds a widget to the statusbar for this part.
@@ -110,7 +110,7 @@ public:
     static StatusBarExtension *childObject(QObject *obj);
 
     /** @internal */
-    bool eventFilter(QObject *watched, QEvent *ev) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *watched, QEvent *ev) override;
 
 private:
     // for future extensions
