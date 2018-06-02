@@ -1,0 +1,170 @@
+# Korean messages for kdelibs.
+# Copyright (C) Free Software Foundation, Inc.
+# Cho Sung Jae <cho.sungjae@gmail.com>, 2007.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011.
+# Shinjo Park <kde@peremen.name>, 2011, 2012, 2013, 2014, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-11-19 20:12+0100\n"
+"PO-Revision-Date: 2015-01-18 17:08+0900\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde@peremen.name>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Cho Sung Jae,Shinjo Park"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "cho.sungjae@gmail.com,kde@peremen.name"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>인터넷에서 <b>%1</b>에 대해 검색하시겠습니까?</qt>"
+
+#: browserextension.cpp:242
+#, kde-format
+msgid "Internet Search"
+msgstr "인터넷 검색"
+
+#: browserextension.cpp:242
+#, kde-format
+msgid "&Search"
+msgstr "찾기(&S)"
+
+#: browseropenorsavequestion.cpp:104
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "종류: %1"
+
+#: browseropenorsavequestion.cpp:112
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "이 파일 형식과 연결된 동작 기억하기"
+
+#: browseropenorsavequestion.cpp:164 browseropenorsavequestion.cpp:257
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "%1(으)로 열기"
+
+#: browseropenorsavequestion.cpp:231
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "%1(으)로 열기(&W)"
+
+#: browseropenorsavequestion.cpp:242 browseropenorsavequestion.cpp:337
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "'%1'을(를) 여시겠습니까?"
+
+#: browseropenorsavequestion.cpp:246
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "다음으로 열기(&O)..."
+
+#: browseropenorsavequestion.cpp:266
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "다음으로 열기(&O)..."
+
+#: browseropenorsavequestion.cpp:334
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "열기(&O)"
+
+#: browseropenorsavequestion.cpp:359
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "이름: %1"
+
+#: browseropenorsavequestion.cpp:361
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "서버에서 제안한 파일 이름입니다"
+
+#: browserrun.cpp:346
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "'%1'(을)를 실행하시겠습니까?"
+
+#: browserrun.cpp:347
+#, kde-format
+msgid "Execute File?"
+msgstr "파일을 실행시키시겠습니까?"
+
+#: browserrun.cpp:347
+#, kde-format
+msgid "Execute"
+msgstr "실행"
+
+#: browserrun.cpp:405
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "다운로드 관리자 (%1) 을(를) $PATH에서 찾을 수 없습니다 "
+
+#: browserrun.cpp:406
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"다음을 다시 설치해 보십시오. \n"
+"\n"
+"컹커러 통합을 사용할 수 없습니다."
+
+#: browserrun.cpp:432
+#, kde-format
+msgid "Save As"
+msgstr "다른 이름으로 저장"
+
+#: htmlsettingsinterface.cpp:34
+#, kde-format
+msgid "Accept"
+msgstr "수락"
+
+#: htmlsettingsinterface.cpp:36
+#, kde-format
+msgid "Reject"
+msgstr "거부"
+
+#: readwritepart.cpp:93
+#, kde-format
+msgid "Untitled"
+msgstr "제목 없음"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"문서 \"%1\"(이)가 수정되었습니다.\n"
+"변경 사항을 저장하거나 무시하시겠습니까?"
+
+#: readwritepart.cpp:104
+#, kde-format
+msgid "Close Document"
+msgstr "문서 닫기"
