@@ -43,7 +43,7 @@ public:
         return m_openFileCalled;
     }
 protected:
-    bool openFile() Q_DECL_OVERRIDE
+    bool openFile() override
     {
         m_openFileCalled = true;
         return true;
