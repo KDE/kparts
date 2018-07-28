@@ -132,7 +132,7 @@ public:
 
     /**
      * This convenience method returns the browserExtension for this part,
-     * or 0 if there isn't any.
+     * or @c nullptr if there isn't any.
      */
     BrowserExtension *browserExtension() const;
 
@@ -218,7 +218,7 @@ Q_SIGNALS:
     /**
      * The part emits this when starting data.
      * If using a KIO::Job, it sets the job in the signal, so that
-     * progress information can be shown. Otherwise, job is 0.
+     * progress information can be shown. Otherwise, job is @c nullptr.
      **/
     void started(KIO::Job *);
 

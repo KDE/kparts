@@ -46,7 +46,7 @@ public:
      * @param url the URL we're probing
      * @param args URL args - includes reload, metaData, etc.
      * @param browserArgs browser-related args - includes data for a HTTP POST, etc.
-     * @param part the part going to open this URL - can be 0 if not created yet
+     * @param part the part going to open this URL - can be @c nullptr if not created yet
      * @param window the mainwindow - passed to KIO::Job::setWindow()
      * @param removeReferrer if true, the "referrer" metadata from @p args isn't passed on
      * @param trustedSource if false, a warning will be shown before launching an executable.
