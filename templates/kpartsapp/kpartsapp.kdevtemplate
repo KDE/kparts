@@ -1,6 +1,7 @@
 # KDE Config File
 [General]
 Name=KParts Application
+Name[ar]=تطبيق «أجزاءك»
 Name[ca]=Aplicació de les KParts
 Name[ca@valencia]=Aplicació de les KParts
 Name[cs]=Aplikace KParts
@@ -36,6 +37,7 @@ Name[x-test]=xxKParts Applicationxx
 Name[zh_CN]=KParts 应用
 Name[zh_TW]=KParts 應用程式
 Comment=Generate an application built on the KParts framework, using CMake.
+Comment[ar]=ولّد تطبيقًا يعتمد على إطار عمل «أجزاءك» باستخدام CMake.
 Comment[ca]=Genera una construcció d'aplicació en el Framework KParts, usant el CMake.
 Comment[ca@valencia]=Genera una construcció d'aplicació en el Framework KParts, usant el CMake.
 Comment[cs]=Generovat aplikaci postavenou na frameworku KParts pomocí CMake.
