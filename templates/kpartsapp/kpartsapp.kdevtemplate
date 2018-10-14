@@ -49,6 +49,7 @@ Comment[eu]=Sortu aplikazio bat KParts-framework azpiegituran eraikia, CMake era
 Comment[fi]=Luo KParts-sovelluskehykseen pohjautuva sovellus käyttäen CMakea.
 Comment[fr]=Générer une application construite sur l'environnement KParts, utilisant CMake.
 Comment[gl]=Xerar un aplicativo construído coa infraestrutura KParts, usando CMake.
+Comment[hu]=Generál egy, a KParts keretrendszerre épülő, CMake-et használó alkalmazást.
 Comment[ia]=Generar un application construite sur le skeleto KParts, usante CMake.
 Comment[id]=Menghasilkan sebuah pembikinan aplikasi pada kerangka kerja KParts, menggunakan CMake.
 Comment[is]=Útbúðu forrit byggt á KParts-stuðningskerfinu, með því að nota CMake.
