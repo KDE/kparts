@@ -536,7 +536,7 @@ void BrowserRun::slotCopyToTempFileResult(KJob *job)
         job->uiDelegate()->showErrorMessage();
     } else {
         // Same as KRun::foundMimeType but with a different URL
-        (void)(KRun::runUrl(static_cast<KIO::FileCopyJob *>(job)->destUrl(), d->m_mimeType, d->m_window));
+        (void)(KRun::runUrl(static_cast<KIO::FileCopyJob *>(job)->destUrl(), d->m_mimeType, d->m_window, KRun::RunFlags(KRun::RunExecutables)));
     }
     setError(true);   // see above
     setFinished(true);
