@@ -35,7 +35,7 @@ class ReadWritePartPrivate: public ReadOnlyPartPrivate
 public:
     Q_DECLARE_PUBLIC(ReadWritePart)
 
-    ReadWritePartPrivate(ReadWritePart *q): ReadOnlyPartPrivate(q)
+    explicit ReadWritePartPrivate(ReadWritePart *q): ReadOnlyPartPrivate(q)
     {
         m_bModified = false;
         m_bReadWrite = true;

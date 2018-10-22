@@ -36,7 +36,7 @@ class PartPrivate: public PartBasePrivate
 public:
     Q_DECLARE_PUBLIC(Part)
 
-    PartPrivate(Part *q)
+    explicit PartPrivate(Part *q)
         : PartBasePrivate(q),
           m_iconLoader(nullptr),
           m_bSelectable(true),
