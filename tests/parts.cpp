@@ -31,7 +31,6 @@
 #include <QFile>
 #include <QDir>
 #include <QTextStream>
-#include <QTest>
 #include <QTextEdit>
 #include <QLineEdit>
 #include <QTest>
