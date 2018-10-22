@@ -45,7 +45,7 @@ void BrowserInterface::callMethod(const char *name, const QVariant &argument)
     case QVariant::StringList: {
         QStringList strLst = argument.toStringList();
         QMetaObject::invokeMethod(this, name,
-                                  Q_ARG(QStringList *, &strLst));
+                                  Q_ARG(QStringList*, &strLst));
         break;
     }
     case QVariant::Int:
@@ -55,7 +55,7 @@ void BrowserInterface::callMethod(const char *name, const QVariant &argument)
     case QVariant::UInt: {
         unsigned int i = argument.toUInt();
         QMetaObject::invokeMethod(this, name,
-                                  Q_ARG(unsigned int *, &i));
+                                  Q_ARG(uint*, &i));
         break;
     }
     case QVariant::Bool:
