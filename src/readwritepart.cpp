@@ -108,7 +108,7 @@ bool ReadWritePart::queryClose()
 
     switch (res) {
     case KMessageBox::Yes :
-        sigQueryClose(&handled, &abortClose);
+        emit sigQueryClose(&handled, &abortClose);
         if (!handled) {
             if (d->m_url.isEmpty()) {
                 QUrl url = QFileDialog::getSaveFileUrl(parentWidget);
@@ -261,12 +261,13 @@ bool ReadWritePart::saveToUrl()
         }
         d->m_uploadJob = KIO::file_move(uploadUrl, d->m_url, -1, KIO::Overwrite);
         KJobWidgets::setWindow(d->m_uploadJob, widget());
-        connect(d->m_uploadJob, SIGNAL(result(KJob*)), this, SLOT(_k_slotUploadFinished(KJob*)));
+        connect(d->m_uploadJob, &KJob::result,
+                this, [&](KJob* job) { d->handleUploadFinished(job); });
         return true;
     }
 }
 
-void ReadWritePartPrivate::_k_slotUploadFinished(KJob *)
+void ReadWritePartPrivate::handleUploadFinished(KJob *)
 {
     Q_Q(ReadWritePart);
 
