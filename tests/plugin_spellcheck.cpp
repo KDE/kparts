@@ -18,9 +18,10 @@
     Boston, MA 02110-1301, USA.
 */
 
+#include "plugin_spellcheck.h"
+
 #include "notepad.h" // this plugin applies to a notepad part
 #include <QTextEdit>
-#include "plugin_spellcheck.h"
 #include <QAction>
 #include <kactioncollection.h>
 #include <kmessagebox.h>

@@ -19,10 +19,13 @@
     Boston, MA 02110-1301, USA.
 */
 
+#include "partviewer.h"
+
 #include <kactioncollection.h>
 #include <klocalizedstring.h>
-#include <qmimedatabase.h>
+#include <kmimetypetrader.h>
 
+#include <qmimedatabase.h>
 #include <QAction>
 #include <QApplication>
 #include <QFileDialog>
@@ -31,8 +34,6 @@
 #include <QFile>
 #include <QTest>
 
-#include "partviewer.h"
-#include <kmimetypetrader.h>
 
 PartViewer::PartViewer()
 {
