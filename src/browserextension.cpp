@@ -254,7 +254,7 @@ void BrowserExtension::slotOpenUrlRequest(const QUrl &url, const KParts::OpenUrl
     req.m_delayedArgs = args;
     req.m_delayedBrowserArgs = browserArgs;
     d->m_requests.append(req);
-    QTimer::singleShot(0, this, SLOT(slotEmitOpenUrlRequestDelayed()));
+    QTimer::singleShot(0, this, &BrowserExtension::slotEmitOpenUrlRequestDelayed);
 }
 
 void BrowserExtension::slotEmitOpenUrlRequestDelayed()
