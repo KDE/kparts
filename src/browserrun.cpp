@@ -369,7 +369,7 @@ BrowserRun::AskSaveResult BrowserRun::askEmbedOrSave(const QUrl &url, const QStr
     question.setSuggestedFileName(suggestedFileName);
     const BrowserOpenOrSaveQuestion::Result result = question.askEmbedOrSave(flags);
     return result == BrowserOpenOrSaveQuestion::Save ? Save
-           : BrowserOpenOrSaveQuestion::Embed ? Open
+           : result == BrowserOpenOrSaveQuestion::Embed ? Open
            : Cancel;
 }
 #endif
