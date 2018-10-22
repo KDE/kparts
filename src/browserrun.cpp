@@ -462,7 +462,7 @@ void BrowserRun::saveUrlUsingKIO(const QUrl &srcUrl, const QUrl &destUrl,
     job->addMetaData(QStringLiteral("MaxCacheSize"), QStringLiteral("0")); // Don't store in http cache.
     job->addMetaData(QStringLiteral("cache"), QStringLiteral("cache")); // Use entry from cache if available.
     KJobWidgets::setWindow(job, window);
-    job->ui()->setAutoErrorHandlingEnabled(true);
+    job->uiDelegate()->setAutoErrorHandlingEnabled(true);
     new DownloadJobWatcher(job, metaData);
 }
 
