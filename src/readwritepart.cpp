@@ -261,13 +261,12 @@ bool ReadWritePart::saveToUrl()
         }
         d->m_uploadJob = KIO::file_move(uploadUrl, d->m_url, -1, KIO::Overwrite);
         KJobWidgets::setWindow(d->m_uploadJob, widget());
-        connect(d->m_uploadJob, &KJob::result,
-                this, [&](KJob* job) { d->handleUploadFinished(job); });
+        connect(d->m_uploadJob, SIGNAL(result(KJob*)), this, SLOT(_k_slotUploadFinished(KJob*)));
         return true;
     }
 }
 
-void ReadWritePartPrivate::handleUploadFinished(KJob *)
+void ReadWritePartPrivate::_k_slotUploadFinished(KJob *)
 {
     Q_Q(ReadWritePart);
 
