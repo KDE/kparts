@@ -1,0 +1,175 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Amitakhya Phukan <aphukan@fedoraproject.org>, 2008.
+# Amitakhya Phukan <অমিতাক্ষ ফুকন>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4_as\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-08-16 09:05+0200\n"
+"PO-Revision-Date: 2008-12-26 15:19+0530\n"
+"Last-Translator: Amitakhya Phukan <অমিতাক্ষ ফুকন>\n"
+"Language-Team: Assamese <fedora-trans-as@redhat.com>\n"
+"Language: as\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 0.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "অমিতাক্ষ ফুকন"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "aphukan@fedoraproject.org"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt><b>%1</b> সম্বন্ধে ইন্টাৰ্নে'টত অনুসন্ধান কৰা হ'ব নেকি ?</qt>"
+
+#: browserextension.cpp:242
+#, kde-format
+msgid "Internet Search"
+msgstr "ইন্টাৰ্নে'টত অনুসন্ধান"
+
+#: browserextension.cpp:242
+#, kde-format
+msgid "&Search"
+msgstr "অনুসন্ধান (&S)"
+
+#: browseropenorsavequestion.cpp:104
+#, fuzzy, kde-format
+#| msgid "Re: %1"
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "পুনৰাবৃত্তি: %1"
+
+#: browseropenorsavequestion.cpp:112
+#, fuzzy, kde-format
+#| msgid "Do not show this message again"
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "পুনঃ এই বাৰ্তা প্ৰদৰ্শন কৰা ন'হ'ব"
+
+#: browseropenorsavequestion.cpp:164 browseropenorsavequestion.cpp:257
+#, fuzzy, kde-format
+#| msgid "&Open with '%1'"
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "'%1' সহযোগে খোলক (&O)"
+
+#: browseropenorsavequestion.cpp:231
+#, fuzzy, kde-format
+#| msgid "&Open with '%1'"
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "'%1' সহযোগে খোলক (&O)"
+
+#: browseropenorsavequestion.cpp:242 browseropenorsavequestion.cpp:337
+#, fuzzy, kde-format
+#| msgid "Open '%1'"
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "'%1' খোলক"
+
+#: browseropenorsavequestion.cpp:246
+#, fuzzy, kde-format
+#| msgid "&Open With..."
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "চিহ্নিত সামগ্ৰী সহ খোলক...(&O)"
+
+#: browseropenorsavequestion.cpp:266
+#, fuzzy, kde-format
+#| msgid "&Open With..."
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "চিহ্নিত সামগ্ৰী সহ খোলক...(&O)"
+
+#: browseropenorsavequestion.cpp:334
+#, fuzzy, kde-format
+#| msgid "&Open"
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "খোলক (&O)"
+
+#: browseropenorsavequestion.cpp:359
+#, fuzzy, kde-format
+#| msgid "Name: "
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "নাম: "
+
+#: browseropenorsavequestion.cpp:361
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr ""
+
+#: browserrun.cpp:346
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "আপুনি নিশ্চিতৰূপে '%1' সঞ্চালন কৰিবলৈ ইচ্ছুক নে ?"
+
+#: browserrun.cpp:347
+#, kde-format
+msgid "Execute File?"
+msgstr "নথিপত্ৰ চলোৱা হ'ব নে ?"
+
+#: browserrun.cpp:347
+#, kde-format
+msgid "Execute"
+msgstr "চলাওক"
+
+#: browserrun.cpp:405
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Download Manager (%1) ক আপোনাৰ $PATH ত পোৱা ন'গ'ল"
+
+#: browserrun.cpp:406
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+
+#: browserrun.cpp:432
+#, kde-format
+msgid "Save As"
+msgstr "নতুন ৰূপে সংৰক্ষণ"
+
+#: htmlsettingsinterface.cpp:34
+#, kde-format
+msgid "Accept"
+msgstr "গ্ৰহণ কৰা হ'ব"
+
+#: htmlsettingsinterface.cpp:36
+#, kde-format
+msgid "Reject"
+msgstr "প্ৰত্যাখ্যান কৰা হ'ব"
+
+#: readwritepart.cpp:93
+#, kde-format
+msgid "Untitled"
+msgstr "শিৰোনামনোহোৱা"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"\"%1\" আলেখ্যনত কিছু পৰিবৰ্তন কৰা হৈছে ।\n"
+"পৰিবৰ্তনসমূহ সংৰক্ষণ কৰা হ'ব নে বৰ্জন কৰা হ'ব?"
+
+#: readwritepart.cpp:104
+#, kde-format
+msgid "Close Document"
+msgstr "আলেখ্যন বন্ধ কৰক"
