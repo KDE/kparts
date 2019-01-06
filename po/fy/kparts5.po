@@ -1,0 +1,177 @@
+# translation of kdelibs4.po to Nederlands
+# translation of kdelibs4.po to
+# KTranslator Generated File
+# Fryske oersetting fan kdelibs.
+# Copyright (C) 2000,2001,2002,2003 KDE e.v..
+# let op! het bestand bevat ter hoogte van string 2470
+# een gesplitste zinnen die mbv. %1 of %2 weer worden samengevoegd!!
+# Bauke Nicolai <mildaam@hotmail.com>, 2002.
+# KDE-oersetgroep Frysk <frysk@kde.nl>, 2000, 2001, 2002,2003.
+# Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2006, 2007.
+# Berend ytsma <berendy@bigfoot.com>, 2004.
+# Rinse de Vries <RinseDeVries@home.nl>, 2006, 2008.
+# Berend Ytsma <berendy@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-08-16 09:05+0200\n"
+"PO-Revision-Date: 2010-07-22 09:48+0100\n"
+"Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
+"Language-Team: nl <kde-i18n-doc@lists.kde.org>\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KAider 0.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Berend Ytsma"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "Berendy@gmail.com"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Wolle jo op it ynternet sykje om<b>'%1'</b>?</qt>"
+
+#: browserextension.cpp:242
+#, kde-format
+msgid "Internet Search"
+msgstr "Sykje op Ynternet"
+
+#: browserextension.cpp:242
+#, kde-format
+msgid "&Search"
+msgstr "&Sykje"
+
+#: browseropenorsavequestion.cpp:104
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Type: %1"
+
+#: browseropenorsavequestion.cpp:112
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Unthâld de aksje foar dit triemtype"
+
+#: browseropenorsavequestion.cpp:164 browseropenorsavequestion.cpp:257
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&Iepenje mei %1"
+
+#: browseropenorsavequestion.cpp:231
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Iepenje &mei  %1"
+
+#: browseropenorsavequestion.cpp:242 browseropenorsavequestion.cpp:337
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Iepenje '%1'?"
+
+#: browseropenorsavequestion.cpp:246
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Iepenje mei..."
+
+#: browseropenorsavequestion.cpp:266
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Iepenje mei"
+
+#: browseropenorsavequestion.cpp:334
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Iepenje"
+
+#: browseropenorsavequestion.cpp:359
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Namme: %1"
+
+#: browseropenorsavequestion.cpp:361
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr ""
+
+#: browserrun.cpp:346
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Wolle jo grif '%1' útfiere?"
+
+#: browserrun.cpp:347
+#, kde-format
+msgid "Execute File?"
+msgstr "Triem útfiere?"
+
+#: browserrun.cpp:347
+#, kde-format
+msgid "Execute"
+msgstr "Utfiere"
+
+#: browserrun.cpp:405
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "De ynlaadbehearder (%1) wie net te finen yn jo sykpaad ($PATH) "
+
+#: browserrun.cpp:406
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Besykje dizze op 'e nij te ynstallearjen.  \n"
+"\n"
+"De yntegraasje mei Konqueror wurdt no útskeakele."
+
+#: browserrun.cpp:432
+#, kde-format
+msgid "Save As"
+msgstr "Bewarje as"
+
+#: htmlsettingsinterface.cpp:34
+#, kde-format
+msgid "Accept"
+msgstr "Akseptearje"
+
+#: htmlsettingsinterface.cpp:36
+#, kde-format
+msgid "Reject"
+msgstr "Ofkarre"
+
+#: readwritepart.cpp:93
+#, kde-format
+msgid "Untitled"
+msgstr "Nammeleas"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"It dokumint \"%1\" is feroare.\n"
+"Wolle jo de wizigingen bewarje of negearje?"
+
+#: readwritepart.cpp:104
+#, kde-format
+msgid "Close Document"
+msgstr "Dokumint slúte"
