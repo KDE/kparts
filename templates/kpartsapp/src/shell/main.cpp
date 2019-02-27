@@ -50,8 +50,6 @@ int main(int argc, char **argv)
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("%{APPNAMELC}")));
 
     QCommandLineParser parser;
-    parser.addHelpOption();
-    parser.addVersionOption();
     aboutData.setupCommandLine(&parser);
     parser.addPositionalArgument(QStringLiteral("urls"), i18n("Document(s) to load."), QStringLiteral("[urls...]"));
 
