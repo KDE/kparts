@@ -18,7 +18,7 @@ Window::Window()
 {
     this->resize(800, 600);
 
-    KService::Ptr service = KService::serviceByDesktopName("konsolepart");
+    KService::Ptr service = KService::serviceByDesktopName(QStringLiteral("konsolepart"));
     Q_ASSERT(service);
 
     KParts::ReadOnlyPart *part = service->createInstance<KParts::ReadOnlyPart>(this, this, QVariantList());
@@ -34,7 +34,7 @@ Window::Window()
 
 int main(int argc, char **argv)
 {
-    QApplication::setApplicationName("tetest");
+    QApplication::setApplicationName(QStringLiteral("tetest"));
     QApplication app(argc, argv);
     Window *window = new Window();
     window->show();

@@ -43,8 +43,6 @@ find_package(KF5TextWidgets ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5WidgetsAddons ${KF5_DEP_VERSION} REQUIRED)
 find_package(KF5XmlGui ${KF5_DEP_VERSION} REQUIRED)
 
-remove_definitions(-DQT_NO_CAST_FROM_ASCII)
-remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
 
 if(BUILD_TESTING)
   add_subdirectory( tests )
@@ -54,9 +52,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kparts5\")
 if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
     ki18n_install(po)
 endif()
-add_definitions(-DQT_NO_CAST_FROM_ASCII)
-add_definitions(-DQT_NO_CAST_TO_ASCII)
-
 #add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 
 add_subdirectory( src )
