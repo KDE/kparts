@@ -430,7 +430,7 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
     QFileDialog *dlg = new QFileDialog(window);
     dlg->setAcceptMode(QFileDialog::AcceptSave);
     dlg->setWindowTitle(i18n("Save As"));
-    dlg->setConfirmOverwrite(true);
+    dlg->setOption(QFileDialog::DontConfirmOverwrite, false);
 
     QString name;
     if (!suggestedFileName.isEmpty()) {
