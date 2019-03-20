@@ -131,12 +131,12 @@ PartManager::PartManager(QWidget *topLevel, QObject *parent)
 
 PartManager::~PartManager()
 {
-    foreach (const QWidget *w, d->m_managedTopLevelWidgets) {
+    for (const QWidget *w : qAsConst(d->m_managedTopLevelWidgets)) {
         disconnect(w, &QWidget::destroyed,
                    this, &PartManager::slotManagedTopLevelWidgetDestroyed);
     }
 
-    foreach (Part *it, d->m_parts) {
+    for (Part *it : qAsConst(d->m_parts)) {
         it->setManager(nullptr);
     }
 

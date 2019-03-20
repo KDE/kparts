@@ -92,8 +92,9 @@ QList<Plugin::PluginInfo> Plugin::pluginInfos(const QString &componentName)
     QMap<QString, QStringList> sortedPlugins;
 
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, componentName + QStringLiteral("/kpartplugins"), QStandardPaths::LocateDirectory);
-    Q_FOREACH (const QString &dir, dirs) {
-        Q_FOREACH (const QString &file, QDir(dir).entryList(QStringList(QStringLiteral("*.rc")))) {
+    for (const QString &dir : dirs) {
+        const auto rcfiles = QDir(dir).entryList(QStringList(QStringLiteral("*.rc")));
+        for (const QString &file : rcfiles) {
             const QFileInfo fInfo(dir + QLatin1Char('/') + file);
             QMap<QString, QStringList>::Iterator mapIt = sortedPlugins.find(fInfo.fileName());
             if (mapIt == sortedPlugins.end()) {
