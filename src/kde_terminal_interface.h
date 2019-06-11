@@ -125,6 +125,31 @@ public:
     virtual QString currentWorkingDirectory() const = 0;
 };
 
+class TerminalInterfaceV2 : public TerminalInterface {
+public:
+    /**
+     * Returns the names of available profiles.
+     */
+    virtual QStringList availableProfiles() const = 0;
+
+    /**
+     * Returns the name of the currently active profile.
+     */
+    virtual QString currentProfileName() const = 0;
+
+    /**
+     * Changes the currently active profile to @p profileName.
+     * @returns Returns true if setting the profile was successful
+     */
+    virtual bool setCurrentProfile(const QString &profileName) = 0;
+
+    /**
+     * Returns the property @p profileProperty of the currently active profile.
+     */
+    virtual QVariant profileProperty(const QString &profileProperty) const = 0;
+};
+
+Q_DECLARE_INTERFACE(TerminalInterfaceV2, "org.kde.TerminalInterfaceV2")
 Q_DECLARE_INTERFACE(TerminalInterface, "org.kde.TerminalInterface")
 
 #endif
