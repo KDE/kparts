@@ -1,0 +1,178 @@
+# KDE3 - Georgian translation of kdelibs4.po
+# Gia Shervashidze <giasher@telenet.ge>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 02:57+0200\n"
+"PO-Revision-Date: 2009-12-17 02:11+0400\n"
+"Last-Translator: George Machitidze <giomac@gmail.com>\n"
+"Language-Team: Georgian <http://www.gia.ge>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "გია შერვაშიძე"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "giasher@telenet.ge"
+
+#: browserextension.cpp:241
+#, fuzzy, kde-format
+#| msgid "<qt>Do you want to search the Internet for <b>%1</b>?"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>მოვიძიო <b>%1</b> ინტერნეტში?"
+
+#: browserextension.cpp:242
+#, kde-format
+msgid "Internet Search"
+msgstr "ძიება ინტერნეტში"
+
+#: browserextension.cpp:242
+#, kde-format
+msgid "&Search"
+msgstr "&ძიება"
+
+#: browseropenorsavequestion.cpp:104
+#, fuzzy, kde-format
+#| msgid "Redo: %1"
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "გამეორება: %1"
+
+#: browseropenorsavequestion.cpp:112
+#, fuzzy, kde-format
+#| msgid "Do not show this message again"
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "აღარ მიჩვენო ეს შეტყობინება"
+
+#: browseropenorsavequestion.cpp:164 browseropenorsavequestion.cpp:257
+#, fuzzy, kde-format
+#| msgid "&Open with '%1'"
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&გახსნა - '%1'"
+
+#: browseropenorsavequestion.cpp:231
+#, fuzzy, kde-format
+#| msgid "&Open with '%1'"
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "&გახსნა - '%1'"
+
+#: browseropenorsavequestion.cpp:242 browseropenorsavequestion.cpp:337
+#, fuzzy, kde-format
+#| msgid "Open '%1'"
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "გახსნა - '%1'"
+
+#: browseropenorsavequestion.cpp:246
+#, fuzzy, kde-format
+#| msgid "&Open With..."
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&გახსნა პროგრამით..."
+
+#: browseropenorsavequestion.cpp:266
+#, fuzzy, kde-format
+#| msgid "&Open With..."
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&გახსნა პროგრამით..."
+
+#: browseropenorsavequestion.cpp:334
+#, fuzzy, kde-format
+#| msgid "&Open"
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&გახსნა"
+
+#: browseropenorsavequestion.cpp:359
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "სახელი:"
+
+#: browseropenorsavequestion.cpp:361
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr ""
+
+#: browserrun.cpp:346
+#, fuzzy, kde-format
+#| msgid "Do you really want to execute '%1'? "
+msgid "Do you really want to execute '%1'?"
+msgstr "ნამდვილად გსურთ შეასრულოთ '%1'?"
+
+#: browserrun.cpp:347
+#, kde-format
+msgid "Execute File?"
+msgstr "შევასრულო ფაილი?"
+
+#: browserrun.cpp:347
+#, kde-format
+msgid "Execute"
+msgstr "შესრულება"
+
+#: browserrun.cpp:405
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "ჩამოტვირთვის პროგრამა (%1) თქვენს გეზზე $PATH ვერ მოიძებნა."
+
+#: browserrun.cpp:406
+#, fuzzy, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"სცადეთ ხელახლა ჩადგმა.\n"
+"\n"
+"ინტეგრაცია Konqueror-თან ამოირთვება!"
+
+#: browserrun.cpp:432
+#, kde-format
+msgid "Save As"
+msgstr "შენახვა როგორც"
+
+#: htmlsettingsinterface.cpp:34
+#, kde-format
+msgid "Accept"
+msgstr "მიღება"
+
+#: htmlsettingsinterface.cpp:36
+#, kde-format
+msgid "Reject"
+msgstr "უარყოფა"
+
+#: readwritepart.cpp:93
+#, kde-format
+msgid "Untitled"
+msgstr "უსახელო"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"დოკუმენტი \"%1\" შეიცვალა.\n"
+"გნებავთ ცვლილებების შენახვა თუ უარყოფთ?"
+
+#: readwritepart.cpp:104
+#, kde-format
+msgid "Close Document"
+msgstr "დოკუმენტის დახურვა"
