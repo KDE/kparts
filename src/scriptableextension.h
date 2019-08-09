@@ -23,7 +23,6 @@
 
 #include <kparts/part.h>
 
-#include <QtGlobal>
 #include <QObject>
 #include <QVariant>
 

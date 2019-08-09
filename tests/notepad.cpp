@@ -24,12 +24,10 @@
 #include <kparts/mainwindow.h>
 
 #include <QAction>
-#include <QSplitter>
 #include <QFile>
 #include <QTextStream>
-#include <QTest>
-#include <QStatusBar>
 #include <QTextEdit>
+#include <QTest>
 
 #include <kaboutdata.h>
 #include <QDebug>

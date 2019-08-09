@@ -29,7 +29,6 @@
 #include <QAction>
 #include <QCheckBox>
 #include <QFile>
-#include <QDir>
 #include <QTextStream>
 #include <QTextEdit>
 #include <QLineEdit>

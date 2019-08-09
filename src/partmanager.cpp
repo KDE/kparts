@@ -27,7 +27,7 @@
 
 #include <QApplication>
 #include <QScrollBar>
-#include <QKeyEvent>
+#include <QMouseEvent>
 
 #include <QDebug>
 

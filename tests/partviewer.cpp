@@ -29,11 +29,8 @@
 #include <QAction>
 #include <QApplication>
 #include <QFileDialog>
-#include <QWidget>
-#include <QDir>
 #include <QFile>
 #include <QTest>
-
 
 PartViewer::PartViewer()
 {

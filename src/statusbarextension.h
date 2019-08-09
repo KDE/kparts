@@ -24,7 +24,6 @@
 #include <kparts/kparts_export.h>
 
 #include <QWidget>
-#include <QList>
 
 class QStatusBar;
 class KMainWindow;

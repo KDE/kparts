@@ -19,8 +19,8 @@
 
 #include "browserinterface.h"
 
-#include <QMetaEnum>
 #include <QStringList>
+#include <QVariant>
 
 using namespace KParts;
 

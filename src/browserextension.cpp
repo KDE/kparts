@@ -27,7 +27,6 @@
 #include <QClipboard>
 #include <QTimer>
 #include <QMap>
-#include <QMetaEnum>
 #include <QRegExp>
 
 #include <QDebug>
