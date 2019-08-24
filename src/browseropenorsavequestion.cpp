@@ -227,7 +227,7 @@ BrowserOpenOrSaveQuestion::~BrowserOpenOrSaveQuestion()
 
 static QAction *createAppAction(const KService::Ptr &service, QObject *parent)
 {
-    QString actionName(service->name().replace(QLatin1Char('&'), QStringLiteral("&&")));
+    QString actionName(service->name().replace(QLatin1Char('&'), QLatin1String("&&")));
     actionName = i18nc("@action:inmenu", "Open &with %1", actionName);
 
     QAction *act = new QAction(parent);

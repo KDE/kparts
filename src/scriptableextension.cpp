@@ -427,7 +427,7 @@ void ScriptableLiveConnectExtension::liveConnectEvent(const unsigned long, const
         }
         if ((*i).first == KParts::LiveConnectExtension::TypeString) {
             script += QLatin1Char('"') +
-                      QString((*i).second).replace(QLatin1Char('\\'), QStringLiteral("\\\\")).replace(QLatin1Char('"'), QStringLiteral("\\\"")) +
+                      QString((*i).second).replace(QLatin1Char('\\'), QLatin1String("\\\\")).replace(QLatin1Char('"'), QLatin1String("\\\"")) +
                       QLatin1Char('"');
         } else {
             script += (*i).second;
