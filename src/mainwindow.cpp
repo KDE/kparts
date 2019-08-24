@@ -178,7 +178,7 @@ void MainWindow::createShellGUI(bool create)
         if (!f.isEmpty()) {
             setXMLFile(f, true);
         } else {
-            QString auto_file(componentName() + QStringLiteral("ui.rc"));
+            QString auto_file(componentName() + QLatin1String("ui.rc"));
             setXMLFile(auto_file, true);
         }
 

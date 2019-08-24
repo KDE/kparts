@@ -91,7 +91,7 @@ QList<Plugin::PluginInfo> Plugin::pluginInfos(const QString &componentName)
 
     QMap<QString, QStringList> sortedPlugins;
 
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, componentName + QStringLiteral("/kpartplugins"), QStandardPaths::LocateDirectory);
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, componentName + QLatin1String("/kpartplugins"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const auto rcfiles = QDir(dir).entryList(QStringList(QStringLiteral("*.rc")));
         for (const QString &file : rcfiles) {
@@ -115,7 +115,7 @@ QList<Plugin::PluginInfo> Plugin::pluginInfos(const QString &componentName)
         }
 
         // qDebug() << "found KParts Plugin : " << info.m_absXMLFileName;
-        info.m_relXMLFileName = QStringLiteral("kpartplugins/") + mapIt.key();
+        info.m_relXMLFileName = QLatin1String("kpartplugins/") + mapIt.key();
 
         info.m_document.setContent(doc);
         if (info.m_document.documentElement().isNull()) {
@@ -215,7 +215,7 @@ void Plugin::loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient,
                          const QString &componentName, bool enableNewPluginsByDefault,
                          int interfaceVersionRequired)
 {
-    KConfigGroup cfgGroup(KSharedConfig::openConfig(componentName + QStringLiteral("rc")), "KParts Plugins");
+    KConfigGroup cfgGroup(KSharedConfig::openConfig(componentName + QLatin1String("rc")), "KParts Plugins");
     const QList<PluginInfo> plugins = pluginInfos(componentName);
     QList<PluginInfo>::ConstIterator pIt = plugins.begin();
     const QList<PluginInfo>::ConstIterator pEnd = plugins.end();
@@ -232,12 +232,12 @@ void Plugin::loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient,
         const QString name = docElem.attribute(QStringLiteral("name"));
 
         bool pluginEnabled = enableNewPluginsByDefault;
-        if (cfgGroup.hasKey(name + QStringLiteral("Enabled"))) {
-            pluginEnabled = cfgGroup.readEntry(name + QStringLiteral("Enabled"), false);
+        if (cfgGroup.hasKey(name + QLatin1String("Enabled"))) {
+            pluginEnabled = cfgGroup.readEntry(name + QLatin1String("Enabled"), false);
         } else { // no user-setting, load plugin default setting
             QString relPath = componentName + QLatin1Char('/') + (*pIt).m_relXMLFileName;
             relPath.truncate(relPath.lastIndexOf(QLatin1Char('.'))); // remove extension
-            relPath += QStringLiteral(".desktop");
+            relPath += QLatin1String(".desktop");
             //qDebug() << "looking for " << relPath;
             const QString desktopfile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, relPath);
             if (!desktopfile.isEmpty()) {
