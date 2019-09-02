@@ -76,14 +76,12 @@ public:
 
     /**
      * Ask the user whether to save or open a url in another application.
-     * @param parent parent widget for the dialog
      * @return Save, Open or Cancel.
      */
     Result askOpenOrSave();
 
     /**
      * Ask the user whether to save or open a url in another application.
-     * @param parent parent widget for the dialog
      * @param flags set to BrowserRun::AttachmentDisposition if suggested by the server
      * This is used because by default text/html files are opened embedded in browsers, not saved.
      * But if the server said "attachment", it means the user is download a file for saving it.
