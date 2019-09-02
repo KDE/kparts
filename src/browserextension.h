@@ -377,7 +377,7 @@ Q_SIGNALS:
      */
     void popupMenu(const QPoint &global, const KFileItemList &items,
                    const KParts::OpenUrlArguments &args = KParts::OpenUrlArguments(),
-                   const KParts::BrowserArguments &browserArgs = KParts::BrowserArguments(),
+                   const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments(),
                    KParts::BrowserExtension::PopupFlags flags = KParts::BrowserExtension::DefaultPopupItems,
                    const KParts::BrowserExtension::ActionGroupMap &actionGroups = ActionGroupMap());
 
@@ -398,7 +398,7 @@ Q_SIGNALS:
     void popupMenu(const QPoint &global, const QUrl &url,
                    mode_t mode = static_cast<mode_t>(-1),
                    const KParts::OpenUrlArguments &args = KParts::OpenUrlArguments(),
-                   const KParts::BrowserArguments &browserArgs = KParts::BrowserArguments(),
+                   const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments(),
                    KParts::BrowserExtension::PopupFlags flags = KParts::BrowserExtension::DefaultPopupItems,
                    const KParts::BrowserExtension::ActionGroupMap &actionGroups = ActionGroupMap());
 
