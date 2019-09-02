@@ -141,7 +141,7 @@ public:
      * The second parameter can be
      *
      * @param mode the desired filter mode as specified in @ref FilterMode.
-     * @param filters a list of filter texts based on the selected mode.
+     * @param filter a list of filter texts based on the selected mode.
      */
     virtual void setFilter(FilterMode mode, const QVariant &filter) = 0;
 
