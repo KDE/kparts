@@ -140,7 +140,7 @@ public:
      * if( factory() )
      * {
      *   const QList<KParts::Plugin *> plugins = KParts::Plugin::pluginObjects( this );
-     *   foreach ( KParts::Plugin * plugin, plugins )
+     *   for ( KParts::Plugin * plugin : plugins )
      *     factory()->addClient( plugin );
      * }
      * \endcode
