@@ -40,11 +40,11 @@ namespace KParts
  *  using qobject_cast<KParts::HtmlSettingsInterface>.
  *
  *  Example:
- *  <code>
+ *  @code
  *  KParts::HTMLExtension* extension = KParts::HTMLExtension::childObject(part);
  *  KParts::HtmlSettingsInterface* settings = qobject_cast&lt;KParts::HtmlSettingsInterface&gt;(extension);
  *  const bool autoLoadImages = settings->attribute(KParts::AutoLoadImages);
- *  </code>
+ *  @endcode
  *
  *  @since 4.8.1
  */

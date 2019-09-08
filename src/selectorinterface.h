@@ -38,9 +38,9 @@ namespace KParts
  * in order to find specific elements in an HTML document.
  *
  * Example:
- * <code>
+ * @code
  * const QList<SelectorInterface::Element> elements = selectorInterface->querySelectorAll("head > link[rel=\"alternate\"]");
- * </code>
+ * @endcode
  */
 class KPARTS_EXPORT SelectorInterface
 {
