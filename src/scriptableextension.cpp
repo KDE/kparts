@@ -414,8 +414,7 @@ void ScriptableLiveConnectExtension::liveConnectEvent(const unsigned long, const
 
     // Compute a string to evaluate. We need to escape a lot of stuff
     // since we're composing a bunch of strings into one.
-    QString script;
-    script.sprintf("%s(", event.toLatin1().constData());
+    QString script = event + QLatin1Char('(');
 
     LiveConnectExtension::ArgList::const_iterator i = args.begin();
     const LiveConnectExtension::ArgList::const_iterator argsBegin = i;
