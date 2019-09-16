@@ -77,7 +77,8 @@ add_library(KF5Parts ${KParts_LIB_SRCS})
 generate_export_header(KF5Parts EXPORT_FILE_NAME ${KParts_BINARY_DIR}/kparts/kparts_export.h BASE_NAME KParts)
 add_library(KF5::Parts ALIAS KF5Parts)
 
-target_include_directories(KF5Parts PUBLIC "$<BUILD_INTERFACE:${KParts_BINARY_DIR};${CMAKE_CURRENT_BINARY_DIR}>")
+set(KParts_BUILD_INCLUDE_DIRS ${KParts_BINARY_DIR} ${CMAKE_CURRENT_BINARY_DIR})
+target_include_directories(KF5Parts PUBLIC "$<BUILD_INTERFACE:${KParts_BUILD_INCLUDE_DIRS}>")
 target_include_directories(KF5Parts INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KParts>" )
 
 target_link_libraries(KF5Parts PUBLIC  KF5::KIOWidgets #browserrun.h uses krun.h
@@ -125,6 +126,8 @@ if(BUILD_QCH)
             KF5KIO_QCH
             KF5XmlGui_QCH
             KF5TextWidgets_QCH
+        INCLUDE_DIRS
+            ${KParts_BUILD_INCLUDE_DIRS}
         BLANK_MACROS
             KPARTS_EXPORT
             KPARTS_DEPRECATED
