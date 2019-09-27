@@ -79,6 +79,7 @@ public:
      */
     bool serverSuggestsSave() const;
 
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 0)
     enum AskSaveResult { Save, Open, Cancel };
     /**
      * Ask the user whether to save or open a url in another application.
@@ -87,17 +88,19 @@ public:
      * @param mimeType the mimetype of the URL
      * @param suggestedFileName optional file name suggested by the server
      * @return Save, Open or Cancel.
-     * @deprecated use BrowserOpenOrSaveQuestion
+     * @deprecated Since 5.0, use BrowserOpenOrSaveQuestion
      * @code
      *  BrowserOpenOrSaveQuestion dlg(parent, url, mimeType, suggestedFileName);
      *  const BrowserOpenOrSaveQuestion::Result res = dlg.askOpenOrSave();
      * @endcode
      */
-#ifndef KPARTS_NO_DEPRECATED
-    static KPARTS_DEPRECATED AskSaveResult askSave(const QUrl &url, KService::Ptr offer, const QString &mimeType, const QString &suggestedFileName = QString());
+    KPARTS_DEPRECATED_VERSION(5, 0, "Use KParts::BrowserOpenOrSaveQuestion")
+    static AskSaveResult askSave(const QUrl &url, KService::Ptr offer, const QString &mimeType, const QString &suggestedFileName = QString());
 #endif
 
     enum AskEmbedOrSaveFlags { InlineDisposition = 0, AttachmentDisposition = 1 };
+
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * Similar to askSave but for the case where the current application is
      * able to embed the url itself (instead of passing it to another app).
@@ -106,15 +109,15 @@ public:
      * @param suggestedFileName optional filename suggested by the server
      * @param flags set to AttachmentDisposition if suggested by the server
      * @return Save, Open or Cancel.
-     * @deprecated use BrowserOpenOrSaveQuestion
+     * @deprecated Since 5.0, use BrowserOpenOrSaveQuestion
      * @code
      *  BrowserOpenOrSaveQuestion dlg(parent, url, mimeType, suggestedFileName);
      *  const BrowserOpenOrSaveQuestion::Result res = dlg.askEmbedOrSave(flags);
      *  // Important: returns Embed now, not Open!
      * @endcode
      */
-#ifndef KPARTS_NO_DEPRECATED
-    static KPARTS_DEPRECATED AskSaveResult askEmbedOrSave(const QUrl &url, const QString &mimeType, const QString &suggestedFileName = QString(), int flags = 0);
+    KPARTS_DEPRECATED_VERSION(5, 0, "Use KParts::BrowserOpenOrSaveQuestion")
+    static AskSaveResult askEmbedOrSave(const QUrl &url, const QString &mimeType, const QString &suggestedFileName = QString(), int flags = 0);
 #endif
 
     // virtual so that KHTML can implement differently (HTML cache)

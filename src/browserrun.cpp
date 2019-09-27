@@ -348,7 +348,7 @@ bool BrowserRun::allowExecution(const QString &mimeType, const QUrl &url)
 }
 
 //static, deprecated
-#ifndef KPARTS_NO_DEPRECATED
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 0)
 BrowserRun::AskSaveResult BrowserRun::askSave(const QUrl &url, KService::Ptr offer, const QString &mimeType, const QString &suggestedFileName)
 {
     Q_UNUSED(offer);
@@ -362,7 +362,7 @@ BrowserRun::AskSaveResult BrowserRun::askSave(const QUrl &url, KService::Ptr off
 #endif
 
 //static, deprecated
-#ifndef KPARTS_NO_DEPRECATED
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 0)
 BrowserRun::AskSaveResult BrowserRun::askEmbedOrSave(const QUrl &url, const QString &mimeType, const QString &suggestedFileName, int flags)
 {
     BrowserOpenOrSaveQuestion question(nullptr, url, mimeType);

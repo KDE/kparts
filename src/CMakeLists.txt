@@ -74,8 +74,16 @@ install(FILES ${KParts_CamelCase_HEADERS}
         COMPONENT Devel)
 
 add_library(KF5Parts ${KParts_LIB_SRCS})
-generate_export_header(KF5Parts EXPORT_FILE_NAME ${KParts_BINARY_DIR}/kparts/kparts_export.h BASE_NAME KParts)
 add_library(KF5::Parts ALIAS KF5Parts)
+ecm_generate_export_header(KF5Parts
+    EXPORT_FILE_NAME ${KParts_BINARY_DIR}/kparts/kparts_export.h
+    BASE_NAME KParts
+    # GROUP_BASE_NAME KF <- enable once all of KF modules use ecm_generate_export_header
+    VERSION ${KF5_VERSION}
+    DEPRECATED_BASE_VERSION 0
+    DEPRECATION_VERSIONS 5.0
+    EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
+)
 
 set(KParts_BUILD_INCLUDE_DIRS ${KParts_BINARY_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 target_include_directories(KF5Parts PUBLIC "$<BUILD_INTERFACE:${KParts_BUILD_INCLUDE_DIRS}>")

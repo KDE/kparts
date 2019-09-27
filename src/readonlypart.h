@@ -282,18 +282,18 @@ protected:
      */
     void guiActivateEvent(GUIActivateEvent *event) override;
 
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * @internal
      */
-#ifndef KPARTS_NO_DEPRECATED
-    KPARTS_DEPRECATED bool isLocalFileTemporary() const;
-#endif
+    KPARTS_DEPRECATED_VERSION(5, 0, "Do not use feature")
+    bool isLocalFileTemporary() const;
 
     /**
      * @internal
      */
-#ifndef KPARTS_NO_DEPRECATED
-    KPARTS_DEPRECATED void setLocalFileTemporary(bool temp);
+    KPARTS_DEPRECATED_VERSION(5, 0, "Do not use feature")
+    void setLocalFileTemporary(bool temp);
 #endif
 
     /**
