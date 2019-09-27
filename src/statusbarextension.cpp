@@ -136,14 +136,12 @@ bool StatusBarExtension::eventFilter(QObject *watched, QEvent *ev)
     d->m_activated = gae->activated();
 
     if (d->m_activated) {
-        QList<StatusBarItem>::iterator it = d->m_statusBarItems.begin();
-        for (; it != d->m_statusBarItems.end(); ++it) {
-            (*it).ensureItemShown(sb);
+        for (auto &item : d->m_statusBarItems) {
+            item.ensureItemShown(sb);
         }
     } else {
-        QList<StatusBarItem>::iterator it = d->m_statusBarItems.begin();
-        for (; it != d->m_statusBarItems.end(); ++it) {
-            (*it).ensureItemHidden(sb);
+        for (auto &item : d->m_statusBarItems) {
+            item.ensureItemHidden(sb);
         }
     }
 

@@ -315,8 +315,8 @@ bool PartManager::eventFilter(QObject *obj, QEvent *ev)
 
 Part *PartManager::findPartFromWidget(QWidget *widget, const QPoint &pos)
 {
-    for (QList<Part *>::iterator it = d->m_parts.begin(), end = d->m_parts.end(); it != end; ++it) {
-        Part *part = (*it)->hitTest(widget, pos);
+    for (auto *p : qAsConst(d->m_parts)) {
+        Part *part = p->hitTest(widget, pos);
         if (part && d->m_parts.contains(part)) {
             return part;
         }
@@ -326,9 +326,9 @@ Part *PartManager::findPartFromWidget(QWidget *widget, const QPoint &pos)
 
 Part *PartManager::findPartFromWidget(QWidget *widget)
 {
-    for (QList<Part *>::iterator it = d->m_parts.begin(), end = d->m_parts.end(); it != end; ++it) {
-        if (widget == (*it)->widget()) {
-            return (*it);
+    for (auto *part : qAsConst(d->m_parts)) {
+        if (widget == part->widget()) {
+            return part;
         }
     }
     return nullptr;

@@ -131,9 +131,9 @@ protected:
      * \code
      * if( factory() )
      * {
-     *   QList<KParts::Plugin *> plugins = KParts::Plugin::pluginObjects( this );
-     *   for(int i = 0; i != plugins.size(); ++i) {
-     *      factory()->addClient( plugins[i] );
+     *   const QList<KParts::Plugin *> plugins = KParts::Plugin::pluginObjects(this);
+     *   for (auto *plugin : plugins) {
+     *      factory()->addClient(plugin);
      *   }
      * }
      * \endcode

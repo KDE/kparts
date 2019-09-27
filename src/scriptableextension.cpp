@@ -257,9 +257,9 @@ QVariant ScriptableLiveConnectExtension::callFunctionReference(ScriptableExtensi
     QStringList qargs;
     // Convert args to strings for LC use.
     qargs.reserve(a.size());
-    for (int i = 0; i < a.size(); ++i) {
+    for (const auto &arg : a) {
         bool ok;
-        qargs.append(toLC(a[i], &ok));
+        qargs.append(toLC(arg, &ok));
         if (!ok) {
             return unimplemented();
         }

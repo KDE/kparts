@@ -267,8 +267,8 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askOpenOrSave()
                 KGuiItem::assign(d->openWithButton, openWithItem);
                 d->openWithButton->setMenu(menu);
                 QObject::connect(menu, &QMenu::triggered, d, &BrowserOpenOrSaveQuestionPrivate::slotAppSelected);
-                for (KService::List::const_iterator it = apps.begin(); it != apps.end(); ++it) {
-                    QAction *act = createAppAction(*it, d);
+                for (const auto &app : apps) {
+                    QAction *act = createAppAction(app, d);
                     menu->addAction(act);
                 }
                 QAction *openWithDialogAction = new QAction(d);
