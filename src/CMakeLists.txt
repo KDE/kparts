@@ -78,7 +78,7 @@ add_library(KF5::Parts ALIAS KF5Parts)
 ecm_generate_export_header(KF5Parts
     EXPORT_FILE_NAME ${KParts_BINARY_DIR}/kparts/kparts_export.h
     BASE_NAME KParts
-    # GROUP_BASE_NAME KF <- enable once all of KF modules use ecm_generate_export_header
+    GROUP_BASE_NAME KF
     VERSION ${KF5_VERSION}
     DEPRECATED_BASE_VERSION 0
     DEPRECATION_VERSIONS 5.0
