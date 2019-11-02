@@ -116,7 +116,7 @@ bool ReadOnlyPart::isProgressInfoEnabled() const
     return d->m_showProgressInfo;
 }
 
-#ifndef KDE_NO_COMPAT
+#if KPARTS_BUILD_DEPRECATED_SINCE(3, 0)
 void ReadOnlyPart::showProgressInfo(bool show)
 {
     Q_D(ReadOnlyPart);

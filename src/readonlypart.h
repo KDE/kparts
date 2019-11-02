@@ -94,7 +94,11 @@ public:
      */
     bool isProgressInfoEnabled() const;
 
-#ifndef KDE_NO_COMPAT
+#if KPARTS_ENABLE_DEPRECATED_SINCE(3, 0)
+    /**
+     * @deprecated Since 3.0, use setProgressInfoEnabled(bool)
+     */
+    KPARTS_DEPRECATED_VERSION(3, 0, "Use ReadOnlyPart::setProgressInfoEnabled(bool)")
     void showProgressInfo(bool show);
 #endif
 
