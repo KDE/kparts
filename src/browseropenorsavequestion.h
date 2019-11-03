@@ -81,14 +81,21 @@ public:
     Result askOpenOrSave();
 
     /**
+     * @since 5.64
+     */
+    enum AskEmbedOrSaveFlags {
+        InlineDisposition = 0,
+        AttachmentDisposition = 1,
+    };
+
+    /**
      * Ask the user whether to save or open a url in another application.
-     * @param flags set to BrowserRun::AttachmentDisposition if suggested by the server
+     * @param flags set to AttachmentDisposition if suggested by the server
      * This is used because by default text/html files are opened embedded in browsers, not saved.
      * But if the server said "attachment", it means the user is download a file for saving it.
      * @return Save, Embed or Cancel.
      */
     Result askEmbedOrSave(int flags = 0);
-    // KDE5 TODO: move BrowserRun::AskEmbedOrSaveFlags to this class.
 
     // TODO askOpenEmbedOrSave
 
