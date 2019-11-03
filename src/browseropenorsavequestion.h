@@ -81,7 +81,7 @@ public:
     Result askOpenOrSave();
 
     /**
-     * @since 5.64
+     * @since 5.65
      */
     enum AskEmbedOrSaveFlags {
         InlineDisposition = 0,

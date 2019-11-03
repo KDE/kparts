@@ -98,8 +98,8 @@ public:
     static AskSaveResult askSave(const QUrl &url, KService::Ptr offer, const QString &mimeType, const QString &suggestedFileName = QString());
 #endif
 
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 64)
-    /** @deprecated Since 5.64, use BrowserOpenOrSaveQuestion::AskEmbedOrSaveFlags */
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 65)
+    /** @deprecated Since 5.65, use BrowserOpenOrSaveQuestion::AskEmbedOrSaveFlags */
     enum AskEmbedOrSaveFlags { InlineDisposition = 0, AttachmentDisposition = 1 };
 #endif
 
