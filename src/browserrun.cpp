@@ -380,12 +380,14 @@ void BrowserRun::save(const QUrl &url, const QString &suggestedFileName)
     saveUrl(url, suggestedFileName, d->m_window, d->m_args);
 }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(4, 4)
 // static
 void BrowserRun::simpleSave(const QUrl &url, const QString &suggestedFileName,
                             QWidget *window)
 {
     saveUrl(url, suggestedFileName, window, KParts::OpenUrlArguments());
 }
+#endif
 
 void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileName,
                                  QWidget *window, const KParts::OpenUrlArguments &args)

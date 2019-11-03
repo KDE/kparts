@@ -126,9 +126,16 @@ public:
     // virtual so that KHTML can implement differently (HTML cache)
     virtual void save(const QUrl &url, const QString &suggestedFileName);
 
-    // static so that it can be called from other classes
+#if KPARTS_ENABLE_DEPRECATED_SINCE(4, 4)
+    /**
+     * static so that it can be called from other classes
+     * @deprecated Since 4.4, use saveUrl(const QUrl &, const QString &, QWidget *, const KParts::OpenUrlArguments &)
+     */
+    KPARTS_DEPRECATED_VERSION(4, 4, "Use BrowserRun::saveUrl(const QUrl &, const QString &, QWidget *, const KParts::OpenUrlArguments &)")
     static void simpleSave(const QUrl &url, const QString &suggestedFileName,
-                           QWidget *window = nullptr); // KDE5: remove
+                           QWidget *window = nullptr);
+#endif
+
     /**
      * If kget integration is enabled, passes the url to kget.
      * Otherwise, asks the user for a destination url, and calls saveUrlUsingKIO.
