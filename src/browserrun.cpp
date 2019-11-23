@@ -17,7 +17,6 @@
  */
 
 #include "browserrun.h"
-#include "browserrun_p.h"
 
 #include "browseropenorsavequestion.h"
 
@@ -465,7 +464,6 @@ void BrowserRun::saveUrlUsingKIO(const QUrl &srcUrl, const QUrl &destUrl,
     job->addMetaData(QStringLiteral("cache"), QStringLiteral("cache")); // Use entry from cache if available.
     KJobWidgets::setWindow(job, window);
     job->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    new DownloadJobWatcher(job, metaData);
 }
 
 void BrowserRun::handleError(KJob *job)
@@ -578,4 +576,3 @@ KParts::BrowserArguments &KParts::BrowserRun::browserArguments()
 }
 
 #include "moc_browserrun.cpp"
-#include "moc_browserrun_p.cpp"
