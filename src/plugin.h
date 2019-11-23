@@ -47,8 +47,6 @@ namespace KParts
  *
  * You should also install a "plugin info" .desktop file with the same name.
  * \see KPluginInfo
- *
- * For a tutorial on how to write plugins, see http://developer.kde.org/documentation/tutorials/developing-a-plugin-structure/index.html#developing_plugins
  */
 class KPARTS_EXPORT Plugin : public QObject, virtual public KXMLGUIClient
 {
