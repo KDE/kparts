@@ -239,7 +239,7 @@ public:
      *            extension, mapIterator.data() )
      * \endcode
      *
-     * (where "mapIterator" is your QMap<QCString,QCString> iterator)
+     * (where "mapIterator" is your ActionSlotMap iterator)
      */
     static ActionSlotMap actionSlotMap();
 
