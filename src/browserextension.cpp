@@ -27,7 +27,7 @@
 #include <QClipboard>
 #include <QTimer>
 #include <QMap>
-#include <QRegExp>
+#include <QRegularExpression>
 
 #include <QDebug>
 
@@ -212,7 +212,7 @@ void BrowserExtension::pasteRequest()
     QString plain(QStringLiteral("plain"));
     QString url = QApplication::clipboard()->text(plain, QClipboard::Selection).trimmed();
     // Remove linefeeds and any whitespace surrounding it.
-    url.remove(QRegExp(QStringLiteral("[\\ ]*\\n+[\\ ]*")));
+    url.remove(QRegularExpression(QStringLiteral("[\\ ]*\\n+[\\ ]*")));
 
     // Check if it's a URL
     QStringList filters = KUriFilter::self()->pluginNames();
