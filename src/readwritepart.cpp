@@ -69,7 +69,7 @@ void ReadWritePart::setModified(bool modified)
 
     // qDebug() << "setModified(" << (modified ? "true" : "false") << ")";
     if (!d->m_bReadWrite && modified) {
-        qCritical() << "Can't set a read-only document to 'modified' !" << endl;
+        qCritical() << "Can't set a read-only document to 'modified' !";
         return;
     }
     d->m_bModified = modified;
@@ -169,7 +169,7 @@ bool ReadWritePart::saveAs(const QUrl &url)
     Q_D(ReadWritePart);
 
     if (!url.isValid()) {
-        qCritical() << "saveAs: Malformed URL " << url << endl;
+        qCritical() << "saveAs: Malformed URL " << url;
         return false;
     }
     d->m_duringSaveAs = true;

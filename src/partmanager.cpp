@@ -358,12 +358,12 @@ void PartManager::addPart(Part *part, bool setActive)
             if (w->focusPolicy() == Qt::NoFocus) {
                 qWarning() << "Part '" << part->objectName() << "' has a widget "
                            << w->objectName() << " with a focus policy of NoFocus. It should have at least a"
-                           << "ClickFocus policy, for part activation to work well." << endl;
+                           << "ClickFocus policy, for part activation to work well.";
             }
             if (part->widget() && part->widget()->focusPolicy() == Qt::TabFocus) {
                 qWarning() << "Part '" << part->objectName() << "' has a widget "
                            << w->objectName() << " with a focus policy of TabFocus. It should have at least a"
-                           << "ClickFocus policy, for part activation to work well." << endl;
+                           << "ClickFocus policy, for part activation to work well.";
             }
             w->setFocus();
             w->show();
@@ -430,7 +430,7 @@ void PartManager::setActivePart(Part *part, QWidget *widget)
 
 #ifdef DEBUG_PARTMANAGER
     qDebug() << "PartManager::setActivePart d->m_activePart=" << d->m_activePart << "<->part=" << part
-             << " d->m_activeWidget=" << d->m_activeWidget << "<->widget=" << widget << endl;
+             << " d->m_activeWidget=" << d->m_activeWidget << "<->widget=" << widget;
 #endif
 
     // don't activate twice
