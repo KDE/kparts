@@ -48,8 +48,6 @@ PartViewer::PartViewer()
 
     // Set a reasonable size
     resize(600, 350);
-
-    slotFileOpen();
 }
 
 PartViewer::~PartViewer()
@@ -67,6 +65,9 @@ void PartViewer::openUrl(const QUrl &url)
              this);
 
     if (m_part) {
+
+        qDebug() << "Loaded part" << m_part << "widget" << m_part->widget();
+
         setCentralWidget(m_part->widget());
         // Integrate its GUI
         createGUI(m_part);
@@ -92,6 +93,8 @@ int main(int argc, char **argv)
     if (argc > 1) {
         QUrl url = QUrl::fromUserInput(QLatin1String(argv[1]));
         shell->openUrl(url);
+    } else {
+        shell->slotFileOpen();
     }
     shell->show();
     return app.exec();

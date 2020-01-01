@@ -34,7 +34,7 @@ public:
 
     void openUrl(const QUrl &url);
 
-protected Q_SLOTS:
+public Q_SLOTS:
     void slotFileOpen();
 
 private:
