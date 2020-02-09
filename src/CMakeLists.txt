@@ -1,6 +1,7 @@
 set(KParts_LIB_SRCS
     partbase.cpp
     part.cpp
+    partloader.cpp
     openurlarguments.cpp
     readonlypart.cpp
     readwritepart.cpp
@@ -56,6 +57,7 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
         Part
         PartActivateEvent
         PartBase
+        PartLoader
         PartManager
         PartSelectEvent
         Plugin

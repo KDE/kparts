@@ -24,6 +24,7 @@
 #include <kactioncollection.h>
 #include <klocalizedstring.h>
 #include <kmimetypetrader.h>
+#include <partloader.h>
 
 #include <qmimedatabase.h>
 #include <QAction>
@@ -60,9 +61,8 @@ void PartViewer::openUrl(const QUrl &url)
     delete m_part;
     QMimeDatabase db;
     const QString mimeType = db.mimeTypeForUrl(url).name();
-    m_part = KMimeTypeTrader::self()->createPartInstanceFromQuery<KParts::ReadOnlyPart>(mimeType,
-             this,
-             this);
+    m_part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(mimeType,
+             this, this);
 
     if (m_part) {
 
