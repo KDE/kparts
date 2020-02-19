@@ -31,7 +31,9 @@ namespace KParts
 
 class EventPrivate;
 /**
- * Base class for all KParts events.
+ * @class Event event.h <KParts/Event>
+ *
+ * @short Base class for all KParts events.
  */
 class KPARTS_EXPORT Event : public QEvent
 {

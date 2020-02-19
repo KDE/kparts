@@ -34,7 +34,9 @@ namespace KParts
 class WindowArgsPrivate;
 
 /**
- * The WindowArgs are used to specify arguments to the "create new window"
+ * @class WindowArgs windowargs.h <KParts/WindowArgs>
+ *
+ * @short The WindowArgs are used to specify arguments to the "create new window"
  * call (see the createNewWindow variant that uses WindowArgs).
  * The primary reason for this is the javascript window.open function.
  */

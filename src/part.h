@@ -42,7 +42,9 @@ class GUIActivateEvent;
 
 
 /**
- * Base class for parts.
+ * @class Part part.h <KParts/Part>
+ *
+ * @short Base class for parts.
  *
  * A "part" is a GUI component, featuring:
  * @li A widget embeddedable in any application.

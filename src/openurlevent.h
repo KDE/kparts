@@ -32,7 +32,9 @@ namespace KParts
 class ReadOnlyPart;
 
 /**
- * The KParts::OpenUrlEvent event informs that a given part has opened a given URL.
+ * @class OpenUrlEvent openurlevent.h <KParts/OpenUrlEvent>
+ *
+ * @short The KParts::OpenUrlEvent event informs that a given part has opened a given URL.
  * Applications can use this event to send this information to interested plugins.
  *
  * The event should be sent before opening the URL in the part, so that the plugins

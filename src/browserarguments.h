@@ -32,7 +32,9 @@ namespace KParts
 struct BrowserArgumentsPrivate;
 
 /**
- * BrowserArguments is a set of web-browsing-specific arguments,
+ * @struct BrowserArguments browserarguments.h <KParts/BrowserArguments>
+ *
+ * @short BrowserArguments is a set of web-browsing-specific arguments,
  * which allow specifying how a URL should be opened by openUrl()
  * (as a complement to KParts::OpenUrlArguments which are the non-web-specific arguments)
  *

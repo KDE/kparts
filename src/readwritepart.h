@@ -30,7 +30,9 @@ namespace KParts
 class ReadWritePartPrivate;
 
 /**
- * Base class for an "editor" part.
+ * @class ReadWritePart readwritepart.h <KParts/ReadWritePart>
+ *
+ * @short Base class for an "editor" part.
  *
  * This class handles network transparency for you.
  * Anything that can open a URL, allow modifications, and save

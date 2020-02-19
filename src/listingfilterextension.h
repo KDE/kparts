@@ -32,7 +32,9 @@ namespace KParts
 class ReadOnlyPart;
 
 /**
- * @short an extension for filtering listings.
+ * @class ListingFilterExtension listingfilterextension.h <KParts/ListingFilterExtension>
+ *
+ * @short An extension for filtering listings.
  *
  * This extension is intended to be implemented by parts that provide listing
  * services, e.g. file management parts and is intended to provide a generic

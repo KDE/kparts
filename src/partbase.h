@@ -42,7 +42,9 @@ class PartBasePrivate;
 
 
 /**
- *  @short Base class for all parts.
+ * @class PartBase partbase.h <KParts/PartBase>
+ *
+ * @short Base class for all parts.
  */
 class KPARTS_EXPORT PartBase : virtual public KXMLGUIClient
 {

@@ -34,7 +34,9 @@ namespace KParts
 class ReadOnlyPart;
 
 /**
- * @short an extension for obtaining file information from the part.
+ * @class FileInfoExtension fileinfoextension.h <KParts/FileInfoExtension>
+ *
+ * @short An extension for obtaining file information from the part.
  *
  * This extension provides information about file and directory resources
  * that are present in the part the implements it.

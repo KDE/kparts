@@ -37,7 +37,9 @@ namespace KParts
 class ReadOnlyPart;
 
 /**
- * An extension class for LiveConnect, i.e. a call from JavaScript
+ * @class LiveConnectExtension liveconnectextension.h <KParts/LiveConnectExtension>
+ *
+ * @short An extension class for LiveConnect, i.e. a call from JavaScript
  * from a HTML page which embeds this part.
  * A part can have an object hierarchy by using objid as a reference
  * to an object.

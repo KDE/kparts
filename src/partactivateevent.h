@@ -28,7 +28,9 @@ class Part;
 
 class PartActivateEventPrivate;
 /**
- * This event is sent by the part manager when the active part changes.
+ * @class PartActivateEvent partactivateevent.h <KParts/PartActivateEvent>
+ *
+ * @short This event is sent by the part manager when the active part changes.
  * Each time the active part changes, it will send first a PartActivateEvent
  * with activated=false, part=oldActivePart, widget=oldActiveWidget
  * and then another PartActivateEvent

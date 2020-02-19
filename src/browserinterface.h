@@ -30,7 +30,9 @@ namespace KParts
 {
 
 /**
- * The purpose of this interface is to allow a direct communication between
+ * @class BrowserInterface browserinterface.h <KParts/BrowserInterface>
+ *
+ * @short The purpose of this interface is to allow a direct communication between
  * a KPart and the hosting browser shell (for example Konqueror) . A
  * shell implementing this interface can propagate it to embedded kpart
  * components by using the setBrowserInterface call of the part's

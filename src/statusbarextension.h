@@ -39,7 +39,9 @@ class StatusBarItem;
 class StatusBarExtensionPrivate;
 
 /**
- * @short an extension for KParts that allows more sophisticated statusbar handling
+ * @class StatusBarExtension statusbarextension.h <KParts/StatusBarExtension>
+ *
+ * @short An extension for KParts that allows more sophisticated statusbar handling
  *
  * Every part can use this class to customize the statusbar as long as it is active.
  * Add items via addStatusBarItem and remove an item with removeStatusBarItem.

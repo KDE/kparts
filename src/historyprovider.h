@@ -30,7 +30,9 @@ namespace KParts
 class HistoryProviderPrivate;
 
 /**
- * Basic class to manage a history of "items". This class is only meant
+ * @class HistoryProvider historyprovider.h <KParts/HistoryProvider>
+ *
+ * @short Basic class to manage a history of "items". This class is only meant
  * for fast lookup, if an item is in the history or not.
  *
  * May be subclassed to implement a persistent history for example.

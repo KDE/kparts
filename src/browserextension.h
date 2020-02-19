@@ -42,9 +42,12 @@ namespace KParts
 class BrowserInterface;
 
 /**
- * The Browser Extension is an extension (yes, no kidding) to
+ * @class BrowserExtension browserextension.h <KParts/BrowserExtension>
+ *
+ * @short The Browser Extension is an extension (yes, no kidding) to
  * KParts::ReadOnlyPart, which allows a better integration of parts
  * with browsers (in particular Konqueror).
+ *
  * Remember that ReadOnlyPart only has openUrl(QUrl) and a few arguments() but not much more.
  * For full-fledged browsing, we need much more than that, including
  * enabling/disabling of standard actions (print, copy, paste...),

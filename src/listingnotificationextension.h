@@ -32,7 +32,9 @@ namespace KParts
 class ReadOnlyPart;
 
 /**
- * @short an extension for receiving listing change notification.
+ * @class ListingNotificationExtension listingnotificationextension.h <KParts/ListingNotificationExtension>
+ *
+ * @short An extension for receiving listing change notification.
  *
  * This extension is intended for implementation by parts that provide listing
  * services, e.g. file management and is intended to notify about changes to

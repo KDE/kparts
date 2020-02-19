@@ -34,7 +34,9 @@ struct ScriptableExtensionPrivate;
 class  LiveConnectExtension;
 
 /**
- * An extension class that permits KParts to be scripted (such as when embedded
+ * @class ScriptableExtension scriptableextension.h <KParts/ScriptableExtension>
+ *
+ * @short An extension class that permits KParts to be scripted (such as when embedded
  * inside a KHTMLPart) and to access the host's scriptable objects as well.
  *
  * See @ref ScriptValueTypes for how values are passed to/from various methods here.

@@ -33,7 +33,9 @@ class ReadOnlyPart;
 class HtmlExtensionPrivate;
 
 /**
- * @short an extension for KParts to provide HTML-related features
+ * @class HtmlExtension htmlextension.h <KParts/HtmlExtension>
+ *
+ * @short An extension for KParts to provide HTML-related features
  *
  * Use qobject_cast to cast the extension to interesting interfaces, like
  * qobject_cast<KParts::SelectorInterface>.

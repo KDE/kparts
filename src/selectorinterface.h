@@ -33,7 +33,9 @@ namespace KParts
 {
 
 /**
- * Optional base class for HtmlExtension-derived classes
+ * @class SelectorInterface selectorinterface.h <KParts/SelectorInterface>
+ *
+ * @short Optional base class for HtmlExtension-derived classes
  * Provides DOM Selector like API: querySelector and querySelectorAll,
  * in order to find specific elements in an HTML document.
  *

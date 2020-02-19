@@ -32,7 +32,9 @@ class Part;
 class PartManagerPrivate;
 
 /**
- * The part manager is an object which knows about a collection of parts
+ * @class PartManager partmanager.h <KParts/PartManager>
+ *
+ * @short The part manager is an object which knows about a collection of parts
  * (even nested ones) and handles activation/deactivation.
  *
  * Applications that want to embed parts without merging GUIs

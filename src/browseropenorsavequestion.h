@@ -32,7 +32,9 @@ namespace KParts
 class BrowserOpenOrSaveQuestionPrivate;
 
 /**
- * This class shows the dialog that asks the user whether to
+ * @class BrowserOpenOrSaveQuestion browseropenorsavequestion.h <KParts/BrowserOpenOrSaveQuestion>
+ *
+ * @short This class shows the dialog that asks the user whether to
  * save a url or open a url in another application.
  *
  * It also has the variant which asks "save or embed" (e.g. into konqueror).

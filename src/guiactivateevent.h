@@ -27,7 +27,9 @@ namespace KParts
 
 class GUIActivateEventPrivate;
 /**
- * This event is sent to a Part when its GUI has been activated or deactivated.
+ * @class GUIActivateEvent guiactivateevent.h <KParts/GUIActivateEvent>
+ *
+ * @short This event is sent to a Part when its GUI has been activated or deactivated.
  * This is related to PartActivateEvent, but the difference is that
  * GUIActivateEvent happens later (when the GUI is actually built),
  * only for parts that have GUI elements, and only if using KParts::MainWindow.

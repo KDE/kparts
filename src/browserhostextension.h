@@ -38,7 +38,9 @@ class OpenUrlArguments;
 struct BrowserArguments;
 
 /**
- * An extension class for container parts, i.e. parts that contain
+ * @class BrowserHostExtension browserhostextension.h <KParts/BrowserHostExtension>
+ *
+ * @short An extension class for container parts, i.e. parts that contain
  * other parts.
  * For instance a KHTMLPart hosts one part per frame.
  */

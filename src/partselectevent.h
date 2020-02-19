@@ -28,7 +28,9 @@ class Part;
 
 class PartSelectEventPrivate;
 /**
- * This event is sent when a part is selected or deselected.
+ * @class PartSelectEvent partselectevent.h <KParts/PartSelectEvent>
+ *
+ * @short This event is sent when a part is selected or deselected.
  * @see KParts::PartManager::setSelectionPolicy
  */
 class KPARTS_EXPORT PartSelectEvent : public Event

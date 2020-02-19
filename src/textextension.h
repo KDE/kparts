@@ -32,7 +32,9 @@ class ReadOnlyPart;
 class TextExtensionPrivate;
 
 /**
- * @short an extension for KParts that allows to retrieve text from the part.
+ * @class TextExtension textextension.h <KParts/TextExtension>
+ *
+ * @short An extension for KParts that allows to retrieve text from the part.
  *
  * For instance, the text-to-speech plugin uses this to speak the whole text
  * from the part or the selected text. The translation plugin uses it for

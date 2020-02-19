@@ -40,7 +40,9 @@ class BrowserExtension;
 class OpenUrlArguments;
 
 /**
- * Base class for any "viewer" part.
+ * @class ReadOnlyPart readonlypart.h <KParts/ReadOnlyPart>
+ *
+ * @short Base class for any "viewer" part.
  *
  * This class takes care of network transparency for you,
  * in the simplest way (downloading to a temporary file, then letting the part

@@ -35,7 +35,9 @@ namespace KParts
 class OpenUrlArgumentsPrivate;
 
 /**
- * OpenUrlArguments is the set of arguments that specify
+ * @class OpenUrlArguments openurlarguments.h <KParts/OpenUrlArguments>
+ *
+ * @short OpenUrlArguments is the set of arguments that specify
  * how a URL should be opened by KParts::ReadOnlyPart::openUrl().
  *
  * For instance reload() indicates that the url should be loaded

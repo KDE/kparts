@@ -28,7 +28,9 @@ namespace KParts
 {
 
 /**
- * This class extends KRun to provide additional functionality for browsers:
+ * @class BrowserRun browserrun.h <KParts/BrowserRun>
+ *
+ * @short This class extends KRun to provide additional functionality for browsers:
  * - "save or open" dialog boxes
  * - "save" functionality
  * - support for HTTP POST (including saving the result to a temp file if

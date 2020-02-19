@@ -32,7 +32,9 @@ namespace KParts
 {
 
 /**
- * A plugin is the way to add actions to an existing KParts application,
+ * @class Plugin plugin.h <KParts/Plugin>
+ *
+ * @short A plugin is the way to add actions to an existing KParts application,
  * or to a Part.
  *
  * The XML of those plugins looks exactly like of the shell or parts,

@@ -31,6 +31,8 @@ namespace KParts
 {
 
 /**
+ * @class HtmlSettingsInterface htmlsettingsinterface.h <KParts/HtmlSettingsInterface>
+ *
  * @short An interface for modifying the settings of browser engines.
  *
  *  This interface provides a generic means for querying or changing the

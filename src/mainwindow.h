@@ -32,7 +32,9 @@ namespace KParts
 class MainWindowPrivate;
 
 /**
- * A KPart-aware main window, whose user interface is described in XML.
+ * @class MainWindow mainwindow.h <KParts/MainWindow>
+ *
+ * @short A KPart-aware main window, whose user interface is described in XML.
  *
  * It implements all internal interfaces in the case of a
  * KMainWindow as host: the builder and servant interface (for menu
