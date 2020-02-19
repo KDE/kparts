@@ -28,6 +28,9 @@ class QWidget;
 class QEvent;
 class QPoint;
 
+/**
+ * The KParts namespace,
+ */
 namespace KParts
 {
 
