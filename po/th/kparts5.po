@@ -1,0 +1,173 @@
+# translation of kdelibs4.po to Thai
+# Copyright (C) 2003,2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+#
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2003,2004, 2005.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2005, 2008, 2010.
+# Sahachart Anukulkitch <drrider@gmail.com>, 2006, 2007.
+# Narachai Sakorn <narachai@gmail.com>, 2008.
+# Phuwanat Sakornsakolpat <narachai@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-11-24 02:54+0100\n"
+"PO-Revision-Date: 2010-12-31 22:47+0700\n"
+"Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ถนอมทรัพย์ นพบูรณ์, สหชาติ อนุกูลกิจ"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "donga.nb@gmail.com, drrider@gmail.com"
+
+#: browserextension.cpp:240
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>คุณต้องการที่จะค้นหา <b>%1</b> บนอินเทอร์เน็ตหรือไม่ ?</qt>"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "Internet Search"
+msgstr "ค้นหาบนอินเทอร์เน็ต"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "&Search"
+msgstr "&ค้นหา"
+
+#: browseropenorsavequestion.cpp:104
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "ประเภท: %1"
+
+#: browseropenorsavequestion.cpp:112
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "จดจำการกระทำสำหรับแฟ้มต่าง ๆ ที่เป็นประเภทนี้"
+
+#: browseropenorsavequestion.cpp:164 browseropenorsavequestion.cpp:257
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "เปิ&ดด้วย %1"
+
+#: browseropenorsavequestion.cpp:231
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "เปิ&ดด้วย %1"
+
+#: browseropenorsavequestion.cpp:242 browseropenorsavequestion.cpp:337
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "เปิด '%1' หรือไม่ ?"
+
+#: browseropenorsavequestion.cpp:246
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "เ&ปิดด้วย..."
+
+#: browseropenorsavequestion.cpp:266
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "เ&ปิดด้วย"
+
+#: browseropenorsavequestion.cpp:334
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "เ&ปิด"
+
+#: browseropenorsavequestion.cpp:359
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "ชื่อ: %1"
+
+#: browseropenorsavequestion.cpp:361
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "นี่เป็นชื่อแฟ้มที่ได้รับการแนะนำมาจากเซิร์ฟเวอร์"
+
+#: browserrun.cpp:345
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "คุณต้องการจะประมวลผล '%1' จริงหรือไม่ ?"
+
+#: browserrun.cpp:346
+#, kde-format
+msgid "Execute File?"
+msgstr "ประมวลผลแฟ้มหรือไม่ ?"
+
+#: browserrun.cpp:346
+#, kde-format
+msgid "Execute"
+msgstr "ประมวลผล"
+
+#: browserrun.cpp:406
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "ไม่พบตัวจัดการดาวน์โหลด (%1) ในเส้นทางพาธของคุณ"
+
+#: browserrun.cpp:407
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"ลองติดตั้งมันใหม่อีกครั้ง  \n"
+"\n"
+"ส่วนที่รวมกับ Konqueror จะถูกปิดการใช้งาน"
+
+#: browserrun.cpp:433
+#, kde-format
+msgid "Save As"
+msgstr "บันทึกเป็น"
+
+#: htmlsettingsinterface.cpp:34
+#, kde-format
+msgid "Accept"
+msgstr "ยอมรับ"
+
+#: htmlsettingsinterface.cpp:36
+#, kde-format
+msgid "Reject"
+msgstr "ปฏิเสธ"
+
+#: readwritepart.cpp:93
+#, kde-format
+msgid "Untitled"
+msgstr "ยังไม่มีชื่อ"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"มีการเปลี่ยนแปลงกับเอกสาร\n"
+"\"%1\"\n"
+"คุณต้องการจะทำการบันทึกมันหรือจะละทิ้งการเปลี่ยนแปลง ?"
+
+#: readwritepart.cpp:104
+#, kde-format
+msgid "Close Document"
+msgstr "ปิดเอกสาร"
