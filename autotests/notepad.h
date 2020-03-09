@@ -22,8 +22,8 @@
 #ifndef notepad_h
 #define notepad_h
 
-#include <QVariantList>
 #include <kparts/readwritepart.h>
+#include <kpluginfactory.h>
 
 class KAboutData;
 class QTextEdit;
@@ -56,5 +56,6 @@ protected Q_SLOTS:
 protected:
     QTextEdit *m_edit;
 };
+
 
 #endif

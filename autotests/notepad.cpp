@@ -27,7 +27,6 @@
 #include <QFile>
 #include <QTextStream>
 #include <QTextEdit>
-#include <QTest>
 
 #include <kaboutdata.h>
 #include <QDebug>
@@ -35,7 +34,10 @@
 #include <klocalizedstring.h>
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY(NotepadFactory, registerPlugin<NotepadPart>();)
+K_PLUGIN_FACTORY_WITH_JSON(NotepadFactory,
+                 "notepad.json",
+                 registerPlugin<NotepadPart>();
+                )
 
 NotepadPart::NotepadPart(QWidget *parentWidget,
                          QObject *parent,
@@ -53,7 +55,7 @@ NotepadPart::NotepadPart(QWidget *parentWidget,
     actionCollection()->addAction(QStringLiteral("searchreplace"), searchReplace);
     connect(searchReplace, SIGNAL(triggered()), this, SLOT(slotSearchReplace()));
 
-    setXMLFile(QFINDTESTDATA("notepadpart.rc"));
+    setXMLFile(QStringLiteral("notepadpart.rc")); // will be found in the qrc resource
 
     setReadWrite(true);
 
@@ -106,7 +108,6 @@ bool NotepadPart::saveFile()
         return false;
     }
     QFile f(localFilePath());
-    QString s;
     if (f.open(QIODevice::WriteOnly)) {
         QTextStream t(&f);
         t.setCodec("UTF-8");

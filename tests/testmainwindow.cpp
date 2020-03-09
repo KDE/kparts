@@ -21,7 +21,8 @@
 
 #include "testmainwindow.h"
 #include "parts.h"
-#include "notepad.h"
+
+#include <KParts/PartLoader>
 
 #include <QAction>
 #include <QSplitter>
@@ -123,11 +124,17 @@ void TestMainWindow::embedEditor()
     // replace part2 with the editor part
     delete m_part2;
     m_part2 = nullptr;
-    m_editorpart = new NotepadPart(m_splitter, this);
-    m_editorpart->setReadWrite(); // read-write mode
-    m_manager->addPart(m_editorpart);
-    m_paEditFile->setEnabled(false);
-    m_paCloseEditor->setEnabled(true);
+    QString errorString;
+    m_editorpart = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadWritePart>(
+                QStringLiteral("text/plain"), m_splitter, this, &errorString);
+    if (!m_editorpart) {
+        qWarning() << errorString;
+    } else {
+        m_editorpart->setReadWrite(); // read-write mode
+        m_manager->addPart(m_editorpart);
+        m_paEditFile->setEnabled(false);
+        m_paCloseEditor->setEnabled(true);
+    }
 }
 
 void TestMainWindow::slotFileCloseEditor()
@@ -172,8 +179,6 @@ int main(int argc, char **argv)
     TestMainWindow *shell = new TestMainWindow;
     shell->show();
 
-    app.exec();
-
-    return 0;
+    return app.exec();
 }
 

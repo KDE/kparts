@@ -73,12 +73,15 @@ namespace PartLoader
      *
      * Example:
      * \code
+     *     QString errorString;
      *     m_part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(
-     *                   mimeType, this, this);
+     *                   mimeType, this, this, &errorString);
      *     if (m_part) {
      *         layout->addWidget(m_part->widget()); // Integrate the widget
      *         createGUI(m_part); // Integrate the actions
      *         m_part->openUrl(url);
+     *     } else {
+     *         qWarning() << errorString;
      *     }
      * \endcode
      *

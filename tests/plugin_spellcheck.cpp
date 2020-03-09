@@ -20,7 +20,7 @@
 
 #include "plugin_spellcheck.h"
 
-#include "notepad.h" // this plugin applies to a notepad part
+#include <KParts/ReadOnlyPart>
 #include <QTextEdit>
 #include <QAction>
 #include <kactioncollection.h>
@@ -50,7 +50,7 @@ void PluginSpellCheck::slotSpellCheck()
     if (!parent()->inherits("NotepadPart")) {
         KMessageBox::error(nullptr, QStringLiteral("You just called the spell-check action on a wrong part (not NotepadPart)"));
     } else {
-        NotepadPart *part = (NotepadPart *) parent();
+        KParts::ReadOnlyPart *part = static_cast<KParts::ReadOnlyPart *>(parent());
         QTextEdit *widget = qobject_cast<QTextEdit *>(part->widget());
         Q_ASSERT(widget);
         widget->selectAll();

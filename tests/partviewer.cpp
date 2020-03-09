@@ -61,11 +61,11 @@ void PartViewer::openUrl(const QUrl &url)
     delete m_part;
     QMimeDatabase db;
     const QString mimeType = db.mimeTypeForUrl(url).name();
+    QString errorString;
     m_part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(mimeType,
-             this, this);
+             this, this, &errorString);
 
     if (m_part) {
-
         qDebug() << "Loaded part" << m_part << "widget" << m_part->widget();
 
         setCentralWidget(m_part->widget());
@@ -73,6 +73,8 @@ void PartViewer::openUrl(const QUrl &url)
         createGUI(m_part);
 
         m_part->openUrl(url);
+    } else {
+        qWarning() << errorString;
     }
 }
 

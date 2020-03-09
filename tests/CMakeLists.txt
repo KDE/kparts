@@ -6,7 +6,6 @@ include(ECMMarkAsTest)
 
 set(partstest_SRCS
     parts.cpp
-    notepad.cpp
 )
 
 
@@ -24,13 +23,6 @@ target_link_libraries(normalktmtest ${PARTS_TEST_LIBRARY_DEPENDENCIES})
 add_library(spellcheckplugin MODULE plugin_spellcheck.cpp)
 target_link_libraries(spellcheckplugin ${PARTS_TEST_LIBRARY_DEPENDENCIES} )
 install(TARGETS spellcheckplugin  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-
-########### next target ###############
-
-add_library(notepadpart MODULE notepad.cpp)
-target_link_libraries(notepadpart ${PARTS_TEST_LIBRARY_DEPENDENCIES})
-install(TARGETS notepadpart  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-
 
 ########### unit tests ###############
 

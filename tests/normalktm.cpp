@@ -21,11 +21,13 @@
 
 #include "normalktm.h"
 #include "parts.h"
-#include "notepad.h"
+
+#include <KParts/PartLoader>
 
 #include <QSplitter>
 #include <QCheckBox>
 #include <QDir>
+#include <QDebug>
 #include <QCoreApplication>
 #include <QMenu>
 #include <QMenuBar>
@@ -111,12 +113,18 @@ void TestMainWindow::embedEditor()
     // replace part2 with the editor part
     delete m_part2;
     m_part2 = nullptr;
-    m_editorpart = new NotepadPart(m_splitter, this);
-    m_editorpart->setReadWrite(); // read-write mode
-    ////// m_manager->addPart( m_editorpart );
-    m_editorpart->widget()->show(); //// we need to do this in a normal KTM....
-    m_paEditFile->setEnabled(false);
-    m_paCloseEditor->setEnabled(true);
+    QString errorString;
+    m_editorpart = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadWritePart>(
+                QStringLiteral("text/plain"), m_splitter, this, &errorString);
+    if (!m_editorpart) {
+        qWarning() << errorString;
+    } else {
+        m_editorpart->setReadWrite(); // read-write mode
+        ////// m_manager->addPart( m_editorpart );
+        m_editorpart->widget()->show(); //// we need to do this in a normal KTM....
+        m_paEditFile->setEnabled(false);
+        m_paCloseEditor->setEnabled(true);
+    }
 }
 
 void TestMainWindow::slotFileCloseEditor()
