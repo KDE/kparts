@@ -25,6 +25,8 @@
 #include <kparts/mainwindow.h>
 #include <kparts/readonlypart.h>
 
+class KPluginMetaData;
+
 class PartViewer : public KParts::MainWindow
 {
     Q_OBJECT
@@ -34,11 +36,16 @@ public:
 
     void openUrl(const QUrl &url);
 
+    void switchToPart(const QUrl &url);
+
 public Q_SLOTS:
     void slotFileOpen();
 
 private:
+    void loadPlugin(const KPluginMetaData &md, const QUrl &url);
+
     KParts::ReadOnlyPart *m_part;
+    QList<QAction *> m_openWithActions;
 };
 
 #endif

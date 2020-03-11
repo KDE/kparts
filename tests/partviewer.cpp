@@ -22,6 +22,7 @@
 #include "partviewer.h"
 
 #include <kactioncollection.h>
+#include <kactionmenu.h>
 #include <klocalizedstring.h>
 #include <kmimetypetrader.h>
 #include <partloader.h>
@@ -53,11 +54,22 @@ PartViewer::PartViewer()
 
 PartViewer::~PartViewer()
 {
+    qDeleteAll(m_openWithActions);
     delete m_part;
+}
+
+void PartViewer::switchToPart(const QUrl &url)
+{
+    setCentralWidget(m_part->widget());
+    // Integrate its GUI
+    createGUI(m_part);
+
+    m_part->openUrl(url);
 }
 
 void PartViewer::openUrl(const QUrl &url)
 {
+    unplugActionList(QStringLiteral("file_openwith"));
     delete m_part;
     QMimeDatabase db;
     const QString mimeType = db.mimeTypeForUrl(url).name();
@@ -66,16 +78,27 @@ void PartViewer::openUrl(const QUrl &url)
              this, this, &errorString);
 
     if (m_part) {
-        qDebug() << "Loaded part" << m_part << "widget" << m_part->widget();
-
-        setCentralWidget(m_part->widget());
-        // Integrate its GUI
-        createGUI(m_part);
-
-        m_part->openUrl(url);
+        switchToPart(url);
     } else {
         qWarning() << errorString;
     }
+
+    // Show available parts in the GUI
+
+    qDeleteAll(m_openWithActions);
+    m_openWithActions.clear();
+    const QVector<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
+    for (const KPluginMetaData &plugin : plugins) {
+        QAction *action = new QAction(plugin.name(), this);
+        connect(action, &QAction::triggered, this, [=] { loadPlugin(plugin, url); });
+        m_openWithActions.append(action);
+    }
+    if (!m_openWithActions.isEmpty()) {
+        QAction *sep = new QAction(this);
+        sep->setSeparator(true);
+        m_openWithActions.append(sep);
+    }
+    plugActionList(QStringLiteral("file_openwith"), m_openWithActions);
 }
 
 void PartViewer::slotFileOpen()
@@ -83,6 +106,16 @@ void PartViewer::slotFileOpen()
     QUrl url = QFileDialog::getOpenFileUrl();
     if (!url.isEmpty()) {
         openUrl(url);
+    }
+}
+
+void PartViewer::loadPlugin(const KPluginMetaData &md, const QUrl &url)
+{
+    delete m_part;
+    KPluginLoader loader(md.fileName());
+    m_part = loader.factory()->create<KParts::ReadOnlyPart>(this, this);
+    if (m_part) {
+        switchToPart(url);
     }
 }
 
