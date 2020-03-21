@@ -33,11 +33,13 @@ private Q_SLOTS:
     void initTestCase()
     {
         QStandardPaths::setTestModeEnabled(true);
-
+        cleanupTestCase();
 
         const QString desktopFile = QFINDTESTDATA(QStringLiteral("notepad.desktop"));
         QVERIFY(!desktopFile.isEmpty());
-        QVERIFY(QFile::copy(desktopFile, QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kservices5/notepad.desktop")));
+        const QString destDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kservices5");
+        QDir().mkpath(destDir);
+        QVERIFY(QFile::copy(desktopFile, destDir + QLatin1String("/notepad.desktop")));
         // Ensure notepadpart is preferred over other installed parts.
         // This also tests the mimeapps.list parsing in PartLoader
         const QByteArray contents = "[Added KDE Service Associations]\n"
@@ -46,6 +48,12 @@ private Q_SLOTS:
         QFile mimeAppsFile(mimeAppsPath);
         QVERIFY(mimeAppsFile.open(QIODevice::WriteOnly));
         mimeAppsFile.write(contents);
+    }
+
+    void cleanupTestCase()
+    {
+        const QString destDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kservices5");
+        QFile::remove(destDir + QLatin1String("/notepad.desktop"));
     }
 
     void shouldListParts()
