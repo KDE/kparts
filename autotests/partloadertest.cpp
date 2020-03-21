@@ -44,7 +44,9 @@ private Q_SLOTS:
         // This also tests the mimeapps.list parsing in PartLoader
         const QByteArray contents = "[Added KDE Service Associations]\n"
                                     "text/plain=notepad.desktop;\n";
-        const QString mimeAppsPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/mimeapps.list");
+        const QString configDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
+        QDir().mkpath(configDir);
+        const QString mimeAppsPath = configDir + QLatin1String("/mimeapps.list");
         QFile mimeAppsFile(mimeAppsPath);
         QVERIFY(mimeAppsFile.open(QIODevice::WriteOnly));
         mimeAppsFile.write(contents);
