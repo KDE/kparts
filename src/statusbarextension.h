@@ -31,7 +31,7 @@ class QEvent;
 
 namespace KParts
 {
-
+class Part;
 class ReadOnlyPart;
 
 // Defined in impl
@@ -54,7 +54,8 @@ class KPARTS_EXPORT StatusBarExtension : public QObject
     Q_OBJECT
 
 public:
-    explicit StatusBarExtension(KParts::ReadOnlyPart *parent);
+    explicit StatusBarExtension(KParts::Part *parent);
+    explicit StatusBarExtension(KParts::ReadOnlyPart *parent); // KF6: REMOVE
     ~StatusBarExtension() override;
 
     /**

@@ -94,6 +94,12 @@ public:
 
 ///////////////////////////////////////////////////////////////////
 
+StatusBarExtension::StatusBarExtension(KParts::Part *parent)
+    : QObject(parent), d(new StatusBarExtensionPrivate(this))
+{
+    parent->installEventFilter(this);
+}
+
 StatusBarExtension::StatusBarExtension(KParts::ReadOnlyPart *parent)
     : QObject(parent), d(new StatusBarExtensionPrivate(this))
 {
@@ -123,7 +129,7 @@ StatusBarExtension *StatusBarExtension::childObject(QObject *obj)
 bool StatusBarExtension::eventFilter(QObject *watched, QEvent *ev)
 {
     if (!GUIActivateEvent::test(ev) ||
-            !::qobject_cast<KParts::ReadOnlyPart *>(watched)) {
+            !::qobject_cast<KParts::Part *>(watched)) {
         return QObject::eventFilter(watched, ev);
     }
 
@@ -152,7 +158,7 @@ bool StatusBarExtension::eventFilter(QObject *watched, QEvent *ev)
 QStatusBar *StatusBarExtension::statusBar() const
 {
     if (!d->m_statusBar)  {
-        KParts::ReadOnlyPart *part = qobject_cast<KParts::ReadOnlyPart *>(parent());
+        KParts::Part *part = qobject_cast<KParts::Part *>(parent());
         QWidget *w = part ? part->widget() : nullptr;
         KMainWindow *mw = w ? qobject_cast<KMainWindow *>(w->topLevelWidget()) : nullptr;
         if (mw) {
