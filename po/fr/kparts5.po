@@ -1,0 +1,202 @@
+# translation of kdelibs4.po to Français
+# translation of kdelibs4.po to
+# Matthieu Robin <kde@macolu.org>, 2002,2003, 2004.
+# Robert Jacolin <rjacolin@ifrance.com>, 2003,2004.
+# Gilles Caulier <caulier.gilles@free.fr>, 2003.
+# Gérard Delafond <gerard@delafond.org>, 2003, 2004.
+# Matthieu Robin <kde@macolu.org>, 2004, 2005, 2006.
+# Cedric Pasteur <cedric.pasteur@free.fr>, 2004.
+# Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2004, 2005, 2006, 2007, 2008.
+# Matthieu Robin <matthieu@macolu.org>, 2005.
+# Éric Bischoff <ebischoff@nerim.net>, 2005.
+# Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2006, 2007, 2008.
+# Anne-Marie Mahfouf <annma@kde.org>, 2007, 2008, 2012.
+# Ludovic Grossard <grossard@kde.org>, 2008.
+# Mickael Sibelle <kimael@gmail.com>, 2008.
+# Nicolas Lécureuil <nlecureuil@mandriva.com>, 2010.
+# Joëlle Cornavin <jcorn@free.fr>, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
+# Sebastien Renard <renard@kde.org>, 2013, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-03-22 02:58+0100\n"
+"PO-Revision-Date: 2013-11-01 15:56+0100\n"
+"Last-Translator: Sebastien Renard <renard@kde.org>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.5\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Joëlle Cornavin,Matthieu Robin, Sébastien Renard"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "jcorn@free.fr,kde@macolu.org,renard@kde.org"
+
+#: browserextension.cpp:240
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr ""
+"<qt>Voulez-vous effectuer une recherche sur l'Internet pour <b>%1</b> ?</qt>"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "Internet Search"
+msgstr "Recherche Internet"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "&Search"
+msgstr "&Chercher"
+
+#: browseropenorsavequestion.cpp:104
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Type : %1"
+
+#: browseropenorsavequestion.cpp:112
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Mémoriser l'action pour les fichiers de ce type"
+
+#: browseropenorsavequestion.cpp:164 browseropenorsavequestion.cpp:257
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&Ouvrir avec %1"
+
+#: browseropenorsavequestion.cpp:231
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Ouvrir a&vec %1"
+
+#: browseropenorsavequestion.cpp:242 browseropenorsavequestion.cpp:337
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Ouvrir « %1 » ?"
+
+#: browseropenorsavequestion.cpp:246
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Ouvrir avec..."
+
+#: browseropenorsavequestion.cpp:266
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Ouvrir avec"
+
+#: browseropenorsavequestion.cpp:334
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "Ou&vrir"
+
+#: browseropenorsavequestion.cpp:359
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Nom : %1"
+
+#: browseropenorsavequestion.cpp:361
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Il s'agit du nom de fichier suggéré par le serveur"
+
+#: browserrun.cpp:345
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Voulez-vous vraiment exécuter « %1 » ?"
+
+#: browserrun.cpp:346
+#, kde-format
+msgid "Execute File?"
+msgstr "Exécuter le fichier ?"
+
+#: browserrun.cpp:346
+#, kde-format
+msgid "Execute"
+msgstr "Exécuter"
+
+#: browserrun.cpp:406
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr ""
+"Il est impossible de trouver le gestionnaire de téléchargement (%1) dans "
+"votre variable $PATH "
+
+#: browserrun.cpp:407
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Essayez de le réinstaller\n"
+"\n"
+"L'intégration à Konqueror sera désactivée."
+
+#: browserrun.cpp:433
+#, kde-format
+msgid "Save As"
+msgstr "Enregistrer sous"
+
+#: htmlsettingsinterface.cpp:34
+#, kde-format
+msgid "Accept"
+msgstr "Accepter"
+
+#: htmlsettingsinterface.cpp:36
+#, kde-format
+msgid "Reject"
+msgstr "Refuser"
+
+#: partloader.cpp:177
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr ""
+"Le service « %1 » ne fournit pas d'interface « %2 » avec le mot clé « %3 »"
+
+#: partloader.cpp:192
+#, fuzzy, kde-format
+#| msgid "No handler found for %1."
+msgid "No part was found for mimeType %1"
+msgstr "Aucun gestionnaire n'a été trouvé pour %1."
+
+#: readwritepart.cpp:93
+#, kde-format
+msgid "Untitled"
+msgstr "Sans titre"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Le document « %1 » a été modifié.\n"
+"Voulez-vous enregistrer vos changements ou les abandonner ?"
+
+#: readwritepart.cpp:104
+#, kde-format
+msgid "Close Document"
+msgstr "Fermer le document"
