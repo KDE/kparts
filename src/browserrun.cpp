@@ -23,6 +23,7 @@
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
 #include <kmessagebox.h>
+#include <KIO/CommandLauncherJob>
 #include <kio/job.h>
 #include <kio/jobuidelegate.h>
 #include <kio/scheduler.h>
@@ -401,27 +402,26 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
         if (!downloadManager.isEmpty()) {
             // then find the download manager location
             // qDebug() << "Using: "<<downloadManager <<" as Download Manager";
-            QString cmd = QStandardPaths::findExecutable(downloadManager);
-            if (cmd.isEmpty()) {
+            if (QStandardPaths::findExecutable(downloadManager).isEmpty()) {
                 QString errMsg = i18n("The Download Manager (%1) could not be found in your $PATH ", downloadManager);
                 QString errMsgEx = i18n("Try to reinstall it  \n\nThe integration with Konqueror will be disabled.");
                 KMessageBox::detailedSorry(nullptr, errMsg, errMsgEx);
                 cfg.writePathEntry("DownloadManager", QString());
                 cfg.sync();
             } else {
-                // ### suggestedFileName not taken into account. Fix this (and
-                // the duplicated code) with shiny new KDownload class for 3.2 (pfeiffer)
-                // Until the shiny new class comes about, send the suggestedFileName
-                // along with the actual URL to download. (DA)
-                cmd += QLatin1Char(' ') + KShell::quoteArg(url.toString());
+                QStringList args;
+                args << url.toString();
                 if (!suggestedFileName.isEmpty()) {
-                    cmd += QLatin1Char(' ') + KShell::quoteArg(suggestedFileName);
+                    args << suggestedFileName;
                 }
 
-                // qDebug() << "Calling command" << cmd;
+                // qDebug() << "Calling command" << downloadManager << args;
                 // slave is already on hold (slotBrowserMimetype())
                 KIO::Scheduler::publishSlaveOnHold();
-                KRun::runCommand(cmd, window);
+
+                auto *job = new KIO::CommandLauncherJob(downloadManager, args);
+                job->setExecutable(downloadManager);
+                job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, window));
                 return;
             }
         }
