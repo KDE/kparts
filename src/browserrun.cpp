@@ -397,13 +397,13 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
     // only use the downloadmanager for non-local urls
     if (!url.isLocalFile()) {
         KConfigGroup cfg = KSharedConfig::openConfig(QStringLiteral("konquerorrc"), KConfig::NoGlobals)->group("HTML Settings");
-        QString downloadManger = cfg.readPathEntry("DownloadManager", QString());
-        if (!downloadManger.isEmpty()) {
+        QString downloadManager = cfg.readPathEntry("DownloadManager", QString());
+        if (!downloadManager.isEmpty()) {
             // then find the download manager location
-            // qDebug() << "Using: "<<downloadManger <<" as Download Manager";
-            QString cmd = QStandardPaths::findExecutable(downloadManger);
+            // qDebug() << "Using: "<<downloadManager <<" as Download Manager";
+            QString cmd = QStandardPaths::findExecutable(downloadManager);
             if (cmd.isEmpty()) {
-                QString errMsg = i18n("The Download Manager (%1) could not be found in your $PATH ", downloadManger);
+                QString errMsg = i18n("The Download Manager (%1) could not be found in your $PATH ", downloadManager);
                 QString errMsgEx = i18n("Try to reinstall it  \n\nThe integration with Konqueror will be disabled.");
                 KMessageBox::detailedSorry(nullptr, errMsg, errMsgEx);
                 cfg.writePathEntry("DownloadManager", QString());
