@@ -422,6 +422,7 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
                 auto *job = new KIO::CommandLauncherJob(downloadManager, args);
                 job->setExecutable(downloadManager);
                 job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, window));
+                job->start();
                 return;
             }
         }
