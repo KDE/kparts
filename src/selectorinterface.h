@@ -52,12 +52,16 @@ public:
 
     /**
      * Query methods.
+     * @see QueryMethods
      */
     enum QueryMethod {
         None = 0x00,                   /*!< Quering is not possible. */
         EntireContent = 0x01,          /*!< Query or can query the entire content. */
         SelectedContent = 0x02         /*!< Query or can query only the user selected content, if any. */
     };
+    /**
+     * Stores a combination of #QueryMethod values.
+     */
     Q_DECLARE_FLAGS(QueryMethods, QueryMethod)
 
     /**

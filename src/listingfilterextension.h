@@ -89,6 +89,7 @@ class KPARTS_EXPORT ListingFilterExtension : public QObject
 public:
     /**
      * Supported file filtering modes modes.
+     * @FilterModes
      */
     enum FilterMode  {
         None = 0x00,
@@ -97,6 +98,9 @@ public:
         WildCard = 0x04         /*!< Filter by using wildcard matches, e.g. "*.txt" */
     };
 
+    /**
+     * Stores a combination of #FilterMode values.
+     */
     Q_DECLARE_FLAGS(FilterModes, FilterMode)
 
     /*! Constructor */

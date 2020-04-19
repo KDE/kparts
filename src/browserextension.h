@@ -111,6 +111,7 @@ public:
 
     /**
      * Set of flags passed via the popupMenu signal, to ask for some items in the popup menu.
+     * @see PopupFlags
      */
     enum PopupFlag {
         DefaultPopupItems = 0x0000, /**< default value, no additional menu item */
@@ -130,6 +131,9 @@ public:
         ShowProperties = 0x200   /**< show "Properties" action (usually done by directory views) */
     };
 
+    /**
+     * Stores a combination of #PopupFlag values.
+     */
     Q_DECLARE_FLAGS(PopupFlags, PopupFlag)
 
     /**

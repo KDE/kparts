@@ -51,6 +51,7 @@ class KPARTS_EXPORT ListingNotificationExtension : public QObject
 public:
     /**
      * Supported notification event types.
+     * @see NotificationEventTypes
      */
     enum NotificationEventType {
         None = 0x00,
@@ -58,6 +59,9 @@ public:
         ItemsDeleted = 0x02     /*!< Items deleted from the listing. */
     };
 
+    /**
+     * Stores a combination of #NotificationEventType values.
+     */
     Q_DECLARE_FLAGS(NotificationEventTypes, NotificationEventType)
 
     /*! Constructor */

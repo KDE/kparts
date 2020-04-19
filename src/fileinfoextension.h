@@ -55,6 +55,7 @@ public:
 
     /**
      * Supported file information retrieval modes.
+     * @see QueryModes
      */
     enum QueryMode  {
         None = 0x00,              /*!< Querying for file information is NOT possible */
@@ -62,6 +63,9 @@ public:
         SelectedItems = 0x02      /*!< Retrieve or can retrieve file information for selected items.*/
     };
 
+    /**
+     * Stores a combination of #QueryMode values.
+     */
     Q_DECLARE_FLAGS(QueryModes, QueryMode)
 
     /*! Constructor */

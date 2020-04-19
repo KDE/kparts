@@ -63,10 +63,14 @@ public:
      * This allows to add features before making all applications ready for those features
      * (e.g. applications need to read selectedService() otherwise the dialog should not
      * show the service selection button)
+     * @see Features
      */
     enum Feature { BasicFeatures = 0, /**< Only the basic save, open, embed, cancel button */
                    ServiceSelection = 1 /**< Shows "Open With..." with the associated applications for the mimetype */
                  };
+    /**
+     * Stores a combination of #Feature values.
+     */
     Q_DECLARE_FLAGS(Features, Feature)
 
     /**
