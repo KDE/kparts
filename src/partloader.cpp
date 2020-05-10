@@ -91,7 +91,7 @@ QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mim
     auto supportsMime = [&](const KPluginMetaData &md) { return md.supportsMimeType(mimeType); };
     QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("kf5/parts"), supportsMime);
 
-#if KPARTS_VERSION <= QT_VERSION_CHECK(5, 900, 0)
+#if KSERVICE_BUILD_DEPRECATED_SINCE(5, 0)
     // KF5 compat code
 
     // I would compare library filenames, but KPluginMetaData::fileName looks like kf5/kparts/okteta and KService::library() is a full path
