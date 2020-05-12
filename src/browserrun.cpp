@@ -24,6 +24,7 @@
 #include <ksharedconfig.h>
 #include <kmessagebox.h>
 #include <KIO/CommandLauncherJob>
+#include <KIO/OpenUrlJob>
 #include <kio/job.h>
 #include <kio/jobuidelegate.h>
 #include <kio/scheduler.h>
@@ -537,7 +538,11 @@ void BrowserRun::slotCopyToTempFileResult(KJob *job)
         job->uiDelegate()->showErrorMessage();
     } else {
         // Same as KRun::foundMimeType but with a different URL
-        (void)(KRun::runUrl(static_cast<KIO::FileCopyJob *>(job)->destUrl(), d->m_mimeType, d->m_window, KRun::RunFlags(KRun::RunExecutables)));
+        const QUrl destUrl = static_cast<KIO::FileCopyJob *>(job)->destUrl();
+        KIO::OpenUrlJob *job = new KIO::OpenUrlJob(destUrl, d->m_mimeType);
+        job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, d->m_window));
+        job->setRunExecutables(true);
+        job->start();
     }
     setError(true);   // see above
     setFinished(true);
