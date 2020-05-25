@@ -41,6 +41,8 @@
 #include <QStandardPaths>
 #include <QFileDialog>
 
+#if KIOWIDGETS_BUILD_DEPRECATED_SINCE(5, 71)
+
 using namespace KParts;
 
 class Q_DECL_HIDDEN BrowserRun::BrowserRunPrivate
@@ -582,3 +584,5 @@ KParts::BrowserArguments &KParts::BrowserRun::browserArguments()
 }
 
 #include "moc_browserrun.cpp"
+
+#endif
