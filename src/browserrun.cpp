@@ -41,7 +41,7 @@
 #include <QStandardPaths>
 #include <QFileDialog>
 
-#if KIOWIDGETS_BUILD_DEPRECATED_SINCE(5, 71)
+#if KIOWIDGETS_ENABLE_DEPRECATED_SINCE(5, 71)
 
 using namespace KParts;
 

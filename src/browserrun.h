@@ -24,7 +24,7 @@
 #include <krun.h>
 #include <kservice.h>
 
-#if KIOWIDGETS_BUILD_DEPRECATED_SINCE(5, 71)
+#if KIOWIDGETS_ENABLE_DEPRECATED_SINCE(5, 71)
 namespace KParts
 {
 
