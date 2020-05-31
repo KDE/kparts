@@ -2,6 +2,7 @@
 [General]
 Name=KParts Application
 Name[ar]=تطبيق «أجزاءك»
+Name[az]=KParts Tətbiqləri
 Name[ca]=Aplicació de les KParts
 Name[ca@valencia]=Aplicació de les KParts
 Name[cs]=Aplikace KParts
@@ -42,6 +43,7 @@ Name[zh_CN]=KParts 应用
 Name[zh_TW]=KParts 應用程式
 Comment=Generate an application built on the KParts framework, using CMake.
 Comment[ar]=ولّد تطبيقًا يعتمد على إطار عمل «أجزاءك» باستخدام CMake.
+Comment[az]=CMake istifadə edərək, KParts çərçivəsində qurulmuş bir proqram yaradın.
 Comment[ca]=Genera una construcció d'aplicació en el Framework KParts, usant el CMake.
 Comment[ca@valencia]=Genera una construcció d'aplicació en el Framework KParts, usant el CMake.
 Comment[cs]=Generovat aplikaci postavenou na frameworku KParts pomocí CMake.
