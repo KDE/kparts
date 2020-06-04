@@ -22,7 +22,11 @@
 
 #include "kparts_logging.h"
 #include "partactivateevent.h"
+
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
 #include "partselectevent.h"
+#endif
+
 #include "guiactivateevent.h"
 #include "part.h"
 
@@ -42,8 +46,12 @@ public:
     {
         m_activeWidget = nullptr;
         m_activePart = nullptr;
+
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
         m_selectedPart = nullptr;
         m_selectedWidget = nullptr;
+#endif
+
         m_bAllowNestedParts = false;
         m_bIgnoreScrollBars = false;
         m_activationButtonMask = Qt::LeftButton | Qt::MidButton | Qt::RightButton;
@@ -91,8 +99,10 @@ public:
 
     PartManager::SelectionPolicy m_policy;
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
     Part *m_selectedPart;
     QWidget *m_selectedWidget;
+#endif
 
     QList<const QWidget *> m_managedTopLevelWidgets;
     short int m_activationButtonMask;
@@ -251,27 +261,40 @@ bool PartManager::eventFilter(QObject *obj, QEvent *ev)
                     return true;
                 }
 
-                if ((d->m_selectedWidget != w || d->m_selectedPart != part) &&
+                if (
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
+                    (d->m_selectedWidget != w || d->m_selectedPart != part) &&
+#endif
                         (d->m_activeWidget != w || d->m_activePart != part)) {
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
                     if (part->isSelectable()) {
                         setSelectedPart(part, w);
                     } else {
+#endif
                         qCDebug(KPARTSLOG) << "Part" << part << "(non-selectable) made active because" << w->metaObject()->className() << "got event" << evType;
 
                         d->setReason(ev);
                         setActivePart(part, w);
                         d->m_reason = NoReason;
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
                     }
+#endif
                     return true;
-                } else if (d->m_selectedWidget == w && d->m_selectedPart == part) {
+                }
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
+                else if (d->m_selectedWidget == w && d->m_selectedPart == part) {
                     qCDebug(KPARTSLOG) << "Part" << part << "made active (from selected) because" << w->metaObject()->className() << "got event" << evType;
 
                     d->setReason(ev);
                     setActivePart(part, w);
                     d->m_reason = NoReason;
                     return true;
-                } else if (d->m_activeWidget == w && d->m_activePart == part) {
+                }
+#endif
+                else if (d->m_activeWidget == w && d->m_activePart == part) {
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
                     setSelectedPart(nullptr);
+#endif
                     return false;
                 }
 
@@ -379,9 +402,11 @@ void PartManager::removePart(Part *part)
     if (part == d->m_activePart) {
         setActivePart(nullptr);
     }
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
     if (part == d->m_selectedPart) {
         setSelectedPart(nullptr);
     }
+#endif
 }
 
 void PartManager::replacePart(Part *oldPart, Part *newPart, bool setActive)
@@ -431,7 +456,9 @@ void PartManager::setActivePart(Part *part, QWidget *widget)
     KParts::Part *oldActivePart = d->m_activePart;
     QWidget *oldActiveWidget = d->m_activeWidget;
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
     setSelectedPart(nullptr);
+#endif
 
     d->m_activePart = part;
     d->m_activeWidget = widget;
@@ -483,6 +510,7 @@ QWidget *PartManager::activeWidget() const
     return  d->m_activeWidget;
 }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
 void PartManager::setSelectedPart(Part *part, QWidget *widget)
 {
     if (part == d->m_selectedPart && widget == d->m_selectedWidget) {
@@ -511,16 +539,23 @@ void PartManager::setSelectedPart(Part *part, QWidget *widget)
         QApplication::sendEvent(d->m_selectedWidget, &ev);
     }
 }
+#endif
 
+
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
 Part *PartManager::selectedPart() const
 {
     return d->m_selectedPart;
 }
+#endif
 
+
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
 QWidget *PartManager::selectedWidget() const
 {
     return d->m_selectedWidget;
 }
+#endif
 
 void PartManager::slotObjectDestroyed()
 {

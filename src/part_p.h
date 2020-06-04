@@ -39,7 +39,9 @@ public:
     explicit PartPrivate(Part *q)
         : PartBasePrivate(q),
           m_iconLoader(nullptr),
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
           m_bSelectable(true),
+#endif
           m_autoDeleteWidget(true),
           m_autoDeletePart(true),
           m_manager(nullptr)
@@ -51,7 +53,9 @@ public:
     }
 
     KIconLoader *m_iconLoader;
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
     bool m_bSelectable;
+#endif
     bool m_autoDeleteWidget;
     bool m_autoDeletePart;
     PartManager *m_manager;

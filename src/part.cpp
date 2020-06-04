@@ -23,7 +23,11 @@
 
 #include "kparts_logging.h"
 #include "partactivateevent.h"
+
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
 #include "partselectevent.h"
+#endif
+
 #include "guiactivateevent.h"
 #include "partmanager.h"
 
@@ -140,6 +144,7 @@ void Part::setWidget(QWidget *widget)
             this, &Part::slotWidgetDestroyed, Qt::UniqueConnection);
 }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
 void Part::setSelectable(bool selectable)
 {
     Q_D(Part);
@@ -153,6 +158,7 @@ bool Part::isSelectable() const
 
     return d->m_bSelectable;
 }
+#endif
 
 void Part::customEvent(QEvent *ev)
 {
@@ -161,10 +167,12 @@ void Part::customEvent(QEvent *ev)
         return;
     }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
     if (PartSelectEvent::test(ev)) {
         partSelectEvent(static_cast<PartSelectEvent *>(ev));
         return;
     }
+#endif
 
     if (GUIActivateEvent::test(ev)) {
         guiActivateEvent(static_cast<GUIActivateEvent *>(ev));
@@ -178,9 +186,11 @@ void Part::partActivateEvent(PartActivateEvent *)
 {
 }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
 void Part::partSelectEvent(PartSelectEvent *)
 {
 }
+#endif
 
 void Part::guiActivateEvent(GUIActivateEvent *)
 {

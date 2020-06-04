@@ -37,7 +37,11 @@ namespace KParts
 class PartManager;
 class PartPrivate;
 class PartActivateEvent;
+
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 72)
 class PartSelectEvent;
+#endif
+
 class GUIActivateEvent;
 
 
@@ -147,15 +151,25 @@ public:
      */
     virtual Part *hitTest(QWidget *widget, const QPoint &globalPos);
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
     /**
      *  @param selectable Indicates whether the part is selectable or not.
+     *
+     * @deprecated Since 5.72, for lack of usage.
      */
+    KPARTS_DEPRECATED_VERSION(5, 72, "Deprecated for lack of usage")
     virtual void setSelectable(bool selectable);
+#endif
 
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 72)
     /**
      *  Returns whether the part is selectable or not.
+     *
+     * @deprecated Since 5.72, for lack of usage.
      */
+    KPARTS_DEPRECATED_VERSION(5, 72, "Deprecated for lack of usage")
     bool isSelectable() const;
+#endif
 
     /**
      * Use this icon loader to load any icons that are specific to this part,
@@ -201,13 +215,17 @@ protected:
      */
     virtual void partActivateEvent(PartActivateEvent *event);
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
     /**
      * Convenience method which is called when the Part received a
      * PartSelectEvent .
      * Reimplement this if you don't want to reimplement event and
      * test for the event yourself or even install an event filter.
+     *
+     * @deprecated Since 5.72, for lack of usage.
      */
     virtual void partSelectEvent(PartSelectEvent *event);
+#endif
 
     /**
      * Convenience method which is called when the Part received a
