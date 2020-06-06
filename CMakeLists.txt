@@ -19,7 +19,7 @@ include(KDEPackageAppTemplates)
 include(ECMAddQch)
 
 include(ECMGenerateExportHeader)
-
+include(ECMQtDeclareLoggingCategory)
 include(ECMSetupVersion)
 
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control how much of deprecated API is build [default=0].")

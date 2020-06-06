@@ -37,8 +37,6 @@
 #include <QDir>
 #include <QStandardPaths>
 
-#include <QDebug>
-
 using namespace KParts;
 
 class Q_DECL_HIDDEN Plugin::PluginPrivate

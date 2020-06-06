@@ -42,8 +42,6 @@
 #include <QCheckBox>
 #include <QLabel>
 
-#include <QDebug>
-
 using namespace KParts;
 Q_DECLARE_METATYPE(KService::Ptr)
 

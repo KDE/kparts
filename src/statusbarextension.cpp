@@ -20,6 +20,8 @@
 
 #include "statusbarextension.h"
 
+#include "kparts_logging.h"
+
 #include "readonlypart.h"
 #include "guiactivateevent.h"
 
@@ -28,8 +30,6 @@
 #include <QPointer>
 #include <QObject>
 #include <QStatusBar>
-
-#include <QDebug>
 
 using namespace KParts;
 
@@ -196,6 +196,5 @@ void StatusBarExtension::removeStatusBarItem(QWidget *widget)
             return;
         }
 
-    qWarning() << "StatusBarExtension::removeStatusBarItem. Widget not found : " << widget;
+    qCWarning(KPARTSLOG) << "StatusBarExtension::removeStatusBarItem. Widget not found :" << widget;
 }
-

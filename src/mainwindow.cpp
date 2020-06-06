@@ -37,8 +37,6 @@
 #include <QPointer>
 #include <QStatusBar>
 
-#include <QDebug>
-
 using namespace KParts;
 
 namespace KParts

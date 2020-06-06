@@ -19,13 +19,14 @@
 
 #include "partloader.h"
 
+#include "kparts_logging.h"
+
 #include <KConfigGroup>
 #include <KService>
 #include <KSharedConfig>
 #include <KPluginLoader>
 #include <KPluginFactory>
 #include <KLocalizedString>
-#include <QDebug>
 #include <stack>
 
 #include <kparts_version.h> // TODO KF6 REMOVE
@@ -45,7 +46,7 @@ static QString pluginForDesktopFile(const QString &desktopFile)
 {
     KService::Ptr service = KService::serviceByStorageId(desktopFile);
     if (!service) {
-        qDebug() << "mimeapps.list specifies unknown service" << desktopFile;
+        qCDebug(KPARTSLOG) << "mimeapps.list specifies unknown service" << desktopFile;
         return {};
     }
     return service->library();
@@ -141,7 +142,7 @@ QT_WARNING_POP
             if (it != defaultPlugins.end()) {
                 plugins.push_back(*it);
             } else {
-                qDebug() << "Part not found" << userPart;
+                qCDebug(KPARTSLOG) << "Part not found" << userPart;
             }
         }
         // In case mimeapps.list lists "nothing good", append the default set to the end as fallback

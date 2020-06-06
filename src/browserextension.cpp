@@ -19,6 +19,8 @@
 */
 #include "browserextension.h"
 
+#include "kparts_logging.h"
+
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
 #include <kurifilter.h>
@@ -28,8 +30,6 @@
 #include <QTimer>
 #include <QMap>
 #include <QRegularExpression>
-
-#include <QDebug>
 
 using namespace KParts;
 
@@ -285,7 +285,7 @@ void BrowserExtension::slotEnableAction(const char *name, bool enabled)
         d->m_actionStatus.setBit(it.value(), enabled);
         //qDebug() << "BrowserExtension::slotEnableAction setting bit " << it.data() << " to " << enabled;
     } else {
-        qWarning() << "BrowserExtension::slotEnableAction unknown action " << name;
+        qCWarning(KPARTSLOG) << "BrowserExtension::slotEnableAction unknown action " << name;
     }
 }
 
@@ -302,7 +302,7 @@ void BrowserExtension::slotSetActionText(const char *name, const QString &text)
     if (it != s_actionNumberMap()->constEnd()) {
         d->m_actionText[ it.value() ] = text;
     } else {
-        qWarning() << "BrowserExtension::slotSetActionText unknown action " << name;
+        qCWarning(KPARTSLOG) << "BrowserExtension::slotSetActionText unknown action " << name;
     }
 }
 

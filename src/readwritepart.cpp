@@ -21,6 +21,8 @@
 #include "readwritepart.h"
 #include "readwritepart_p.h"
 
+#include "kparts_logging.h"
+
 #include <kio/job.h>
 #include <kjobwidgets.h>
 #include <klocalizedstring.h>
@@ -30,8 +32,6 @@
 #include <QApplication>
 #include <QFileDialog>
 #include <QTemporaryFile>
-
-#include <QDebug>
 
 #include <qplatformdefs.h>
 
@@ -69,7 +69,7 @@ void ReadWritePart::setModified(bool modified)
 
     // qDebug() << "setModified(" << (modified ? "true" : "false") << ")";
     if (!d->m_bReadWrite && modified) {
-        qCritical() << "Can't set a read-only document to 'modified' !";
+        qCCritical(KPARTSLOG) << "Can't set a read-only document to 'modified' !";
         return;
     }
     d->m_bModified = modified;
@@ -169,7 +169,7 @@ bool ReadWritePart::saveAs(const QUrl &url)
     Q_D(ReadWritePart);
 
     if (!url.isValid()) {
-        qCritical() << "saveAs: Malformed URL " << url;
+        qCCritical(KPARTSLOG) << "saveAs: Malformed URL" << url;
         return false;
     }
     d->m_duringSaveAs = true;

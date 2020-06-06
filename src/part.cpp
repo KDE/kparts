@@ -21,6 +21,7 @@
 #include "part.h"
 #include "part_p.h"
 
+#include "kparts_logging.h"
 #include "partactivateevent.h"
 #include "partselectevent.h"
 #include "guiactivateevent.h"
@@ -48,7 +49,7 @@ Part::~Part()
 {
     Q_D(Part);
 
-    //qDebug() << this;
+    //qCDebug(KPARTSLOG) << this;
 
     if (d->m_widget) {
         // We need to disconnect first, to avoid calling it !
@@ -61,7 +62,7 @@ Part::~Part()
     }
 
     if (d->m_widget && d->m_autoDeleteWidget) {
-        // qDebug() << "deleting widget" << d->m_widget << d->m_widget->objectName();
+        // qCDebug(KPARTSLOG) << "deleting widget" << d->m_widget << d->m_widget->objectName();
         delete static_cast<QWidget *>(d->m_widget);
     }
 
@@ -200,7 +201,7 @@ void Part::slotWidgetDestroyed()
 
     d->m_widget = nullptr;
     if (d->m_autoDeletePart) {
-        // qDebug() << "deleting part" << objectName();
+        // qCDebug(KPARTSLOG) << "deleting part" << objectName();
         this->deleteLater();
     }
 }

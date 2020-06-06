@@ -21,6 +21,8 @@
 #include "readonlypart.h"
 #include "readonlypart_p.h"
 
+#include "kparts_logging.h"
+
 #include "browserextension.h"
 #include "guiactivateevent.h"
 
@@ -32,9 +34,6 @@
 #include <QFileInfo>
 #include <QTemporaryFile>
 #include <QDir>
-
-#include <QDebug>
-
 
 using namespace KParts;
 
@@ -166,8 +165,8 @@ bool ReadOnlyPart::openUrl(const QUrl &url)
 
 bool ReadOnlyPart::openFile()
 {
-    qWarning() << "Default implementation of ReadOnlyPart::openFile called!"
-               << metaObject()->className() << "should reimplement either openUrl or openFile.";
+    qCWarning(KPARTSLOG) << "Default implementation of ReadOnlyPart::openFile called!"
+                         << metaObject()->className() << "should reimplement either openUrl or openFile.";
     return false;
 }
 

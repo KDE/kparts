@@ -20,6 +20,8 @@
 
 #include "browseropenorsavequestion.h"
 
+#include "kparts_logging.h"
+
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
 #include <kmessagebox.h>
@@ -37,7 +39,6 @@
 
 #include <QTemporaryFile>
 #include <QMimeDatabase>
-#include <QDebug>
 #include <QStandardPaths>
 #include <QFileDialog>
 
@@ -473,7 +474,7 @@ void BrowserRun::saveUrlUsingKIO(const QUrl &srcUrl, const QUrl &destUrl,
 void BrowserRun::handleError(KJob *job)
 {
     if (!job) {   // Shouldn't happen
-        qWarning() << "handleError called with job=0! hideErrorDialog=" << d->m_bHideErrorDialog;
+        qCWarning(KPARTSLOG) << "handleError called with job=0! hideErrorDialog=" << d->m_bHideErrorDialog;
         return;
     }
 

@@ -75,6 +75,14 @@ install(FILES ${KParts_CamelCase_HEADERS}
         DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts/KParts
         COMPONENT Devel)
 
+ecm_qt_declare_logging_category(KParts_LIB_SRCS
+    HEADER kparts_logging.h
+    IDENTIFIER KPARTSLOG
+    CATEGORY_NAME kf.parts
+    DESCRIPTION "KParts"
+    EXPORT KPARTSLOG
+)
+
 add_library(KF5Parts ${KParts_LIB_SRCS})
 add_library(KF5::Parts ALIAS KF5Parts)
 ecm_generate_export_header(KF5Parts
@@ -120,6 +128,11 @@ install(FILES
 
 install(FILES kde_terminal_interface.h DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts )
 
+ecm_qt_install_logging_categories(
+    EXPORT KPARTSLOG
+    FILE kparts.categories
+    DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+)
 
 if(BUILD_QCH)
     ecm_add_qch(
