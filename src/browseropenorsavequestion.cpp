@@ -60,8 +60,6 @@ public:
         : QDialog(parent), url(url), mimeType(mimeType),
           features(BrowserOpenOrSaveQuestion::BasicFeatures)
     {
-        const int spacingHint = style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
-
         // Use askSave or askEmbedOrSave from filetypesrc
         dontAskConfig = KSharedConfig::openConfig(QStringLiteral("filetypesrc"), KConfig::NoGlobals);
 
@@ -69,7 +67,8 @@ public:
         setObjectName(QStringLiteral("questionYesNoCancel"));
 
         QVBoxLayout *mainLayout = new QVBoxLayout(this);
-        mainLayout->setSpacing(spacingHint * 2); // provide extra spacing
+        const int verticalSpacing = style()->pixelMetric(QStyle::PM_LayoutVerticalSpacing);
+        mainLayout->setSpacing(verticalSpacing * 2); // provide extra spacing
 
         QHBoxLayout *hLayout = new QHBoxLayout();
         mainLayout->addLayout(hLayout, 5);
@@ -81,7 +80,8 @@ public:
         iconLabel->setPixmap(icon.pixmap(style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, this)));
 
         hLayout->addWidget(iconLabel, 0, Qt::AlignCenter);
-        hLayout->addSpacing(spacingHint);
+        const int horizontalSpacing = style()->pixelMetric(QStyle::PM_LayoutHorizontalSpacing);
+        hLayout->addSpacing(horizontalSpacing);
 
         QVBoxLayout *textVLayout = new QVBoxLayout;
         questionLabel = new KSqueezedTextLabel(this);
