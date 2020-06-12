@@ -54,12 +54,13 @@ class OpenUrlArguments;
  * like a web browser does for instance), or to prevent network transparency
  * (but why would you do that?), you can override openUrl().
  *
- * KParts Application can use the signals to show feedback while the URL is being loaded.
+ * An application using KParts can use the signals to show feedback while
+ * the URL is being loaded.
  *
  * ReadOnlyPart handles the window caption by setting it to the current URL
  * (set in openUrl(), and each time the part is activated).
- * If you want another caption, set it in openFile() and
- * (if the part might ever be used with a part manager) in guiActivateEvent()
+ * If you want another caption, set it in openFile() and,
+ * if the part might ever be used with a part manager, in guiActivateEvent().
  */
 class KPARTS_EXPORT ReadOnlyPart : public Part
 {
@@ -71,13 +72,13 @@ class KPARTS_EXPORT ReadOnlyPart : public Part
 
 public:
     /**
-     * Constructor
+     * Constructor.
      * See also Part for the setXXX methods to call.
      */
     explicit ReadOnlyPart(QObject *parent = nullptr);
 
     /**
-     * Destructor
+     * Destructor.
      */
     ~ReadOnlyPart() override;
 
@@ -86,12 +87,12 @@ public:
      * the internal KIO job. Use this if you provide another way
      * of displaying progress info (e.g. a statusbar), using the
      * signals emitted by this class, and/or those emitted by
-     * the Job given by started.
+     * the job given by started().
      */
     void setProgressInfoEnabled(bool show);
 
     /**
-     * Returns whether the part shows the progress info dialog used by internal
+     * Returns whether the part shows the progress info dialog used by the internal
      * KIO job.
      */
     bool isProgressInfoEnabled() const;
@@ -106,19 +107,23 @@ public:
 
 public Q_SLOTS:
     /**
-     * Only reimplement openUrl if you don't want the network transparency support
-     * to download from the url into a temporary file (when the url isn't local).
-     * Otherwise, reimplement openFile() only .
+     * Only reimplement this if you don't want the network transparency support
+     * to download from the URL into a temporary file (when the URL isn't local).
+     * Otherwise, reimplement openFile() only.
      *
      * If you reimplement it, don't forget to set the caption, usually with
-     * emit setWindowCaption( url.prettyUrl() );
+     * @code
+     * emit setWindowCaption( url.toDisplayString() );
+     * @endcode
+     * and also, if the URL refers to a local file, resolve it to a
+     * local path and call setLocalFilePath().
      */
     virtual bool openUrl(const QUrl &url);
 
 public:
     /**
      * Returns the URL currently opened in (or being opened by) this part.
-     * @note url() is not cleared if openUrl() fails to load the URL.
+     * @note The URL is not cleared if openUrl() fails to load the URL.
      *       Call closeUrl() if you need to explicitly reset it.
      *
      *  @return The current URL.
@@ -126,24 +131,24 @@ public:
     QUrl url() const;
 
     /**
-     * Called when closing the current url (e.g. document), for instance
-     * when switching to another url (note that openUrl() calls it
+     * Called when closing the current URL (for example, a document), for instance
+     * when switching to another URL (note that openUrl() calls it
      * automatically in this case).
      * If the current URL is not fully loaded yet, aborts loading.
-     * Deletes the temporary file used when the url is remote.
+     * Deletes the temporary file used when the URL is remote.
      * Resets the current url() to QUrl().
      * @return always true, but the return value exists for reimplementations
      */
     virtual bool closeUrl();
 
     /**
-     * This convenience method returns the browserExtension for this part,
-     * or @c nullptr if there isn't any.
+     * This convenience method returns the BrowserExtension for this part,
+     * or @c nullptr if there isn't one.
      */
     BrowserExtension *browserExtension() const;
 
     /**
-     * Sets the arguments to use for the next openUrl call.
+     * Sets the arguments to use for the next openUrl() call.
      */
     void setArguments(const OpenUrlArguments &arguments);
     // TODO to avoid problems with the case where the loading fails, this could also be a openUrl() argument (heavy porting!).
@@ -158,7 +163,7 @@ public:
 public:
     /**
      * Initiate sending data to this part.
-     * This is an alternative to openUrl, which allows the user of the part
+     * This is an alternative to openUrl(), which allows the user of the part
      * to load the data itself, and send it progressively to the part.
      *
      * @param mimeType the type of data that is going to be sent to this part.
@@ -222,15 +227,15 @@ private: // Makes no sense for inherited classes to call those. But make it prot
 
 Q_SIGNALS:
     /**
-     * The part emits this when starting data.
-     * If using a KIO::Job, it sets the job in the signal, so that
-     * progress information can be shown. Otherwise, job is @c nullptr.
+     * The part emits this when starting to load data.
+     * If using a KIO::Job, it provides the @p job so that
+     * progress information can be shown. Otherwise, @p job is @c nullptr.
      **/
-    void started(KIO::Job *);
+    void started(KIO::Job *job);
 
     /**
      * Emit this when you have completed loading data.
-     * Hosting apps will want to know when the process of loading the data
+     * Hosting applications will want to know when the process of loading the data
      * is finished, so that they can access the data when everything is loaded.
      **/
     void completed();
@@ -261,10 +266,10 @@ Q_SIGNALS:
 protected:
     /**
      * If the part uses the standard implementation of openUrl(),
-     * it must reimplement this, to open the local file.
-     * The default implementation is simply { return false; }
+     * it must reimplement this to open the local file.
+     * The default implementation simply returns false.
      *
-     * If this method returns true, the part emits completed(),
+     * If this method returns true the part emits completed(),
      * otherwise it emits canceled().
      *
      * @see completed(), canceled()
@@ -278,13 +283,13 @@ protected:
 
     /**
      * Reimplemented from Part, so that the window caption is set to
-     * the current url (decoded) when the part is activated
-     * This is the usual behavior in 99% of the apps
-     * Reimplement if you don't like it - test for event->activated() !
+     * the current URL (decoded) when the part is activated.
+     * This is the usual behavior in 99% of applications.
+     * Reimplement if you don't like it - test for event->activated()!
      *
-     * Technical note : this is done with GUIActivateEvent and not with
-     * PartActivateEvent because it's handled by the mainwindow
-     * (which gets the even after the PartActivateEvent events have been sent)
+     * @note This is done with GUIActivateEvent and not with
+     * PartActivateEvent because it's handled by the main window
+     * (which gets the event after the PartActivateEvent events have been sent).
      */
     void guiActivateEvent(GUIActivateEvent *event) override;
 
@@ -303,12 +308,15 @@ protected:
 #endif
 
     /**
-     * Sets the url associated with this part.
+     * Sets the URL associated with this part.
      */
     void setUrl(const QUrl &url);
 
     /**
      * Returns the local file path associated with this part.
+     *
+     * @note The result will only be valid if openUrl() or
+     * setLocalFilePath() has previously been called.
      */
     QString localFilePath() const;
 
