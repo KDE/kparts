@@ -38,7 +38,7 @@ class PartManager;
 class PartPrivate;
 class PartActivateEvent;
 
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 72)
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
 class PartSelectEvent;
 #endif
 
