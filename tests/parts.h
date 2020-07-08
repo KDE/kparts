@@ -23,7 +23,7 @@
 #define __parts_h__
 
 #include <kparts/readonlypart.h>
-#include <kaboutdata.h>
+#include <KAboutData>
 
 class QTextEdit;
 namespace KParts

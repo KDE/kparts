@@ -23,7 +23,7 @@
 
 #include "partbase.h"
 
-#include <kaboutdata.h>
+#include <KAboutData>
 
 namespace KParts
 {

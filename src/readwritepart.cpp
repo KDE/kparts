@@ -24,10 +24,10 @@
 #include "kparts_logging.h"
 
 #include <kio/job.h>
-#include <kjobwidgets.h>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
-#include <kdirnotify.h>
+#include <KJobWidgets>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KDirNotify>
 
 #include <QApplication>
 #include <QFileDialog>

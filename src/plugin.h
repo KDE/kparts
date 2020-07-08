@@ -22,7 +22,7 @@
 
 #include <kparts/kparts_export.h>
 
-#include <kxmlguiclient.h>
+#include <KXMLGUIClient>
 #include <QDomElement>
 #include <QObject>
 

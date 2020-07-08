@@ -25,7 +25,7 @@
 
 #include <QObject>
 
-#include <kxmlguiclient.h>
+#include <KXMLGUIClient>
 
 
 #define KPARTS_DECLARE_PRIVATE(Class) \

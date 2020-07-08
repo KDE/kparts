@@ -23,8 +23,8 @@
 
 #include "guiactivateevent.h"
 
-#include <kactionmenu.h>
-#include <kactioncollection.h>
+#include <KActionMenu>
+#include <KActionCollection>
 
 #include <QAction>
 #include <QCheckBox>
@@ -35,7 +35,7 @@
 #include <QTest>
 
 #include <QDebug>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 Part1::Part1(QObject *parent, QWidget *parentWidget)
     : KParts::ReadOnlyPart(parent),

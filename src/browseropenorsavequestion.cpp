@@ -20,15 +20,15 @@
 
 #include "browseropenorsavequestion.h"
 
-#include <kconfiggroup.h>
-#include <ksharedconfig.h>
-#include <klocalizedstring.h>
-#include <kfileitemactions.h>
-#include <ksqueezedtextlabel.h>
-#include <kmimetypetrader.h>
-#include <kstandardguiitem.h>
-#include <kguiitem.h>
-#include <kmessagebox.h>
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <KLocalizedString>
+#include <KFileItemActions>
+#include <KSqueezedTextLabel>
+#include <KMimeTypeTrader>
+#include <KStandardGuiItem>
+#include <KGuiItem>
+#include <KMessageBox>
 
 #include <QMimeDatabase>
 #include <QAction>

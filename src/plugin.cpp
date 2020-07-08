@@ -22,14 +22,14 @@
 
 #include "part.h"
 
-#include <kpluginfactory.h>
-#include <kpluginloader.h>
-#include <kxmlguifactory.h>
-#include <klocalizedstring.h>
-#include <kdesktopfile.h>
-#include <ksharedconfig.h>
-#include <kconfiggroup.h>
-#include <kaboutdata.h>
+#include <KPluginFactory>
+#include <KPluginLoader>
+#include <KXMLGUIFactory>
+#include <KLocalizedString>
+#include <KDesktopFile>
+#include <KSharedConfig>
+#include <KConfigGroup>
+#include <KAboutData>
 
 #include <QFile>
 #include <QObject>

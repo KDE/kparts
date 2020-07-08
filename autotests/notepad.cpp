@@ -28,11 +28,11 @@
 #include <QTextStream>
 #include <QTextEdit>
 
-#include <kaboutdata.h>
+#include <KAboutData>
 #include <QDebug>
-#include <kactioncollection.h>
-#include <klocalizedstring.h>
-#include <kpluginfactory.h>
+#include <KActionCollection>
+#include <KLocalizedString>
+#include <KPluginFactory>
 
 K_PLUGIN_FACTORY_WITH_JSON(NotepadFactory,
                  "notepad.json",

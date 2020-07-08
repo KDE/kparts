@@ -19,7 +19,7 @@
 
 #include "htmlsettingsinterface.h"
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 using namespace KParts;
 

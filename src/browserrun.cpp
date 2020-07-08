@@ -22,20 +22,20 @@
 
 #include "kparts_logging.h"
 
-#include <kconfiggroup.h>
-#include <ksharedconfig.h>
-#include <kmessagebox.h>
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <KMessageBox>
 #include <KIO/CommandLauncherJob>
 #include <KIO/OpenUrlJob>
 #include <kio/job.h>
 #include <kio/jobuidelegate.h>
 #include <kio/scheduler.h>
 #include <kio/copyjob.h>
-#include <kjobwidgets.h>
-#include <klocalizedstring.h>
-#include <kshell.h>
-#include <kmimetypetrader.h>
-#include <kprotocolmanager.h>
+#include <KJobWidgets>
+#include <KLocalizedString>
+#include <KShell>
+#include <KMimeTypeTrader>
+#include <KProtocolManager>
 
 #include <QTemporaryFile>
 #include <QMimeDatabase>

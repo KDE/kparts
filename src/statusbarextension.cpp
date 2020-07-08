@@ -25,7 +25,7 @@
 #include "readonlypart.h"
 #include "guiactivateevent.h"
 
-#include <kmainwindow.h>
+#include <KMainWindow>
 
 #include <QPointer>
 #include <QObject>

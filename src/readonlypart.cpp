@@ -27,8 +27,8 @@
 #include "guiactivateevent.h"
 
 #include <kio/job.h>
-#include <kjobwidgets.h>
-#include <kprotocolinfo.h>
+#include <KJobWidgets>
+#include <KProtocolInfo>
 
 #include <QMimeDatabase>
 #include <QFileInfo>

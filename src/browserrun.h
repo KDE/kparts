@@ -21,8 +21,8 @@
 
 #include <kparts/browserextension.h>
 
-#include <krun.h>
-#include <kservice.h>
+#include <KRun>
+#include <KService>
 
 #if KIOWIDGETS_ENABLE_DEPRECATED_SINCE(5, 71)
 namespace KParts

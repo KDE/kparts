@@ -34,10 +34,10 @@
 
 #include <QAction>
 #include <QApplication>
-#include <kmessagebox.h>
-#include <kactioncollection.h>
-#include <klocalizedstring.h>
-#include <qstandardpaths.h>
+#include <KMessageBox>
+#include <KActionCollection>
+#include <KLocalizedString>
+#include <QStandardPaths>
 
 TestMainWindow::TestMainWindow()
     : KXmlGuiWindow()

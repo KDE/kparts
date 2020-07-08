@@ -21,13 +21,13 @@
 
 #include "partviewer.h"
 
-#include <kactioncollection.h>
-#include <kactionmenu.h>
-#include <klocalizedstring.h>
-#include <kmimetypetrader.h>
+#include <KActionCollection>
+#include <KActionMenu>
+#include <KLocalizedString>
+#include <KMimeTypeTrader>
 #include <partloader.h>
 
-#include <qmimedatabase.h>
+#include <QMimeDatabase>
 #include <QAction>
 #include <QApplication>
 #include <QFileDialog>

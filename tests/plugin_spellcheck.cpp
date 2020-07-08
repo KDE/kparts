@@ -23,10 +23,10 @@
 #include <KParts/ReadOnlyPart>
 #include <QTextEdit>
 #include <QAction>
-#include <kactioncollection.h>
-#include <kmessagebox.h>
-#include <kpluginfactory.h>
-#include <klocalizedstring.h>
+#include <KActionCollection>
+#include <KMessageBox>
+#include <KPluginFactory>
+#include <KLocalizedString>
 #include <QDebug>
 
 PluginSpellCheck::PluginSpellCheck(QObject *parent,

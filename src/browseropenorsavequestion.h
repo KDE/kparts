@@ -24,7 +24,7 @@
 #include <kparts/kparts_export.h>
 #include <kparts/browserrun.h>
 
-#include <kservice.h>
+#include <KService>
 
 namespace KParts
 {

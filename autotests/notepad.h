@@ -23,7 +23,7 @@
 #define notepad_h
 
 #include <kparts/readwritepart.h>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 class KAboutData;
 class QTextEdit;

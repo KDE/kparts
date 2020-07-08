@@ -22,7 +22,7 @@
 
 #include <kparts/kparts_export.h>
 
-#include <kfind.h>
+#include <KFind>
 #include <QObject>
 
 namespace KParts

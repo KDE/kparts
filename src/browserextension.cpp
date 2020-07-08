@@ -21,9 +21,9 @@
 
 #include "kparts_logging.h"
 
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
-#include <kurifilter.h>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KUriFilter>
 
 #include <QApplication>
 #include <QClipboard>

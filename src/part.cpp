@@ -31,8 +31,8 @@
 #include "guiactivateevent.h"
 #include "partmanager.h"
 
-#include <kxmlguifactory.h>
-#include <kiconloader.h>
+#include <KXMLGUIFactory>
+#include <KIconLoader>
 
 
 using namespace KParts;

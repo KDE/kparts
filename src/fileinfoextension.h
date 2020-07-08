@@ -22,7 +22,7 @@
 
 #include <kparts/kparts_export.h>
 
-#include <kfileitem.h>
+#include <KFileItem>
 #include <QObject>
 
 class KFileItemList;

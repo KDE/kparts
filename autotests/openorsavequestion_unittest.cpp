@@ -18,12 +18,12 @@
     Boston, MA 02110-1301, USA.
 */
 
-#include <kmimetypetrader.h>
+#include <KMimeTypeTrader>
 #include <kparts/browseropenorsavequestion.h>
 #include <qtest_widgets.h>
 
-#include <kconfiggroup.h>
-#include <ksharedconfig.h>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QDebug>
 
 #include <QDialog>

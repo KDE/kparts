@@ -30,12 +30,12 @@
 #include <QDir>
 #include <QCoreApplication>
 #include <QApplication>
-#include <kxmlguifactory.h>
-#include <kmessagebox.h>
-#include <kactioncollection.h>
-#include <klocalizedstring.h>
+#include <KXMLGUIFactory>
+#include <KMessageBox>
+#include <KActionCollection>
+#include <KLocalizedString>
 #include <kparts/partmanager.h>
-#include <qstandardpaths.h>
+#include <QStandardPaths>
 #include <QTest>
 
 TestMainWindow::TestMainWindow()

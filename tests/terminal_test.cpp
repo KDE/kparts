@@ -11,7 +11,7 @@ public:
 
 #include <kde_terminal_interface.h>
 #include <kparts/readonlypart.h>
-#include <kservice.h>
+#include <KService>
 #include <QApplication>
 
 Window::Window()

@@ -24,13 +24,13 @@
 #include "part.h"
 #include "plugin.h"
 
-#include <kactioncollection.h>
-#include <kedittoolbar.h>
-#include <khelpmenu.h>
-#include <kaboutdata.h>
-#include <kxmlguifactory.h>
-#include <kconfiggroup.h>
-#include <ksharedconfig.h>
+#include <KActionCollection>
+#include <KEditToolBar>
+#include <KHelpMenu>
+#include <KAboutData>
+#include <KXMLGUIFactory>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 #include <QAction>
 #include <QApplication>

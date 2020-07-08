@@ -19,7 +19,7 @@
 #include "parttest.h"
 #include <qtest_widgets.h>
 
-#include <ksharedconfig.h>
+#include <KSharedConfig>
 #include <kparts/readonlypart.h>
 #include <kparts/openurlarguments.h>
 #include <QSignalSpy>
@@ -189,9 +189,9 @@ void PartTest::testEmptyUrlAfterCloseUrl()
 }
 
 #include <kparts/mainwindow.h>
-#include <ktoolbar.h>
-#include <kconfiggroup.h>
-#include <ktoggletoolbaraction.h>
+#include <KToolBar>
+#include <KConfigGroup>
+#include <KToggleToolBarAction>
 class MyMainWindow : public KParts::MainWindow
 {
 public:
