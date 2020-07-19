@@ -39,8 +39,6 @@ static const QString OpenDefault = QStringLiteral("openDefaultButton");
 static const QString OpenWith = QStringLiteral("openWithButton");
 static const QString Cancel = QStringLiteral("cancelButton");
 
-Q_DECLARE_METATYPE(QDialog *)
-
 class OpenOrSaveTest : public QObject
 {
     Q_OBJECT
