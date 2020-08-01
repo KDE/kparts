@@ -1,0 +1,178 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kparts package.
+#
+# Xəyyam <xxmn77@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kparts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-07 02:02+0200\n"
+"PO-Revision-Date: 2020-04-23 17:50+0400\n"
+"Last-Translator: Xəyyam <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Xəyyam"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xxmn77@gmail.com"
+
+#: browserextension.cpp:240
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt> <b>%1</b>İnternetdə axtarılsın?</qt>"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "Internet Search"
+msgstr "İnternetdə Axtarış"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "&Search"
+msgstr "&Axtar"
+
+#: browseropenorsavequestion.cpp:102
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Növ: %1"
+
+#: browseropenorsavequestion.cpp:110
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Bu növ fayllar üçün fəaliyyəti yadda saxla"
+
+#: browseropenorsavequestion.cpp:162 browseropenorsavequestion.cpp:255
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "%1 ilə &aç"
+
+#: browseropenorsavequestion.cpp:229
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "%1 ilə &aç"
+
+#: browseropenorsavequestion.cpp:240 browseropenorsavequestion.cpp:335
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "%1 açılsın?"
+
+#: browseropenorsavequestion.cpp:244
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "Bununla &açın..."
+
+#: browseropenorsavequestion.cpp:264
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "Bununla &açın"
+
+#: browseropenorsavequestion.cpp:332
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Açın"
+
+#: browseropenorsavequestion.cpp:357
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Ad: %1"
+
+#: browseropenorsavequestion.cpp:359
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Bu server tərəfindən təklif olunan fayl adıdır"
+
+#: browserrun.cpp:350
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "'%1' başladılsın?"
+
+#: browserrun.cpp:351
+#, kde-format
+msgid "Execute File?"
+msgstr "Fayl icra edilsin?"
+
+#: browserrun.cpp:351
+#, kde-format
+msgid "Execute"
+msgstr "İcra etmək"
+
+#: browserrun.cpp:410
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Yükləmə meneceri (%1) sizin $PATH -da tapılmadı "
+
+#: browserrun.cpp:411
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Onu yenidən qurmağa cəhd edin  \n"
+"\n"
+"Konqueror ilə inteqrasiya ləğv söndürələcək."
+
+#: browserrun.cpp:438
+#, kde-format
+msgid "Save As"
+msgstr "Belə saxla"
+
+#: htmlsettingsinterface.cpp:34
+#, kde-format
+msgid "Accept"
+msgstr "Qəbul etmək"
+
+#: htmlsettingsinterface.cpp:36
+#, kde-format
+msgid "Reject"
+msgstr "İntina etmək"
+
+#: partloader.cpp:182
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "Modul '%1' '%3' aşar sözü ilə '%2' interfeysini təqdim etmir"
+
+#: partloader.cpp:197
+#, kde-format
+msgid "No part was found for mimeType %1"
+msgstr "MimeType%1 emalı üçün heç bir modul tapılmadı"
+
+#: readwritepart.cpp:93
+#, kde-format
+msgid "Untitled"
+msgstr "Adsız"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Sənəd \"%1\" dəyişdirildi.\n"
+"Siz bu dəyişikliyi saxlamaq yoxsa ləğv etmək istəyirsiniz?"
+
+#: readwritepart.cpp:104
+#, kde-format
+msgid "Close Document"
+msgstr "Sənədi Seçin"
