@@ -11,7 +11,6 @@
 #include <KLocalizedString>
 #include <KFileItemActions>
 #include <KSqueezedTextLabel>
-#include <KMimeTypeTrader>
 #include <KStandardGuiItem>
 #include <KGuiItem>
 #include <KMessageBox>

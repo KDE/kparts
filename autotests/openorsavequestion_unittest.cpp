@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-#include <KMimeTypeTrader>
+#include <KApplicationTrader>
 #include <kparts/browseropenorsavequestion.h>
 #include <qtest_widgets.h>
 
@@ -68,7 +68,7 @@ private Q_SLOTS:
         // 2. there is at least one app associated with text/plain, and
         // 3. there are no apps associated with application/x-zerosize.
 
-        if (KMimeTypeTrader::self()->query(QStringLiteral("application/zip"), QStringLiteral("Application")).count() > 0) {
+        if (KApplicationTrader::queryByMimeType(QStringLiteral("application/zip")).count() > 0) {
             QTest::newRow("(zip) cancel") << "application/zip" << Cancel << (int)BrowserOpenOrSaveQuestion::Cancel << false;
             QTest::newRow("(zip) open default app") << "application/zip" << OpenDefault << (int)BrowserOpenOrSaveQuestion::Open << true;
             QTest::newRow("(zip) open with...") << "application/zip" << OpenWith << (int)BrowserOpenOrSaveQuestion::Open << false;
@@ -77,7 +77,7 @@ private Q_SLOTS:
             qWarning() << "This test relies on the fact that there is at least one app associated with appliation/zip.";
         }
 
-        if (KMimeTypeTrader::self()->query(QStringLiteral("text/plain"), QStringLiteral("Application")).count() > 0) {
+        if (KApplicationTrader::queryByMimeType(QStringLiteral("application/plain")).count() > 0) {
             QTest::newRow("(text) cancel") << "text/plain" << Cancel << (int)BrowserOpenOrSaveQuestion::Cancel << false;
             QTest::newRow("(text) open default app") << "text/plain" << OpenDefault << (int)BrowserOpenOrSaveQuestion::Open << true;
             QTest::newRow("(text) open with...") << "text/plain" << OpenWith << (int)BrowserOpenOrSaveQuestion::Open << false;
@@ -86,7 +86,7 @@ private Q_SLOTS:
             qWarning() << "This test relies on the fact that there is at least one app associated with text/plain.";
         }
 
-        if (KMimeTypeTrader::self()->query(QStringLiteral("application/x-zerosize"), QStringLiteral("Application")).count() == 0) {
+        if (KApplicationTrader::queryByMimeType(QStringLiteral("application/x-zerosize")).count() == 0) {
             QTest::newRow("(zero) cancel") << "application/x-zerosize" << Cancel << (int)BrowserOpenOrSaveQuestion::Cancel << false;
             QTest::newRow("(zero) open with...") << "application/x-zerosize" << OpenDefault /*Yes, not OpenWith*/ << (int)BrowserOpenOrSaveQuestion::Open << false;
             QTest::newRow("(zero) save") << "application/x-zerosize" << Save << (int)BrowserOpenOrSaveQuestion::Save << false;

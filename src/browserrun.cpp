@@ -23,7 +23,6 @@
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KShell>
-#include <KMimeTypeTrader>
 #include <KProtocolManager>
 
 #include <QTemporaryFile>

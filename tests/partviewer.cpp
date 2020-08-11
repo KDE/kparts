@@ -10,7 +10,8 @@
 #include <KActionCollection>
 #include <KActionMenu>
 #include <KLocalizedString>
-#include <KMimeTypeTrader>
+#include <KPluginLoader>
+#include <KPluginFactory>
 #include <partloader.h>
 
 #include <QMimeDatabase>
