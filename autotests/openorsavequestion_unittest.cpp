@@ -77,7 +77,7 @@ private Q_SLOTS:
             qWarning() << "This test relies on the fact that there is at least one app associated with appliation/zip.";
         }
 
-        if (KApplicationTrader::queryByMimeType(QStringLiteral("application/plain")).count() > 0) {
+        if (KApplicationTrader::queryByMimeType(QStringLiteral("text/plain")).count() > 0) {
             QTest::newRow("(text) cancel") << "text/plain" << Cancel << (int)BrowserOpenOrSaveQuestion::Cancel << false;
             QTest::newRow("(text) open default app") << "text/plain" << OpenDefault << (int)BrowserOpenOrSaveQuestion::Open << true;
             QTest::newRow("(text) open with...") << "text/plain" << OpenWith << (int)BrowserOpenOrSaveQuestion::Open << false;
