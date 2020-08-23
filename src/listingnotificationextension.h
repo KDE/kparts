@@ -83,8 +83,8 @@ private:
     ListingNotificationExtension *const d;
 };
 
-}
+Q_DECLARE_OPERATORS_FOR_FLAGS(ListingNotificationExtension::NotificationEventTypes)
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(KParts::ListingNotificationExtension::NotificationEventTypes)
+}
 
 #endif /* KPARTS_LISTINGNOTIFICATIONEXTENSION_H */

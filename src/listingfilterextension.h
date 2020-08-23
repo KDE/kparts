@@ -144,8 +144,8 @@ private:
     ListingFilterExtension *const d;
 };
 
-}
+Q_DECLARE_OPERATORS_FOR_FLAGS(ListingFilterExtension::FilterModes)
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(KParts::ListingFilterExtension::FilterModes)
+}
 
 #endif /* KPARTS_LISTINGFILTEREXTENSION_H */

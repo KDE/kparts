@@ -472,9 +472,10 @@ private:
     BrowserExtensionPrivate *const d;
 };
 
+Q_DECLARE_OPERATORS_FOR_FLAGS(BrowserExtension::PopupFlags)
+
 }
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(KParts::BrowserExtension::PopupFlags)
 
 #endif
 

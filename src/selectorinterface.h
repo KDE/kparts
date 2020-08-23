@@ -177,14 +177,14 @@ public:
     };
 };
 
+Q_DECLARE_OPERATORS_FOR_FLAGS(SelectorInterface::QueryMethods)
+
 } // namespace KParts
 
 inline void qSwap(KParts::SelectorInterface::Element &lhs, KParts::SelectorInterface::Element &rhs)
 {
     lhs.swap(rhs);
 }
-
-Q_DECLARE_OPERATORS_FOR_FLAGS(KParts::SelectorInterface::QueryMethods)
 
 Q_DECLARE_TYPEINFO(KParts::SelectorInterface::Element, Q_MOVABLE_TYPE);
 

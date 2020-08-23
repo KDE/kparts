@@ -95,8 +95,8 @@ private:
     FileInfoExtensionPrivate *const d;
 };
 
-}
+Q_DECLARE_OPERATORS_FOR_FLAGS(FileInfoExtension::QueryModes)
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(KParts::FileInfoExtension::QueryModes)
+}
 
 #endif /* KPARTS_FILEINFOEXTENSION_H */
