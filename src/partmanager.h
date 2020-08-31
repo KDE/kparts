@@ -114,7 +114,7 @@ public:
     /**
      * Specifies which mouse buttons the partmanager should react upon.
      * By default it reacts on all mouse buttons (LMB/MMB/RMB).
-     * @param buttonMask a combination of Qt::ButtonState values e.g. Qt::LeftButton | Qt::MidButton
+     * @param buttonMask a combination of Qt::ButtonState values e.g. Qt::LeftButton | Qt::MiddleButton
      */
     void setActivationButtonMask(short int buttonMask);
     /**

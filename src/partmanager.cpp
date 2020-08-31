@@ -42,7 +42,7 @@ public:
 
         m_bAllowNestedParts = false;
         m_bIgnoreScrollBars = false;
-        m_activationButtonMask = Qt::LeftButton | Qt::MidButton | Qt::RightButton;
+        m_activationButtonMask = Qt::LeftButton | Qt::MiddleButton | Qt::RightButton;
         m_reason = PartManager::NoReason;
         m_bIgnoreExplicitFocusRequest = false;
     }
@@ -57,7 +57,7 @@ public:
             QMouseEvent *mev = static_cast<QMouseEvent *>(ev);
             m_reason = mev->button() == Qt::LeftButton
                        ? PartManager::ReasonLeftClick
-                       : (mev->button() == Qt::MidButton
+                       : (mev->button() == Qt::MiddleButton
                           ? PartManager::ReasonMidClick
                           : PartManager::ReasonRightClick);
             break;
