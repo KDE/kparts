@@ -1,0 +1,183 @@
+# Translation of kparts5.po into Serbian.
+# Marko Rosic <roske@kde.org.yu>, 2003.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004, 2005.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kparts5\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-07 02:02+0200\n"
+"PO-Revision-Date: 2017-09-28 17:58+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+"X-Wrapping: fine\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Топлица Танасковић,Часлав Илић"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
+
+#: browserextension.cpp:240
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Желите ли да потражите <b>%1</b> на Интернету?</qt>"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "Internet Search"
+msgstr "Претрага на Интернету"
+
+#: browserextension.cpp:241
+#, kde-format
+msgid "&Search"
+msgstr "&Тражи"
+
+#: browseropenorsavequestion.cpp:102
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Тип: %1"
+
+#: browseropenorsavequestion.cpp:110
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Запамти радњу за фајлове овог типа"
+
+#: browseropenorsavequestion.cpp:162 browseropenorsavequestion.cpp:255
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&Отвори помоћу %1|/|&Отвори $[инс-п %1]"
+
+#: browseropenorsavequestion.cpp:229
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "&Отвори помоћу %1|/|&Отвори $[инс-п %1]"
+
+#: browseropenorsavequestion.cpp:240 browseropenorsavequestion.cpp:335
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Отворити „%1“"
+
+#: browseropenorsavequestion.cpp:244
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Отвори помоћу..."
+
+#: browseropenorsavequestion.cpp:264
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Отвори помоћу"
+
+#: browseropenorsavequestion.cpp:332
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Отвори"
+
+#: browseropenorsavequestion.cpp:357
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Име: %1"
+
+#: browseropenorsavequestion.cpp:359
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Име фајла које предлаже сервер."
+
+#: browserrun.cpp:350
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Желите ли заиста да извршите ‘%1’?"
+
+#: browserrun.cpp:351
+#, kde-format
+msgid "Execute File?"
+msgstr "Извршити фајл?"
+
+#: browserrun.cpp:351
+#, kde-format
+msgid "Execute"
+msgstr "Изврши"
+
+#: browserrun.cpp:410
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Менаџер преузимања (%1) није пронађен у путањи ($PATH) "
+
+#: browserrun.cpp:411
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Покушајте да га реинсталирате. \n"
+"\n"
+"Интеграција са К‑освајачем ће бити искључена."
+
+#: browserrun.cpp:438
+#, kde-format
+msgid "Save As"
+msgstr "Сачувај као"
+
+#: htmlsettingsinterface.cpp:34
+#, kde-format
+msgid "Accept"
+msgstr "Прихвати"
+
+#: htmlsettingsinterface.cpp:36
+#, kde-format
+msgid "Reject"
+msgstr "Одбаци"
+
+#: partloader.cpp:182
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr ""
+
+#: partloader.cpp:197
+#, kde-format
+msgid "No part was found for mimeType %1"
+msgstr ""
+
+#: readwritepart.cpp:93
+#, kde-format
+msgid "Untitled"
+msgstr "неименовано"
+
+#: readwritepart.cpp:102
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Документ „%1“ је измењен.\n"
+"Желите ли да сачувате измене?"
+
+#: readwritepart.cpp:104
+#, kde-format
+msgid "Close Document"
+msgstr "Затвори документ"

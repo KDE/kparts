@@ -1,0 +1,185 @@
+# Vietnamese translation for kdelibs.
+# Copyright © 2007 KDE i18n Project for Vietnamese.
+#
+# Clytie Siddall <clytie@riverland.net.au>, 2006-2007.
+# Hoàng Đức Hiếu <hieu.d.hoang@gmail.com>, 2008, 2011.
+# Lê Hoàng Phương <herophuong93@gmail.com>, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-08-14 02:08+0200\n"
+"PO-Revision-Date: 2012-09-23 18:43+0800\n"
+"Last-Translator: Lê Hoàng Phương <herophuong93@gmail.com>\n"
+"Language-Team: American English <kde-i18n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nhóm Việt hoá KDE"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-l10n-vi@kde.org"
+
+#: browserextension.cpp:229
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Bạn có muốn tìm kiếm qua mạng cho <b>%1</b> không?</qt>"
+
+#: browserextension.cpp:230
+#, kde-format
+msgid "Internet Search"
+msgstr "Tìm kiếm trên Mạng"
+
+#: browserextension.cpp:230
+#, kde-format
+msgid "&Search"
+msgstr "Tìm &kiếm"
+
+#: browseropenorsavequestion.cpp:87
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Kiểu: %1"
+
+#: browseropenorsavequestion.cpp:95
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Lưu hành động cho các tập tin thuộc kiểu này"
+
+#: browseropenorsavequestion.cpp:147 browseropenorsavequestion.cpp:240
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&Mở bằng %1"
+
+#: browseropenorsavequestion.cpp:214
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Mở &bằng %1"
+
+#: browseropenorsavequestion.cpp:225 browseropenorsavequestion.cpp:320
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Mở '%1'?"
+
+#: browseropenorsavequestion.cpp:229
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Mở bằng..."
+
+#: browseropenorsavequestion.cpp:249
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Mở bằng"
+
+#: browseropenorsavequestion.cpp:317
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Mở"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Tên: %1"
+
+#: browseropenorsavequestion.cpp:344
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Đây là tên tập tin được gợi ý bởi máy chủ"
+
+#: browserrun.cpp:338
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Bạn có thật sự muốn thực thi '%1' không? "
+
+#: browserrun.cpp:339
+#, kde-format
+msgid "Execute File?"
+msgstr "Thực hiện tập tin ?"
+
+#: browserrun.cpp:339
+#, kde-format
+msgid "Execute"
+msgstr "Thực hiện"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr ""
+"Không tìm thấy Bộ Quản lý Tải về (%1) trong PATH (đường dẫn ứng dụng) của "
+"bạn."
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Hãy thử cài đặt lại nó.\n"
+"\n"
+"Khả năng hợp nhất với Konqueror sẽ bị tắt."
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "Lưu dạng"
+
+#: htmlsettingsinterface.cpp:22
+#, kde-format
+msgid "Accept"
+msgstr "Chấp nhận"
+
+#: htmlsettingsinterface.cpp:24
+#, kde-format
+msgid "Reject"
+msgstr "Từ chối"
+
+#: partloader.cpp:170
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "Dịch vụ '%1' không cung cấp một giao diện '%2' cho từ khóa '%3'"
+
+#: partloader.cpp:185
+#, fuzzy, kde-format
+#| msgid "No handler found for %1."
+msgid "No part was found for mimeType %1"
+msgstr "Không tìm thấy bộ quản lý cho %1."
+
+#: readwritepart.cpp:81
+#, kde-format
+msgid "Untitled"
+msgstr "Không tên"
+
+#: readwritepart.cpp:90
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Tài liệu \"%1\" đã được sửa đổi.\n"
+"Bạn có muốn lưu các thay đổi hoặc hủy hết?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "Đóng tài liệu"
