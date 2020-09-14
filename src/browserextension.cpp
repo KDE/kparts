@@ -30,11 +30,7 @@ namespace KParts
 class KBitArray
 {
 public:
-    int val;
-    KBitArray()
-    {
-        val = 0;
-    }
+    int val = 0;
     bool operator [](int index)
     {
         return (val & (1 << index)) ? true : false;

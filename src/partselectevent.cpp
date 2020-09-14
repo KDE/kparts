@@ -23,9 +23,9 @@ public:
     {
     }
     static const char s_strPartSelectEvent[];
-    bool m_bSelected;
-    Part *m_part;
-    QWidget *m_widget;
+    const bool m_bSelected;
+    Part *const m_part;
+    QWidget *const m_widget;
 };
 
 const char PartSelectEventPrivate::s_strPartSelectEvent[] =

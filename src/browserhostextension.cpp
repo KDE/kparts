@@ -26,7 +26,7 @@ public:
     {
     }
 
-    KParts::ReadOnlyPart *m_part;
+    KParts::ReadOnlyPart *m_part = nullptr;
 };
 
 }

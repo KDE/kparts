@@ -13,10 +13,7 @@ namespace KParts
 {
 
 struct ScriptableExtensionPrivate {
-    ScriptableExtension *hostContext;
-
-    ScriptableExtensionPrivate(): hostContext(nullptr)
-    {}
+    ScriptableExtension *hostContext = nullptr;
 };
 
 ScriptableExtension::ScriptableExtension(QObject *parent):

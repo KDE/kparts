@@ -18,7 +18,7 @@ public:
     {
     }
     static const char s_strGUIActivateEvent[];
-    bool m_bActivated;
+    const bool m_bActivated;
 };
 
 const char GUIActivateEventPrivate::s_strGUIActivateEvent[] = "KParts/GUIActivate";

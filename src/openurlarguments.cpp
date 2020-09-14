@@ -12,18 +12,10 @@
 class KParts::OpenUrlArgumentsPrivate : public QSharedData
 {
 public:
-    OpenUrlArgumentsPrivate()
-        : reload(false),
-          actionRequestedByUser(true),
-          xOffset(0),
-          yOffset(0),
-          mimeType(),
-          metaData()
-    {}
-    bool reload;
-    bool actionRequestedByUser;
-    int xOffset;
-    int yOffset;
+    bool reload = false;
+    bool actionRequestedByUser = true;
+    int xOffset = 0;
+    int yOffset = 0;
     QString mimeType;
     QMap<QString, QString> metaData;
 };

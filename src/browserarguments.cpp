@@ -14,20 +14,12 @@ namespace KParts
 {
 
 struct BrowserArgumentsPrivate {
-    BrowserArgumentsPrivate()
-    {
-        doPost = false;
-        redirectedRequest = false;
-        lockHistory = false;
-        newTab = false;
-        forcesNewWindow = false;
-    }
     QString contentType; // for POST
-    bool doPost;
-    bool redirectedRequest;
-    bool lockHistory;
-    bool newTab;
-    bool forcesNewWindow;
+    bool doPost = false;
+    bool redirectedRequest = false;
+    bool lockHistory = false;
+    bool newTab = false;
+    bool forcesNewWindow = false;
 };
 
 }

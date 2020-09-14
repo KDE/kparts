@@ -33,10 +33,7 @@ class MainWindowPrivate
 {
 public:
     MainWindowPrivate()
-        : m_activePart(nullptr),
-          m_bShellGUIActivated(false),
-          m_helpMenu(nullptr),
-          m_manageWindowTitle(true)
+        : m_activePart(nullptr)
     {
     }
     ~MainWindowPrivate()
@@ -44,9 +41,9 @@ public:
     }
 
     QPointer<Part> m_activePart;
-    bool m_bShellGUIActivated;
-    KHelpMenu *m_helpMenu;
-    bool m_manageWindowTitle;
+    bool m_bShellGUIActivated = false;
+    KHelpMenu *m_helpMenu = nullptr;
+    bool m_manageWindowTitle = true;
 };
 }
 

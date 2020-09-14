@@ -30,10 +30,10 @@ public:
     {
     }
     static const char s_strOpenUrlEvent[];
-    ReadOnlyPart *m_part;
-    QUrl m_url;
-    OpenUrlArguments m_args;
-    BrowserArguments m_browserArgs;
+    ReadOnlyPart *const m_part;
+    const QUrl m_url;
+    const OpenUrlArguments m_args;
+    const BrowserArguments m_browserArgs;
 };
 
 const char OpenUrlEvent::OpenUrlEventPrivate::s_strOpenUrlEvent[] =

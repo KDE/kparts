@@ -22,9 +22,9 @@ public:
     {
     }
     static const char s_strPartActivateEvent[];
-    bool m_bActivated;
-    Part *m_part;
-    QWidget *m_widget;
+    const bool m_bActivated;
+    Part *const m_part;
+    QWidget *const m_widget;
 };
 
 const char PartActivateEventPrivate::s_strPartActivateEvent[] = "KParts/PartActivateEvent";
