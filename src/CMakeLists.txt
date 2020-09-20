@@ -115,8 +115,9 @@ install(TARGETS KF5Parts EXPORT KF5PartsTargets ${KF5_INSTALL_TARGETS_DEFAULT_AR
 
 install(FILES
    kpart.desktop
-   krop.desktop
-   krwp.desktop
+   kparts-readonlypart.desktop
+   kparts-readwritepart.desktop
+   # KF6 TODO; rename to browser-view.desktop to match pattern as expected by desktop2json
    browserview.desktop
    DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR}
 )
