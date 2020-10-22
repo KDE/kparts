@@ -59,7 +59,16 @@ void PartBase::setComponentData(const KAboutData &pluginData, bool bLoadPlugins)
     Q_D(PartBase);
 
     d->m_componentData = pluginData;
+
+    // backward-compatible registration, usage deprecated
+#if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     KAboutData::registerPluginData(pluginData);
+QT_WARNING_POP
+#endif
+
     KXMLGUIClient::setComponentName(pluginData.componentName(), pluginData.displayName());
     if (bLoadPlugins) {
         loadPlugins(d->m_obj, this, pluginData);
