@@ -20,7 +20,6 @@
 #include <KAboutData>
 
 #include <QFile>
-#include <QObject>
 #include <QFileInfo>
 #include <QDir>
 #include <QStandardPaths>

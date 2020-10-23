@@ -18,7 +18,6 @@
 #include <QDebug>
 #include <KActionCollection>
 #include <KLocalizedString>
-#include <KPluginFactory>
 
 K_PLUGIN_FACTORY_WITH_JSON(NotepadFactory,
                  "notepad.json",
