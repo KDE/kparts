@@ -11,7 +11,7 @@
 #include <kparts/readwritepart.h>
 #include <KPluginFactory>
 
-class KAboutData;
+class KPluginMetaData;
 class QTextEdit;
 
 /**
@@ -25,12 +25,11 @@ class NotepadPart : public KParts::ReadWritePart
 public:
     NotepadPart(QWidget *parentWidget,
                 QObject *parent,
+                const KPluginMetaData &metaData,
                 const QVariantList &args = QVariantList());
     virtual ~NotepadPart();
 
     void setReadWrite(bool rw) override;
-
-    static KAboutData *createAboutData();
 
 protected:
     bool openFile() override;

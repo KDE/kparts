@@ -43,17 +43,23 @@ QObject *PartBase::partObject() const
     return d->m_obj;
 }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
 KAboutData PartBase::componentData() const
 {
     Q_D(const PartBase);
+
     return d->m_componentData;
 }
+#endif
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
 void PartBase::setComponentData(const KAboutData &componentData)
 {
     setComponentData(componentData, true);
 }
+#endif
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
 void PartBase::setComponentData(const KAboutData &pluginData, bool bLoadPlugins)
 {
     Q_D(PartBase);
@@ -71,16 +77,24 @@ QT_WARNING_POP
 
     KXMLGUIClient::setComponentName(pluginData.componentName(), pluginData.displayName());
     if (bLoadPlugins) {
-        loadPlugins(d->m_obj, this, pluginData);
+        loadPlugins(d->m_obj, this, pluginData.componentName());
     }
 }
+#endif
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
 void PartBase::loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient, const KAboutData &instance)
+{
+    loadPlugins(parent, parentGUIClient, instance.componentName());
+}
+#endif
+
+void PartBase::loadPlugins(QObject *parent, KXMLGUIClient *parentGuiClient, const QString &parentInstanceName)
 {
     Q_D(PartBase);
 
     if (d->m_pluginLoadingMode != DoNotLoadPlugins) {
-        Plugin::loadPlugins(parent, parentGUIClient, instance.componentName(), d->m_pluginLoadingMode == LoadPlugins, d->m_pluginInterfaceVersion);
+        Plugin::loadPlugins(parent, parentGuiClient, parentInstanceName, d->m_pluginLoadingMode == LoadPlugins, d->m_pluginInterfaceVersion);
     }
 }
 

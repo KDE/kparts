@@ -1,6 +1,7 @@
 set(KParts_LIB_SRCS
     partbase.cpp
     part.cpp
+    partmetadatautil_p.cpp
     partloader.cpp
     openurlarguments.cpp
     readonlypart.cpp
@@ -91,7 +92,7 @@ ecm_generate_export_header(KF5Parts
     GROUP_BASE_NAME KF
     VERSION ${KF5_VERSION}
     DEPRECATED_BASE_VERSION 0
-    DEPRECATION_VERSIONS 3.0 4.4 5.0 5.72
+    DEPRECATION_VERSIONS 3.0 4.4 5.0 5.72 5.77
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 

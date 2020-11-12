@@ -196,7 +196,7 @@ void ReadOnlyPartPrivate::openRemoteFile()
     if (!ext.isEmpty() && !m_url.hasQuery()) { // not if the URL has a query, e.g. cgi.pl?something
         extension = QLatin1Char('.') + ext;    // keep the '.'
     }
-    QTemporaryFile tempFile(QDir::tempPath() + QLatin1Char('/') + q->componentData().componentName() + QLatin1String("XXXXXX") + extension);
+    QTemporaryFile tempFile(QDir::tempPath() + QLatin1Char('/') + m_metaData.pluginId() + QLatin1String("XXXXXX") + extension);
     tempFile.setAutoRemove(false);
     tempFile.open();
     m_file = tempFile.fileName();

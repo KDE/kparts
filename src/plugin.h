@@ -14,7 +14,10 @@
 #include <QDomElement>
 #include <QObject>
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
 class KAboutData;
+#endif
+class KPluginMetaData;
 
 namespace KParts
 {
@@ -145,7 +148,18 @@ public:
     static QList<Plugin *> pluginObjects(QObject *parent);
 
 protected:
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
+    /**
+     * @deprecated Since 5.77, use setMetaData(const KPluginMetaData&) instead.
+     */
+    KPARTS_DEPRECATED_VERSION(5, 77, "Use setMetaData(const KPluginMetaData&) instead")
     virtual void setComponentData(const KAboutData &pluginData);
+#endif
+
+    /**
+     * @since 5.77
+     */
+    void setMetaData(const KPluginMetaData &metaData);
 
 private:
     /**

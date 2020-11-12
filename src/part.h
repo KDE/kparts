@@ -11,6 +11,7 @@
 
 #include <kparts/partbase.h>
 
+class KPluginMetaData;
 class KIconLoader;
 class QWidget;
 class QEvent;
@@ -160,11 +161,16 @@ public:
 #endif
 
     /**
+     * @since 5.77
+     */
+    KPluginMetaData metaData() const;
+
+    /**
      * Use this icon loader to load any icons that are specific to this part,
      * i.e. icons installed into this part's own directories as opposed to standard
      * kde icons.
      *
-     * Make sure to call setComponentData before calling iconLoader.
+     * Make sure to call setMetaData (or deprevated setComponentData) before calling iconLoader.
      */
     KIconLoader *iconLoader();
 
@@ -231,12 +237,21 @@ protected:
 
     /**
      * Load this part's plugins now.
-     * Normally you want to call this at the end of the part constructor,
-     * if you used setComponentData(componentData, false)
+     * Call this at the end of the part constructor, unless you are still using the
+     * deprecated setComponentData(componentData, true)).
      * @since 4.1
      */
     void loadPlugins();
     using PartBase::loadPlugins;
+
+    /**
+     * Set the meta data for this part.
+     *
+     * Call this at the begin of the part constructor.
+     *
+     * @since 5.77
+     */
+    void setMetaData(const KPluginMetaData &metatData);
 
 protected Q_SLOTS:
     /**

@@ -26,11 +26,11 @@ K_PLUGIN_FACTORY_WITH_JSON(NotepadFactory,
 
 NotepadPart::NotepadPart(QWidget *parentWidget,
                          QObject *parent,
+                         const KPluginMetaData &metaData,
                          const QVariantList &)
     : KParts::ReadWritePart(parent)
 {
-    KAboutData aboutData(QStringLiteral("notepadpart"), QStringLiteral("Notepad Part"), QStringLiteral("0.1"));
-    setComponentData(aboutData, false);
+    setMetaData(metaData);
 
     m_edit = new QTextEdit(parentWidget);
     m_edit->setPlainText(QStringLiteral("NotepadPart's multiline edit"));
@@ -62,11 +62,6 @@ void NotepadPart::setReadWrite(bool rw)
     }
 
     ReadWritePart::setReadWrite(rw);
-}
-
-KAboutData *NotepadPart::createAboutData()
-{
-    return new KAboutData(QStringLiteral("notepadpart"), i18n("Notepad"), QStringLiteral("2.0"));
 }
 
 bool NotepadPart::openFile()

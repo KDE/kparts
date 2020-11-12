@@ -99,6 +99,13 @@ KIconLoader *Part::iconLoader()
     return d->m_iconLoader;
 }
 
+KPluginMetaData Part::metaData() const
+{
+    Q_D(const Part);
+
+    return d->m_metaData;
+}
+
 void Part::setManager(PartManager *manager)
 {
     Q_D(Part);
@@ -206,7 +213,31 @@ void Part::slotWidgetDestroyed()
 
 void Part::loadPlugins()
 {
-    PartBase::loadPlugins(this, this, componentData());
+    Q_D(Part);
+
+    PartBase::loadPlugins(this, this, d->m_metaData.pluginId());
 }
+
+void Part::setMetaData(const KPluginMetaData& metaData)
+{
+    Q_D(Part);
+
+    d->m_metaData = metaData;
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+    d->PartBasePrivate::setComponentData(KAboutData::fromPluginMetaData(metaData));
+
+    // backward-compatible registration, usage deprecated
+#if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)
+    KAboutData::registerPluginData(d->componentData());
+#endif
+QT_WARNING_POP
+#endif
+
+    KXMLGUIClient::setComponentName(metaData.pluginId(), metaData.name());
+}
+
 
 #include "moc_part.cpp"

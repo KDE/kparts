@@ -11,6 +11,7 @@
 
 #include <KActionMenu>
 #include <KActionCollection>
+#include <KPluginMetaData>
 
 #include <QAction>
 #include <QCheckBox>
@@ -18,16 +19,23 @@
 #include <QTextStream>
 #include <QTextEdit>
 #include <QLineEdit>
+#include <QJsonDocument>
 #include <QTest>
 
 #include <QDebug>
 #include <KLocalizedString>
 
+
 Part1::Part1(QObject *parent, QWidget *parentWidget)
-    : KParts::ReadOnlyPart(parent),
-      m_componentData(QStringLiteral("kpartstestpart"), i18n("KParts test part"), QStringLiteral("0.1"))
+    : KParts::ReadOnlyPart(parent)
 {
-    setComponentData(m_componentData, false);
+    QJsonObject jo = QJsonDocument::fromJson("{ \"KPlugin\": {\n"
+                                             " \"Id\": \"kpartstestpart\",\n"
+                                             " \"Name\": \"KParts test part\",\n"
+                                             " \"Version\": \"0.1\"\n"
+                                             "}\n}").object();
+    setMetaData(KPluginMetaData(jo, QString()));
+
     m_edit = new QTextEdit(parentWidget);
     setWidget(m_edit);
 
@@ -89,10 +97,15 @@ bool Part1::openFile()
 }
 
 Part2::Part2(QObject *parent, QWidget *parentWidget)
-    : KParts::Part(parent),
-      m_componentData(QStringLiteral("part2"), QStringLiteral("Part 2"), QStringLiteral("0.2"))
+    : KParts::Part(parent)
 {
-    setComponentData(m_componentData, false);
+    QJsonObject jo = QJsonDocument::fromJson("{ \"KPlugin\": {\n"
+                                             " \"Id\": \"part2\",\n"
+                                             " \"Name\": \"Part 2\",\n"
+                                             " \"Version\": \"0.2\"\n"
+                                             "}\n}").object();
+    setMetaData(KPluginMetaData(jo, QString()));
+
     QWidget *w = new QWidget(parentWidget);
     w->setObjectName(QStringLiteral("Part2Widget"));
     setWidget(w);

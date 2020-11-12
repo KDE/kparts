@@ -88,7 +88,7 @@ void MainWindow::createGUI(Part *part)
     }
 
     if (!d->m_bShellGUIActivated) {
-        loadPlugins(this, this, KAboutData::applicationData());
+        loadPlugins(this, this, KAboutData::applicationData().componentName());
         createShellGUI();
         d->m_bShellGUIActivated = true;
     }

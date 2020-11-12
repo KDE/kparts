@@ -17,7 +17,10 @@
 #include <KDesktopFile>
 #include <KSharedConfig>
 #include <KConfigGroup>
+#include <KPluginMetaData>
+#if ! KPARTS_BUILD_DEPRECATED_SINCE(5, 77) || KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)
 #include <KAboutData>
+#endif
 
 #include <QFile>
 #include <QFileInfo>
@@ -184,6 +187,7 @@ bool Plugin::hasPlugin(QObject *parent, const QString &library)
     });
 }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
 void Plugin::setComponentData(const KAboutData &pluginData)
 {
     // backward-compatible registration, usage deprecated
@@ -196,6 +200,21 @@ QT_WARNING_POP
 #endif
 
     KXMLGUIClient::setComponentName(pluginData.componentName(), pluginData.displayName());
+}
+#endif
+
+void Plugin::setMetaData(const KPluginMetaData &metaData)
+{
+    // backward-compatible registration, usage deprecated
+#if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+    KAboutData::registerPluginData(KAboutData::fromPluginMetaData(metaData));
+QT_WARNING_POP
+#endif
+
+    KXMLGUIClient::setComponentName(metaData.pluginId(), metaData.name());
 }
 
 void Plugin::loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient,

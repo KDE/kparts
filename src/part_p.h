@@ -11,7 +11,12 @@
 
 #include "partbase_p.h"
 #include "part.h"
-
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
+#include "partmetadatautil_p.h"
+#endif
+// KF
+#include <KPluginMetaData>
+// Qt
 #include <QWidget>
 #include <QPointer>
 
@@ -40,6 +45,15 @@ public:
     {
     }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
+    void setComponentData(const KAboutData &componentData) override
+    {
+        m_metaData = PartMetaDataUtil::fromKAboutData(componentData);
+        PartPrivate::setComponentData(componentData);
+    }
+#endif
+
+    KPluginMetaData m_metaData;
     KIconLoader *m_iconLoader;
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
     bool m_bSelectable;
