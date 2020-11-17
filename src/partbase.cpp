@@ -48,7 +48,7 @@ KAboutData PartBase::componentData() const
 {
     Q_D(const PartBase);
 
-    return d->m_componentData;
+    return d->componentData();
 }
 #endif
 
@@ -64,7 +64,7 @@ void PartBase::setComponentData(const KAboutData &pluginData, bool bLoadPlugins)
 {
     Q_D(PartBase);
 
-    d->m_componentData = pluginData;
+    d->setComponentData(pluginData);
 
     // backward-compatible registration, usage deprecated
 #if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)

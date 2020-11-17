@@ -49,7 +49,7 @@ public:
     void setComponentData(const KAboutData &componentData) override
     {
         m_metaData = PartMetaDataUtil::fromKAboutData(componentData);
-        PartPrivate::setComponentData(componentData);
+        PartBasePrivate::setComponentData(componentData);
     }
 #endif
 
