@@ -81,6 +81,7 @@ public:
      */
     ~Part() override;
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
     /**
      * Embed this part into a host widget.
      *
@@ -91,8 +92,12 @@ public:
      * then the widget gets destroyed as well, and vice-versa.
      * This method is not recommended since creating the widget with the correct
      * parent is simpler anyway.
+     *
+     * @deprecated Since 5.77, for lack of usage.
      */
+    KPARTS_DEPRECATED_VERSION(5, 77, "Deprecated for lack of usage")
     virtual void embed(QWidget *parentWidget);
+#endif
 
     /**
      * @return The widget defined by this part, set by setWidget().

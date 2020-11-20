@@ -61,6 +61,7 @@ Part::~Part()
     delete d->m_iconLoader;
 }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
 void Part::embed(QWidget *parentWidget)
 {
     if (widget()) {
@@ -69,6 +70,7 @@ void Part::embed(QWidget *parentWidget)
         widget()->show();
     }
 }
+#endif
 
 QWidget *Part::widget()
 {
