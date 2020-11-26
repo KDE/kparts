@@ -32,7 +32,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX KPARTS
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PartsConfigVersion.cmake"
                         SOVERSION 5)
 
-set(REQUIRED_QT_VERSION 5.12.0)
+set(REQUIRED_QT_VERSION 5.13.0)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Widgets Xml)
 
 find_package(KF5Config ${KF5_DEP_VERSION} REQUIRED)
