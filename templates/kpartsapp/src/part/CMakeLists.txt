@@ -4,6 +4,10 @@ set(%{APPNAMELC}_PART_SRCS
    %{APPNAMELC}part.cpp
 )
 
+qt5_add_resources(%{APPNAMELC}_PART_SRCS
+    %{APPNAMELC}part.qrc
+)
+
 add_library(%{APPNAMELC}part MODULE ${%{APPNAMELC}_PART_SRCS})
 
 target_link_libraries(%{APPNAMELC}part
@@ -13,4 +17,3 @@ target_link_libraries(%{APPNAMELC}part
 
 install(TARGETS %{APPNAMELC}part  DESTINATION ${KDE_INSTALL_PLUGINDIR})
 install(FILES %{APPNAMELC}part.desktop  DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-install(FILES %{APPNAMELC}partui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/%{APPNAMELC}part)

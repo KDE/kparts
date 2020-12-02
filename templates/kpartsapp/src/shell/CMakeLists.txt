@@ -3,6 +3,10 @@ set(%{APPNAMELC}_SRCS
    %{APPNAMELC}shell.cpp
 )
 
+qt5_add_resources(%{APPNAMELC}_SRCS
+    %{APPNAMELC}.qrc
+)
+
 add_executable(%{APPNAMELC} ${%{APPNAMELC}_SRCS})
 
 target_link_libraries(%{APPNAMELC}
@@ -12,4 +16,3 @@ target_link_libraries(%{APPNAMELC}
 
 install(TARGETS %{APPNAMELC} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(PROGRAMS %{APPNAMELC}.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
-install(FILES %{APPNAMELC}ui.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/%{APPNAMELC})
