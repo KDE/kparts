@@ -10,6 +10,7 @@
 #include <KParts/ReadWritePart>
 #include <KPluginLoader>
 #include <KPluginFactory>
+#include <KPluginMetaData>
 #include <KActionCollection>
 #include <KStandardAction>
 #include <KLocalizedString>
@@ -29,10 +30,13 @@
     setupActions();
 
     // find and load the part
-    // Doing it by name, which is a bad idea usually but alright here
-    // since this part is made for this shell
-    KPluginLoader loader(QStringLiteral("%{APPNAMELC}part"));
-    auto factory = loader.factory();
+    const auto plugins = KPluginLoader::findPlugins(QStringLiteral("kf5/parts"),
+                                                    [](const KPluginMetaData& metaData) {
+        return metaData.pluginId() == QLatin1String("%{APPNAMELC}part");
+    });
+
+    KPluginFactory *factory = plugins.isEmpty() ? nullptr : KPluginLoader(plugins.first().fileName()).factory();
+
     if (!factory) {
         // can't do anything useful without part, thus quit the app
         KMessageBox::error(this, i18n("Could not find %{APPNAME} part!"));

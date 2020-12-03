@@ -8,7 +8,7 @@
 
 // KF headers
 #include <KPluginFactory>
-#include <KAboutData>
+#include <KPluginMetaData>
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <KStandardAction>
@@ -20,17 +20,15 @@
 #include <QTextEdit>
 #include <QTextDocument>
 
-K_PLUGIN_FACTORY(%{APPNAME}PartFactory, registerPlugin<%{APPNAME}Part>();)
+K_PLUGIN_CLASS_WITH_JSON(%{APPNAME}Part, "%{APPNAMELC}part.json")
 
 
-%{APPNAME}Part::%{APPNAME}Part(QWidget* parentWidget, QObject* parent, const QVariantList& /*args*/)
+%{APPNAME}Part::%{APPNAME}Part(QWidget* parentWidget, QObject* parent,
+                               const KPluginMetaData &metaData, const QVariantList& /*args*/)
     : KParts::ReadWritePart(parent)
 {
     // set component data
-    // the first arg must be the same as the subdirectory into which the part's rc file is installed
-    KAboutData aboutData("%{APPNAMELC}part", i18n("%{APPNAME}Part"), QStringLiteral("%{VERSION}"));
-    aboutData.addAuthor(i18n("%{AUTHOR}"), i18n("Author"), QStringLiteral("%{EMAIL}"));
-    setComponentData(aboutData);
+    setMetaData(metaData);
 
     // set internal UI
     // TODO: replace with your custom UI
@@ -150,5 +148,5 @@ void %{APPNAME}Part::fileSaveAs()
     }
 }
 
-// needed for K_PLUGIN_FACTORY
+// needed for K_PLUGIN_CLASS
 #include <%{APPNAMELC}part.moc>

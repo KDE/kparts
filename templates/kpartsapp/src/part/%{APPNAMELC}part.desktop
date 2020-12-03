@@ -1,8 +1,16 @@
 [Desktop Entry]
 Type=Service
 Name=%{APPNAME}Part
+Comment=A %{APPNAME} KPart
 Icon=%{APPNAMELC}
 # TODO: replace with your custom supported mime types
 MimeType=text/plain;
 X-KDE-ServiceTypes=KParts/ReadOnlyPart,KParts/ReadWritePart
-X-KDE-Library=%{APPNAMELC}part
+X-KDE-Library=kf5/parts/%{APPNAMELC}part
+
+X-KDE-PluginInfo-Name=%{APPNAMELC}part
+X-KDE-PluginInfo-Version=%{VERSION}
+X-KDE-PluginInfo-License=GPLv2+
+X-KDE-PluginInfo-Author=%{AUTHOR}
+X-KDE-PluginInfo-Email=%{EMAIL}
+X-KDE-PluginInfo-Website=

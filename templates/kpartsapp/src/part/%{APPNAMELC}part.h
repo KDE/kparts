@@ -26,7 +26,8 @@ public:
     /**
      * Default constructor, with arguments as expected by KPluginFactory
      */
-    %{APPNAME}Part(QWidget* parentWidget, QObject* parent, const QVariantList& arg);
+    %{APPNAME}Part(QWidget* parentWidget, QObject* parent,
+                   const KPluginMetaData &metaData, const QVariantList& arg);
 
     /**
      * Destructor
