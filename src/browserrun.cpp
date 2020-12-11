@@ -425,6 +425,7 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
     dlg->setAcceptMode(QFileDialog::AcceptSave);
     dlg->setWindowTitle(i18n("Save As"));
     dlg->setOption(QFileDialog::DontConfirmOverwrite, false);
+    dlg->setAttribute(Qt::WA_DeleteOnClose);
 
     QString name;
     if (!suggestedFileName.isEmpty()) {
@@ -434,13 +435,14 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
     }
 
     dlg->selectFile(name);
-    if (dlg->exec()) {
-        QUrl destURL(dlg->selectedUrls().at(0));
+    connect(dlg, &QDialog::accepted, dlg, [dlg, url, window, args]() {
+        const QUrl destURL = dlg->selectedUrls().value(0);
         if (destURL.isValid()) {
             saveUrlUsingKIO(url, destURL, window, args.metaData());
         }
-    }
-    delete dlg;
+    });
+
+    dlg->show();
 }
 
 void BrowserRun::saveUrlUsingKIO(const QUrl &srcUrl, const QUrl &destUrl,
