@@ -12,6 +12,7 @@
 
 using namespace KParts;
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 78)
 
 namespace KParts
 {
@@ -71,3 +72,5 @@ BrowserHostExtension::findFrameParent(KParts::ReadOnlyPart *callingPart, const Q
     Q_UNUSED(frame);
     return nullptr;
 }
+
+#endif

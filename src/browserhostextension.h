@@ -11,6 +11,8 @@
 
 #include <kparts/kparts_export.h>
 
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 78)
+
 #include <QObject>
 
 class QStringList;
@@ -31,11 +33,13 @@ struct BrowserArguments;
  * @short An extension class for container parts, i.e. parts that contain
  * other parts.
  * For instance a KHTMLPart hosts one part per frame.
+ * @deprecated since 5.78 for lack of usage
  */
 class KPARTS_EXPORT BrowserHostExtension : public QObject
 {
     Q_OBJECT
 public:
+    KPARTS_DEPRECATED_VERSION(5, 78, "Deprecated for lack of usage")
     BrowserHostExtension(KParts::ReadOnlyPart *parent);
 
     virtual ~BrowserHostExtension();
@@ -82,4 +86,5 @@ private:
 
 }
 
+#endif
 #endif
