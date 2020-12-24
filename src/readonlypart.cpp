@@ -208,8 +208,8 @@ void ReadOnlyPartPrivate::openRemoteFile()
     KJobWidgets::setWindow(m_job, q->widget());
     emit q->started(m_job);
     QObject::connect(m_job, SIGNAL(result(KJob*)), q, SLOT(_k_slotJobFinished(KJob*)));
-    QObject::connect(m_job, SIGNAL(mimetype(KIO::Job*,QString)),
-                     q, SLOT(_k_slotGotMimeType(KIO::Job*,QString)));
+    QObject::connect(m_job, &KIO::FileCopyJob::mimeTypeFound,
+                     q, [this](KIO::Job *job, const QString &mimeType) { _k_slotGotMimeType(job, mimeType); });
 }
 
 void ReadOnlyPart::abortLoad()
