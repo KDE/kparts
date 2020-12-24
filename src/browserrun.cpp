@@ -166,7 +166,7 @@ void BrowserRun::scanFile()
     KJobWidgets::setWindow(job, d->m_window);
     connect(job, &KIO::TransferJob::result,
             this, &BrowserRun::slotBrowserScanFinished);
-    connect(job, static_cast<void (KIO::TransferJob::*)(KIO::Job*,const QString &)>(&KIO::TransferJob::mimetype),
+    connect(job, &KIO::TransferJob::mimeTypeFound,
             this, &BrowserRun::slotBrowserMimetype);
     setJob(job);
 }
