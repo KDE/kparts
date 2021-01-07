@@ -7,16 +7,19 @@
 */
 
 #include "partselectevent.h"
+#include "event_p.h"
 
 using namespace KParts;
 
 
-class KParts::PartSelectEventPrivate
+class KParts::PartSelectEventPrivate : public KParts::EventPrivate
 {
 public:
-    PartSelectEventPrivate(bool selected,
+    PartSelectEventPrivate(const char *eventName,
+                           bool selected,
                            Part *part,
-                           QWidget *widget) :
+                           QWidget *widget)
+        : EventPrivate(eventName),
         m_bSelected(selected),
         m_part(part),
         m_widget(widget)
@@ -34,28 +37,30 @@ const char PartSelectEventPrivate::s_strPartSelectEvent[] =
 PartSelectEvent::PartSelectEvent(bool selected,
                                  Part *part,
                                  QWidget *widget) :
-    Event(PartSelectEventPrivate::s_strPartSelectEvent),
-    d(new PartSelectEventPrivate(selected, part, widget))
+    Event(*new PartSelectEventPrivate(PartSelectEventPrivate::s_strPartSelectEvent, selected, part, widget))
 {
 }
 
-PartSelectEvent::~PartSelectEvent()
-{
-    delete d;
-}
+PartSelectEvent::~PartSelectEvent() = default;
 
 bool PartSelectEvent::selected() const
 {
+    Q_D(const PartSelectEvent);
+
     return d->m_bSelected;
 }
 
 Part *PartSelectEvent::part() const
 {
+    Q_D(const PartSelectEvent);
+
     return d->m_part;
 }
 
 QWidget *PartSelectEvent::widget() const
 {
+    Q_D(const PartSelectEvent);
+
     return d->m_widget;
 }
 

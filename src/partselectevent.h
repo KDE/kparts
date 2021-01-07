@@ -34,7 +34,11 @@ public:
     static bool test(const QEvent *event);
 
 private:
-    PartSelectEventPrivate *const d;
+    Q_DECLARE_PRIVATE_D(Event::d, PartSelectEvent)
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 79)
+    // Unused, kept for ABI compatibility
+    const void * __kparts_d_do_not_use;
+#endif
 };
 
 } // namespace

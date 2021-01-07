@@ -7,20 +7,23 @@
 */
 
 #include "openurlevent.h"
+#include "event_p.h"
 
 #include <QUrl>
 
 using namespace KParts;
 
 
-class Q_DECL_HIDDEN OpenUrlEvent::OpenUrlEventPrivate
+class KParts::OpenUrlEventPrivate : public KParts::EventPrivate
 {
 public:
-    OpenUrlEventPrivate(ReadOnlyPart *part,
+    OpenUrlEventPrivate(const char *eventName,
+                        ReadOnlyPart *part,
                         const QUrl &url,
                         const OpenUrlArguments &args,
                         const BrowserArguments &browserArgs)
-        : m_part(part)
+        : EventPrivate(eventName)
+        , m_part(part)
         , m_url(url)
         , m_args(args)
         , m_browserArgs(browserArgs)
@@ -36,40 +39,44 @@ public:
     const BrowserArguments m_browserArgs;
 };
 
-const char OpenUrlEvent::OpenUrlEventPrivate::s_strOpenUrlEvent[] =
+const char KParts::OpenUrlEventPrivate::s_strOpenUrlEvent[] =
     "KParts/BrowserExtension/OpenURLevent";
 
 
 OpenUrlEvent::OpenUrlEvent(ReadOnlyPart *part, const QUrl &url,
                            const OpenUrlArguments &args,
                            const BrowserArguments &browserArgs)
-    : Event(OpenUrlEventPrivate::s_strOpenUrlEvent)
-    , d(new OpenUrlEventPrivate(part, url, args, browserArgs))
+    : Event(*new OpenUrlEventPrivate(OpenUrlEventPrivate::s_strOpenUrlEvent, part, url, args, browserArgs))
 {
 }
 
-OpenUrlEvent::~OpenUrlEvent()
-{
-    delete d;
-}
+OpenUrlEvent::~OpenUrlEvent() = default;
 
 ReadOnlyPart *OpenUrlEvent::part() const
 {
+    Q_D(const OpenUrlEvent);
+
     return d->m_part;
 }
 
 QUrl OpenUrlEvent::url() const
 {
+    Q_D(const OpenUrlEvent);
+
     return d->m_url;
 }
 
 OpenUrlArguments OpenUrlEvent::arguments() const
 {
+    Q_D(const OpenUrlEvent);
+
     return d->m_args;
 }
 
 BrowserArguments OpenUrlEvent::browserArguments() const
 {
+    Q_D(const OpenUrlEvent);
+
     return d->m_browserArgs;
 }
 

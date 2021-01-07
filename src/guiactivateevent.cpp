@@ -7,14 +7,16 @@
 */
 
 #include "guiactivateevent.h"
+#include "event_p.h"
 
 using namespace KParts;
 
-class KParts::GUIActivateEventPrivate
+class KParts::GUIActivateEventPrivate : public KParts::EventPrivate
 {
 public:
-    GUIActivateEventPrivate(bool activated)
-        : m_bActivated(activated)
+    GUIActivateEventPrivate(bool activated, const char *eventName)
+        : EventPrivate(eventName)
+        , m_bActivated(activated)
     {
     }
     static const char s_strGUIActivateEvent[];
@@ -24,18 +26,16 @@ public:
 const char GUIActivateEventPrivate::s_strGUIActivateEvent[] = "KParts/GUIActivate";
 
 GUIActivateEvent::GUIActivateEvent(bool activated) :
-    Event(GUIActivateEventPrivate::s_strGUIActivateEvent),
-    d(new GUIActivateEventPrivate(activated))
+    Event(*new GUIActivateEventPrivate(activated, GUIActivateEventPrivate::s_strGUIActivateEvent))
 {
 }
 
-GUIActivateEvent::~GUIActivateEvent()
-{
-    delete d;
-}
+GUIActivateEvent::~GUIActivateEvent() = default;
 
 bool GUIActivateEvent::activated() const
 {
+    Q_D(const GUIActivateEvent);
+
     return d->m_bActivated;
 }
 

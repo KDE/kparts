@@ -7,15 +7,18 @@
 */
 
 #include "partactivateevent.h"
+#include "event_p.h"
 
 using namespace KParts;
 
-class KParts::PartActivateEventPrivate
+class KParts::PartActivateEventPrivate : public KParts::EventPrivate
 {
 public:
-    PartActivateEventPrivate(bool activated,
+    PartActivateEventPrivate(const char *eventName,
+                             bool activated,
                              Part *part,
-                             QWidget *widget) :
+                             QWidget *widget)
+        : EventPrivate(eventName),
         m_bActivated(activated),
         m_part(part),
         m_widget(widget)
@@ -32,28 +35,30 @@ const char PartActivateEventPrivate::s_strPartActivateEvent[] = "KParts/PartActi
 PartActivateEvent::PartActivateEvent(bool activated,
                                      Part *part,
                                      QWidget *widget) :
-    Event(PartActivateEventPrivate::s_strPartActivateEvent),
-    d(new PartActivateEventPrivate(activated, part, widget))
+    Event(*new PartActivateEventPrivate(PartActivateEventPrivate::s_strPartActivateEvent, activated, part, widget))
 {
 }
 
-PartActivateEvent::~PartActivateEvent()
-{
-    delete d;
-}
+PartActivateEvent::~PartActivateEvent() = default;
 
 bool PartActivateEvent::activated() const
 {
+    Q_D(const PartActivateEvent);
+
     return d->m_bActivated;
 }
 
 Part *PartActivateEvent::part() const
 {
+    Q_D(const PartActivateEvent);
+
     return d->m_part;
 }
 
 QWidget *PartActivateEvent::widget() const
 {
+    Q_D(const PartActivateEvent);
+
     return d->m_widget;
 }
 

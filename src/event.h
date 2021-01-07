@@ -12,6 +12,7 @@
 #include <kparts/kparts_export.h>
 
 #include <QEvent>
+#include <memory>
 
 class QWidget;
 
@@ -34,8 +35,17 @@ public:
     static bool test(const QEvent *event);
     static bool test(const QEvent *event, const char *name);
 
+protected:
+    explicit Event(EventPrivate &dd);
+
 private:
-    EventPrivate *const d;
+    friend class GUIActivateEvent;
+    friend class OpenUrlEvent;
+    friend class PartActivateEvent;
+    friend class PartSelectEvent;
+    Q_DECLARE_PRIVATE_D(d, Event)
+    std::unique_ptr<class EventPrivate> const d;
+    // KF6 TODO: change private d to protected d_ptr, use normal Q_DECLARE_PRIVATE, remove friend
 };
 
 } // namespace

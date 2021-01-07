@@ -7,35 +7,30 @@
 */
 
 #include "event.h"
+#include "event_p.h"
 
 using namespace KParts;
 
 //the answer!
 #define KPARTS_EVENT_MAGIC 42
 
-class KParts::EventPrivate
-{
-public:
-    EventPrivate(const char *eventName) :
-        m_eventName(eventName)
-    {
-    }
-    const char *m_eventName;
-};
-
 Event::Event(const char *eventName)
-    : QEvent((QEvent::Type)(QEvent::User + KPARTS_EVENT_MAGIC))
-    , d(new EventPrivate(eventName))
+    : Event(*new EventPrivate(eventName))
 {
 }
 
-Event::~Event()
+Event::Event(EventPrivate &dd)
+    : QEvent((QEvent::Type)(QEvent::User + KPARTS_EVENT_MAGIC))
+    , d(&dd)
 {
-    delete d;
 }
+
+Event::~Event() = default;
 
 const char *Event::eventName() const
 {
+    Q_D(const Event);
+
     return d->m_eventName;
 }
 

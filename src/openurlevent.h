@@ -18,6 +18,7 @@ class QUrl;
 namespace KParts
 {
 class ReadOnlyPart;
+class OpenUrlEventPrivate;
 
 /**
  * @class OpenUrlEvent openurlevent.h <KParts/OpenUrlEvent>
@@ -44,8 +45,11 @@ public:
     static bool test(const QEvent *event);
 
 private:
-    class OpenUrlEventPrivate;
-    OpenUrlEventPrivate *const d;
+    Q_DECLARE_PRIVATE_D(Event::d, OpenUrlEvent)
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 79)
+    // Unused, kept for ABI compatibility
+    const void * __kparts_d_do_not_use;
+#endif
 };
 
 }
