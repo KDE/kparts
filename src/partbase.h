@@ -14,12 +14,13 @@
 #include <QObject>
 
 #include <KXMLGUIClient>
+#include <memory>
 
-
-#define KPARTS_DECLARE_PRIVATE(Class) \
-    inline Class##Private* d_func() { return reinterpret_cast<Class##Private *>(PartBase::d_ptr); } \
-    inline const Class##Private* d_func() const { return reinterpret_cast<const Class##Private *>(PartBase::d_ptr); } \
-    friend class Class##Private;
+// Internal:
+// As KParts::PartBase is inherited by KParts::Part which also inheriting from QObject,
+// which already has a protected d_ptr member, the macro Q_DECLARE_PRIVATE cannot be used
+// as it references d_ptr without any class qualifier, which is ambigous then.
+#define KPARTS_DECLARE_PRIVATE(Class) Q_DECLARE_PRIVATE_D(PartBase::d_ptr, Class)
 
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
 class KAboutData;
@@ -192,7 +193,7 @@ protected:
 protected:
     PartBase(PartBasePrivate &dd);
 
-    PartBasePrivate *d_ptr;
+    std::unique_ptr<PartBasePrivate> const d_ptr;
 
 private:
     Q_DISABLE_COPY(PartBase)

@@ -24,10 +24,7 @@ PartBase::PartBase(PartBasePrivate &dd)
 {
 }
 
-PartBase::~PartBase()
-{
-    delete d_ptr;
-}
+PartBase::~PartBase() = default;
 
 void PartBase::setPartObject(QObject *obj)
 {

@@ -11,6 +11,7 @@
 #include <kparts/kparts_export.h>
 
 #include <QObject>
+#include <memory>
 
 class QUrl;
 
@@ -61,7 +62,7 @@ public:
 
 private:
     // for future extensions
-    HtmlExtensionPrivate *const d;
+    std::unique_ptr<HtmlExtensionPrivate> const d;
 };
 
 } // namespace KParts

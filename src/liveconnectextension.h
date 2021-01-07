@@ -12,6 +12,7 @@
 #include <kparts/kparts_export.h>
 
 #include <QObject>
+#include <memory>
 
 template <class T1, class T2> struct QPair;
 template<typename T> class QList;
@@ -23,6 +24,7 @@ namespace KParts
 {
 
 class ReadOnlyPart;
+class LiveConnectExtensionPrivate;
 
 /**
  * @class LiveConnectExtension liveconnectextension.h <KParts/LiveConnectExtension>
@@ -69,8 +71,7 @@ Q_SIGNALS:
     void partEvent(const unsigned long objid, const QString &event, const KParts::LiveConnectExtension::ArgList &args);
 
 private:
-    class LiveConnectExtensionPrivate;
-    LiveConnectExtensionPrivate *const d;
+    std::unique_ptr<LiveConnectExtensionPrivate> const d;
 };
 
 }

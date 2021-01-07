@@ -203,10 +203,7 @@ BrowserOpenOrSaveQuestion::BrowserOpenOrSaveQuestion(QWidget *parent, const QUrl
 {
 }
 
-BrowserOpenOrSaveQuestion::~BrowserOpenOrSaveQuestion()
-{
-    delete d;
-}
+BrowserOpenOrSaveQuestion::~BrowserOpenOrSaveQuestion() = default;
 
 static QAction *createAppAction(const KService::Ptr &service, QObject *parent)
 {
@@ -243,18 +240,19 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askOpenOrSave()
             // OpenDefault shall use this service
             d->selectedService = apps.first();
             d->openWithButton->show();
-            QMenu *menu = new QMenu(d);
+            QMenu *menu = new QMenu(d.get());
             if (apps.count() > 1) {
                 // Provide an additional button with a menu of associated apps
                 KGuiItem openWithItem(i18nc("@label:button", "&Open with"), QStringLiteral("document-open"));
                 KGuiItem::assign(d->openWithButton, openWithItem);
                 d->openWithButton->setMenu(menu);
-                QObject::connect(menu, &QMenu::triggered, d, &BrowserOpenOrSaveQuestionPrivate::slotAppSelected);
+                QObject::connect(menu, &QMenu::triggered,
+                                 d.get(), &BrowserOpenOrSaveQuestionPrivate::slotAppSelected);
                 for (const auto &app : apps) {
-                    QAction *act = createAppAction(app, d);
+                    QAction *act = createAppAction(app, d.get());
                     menu->addAction(act);
                 }
-                QAction *openWithDialogAction = new QAction(d);
+                QAction *openWithDialogAction = new QAction(d.get());
                 openWithDialogAction->setIcon(QIcon::fromTheme(QStringLiteral("document-open")));
                 openWithDialogAction->setText(openWithDialogItem.text());
                 menu->addAction(openWithDialogAction);

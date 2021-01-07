@@ -12,6 +12,7 @@
 
 #include <KRun>
 #include <KService>
+#include <memory>
 
 #if KIOWIDGETS_ENABLE_DEPRECATED_SINCE(5, 71)
 namespace KParts
@@ -212,9 +213,9 @@ protected Q_SLOTS:
 
 private:
     void redirectToError(int error, const QString &errorText);
-    class BrowserRunPrivate;
-    BrowserRunPrivate *const d;
 
+private:
+    std::unique_ptr<class BrowserRunPrivate> const d;
 };
 }
 

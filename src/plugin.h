@@ -13,6 +13,7 @@
 #include <KXMLGUIClient>
 #include <QDomElement>
 #include <QObject>
+#include <memory>
 
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
 class KAboutData;
@@ -21,6 +22,7 @@ class KPluginMetaData;
 
 namespace KParts
 {
+class PluginPrivate;
 
 /**
  * @class Plugin plugin.h <KParts/Plugin>
@@ -177,8 +179,7 @@ private:
 
 private:
     static bool hasPlugin(QObject *parent, const QString &library);
-    class PluginPrivate;
-    PluginPrivate *const d;
+    std::unique_ptr<PluginPrivate> const d;
 };
 
 }

@@ -34,7 +34,7 @@
 
 using namespace KParts;
 
-class Q_DECL_HIDDEN BrowserRun::BrowserRunPrivate
+class KParts::BrowserRunPrivate
 {
 public:
     bool m_bHideErrorDialog;
@@ -65,10 +65,7 @@ BrowserRun::BrowserRun(const QUrl &url, const KParts::OpenUrlArguments &args,
     d->m_window = window;
 }
 
-BrowserRun::~BrowserRun()
-{
-    delete d;
-}
+BrowserRun::~BrowserRun() = default;
 
 KParts::ReadOnlyPart *BrowserRun::part() const
 {

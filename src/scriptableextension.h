@@ -13,6 +13,7 @@
 
 #include <QObject>
 #include <QVariant>
+#include <memory>
 
 namespace KParts
 {
@@ -292,7 +293,8 @@ private:
      */
     virtual QVariant encloserForKid(KParts::ScriptableExtension *kid);
 
-    ScriptableExtensionPrivate *const d;
+private:
+    std::unique_ptr<ScriptableExtensionPrivate> const d;
 };
 
 KPARTS_EXPORT unsigned int qHash(const KParts::ScriptableExtension::Object &o, uint seed = 0);

@@ -11,6 +11,7 @@
 #include <kparts/kparts_export.h>
 
 #include <QObject>
+#include <memory>
 
 class KFileItemList;
 
@@ -18,6 +19,7 @@ namespace KParts
 {
 
 class ReadOnlyPart;
+class ListingFilterExtensionPrivate;
 
 /**
  * @class ListingFilterExtension listingfilterextension.h <KParts/ListingFilterExtension>
@@ -140,8 +142,7 @@ public:
     virtual void setFilter(FilterMode mode, const QVariant &filter) = 0;
 
 private:
-    class ListingFilterExtensionPrivate;
-    ListingFilterExtension *const d;
+    std::unique_ptr<ListingFilterExtension> const d;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(ListingFilterExtension::FilterModes)

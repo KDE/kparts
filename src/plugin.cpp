@@ -29,7 +29,7 @@
 
 using namespace KParts;
 
-class Q_DECL_HIDDEN Plugin::PluginPrivate
+class KParts::PluginPrivate
 {
 public:
     QString m_parentInstance;
@@ -42,10 +42,7 @@ Plugin::Plugin(QObject *parent)
     //qDebug() << className();
 }
 
-Plugin::~Plugin()
-{
-    delete d;
-}
+Plugin::~Plugin() = default;
 
 QString Plugin::xmlFile() const
 {

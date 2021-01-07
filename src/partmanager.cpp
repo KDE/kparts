@@ -137,7 +137,6 @@ PartManager::~PartManager()
 
     // core dumps ... setActivePart( 0 );
     qApp->removeEventFilter(this);
-    delete d;
 }
 
 void PartManager::setSelectionPolicy(SelectionPolicy policy)

@@ -12,14 +12,15 @@
 
 #include <KFileItem>
 #include <QObject>
+#include <memory>
 
 class KFileItemList;
-class FileInfoExtensionPrivate;
 
 namespace KParts
 {
 
 class ReadOnlyPart;
+class FileInfoExtensionPrivate;
 
 /**
  * @class FileInfoExtension fileinfoextension.h <KParts/FileInfoExtension>
@@ -92,7 +93,7 @@ public:
     virtual KFileItemList queryFor(QueryMode mode) const = 0;
 
 private:
-    FileInfoExtensionPrivate *const d;
+    std::unique_ptr<FileInfoExtensionPrivate> const d;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(FileInfoExtension::QueryModes)

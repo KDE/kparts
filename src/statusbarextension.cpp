@@ -105,8 +105,6 @@ StatusBarExtension::~StatusBarExtension()
             d->m_statusBarItems[i].widget()->deleteLater();
         }
     }
-
-    delete d;
 }
 
 StatusBarExtension *StatusBarExtension::childObject(QObject *obj)

@@ -12,6 +12,7 @@
 
 #include <KFind>
 #include <QObject>
+#include <memory>
 
 namespace KParts
 {
@@ -100,7 +101,7 @@ Q_SIGNALS:
 
 private:
     // for future extensions
-    TextExtensionPrivate *const d;
+    std::unique_ptr<TextExtensionPrivate> const d;
 };
 
 }

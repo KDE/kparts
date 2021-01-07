@@ -9,6 +9,8 @@
 
 #include "readonlypart.h"
 
+class KParts::TextExtensionPrivate {};
+
 KParts::TextExtension::TextExtension(KParts::ReadOnlyPart *parent)
     : QObject(parent), d(nullptr)
 {

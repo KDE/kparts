@@ -9,6 +9,7 @@
 
 #include "readonlypart.h"
 
+class KParts::ListingNotificationExtensionPrivate {};
 
 KParts::ListingNotificationExtension::ListingNotificationExtension(KParts::ReadOnlyPart *parent)
     : QObject(parent),

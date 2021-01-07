@@ -45,7 +45,7 @@ public:
     }
 };
 
-class Q_DECL_HIDDEN BrowserExtension::BrowserExtensionPrivate
+class BrowserExtensionPrivate
 {
 public:
     BrowserExtensionPrivate(KParts::ReadOnlyPart *parent)
@@ -76,7 +76,7 @@ public:
 Q_GLOBAL_STATIC(BrowserExtension::ActionSlotMap, s_actionSlotMap)
 Q_GLOBAL_STATIC(BrowserExtension::ActionNumberMap, s_actionNumberMap)
 
-void BrowserExtension::BrowserExtensionPrivate::createActionSlotMap()
+void BrowserExtensionPrivate::createActionSlotMap()
 {
     s_actionSlotMap()->insert("cut", SLOT(cut()));
     s_actionSlotMap()->insert("copy", SLOT(copy()));
@@ -88,8 +88,8 @@ void BrowserExtension::BrowserExtensionPrivate::createActionSlotMap()
     //s_actionSlotMap()->insert( "refreshMimeTypes", SLOT(refreshMimeTypes()) );
 
     // Create the action-number map
-    ActionSlotMap::ConstIterator it = s_actionSlotMap()->constBegin();
-    ActionSlotMap::ConstIterator itEnd = s_actionSlotMap()->constEnd();
+    BrowserExtension::ActionSlotMap::ConstIterator it = s_actionSlotMap()->constBegin();
+    BrowserExtension::ActionSlotMap::ConstIterator itEnd = s_actionSlotMap()->constEnd();
     for (int i = 0; it != itEnd; ++it, ++i) {
         //qDebug() << " action " << it.key() << " number " << i;
         s_actionNumberMap()->insert(it.key(), i);
@@ -133,7 +133,6 @@ BrowserExtension::BrowserExtension(KParts::ReadOnlyPart *parent)
 BrowserExtension::~BrowserExtension()
 {
     //qDebug() << "BrowserExtension::~BrowserExtension() " << this;
-    delete d;
 }
 
 void BrowserExtension::setBrowserArguments(const BrowserArguments &args)

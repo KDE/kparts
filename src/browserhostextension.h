@@ -14,6 +14,7 @@
 #if KPARTS_ENABLE_DEPRECATED_SINCE(5, 78)
 
 #include <QObject>
+#include <memory>
 
 class QStringList;
 class QString;
@@ -26,6 +27,7 @@ namespace KParts
 class ReadOnlyPart;
 class OpenUrlArguments;
 struct BrowserArguments;
+class BrowserHostExtensionPrivate;
 
 /**
  * @class BrowserHostExtension browserhostextension.h <KParts/BrowserHostExtension>
@@ -79,8 +81,7 @@ public:
     static BrowserHostExtension *childObject(QObject *obj);
 
 private:
-    class BrowserHostExtensionPrivate;
-    BrowserHostExtensionPrivate *const d;
+    std::unique_ptr<BrowserHostExtensionPrivate> const d;
 };
 
 

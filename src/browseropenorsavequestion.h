@@ -11,6 +11,7 @@
 #include <kparts/browserrun.h>
 
 #include <KService>
+#include <memory>
 
 namespace KParts
 {
@@ -102,7 +103,7 @@ public:
     KService::Ptr selectedService() const;
 
 private:
-    BrowserOpenOrSaveQuestionPrivate *const d;
+    std::unique_ptr<BrowserOpenOrSaveQuestionPrivate> const d;
     Q_DISABLE_COPY(BrowserOpenOrSaveQuestion)
 };
 

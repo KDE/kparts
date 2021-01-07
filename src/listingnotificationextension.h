@@ -11,6 +11,7 @@
 #include <kparts/kparts_export.h>
 
 #include <QObject>
+#include <memory>
 
 class KFileItemList;
 
@@ -18,6 +19,7 @@ namespace KParts
 {
 
 class ReadOnlyPart;
+class ListingNotificationExtensionPrivate;
 
 /**
  * @class ListingNotificationExtension listingnotificationextension.h <KParts/ListingNotificationExtension>
@@ -79,8 +81,7 @@ Q_SIGNALS:
     void listingEvent(KParts::ListingNotificationExtension::NotificationEventType, const KFileItemList &);
 
 private:
-    class ListingNotificationExtensionPrivate;
-    ListingNotificationExtension *const d;
+    std::unique_ptr<ListingNotificationExtension> const d;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(ListingNotificationExtension::NotificationEventTypes)

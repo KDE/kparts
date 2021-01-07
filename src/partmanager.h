@@ -12,6 +12,7 @@
 #include <kparts/kparts_export.h>
 
 #include <QWidget>
+#include <memory>
 
 namespace KParts
 {
@@ -279,7 +280,7 @@ private:
     Part *findPartFromWidget(QWidget *widget);
 
 private:
-    PartManagerPrivate *const d;
+    std::unique_ptr<PartManagerPrivate> const d;
 };
 
 }

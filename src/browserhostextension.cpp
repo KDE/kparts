@@ -17,7 +17,7 @@ using namespace KParts;
 namespace KParts
 {
 
-class Q_DECL_HIDDEN BrowserHostExtension::BrowserHostExtensionPrivate
+class BrowserHostExtensionPrivate
 {
 public:
     BrowserHostExtensionPrivate()
@@ -38,10 +38,7 @@ BrowserHostExtension::BrowserHostExtension(KParts::ReadOnlyPart *parent)
     d->m_part = parent;
 }
 
-BrowserHostExtension::~BrowserHostExtension()
-{
-    delete d;
-}
+BrowserHostExtension::~BrowserHostExtension() = default;
 
 QStringList BrowserHostExtension::frameNames() const
 {

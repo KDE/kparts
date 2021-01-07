@@ -9,6 +9,8 @@
 
 #include "readonlypart.h"
 
+class KParts::ListingFilterExtensionPrivate {};
+
 KParts::ListingFilterExtension::ListingFilterExtension(KParts::ReadOnlyPart *parent)
     : QObject(parent),
       d(nullptr)

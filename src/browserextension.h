@@ -15,6 +15,7 @@
 #include <kparts/windowargs.h>
 
 #include <qplatformdefs.h> //mode_t
+#include <memory>
 
 template <class Key, class T> class QMap;
 template<typename T> class QList;
@@ -468,8 +469,7 @@ public:
     typedef QMap<QByteArray, int> ActionNumberMap;
 
 private:
-    class BrowserExtensionPrivate;
-    BrowserExtensionPrivate *const d;
+    std::unique_ptr<class BrowserExtensionPrivate> const d;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(BrowserExtension::PopupFlags)

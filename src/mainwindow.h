@@ -12,6 +12,7 @@
 #include <kparts/part.h>
 
 #include <kxmlguiwindow.h>
+#include <memory>
 
 class QString;
 
@@ -104,7 +105,7 @@ protected:
     virtual void createShellGUI(bool create = true);
 
 private:
-    MainWindowPrivate *const d;
+    std::unique_ptr<MainWindowPrivate> const d;
 };
 
 }

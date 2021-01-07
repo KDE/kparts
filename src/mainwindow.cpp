@@ -53,10 +53,7 @@ MainWindow::MainWindow(QWidget *parent, Qt::WindowFlags f)
     PartBase::setPartObject(this);
 }
 
-MainWindow::~MainWindow()
-{
-    delete d;
-}
+MainWindow::~MainWindow() = default;
 
 void MainWindow::createGUI(Part *part)
 {

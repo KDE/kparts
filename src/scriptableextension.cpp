@@ -20,10 +20,7 @@ ScriptableExtension::ScriptableExtension(QObject *parent):
     QObject(parent), d(new ScriptableExtensionPrivate)
 {}
 
-ScriptableExtension::~ScriptableExtension()
-{
-    delete d;
-}
+ScriptableExtension::~ScriptableExtension() = default;
 
 ScriptableExtension *ScriptableExtension::childObject(QObject *obj)
 {

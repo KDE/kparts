@@ -12,6 +12,7 @@
 #include <kparts/kparts_export.h>
 
 #include <QWidget>
+#include <memory>
 
 class QStatusBar;
 class KMainWindow;
@@ -105,7 +106,7 @@ public:
 private:
     // for future extensions
     friend class StatusBarExtensionPrivate;
-    StatusBarExtensionPrivate *const d;
+    std::unique_ptr<StatusBarExtensionPrivate> const d;
 };
 
 }
