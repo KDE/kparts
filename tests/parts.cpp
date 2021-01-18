@@ -91,7 +91,7 @@ bool Part1::openFile()
     }
     m_edit->setPlainText(s);
 
-    emit setStatusBarText(url().toString());
+    Q_EMIT setStatusBarText(url().toString());
 
     return true;
 }
@@ -131,7 +131,7 @@ Part2::~Part2()
 void Part2::guiActivateEvent(KParts::GUIActivateEvent *event)
 {
     if (event->activated()) {
-        emit setWindowCaption(QStringLiteral("[part2 activated]"));
+        Q_EMIT setWindowCaption(QStringLiteral("[part2 activated]"));
     }
 }
 

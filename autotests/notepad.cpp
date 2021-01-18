@@ -77,7 +77,7 @@ bool NotepadPart::openFile()
     }
     m_edit->setPlainText(s);
 
-    emit setStatusBarText(url().toString());
+    Q_EMIT setStatusBarText(url().toString());
 
     return true;
 }

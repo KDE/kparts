@@ -370,7 +370,7 @@ void PartManager::addPart(Part *part, bool setActive)
             w->show();
         }
     }
-    emit partAdded(part);
+    Q_EMIT partAdded(part);
 }
 
 void PartManager::removePart(Part *part)
@@ -384,7 +384,7 @@ void PartManager::removePart(Part *part)
     Q_UNUSED(nb); // no warning in release mode
     part->setManager(nullptr);
 
-    emit partRemoved(part);
+    Q_EMIT partRemoved(part);
 
     if (part == d->m_activePart) {
         setActivePart(nullptr);
@@ -408,7 +408,7 @@ void PartManager::replacePart(Part *oldPart, Part *newPart, bool setActive)
     d->m_parts.removeAll(oldPart);
     oldPart->setManager(nullptr);
 
-    emit partRemoved(oldPart);
+    Q_EMIT partRemoved(oldPart);
 
     addPart(newPart, setActive);
 }
@@ -484,7 +484,7 @@ void PartManager::setActivePart(Part *part, QWidget *widget)
 
     qCDebug(KPARTSLOG) << this << "emitting activePartChanged" << d->m_activePart;
 
-    emit activePartChanged(d->m_activePart);
+    Q_EMIT activePartChanged(d->m_activePart);
 }
 
 Part *PartManager::activePart() const

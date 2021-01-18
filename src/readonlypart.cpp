@@ -53,7 +53,7 @@ void ReadOnlyPart::setUrl(const QUrl &url)
 
     if (d->m_url != url) {
       d->m_url = url;
-      emit urlChanged(url);
+      Q_EMIT urlChanged(url);
     }
 }
 
@@ -161,7 +161,7 @@ bool ReadOnlyPart::openFile()
 bool ReadOnlyPartPrivate::openLocalFile()
 {
     Q_Q(ReadOnlyPart);
-    emit q->started(nullptr);
+    Q_EMIT q->started(nullptr);
     m_bTemp = false;
     // set the mimetype only if it was not already set (for example, by the host application)
     if (m_arguments.mimeType().isEmpty()) {
@@ -176,10 +176,10 @@ bool ReadOnlyPartPrivate::openLocalFile()
     }
     const bool ret = q->openFile();
     if (ret) {
-        emit q->setWindowCaption(m_url.toDisplayString());
-        emit q->completed();
+        Q_EMIT q->setWindowCaption(m_url.toDisplayString());
+        Q_EMIT q->completed();
     } else {
-        emit q->canceled(QString());
+        Q_EMIT q->canceled(QString());
     }
     return ret;
 }
@@ -206,7 +206,7 @@ void ReadOnlyPartPrivate::openRemoteFile()
     flags |= KIO::Overwrite;
     m_job = KIO::file_copy(m_url, destURL, 0600, flags);
     KJobWidgets::setWindow(m_job, q->widget());
-    emit q->started(m_job);
+    Q_EMIT q->started(m_job);
     QObject::connect(m_job, SIGNAL(result(KJob*)), q, SLOT(_k_slotJobFinished(KJob*)));
     QObject::connect(m_job, &KIO::FileCopyJob::mimeTypeFound,
                      q, [this](KIO::Job *job, const QString &mimeType) { _k_slotGotMimeType(job, mimeType); });
@@ -275,13 +275,13 @@ void ReadOnlyPartPrivate::_k_slotJobFinished(KJob *job)
     Q_ASSERT(job == m_job);
     m_job = nullptr;
     if (job->error()) {
-        emit q->canceled(job->errorString());
+        Q_EMIT q->canceled(job->errorString());
     } else {
         if (q->openFile()) {
-            emit q->setWindowCaption(m_url.toDisplayString());
-            emit q->completed();
+            Q_EMIT q->setWindowCaption(m_url.toDisplayString());
+            Q_EMIT q->completed();
         } else {
-            emit q->canceled(QString());
+            Q_EMIT q->canceled(QString());
         }
     }
 }
@@ -304,9 +304,9 @@ void ReadOnlyPart::guiActivateEvent(GUIActivateEvent *event)
     if (event->activated()) {
         if (!d->m_url.isEmpty()) {
             // qDebug() << d->m_url;
-            emit setWindowCaption(d->m_url.toDisplayString());
+            Q_EMIT setWindowCaption(d->m_url.toDisplayString());
         } else {
-            emit setWindowCaption(QString());
+            Q_EMIT setWindowCaption(QString());
         }
     }
 }

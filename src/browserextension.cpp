@@ -247,7 +247,7 @@ void BrowserExtension::slotEmitOpenUrlRequestDelayed()
     }
     BrowserExtensionPrivate::DelayedRequest req = d->m_requests.front();
     d->m_requests.pop_front();
-    emit openUrlRequestDelayed(req.m_delayedURL, req.m_delayedArgs, req.m_delayedBrowserArgs);
+    Q_EMIT openUrlRequestDelayed(req.m_delayedURL, req.m_delayedArgs, req.m_delayedBrowserArgs);
     // tricky: do not do anything here! (no access to member variables, etc.)
 }
 

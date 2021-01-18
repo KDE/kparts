@@ -96,7 +96,7 @@ bool ReadWritePart::queryClose()
 
     switch (res) {
     case KMessageBox::Yes :
-        emit sigQueryClose(&handled, &abortClose);
+        Q_EMIT sigQueryClose(&handled, &abortClose);
         if (!handled) {
             if (d->m_url.isEmpty()) {
                 QUrl url = QFileDialog::getSaveFileUrl(parentWidget);
@@ -147,7 +147,7 @@ bool ReadWritePart::save()
     if (saveFile()) {
         return saveToUrl();
     } else {
-        emit canceled(QString());
+        Q_EMIT canceled(QString());
     }
     return false;
 }
@@ -168,10 +168,10 @@ bool ReadWritePart::saveAs(const QUrl &url)
     bool result = save(); // Save local file and upload local file
     if (result) {
         if (d->m_originalURL != d->m_url) {
-          emit urlChanged(d->m_url);
+          Q_EMIT urlChanged(d->m_url);
         }
 
-        emit setWindowCaption(d->m_url.toDisplayString());
+        Q_EMIT setWindowCaption(d->m_url.toDisplayString());
     } else {
         d->m_url = d->m_originalURL;
         d->m_file = d->m_originalFilePath;
@@ -223,7 +223,7 @@ bool ReadWritePart::saveToUrl()
 
     if (d->m_url.isLocalFile()) {
         setModified(false);
-        emit completed();
+        Q_EMIT completed();
         // if m_url is a local file there won't be a temp file -> nothing to remove
         Q_ASSERT(!d->m_bTemp);
         d->m_saveOk = true;
@@ -266,13 +266,13 @@ void ReadWritePartPrivate::_k_slotUploadFinished(KJob *)
             q->setUrl(m_originalURL);
             m_file = m_originalFilePath;
         }
-        emit q->canceled(error);
+        Q_EMIT q->canceled(error);
     } else {
         ::org::kde::KDirNotify::emitFilesAdded(m_url.adjusted(QUrl::RemoveFilename));
 
         m_uploadJob = nullptr;
         q->setModified(false);
-        emit q->completed();
+        Q_EMIT q->completed();
         m_saveOk = true;
     }
     m_duringSaveAs = false;
