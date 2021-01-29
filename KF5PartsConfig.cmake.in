@@ -1,9 +1,9 @@
 @PACKAGE_INIT@
 
 include(CMakeFindDependencyMacro)
-find_dependency(KF5KIO "@KF5_DEP_VERSION@")
-find_dependency(KF5TextWidgets "@KF5_DEP_VERSION@")
-find_dependency(KF5XmlGui "@KF5_DEP_VERSION@")
+find_dependency(KF5KIO "@KF_DEP_VERSION@")
+find_dependency(KF5TextWidgets "@KF_DEP_VERSION@")
+find_dependency(KF5XmlGui "@KF_DEP_VERSION@")
 
 include("${CMAKE_CURRENT_LIST_DIR}/KF5PartsTargets.cmake")
 @PACKAGE_INCLUDE_QCHTARGETS@

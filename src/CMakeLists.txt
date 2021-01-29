@@ -90,7 +90,7 @@ ecm_generate_export_header(KF5Parts
     EXPORT_FILE_NAME ${KParts_BINARY_DIR}/kparts/kparts_export.h
     BASE_NAME KParts
     GROUP_BASE_NAME KF
-    VERSION ${KF5_VERSION}
+    VERSION ${KF_VERSION}
     DEPRECATED_BASE_VERSION 0
     DEPRECATION_VERSIONS 3.0 4.4 5.0 5.72 5.77 5.78
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
@@ -141,7 +141,7 @@ if(BUILD_QCH)
         KF5Parts_QCH
         NAME KParts
         BASE_NAME KF5Parts
-        VERSION ${KF5_VERSION}
+        VERSION ${KF_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
             ${KParts_HEADERS}
