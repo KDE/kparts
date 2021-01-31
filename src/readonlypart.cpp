@@ -14,7 +14,8 @@
 #include "browserextension.h"
 #include "guiactivateevent.h"
 
-#include <kio/job.h>
+#include <KIO/StatJob>
+#include <KIO/FileCopyJob>
 #include <KJobWidgets>
 #include <KProtocolInfo>
 

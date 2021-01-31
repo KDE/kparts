@@ -16,10 +16,10 @@
 #include <KMessageBox>
 #include <KIO/CommandLauncherJob>
 #include <KIO/OpenUrlJob>
-#include <kio/job.h>
-#include <kio/jobuidelegate.h>
-#include <kio/scheduler.h>
-#include <kio/copyjob.h>
+#include <KIO/TransferJob>
+#include <KIO/FileCopyJob>
+#include <KIO/JobUiDelegate>
+#include <KIO/Scheduler>
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KShell>

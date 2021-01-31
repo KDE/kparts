@@ -11,7 +11,7 @@
 
 #include "kparts_logging.h"
 
-#include <kio/job.h>
+#include <KIO/FileCopyJob>
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KMessageBox>

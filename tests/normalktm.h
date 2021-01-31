@@ -9,7 +9,7 @@
 #define __normalktm_h__
 
 #include <kparts/readwritepart.h>
-#include <kxmlguiwindow.h>
+#include <KXmlGuiWindow>
 
 class QAction;
 class QWidget;

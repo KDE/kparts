@@ -11,7 +11,7 @@
 
 #include <kparts/part.h>
 
-#include <kxmlguiwindow.h>
+#include <KXmlGuiWindow>
 #include <memory>
 
 class QString;
