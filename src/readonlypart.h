@@ -226,8 +226,9 @@ Q_SIGNALS:
      * Hosting applications will want to know when the process of loading the data
      * is finished, so that they can access the data when everything is loaded.
      **/
-    void completed();
+    void completed(); // clazy:exclude=overloaded-signal
 
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 80)
     /**
      * Same as the above signal except it indicates whether there is
      * a pending action to be executed on a delay timer. An example of
@@ -236,8 +237,12 @@ Q_SIGNALS:
      * to give the user the ability to cancel such pending actions.
      *
      * @p pendingAction true if a pending action exists, false otherwise.
+     *
+     * @deprecated since 5.80, for lack of usage
      */
-    void completed(bool pendingAction);
+    KPARTS_DEPRECATED_VERSION(5, 80, "Deprecated for lack of usage")
+    void completed(bool pendingAction); // clazy:exclude=overloaded-signal
+#endif
 
     /**
      * Emit this if loading is canceled by the user or by an error.
