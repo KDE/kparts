@@ -32,9 +32,7 @@ TestMainWindow::TestMainWindow()
     m_manager = new KParts::PartManager(this);
 
     // When the manager says the active part changes, the builder updates (recreates) the GUI
-    // clang-format off
-    connect(m_manager, SIGNAL(activePartChanged(KParts::Part*)), this, SLOT(createGUI(KParts::Part*)));
-    // clang-format on
+    connect(m_manager, &KParts::PartManager::activePartChanged, this, &TestMainWindow::createGUI);
 
     // We can do this "switch active part" because we have a splitter with
     // two items in it.
@@ -48,28 +46,34 @@ TestMainWindow::TestMainWindow()
 
     QAction *paOpen = new QAction(QStringLiteral("&View local file"), this);
     coll->addAction(QStringLiteral("open_local_file"), paOpen);
-    connect(paOpen, SIGNAL(triggered()), this, SLOT(slotFileOpen()));
+    connect(paOpen, &QAction::triggered, this, &TestMainWindow::slotFileOpen);
     QAction *paOpenRemote = new QAction(QStringLiteral("&View remote file"), this);
     coll->addAction(QStringLiteral("open_remote_file"), paOpenRemote);
-    connect(paOpenRemote, SIGNAL(triggered()), this, SLOT(slotFileOpenRemote()));
+    connect(paOpenRemote, &QAction::triggered, this, &TestMainWindow::slotFileOpenRemote);
 
     m_paEditFile = new QAction(QStringLiteral("&Edit file"), this);
     coll->addAction(QStringLiteral("edit_file"), m_paEditFile);
-    connect(m_paEditFile, SIGNAL(triggered()), this, SLOT(slotFileEdit()));
+    connect(m_paEditFile, &QAction::triggered, this, &TestMainWindow::slotFileEdit);
     m_paCloseEditor = new QAction(QStringLiteral("&Close file editor"), this);
     coll->addAction(QStringLiteral("close_editor"), m_paCloseEditor);
-    connect(m_paCloseEditor, SIGNAL(triggered()), this, SLOT(slotFileCloseEditor()));
+    connect(m_paCloseEditor, &QAction::triggered, this, &TestMainWindow::slotFileCloseEditor);
     m_paCloseEditor->setEnabled(false);
     QAction *paQuit = new QAction(QStringLiteral("&Quit"), this);
     coll->addAction(QStringLiteral("shell_quit"), paQuit);
-    connect(paQuit, SIGNAL(triggered()), this, SLOT(close()));
+    connect(paQuit, &QAction::triggered, this, &TestMainWindow::close);
     paQuit->setIcon(QIcon::fromTheme(QStringLiteral("application-exit")));
 
     //  (void)new QAction( "Yet another menu item", coll, "shell_yami" );
     //  (void)new QAction( "Yet another submenu item", coll, "shell_yasmi" );
 
-    KStandardAction::configureToolbars(this, SLOT(configureToolbars()), actionCollection());
-    KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
+    KStandardAction::configureToolbars(this, &KParts::MainWindow::configureToolbars, actionCollection());
+
+    // KXMLGUIFactory::configureShortcuts(bool bAllowLetterShortcuts = true, bool bSaveSettings = true)
+    // can't be connected directly to the QAction::triggered(bool) signal
+    auto configureShortcutsSlot = [this]() {
+        guiFactory()->configureShortcuts();
+    };
+    KStandardAction::keyBindings(guiFactory(), configureShortcutsSlot, actionCollection());
 
     setCentralWidget(m_splitter);
     m_splitter->setMinimumSize(400, 300);

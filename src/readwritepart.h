@@ -169,8 +169,6 @@ protected:
     virtual bool saveToUrl();
 
 private:
-    Q_PRIVATE_SLOT(d_func(), void _k_slotUploadFinished(KJob *job))
-
     Q_DISABLE_COPY(ReadWritePart)
 };
 

@@ -29,7 +29,7 @@ public:
         m_bClosing = false;
     }
 
-    void _k_slotUploadFinished(KJob *job);
+    void slotUploadFinished(KJob *job);
 
     void prepareSaving();
 

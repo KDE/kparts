@@ -32,7 +32,7 @@ NotepadPart::NotepadPart(QWidget *parentWidget, QObject *parent, const KPluginMe
 
     QAction *searchReplace = new QAction(QStringLiteral("Search and replace"), this);
     actionCollection()->addAction(QStringLiteral("searchreplace"), searchReplace);
-    connect(searchReplace, SIGNAL(triggered()), this, SLOT(slotSearchReplace()));
+    connect(searchReplace, &QAction::triggered, this, &NotepadPart::slotSearchReplace);
 
     setXMLFile(QStringLiteral("notepadpart.rc")); // will be found in the qrc resource
 
@@ -50,9 +50,9 @@ void NotepadPart::setReadWrite(bool rw)
 {
     m_edit->setReadOnly(!rw);
     if (rw) {
-        connect(m_edit, SIGNAL(textChanged()), this, SLOT(setModified()));
+        connect(m_edit, &QTextEdit::textChanged, this, QOverload<>::of(&KParts::ReadWritePart::setModified));
     } else {
-        disconnect(m_edit, SIGNAL(textChanged()), this, SLOT(setModified()));
+        disconnect(m_edit, &QTextEdit::textChanged, this, QOverload<>::of(&KParts::ReadWritePart::setModified));
     }
 
     ReadWritePart::setReadWrite(rw);

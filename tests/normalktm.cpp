@@ -40,29 +40,29 @@ TestMainWindow::TestMainWindow()
     KActionCollection *coll = actionCollection();
     QAction *paLocal = new QAction(QStringLiteral("&View local file"), this);
     coll->addAction(QStringLiteral("open_local_file"), paLocal);
-    connect(paLocal, SIGNAL(triggered()), this, SLOT(slotFileOpen()));
+    connect(paLocal, &QAction::triggered, this, &TestMainWindow::slotFileOpen);
     // No XML: we need to add our actions to the menus ourselves
     pFile->addAction(paLocal);
 
     QAction *paRemote = new QAction(QStringLiteral("&View remote file"), this);
     coll->addAction(QStringLiteral("open_remote_file"), paRemote);
-    connect(paRemote, SIGNAL(triggered()), this, SLOT(slotFileOpenRemote()));
+    connect(paRemote, &QAction::triggered, this, &TestMainWindow::slotFileOpenRemote);
     pFile->addAction(paRemote);
 
     m_paEditFile = new QAction(QStringLiteral("&Edit file"), this);
     coll->addAction(QStringLiteral("edit_file"), m_paEditFile);
-    connect(m_paEditFile, SIGNAL(triggered()), this, SLOT(slotFileEdit()));
+    connect(m_paEditFile, &QAction::triggered, this, &TestMainWindow::slotFileEdit);
     pFile->addAction(m_paEditFile);
 
     m_paCloseEditor = new QAction(QStringLiteral("&Close file editor"), this);
     coll->addAction(QStringLiteral("close_editor"), m_paCloseEditor);
-    connect(m_paCloseEditor, SIGNAL(triggered()), this, SLOT(slotFileCloseEditor()));
+    connect(m_paCloseEditor, &QAction::triggered, this, &TestMainWindow::slotFileCloseEditor);
     m_paCloseEditor->setEnabled(false);
     pFile->addAction(m_paCloseEditor);
 
     QAction *paQuit = new QAction(QStringLiteral("&Quit"), this);
     coll->addAction(QStringLiteral("shell_quit"), paQuit);
-    connect(paQuit, SIGNAL(triggered()), this, SLOT(close()));
+    connect(paQuit, &QAction::triggered, this, &TestMainWindow::close);
     paQuit->setIcon(QIcon::fromTheme(QStringLiteral("application-exit")));
     pFile->addAction(paQuit);
 

@@ -20,7 +20,7 @@ PluginSpellCheck::PluginSpellCheck(QObject *parent, const QVariantList &)
 {
     QAction *act = new QAction(QStringLiteral("&Select current line (plugin)"), this);
     actionCollection()->addAction(QStringLiteral("spellcheck"), act);
-    connect(act, SIGNAL(triggered()), this, SLOT(slotSpellCheck()));
+    connect(act, &QAction::triggered, this, &PluginSpellCheck::slotSpellCheck);
 }
 
 PluginSpellCheck::~PluginSpellCheck()

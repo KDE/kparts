@@ -29,42 +29,40 @@ class QStringList;
  *
  * Use it like this:
  * \code
- *  //query the .desktop file to get service information about konsolepart
+ *  // Query the .desktop file to get service information about konsolepart
  *  KService::Ptr service = KService::serviceByDesktopName("konsolepart");
  *
- *  if (!service)
- *  {
+ *  if (!service) {
  *      QMessageBox::critical(this, tr("Konsole not installed"), tr("Please install the kde konsole and try again!"), QMessageBox::Ok);
  *      return ;
  *  }
  *
- *  // create one instance of konsolepart
- *  KParts::ReadOnlyPart* p = service->createInstance<KParts::ReadOnlyPart>(parent, parentWidget, QVariantList());
+ *  // Create one instance of konsolepart
+ *  KParts::ReadOnlyPart *part = service->createInstance<KParts::ReadOnlyPart>(parent, parentWidget, QVariantList());
  *
- *  if (!p)
- *  {
+ *  if (!part) {
  *      return;
  *  }
  *
- *  // cast the konsolepart to the TerminalInterface..
- *  TerminalInterface* t = qobject_cast<TerminalInterface*>(p);
+ *  // Cast the konsolepart to the TerminalInterface..
+ *  TerminalInterface *terminalIface = qobject_cast<TerminalInterface *>(part);
  *
- *  if (!t)
- *  {
+ *  if (!terminalIface) {
  *      return;
  *  }
  *
- *  // now use the interface in all sorts of ways, e.g.
- *  //    t->showShellInDir( QDir::home().path() );
- *  // or:
- *  //    QStringList l;
- *  //    l.append( "python" );
- *  //    t->startProgram( QString::fromUtf8( "/usr/bin/python" ), l);
- *  // or connect to one of the signals.  Connect to the Part object,
- *  // not to the TerminalInterface, since the latter is no QObject,
- *  // and as such cannot have signals..:
- *  //    connect(p, SIGNAL(currentDirectoryChanged(QString)),
- *  //             this, SLOT(currentDirectoryChanged(QString)));
+ *  // Now use the interface in all sorts of ways, e.g.
+ *  //    terminalIface->showShellInDir(QDir::home().path());
+ *  // Or:
+ *  //    QStringList list;
+ *  //    list.append("python");
+ *  //    terminalIface->startProgram( QString::fromUtf8( "/usr/bin/python" ), list);
+ *  // Or connect to one of the signals. Connect to the Part object,
+ *  // not to the TerminalInterface, since the latter is not a QObject,
+ *  // and as such does not have signals..:
+ *  connect(part, &KParts::ReadOnlyPart::currentDirectoryChanged, this, [this](const QString &dirPath) {
+ *      currentDirectoryChanged(dirPath);
+ *  });
  *  // etc.
  *
  * \endcode

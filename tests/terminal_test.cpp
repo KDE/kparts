@@ -29,7 +29,7 @@ Window::Window()
     TerminalInterface *interface = qobject_cast<TerminalInterface *>(part);
     interface->showShellInDir(QDir::home().path());
 
-    connect(part, SIGNAL(destroyed()), this, SLOT(deleteLater()));
+    connect(part, &QObject::destroyed, this, &QObject::deleteLater);
 }
 
 int main(int argc, char **argv)

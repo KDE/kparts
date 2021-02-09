@@ -45,9 +45,9 @@ public:
     {
     }
 
-    void _k_slotJobFinished(KJob *job);
-    void _k_slotStatJobFinished(KJob *job);
-    void _k_slotGotMimeType(KIO::Job *job, const QString &mime);
+    void slotJobFinished(KJob *job);
+    void slotStatJobFinished(KJob *job);
+    void slotGotMimeType(KIO::Job *job, const QString &mime);
     bool openLocalFile();
     void openRemoteFile();
 

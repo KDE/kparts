@@ -27,11 +27,11 @@ PartViewer::PartViewer()
 
     QAction *paOpen = new QAction(QIcon::fromTheme(QStringLiteral("document-open")), QStringLiteral("&Open file"), this);
     actionCollection()->addAction(QStringLiteral("file_open"), paOpen);
-    connect(paOpen, SIGNAL(triggered()), this, SLOT(slotFileOpen()));
+    connect(paOpen, &QAction::triggered, this, &PartViewer::slotFileOpen);
 
     QAction *paQuit = new QAction(QIcon::fromTheme(QStringLiteral("application-exit")), QStringLiteral("&Quit"), this);
     actionCollection()->addAction(QStringLiteral("file_quit"), paQuit);
-    connect(paQuit, SIGNAL(triggered()), this, SLOT(close()));
+    connect(paQuit, &QAction::triggered, this, &PartViewer::close);
 
     m_part = nullptr;
 
