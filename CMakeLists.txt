@@ -56,7 +56,7 @@ if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
     ki18n_install(po)
 endif()
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054B00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054F00)
 add_definitions(-DKIOWIDGETS_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054600) # We need KRun for BrowserRun
 add_definitions(-DKCOREADDONS_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054000) # We need KAboutData::fromPluginMetaData
 add_definitions(-DQT_NO_FOREACH)
