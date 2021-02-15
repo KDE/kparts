@@ -236,11 +236,24 @@ Q_SIGNALS:
      *
      * @p pendingAction true if a pending action exists, false otherwise.
      *
-     * @deprecated since 5.80, for lack of usage
+     * @deprecated since 5.80, use the KParts::ReadOnlyPart::completedWithPendingAction() signal
      */
-    KPARTS_DEPRECATED_VERSION(5, 80, "Deprecated for lack of usage")
+    KPARTS_DEPRECATED_VERSION(5, 81, "Use the KParts::ReadOnlyPart::completedWithPendingAction() signal")
     void completed(bool pendingAction); // clazy:exclude=overloaded-signal
 #endif
+
+    /**
+     * This signal is similar to the @c KParts::ReadOnlyPart::completed() signal
+     * except it is only emitted if there is still a pending action to be executed
+     * on a delayed timer.
+     *
+     * An example of this is the meta-refresh tags on web pages used to reload/redirect
+     * after a certain period of time. This signal is useful if you want to give the
+     * user the ability to cancel such pending actions.
+     *
+     * @since 5.81
+     */
+    void completedWithPendingAction();
 
     /**
      * Emit this if loading is canceled by the user or by an error.
