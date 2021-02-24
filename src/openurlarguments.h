@@ -11,15 +11,12 @@
 
 #include <kparts/kparts_export.h>
 
+#include <QMap>
 #include <QSharedDataPointer>
 #include <QString>
-#include <QMap>
-
 
 namespace KParts
 {
-
-
 class OpenUrlArgumentsPrivate;
 
 /**

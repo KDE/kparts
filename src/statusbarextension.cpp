@@ -10,13 +10,13 @@
 
 #include "kparts_logging.h"
 
-#include "readonlypart.h"
 #include "guiactivateevent.h"
+#include "readonlypart.h"
 
 #include <KMainWindow>
 
-#include <QPointer>
 #include <QObject>
+#include <QPointer>
 #include <QStatusBar>
 
 using namespace KParts;
@@ -29,11 +29,17 @@ class KParts::StatusBarItem
 {
 public:
     StatusBarItem() // for QValueList
-        : m_widget(nullptr), m_visible(false)
-    {}
+        : m_widget(nullptr)
+        , m_visible(false)
+    {
+    }
     StatusBarItem(QWidget *widget, int stretch, bool permanent)
-        : m_widget(widget), m_stretch(stretch), m_permanent(permanent), m_visible(false)
-    {}
+        : m_widget(widget)
+        , m_stretch(stretch)
+        , m_permanent(permanent)
+        , m_visible(false)
+    {
+    }
 
     QWidget *widget() const
     {
@@ -60,19 +66,23 @@ public:
             m_widget->hide();
         }
     }
+
 private:
     QPointer<QWidget> m_widget;
     int m_stretch;
     bool m_permanent;
-    bool m_visible;  // true when the item has been added to the statusbar
+    bool m_visible; // true when the item has been added to the statusbar
 };
 
 class KParts::StatusBarExtensionPrivate
 {
 public:
-    StatusBarExtensionPrivate(StatusBarExtension *q): q(q),
-        m_statusBar(nullptr),
-        m_activated(true) {}
+    StatusBarExtensionPrivate(StatusBarExtension *q)
+        : q(q)
+        , m_statusBar(nullptr)
+        , m_activated(true)
+    {
+    }
 
     StatusBarExtension *q;
     QList<StatusBarItem> m_statusBarItems; // Our statusbar items
@@ -83,13 +93,15 @@ public:
 ///////////////////////////////////////////////////////////////////
 
 StatusBarExtension::StatusBarExtension(KParts::Part *parent)
-    : QObject(parent), d(new StatusBarExtensionPrivate(this))
+    : QObject(parent)
+    , d(new StatusBarExtensionPrivate(this))
 {
     parent->installEventFilter(this);
 }
 
 StatusBarExtension::StatusBarExtension(KParts::ReadOnlyPart *parent)
-    : QObject(parent), d(new StatusBarExtensionPrivate(this))
+    : QObject(parent)
+    , d(new StatusBarExtensionPrivate(this))
 {
     parent->installEventFilter(this);
 }
@@ -114,8 +126,7 @@ StatusBarExtension *StatusBarExtension::childObject(QObject *obj)
 
 bool StatusBarExtension::eventFilter(QObject *watched, QEvent *ev)
 {
-    if (!GUIActivateEvent::test(ev) ||
-            !::qobject_cast<KParts::Part *>(watched)) {
+    if (!GUIActivateEvent::test(ev) || !::qobject_cast<KParts::Part *>(watched)) {
         return QObject::eventFilter(watched, ev);
     }
 
@@ -138,12 +149,11 @@ bool StatusBarExtension::eventFilter(QObject *watched, QEvent *ev)
     }
 
     return false;
-
 }
 
 QStatusBar *StatusBarExtension::statusBar() const
 {
-    if (!d->m_statusBar)  {
+    if (!d->m_statusBar) {
         KParts::Part *part = qobject_cast<KParts::Part *>(parent());
         QWidget *w = part ? part->widget() : nullptr;
         KMainWindow *mw = w ? qobject_cast<KMainWindow *>(w->topLevelWidget()) : nullptr;

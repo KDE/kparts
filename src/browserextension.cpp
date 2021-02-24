@@ -16,22 +16,20 @@
 
 #include <QApplication>
 #include <QClipboard>
-#include <QTimer>
 #include <QMap>
 #include <QRegularExpression>
+#include <QTimer>
 
 using namespace KParts;
 
-
 namespace KParts
 {
-
 // Internal class, use to store the status of the actions
 class KBitArray
 {
 public:
     int val = 0;
-    bool operator [](int index)
+    bool operator[](int index)
     {
         return (val & (1 << index)) ? true : false;
     }
@@ -49,10 +47,11 @@ class BrowserExtensionPrivate
 {
 public:
     BrowserExtensionPrivate(KParts::ReadOnlyPart *parent)
-        : m_urlDropHandlingEnabled(false),
-          m_browserInterface(nullptr),
-          m_part(parent)
-    {}
+        : m_urlDropHandlingEnabled(false)
+        , m_browserInterface(nullptr)
+        , m_part(parent)
+    {
+    }
 
     struct DelayedRequest {
         QUrl m_delayedURL;
@@ -84,14 +83,14 @@ void BrowserExtensionPrivate::createActionSlotMap()
     s_actionSlotMap()->insert("print", SLOT(print()));
     // Tricky. Those aren't actions in fact, but simply methods that a browserextension
     // can have or not. No need to return them here.
-    //s_actionSlotMap()->insert( "reparseConfiguration", SLOT(reparseConfiguration()) );
-    //s_actionSlotMap()->insert( "refreshMimeTypes", SLOT(refreshMimeTypes()) );
+    // s_actionSlotMap()->insert( "reparseConfiguration", SLOT(reparseConfiguration()) );
+    // s_actionSlotMap()->insert( "refreshMimeTypes", SLOT(refreshMimeTypes()) );
 
     // Create the action-number map
     BrowserExtension::ActionSlotMap::ConstIterator it = s_actionSlotMap()->constBegin();
     BrowserExtension::ActionSlotMap::ConstIterator itEnd = s_actionSlotMap()->constEnd();
     for (int i = 0; it != itEnd; ++it, ++i) {
-        //qDebug() << " action " << it.key() << " number " << i;
+        // qDebug() << " action " << it.key() << " number " << i;
         s_actionNumberMap()->insert(it.key(), i);
     }
 }
@@ -99,12 +98,13 @@ void BrowserExtensionPrivate::createActionSlotMap()
 }
 
 BrowserExtension::BrowserExtension(KParts::ReadOnlyPart *parent)
-    : QObject(parent), d(new BrowserExtensionPrivate(parent))
+    : QObject(parent)
+    , d(new BrowserExtensionPrivate(parent))
 {
-    //qDebug() << "BrowserExtension::BrowserExtension() " << this;
+    // qDebug() << "BrowserExtension::BrowserExtension() " << this;
 
     if (s_actionSlotMap()->isEmpty())
-        // Create the action-slot map
+    // Create the action-slot map
     {
         BrowserExtensionPrivate::createActionSlotMap();
     }
@@ -120,19 +120,15 @@ BrowserExtension::BrowserExtension(KParts::ReadOnlyPart *parent)
         d->m_actionStatus.setBit(i, metaobj->indexOfMethod(slotSig.constData()) != -1);
     }
 
-    connect(d->m_part, static_cast<void (KParts::ReadOnlyPart::*)()>(&KParts::ReadOnlyPart::completed),
-            this, &BrowserExtension::slotCompleted);
-    connect(this, &BrowserExtension::openUrlRequest,
-            this, &BrowserExtension::slotOpenUrlRequest);
-    connect(this, &BrowserExtension::enableAction,
-            this, &BrowserExtension::slotEnableAction);
-    connect(this, &BrowserExtension::setActionText,
-            this, &BrowserExtension::slotSetActionText);
+    connect(d->m_part, static_cast<void (KParts::ReadOnlyPart::*)()>(&KParts::ReadOnlyPart::completed), this, &BrowserExtension::slotCompleted);
+    connect(this, &BrowserExtension::openUrlRequest, this, &BrowserExtension::slotOpenUrlRequest);
+    connect(this, &BrowserExtension::enableAction, this, &BrowserExtension::slotEnableAction);
+    connect(this, &BrowserExtension::setActionText, this, &BrowserExtension::slotSetActionText);
 }
 
 BrowserExtension::~BrowserExtension()
 {
-    //qDebug() << "BrowserExtension::~BrowserExtension() " << this;
+    // qDebug() << "BrowserExtension::~BrowserExtension() " << this;
 }
 
 void BrowserExtension::setBrowserArguments(const BrowserArguments &args)
@@ -187,7 +183,7 @@ void BrowserExtension::setURLDropHandlingEnabled(bool enable)
 
 void BrowserExtension::slotCompleted()
 {
-    //empty the argument stuff, to avoid bogus/invalid values when opening a new url
+    // empty the argument stuff, to avoid bogus/invalid values when opening a new url
     setBrowserArguments(BrowserArguments());
 }
 
@@ -218,12 +214,14 @@ void BrowserExtension::pasteRequest()
         default:
             break;
         }
-    } else if (KUriFilter::self()->filterUri(filterData, QStringList(QStringLiteral("kuriikwsfilter"))) &&
-               url.length() < 250) {
+    } else if (KUriFilter::self()->filterUri(filterData, QStringList(QStringLiteral("kuriikwsfilter"))) && url.length() < 250) {
         if (KMessageBox::questionYesNo(d->m_part->widget(),
                                        i18n("<qt>Do you want to search the Internet for <b>%1</b>?</qt>", url.toHtmlEscaped()),
-                                       i18n("Internet Search"), KGuiItem(i18n("&Search"), QStringLiteral("edit-find")),
-                                       KStandardGuiItem::cancel(), QStringLiteral("MiddleClickSearch")) == KMessageBox::Yes) {
+                                       i18n("Internet Search"),
+                                       KGuiItem(i18n("&Search"), QStringLiteral("edit-find")),
+                                       KStandardGuiItem::cancel(),
+                                       QStringLiteral("MiddleClickSearch"))
+            == KMessageBox::Yes) {
             slotOpenUrlRequest(filterData.uri());
         }
     }
@@ -231,7 +229,7 @@ void BrowserExtension::pasteRequest()
 
 void BrowserExtension::slotOpenUrlRequest(const QUrl &url, const KParts::OpenUrlArguments &args, const KParts::BrowserArguments &browserArgs)
 {
-    //qDebug() << this << " BrowserExtension::slotOpenURLRequest(): url=" << url.url();
+    // qDebug() << this << " BrowserExtension::slotOpenURLRequest(): url=" << url.url();
     BrowserExtensionPrivate::DelayedRequest req;
     req.m_delayedURL = url;
     req.m_delayedArgs = args;
@@ -263,11 +261,11 @@ BrowserInterface *BrowserExtension::browserInterface() const
 
 void BrowserExtension::slotEnableAction(const char *name, bool enabled)
 {
-    //qDebug() << "BrowserExtension::slotEnableAction " << name << " " << enabled;
+    // qDebug() << "BrowserExtension::slotEnableAction " << name << " " << enabled;
     ActionNumberMap::ConstIterator it = s_actionNumberMap()->constFind(name);
     if (it != s_actionNumberMap()->constEnd()) {
         d->m_actionStatus.setBit(it.value(), enabled);
-        //qDebug() << "BrowserExtension::slotEnableAction setting bit " << it.data() << " to " << enabled;
+        // qDebug() << "BrowserExtension::slotEnableAction setting bit " << it.data() << " to " << enabled;
     } else {
         qCWarning(KPARTSLOG) << "BrowserExtension::slotEnableAction unknown action " << name;
     }
@@ -275,16 +273,16 @@ void BrowserExtension::slotEnableAction(const char *name, bool enabled)
 
 bool BrowserExtension::isActionEnabled(const char *name) const
 {
-    int actionNumber = (*s_actionNumberMap())[ name ];
-    return d->m_actionStatus[ actionNumber ];
+    int actionNumber = (*s_actionNumberMap())[name];
+    return d->m_actionStatus[actionNumber];
 }
 
 void BrowserExtension::slotSetActionText(const char *name, const QString &text)
 {
-    //qDebug() << "BrowserExtension::slotSetActionText " << name << " " << text;
+    // qDebug() << "BrowserExtension::slotSetActionText " << name << " " << text;
     ActionNumberMap::ConstIterator it = s_actionNumberMap()->constFind(name);
     if (it != s_actionNumberMap()->constEnd()) {
-        d->m_actionText[ it.value() ] = text;
+        d->m_actionText[it.value()] = text;
     } else {
         qCWarning(KPARTSLOG) << "BrowserExtension::slotSetActionText unknown action " << name;
     }
@@ -292,7 +290,7 @@ void BrowserExtension::slotSetActionText(const char *name, const QString &text)
 
 QString BrowserExtension::actionText(const char *name) const
 {
-    int actionNumber = (*s_actionNumberMap())[ name ];
+    int actionNumber = (*s_actionNumberMap())[name];
     QMap<int, QString>::ConstIterator it = d->m_actionText.constFind(actionNumber);
     if (it != d->m_actionText.constEnd()) {
         return *it;

@@ -8,11 +8,11 @@
 #include <qtest_widgets.h>
 
 #include <KSharedConfig>
-#include <kparts/readonlypart.h>
-#include <kparts/openurlarguments.h>
 #include <QSignalSpy>
 #include <QTest>
 #include <QWidget>
+#include <kparts/openurlarguments.h>
+#include <kparts/readonlypart.h>
 
 QTEST_MAIN(PartTest)
 
@@ -20,8 +20,8 @@ class TestPart : public KParts::ReadOnlyPart
 {
 public:
     TestPart(QObject *parent, QWidget *parentWidget)
-        : KParts::ReadOnlyPart(parent),
-          m_openFileCalled(false)
+        : KParts::ReadOnlyPart(parent)
+        , m_openFileCalled(false)
     {
         setWidget(new QWidget(parentWidget));
     }
@@ -30,12 +30,14 @@ public:
     {
         return m_openFileCalled;
     }
+
 protected:
     bool openFile() override
     {
         m_openFileCalled = true;
         return true;
     }
+
 private:
     bool m_openFileCalled;
 };
@@ -83,13 +85,12 @@ void PartTest::testNoAutoDeleteWidget()
 }
 
 // There is no operator== in OpenUrlArguments because it's only useful in unit tests
-static bool compareArgs(const KParts::OpenUrlArguments &arg1,
-                        const KParts::OpenUrlArguments &arg2)
+static bool compareArgs(const KParts::OpenUrlArguments &arg1, const KParts::OpenUrlArguments &arg2)
 {
     return arg1.mimeType() == arg2.mimeType() && //
-           arg1.xOffset() == arg2.xOffset() && //
-           arg1.yOffset() == arg2.yOffset() && //
-           arg1.reload() == arg2.reload();
+        arg1.xOffset() == arg2.xOffset() && //
+        arg1.yOffset() == arg2.yOffset() && //
+        arg1.reload() == arg2.reload();
 }
 
 void PartTest::testOpenUrlArguments()
@@ -176,14 +177,15 @@ void PartTest::testEmptyUrlAfterCloseUrl()
     delete part;
 }
 
-#include <kparts/mainwindow.h>
-#include <KToolBar>
 #include <KConfigGroup>
 #include <KToggleToolBarAction>
+#include <KToolBar>
+#include <kparts/mainwindow.h>
 class MyMainWindow : public KParts::MainWindow
 {
 public:
-    MyMainWindow() : KParts::MainWindow()
+    MyMainWindow()
+        : KParts::MainWindow()
     {
         tb = new KToolBar(this);
         tb->setObjectName(QStringLiteral("testtbvisibility"));
@@ -223,6 +225,7 @@ public:
         QVERIFY(tb->isVisible());
         close();
     }
+
 private:
     KToolBar *tb;
 };
@@ -239,4 +242,3 @@ void PartTest::testToolbarVisibility()
     window.show();
     window.testToolbarVisibility();
 }
-

@@ -14,15 +14,15 @@
 #include "browserextension.h"
 #include "guiactivateevent.h"
 
-#include <KIO/StatJob>
 #include <KIO/FileCopyJob>
+#include <KIO/StatJob>
 #include <KJobWidgets>
 #include <KProtocolInfo>
 
-#include <QMimeDatabase>
-#include <QFileInfo>
-#include <QTemporaryFile>
 #include <QDir>
+#include <QFileInfo>
+#include <QMimeDatabase>
+#include <QTemporaryFile>
 
 using namespace KParts;
 
@@ -53,8 +53,8 @@ void ReadOnlyPart::setUrl(const QUrl &url)
     Q_D(ReadOnlyPart);
 
     if (d->m_url != url) {
-      d->m_url = url;
-      Q_EMIT urlChanged(url);
+        d->m_url = url;
+        Q_EMIT urlChanged(url);
     }
 }
 
@@ -156,8 +156,8 @@ bool ReadOnlyPart::openUrl(const QUrl &url)
 
 bool ReadOnlyPart::openFile()
 {
-    qCWarning(KPARTSLOG) << "Default implementation of ReadOnlyPart::openFile called!"
-                         << metaObject()->className() << "should reimplement either openUrl or openFile.";
+    qCWarning(KPARTSLOG) << "Default implementation of ReadOnlyPart::openFile called!" << metaObject()->className()
+                         << "should reimplement either openUrl or openFile.";
     return false;
 }
 
@@ -197,7 +197,7 @@ void ReadOnlyPartPrivate::openRemoteFile()
     QString ext = fileInfo.completeSuffix();
     QString extension;
     if (!ext.isEmpty() && !m_url.hasQuery()) { // not if the URL has a query, e.g. cgi.pl?something
-        extension = QLatin1Char('.') + ext;    // keep the '.'
+        extension = QLatin1Char('.') + ext; // keep the '.'
     }
     QTemporaryFile tempFile(QDir::tempPath() + QLatin1Char('/') + m_metaData.pluginId() + QLatin1String("XXXXXX") + extension);
     tempFile.setAutoRemove(false);
@@ -213,8 +213,9 @@ void ReadOnlyPartPrivate::openRemoteFile()
     // clang-format off
     QObject::connect(m_job, SIGNAL(result(KJob*)), q, SLOT(_k_slotJobFinished(KJob*)));
     // clang-format on
-    QObject::connect(m_job, &KIO::FileCopyJob::mimeTypeFound,
-                     q, [this](KIO::Job *job, const QString &mimeType) { _k_slotGotMimeType(job, mimeType); });
+    QObject::connect(m_job, &KIO::FileCopyJob::mimeTypeFound, q, [this](KIO::Job *job, const QString &mimeType) {
+        _k_slotGotMimeType(job, mimeType);
+    });
 }
 
 void ReadOnlyPart::abortLoad()
@@ -222,12 +223,12 @@ void ReadOnlyPart::abortLoad()
     Q_D(ReadOnlyPart);
 
     if (d->m_statJob) {
-        //qDebug() << "Aborting job" << d->m_statJob;
+        // qDebug() << "Aborting job" << d->m_statJob;
         d->m_statJob->kill();
         d->m_statJob = nullptr;
     }
     if (d->m_job) {
-        //qDebug() << "Aborting job" << d->m_job;
+        // qDebug() << "Aborting job" << d->m_job;
         d->m_job->kill();
         d->m_job = nullptr;
     }
@@ -237,7 +238,7 @@ bool ReadOnlyPart::closeUrl()
 {
     Q_D(ReadOnlyPart);
 
-    abortLoad(); //just in case
+    abortLoad(); // just in case
 
     d->m_arguments = KParts::OpenUrlArguments();
     if (!d->m_closeUrlFromOpenUrl) {
@@ -294,7 +295,8 @@ void ReadOnlyPartPrivate::_k_slotJobFinished(KJob *job)
 void ReadOnlyPartPrivate::_k_slotGotMimeType(KIO::Job *job, const QString &mime)
 {
     // qDebug() << mime;
-    Q_ASSERT(job == m_job); Q_UNUSED(job)
+    Q_ASSERT(job == m_job);
+    Q_UNUSED(job)
     // set the mimetype only if it was not already set (for example, by the host application)
     if (m_arguments.mimeType().isEmpty()) {
         m_arguments.setMimeType(mime);

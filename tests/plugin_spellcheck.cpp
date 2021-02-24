@@ -6,17 +6,16 @@
 
 #include "plugin_spellcheck.h"
 
-#include <KParts/ReadOnlyPart>
-#include <QTextEdit>
-#include <QAction>
 #include <KActionCollection>
-#include <KMessageBox>
-#include <KPluginFactory>
 #include <KLocalizedString>
+#include <KMessageBox>
+#include <KParts/ReadOnlyPart>
+#include <KPluginFactory>
+#include <QAction>
 #include <QDebug>
+#include <QTextEdit>
 
-PluginSpellCheck::PluginSpellCheck(QObject *parent,
-                                   const QVariantList &)
+PluginSpellCheck::PluginSpellCheck(QObject *parent, const QVariantList &)
     : Plugin(parent)
 {
     QAction *act = new QAction(QStringLiteral("&Select current line (plugin)"), this);

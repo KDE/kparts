@@ -14,10 +14,8 @@
 
 class QString;
 
-
 namespace KParts
 {
-
 /**
  * @class HtmlSettingsInterface htmlsettingsinterface.h <KParts/HtmlSettingsInterface>
  *
@@ -124,7 +122,9 @@ public:
     /**
      * Destructor
      */
-    virtual ~HtmlSettingsInterface() {}
+    virtual ~HtmlSettingsInterface()
+    {
+    }
 
     /**
      * Returns the value of the browser engine's attribute @p type.
@@ -166,15 +166,11 @@ public:
      *
      *  @since 4.8.2
      */
-    static void splitDomainAdvice(const QString &text,
-                                  QString &domain,
-                                  JavaScriptAdvice &javaAdvice,
-                                  JavaScriptAdvice &javaScriptAdvice);
+    static void splitDomainAdvice(const QString &text, QString &domain, JavaScriptAdvice &javaAdvice, JavaScriptAdvice &javaScriptAdvice);
 };
 
 } // namespace KParts
 
-Q_DECLARE_INTERFACE(KParts::HtmlSettingsInterface,
-                    "org.kde.KParts.HtmlSettingsInterface")
+Q_DECLARE_INTERFACE(KParts::HtmlSettingsInterface, "org.kde.KParts.HtmlSettingsInterface")
 
 #endif /* KPARTS_HTMLSETTINGSINTERFACE_H */

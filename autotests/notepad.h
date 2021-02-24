@@ -8,8 +8,8 @@
 #ifndef notepad_h
 #define notepad_h
 
-#include <kparts/readwritepart.h>
 #include <KPluginFactory>
+#include <kparts/readwritepart.h>
 
 class KPluginMetaData;
 class QTextEdit;
@@ -23,10 +23,7 @@ class NotepadPart : public KParts::ReadWritePart
 {
     Q_OBJECT
 public:
-    NotepadPart(QWidget *parentWidget,
-                QObject *parent,
-                const KPluginMetaData &metaData,
-                const QVariantList &args = QVariantList());
+    NotepadPart(QWidget *parentWidget, QObject *parent, const KPluginMetaData &metaData, const QVariantList &args = QVariantList());
     virtual ~NotepadPart();
 
     void setReadWrite(bool rw) override;
@@ -41,6 +38,5 @@ protected Q_SLOTS:
 protected:
     QTextEdit *m_edit;
 };
-
 
 #endif

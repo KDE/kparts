@@ -15,8 +15,8 @@
 class KPluginMetaData;
 class KAboutData;
 
-namespace PartMetaDataUtil {
-
+namespace PartMetaDataUtil
+{
 KPluginMetaData fromKAboutData(const KAboutData &aboutData);
 
 }

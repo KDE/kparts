@@ -11,11 +11,11 @@
 
 #include "kparts_logging.h"
 
+#include <KDirNotify>
 #include <KIO/FileCopyJob>
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KDirNotify>
 
 #include <QApplication>
 #include <QFileDialog>
@@ -26,7 +26,6 @@
 #ifdef Q_OS_WIN
 #include <qt_windows.h> //CreateHardLink()
 #endif
-
 
 using namespace KParts;
 
@@ -87,15 +86,18 @@ bool ReadWritePart::queryClose()
     }
 
     int res = KMessageBox::warningYesNoCancel(parentWidget,
-              i18n("The document \"%1\" has been modified.\n"
-                   "Do you want to save your changes or discard them?",  docName),
-              i18n("Close Document"), KStandardGuiItem::save(), KStandardGuiItem::discard());
+                                              i18n("The document \"%1\" has been modified.\n"
+                                                   "Do you want to save your changes or discard them?",
+                                                   docName),
+                                              i18n("Close Document"),
+                                              KStandardGuiItem::save(),
+                                              KStandardGuiItem::discard());
 
     bool abortClose = false;
     bool handled = false;
 
     switch (res) {
-    case KMessageBox::Yes :
+    case KMessageBox::Yes:
         Q_EMIT sigQueryClose(&handled, &abortClose);
         if (!handled) {
             if (d->m_url.isEmpty()) {
@@ -112,16 +114,16 @@ bool ReadWritePart::queryClose()
             return false;
         }
         return waitSaveComplete();
-    case KMessageBox::No :
+    case KMessageBox::No:
         return true;
-    default : // case KMessageBox::Cancel :
+    default: // case KMessageBox::Cancel :
         return false;
     }
 }
 
 bool ReadWritePart::closeUrl()
 {
-    abortLoad(); //just in case
+    abortLoad(); // just in case
     if (isReadWrite() && isModified()) {
         if (!queryClose()) {
             return false;
@@ -168,7 +170,7 @@ bool ReadWritePart::saveAs(const QUrl &url)
     bool result = save(); // Save local file and upload local file
     if (result) {
         if (d->m_originalURL != d->m_url) {
-          Q_EMIT urlChanged(d->m_url);
+            Q_EMIT urlChanged(d->m_url);
         }
 
         Q_EMIT setWindowCaption(d->m_url.toDisplayString());
@@ -208,7 +210,7 @@ void ReadWritePartPrivate::prepareSaving()
     }
 }
 
-static inline bool makeHardLink(const QString& src, const QString& dest)
+static inline bool makeHardLink(const QString &src, const QString &dest)
 {
 #ifndef Q_OS_WIN
     return ::link(QFile::encodeName(src).constData(), QFile::encodeName(dest).constData()) == 0;

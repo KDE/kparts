@@ -56,4 +56,3 @@ void BrowserInterface::callMethod(const char *name, const QVariant &argument)
     }
     // clang-format on
 }
-

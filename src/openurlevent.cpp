@@ -13,15 +13,10 @@
 
 using namespace KParts;
 
-
 class KParts::OpenUrlEventPrivate : public KParts::EventPrivate
 {
 public:
-    OpenUrlEventPrivate(const char *eventName,
-                        ReadOnlyPart *part,
-                        const QUrl &url,
-                        const OpenUrlArguments &args,
-                        const BrowserArguments &browserArgs)
+    OpenUrlEventPrivate(const char *eventName, ReadOnlyPart *part, const QUrl &url, const OpenUrlArguments &args, const BrowserArguments &browserArgs)
         : EventPrivate(eventName)
         , m_part(part)
         , m_url(url)
@@ -39,13 +34,9 @@ public:
     const BrowserArguments m_browserArgs;
 };
 
-const char KParts::OpenUrlEventPrivate::s_strOpenUrlEvent[] =
-    "KParts/BrowserExtension/OpenURLevent";
+const char KParts::OpenUrlEventPrivate::s_strOpenUrlEvent[] = "KParts/BrowserExtension/OpenURLevent";
 
-
-OpenUrlEvent::OpenUrlEvent(ReadOnlyPart *part, const QUrl &url,
-                           const OpenUrlArguments &args,
-                           const BrowserArguments &browserArgs)
+OpenUrlEvent::OpenUrlEvent(ReadOnlyPart *part, const QUrl &url, const OpenUrlArguments &args, const BrowserArguments &browserArgs)
     : Event(*new OpenUrlEventPrivate(OpenUrlEventPrivate::s_strOpenUrlEvent, part, url, args, browserArgs))
 {
 }
@@ -84,4 +75,3 @@ bool OpenUrlEvent::test(const QEvent *event)
 {
     return Event::test(event, OpenUrlEventPrivate::s_strOpenUrlEvent);
 }
-

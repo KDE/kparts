@@ -7,25 +7,25 @@
 #include "browseropenorsavequestion.h"
 
 #include <KConfigGroup>
-#include <KSharedConfig>
-#include <KLocalizedString>
 #include <KFileItemActions>
+#include <KGuiItem>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KSharedConfig>
 #include <KSqueezedTextLabel>
 #include <KStandardGuiItem>
-#include <KGuiItem>
-#include <KMessageBox>
 
-#include <QMimeDatabase>
 #include <QAction>
+#include <QCheckBox>
 #include <QDialog>
 #include <QDialogButtonBox>
+#include <QLabel>
 #include <QMenu>
+#include <QMimeDatabase>
 #include <QPushButton>
 #include <QStyle>
 #include <QStyleOption>
 #include <QVBoxLayout>
-#include <QCheckBox>
-#include <QLabel>
 
 using namespace KParts;
 Q_DECLARE_METATYPE(KService::Ptr)
@@ -42,8 +42,10 @@ public:
     };
 
     BrowserOpenOrSaveQuestionPrivate(QWidget *parent, const QUrl &url, const QString &mimeType)
-        : QDialog(parent), url(url), mimeType(mimeType),
-          features(BrowserOpenOrSaveQuestion::BasicFeatures)
+        : QDialog(parent)
+        , url(url)
+        , mimeType(mimeType)
+        , features(BrowserOpenOrSaveQuestion::BasicFeatures)
     {
         // Use askSave or askEmbedOrSave from filetypesrc
         dontAskConfig = KSharedConfig::openConfig(QStringLiteral("filetypesrc"), KConfig::NoGlobals);
@@ -193,7 +195,7 @@ public Q_SLOTS:
     void slotAppSelected(QAction *action)
     {
         selectedService = action->data().value<KService::Ptr>();
-        //showService(selectedService);
+        // showService(selectedService);
         done(OpenDefault);
     }
 };
@@ -228,8 +230,7 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askOpenOrSave()
     // I thought about using KFileItemActions, but we don't want a submenu, nor the slots....
     // and we want no menu at all if there's only one offer.
     // TODO: we probably need a setTraderConstraint(), to exclude the current application?
-    const KService::List apps = KFileItemActions::associatedApplications(QStringList() << d->mimeType,
-                                QString() /* TODO trader constraint */);
+    const KService::List apps = KFileItemActions::associatedApplications(QStringList() << d->mimeType, QString() /* TODO trader constraint */);
     if (apps.isEmpty()) {
         KGuiItem::assign(d->openDefaultButton, openWithDialogItem);
     } else {
@@ -246,8 +247,7 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askOpenOrSave()
                 KGuiItem openWithItem(i18nc("@label:button", "&Open with"), QStringLiteral("document-open"));
                 KGuiItem::assign(d->openWithButton, openWithItem);
                 d->openWithButton->setMenu(menu);
-                QObject::connect(menu, &QMenu::triggered,
-                                 d.get(), &BrowserOpenOrSaveQuestionPrivate::slotAppSelected);
+                QObject::connect(menu, &QMenu::triggered, d.get(), &BrowserOpenOrSaveQuestionPrivate::slotAppSelected);
                 for (const auto &app : apps) {
                     QAction *act = createAppAction(app, d.get());
                     menu->addAction(act);
@@ -269,8 +269,7 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askOpenOrSave()
     const QString dontAskAgain = QLatin1String("askSave") + d->mimeType;
 
     const int choice = d->executeDialog(dontAskAgain);
-    return choice == BrowserOpenOrSaveQuestionPrivate::Save ? Save
-           : (choice == BrowserOpenOrSaveQuestionPrivate::Cancel ? Cancel : Open);
+    return choice == BrowserOpenOrSaveQuestionPrivate::Save ? Save : (choice == BrowserOpenOrSaveQuestionPrivate::Cancel ? Cancel : Open);
 }
 
 KService::Ptr BrowserOpenOrSaveQuestion::selectedService() const
@@ -324,8 +323,7 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askEmbedOrSave(int 
     // SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC SYNC
 
     const int choice = d->executeDialog(dontAskAgain);
-    return choice == BrowserOpenOrSaveQuestionPrivate::Save ? Save
-           : (choice == BrowserOpenOrSaveQuestionPrivate::Cancel ? Cancel : Embed);
+    return choice == BrowserOpenOrSaveQuestionPrivate::Save ? Save : (choice == BrowserOpenOrSaveQuestionPrivate::Cancel ? Cancel : Embed);
 }
 
 void BrowserOpenOrSaveQuestion::setFeatures(Features features)

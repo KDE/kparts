@@ -12,12 +12,19 @@
 
 using namespace KParts;
 
-class KParts::LiveConnectExtensionPrivate {};
+class KParts::LiveConnectExtensionPrivate
+{
+};
 
 LiveConnectExtension::LiveConnectExtension(KParts::ReadOnlyPart *parent)
-    : QObject(parent), d(nullptr) {}
+    : QObject(parent)
+    , d(nullptr)
+{
+}
 
-LiveConnectExtension::~LiveConnectExtension() {}
+LiveConnectExtension::~LiveConnectExtension()
+{
+}
 
 bool LiveConnectExtension::get(const unsigned long, const QString &, Type &, unsigned long &, QString &)
 {
@@ -34,7 +41,9 @@ bool LiveConnectExtension::call(const unsigned long, const QString &, const QStr
     return false;
 }
 
-void LiveConnectExtension::unregister(const unsigned long) {}
+void LiveConnectExtension::unregister(const unsigned long)
+{
+}
 
 LiveConnectExtension *LiveConnectExtension::childObject(QObject *obj)
 {

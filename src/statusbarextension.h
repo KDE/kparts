@@ -111,4 +111,3 @@ private:
 
 }
 #endif // KPARTS_STATUSBAREXTENSION_H
-

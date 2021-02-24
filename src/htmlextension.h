@@ -17,7 +17,6 @@ class QUrl;
 
 namespace KParts
 {
-
 class ReadOnlyPart;
 class HtmlExtensionPrivate;
 

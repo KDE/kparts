@@ -16,7 +16,6 @@ class QVariant;
 
 namespace KParts
 {
-
 /**
  * @class BrowserInterface browserinterface.h <KParts/BrowserInterface>
  *

@@ -35,7 +35,6 @@ protected:
     void embedEditor();
 
 private:
-
     QAction *m_paEditFile;
     QAction *m_paCloseEditor;
 

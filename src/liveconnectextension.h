@@ -14,15 +14,15 @@
 #include <QObject>
 #include <memory>
 
-template <class T1, class T2> struct QPair;
-template<typename T> class QList;
+template<class T1, class T2>
+struct QPair;
+template<typename T>
+class QList;
 class QStringList;
 class QString;
 
-
 namespace KParts
 {
-
 class ReadOnlyPart;
 class LiveConnectExtensionPrivate;
 
@@ -39,9 +39,14 @@ class KPARTS_EXPORT LiveConnectExtension : public QObject
     Q_OBJECT
 public:
     enum Type {
-        TypeVoid = 0, TypeBool, TypeFunction, TypeNumber, TypeObject, TypeString,
+        TypeVoid = 0,
+        TypeBool,
+        TypeFunction,
+        TypeNumber,
+        TypeObject,
+        TypeString,
     };
-    typedef QList<QPair<Type, QString> > ArgList;
+    typedef QList<QPair<Type, QString>> ArgList;
 
     LiveConnectExtension(KParts::ReadOnlyPart *parent);
 

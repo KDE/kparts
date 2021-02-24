@@ -4,8 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-#include <KParts/ReadOnlyPart>
 #include <KParts/PartLoader>
+#include <KParts/ReadOnlyPart>
 #include <QTest>
 
 #include <KPluginMetaData>
@@ -28,8 +28,9 @@ private Q_SLOTS:
         QVERIFY(QFile::copy(desktopFile, destDir + QLatin1String("/notepad.desktop")));
         // Ensure notepadpart is preferred over other installed parts.
         // This also tests the mimeapps.list parsing in PartLoader
-        const QByteArray contents = "[Added KDE Service Associations]\n"
-                                    "text/plain=notepad.desktop;\n";
+        const QByteArray contents =
+            "[Added KDE Service Associations]\n"
+            "text/plain=notepad.desktop;\n";
         const QString configDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
         QDir().mkpath(configDir);
         const QString mimeAppsPath = configDir + QLatin1String("/mimeapps.list");
@@ -54,9 +55,9 @@ private Q_SLOTS:
 
         // THEN
         QVERIFY(!plugins.isEmpty());
-//        for (const KPluginMetaData &metaData : plugins) {
-//            qDebug() << metaData.fileName() << metaData.pluginId();
-//        }
+        //        for (const KPluginMetaData &metaData : plugins) {
+        //            qDebug() << metaData.fileName() << metaData.pluginId();
+        //        }
         QCOMPARE(plugins.at(0).pluginId(), QStringLiteral("notepadpart")); // basename of plugin
         const QString fileName = plugins.at(0).fileName();
         QVERIFY2(fileName.contains(QLatin1String("notepadpart")), qPrintable(fileName));
@@ -72,8 +73,7 @@ private Q_SLOTS:
         QString errorString;
 
         // WHEN
-        KParts::ReadOnlyPart *part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(mimeType,
-                 &parentWidget, this, &errorString);
+        KParts::ReadOnlyPart *part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(mimeType, &parentWidget, this, &errorString);
 
         // THEN
         QVERIFY(part);
@@ -91,8 +91,7 @@ private Q_SLOTS:
         QString errorString;
 
         // WHEN
-        KParts::ReadOnlyPart *part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(mimeType,
-                 &parentWidget, this, &errorString);
+        KParts::ReadOnlyPart *part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(mimeType, &parentWidget, this, &errorString);
 
         // THEN
         QVERIFY2(!part, part ? part->metaObject()->className() : nullptr);

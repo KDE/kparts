@@ -74,12 +74,13 @@ class QStringList;
 class TerminalInterface
 {
 public:
-    virtual ~TerminalInterface() {}
+    virtual ~TerminalInterface()
+    {
+    }
     /**
      * This starts @p program, with arguments @p args
      */
-    virtual void startProgram(const QString &program,
-                              const QStringList &args) = 0;
+    virtual void startProgram(const QString &program, const QStringList &args) = 0;
     /**
      * If no shell is running, this starts a shell with the
      * @dir as the starting directory.
@@ -114,7 +115,8 @@ public:
     virtual QString currentWorkingDirectory() const = 0;
 };
 
-class TerminalInterfaceV2 : public TerminalInterface {
+class TerminalInterfaceV2 : public TerminalInterface
+{
 public:
     /**
      * Returns the names of available profiles.

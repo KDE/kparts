@@ -9,10 +9,10 @@ public:
 
 #include <QDir>
 
-#include <kde_terminal_interface.h>
-#include <kparts/readonlypart.h>
 #include <KService>
 #include <QApplication>
+#include <kde_terminal_interface.h>
+#include <kparts/readonlypart.h>
 
 Window::Window()
 {

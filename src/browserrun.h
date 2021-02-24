@@ -17,7 +17,6 @@
 #if KIOWIDGETS_ENABLE_DEPRECATED_SINCE(5, 71)
 namespace KParts
 {
-
 /**
  * @class BrowserRun browserrun.h <KParts/BrowserRun>
  *
@@ -51,7 +50,9 @@ public:
                const KParts::BrowserArguments &browserArgs,
                KParts::ReadOnlyPart *part,
                QWidget *window,
-               bool removeReferrer, bool trustedSource, bool hideErrorDialog = false);
+               bool removeReferrer,
+               bool trustedSource,
+               bool hideErrorDialog = false);
 
     virtual ~BrowserRun();
 
@@ -125,8 +126,7 @@ public:
      * @deprecated Since 4.4, use saveUrl(const QUrl &, const QString &, QWidget *, const KParts::OpenUrlArguments &)
      */
     KPARTS_DEPRECATED_VERSION(4, 4, "Use BrowserRun::saveUrl(const QUrl &, const QString &, QWidget *, const KParts::OpenUrlArguments &)")
-    static void simpleSave(const QUrl &url, const QString &suggestedFileName,
-                           QWidget *window = nullptr);
+    static void simpleSave(const QUrl &url, const QString &suggestedFileName, QWidget *window = nullptr);
 #endif
 
     /**
@@ -134,15 +134,13 @@ public:
      * Otherwise, asks the user for a destination url, and calls saveUrlUsingKIO.
      * @since 4.4
      */
-    static void saveUrl(const QUrl &url, const QString &suggestedFileName,
-                        QWidget *window, const KParts::OpenUrlArguments &args);
+    static void saveUrl(const QUrl &url, const QString &suggestedFileName, QWidget *window, const KParts::OpenUrlArguments &args);
 
     /**
      * Starts the KIO file copy job to download @p srcUrl into @p destUrl.
      * @since 4.4
      */
-    static void saveUrlUsingKIO(const QUrl &srcUrl, const QUrl &destUrl,
-                                QWidget *window, const QMap<QString, QString> &metaData);
+    static void saveUrlUsingKIO(const QUrl &srcUrl, const QUrl &destUrl, QWidget *window, const QMap<QString, QString> &metaData);
 
     static bool allowExecution(const QString &mimeType, const QUrl &url);
 
@@ -182,7 +180,7 @@ protected:
     /**
      * Helper for foundMimeType: call this if the mimetype couldn't be embedded
      */
-    NonEmbeddableResult handleNonEmbeddable(const QString &mimeType);   // TODO KDE5: remove, and add =0 to the other overload
+    NonEmbeddableResult handleNonEmbeddable(const QString &mimeType); // TODO KDE5: remove, and add =0 to the other overload
 
     /**
      * Helper for foundMimeType: call this if the mimetype couldn't be embedded

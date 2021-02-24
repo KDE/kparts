@@ -16,7 +16,6 @@ using namespace KParts;
 
 namespace KParts
 {
-
 class BrowserHostExtensionPrivate
 {
 public:
@@ -33,7 +32,8 @@ public:
 }
 
 BrowserHostExtension::BrowserHostExtension(KParts::ReadOnlyPart *parent)
-    : QObject(parent), d(new BrowserHostExtensionPrivate)
+    : QObject(parent)
+    , d(new BrowserHostExtensionPrivate)
 {
     d->m_part = parent;
 }
@@ -50,9 +50,7 @@ const QList<KParts::ReadOnlyPart *> BrowserHostExtension::frames() const
     return QList<KParts::ReadOnlyPart *>();
 }
 
-bool BrowserHostExtension::openUrlInFrame(const QUrl &,
-        const KParts::OpenUrlArguments &,
-        const KParts::BrowserArguments &)
+bool BrowserHostExtension::openUrlInFrame(const QUrl &, const KParts::OpenUrlArguments &, const KParts::BrowserArguments &)
 {
     return false;
 }
@@ -62,8 +60,7 @@ BrowserHostExtension *BrowserHostExtension::childObject(QObject *obj)
     return obj->findChild<KParts::BrowserHostExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }
 
-BrowserHostExtension *
-BrowserHostExtension::findFrameParent(KParts::ReadOnlyPart *callingPart, const QString &frame)
+BrowserHostExtension *BrowserHostExtension::findFrameParent(KParts::ReadOnlyPart *callingPart, const QString &frame)
 {
     Q_UNUSED(callingPart);
     Q_UNUSED(frame);

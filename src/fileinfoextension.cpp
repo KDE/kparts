@@ -9,11 +9,13 @@
 
 #include "readonlypart.h"
 
-class KParts::FileInfoExtensionPrivate {};
+class KParts::FileInfoExtensionPrivate
+{
+};
 
 KParts::FileInfoExtension::FileInfoExtension(KParts::ReadOnlyPart *parent)
-    : QObject(parent),
-      d(nullptr)
+    : QObject(parent)
+    , d(nullptr)
 
 {
 }

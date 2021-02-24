@@ -14,14 +14,11 @@ using namespace KParts;
 class KParts::PartActivateEventPrivate : public KParts::EventPrivate
 {
 public:
-    PartActivateEventPrivate(const char *eventName,
-                             bool activated,
-                             Part *part,
-                             QWidget *widget)
-        : EventPrivate(eventName),
-        m_bActivated(activated),
-        m_part(part),
-        m_widget(widget)
+    PartActivateEventPrivate(const char *eventName, bool activated, Part *part, QWidget *widget)
+        : EventPrivate(eventName)
+        , m_bActivated(activated)
+        , m_part(part)
+        , m_widget(widget)
     {
     }
     static const char s_strPartActivateEvent[];
@@ -32,10 +29,8 @@ public:
 
 const char PartActivateEventPrivate::s_strPartActivateEvent[] = "KParts/PartActivateEvent";
 
-PartActivateEvent::PartActivateEvent(bool activated,
-                                     Part *part,
-                                     QWidget *widget) :
-    Event(*new PartActivateEventPrivate(PartActivateEventPrivate::s_strPartActivateEvent, activated, part, widget))
+PartActivateEvent::PartActivateEvent(bool activated, Part *part, QWidget *widget)
+    : Event(*new PartActivateEventPrivate(PartActivateEventPrivate::s_strPartActivateEvent, activated, part, widget))
 {
 }
 

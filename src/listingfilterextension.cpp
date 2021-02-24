@@ -9,11 +9,13 @@
 
 #include "readonlypart.h"
 
-class KParts::ListingFilterExtensionPrivate {};
+class KParts::ListingFilterExtensionPrivate
+{
+};
 
 KParts::ListingFilterExtension::ListingFilterExtension(KParts::ReadOnlyPart *parent)
-    : QObject(parent),
-      d(nullptr)
+    : QObject(parent)
+    , d(nullptr)
 {
 }
 

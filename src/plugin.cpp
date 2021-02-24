@@ -10,21 +10,21 @@
 
 #include "part.h"
 
+#include <KConfigGroup>
+#include <KDesktopFile>
+#include <KLocalizedString>
 #include <KPluginFactory>
 #include <KPluginLoader>
-#include <KXMLGUIFactory>
-#include <KLocalizedString>
-#include <KDesktopFile>
-#include <KSharedConfig>
-#include <KConfigGroup>
 #include <KPluginMetaData>
-#if ! KPARTS_BUILD_DEPRECATED_SINCE(5, 77) || KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)
+#include <KSharedConfig>
+#include <KXMLGUIFactory>
+#if !KPARTS_BUILD_DEPRECATED_SINCE(5, 77) || KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)
 #include <KAboutData>
 #endif
 
+#include <QDir>
 #include <QFile>
 #include <QFileInfo>
-#include <QDir>
 #include <QStandardPaths>
 
 using namespace KParts;
@@ -37,9 +37,10 @@ public:
 };
 
 Plugin::Plugin(QObject *parent)
-    : QObject(parent), d(new PluginPrivate())
+    : QObject(parent)
+    , d(new PluginPrivate())
 {
-    //qDebug() << className();
+    // qDebug() << className();
 }
 
 Plugin::~Plugin() = default;
@@ -69,14 +70,15 @@ QString Plugin::localXMLFile() const
     return absPath;
 }
 
-//static
+// static
 QList<Plugin::PluginInfo> Plugin::pluginInfos(const QString &componentName)
 {
     QList<PluginInfo> plugins;
 
     QMap<QString, QStringList> sortedPlugins;
 
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, componentName + QLatin1String("/kpartplugins"), QStandardPaths::LocateDirectory);
+    const QStringList dirs =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, componentName + QLatin1String("/kpartplugins"), QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         const auto rcfiles = QDir(dir).entryList(QStringList(QStringLiteral("*.rc")));
         for (const QString &file : rcfiles) {
@@ -133,10 +135,8 @@ void Plugin::loadPlugins(QObject *parent, const QList<PluginInfo> &pluginInfos, 
             plugin->d->m_parentInstance = componentName;
             plugin->setXMLFile(pluginInfo.m_relXMLFileName, false, false);
             plugin->setDOMDocument(pluginInfo.m_document);
-
         }
     }
-
 }
 
 void Plugin::loadPlugins(QObject *parent, const QList<PluginInfo> &pluginInfos)
@@ -189,11 +189,11 @@ void Plugin::setComponentData(const KAboutData &pluginData)
 {
     // backward-compatible registration, usage deprecated
 #if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     KAboutData::registerPluginData(pluginData);
-QT_WARNING_POP
+    QT_WARNING_POP
 #endif
 
     KXMLGUIClient::setComponentName(pluginData.componentName(), pluginData.displayName());
@@ -204,18 +204,20 @@ void Plugin::setMetaData(const KPluginMetaData &metaData)
 {
     // backward-compatible registration, usage deprecated
 #if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     KAboutData::registerPluginData(KAboutData::fromPluginMetaData(metaData));
-QT_WARNING_POP
+    QT_WARNING_POP
 #endif
 
     KXMLGUIClient::setComponentName(metaData.pluginId(), metaData.name());
 }
 
-void Plugin::loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient,
-                         const QString &componentName, bool enableNewPluginsByDefault,
+void Plugin::loadPlugins(QObject *parent,
+                         KXMLGUIClient *parentGUIClient,
+                         const QString &componentName,
+                         bool enableNewPluginsByDefault,
                          int interfaceVersionRequired)
 {
     KConfigGroup cfgGroup(KSharedConfig::openConfig(componentName + QLatin1String("rc")), "KParts Plugins");
@@ -239,15 +241,14 @@ void Plugin::loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient,
             QString relPath = componentName + QLatin1Char('/') + pluginInfo.m_relXMLFileName;
             relPath.truncate(relPath.lastIndexOf(QLatin1Char('.'))); // remove extension
             relPath += QLatin1String(".desktop");
-            //qDebug() << "looking for " << relPath;
+            // qDebug() << "looking for " << relPath;
             const QString desktopfile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, relPath);
             if (!desktopfile.isEmpty()) {
-                //qDebug() << "loadPlugins found desktop file for " << name << ": " << desktopfile;
+                // qDebug() << "loadPlugins found desktop file for " << name << ": " << desktopfile;
                 KDesktopFile _desktop(desktopfile);
                 const KConfigGroup desktop = _desktop.desktopGroup();
                 keyword = desktop.readEntry("X-KDE-PluginKeyword", "");
-                pluginEnabled = desktop.readEntry("X-KDE-PluginInfo-EnabledByDefault",
-                                                  enableNewPluginsByDefault);
+                pluginEnabled = desktop.readEntry("X-KDE-PluginInfo-EnabledByDefault", enableNewPluginsByDefault);
                 if (interfaceVersionRequired != 0) {
                     const int version = desktop.readEntry("X-KDE-InterfaceVersion", 1);
                     if (version != interfaceVersionRequired) {
@@ -256,7 +257,7 @@ void Plugin::loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient,
                     }
                 }
             } else {
-                //qDebug() << "loadPlugins no desktop file found in " << relPath;
+                // qDebug() << "loadPlugins no desktop file found in " << relPath;
             }
         }
 
@@ -299,4 +300,3 @@ void Plugin::loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient,
         }
     }
 }
-

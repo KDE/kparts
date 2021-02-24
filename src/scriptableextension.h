@@ -17,10 +17,9 @@
 
 namespace KParts
 {
-
-class  ScriptableExtension;
+class ScriptableExtension;
 struct ScriptableExtensionPrivate;
-class  LiveConnectExtension;
+class LiveConnectExtension;
 
 /**
  * @class ScriptableExtension scriptableextension.h <KParts/ScriptableExtension>
@@ -33,7 +32,7 @@ class  LiveConnectExtension;
  * @since 4.5
  * \nosubgrouping
  */
-class KPARTS_EXPORT ScriptableExtension: public QObject
+class KPARTS_EXPORT ScriptableExtension : public QObject
 {
     Q_OBJECT
 public:
@@ -50,10 +49,12 @@ public:
      */
 
     /// Corresponds to 'null' in JavaScript
-    struct Null {};
+    struct Null {
+    };
 
     /// Corresponds to 'undefined' in JavaScript
-    struct Undefined {};
+    struct Undefined {
+    };
 
     /// Returned from operations to denote a failure. May not be passed in as
     /// a parameter, only returned
@@ -63,8 +64,13 @@ public:
         /// only be displayed in low-level debugging tools and the like.
         QString message;
 
-        Exception() {}
-        Exception(const QString &msg): message(msg) {}
+        Exception()
+        {
+        }
+        Exception(const QString &msg)
+            : message(msg)
+        {
+        }
     };
 
     /// Objects are abstracted away as a pair of the ScriptableExtension
@@ -82,10 +88,18 @@ public:
     /// @see acquire, acquireValue, release, releaseValue
     struct Object {
         ScriptableExtension *owner;
-        quint64              objId;
+        quint64 objId;
 
-        Object(): owner(nullptr), objId(0) {}
-        Object(ScriptableExtension *o, quint64 id): owner(o), objId(id) {}
+        Object()
+            : owner(nullptr)
+            , objId(0)
+        {
+        }
+        Object(ScriptableExtension *o, quint64 id)
+            : owner(o)
+            , objId(id)
+        {
+        }
         bool operator==(const Object &other) const
         {
             return owner == other.owner && objId == other.objId;
@@ -97,11 +111,17 @@ public:
     /// 'base' needs to be passed as the 'this' to the function, and
     /// these references can be used to resolve that.
     struct FunctionRef {
-        Object   base;
-        QString  field;
+        Object base;
+        QString field;
 
-        FunctionRef() {}
-        FunctionRef(const Object &b, const QString &f): base(b), field(f) {}
+        FunctionRef()
+        {
+        }
+        FunctionRef(const Object &b, const QString &f)
+            : base(b)
+            , field(f)
+        {
+        }
         bool operator==(const FunctionRef &other) const
         {
             return base == other.base && field == other.field;
@@ -114,22 +134,22 @@ public:
     //@{
 protected:
     ScriptableExtension(QObject *parent);
+
 public:
     virtual ~ScriptableExtension();
 
     /**
-    * Queries @p obj for a child object which inherits from this
-    * ScriptableExtension class. Convenience method.
-    */
+     * Queries @p obj for a child object which inherits from this
+     * ScriptableExtension class. Convenience method.
+     */
     static ScriptableExtension *childObject(QObject *obj);
 
     /**
-    * This returns a bridge object that permits KParts implementing the older
-    * LiveConnectExtension to be used via the ScriptableExtension API.
-    * The bridge's parent will be the @p parentObj.
-    */
-    static ScriptableExtension *adapterFromLiveConnect(QObject *parentObj,
-            LiveConnectExtension *oldApi);
+     * This returns a bridge object that permits KParts implementing the older
+     * LiveConnectExtension to be used via the ScriptableExtension API.
+     * The bridge's parent will be the @p parentObj.
+     */
+    static ScriptableExtension *adapterFromLiveConnect(QObject *parentObj, LiveConnectExtension *oldApi);
 
     //@}
 
@@ -195,8 +215,7 @@ public:
     /**
      Try to use a function reference to field @p f of object @objId as a function
      */
-    virtual QVariant callFunctionReference(ScriptableExtension *callerPrincipal, quint64 objId,
-                                           const QString &f, const ArgList &args);
+    virtual QVariant callFunctionReference(ScriptableExtension *callerPrincipal, quint64 objId, const QString &f, const ArgList &args);
 
     /**
       Try to use the object @p objId associated with 'this' as a constructor
@@ -249,10 +268,7 @@ public:
      The parameter @p language specifies the language to execute it as.
      Use isScriptLanguageSupported to check for support.
     */
-    virtual QVariant evaluateScript(ScriptableExtension *callerPrincipal,
-                                    quint64 contextObjectId,
-                                    const QString &code,
-                                    ScriptLanguage language = ECMAScript);
+    virtual QVariant evaluateScript(ScriptableExtension *callerPrincipal, quint64 contextObjectId, const QString &code, ScriptLanguage language = ECMAScript);
 
     /** returns true if this extension can execute scripts in the given
         language */
@@ -310,4 +326,3 @@ Q_DECLARE_METATYPE(KParts::ScriptableExtension::Object)
 Q_DECLARE_METATYPE(KParts::ScriptableExtension::FunctionRef)
 
 #endif
-

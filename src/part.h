@@ -22,7 +22,6 @@ class QPoint;
  */
 namespace KParts
 {
-
 class PartManager;
 class PartPrivate;
 class PartActivateEvent;
@@ -32,7 +31,6 @@ class PartSelectEvent;
 #endif
 
 class GUIActivateEvent;
-
 
 /**
  * @class Part part.h <KParts/Part>
@@ -68,7 +66,6 @@ class KPARTS_EXPORT Part : public QObject, public PartBase
     KPARTS_DECLARE_PRIVATE(Part)
 
 public:
-
     /**
      *  Constructor.
      *

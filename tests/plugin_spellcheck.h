@@ -13,8 +13,7 @@ class PluginSpellCheck : public KParts::Plugin
 {
     Q_OBJECT
 public:
-    PluginSpellCheck(QObject *parent = nullptr,
-                     const QVariantList & = QVariantList());
+    PluginSpellCheck(QObject *parent = nullptr, const QVariantList & = QVariantList());
     virtual ~PluginSpellCheck();
 
 public Q_SLOTS:

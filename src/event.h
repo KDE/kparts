@@ -18,7 +18,6 @@ class QWidget;
 
 namespace KParts
 {
-
 class EventPrivate;
 /**
  * @class Event event.h <KParts/Event>

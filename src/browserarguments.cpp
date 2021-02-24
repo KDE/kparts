@@ -12,7 +12,6 @@ using namespace KParts;
 
 namespace KParts
 {
-
 struct BrowserArgumentsPrivate {
     QString contentType; // for POST
     bool doPost = false;
@@ -43,7 +42,8 @@ BrowserArguments &BrowserArguments::operator=(const BrowserArguments &args)
         return *this;
     }
 
-    delete d; d = nullptr;
+    delete d;
+    d = nullptr;
 
     softReload = args.softReload;
     postData = args.postData;
@@ -52,7 +52,7 @@ BrowserArguments &BrowserArguments::operator=(const BrowserArguments &args)
     trustedSource = args.trustedSource;
 
     if (args.d) {
-        d = new BrowserArgumentsPrivate(* args.d);
+        d = new BrowserArgumentsPrivate(*args.d);
     }
 
     return *this;

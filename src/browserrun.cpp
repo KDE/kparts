@@ -12,23 +12,23 @@
 #include "kparts_logging.h"
 
 #include <KConfigGroup>
-#include <KSharedConfig>
-#include <KMessageBox>
 #include <KIO/CommandLauncherJob>
-#include <KIO/OpenUrlJob>
-#include <KIO/TransferJob>
 #include <KIO/FileCopyJob>
 #include <KIO/JobUiDelegate>
+#include <KIO/OpenUrlJob>
 #include <KIO/Scheduler>
+#include <KIO/TransferJob>
 #include <KJobWidgets>
 #include <KLocalizedString>
-#include <KShell>
+#include <KMessageBox>
 #include <KProtocolManager>
+#include <KSharedConfig>
+#include <KShell>
 
-#include <QTemporaryFile>
+#include <QFileDialog>
 #include <QMimeDatabase>
 #include <QStandardPaths>
-#include <QFileDialog>
+#include <QTemporaryFile>
 
 #if KIOWIDGETS_ENABLE_DEPRECATED_SINCE(5, 71)
 
@@ -49,12 +49,16 @@ public:
     QString m_contentDisposition;
 };
 
-BrowserRun::BrowserRun(const QUrl &url, const KParts::OpenUrlArguments &args,
+BrowserRun::BrowserRun(const QUrl &url,
+                       const KParts::OpenUrlArguments &args,
                        const KParts::BrowserArguments &browserArgs,
-                       KParts::ReadOnlyPart *part, QWidget *window,
-                       bool removeReferrer, bool trustedSource, bool hideErrorDialog)
-    : KRun(url, window, false /* no GUI */),
-      d(new BrowserRunPrivate)
+                       KParts::ReadOnlyPart *part,
+                       QWidget *window,
+                       bool removeReferrer,
+                       bool trustedSource,
+                       bool hideErrorDialog)
+    : KRun(url, window, false /* no GUI */)
+    , d(new BrowserRunPrivate)
 {
     d->m_bHideErrorDialog = hideErrorDialog;
     d->m_bRemoveReferrer = removeReferrer;
@@ -88,7 +92,7 @@ void BrowserRun::init()
             return;
         }
 
-        if (isLocalFile())  {
+        if (isLocalFile()) {
             const QString localPath = KRun::url().toLocalFile();
             if (!QFile::exists(localPath)) {
                 // qDebug() << localPath << "doesn't exist.";
@@ -115,8 +119,7 @@ void BrowserRun::scanFile()
         protocol = KProtocolManager::slaveProtocol(url, dummy);
     }
 
-    if (!url.hasQuery() && !protocol.startsWith(QLatin1String("http")) &&
-           (!url.path().endsWith(QLatin1Char('/')) || KProtocolManager::supportsListing(url))) {
+    if (!url.hasQuery() && !protocol.startsWith(QLatin1String("http")) && (!url.path().endsWith(QLatin1Char('/')) || KProtocolManager::supportsListing(url))) {
         QMimeDatabase db;
         QMimeType mime = db.mimeTypeForUrl(url);
         if (!mime.isDefault() || isLocalFile()) {
@@ -150,9 +153,7 @@ void BrowserRun::scanFile()
         job = KIO::http_post(url, d->m_browserArgs.postData, KIO::HideProgressInfo);
         job->addMetaData(QStringLiteral("content-type"), d->m_browserArgs.contentType());
     } else {
-        job = KIO::get(url,
-                       d->m_args.reload() ? KIO::Reload : KIO::NoReload,
-                       KIO::HideProgressInfo);
+        job = KIO::get(url, d->m_args.reload() ? KIO::Reload : KIO::NoReload, KIO::HideProgressInfo);
     }
 
     if (d->m_bRemoveReferrer) {
@@ -161,10 +162,8 @@ void BrowserRun::scanFile()
 
     job->addMetaData(metaData);
     KJobWidgets::setWindow(job, d->m_window);
-    connect(job, &KIO::TransferJob::result,
-            this, &BrowserRun::slotBrowserScanFinished);
-    connect(job, &KIO::TransferJob::mimeTypeFound,
-            this, &BrowserRun::slotBrowserMimetype);
+    connect(job, &KIO::TransferJob::result, this, &BrowserRun::slotBrowserScanFinished);
+    connect(job, &KIO::TransferJob::mimeTypeFound, this, &BrowserRun::slotBrowserMimetype);
     setJob(job);
 }
 
@@ -197,11 +196,12 @@ static QMimeType fixupMimeType(const QString &mimeType, const QString &fileName)
 
 void BrowserRun::slotBrowserMimetype(KIO::Job *_job, const QString &type)
 {
-    Q_ASSERT(_job == KRun::job()); Q_UNUSED(_job)
+    Q_ASSERT(_job == KRun::job());
+    Q_UNUSED(_job)
     KIO::TransferJob *job = static_cast<KIO::TransferJob *>(KRun::job());
     // Update our URL in case of a redirection
-    //qDebug() << "old URL=" << KRun::url();
-    //qDebug() << "new URL=" << job->url();
+    // qDebug() << "old URL=" << KRun::url();
+    // qDebug() << "new URL=" << job->url();
     setUrl(job->url());
 
     if (job->isErrorPage()) {
@@ -215,7 +215,7 @@ void BrowserRun::slotBrowserMimetype(KIO::Job *_job, const QString &type)
         // When set, we should really be saving instead of embedding
         const QString suggestedFileName = job->queryMetaData(QStringLiteral("content-disposition-filename"));
         setSuggestedFileName(suggestedFileName); // store it (in KRun)
-        //qDebug() << "suggestedFileName=" << suggestedFileName;
+        // qDebug() << "suggestedFileName=" << suggestedFileName;
         d->m_contentDisposition = job->queryMetaData(QStringLiteral("content-disposition-type"));
 
         const QString modificationTime = job->queryMetaData(QStringLiteral("content-disposition-modification-date"));
@@ -255,12 +255,12 @@ BrowserRun::NonEmbeddableResult BrowserRun::handleNonEmbeddable(const QString &m
 BrowserRun::NonEmbeddableResult BrowserRun::handleNonEmbeddable(const QString &_mimeType, KService::Ptr *selectedService)
 {
     QString mimeType(_mimeType);
-    Q_ASSERT(!hasFinished());   // only come here if the mimetype couldn't be embedded
+    Q_ASSERT(!hasFinished()); // only come here if the mimetype couldn't be embedded
     // Support for saving remote files.
     if (mimeType != QLatin1String("inode/directory") && // dirs can't be saved
-            !KRun::url().isLocalFile()) {
+        !KRun::url().isLocalFile()) {
         if (isTextExecutable(mimeType)) {
-            mimeType = QStringLiteral("text/plain");    // view, don't execute
+            mimeType = QStringLiteral("text/plain"); // view, don't execute
         }
         // ... -> ask whether to save
         BrowserOpenOrSaveQuestion question(d->m_window, KRun::url(), mimeType);
@@ -289,7 +289,7 @@ BrowserRun::NonEmbeddableResult BrowserRun::handleNonEmbeddable(const QString &_
                 QString fileName = suggestedFileName().isEmpty() ? KRun::url().fileName() : suggestedFileName();
                 int extensionPos = fileName.lastIndexOf(QLatin1Char('.'));
                 if (extensionPos != -1) {
-                    extension = fileName.mid(extensionPos);    // keep the '.'
+                    extension = fileName.mid(extensionPos); // keep the '.'
                 }
                 QTemporaryFile tempFile(QDir::tempPath() + QLatin1Char('/') + QCoreApplication::applicationName() + QLatin1String("XXXXXX") + extension);
                 tempFile.setAutoRemove(false);
@@ -297,8 +297,7 @@ BrowserRun::NonEmbeddableResult BrowserRun::handleNonEmbeddable(const QString &_
                 QUrl destURL = QUrl::fromLocalFile(tempFile.fileName());
                 KIO::Job *job = KIO::file_copy(KRun::url(), destURL, 0600, KIO::Overwrite);
                 KJobWidgets::setWindow(job, d->m_window);
-                connect(job, &KIO::Job::result,
-                        this, &BrowserRun::slotCopyToTempFileResult);
+                connect(job, &KIO::Job::result, this, &BrowserRun::slotCopyToTempFileResult);
                 return Delayed; // We'll continue after the job has finished
             }
             if (selectedService && question.selectedService()) {
@@ -310,8 +309,8 @@ BrowserRun::NonEmbeddableResult BrowserRun::handleNonEmbeddable(const QString &_
     }
 
     // Check if running is allowed
-    if (!d->m_bTrustedSource &&  // ... and untrusted source...
-            !allowExecution(mimeType, KRun::url())) {  // ...and the user said no (for executables etc.)
+    if (!d->m_bTrustedSource && // ... and untrusted source...
+        !allowExecution(mimeType, KRun::url())) { // ...and the user said no (for executables etc.)
         setFinished(true);
         return Handled;
     }
@@ -320,7 +319,7 @@ BrowserRun::NonEmbeddableResult BrowserRun::handleNonEmbeddable(const QString &_
     return NotHandled;
 }
 
-//static
+// static
 bool BrowserRun::allowExecution(const QString &mimeType, const QUrl &url)
 {
     if (!KRun::isExecutable(mimeType)) {
@@ -332,11 +331,13 @@ bool BrowserRun::allowExecution(const QString &mimeType, const QUrl &url)
     }
 
     return (KMessageBox::warningContinueCancel(nullptr,
-            i18n("Do you really want to execute '%1'?", url.toDisplayString()),
-            i18n("Execute File?"), KGuiItem(i18n("Execute"))) == KMessageBox::Continue);
+                                               i18n("Do you really want to execute '%1'?", url.toDisplayString()),
+                                               i18n("Execute File?"),
+                                               KGuiItem(i18n("Execute")))
+            == KMessageBox::Continue);
 }
 
-//static, deprecated
+// static, deprecated
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 0)
 BrowserRun::AskSaveResult BrowserRun::askSave(const QUrl &url, KService::Ptr offer, const QString &mimeType, const QString &suggestedFileName)
 {
@@ -352,7 +353,7 @@ BrowserRun::AskSaveResult BrowserRun::askSave(const QUrl &url, KService::Ptr off
 }
 #endif
 
-//static, deprecated
+// static, deprecated
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 0)
 BrowserRun::AskSaveResult BrowserRun::askEmbedOrSave(const QUrl &url, const QString &mimeType, const QString &suggestedFileName, int flags)
 {
@@ -375,15 +376,13 @@ void BrowserRun::save(const QUrl &url, const QString &suggestedFileName)
 
 #if KPARTS_BUILD_DEPRECATED_SINCE(4, 4)
 // static
-void BrowserRun::simpleSave(const QUrl &url, const QString &suggestedFileName,
-                            QWidget *window)
+void BrowserRun::simpleSave(const QUrl &url, const QString &suggestedFileName, QWidget *window)
 {
     saveUrl(url, suggestedFileName, window, KParts::OpenUrlArguments());
 }
 #endif
 
-void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileName,
-                                 QWidget *window, const KParts::OpenUrlArguments &args)
+void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileName, QWidget *window, const KParts::OpenUrlArguments &args)
 {
     // DownloadManager <-> konqueror integration
     // find if the integration is enabled
@@ -432,7 +431,7 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
     if (!suggestedFileName.isEmpty()) {
         name = suggestedFileName;
     } else {
-        name = url.fileName();    // can be empty, e.g. in case http://www.kde.org/
+        name = url.fileName(); // can be empty, e.g. in case http://www.kde.org/
     }
 
     dlg->selectFile(name);
@@ -446,8 +445,7 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
     dlg->show();
 }
 
-void BrowserRun::saveUrlUsingKIO(const QUrl &srcUrl, const QUrl &destUrl,
-                                 QWidget *window, const QMap<QString, QString> &metaData)
+void BrowserRun::saveUrlUsingKIO(const QUrl &srcUrl, const QUrl &destUrl, QWidget *window, const QMap<QString, QString> &metaData)
 {
     KIO::FileCopyJob *job = KIO::file_copy(srcUrl, destUrl, -1, KIO::Overwrite);
 
@@ -464,7 +462,7 @@ void BrowserRun::saveUrlUsingKIO(const QUrl &srcUrl, const QUrl &destUrl,
 
 void BrowserRun::handleError(KJob *job)
 {
-    if (!job) {   // Shouldn't happen
+    if (!job) { // Shouldn't happen
         qCWarning(KPARTSLOG) << "handleError called with job=0! hideErrorDialog=" << d->m_bHideErrorDialog;
         return;
     }
@@ -499,9 +497,7 @@ QUrl BrowserRun::makeErrorUrl(int error, const QString &errorText, const QUrl &i
      * error = int kio error code, errText = QString error text from kio
      * The sub-url is the URL that we were trying to open.
      */
-    QUrl newURL(QStringLiteral("error:/?error=%1&errText=%2")
-                .arg(error)
-                .arg(QString::fromUtf8(QUrl::toPercentEncoding(errorText))));
+    QUrl newURL(QStringLiteral("error:/?error=%1&errText=%2").arg(error).arg(QString::fromUtf8(QUrl::toPercentEncoding(errorText))));
 
     QString cleanedOrigUrl = initialUrl.toString();
     QUrl runURL(cleanedOrigUrl);
@@ -538,14 +534,13 @@ void BrowserRun::slotCopyToTempFileResult(KJob *job)
         job->setRunExecutables(true);
         job->start();
     }
-    setError(true);   // see above
+    setError(true); // see above
     setFinished(true);
 }
 
 bool BrowserRun::isTextExecutable(const QString &mimeType)
 {
-    return (mimeType == QLatin1String("application/x-desktop") ||
-            mimeType == QLatin1String("application/x-shellscript"));
+    return (mimeType == QLatin1String("application/x-desktop") || mimeType == QLatin1String("application/x-shellscript"));
 }
 
 bool BrowserRun::hideErrorDialog() const

@@ -11,15 +11,14 @@
 #include <KAboutData>
 #include <KPluginMetaData>
 // Qt
-#include <QJsonObject>
 #include <QJsonArray>
+#include <QJsonObject>
 
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
 
-namespace PartMetaDataUtil {
-
-static
-QJsonArray jsonArrayFromKAboutPersonList(const QList<KAboutPerson>& persons)
+namespace PartMetaDataUtil
+{
+static QJsonArray jsonArrayFromKAboutPersonList(const QList<KAboutPerson> &persons)
 {
     QJsonArray array;
     for (const auto &person : persons) {
@@ -49,11 +48,11 @@ KPluginMetaData fromKAboutData(const KAboutData &aboutData)
     kplugin[QStringLiteral("ExtraInformation")] = aboutData.otherText();
     kplugin[QStringLiteral("Website")] = aboutData.homepage();
 #if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 2)
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     kplugin[QStringLiteral("Icon")] = aboutData.programIconName();
-QT_WARNING_POP
+    QT_WARNING_POP
 #endif
 
     kplugin[QStringLiteral("Authors")] = jsonArrayFromKAboutPersonList(aboutData.authors());

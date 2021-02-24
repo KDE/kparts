@@ -45,7 +45,8 @@ bool HistoryProvider::exists()
 }
 
 HistoryProvider::HistoryProvider(QObject *parent)
-    : QObject(parent), d(historyProviderPrivate)
+    : QObject(parent)
+    , d(historyProviderPrivate)
 {
     Q_ASSERT(!historyProviderPrivate()->q);
     historyProviderPrivate()->q = this;
@@ -54,8 +55,7 @@ HistoryProvider::HistoryProvider(QObject *parent)
 
 HistoryProvider::~HistoryProvider()
 {
-    if (!historyProviderPrivate.isDestroyed() &&
-            historyProviderPrivate()->q == this) {
+    if (!historyProviderPrivate.isDestroyed() && historyProviderPrivate()->q == this) {
         historyProviderPrivate()->q = nullptr;
     }
 }
@@ -81,4 +81,3 @@ void HistoryProvider::clear()
     d->dict.clear();
     Q_EMIT cleared();
 }
-

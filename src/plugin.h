@@ -98,8 +98,7 @@ public:
      * It is recommended to use the last loadPlugins method instead,
      * to support enabling and disabling of plugins.
      */
-    static void loadPlugins(QObject *parent, const QList<PluginInfo> &pluginInfos, const
-                            QString &instance);
+    static void loadPlugins(QObject *parent, const QList<PluginInfo> &pluginInfos, const QString &instance);
 
     /**
      * Load the plugin libraries for the given @p instance, make the
@@ -138,8 +137,10 @@ public:
      * }
      * \endcode
      */
-    static void loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient,
-                            const QString &instance, bool enableNewPluginsByDefault = true,
+    static void loadPlugins(QObject *parent,
+                            KXMLGUIClient *parentGUIClient,
+                            const QString &instance,
+                            bool enableNewPluginsByDefault = true,
                             int interfaceVersionRequired = 0);
 
     /**

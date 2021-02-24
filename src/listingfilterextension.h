@@ -17,7 +17,6 @@ class KFileItemList;
 
 namespace KParts
 {
-
 class ReadOnlyPart;
 class ListingFilterExtensionPrivate;
 
@@ -81,11 +80,11 @@ public:
      * Supported file filtering modes modes.
      * @FilterModes
      */
-    enum FilterMode  {
+    enum FilterMode {
         None = 0x00,
-        MimeType = 0x01,        /*!< Filter by mime type, e.g. "text/plain". */
-        SubString = 0x02,       /*!< Filter by matching any part of a file or directory name, e.g. "Documents" */
-        WildCard = 0x04,        /*!< Filter by using wildcard matches, e.g. "*.txt" */
+        MimeType = 0x01, /*!< Filter by mime type, e.g. "text/plain". */
+        SubString = 0x02, /*!< Filter by matching any part of a file or directory name, e.g. "Documents" */
+        WildCard = 0x04, /*!< Filter by using wildcard matches, e.g. "*.txt" */
     };
 
     /**

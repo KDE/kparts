@@ -11,10 +11,8 @@
 
 #include <kparts/readonlypart.h>
 
-
 namespace KParts
 {
-
 class ReadWritePartPrivate;
 
 /**

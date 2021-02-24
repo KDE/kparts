@@ -9,31 +9,32 @@
 
 #include "guiactivateevent.h"
 
-#include <KActionMenu>
 #include <KActionCollection>
+#include <KActionMenu>
 #include <KPluginMetaData>
 
 #include <QAction>
 #include <QCheckBox>
 #include <QFile>
-#include <QTextStream>
-#include <QTextEdit>
-#include <QLineEdit>
 #include <QJsonDocument>
+#include <QLineEdit>
 #include <QTest>
+#include <QTextEdit>
+#include <QTextStream>
 
-#include <QDebug>
 #include <KLocalizedString>
-
+#include <QDebug>
 
 Part1::Part1(QObject *parent, QWidget *parentWidget)
     : KParts::ReadOnlyPart(parent)
 {
-    QJsonObject jo = QJsonDocument::fromJson("{ \"KPlugin\": {\n"
-                                             " \"Id\": \"kpartstestpart\",\n"
-                                             " \"Name\": \"KParts test part\",\n"
-                                             " \"Version\": \"0.1\"\n"
-                                             "}\n}").object();
+    QJsonObject jo = QJsonDocument::fromJson(
+                         "{ \"KPlugin\": {\n"
+                         " \"Id\": \"kpartstestpart\",\n"
+                         " \"Name\": \"KParts test part\",\n"
+                         " \"Version\": \"0.1\"\n"
+                         "}\n}")
+                         .object();
     setMetaData(KPluginMetaData(jo, QString()));
 
     m_edit = new QTextEdit(parentWidget);
@@ -99,11 +100,13 @@ bool Part1::openFile()
 Part2::Part2(QObject *parent, QWidget *parentWidget)
     : KParts::Part(parent)
 {
-    QJsonObject jo = QJsonDocument::fromJson("{ \"KPlugin\": {\n"
-                                             " \"Id\": \"part2\",\n"
-                                             " \"Name\": \"Part 2\",\n"
-                                             " \"Version\": \"0.2\"\n"
-                                             "}\n}").object();
+    QJsonObject jo = QJsonDocument::fromJson(
+                         "{ \"KPlugin\": {\n"
+                         " \"Id\": \"part2\",\n"
+                         " \"Name\": \"Part 2\",\n"
+                         " \"Version\": \"0.2\"\n"
+                         "}\n}")
+                         .object();
     setMetaData(KPluginMetaData(jo, QString()));
 
     QWidget *w = new QWidget(parentWidget);
@@ -112,10 +115,10 @@ Part2::Part2(QObject *parent, QWidget *parentWidget)
 
     setXMLFile(QFINDTESTDATA("kpartstest_part2.rc"));
 
-    /*QCheckBox * cb =*/ new QCheckBox(QStringLiteral("something"), w);
+    /*QCheckBox * cb =*/new QCheckBox(QStringLiteral("something"), w);
 
-    //QLineEdit * l = new QLineEdit( "something", widget() );
-    //l->move(0,50);
+    // QLineEdit * l = new QLineEdit( "something", widget() );
+    // l->move(0,50);
     // Since the main widget is a dummy one, we HAVE to set
     // strong focus for it, otherwise we get the
     // the famous activating-file-menu-switches-part bug.
@@ -134,4 +137,3 @@ void Part2::guiActivateEvent(KParts::GUIActivateEvent *event)
         Q_EMIT setWindowCaption(QStringLiteral("[part2 activated]"));
     }
 }
-

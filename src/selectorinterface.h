@@ -10,16 +10,16 @@
 
 #include <kparts/kparts_export.h>
 
-#include <QSharedDataPointer>
 #include <QObject>
+#include <QSharedDataPointer>
 
 class QString;
 class QStringList;
-template <typename T> class QList;
+template<typename T>
+class QList;
 
 namespace KParts
 {
-
 /**
  * @class SelectorInterface selectorinterface.h <KParts/SelectorInterface>
  *
@@ -43,9 +43,9 @@ public:
      * @see QueryMethods
      */
     enum QueryMethod {
-        None = 0x00,                   /*!< Quering is not possible. */
-        EntireContent = 0x01,          /*!< Query or can query the entire content. */
-        SelectedContent = 0x02,        /*!< Query or can query only the user selected content, if any. */
+        None = 0x00, /*!< Quering is not possible. */
+        EntireContent = 0x01, /*!< Query or can query the entire content. */
+        SelectedContent = 0x02, /*!< Query or can query only the user selected content, if any. */
     };
     /**
      * Stores a combination of #QueryMethod values.
@@ -55,7 +55,9 @@ public:
     /**
      * Destructor
      */
-    virtual ~SelectorInterface() {}
+    virtual ~SelectorInterface()
+    {
+    }
 
     /**
      * Returns the supported query methods.
@@ -188,7 +190,6 @@ inline void qSwap(KParts::SelectorInterface::Element &lhs, KParts::SelectorInter
 
 Q_DECLARE_TYPEINFO(KParts::SelectorInterface::Element, Q_MOVABLE_TYPE);
 
-Q_DECLARE_INTERFACE(KParts::SelectorInterface,
-                    "org.kde.KParts.SelectorInterface")
+Q_DECLARE_INTERFACE(KParts::SelectorInterface, "org.kde.KParts.SelectorInterface")
 
 #endif /* KPARTS_SELECTORINTERFACE_H */

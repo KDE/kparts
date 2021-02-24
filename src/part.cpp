@@ -19,20 +19,21 @@
 #include "guiactivateevent.h"
 #include "partmanager.h"
 
-#include <KXMLGUIFactory>
 #include <KIconLoader>
-
+#include <KXMLGUIFactory>
 
 using namespace KParts;
 
 Part::Part(QObject *parent)
-    : QObject(parent), PartBase(*new PartPrivate(this))
+    : QObject(parent)
+    , PartBase(*new PartPrivate(this))
 {
     PartBase::setPartObject(this);
 }
 
 Part::Part(PartPrivate &dd, QObject *parent)
-    : QObject(parent), PartBase(dd)
+    : QObject(parent)
+    , PartBase(dd)
 {
     PartBase::setPartObject(this);
 }
@@ -41,12 +42,11 @@ Part::~Part()
 {
     Q_D(Part);
 
-    //qCDebug(KPARTSLOG) << this;
+    // qCDebug(KPARTSLOG) << this;
 
     if (d->m_widget) {
         // We need to disconnect first, to avoid calling it !
-        disconnect(d->m_widget.data(), &QWidget::destroyed,
-                   this, &Part::slotWidgetDestroyed);
+        disconnect(d->m_widget.data(), &QWidget::destroyed, this, &Part::slotWidgetDestroyed);
     }
 
     if (d->m_manager) {
@@ -137,8 +137,7 @@ void Part::setWidget(QWidget *widget)
 {
     Q_D(Part);
     d->m_widget = widget;
-    connect(d->m_widget.data(), &QWidget::destroyed,
-            this, &Part::slotWidgetDestroyed, Qt::UniqueConnection);
+    connect(d->m_widget.data(), &QWidget::destroyed, this, &Part::slotWidgetDestroyed, Qt::UniqueConnection);
 }
 
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
@@ -220,26 +219,25 @@ void Part::loadPlugins()
     PartBase::loadPlugins(this, this, d->m_metaData.pluginId());
 }
 
-void Part::setMetaData(const KPluginMetaData& metaData)
+void Part::setMetaData(const KPluginMetaData &metaData)
 {
     Q_D(Part);
 
     d->m_metaData = metaData;
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     d->PartBasePrivate::setComponentData(KAboutData::fromPluginMetaData(metaData));
 
     // backward-compatible registration, usage deprecated
 #if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)
     KAboutData::registerPluginData(d->componentData());
 #endif
-QT_WARNING_POP
+    QT_WARNING_POP
 #endif
 
     KXMLGUIClient::setComponentName(metaData.pluginId(), metaData.name());
 }
-
 
 #include "moc_part.cpp"

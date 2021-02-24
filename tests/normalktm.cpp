@@ -10,19 +10,19 @@
 
 #include <KParts/PartLoader>
 
-#include <QSplitter>
 #include <QCheckBox>
-#include <QDir>
-#include <QDebug>
 #include <QCoreApplication>
+#include <QDebug>
+#include <QDir>
 #include <QMenu>
 #include <QMenuBar>
+#include <QSplitter>
 
-#include <QAction>
-#include <QApplication>
-#include <KMessageBox>
 #include <KActionCollection>
 #include <KLocalizedString>
+#include <KMessageBox>
+#include <QAction>
+#include <QApplication>
 #include <QStandardPaths>
 
 TestMainWindow::TestMainWindow()
@@ -80,7 +80,8 @@ TestMainWindow::~TestMainWindow()
 
 void TestMainWindow::slotFileOpen()
 {
-    const QString file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QCoreApplication::instance()->applicationName() + QStringLiteral("/kpartstest_shell.rc"));
+    const QString file =
+        QStandardPaths::locate(QStandardPaths::GenericDataLocation, QCoreApplication::instance()->applicationName() + QStringLiteral("/kpartstest_shell.rc"));
     if (!m_part1->openUrl(QUrl::fromLocalFile(file))) {
         KMessageBox::error(this, QStringLiteral("Couldn't open file !"));
     }
@@ -100,8 +101,7 @@ void TestMainWindow::embedEditor()
     delete m_part2;
     m_part2 = nullptr;
     QString errorString;
-    m_editorpart = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadWritePart>(
-                QStringLiteral("text/plain"), m_splitter, this, &errorString);
+    m_editorpart = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadWritePart>(QStringLiteral("text/plain"), m_splitter, this, &errorString);
     if (!m_editorpart) {
         qWarning() << errorString;
     } else {
@@ -148,4 +148,3 @@ int main(int argc, char **argv)
 
     return 0;
 }
-

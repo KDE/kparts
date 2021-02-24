@@ -13,7 +13,6 @@
 
 using namespace KParts;
 
-
 PartBase::PartBase()
     : d_ptr(new PartBasePrivate(this))
 {
@@ -65,11 +64,11 @@ void PartBase::setComponentData(const KAboutData &pluginData, bool bLoadPlugins)
 
     // backward-compatible registration, usage deprecated
 #if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     KAboutData::registerPluginData(pluginData);
-QT_WARNING_POP
+    QT_WARNING_POP
 #endif
 
     KXMLGUIClient::setComponentName(pluginData.componentName(), pluginData.displayName());
@@ -108,4 +107,3 @@ void KParts::PartBase::setPluginInterfaceVersion(int version)
 
     d->m_pluginInterfaceVersion = version;
 }
-

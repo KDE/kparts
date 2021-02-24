@@ -14,19 +14,21 @@ using namespace KParts;
 
 namespace KParts
 {
-
 class WindowArgsPrivate : public QSharedData
 {
 public:
     WindowArgsPrivate()
-        : x(-1), y(-1), width(-1), height(-1),
-          fullscreen(false),
-          menuBarVisible(true),
-          toolBarsVisible(true),
-          statusBarVisible(true),
-          resizable(true),
-          lowerWindow(false),
-          scrollBarsVisible(true)
+        : x(-1)
+        , y(-1)
+        , width(-1)
+        , height(-1)
+        , fullscreen(false)
+        , menuBarVisible(true)
+        , toolBarsVisible(true)
+        , statusBarVisible(true)
+        , resizable(true)
+        , lowerWindow(false)
+        , scrollBarsVisible(true)
     {
     }
 
@@ -36,14 +38,14 @@ public:
     // Size
     int width;
     int height;
-    bool fullscreen; //defaults to false
-    bool menuBarVisible; //defaults to true
-    bool toolBarsVisible; //defaults to true
-    bool statusBarVisible; //defaults to true
-    bool resizable; //defaults to true
+    bool fullscreen; // defaults to false
+    bool menuBarVisible; // defaults to true
+    bool toolBarsVisible; // defaults to true
+    bool statusBarVisible; // defaults to true
+    bool resizable; // defaults to true
 
-    bool lowerWindow; //defaults to false
-    bool scrollBarsVisible; //defaults to true
+    bool lowerWindow; // defaults to false
+    bool scrollBarsVisible; // defaults to true
 };
 
 }
@@ -72,8 +74,7 @@ WindowArgs &WindowArgs::operator=(const WindowArgs &args)
     return *this;
 }
 
-WindowArgs::WindowArgs(const QRect &_geometry, bool _fullscreen, bool _menuBarVisible,
-                       bool _toolBarsVisible, bool _statusBarVisible, bool _resizable)
+WindowArgs::WindowArgs(const QRect &_geometry, bool _fullscreen, bool _menuBarVisible, bool _toolBarsVisible, bool _statusBarVisible, bool _resizable)
     : d(new WindowArgsPrivate)
 {
     d->x = _geometry.x();
@@ -88,9 +89,15 @@ WindowArgs::WindowArgs(const QRect &_geometry, bool _fullscreen, bool _menuBarVi
     d->lowerWindow = false;
 }
 
-WindowArgs::WindowArgs(int _x, int _y, int _width, int _height, bool _fullscreen,
-                       bool _menuBarVisible, bool _toolBarsVisible,
-                       bool _statusBarVisible, bool _resizable)
+WindowArgs::WindowArgs(int _x,
+                       int _y,
+                       int _width,
+                       int _height,
+                       bool _fullscreen,
+                       bool _menuBarVisible,
+                       bool _toolBarsVisible,
+                       bool _statusBarVisible,
+                       bool _resizable)
     : d(new WindowArgsPrivate)
 {
     d->x = _x;
@@ -214,4 +221,3 @@ bool WindowArgs::scrollBarsVisible() const
 {
     return d->scrollBarsVisible;
 }
-

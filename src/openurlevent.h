@@ -9,9 +9,9 @@
 #ifndef __kparts_openurlevent_h__
 #define __kparts_openurlevent_h__
 
+#include <kparts/browserarguments.h>
 #include <kparts/event.h>
 #include <kparts/openurlarguments.h>
-#include <kparts/browserarguments.h>
 
 class QUrl;
 
@@ -32,7 +32,8 @@ class OpenUrlEventPrivate;
 class KPARTS_EXPORT OpenUrlEvent : public Event
 {
 public:
-    OpenUrlEvent(ReadOnlyPart *part, const QUrl &url,
+    OpenUrlEvent(ReadOnlyPart *part,
+                 const QUrl &url,
                  const OpenUrlArguments &args = OpenUrlArguments(),
                  const BrowserArguments &browserArgs = BrowserArguments());
     virtual ~OpenUrlEvent();
@@ -48,7 +49,7 @@ private:
     Q_DECLARE_PRIVATE_D(Event::d, OpenUrlEvent)
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 79)
     // Unused, kept for ABI compatibility
-    const void * __kparts_d_do_not_use;
+    const void *__kparts_d_do_not_use;
 #endif
 };
 

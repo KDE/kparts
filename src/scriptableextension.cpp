@@ -11,14 +11,15 @@
 
 namespace KParts
 {
-
 struct ScriptableExtensionPrivate {
     ScriptableExtension *hostContext = nullptr;
 };
 
-ScriptableExtension::ScriptableExtension(QObject *parent):
-    QObject(parent), d(new ScriptableExtensionPrivate)
-{}
+ScriptableExtension::ScriptableExtension(QObject *parent)
+    : QObject(parent)
+    , d(new ScriptableExtensionPrivate)
+{
+}
 
 ScriptableExtension::~ScriptableExtension() = default;
 
@@ -27,8 +28,7 @@ ScriptableExtension *ScriptableExtension::childObject(QObject *obj)
     return obj->findChild<KParts::ScriptableExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }
 
-ScriptableExtension *ScriptableExtension::adapterFromLiveConnect(QObject *parentObj,
-        LiveConnectExtension *oldApi)
+ScriptableExtension *ScriptableExtension::adapterFromLiveConnect(QObject *parentObj, LiveConnectExtension *oldApi)
 {
     return new ScriptableLiveConnectExtension(parentObj, oldApi);
 }
@@ -69,8 +69,7 @@ static QVariant unimplemented()
     return QVariant::fromValue(except);
 }
 
-QVariant ScriptableExtension::callAsFunction(ScriptableExtension *callerPrincipal,
-        quint64 objId, const ArgList &args)
+QVariant ScriptableExtension::callAsFunction(ScriptableExtension *callerPrincipal, quint64 objId, const ArgList &args)
 {
     Q_UNUSED(callerPrincipal);
     Q_UNUSED(objId);
@@ -78,9 +77,7 @@ QVariant ScriptableExtension::callAsFunction(ScriptableExtension *callerPrincipa
     return unimplemented();
 }
 
-QVariant ScriptableExtension::callFunctionReference(ScriptableExtension *callerPrincipal,
-        quint64 objId, const QString &f,
-        const ArgList &args)
+QVariant ScriptableExtension::callFunctionReference(ScriptableExtension *callerPrincipal, quint64 objId, const QString &f, const ArgList &args)
 {
     Q_UNUSED(callerPrincipal);
     Q_UNUSED(objId);
@@ -89,8 +86,7 @@ QVariant ScriptableExtension::callFunctionReference(ScriptableExtension *callerP
     return unimplemented();
 }
 
-QVariant ScriptableExtension::callAsConstructor(ScriptableExtension *callerPrincipal,
-        quint64 objId, const ArgList &args)
+QVariant ScriptableExtension::callAsConstructor(ScriptableExtension *callerPrincipal, quint64 objId, const ArgList &args)
 {
     Q_UNUSED(callerPrincipal);
     Q_UNUSED(objId);
@@ -98,8 +94,7 @@ QVariant ScriptableExtension::callAsConstructor(ScriptableExtension *callerPrinc
     return unimplemented();
 }
 
-bool ScriptableExtension::hasProperty(ScriptableExtension *callerPrincipal,
-                                      quint64 objId, const QString &propName)
+bool ScriptableExtension::hasProperty(ScriptableExtension *callerPrincipal, quint64 objId, const QString &propName)
 {
     Q_UNUSED(callerPrincipal);
     Q_UNUSED(objId);
@@ -107,8 +102,7 @@ bool ScriptableExtension::hasProperty(ScriptableExtension *callerPrincipal,
     return false;
 }
 
-QVariant ScriptableExtension::get(ScriptableExtension *callerPrincipal,
-                                  quint64 objId, const QString &propName)
+QVariant ScriptableExtension::get(ScriptableExtension *callerPrincipal, quint64 objId, const QString &propName)
 {
     Q_UNUSED(callerPrincipal);
     Q_UNUSED(objId);
@@ -116,8 +110,7 @@ QVariant ScriptableExtension::get(ScriptableExtension *callerPrincipal,
     return unimplemented();
 }
 
-bool ScriptableExtension::put(ScriptableExtension *callerPrincipal, quint64 objId,
-                              const QString &propName, const QVariant &value)
+bool ScriptableExtension::put(ScriptableExtension *callerPrincipal, quint64 objId, const QString &propName, const QVariant &value)
 {
     Q_UNUSED(callerPrincipal);
     Q_UNUSED(objId);
@@ -126,8 +119,7 @@ bool ScriptableExtension::put(ScriptableExtension *callerPrincipal, quint64 objI
     return false;
 }
 
-bool ScriptableExtension::removeProperty(ScriptableExtension *callerPrincipal,
-        quint64 objId, const QString &propName)
+bool ScriptableExtension::removeProperty(ScriptableExtension *callerPrincipal, quint64 objId, const QString &propName)
 {
     Q_UNUSED(callerPrincipal);
     Q_UNUSED(objId);
@@ -135,8 +127,7 @@ bool ScriptableExtension::removeProperty(ScriptableExtension *callerPrincipal,
     return false;
 }
 
-bool ScriptableExtension::enumerateProperties(ScriptableExtension *callerPrincipal,
-        quint64 objId, QStringList *result)
+bool ScriptableExtension::enumerateProperties(ScriptableExtension *callerPrincipal, quint64 objId, QStringList *result)
 {
     Q_UNUSED(callerPrincipal);
     Q_UNUSED(objId);
@@ -144,18 +135,14 @@ bool ScriptableExtension::enumerateProperties(ScriptableExtension *callerPrincip
     return false;
 }
 
-bool ScriptableExtension::setException(ScriptableExtension *callerPrincipal,
-                                       const QString &message)
+bool ScriptableExtension::setException(ScriptableExtension *callerPrincipal, const QString &message)
 {
     Q_UNUSED(callerPrincipal);
     Q_UNUSED(message);
     return false;
 }
 
-QVariant ScriptableExtension::evaluateScript(ScriptableExtension *callerPrincipal,
-        quint64 contextObjectId,
-        const QString &code,
-        ScriptLanguage language)
+QVariant ScriptableExtension::evaluateScript(ScriptableExtension *callerPrincipal, quint64 contextObjectId, const QString &code, ScriptLanguage language)
 {
     Q_UNUSED(callerPrincipal);
     Q_UNUSED(contextObjectId);
@@ -207,13 +194,11 @@ QVariant ScriptableExtension::releaseValue(const QVariant &v)
 // LiveConnectExtension -> ScriptableExtension adapter. We use
 // lc object IDs as our own object IDs.
 // ----------------------------------------------------------------------------
-ScriptableLiveConnectExtension::ScriptableLiveConnectExtension(QObject *p, LiveConnectExtension *old):
-    ScriptableExtension(p), wrapee(old)
+ScriptableLiveConnectExtension::ScriptableLiveConnectExtension(QObject *p, LiveConnectExtension *old)
+    : ScriptableExtension(p)
+    , wrapee(old)
 {
-    connect(wrapee,
-            &LiveConnectExtension::partEvent,
-            this,
-            &ScriptableLiveConnectExtension::liveConnectEvent);
+    connect(wrapee, &LiveConnectExtension::partEvent, this, &ScriptableLiveConnectExtension::liveConnectEvent);
 }
 
 QVariant ScriptableLiveConnectExtension::rootObject()
@@ -232,8 +217,7 @@ bool ScriptableLiveConnectExtension::hasProperty(ScriptableExtension *, quint64 
 
 // Note that since we wrap around a plugin, and do not implement the browser,
 // we do not perform XSS checks ourselves.
-QVariant ScriptableLiveConnectExtension::callFunctionReference(ScriptableExtension *,
-        quint64 o, const QString &f, const ScriptableExtension::ArgList &a)
+QVariant ScriptableLiveConnectExtension::callFunctionReference(ScriptableExtension *, quint64 o, const QString &f, const ScriptableExtension::ArgList &a)
 {
     QStringList qargs;
     // Convert args to strings for LC use.
@@ -247,8 +231,8 @@ QVariant ScriptableLiveConnectExtension::callFunctionReference(ScriptableExtensi
     }
 
     LiveConnectExtension::Type retType;
-    unsigned long              retObjId;
-    QString                    retVal;
+    unsigned long retObjId;
+    QString retVal;
     if (wrapee->call((unsigned long)o, f, qargs, retType, retObjId, retVal)) {
         return acquireValue(fromLC(QString(), retType, retObjId, retVal));
     } else {
@@ -256,12 +240,11 @@ QVariant ScriptableLiveConnectExtension::callFunctionReference(ScriptableExtensi
     }
 }
 
-QVariant ScriptableLiveConnectExtension::get(ScriptableExtension *,
-        quint64 objId, const QString &propName)
+QVariant ScriptableLiveConnectExtension::get(ScriptableExtension *, quint64 objId, const QString &propName)
 {
     LiveConnectExtension::Type retType;
-    unsigned long              retObjId;
-    QString                    retVal;
+    unsigned long retObjId;
+    QString retVal;
     if (wrapee->get((unsigned long)objId, propName, retType, retObjId, retVal)) {
         return acquireValue(fromLC(propName, retType, retObjId, retVal));
     } else {
@@ -270,8 +253,7 @@ QVariant ScriptableLiveConnectExtension::get(ScriptableExtension *,
     }
 }
 
-bool ScriptableLiveConnectExtension::put(ScriptableExtension *, quint64 objId,
-        const QString &propName, const QVariant &value)
+bool ScriptableLiveConnectExtension::put(ScriptableExtension *, quint64 objId, const QString &propName, const QVariant &value)
 {
     bool ok;
     QString val = toLC(value, &ok);
@@ -282,10 +264,7 @@ bool ScriptableLiveConnectExtension::put(ScriptableExtension *, quint64 objId,
     return wrapee->put((unsigned long)objId, propName, val);
 }
 
-QVariant ScriptableLiveConnectExtension::fromLC(const QString &name,
-        LiveConnectExtension::Type type,
-        unsigned long objId,
-        const QString &value)
+QVariant ScriptableLiveConnectExtension::fromLC(const QString &name, LiveConnectExtension::Type type, unsigned long objId, const QString &value)
 {
     switch (type) {
     case KParts::LiveConnectExtension::TypeBool: {
@@ -327,10 +306,7 @@ QString ScriptableLiveConnectExtension::toLC(const QVariant &in, bool *ok)
     *ok = true; // most of the time.
 
     // Objects (or exceptions) can't be converted
-    if (in.canConvert<ScriptableExtension::Object>() ||
-            in.canConvert<ScriptableExtension::Exception>() ||
-            in.canConvert<ScriptableExtension::FunctionRef>()) {
-
+    if (in.canConvert<ScriptableExtension::Object>() || in.canConvert<ScriptableExtension::Exception>() || in.canConvert<ScriptableExtension::FunctionRef>()) {
         *ok = false;
         return QString();
     }
@@ -375,8 +351,7 @@ void ScriptableLiveConnectExtension::release(quint64 objId)
     }
 }
 
-void ScriptableLiveConnectExtension::liveConnectEvent(const unsigned long, const QString &event,
-        const LiveConnectExtension::ArgList &args)
+void ScriptableLiveConnectExtension::liveConnectEvent(const unsigned long, const QString &event, const LiveConnectExtension::ArgList &args)
 {
     // We want to evaluate in the enclosure's context.
     QVariant enclosure = enclosingObject();
@@ -406,9 +381,8 @@ void ScriptableLiveConnectExtension::liveConnectEvent(const unsigned long, const
             script += QLatin1Char(',');
         }
         if ((*i).first == KParts::LiveConnectExtension::TypeString) {
-            script += QLatin1Char('"') +
-                      QString((*i).second).replace(QLatin1Char('\\'), QLatin1String("\\\\")).replace(QLatin1Char('"'), QLatin1String("\\\"")) +
-                      QLatin1Char('"');
+            script += QLatin1Char('"') + QString((*i).second).replace(QLatin1Char('\\'), QLatin1String("\\\\")).replace(QLatin1Char('"'), QLatin1String("\\\""))
+                + QLatin1Char('"');
         } else {
             script += (*i).second;
         }
@@ -442,4 +416,3 @@ unsigned int qHash(const KParts::ScriptableExtension::FunctionRef &f)
 
 #include "moc_scriptableextension.cpp"
 #include "moc_scriptableextension_p.cpp"
-

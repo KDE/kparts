@@ -18,7 +18,6 @@ class QString;
 
 namespace KParts
 {
-
 class MainWindowPrivate;
 
 /**

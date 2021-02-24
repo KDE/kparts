@@ -8,8 +8,8 @@
 #ifndef __normalktm_h__
 #define __normalktm_h__
 
-#include <kparts/readwritepart.h>
 #include <KXmlGuiWindow>
+#include <kparts/readwritepart.h>
 
 class QAction;
 class QWidget;
@@ -31,7 +31,6 @@ protected:
     void embedEditor();
 
 private:
-
     QAction *m_paEditFile;
     QAction *m_paCloseEditor;
 

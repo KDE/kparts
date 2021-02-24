@@ -28,9 +28,7 @@ class KAboutData;
 
 namespace KParts
 {
-
 class PartBasePrivate;
-
 
 /**
  * @class PartBase partbase.h <KParts/PartBase>
@@ -42,7 +40,6 @@ class KPARTS_EXPORT PartBase : virtual public KXMLGUIClient
     KPARTS_DECLARE_PRIVATE(PartBase)
 
 public:
-
     /**
      *  Constructor.
      */
@@ -78,7 +75,9 @@ protected:
      * @deprecated Since 5.77, use Part::setMetaData(const KPluginMetaData&)
      *             or KXMLGUIClient::setComponentName(const QString &, const QString &) instead.
      */
-    KPARTS_DEPRECATED_VERSION(5, 77, "Use Part::setMetaData(const KPluginMetaData&) or KXMLGUIClient::setComponentName(const QString &, const QString &) instead")
+    KPARTS_DEPRECATED_VERSION(5,
+                              77,
+                              "Use Part::setMetaData(const KPluginMetaData&) or KXMLGUIClient::setComponentName(const QString &, const QString &) instead")
     virtual void setComponentData(const KAboutData &componentData);
 #endif
 
@@ -95,7 +94,9 @@ protected:
      * @deprecated Since 5.77, use Part::setMetaData(const KPluginMetaData&)
      *             or KXMLGUIClient::setComponentName(const QString &, const QString &) instead.
      */
-    KPARTS_DEPRECATED_VERSION(5, 77, "Use Part::setMetaData(const KPluginMetaData&) or KXMLGUIClient::setComponentName(const QString &, const QString &) instead")
+    KPARTS_DEPRECATED_VERSION(5,
+                              77,
+                              "Use Part::setMetaData(const KPluginMetaData&) or KXMLGUIClient::setComponentName(const QString &, const QString &) instead")
     virtual void setComponentData(const KAboutData &pluginData, bool loadPlugins);
 #endif
 

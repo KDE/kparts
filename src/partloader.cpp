@@ -10,11 +10,11 @@
 #include "kparts_logging.h"
 
 #include <KConfigGroup>
+#include <KLocalizedString>
+#include <KPluginFactory>
+#include <KPluginLoader>
 #include <KService>
 #include <KSharedConfig>
-#include <KPluginLoader>
-#include <KPluginFactory>
-#include <KLocalizedString>
 #include <stack>
 
 #include <kparts_version.h> // TODO KF6 REMOVE
@@ -77,7 +77,9 @@ static int pluginDistanceToMimeType(const KPluginMetaData &md, const QString &pa
 
 QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mimeType)
 {
-    auto supportsMime = [&](const KPluginMetaData &md) { return md.supportsMimeType(mimeType); };
+    auto supportsMime = [&](const KPluginMetaData &md) {
+        return md.supportsMimeType(mimeType);
+    };
     QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("kf5/parts"), supportsMime);
 
 #if KSERVICE_BUILD_DEPRECATED_SINCE(5, 0)
@@ -86,16 +88,18 @@ QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mim
     // I would compare library filenames, but KPluginMetaData::fileName looks like kf5/kparts/okteta and KService::library() is a full path
     // The user actually sees translated names, let's ensure those don't look duplicated in the list.
     auto isPluginForName = [](const QString &name) {
-        return [name](const KPluginMetaData &plugin) { return plugin.name() == name; };
+        return [name](const KPluginMetaData &plugin) {
+            return plugin.name() == name;
+        };
     };
 
     const KService::List offers = KMimeTypeTrader::self()->query(mimeType, QStringLiteral("KParts/ReadOnlyPart"));
     for (const KService::Ptr &service : offers) {
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+        QT_WARNING_PUSH
+        QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+        QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
         KPluginInfo info(service);
-QT_WARNING_POP
+        QT_WARNING_POP
         if (info.isValid()) {
             if (std::find_if(plugins.cbegin(), plugins.cend(), isPluginForName(info.name())) == plugins.cend()) {
                 plugins.append(info.toMetaData());
@@ -119,13 +123,15 @@ QT_WARNING_POP
 
     const QStringList userParts = partsFromUserPreference(mimeType);
     if (!userParts.isEmpty()) {
-        //for (const KPluginMetaData &plugin : plugins) {
+        // for (const KPluginMetaData &plugin : plugins) {
         //    qDebug() << "unsorted:" << plugin.fileName() << plugin.initialPreference();
         //}
         const auto defaultPlugins = plugins;
         plugins.clear();
         for (const QString &userPart : userParts) { // e.g. kf5/parts/gvpart
-            auto matchesLibrary = [&](const KPluginMetaData &plugin) { return plugin.fileName().contains(userPart); };
+            auto matchesLibrary = [&](const KPluginMetaData &plugin) {
+                return plugin.fileName().contains(userPart);
+            };
             auto it = std::find_if(defaultPlugins.begin(), defaultPlugins.end(), matchesLibrary);
             if (it != defaultPlugins.end()) {
                 plugins.push_back(*it);
@@ -137,7 +143,7 @@ QT_WARNING_POP
         plugins += defaultPlugins;
     }
 
-    //for (const KPluginMetaData &plugin : plugins) {
+    // for (const KPluginMetaData &plugin : plugins) {
     //    qDebug() << plugin.fileName() << plugin.initialPreference();
     //}
     return plugins;
@@ -147,12 +153,17 @@ QT_WARNING_POP
 class KPluginFactoryHack : public KPluginFactory
 {
 public:
-     QObject *create(const char *iface, QWidget *parentWidget, QObject *parent, const QVariantList &args, const QString &keyword) override {
-         return KPluginFactory::create(iface, parentWidget, parent, args, keyword);
-     }
+    QObject *create(const char *iface, QWidget *parentWidget, QObject *parent, const QVariantList &args, const QString &keyword) override
+    {
+        return KPluginFactory::create(iface, parentWidget, parent, args, keyword);
+    }
 };
 
-QObject *KParts::PartLoader::Private::createPartInstanceForMimeTypeHelper(const char *iface, const QString &mimeType, QWidget *parentWidget, QObject *parent, QString *error)
+QObject *KParts::PartLoader::Private::createPartInstanceForMimeTypeHelper(const char *iface,
+                                                                          const QString &mimeType,
+                                                                          QWidget *parentWidget,
+                                                                          QObject *parent,
+                                                                          QString *error)
 {
     const QVector<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
     for (const KPluginMetaData &plugin : plugins) {
@@ -168,7 +179,9 @@ QObject *KParts::PartLoader::Private::createPartInstanceForMimeTypeHelper(const 
             if (error) {
                 if (!obj) {
                     *error = i18n("The plugin '%1' does not provide an interface '%2' with keyword '%3'",
-                                  plugin.fileName(), QString::fromLatin1(iface), pluginKeyword);
+                                  plugin.fileName(),
+                                  QString::fromLatin1(iface),
+                                  pluginKeyword);
                 } else {
                     error->clear();
                 }

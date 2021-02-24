@@ -25,8 +25,8 @@ public:
 
 const char GUIActivateEventPrivate::s_strGUIActivateEvent[] = "KParts/GUIActivate";
 
-GUIActivateEvent::GUIActivateEvent(bool activated) :
-    Event(*new GUIActivateEventPrivate(activated, GUIActivateEventPrivate::s_strGUIActivateEvent))
+GUIActivateEvent::GUIActivateEvent(bool activated)
+    : Event(*new GUIActivateEventPrivate(activated, GUIActivateEventPrivate::s_strGUIActivateEvent))
 {
 }
 

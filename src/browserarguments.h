@@ -11,12 +11,11 @@
 
 #include <kparts/kparts_export.h>
 
-#include <QStringList>
 #include <QByteArray>
+#include <QStringList>
 
 namespace KParts
 {
-
 struct BrowserArgumentsPrivate;
 
 /**

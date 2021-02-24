@@ -37,21 +37,29 @@ private Q_SLOTS:
     void testAutoEmbed()
     {
         // This one should get the fast path, no dialog should show up.
-        BrowserOpenOrSaveQuestion questionEmbedHtml(nullptr, QUrl(QStringLiteral("http://www.example.com/")),
-                QString::fromLatin1("text/html"));
+        BrowserOpenOrSaveQuestion questionEmbedHtml(nullptr, QUrl(QStringLiteral("http://www.example.com/")), QString::fromLatin1("text/html"));
         QCOMPARE(questionEmbedHtml.askEmbedOrSave(), BrowserOpenOrSaveQuestion::Embed);
-
     }
     void testDontAskAgain()
     {
         KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("filetypesrc"), KConfig::NoGlobals);
-        cfg->group("Notification Messages").writeEntry("askSave" "text/plain", "false");
-        BrowserOpenOrSaveQuestion question(nullptr, QUrl(QStringLiteral("http://www.example.com/")),
-                                           QString::fromLatin1("text/plain"));
+        cfg->group("Notification Messages")
+            .writeEntry(
+                "askSave"
+                "text/plain",
+                "false");
+        BrowserOpenOrSaveQuestion question(nullptr, QUrl(QStringLiteral("http://www.example.com/")), QString::fromLatin1("text/plain"));
         QCOMPARE((int)question.askOpenOrSave(), (int)BrowserOpenOrSaveQuestion::Open);
-        cfg->group("Notification Messages").writeEntry("askSave" "text/plain", "true");
+        cfg->group("Notification Messages")
+            .writeEntry(
+                "askSave"
+                "text/plain",
+                "true");
         QCOMPARE((int)question.askOpenOrSave(), (int)BrowserOpenOrSaveQuestion::Save);
-        cfg->group("Notification Messages").deleteEntry("askSave" "text/plain");
+        cfg->group("Notification Messages")
+            .deleteEntry(
+                "askSave"
+                "text/plain");
     }
 
     void testAllChoices_data()
@@ -88,12 +96,12 @@ private Q_SLOTS:
 
         if (KApplicationTrader::queryByMimeType(QStringLiteral("application/x-zerosize")).count() == 0) {
             QTest::newRow("(zero) cancel") << "application/x-zerosize" << Cancel << (int)BrowserOpenOrSaveQuestion::Cancel << false;
-            QTest::newRow("(zero) open with...") << "application/x-zerosize" << OpenDefault /*Yes, not OpenWith*/ << (int)BrowserOpenOrSaveQuestion::Open << false;
+            QTest::newRow("(zero) open with...") << "application/x-zerosize" << OpenDefault /*Yes, not OpenWith*/ << (int)BrowserOpenOrSaveQuestion::Open
+                                                 << false;
             QTest::newRow("(zero) save") << "application/x-zerosize" << Save << (int)BrowserOpenOrSaveQuestion::Save << false;
         } else {
             qWarning() << "This test relies on the fact that there are no apps associated with application/x-zerosize.";
         }
-
     }
 
     void testAllChoices()
@@ -108,9 +116,8 @@ private Q_SLOTS:
         questionEmbedZip.setFeatures(BrowserOpenOrSaveQuestion::ServiceSelection);
         QDialog *theDialog = parent.findChild<QDialog *>();
         QVERIFY(theDialog);
-        //QMetaObject::invokeMethod(theDialog, "slotButtonClicked", Qt::QueuedConnection, Q_ARG(int, button));
-        QMetaObject::invokeMethod(this, "clickButton", Qt::QueuedConnection, Q_ARG(QDialog *, theDialog),
-                                  Q_ARG(QString, buttonName));
+        // QMetaObject::invokeMethod(theDialog, "slotButtonClicked", Qt::QueuedConnection, Q_ARG(int, button));
+        QMetaObject::invokeMethod(this, "clickButton", Qt::QueuedConnection, Q_ARG(QDialog *, theDialog), Q_ARG(QString, buttonName));
         QCOMPARE((int)questionEmbedZip.askOpenOrSave(), expectedResult);
         QCOMPARE((bool)questionEmbedZip.selectedService(), expectedService);
     }

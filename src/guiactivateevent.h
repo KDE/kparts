@@ -13,7 +13,6 @@
 
 namespace KParts
 {
-
 class GUIActivateEventPrivate;
 /**
  * @class GUIActivateEvent guiactivateevent.h <KParts/GUIActivateEvent>
@@ -38,7 +37,7 @@ private:
     Q_DECLARE_PRIVATE_D(Event::d, GUIActivateEvent)
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 79)
     // Unused, kept for ABI compatibility
-    const void * __kparts_d_do_not_use;
+    const void *__kparts_d_do_not_use;
 #endif
 };
 

@@ -10,15 +10,15 @@
 #include <KActionCollection>
 #include <KActionMenu>
 #include <KLocalizedString>
-#include <KPluginLoader>
 #include <KPluginFactory>
+#include <KPluginLoader>
 #include <partloader.h>
 
-#include <QMimeDatabase>
 #include <QAction>
 #include <QApplication>
-#include <QFileDialog>
 #include <QFile>
+#include <QFileDialog>
+#include <QMimeDatabase>
 #include <QTest>
 
 PartViewer::PartViewer()
@@ -61,8 +61,7 @@ void PartViewer::openUrl(const QUrl &url)
     QMimeDatabase db;
     const QString mimeType = db.mimeTypeForUrl(url).name();
     QString errorString;
-    m_part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(mimeType,
-             this, this, &errorString);
+    m_part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(mimeType, this, this, &errorString);
 
     if (m_part) {
         switchToPart(url);
@@ -77,7 +76,9 @@ void PartViewer::openUrl(const QUrl &url)
     const QVector<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
     for (const KPluginMetaData &plugin : plugins) {
         QAction *action = new QAction(plugin.name(), this);
-        connect(action, &QAction::triggered, this, [=] { loadPlugin(plugin, url); });
+        connect(action, &QAction::triggered, this, [=] {
+            loadPlugin(plugin, url);
+        });
         m_openWithActions.append(action);
     }
     if (!m_openWithActions.isEmpty()) {
@@ -121,4 +122,3 @@ int main(int argc, char **argv)
     shell->show();
     return app.exec();
 }
-

@@ -7,15 +7,14 @@
 #ifndef BROWSEROPENORSAVEQUESTION_H
 #define BROWSEROPENORSAVEQUESTION_H
 
-#include <kparts/kparts_export.h>
 #include <kparts/browserrun.h>
+#include <kparts/kparts_export.h>
 
 #include <KService>
 #include <memory>
 
 namespace KParts
 {
-
 class BrowserOpenOrSaveQuestionPrivate;
 
 /**
@@ -52,9 +51,10 @@ public:
      * show the service selection button)
      * @see Features
      */
-    enum Feature { BasicFeatures = 0, /**< Only the basic save, open, embed, cancel button */
-                   ServiceSelection = 1, /**< Shows "Open With..." with the associated applications for the mimetype */
-                 };
+    enum Feature {
+        BasicFeatures = 0, /**< Only the basic save, open, embed, cancel button */
+        ServiceSelection = 1, /**< Shows "Open With..." with the associated applications for the mimetype */
+    };
     /**
      * Stores a combination of #Feature values.
      */
@@ -110,4 +110,3 @@ private:
 }
 
 #endif /* BROWSEROPENORSAVEQUESTION_H */
-

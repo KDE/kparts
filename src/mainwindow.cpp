@@ -12,13 +12,13 @@
 #include "part.h"
 #include "plugin.h"
 
+#include <KAboutData>
 #include <KActionCollection>
+#include <KConfigGroup>
 #include <KEditToolBar>
 #include <KHelpMenu>
-#include <KAboutData>
-#include <KXMLGUIFactory>
-#include <KConfigGroup>
 #include <KSharedConfig>
+#include <KXMLGUIFactory>
 
 #include <QAction>
 #include <QApplication>
@@ -48,7 +48,8 @@ public:
 }
 
 MainWindow::MainWindow(QWidget *parent, Qt::WindowFlags f)
-    : KXmlGuiWindow(parent, f), d(new MainWindowPrivate())
+    : KXmlGuiWindow(parent, f)
+    , d(new MainWindowPrivate())
 {
     PartBase::setPartObject(this);
 }
@@ -78,10 +79,8 @@ void MainWindow::createGUI(Part *part)
 
         factory->removeClient(d->m_activePart);
 
-        disconnect(d->m_activePart.data(), &Part::setWindowCaption,
-                   this, static_cast<void (MainWindow::*)(const QString &)>(&MainWindow::setCaption));
-        disconnect(d->m_activePart.data(), &Part::setStatusBarText,
-                   this, &MainWindow::slotSetStatusBarText);
+        disconnect(d->m_activePart.data(), &Part::setWindowCaption, this, static_cast<void (MainWindow::*)(const QString &)>(&MainWindow::setCaption));
+        disconnect(d->m_activePart.data(), &Part::setStatusBarText, this, &MainWindow::slotSetStatusBarText);
     }
 
     if (!d->m_bShellGUIActivated) {
@@ -93,11 +92,9 @@ void MainWindow::createGUI(Part *part)
     if (part) {
         // do this before sending the activate event
         if (d->m_manageWindowTitle) {
-            connect(part, &Part::setWindowCaption,
-                    this, static_cast<void (MainWindow::*)(const QString &)>(&MainWindow::setCaption));
+            connect(part, &Part::setWindowCaption, this, static_cast<void (MainWindow::*)(const QString &)>(&MainWindow::setCaption));
         }
-        connect(part, &Part::setStatusBarText,
-                this, &MainWindow::slotSetStatusBarText);
+        connect(part, &Part::setStatusBarText, this, &MainWindow::slotSetStatusBarText);
 
         factory->addClient(part);
 
@@ -193,4 +190,3 @@ void KParts::MainWindow::configureToolbars()
     // No difference with base class anymore.
     KXmlGuiWindow::configureToolbars();
 }
-

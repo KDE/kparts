@@ -15,10 +15,8 @@
 
 class QRect;
 
-
 namespace KParts
 {
-
 class WindowArgsPrivate;
 
 /**
@@ -35,11 +33,8 @@ public:
     ~WindowArgs();
     WindowArgs(const WindowArgs &args);
     WindowArgs &operator=(const WindowArgs &args);
-    WindowArgs(const QRect &_geometry, bool _fullscreen, bool _menuBarVisible,
-               bool _toolBarsVisible, bool _statusBarVisible, bool _resizable);
-    WindowArgs(int _x, int _y, int _width, int _height, bool _fullscreen,
-               bool _menuBarVisible, bool _toolBarsVisible,
-               bool _statusBarVisible, bool _resizable);
+    WindowArgs(const QRect &_geometry, bool _fullscreen, bool _menuBarVisible, bool _toolBarsVisible, bool _statusBarVisible, bool _resizable);
+    WindowArgs(int _x, int _y, int _width, int _height, bool _fullscreen, bool _menuBarVisible, bool _toolBarsVisible, bool _statusBarVisible, bool _resizable);
 
     void setX(int x);
     int x() const;

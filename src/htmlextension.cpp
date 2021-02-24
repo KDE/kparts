@@ -9,13 +9,15 @@
 
 #include "readonlypart.h"
 
-
 using namespace KParts;
 
-class KParts::HtmlExtensionPrivate {};
+class KParts::HtmlExtensionPrivate
+{
+};
 
 KParts::HtmlExtension::HtmlExtension(KParts::ReadOnlyPart *parent)
-    : QObject(parent), d(nullptr)
+    : QObject(parent)
+    , d(nullptr)
 {
 }
 

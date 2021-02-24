@@ -16,7 +16,6 @@
 
 namespace KParts
 {
-
 class ReadOnlyPart;
 class TextExtensionPrivate;
 

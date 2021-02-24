@@ -13,7 +13,6 @@
 
 #include <QUrl>
 
-
 class KJob;
 namespace KIO
 {
@@ -22,7 +21,6 @@ class Job;
 
 namespace KParts
 {
-
 class ReadOnlyPartPrivate;
 class BrowserExtension;
 class OpenUrlArguments;

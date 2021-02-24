@@ -17,7 +17,6 @@ class KFileItemList;
 
 namespace KParts
 {
-
 class ReadOnlyPart;
 class ListingNotificationExtensionPrivate;
 
@@ -45,8 +44,8 @@ public:
      */
     enum NotificationEventType {
         None = 0x00,
-        ItemsAdded = 0x01,      /*!< New items added to the listing. */
-        ItemsDeleted = 0x02,    /*!< Items deleted from the listing. */
+        ItemsAdded = 0x01, /*!< New items added to the listing. */
+        ItemsDeleted = 0x02, /*!< Items deleted from the listing. */
     };
 
     /**
@@ -69,15 +68,15 @@ public:
     virtual NotificationEventTypes supportedNotificationEventTypes() const;
 
     /**
-      * Queries @p obj for a child object which inherits from this class.
-      */
+     * Queries @p obj for a child object which inherits from this class.
+     */
     static ListingNotificationExtension *childObject(QObject *obj);
 
 Q_SIGNALS:
     /**
-      * This signal is emitted when one of the notification events listed
-      * in @ref NotificationEventType occur.
-      */
+     * This signal is emitted when one of the notification events listed
+     * in @ref NotificationEventType occur.
+     */
     void listingEvent(KParts::ListingNotificationExtension::NotificationEventType, const KFileItemList &);
 
 private:

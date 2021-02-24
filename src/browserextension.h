@@ -9,16 +9,18 @@
 #ifndef __kparts_browserextension_h__
 #define __kparts_browserextension_h__
 
-#include <kparts/readonlypart.h>
-#include <kparts/openurlarguments.h>
 #include <kparts/browserarguments.h>
+#include <kparts/openurlarguments.h>
+#include <kparts/readonlypart.h>
 #include <kparts/windowargs.h>
 
-#include <qplatformdefs.h> //mode_t
 #include <memory>
+#include <qplatformdefs.h> //mode_t
 
-template <class Key, class T> class QMap;
-template<typename T> class QList;
+template<class Key, class T>
+class QMap;
+template<typename T>
+class QList;
 
 class KFileItem;
 class KFileItemList;
@@ -27,7 +29,6 @@ class QPoint;
 
 namespace KParts
 {
-
 class BrowserInterface;
 
 /**
@@ -111,13 +112,13 @@ public:
 #endif
         ShowBookmark = 0x0008, /**< show "add to bookmarks" (usually not done on the local filesystem) */
         ShowCreateDirectory = 0x0010, /**<  show "create directory" (usually only done on the background of the view, or
-       *                      in hierarchical views like directory trees, where the new dir would be visible) */
+                                       *                      in hierarchical views like directory trees, where the new dir would be visible) */
         ShowTextSelectionItems = 0x0020, /**< set when selecting text, for a popup that only contains text-related items. */
         NoDeletion = 0x0040, /**< deletion, trashing and renaming not allowed (e.g. parent dir not writeable).
-       *            (this is only needed if the protocol itself supports deletion, unlike e.g. HTTP) */
+                              *            (this is only needed if the protocol itself supports deletion, unlike e.g. HTTP) */
         IsLink = 0x0080, /**< show "Bookmark This Link" and other link-related actions (linkactions merging group) */
         ShowUrlOperations = 0x0100, /**< show copy, paste, as well as cut if NoDeletion is not set. */
-        ShowProperties = 0x200,  /**< show "Properties" action (usually done by directory views) */
+        ShowProperties = 0x200, /**< show "Properties" action (usually done by directory views) */
     };
 
     /**
@@ -262,7 +263,7 @@ public:
      * "linkactions" for actions related to hyperlinks,
      * "partactions" for any other actions provided by the part
      */
-    typedef QMap<QString, QList<QAction *> > ActionGroupMap;
+    typedef QMap<QString, QList<QAction *>> ActionGroupMap;
 
 Q_SIGNALS:
     /**
@@ -296,9 +297,7 @@ Q_SIGNALS:
      * being destroyed. Parts should never use this signal, hosts should only connect
      * to this signal.
      */
-    void openUrlRequestDelayed(const QUrl &url,
-                               const KParts::OpenUrlArguments &arguments,
-                               const KParts::BrowserArguments &browserArguments);
+    void openUrlRequestDelayed(const QUrl &url, const KParts::OpenUrlArguments &arguments, const KParts::BrowserArguments &browserArguments);
 
     /**
      * Tells the hosting browser that the part opened a new URL (which can be
@@ -345,7 +344,7 @@ Q_SIGNALS:
                          const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments(),
                          const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments(),
                          const KParts::WindowArgs &windowArgs = KParts::WindowArgs(),
-                         KParts::ReadOnlyPart **part = nullptr);  // TODO consider moving to BrowserHostExtension?
+                         KParts::ReadOnlyPart **part = nullptr); // TODO consider moving to BrowserHostExtension?
 
     /**
      * Since the part emits the jobid in the started() signal,
@@ -373,7 +372,8 @@ Q_SIGNALS:
      * @param flags enables/disables certain builtin actions in the popupmenu
      * @param actionGroups named groups of actions which should be inserted into the popup, see ActionGroupMap
      */
-    void popupMenu(const QPoint &global, const KFileItemList &items,
+    void popupMenu(const QPoint &global,
+                   const KFileItemList &items,
                    const KParts::OpenUrlArguments &args = KParts::OpenUrlArguments(),
                    const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments(),
                    KParts::BrowserExtension::PopupFlags flags = KParts::BrowserExtension::DefaultPopupItems,
@@ -393,7 +393,8 @@ Q_SIGNALS:
      * @param flags enables/disables certain builtin actions in the popupmenu
      * @param actionGroups named groups of actions which should be inserted into the popup, see ActionGroupMap
      */
-    void popupMenu(const QPoint &global, const QUrl &url,
+    void popupMenu(const QPoint &global,
+                   const QUrl &url,
                    mode_t mode = static_cast<mode_t>(-1),
                    const KParts::OpenUrlArguments &args = KParts::OpenUrlArguments(),
                    const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments(),
@@ -476,6 +477,4 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(BrowserExtension::PopupFlags)
 
 }
 
-
 #endif
-

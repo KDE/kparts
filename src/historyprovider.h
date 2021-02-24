@@ -14,7 +14,6 @@
 
 namespace KParts
 {
-
 class HistoryProviderPrivate;
 
 /**

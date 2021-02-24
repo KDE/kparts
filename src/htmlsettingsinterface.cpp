@@ -11,7 +11,6 @@
 
 using namespace KParts;
 
-
 const char *HtmlSettingsInterface::javascriptAdviceToText(HtmlSettingsInterface::JavaScriptAdvice advice)
 {
     // NOTE: The use of I18N_NOOP below is intended to allow GUI code to call
@@ -44,7 +43,10 @@ HtmlSettingsInterface::JavaScriptAdvice HtmlSettingsInterface::textToJavascriptA
     return ret;
 }
 
-void HtmlSettingsInterface::splitDomainAdvice(const QString &adviceStr, QString &domain, HtmlSettingsInterface::JavaScriptAdvice &javaAdvice, HtmlSettingsInterface::JavaScriptAdvice &javaScriptAdvice)
+void HtmlSettingsInterface::splitDomainAdvice(const QString &adviceStr,
+                                              QString &domain,
+                                              HtmlSettingsInterface::JavaScriptAdvice &javaAdvice,
+                                              HtmlSettingsInterface::JavaScriptAdvice &javaScriptAdvice)
 {
     const QString tmp(adviceStr);
     const int splitIndex = tmp.indexOf(QLatin1Char(':'));
@@ -64,8 +66,7 @@ void HtmlSettingsInterface::splitDomainAdvice(const QString &adviceStr, QString 
         } else {
             // Java and JavaScript advice
             javaAdvice = textToJavascriptAdvice(adviceString.left(splitIndex2));
-            javaScriptAdvice = textToJavascriptAdvice(adviceString.mid(splitIndex2 + 1,
-                               adviceString.length()));
+            javaScriptAdvice = textToJavascriptAdvice(adviceString.mid(splitIndex2 + 1, adviceString.length()));
         }
     }
 }

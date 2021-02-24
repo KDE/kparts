@@ -18,7 +18,6 @@ class KFileItemList;
 
 namespace KParts
 {
-
 class ReadOnlyPart;
 class FileInfoExtensionPrivate;
 
@@ -41,15 +40,14 @@ class KPARTS_EXPORT FileInfoExtension : public QObject
     Q_OBJECT
 
 public:
-
     /**
      * Supported file information retrieval modes.
      * @see QueryModes
      */
-    enum QueryMode  {
-        None = 0x00,              /*!< Querying for file information is NOT possible */
-        AllItems = 0x01,          /*!< Retrieve or can retrieve file information for all items.*/
-        SelectedItems = 0x02,     /*!< Retrieve or can retrieve file information for selected items.*/
+    enum QueryMode {
+        None = 0x00, /*!< Querying for file information is NOT possible */
+        AllItems = 0x01, /*!< Retrieve or can retrieve file information for all items.*/
+        SelectedItems = 0x02, /*!< Retrieve or can retrieve file information for selected items.*/
     };
 
     /**

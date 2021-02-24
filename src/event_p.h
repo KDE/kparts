@@ -9,8 +9,8 @@
 #ifndef KPARTS_EVENT_P_H
 #define KPARTS_EVENT_P_H
 
-namespace KParts {
-
+namespace KParts
+{
 class EventPrivate
 {
 public:

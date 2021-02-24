@@ -8,7 +8,6 @@
 
 #include "openurlarguments.h"
 
-
 class KParts::OpenUrlArgumentsPrivate : public QSharedData
 {
 public:

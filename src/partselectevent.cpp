@@ -11,18 +11,14 @@
 
 using namespace KParts;
 
-
 class KParts::PartSelectEventPrivate : public KParts::EventPrivate
 {
 public:
-    PartSelectEventPrivate(const char *eventName,
-                           bool selected,
-                           Part *part,
-                           QWidget *widget)
-        : EventPrivate(eventName),
-        m_bSelected(selected),
-        m_part(part),
-        m_widget(widget)
+    PartSelectEventPrivate(const char *eventName, bool selected, Part *part, QWidget *widget)
+        : EventPrivate(eventName)
+        , m_bSelected(selected)
+        , m_part(part)
+        , m_widget(widget)
     {
     }
     static const char s_strPartSelectEvent[];
@@ -31,13 +27,10 @@ public:
     QWidget *const m_widget;
 };
 
-const char PartSelectEventPrivate::s_strPartSelectEvent[] =
-    "KParts/PartSelectEvent";
+const char PartSelectEventPrivate::s_strPartSelectEvent[] = "KParts/PartSelectEvent";
 
-PartSelectEvent::PartSelectEvent(bool selected,
-                                 Part *part,
-                                 QWidget *widget) :
-    Event(*new PartSelectEventPrivate(PartSelectEventPrivate::s_strPartSelectEvent, selected, part, widget))
+PartSelectEvent::PartSelectEvent(bool selected, Part *part, QWidget *widget)
+    : Event(*new PartSelectEventPrivate(PartSelectEventPrivate::s_strPartSelectEvent, selected, part, widget))
 {
 }
 

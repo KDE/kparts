@@ -9,35 +9,35 @@
 #ifndef _KPARTS_PART_P_H
 #define _KPARTS_PART_P_H
 
-#include "partbase_p.h"
 #include "part.h"
+#include "partbase_p.h"
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
 #include "partmetadatautil_p.h"
 #endif
 // KF
 #include <KPluginMetaData>
 // Qt
-#include <QWidget>
 #include <QPointer>
-
+#include <QWidget>
 
 namespace KParts
 {
-
-class PartPrivate: public PartBasePrivate
+class PartPrivate : public PartBasePrivate
 {
 public:
     Q_DECLARE_PUBLIC(Part)
 
     explicit PartPrivate(Part *q)
-        : PartBasePrivate(q),
-          m_iconLoader(nullptr),
+        : PartBasePrivate(q)
+        , m_iconLoader(nullptr)
+        ,
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
-          m_bSelectable(true),
+        m_bSelectable(true)
+        ,
 #endif
-          m_autoDeleteWidget(true),
-          m_autoDeletePart(true),
-          m_manager(nullptr)
+        m_autoDeleteWidget(true)
+        , m_autoDeletePart(true)
+        , m_manager(nullptr)
     {
     }
 

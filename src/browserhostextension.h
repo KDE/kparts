@@ -18,12 +18,11 @@
 
 class QStringList;
 class QString;
-template<typename T> class QList;
-
+template<typename T>
+class QList;
 
 namespace KParts
 {
-
 class ReadOnlyPart;
 class OpenUrlArguments;
 struct BrowserArguments;
@@ -70,9 +69,7 @@ public:
      * Opens the given url in a hosted child frame. The frame name is specified in the
      * frameName variable in the @p browserArguments parameter (see KParts::BrowserArguments ) .
      */
-    virtual bool openUrlInFrame(const QUrl &url,
-                                const KParts::OpenUrlArguments &arguments,
-                                const KParts::BrowserArguments &browserArguments);
+    virtual bool openUrlInFrame(const QUrl &url, const KParts::OpenUrlArguments &arguments, const KParts::BrowserArguments &browserArguments);
 
     /**
      * Queries @p obj for a child object which inherits from this
@@ -83,7 +80,6 @@ public:
 private:
     std::unique_ptr<BrowserHostExtensionPrivate> const d;
 };
-
 
 }
 

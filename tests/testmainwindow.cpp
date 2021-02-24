@@ -10,19 +10,19 @@
 
 #include <KParts/PartLoader>
 
-#include <QAction>
-#include <QSplitter>
-#include <QCheckBox>
-#include <QDir>
-#include <QCoreApplication>
-#include <QApplication>
-#include <KXMLGUIFactory>
-#include <KMessageBox>
 #include <KActionCollection>
 #include <KLocalizedString>
-#include <kparts/partmanager.h>
+#include <KMessageBox>
+#include <KXMLGUIFactory>
+#include <QAction>
+#include <QApplication>
+#include <QCheckBox>
+#include <QCoreApplication>
+#include <QDir>
+#include <QSplitter>
 #include <QStandardPaths>
 #include <QTest>
+#include <kparts/partmanager.h>
 
 TestMainWindow::TestMainWindow()
     : KParts::MainWindow()
@@ -65,8 +65,8 @@ TestMainWindow::TestMainWindow()
     connect(paQuit, SIGNAL(triggered()), this, SLOT(close()));
     paQuit->setIcon(QIcon::fromTheme(QStringLiteral("application-exit")));
 
-//  (void)new QAction( "Yet another menu item", coll, "shell_yami" );
-//  (void)new QAction( "Yet another submenu item", coll, "shell_yasmi" );
+    //  (void)new QAction( "Yet another menu item", coll, "shell_yami" );
+    //  (void)new QAction( "Yet another submenu item", coll, "shell_yasmi" );
 
     KStandardAction::configureToolbars(this, SLOT(configureToolbars()), actionCollection());
     KStandardAction::keyBindings(guiFactory(), SLOT(configureShortcuts()), actionCollection());
@@ -76,7 +76,7 @@ TestMainWindow::TestMainWindow()
 
     m_splitter->show();
 
-    m_manager->addPart(m_part1, true);   // sets part 1 as the active part
+    m_manager->addPart(m_part1, true); // sets part 1 as the active part
     m_manager->addPart(m_part2, false);
     m_editorpart = nullptr;
 }
@@ -88,7 +88,8 @@ TestMainWindow::~TestMainWindow()
 
 void TestMainWindow::slotFileOpen()
 {
-    const QString file = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QCoreApplication::instance()->applicationName() + QStringLiteral("/kpartstest_shell.rc"));
+    const QString file =
+        QStandardPaths::locate(QStandardPaths::GenericDataLocation, QCoreApplication::instance()->applicationName() + QStringLiteral("/kpartstest_shell.rc"));
     if (!m_part1->openUrl(QUrl::fromLocalFile(file))) {
         KMessageBox::error(this, QStringLiteral("Couldn't open file!"));
     }
@@ -97,7 +98,7 @@ void TestMainWindow::slotFileOpen()
 void TestMainWindow::slotFileOpenRemote()
 {
     QUrl u(QStringLiteral("http://www.kde.org/index.html"));
-    if (! m_part1->openUrl(u)) {
+    if (!m_part1->openUrl(u)) {
         KMessageBox::error(this, QStringLiteral("Couldn't open file!"));
     }
 }
@@ -112,8 +113,7 @@ void TestMainWindow::embedEditor()
     delete m_part2;
     m_part2 = nullptr;
     QString errorString;
-    m_editorpart = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadWritePart>(
-                QStringLiteral("text/plain"), m_splitter, this, &errorString);
+    m_editorpart = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadWritePart>(QStringLiteral("text/plain"), m_splitter, this, &errorString);
     if (!m_editorpart) {
         qWarning() << errorString;
     } else {
@@ -129,7 +129,7 @@ void TestMainWindow::slotFileCloseEditor()
     // It is very important to close the url of a read-write part
     // before destroying it. This allows to save the document (if modified)
     // and also to cancel.
-    if (! m_editorpart->closeUrl()) {
+    if (!m_editorpart->closeUrl()) {
         return;
     }
 
@@ -168,4 +168,3 @@ int main(int argc, char **argv)
 
     return app.exec();
 }
-

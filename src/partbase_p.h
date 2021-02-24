@@ -17,16 +17,16 @@
 
 namespace KParts
 {
-
 class PartBasePrivate
 {
 public:
     Q_DECLARE_PUBLIC(PartBase)
 
-    PartBasePrivate(PartBase *q): q_ptr(q),
-        m_pluginLoadingMode(PartBase::LoadPlugins),
-        m_pluginInterfaceVersion(0),
-        m_obj(nullptr)
+    PartBasePrivate(PartBase *q)
+        : q_ptr(q)
+        , m_pluginLoadingMode(PartBase::LoadPlugins)
+        , m_pluginInterfaceVersion(0)
+        , m_obj(nullptr)
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
         , m_componentData(KAboutData::applicationData())
 #endif
@@ -40,8 +40,14 @@ public:
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
     // allows the KPart-subclasses to catch in its overridden method
     // the deprecated setting of KAboutData and update its KPluginMetaData to that
-    virtual void setComponentData(const KAboutData &componentData) { m_componentData = componentData; }
-    const KAboutData& componentData() const { return m_componentData; }
+    virtual void setComponentData(const KAboutData &componentData)
+    {
+        m_componentData = componentData;
+    }
+    const KAboutData &componentData() const
+    {
+        return m_componentData;
+    }
 #endif
 
     PartBase *q_ptr;

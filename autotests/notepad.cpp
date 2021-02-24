@@ -6,28 +6,22 @@
 */
 
 #include "notepad.h"
-#include <kparts/partmanager.h>
 #include <kparts/mainwindow.h>
+#include <kparts/partmanager.h>
 
 #include <QAction>
 #include <QFile>
-#include <QTextStream>
 #include <QTextEdit>
+#include <QTextStream>
 
 #include <KAboutData>
-#include <QDebug>
 #include <KActionCollection>
 #include <KLocalizedString>
+#include <QDebug>
 
-K_PLUGIN_FACTORY_WITH_JSON(NotepadFactory,
-                 "notepad.json",
-                 registerPlugin<NotepadPart>();
-                )
+K_PLUGIN_FACTORY_WITH_JSON(NotepadFactory, "notepad.json", registerPlugin<NotepadPart>();)
 
-NotepadPart::NotepadPart(QWidget *parentWidget,
-                         QObject *parent,
-                         const KPluginMetaData &metaData,
-                         const QVariantList &)
+NotepadPart::NotepadPart(QWidget *parentWidget, QObject *parent, const KPluginMetaData &metaData, const QVariantList &)
     : KParts::ReadWritePart(parent)
 {
     setMetaData(metaData);

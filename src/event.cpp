@@ -11,7 +11,7 @@
 
 using namespace KParts;
 
-//the answer!
+// the answer!
 #define KPARTS_EVENT_MAGIC 42
 
 Event::Event(const char *eventName)

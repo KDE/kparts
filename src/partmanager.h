@@ -16,7 +16,6 @@
 
 namespace KParts
 {
-
 class Part;
 
 class PartManagerPrivate;
@@ -247,7 +246,6 @@ Q_SIGNALS:
     void activePartChanged(KParts::Part *newPart);
 
 protected:
-
     /**
      * Sets whether the PartManager ignores explict set focus requests
      * from the part.
@@ -275,6 +273,7 @@ protected Q_SLOTS:
      * @internal
      */
     void slotManagedTopLevelWidgetDestroyed();
+
 private:
     Part *findPartFromWidget(QWidget *widget, const QPoint &pos);
     Part *findPartFromWidget(QWidget *widget);
@@ -286,4 +285,3 @@ private:
 }
 
 #endif
-
