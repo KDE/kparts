@@ -38,7 +38,7 @@ public:
         Save = QDialog::Accepted,
         OpenDefault = Save + 1,
         OpenWith = OpenDefault + 1,
-        Cancel = QDialog::Rejected
+        Cancel = QDialog::Rejected,
     };
 
     BrowserOpenOrSaveQuestionPrivate(QWidget *parent, const QUrl &url, const QString &mimeType)
@@ -293,6 +293,7 @@ bool BrowserOpenOrSaveQuestionPrivate::autoEmbedMimeType(int flags)
     // it's more likely that the user might want to save it.
     // - multipart/* ("server push", see kmultipart)
     // KEEP IN SYNC!!!
+    // clang-format off
     if (flags != static_cast<int>(BrowserOpenOrSaveQuestion::AttachmentDisposition) && mime.isValid() && (
                 mime.inherits(QStringLiteral("text/html")) ||
                 mime.inherits(QStringLiteral("application/xml")) ||
@@ -302,6 +303,7 @@ bool BrowserOpenOrSaveQuestionPrivate::autoEmbedMimeType(int flags)
                 mime.inherits(QStringLiteral("multipart/replace")))) {
         return true;
     }
+    // clang-format on
     return false;
 }
 

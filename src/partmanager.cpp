@@ -54,12 +54,14 @@ public:
         switch (ev->type()) {
         case QEvent::MouseButtonPress:
         case QEvent::MouseButtonDblClick: {
+            // clang-format off
             QMouseEvent *mev = static_cast<QMouseEvent *>(ev);
             m_reason = mev->button() == Qt::LeftButton
                        ? PartManager::ReasonLeftClick
                        : (mev->button() == Qt::MiddleButton
                           ? PartManager::ReasonMidClick
                           : PartManager::ReasonRightClick);
+            // clang-format on
             break;
         }
         case QEvent::FocusIn:
@@ -229,10 +231,11 @@ bool PartManager::eventFilter(QObject *obj, QEvent *ev)
             part = findPartFromWidget(w);
         }
 
+        // clang-format off
         const char *evType = (ev->type() == QEvent::MouseButtonPress) ? "MouseButtonPress"
                              : (ev->type() == QEvent::MouseButtonDblClick) ? "MouseButtonDblClick"
                              : (ev->type() == QEvent::FocusIn) ? "FocusIn" : "OTHER! ERROR!";
-
+        // clang-format on
         if (part) { // We found a part whose widget is w
             if (d->m_policy == PartManager::TriState) {
                 if (ev->type() == QEvent::MouseButtonDblClick) {

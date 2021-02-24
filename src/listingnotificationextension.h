@@ -46,7 +46,7 @@ public:
     enum NotificationEventType {
         None = 0x00,
         ItemsAdded = 0x01,      /*!< New items added to the listing. */
-        ItemsDeleted = 0x02     /*!< Items deleted from the listing. */
+        ItemsDeleted = 0x02,    /*!< Items deleted from the listing. */
     };
 
     /**

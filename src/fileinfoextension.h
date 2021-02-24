@@ -49,7 +49,7 @@ public:
     enum QueryMode  {
         None = 0x00,              /*!< Querying for file information is NOT possible */
         AllItems = 0x01,          /*!< Retrieve or can retrieve file information for all items.*/
-        SelectedItems = 0x02      /*!< Retrieve or can retrieve file information for selected items.*/
+        SelectedItems = 0x02,     /*!< Retrieve or can retrieve file information for selected items.*/
     };
 
     /**

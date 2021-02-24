@@ -344,9 +344,11 @@ BrowserRun::AskSaveResult BrowserRun::askSave(const QUrl &url, KService::Ptr off
     BrowserOpenOrSaveQuestion question(nullptr, url, mimeType);
     question.setSuggestedFileName(suggestedFileName);
     const BrowserOpenOrSaveQuestion::Result result = question.askOpenOrSave();
+    // clang-format off
     return result == BrowserOpenOrSaveQuestion::Save ? Save
            : BrowserOpenOrSaveQuestion::Open ? Open
            : Cancel;
+    // clang-format on
 }
 #endif
 
@@ -357,9 +359,11 @@ BrowserRun::AskSaveResult BrowserRun::askEmbedOrSave(const QUrl &url, const QStr
     BrowserOpenOrSaveQuestion question(nullptr, url, mimeType);
     question.setSuggestedFileName(suggestedFileName);
     const BrowserOpenOrSaveQuestion::Result result = question.askEmbedOrSave(flags);
+    // clang-format off
     return result == BrowserOpenOrSaveQuestion::Save ? Save
            : result == BrowserOpenOrSaveQuestion::Embed ? Open
            : Cancel;
+    // clang-format on
 }
 #endif
 

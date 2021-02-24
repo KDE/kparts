@@ -85,7 +85,7 @@ public:
         None = 0x00,
         MimeType = 0x01,        /*!< Filter by mime type, e.g. "text/plain". */
         SubString = 0x02,       /*!< Filter by matching any part of a file or directory name, e.g. "Documents" */
-        WildCard = 0x04         /*!< Filter by using wildcard matches, e.g. "*.txt" */
+        WildCard = 0x04,        /*!< Filter by using wildcard matches, e.g. "*.txt" */
     };
 
     /**

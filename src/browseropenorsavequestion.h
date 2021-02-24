@@ -53,7 +53,7 @@ public:
      * @see Features
      */
     enum Feature { BasicFeatures = 0, /**< Only the basic save, open, embed, cancel button */
-                   ServiceSelection = 1 /**< Shows "Open With..." with the associated applications for the mimetype */
+                   ServiceSelection = 1, /**< Shows "Open With..." with the associated applications for the mimetype */
                  };
     /**
      * Stores a combination of #Feature values.

@@ -55,7 +55,7 @@ public:
         OfflineStorageDatabaseEnabled,
         OfflineWebApplicationCacheEnabled,
         LocalStorageEnabled,
-        UserDefinedStyleSheetURL
+        UserDefinedStyleSheetURL,
     };
 
     /**
@@ -66,7 +66,7 @@ public:
     enum JavaScriptAdvice {
         JavaScriptDunno = 0,
         JavaScriptAccept,
-        JavaScriptReject
+        JavaScriptReject,
     };
 
     /**
@@ -78,7 +78,7 @@ public:
         JSWindowOpenAllow = 0,
         JSWindowOpenAsk,
         JSWindowOpenDeny,
-        JSWindowOpenSmart
+        JSWindowOpenSmart,
     };
 
     /**
@@ -88,7 +88,7 @@ public:
      */
     enum JSWindowStatusPolicy {
         JSWindowStatusAllow = 0,
-        JSWindowStatusIgnore
+        JSWindowStatusIgnore,
     };
 
     /**
@@ -98,7 +98,7 @@ public:
      */
     enum JSWindowMovePolicy {
         JSWindowMoveAllow = 0,
-        JSWindowMoveIgnore
+        JSWindowMoveIgnore,
     };
 
     /**
@@ -108,7 +108,7 @@ public:
      */
     enum JSWindowResizePolicy {
         JSWindowResizeAllow = 0,
-        JSWindowResizeIgnore
+        JSWindowResizeIgnore,
     };
 
     /**
@@ -118,7 +118,7 @@ public:
      */
     enum JSWindowFocusPolicy {
         JSWindowFocusAllow = 0,
-        JSWindowFocusIgnore
+        JSWindowFocusIgnore,
     };
 
     /**

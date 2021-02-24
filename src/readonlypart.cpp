@@ -144,7 +144,9 @@ bool ReadOnlyPart::openUrl(const QUrl &url)
         KIO::JobFlags flags = d->m_showProgressInfo ? KIO::DefaultFlags : KIO::HideProgressInfo;
         d->m_statJob = KIO::mostLocalUrl(d->m_url, flags);
         KJobWidgets::setWindow(d->m_statJob, widget());
+        // clang-format off
         connect(d->m_statJob, SIGNAL(result(KJob*)), this, SLOT(_k_slotStatJobFinished(KJob*)));
+        // clang-format on
         return true;
     } else {
         d->openRemoteFile();
@@ -208,7 +210,9 @@ void ReadOnlyPartPrivate::openRemoteFile()
     m_job = KIO::file_copy(m_url, destURL, 0600, flags);
     KJobWidgets::setWindow(m_job, q->widget());
     Q_EMIT q->started(m_job);
+    // clang-format off
     QObject::connect(m_job, SIGNAL(result(KJob*)), q, SLOT(_k_slotJobFinished(KJob*)));
+    // clang-format on
     QObject::connect(m_job, &KIO::FileCopyJob::mimeTypeFound,
                      q, [this](KIO::Job *job, const QString &mimeType) { _k_slotGotMimeType(job, mimeType); });
 }

@@ -249,7 +249,9 @@ bool ReadWritePart::saveToUrl()
         }
         d->m_uploadJob = KIO::file_move(uploadUrl, d->m_url, -1, KIO::Overwrite);
         KJobWidgets::setWindow(d->m_uploadJob, widget());
+        // clang-format off
         connect(d->m_uploadJob, SIGNAL(result(KJob*)), this, SLOT(_k_slotUploadFinished(KJob*)));
+        // clang-format on
         return true;
     }
 }

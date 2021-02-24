@@ -241,7 +241,7 @@ public:
 
     enum ScriptLanguage {
         ECMAScript, /// < also known as JavaScript
-        EnumLimit = 0xFFFF
+        EnumLimit = 0xFFFF,
     };
 
     /**

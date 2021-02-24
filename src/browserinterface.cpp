@@ -23,6 +23,7 @@ BrowserInterface::~BrowserInterface()
 
 void BrowserInterface::callMethod(const char *name, const QVariant &argument)
 {
+    // clang-format off
     switch (argument.type()) {
     case QVariant::Invalid:
         break;
@@ -53,5 +54,6 @@ void BrowserInterface::callMethod(const char *name, const QVariant &argument)
     default:
         break;
     }
+    // clang-format on
 }
 

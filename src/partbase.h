@@ -122,7 +122,7 @@ protected:
          * EnabledByDefault=true in the corresponding
          * .desktop file.
          */
-        LoadPluginsIfEnabled = 2
+        LoadPluginsIfEnabled = 2,
     };
 
 #if KPARTS_ENABLE_DEPRECATED_SINCE(5, 77)

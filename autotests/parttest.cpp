@@ -86,9 +86,9 @@ void PartTest::testNoAutoDeleteWidget()
 static bool compareArgs(const KParts::OpenUrlArguments &arg1,
                         const KParts::OpenUrlArguments &arg2)
 {
-    return arg1.mimeType() == arg2.mimeType() &&
-           arg1.xOffset() == arg2.xOffset() &&
-           arg1.yOffset() == arg2.yOffset() &&
+    return arg1.mimeType() == arg2.mimeType() && //
+           arg1.xOffset() == arg2.xOffset() && //
+           arg1.yOffset() == arg2.yOffset() && //
            arg1.reload() == arg2.reload();
 }
 

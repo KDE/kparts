@@ -39,7 +39,7 @@ class KPARTS_EXPORT LiveConnectExtension : public QObject
     Q_OBJECT
 public:
     enum Type {
-        TypeVoid = 0, TypeBool, TypeFunction, TypeNumber, TypeObject, TypeString
+        TypeVoid = 0, TypeBool, TypeFunction, TypeNumber, TypeObject, TypeString,
     };
     typedef QList<QPair<Type, QString> > ArgList;
 
