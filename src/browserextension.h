@@ -15,6 +15,8 @@
 #include <kparts/windowargs.h>
 
 #include <memory>
+
+#include <QAction>
 #include <qplatformdefs.h> //mode_t
 
 template<class Key, class T>
