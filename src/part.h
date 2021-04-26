@@ -172,7 +172,7 @@ public:
      * i.e. icons installed into this part's own directories as opposed to standard
      * kde icons.
      *
-     * Make sure to call setMetaData (or deprevated setComponentData) before calling iconLoader.
+     * Make sure to call setMetaData (or deprecated setComponentData) before calling iconLoader.
      */
     KIconLoader *iconLoader();
 
