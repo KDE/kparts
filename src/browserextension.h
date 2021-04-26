@@ -108,9 +108,10 @@ public:
     enum PopupFlag {
         DefaultPopupItems = 0x0000, /**< default value, no additional menu item */
 #if KPARTS_ENABLE_DEPRECATED_SINCE(5, 27)
-        ShowNavigationItems = 0x0001, /**< @deprecated since 5.27, no effect anymore */
-        ShowUp = 0x0002, /**< @deprecated since 5.27, no effect anymore */
-        ShowReload = 0x0004, /**< @deprecated since 5.27, no effect anymore */
+        ShowNavigationItems KPARTS_ENUMERATOR_DEPRECATED_VERSION_BELATED(5, 82, 5, 27, "No effect anymore") =
+            0x0001, /**< @deprecated since 5.27, no effect anymore */
+        ShowUp KPARTS_ENUMERATOR_DEPRECATED_VERSION_BELATED(5, 82, 5, 27, "No effect anymore") = 0x0002, /**< @deprecated since 5.27, no effect anymore */
+        ShowReload KPARTS_ENUMERATOR_DEPRECATED_VERSION_BELATED(5, 82, 5, 27, "No effect anymore") = 0x0004, /**< @deprecated since 5.27, no effect anymore */
 #endif
         ShowBookmark = 0x0008, /**< show "add to bookmarks" (usually not done on the local filesystem) */
         ShowCreateDirectory = 0x0010, /**<  show "create directory" (usually only done on the background of the view, or
