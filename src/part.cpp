@@ -91,6 +91,7 @@ void Part::setAutoDeletePart(bool autoDeletePart)
     d->m_autoDeletePart = autoDeletePart;
 }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 82)
 KIconLoader *Part::iconLoader()
 {
     Q_D(Part);
@@ -100,6 +101,7 @@ KIconLoader *Part::iconLoader()
     }
     return d->m_iconLoader;
 }
+#endif
 
 KPluginMetaData Part::metaData() const
 {

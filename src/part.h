@@ -167,14 +167,19 @@ public:
      */
     KPluginMetaData metaData() const;
 
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 82)
     /**
      * Use this icon loader to load any icons that are specific to this part,
      * i.e. icons installed into this part's own directories as opposed to standard
      * kde icons.
      *
      * Make sure to call setMetaData (or deprecated setComponentData) before calling iconLoader.
+     * @deprecated since 5.82, use QIcon::fromTheme() and set QIcon::setThemeSearchPaths()
+     * or QIcon::setFallbackSearchPaths appropriately.
      */
+    KPARTS_DEPRECATED_VERSION(5, 82, "See API docs.")
     KIconLoader *iconLoader();
+#endif
 
 Q_SIGNALS:
     /**
