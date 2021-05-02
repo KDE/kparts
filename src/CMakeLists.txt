@@ -107,7 +107,7 @@ target_link_libraries(KF5Parts PUBLIC  KF5::KIOWidgets #browserrun.h uses krun.h
                                        KF5::IconThemes #only used by KPart::iconLoader()
                       )
 
-set_target_properties(KF5Parts PROPERTIES VERSION   ${KPARTS_VERSION_STRING}
+set_target_properties(KF5Parts PROPERTIES VERSION   ${KPARTS_VERSION}
                                           SOVERSION ${KPARTS_SOVERSION}
                                           EXPORT_NAME Parts
 )
