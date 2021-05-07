@@ -213,6 +213,8 @@ public:
     QString actionText(const char *name) const;
 
     typedef QMap<QByteArray, QByteArray> ActionSlotMap;
+
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 83)
     /**
      * Returns a map containing the action names as keys and corresponding
      * SLOT()'ified method names as data entries.
@@ -241,13 +243,15 @@ public:
      *
      * (where "mapIterator" is your ActionSlotMap iterator)
      */
+    KPARTS_DEPRECATED_VERSION(5, 83, "Use actionSlotMapPtr instead")
     static ActionSlotMap actionSlotMap();
+#endif
 
     /**
      * @return a pointer to the static action-slot map. Preferred method to get it.
      * The map is created if it doesn't exist yet
      */
-    static ActionSlotMap *actionSlotMapPtr();
+    static ActionSlotMap *actionSlotMapPtr(); // TODO KF6 Rename to actionSlotMap
 
     /**
      * Queries @p obj for a child object which inherits from this

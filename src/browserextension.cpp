@@ -298,11 +298,12 @@ QString BrowserExtension::actionText(const char *name) const
     return QString();
 }
 
-// for compatibility
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 83)
 BrowserExtension::ActionSlotMap BrowserExtension::actionSlotMap()
 {
     return *actionSlotMapPtr();
 }
+#endif
 
 BrowserExtension::ActionSlotMap *BrowserExtension::actionSlotMapPtr()
 {
