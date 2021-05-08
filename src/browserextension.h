@@ -87,7 +87,7 @@ class BrowserInterface;
  * @li @p reparseConfiguration : Re-read configuration and apply it.
  * @li @p disableScrolling: no scrollbars
  */
-class KPARTS_EXPORT BrowserExtension : public QObject
+class KPARTS_EXPORT BrowserExtension : public QObject // TODO KF6, rename class and header to NavigationExtension. See https://phabricator.kde.org/T12224
 {
     Q_OBJECT
     Q_PROPERTY(bool urlDropHandling READ isURLDropHandlingEnabled WRITE setURLDropHandlingEnabled)
