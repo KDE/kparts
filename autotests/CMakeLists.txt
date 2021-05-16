@@ -6,7 +6,7 @@ include(ECMAddTests)
 ########### a KParts ###############
 
 set(notepadpart_SRCS notepad.cpp)
-qt5_add_resources(notepadpart_SRCS notepad.qrc)
+qt_add_resources(notepadpart_SRCS notepad.qrc)
 # don't use kcoreaddons_add_plugin here since we don't want to install it
 add_library(notepadpart MODULE ${notepadpart_SRCS})
 # so we have to do the INSTALL_NAMESPACE thing by hand:

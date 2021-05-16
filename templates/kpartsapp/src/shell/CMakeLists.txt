@@ -3,7 +3,7 @@ set(%{APPNAMELC}_SRCS
    %{APPNAMELC}shell.cpp
 )
 
-qt5_add_resources(%{APPNAMELC}_SRCS
+qt_add_resources(%{APPNAMELC}_SRCS
     %{APPNAMELC}.qrc
 )
 

@@ -4,7 +4,7 @@ set(%{APPNAMELC}_PART_SRCS
    %{APPNAMELC}part.cpp
 )
 
-qt5_add_resources(%{APPNAMELC}_PART_SRCS
+qt_add_resources(%{APPNAMELC}_PART_SRCS
     %{APPNAMELC}part.qrc
 )
 
