@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.16)
 
 project(%{APPNAMELC})
 
-set(REQUIRED_ECM_VERSION "5.23.0")
+set(REQUIRED_ECM_VERSION "5.83.0")
 find_package(ECM ${REQUIRED_ECM_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
@@ -12,7 +12,7 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMInstallIcons)
 include(FeatureSummary)
 
-set(QT_MIN_VERSION "5.6.0")
+set(QT_MIN_VERSION "5.15.0")
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Widgets
 )

@@ -1,14 +1,13 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"%{APPNAMELC}part\")
 
-set(%{APPNAMELC}_PART_SRCS
-   %{APPNAMELC}part.cpp
-)
+add_library(%{APPNAMELC}part MODULE)
 
-qt_add_resources(%{APPNAMELC}_PART_SRCS
+target_sources(%{APPNAMELC}part PRIVATE
+    %{APPNAMELC}part.cpp
+    # handled by CMake's AUTORCC, as set by KDECMakeSettings
     %{APPNAMELC}part.qrc
 )
 
-add_library(%{APPNAMELC}part MODULE ${%{APPNAMELC}_PART_SRCS})
 kcoreaddons_desktop_to_json(%{APPNAMELC}part %{APPNAMELC}part.desktop)
 
 target_link_libraries(%{APPNAMELC}part

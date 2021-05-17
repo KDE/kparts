@@ -1,13 +1,11 @@
-set(%{APPNAMELC}_SRCS
-   main.cpp
-   %{APPNAMELC}shell.cpp
-)
+add_executable(%{APPNAMELC})
 
-qt_add_resources(%{APPNAMELC}_SRCS
+target_sources(%{APPNAMELC} PRIVATE
+    main.cpp
+    %{APPNAMELC}shell.cpp
+    # handled by CMake's AUTORCC, as set by KDECMakeSettings
     %{APPNAMELC}.qrc
 )
-
-add_executable(%{APPNAMELC} ${%{APPNAMELC}_SRCS})
 
 target_link_libraries(%{APPNAMELC}
     KF5::I18n

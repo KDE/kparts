@@ -5,10 +5,9 @@ include(ECMAddTests)
 
 ########### a KParts ###############
 
-set(notepadpart_SRCS notepad.cpp)
-qt_add_resources(notepadpart_SRCS notepad.qrc)
 # don't use kcoreaddons_add_plugin here since we don't want to install it
-add_library(notepadpart MODULE ${notepadpart_SRCS})
+add_library(notepadpart MODULE)
+target_sources(notepadpart PRIVATE notepad.cpp notepad.qrc)
 # so we have to do the INSTALL_NAMESPACE thing by hand:
 set_target_properties(notepadpart PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/kf5/parts")
 kcoreaddons_desktop_to_json(notepadpart notepad.desktop)

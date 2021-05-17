@@ -1,4 +1,7 @@
-set(KParts_LIB_SRCS
+add_library(KF5Parts SHARED)
+add_library(KF5::Parts ALIAS KF5Parts)
+
+target_sources(KF5Parts PRIVATE
     partbase.cpp
     part.cpp
     partmetadatautil_p.cpp
@@ -76,7 +79,7 @@ install(FILES ${KParts_CamelCase_HEADERS}
         DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts/KParts
         COMPONENT Devel)
 
-ecm_qt_declare_logging_category(KParts_LIB_SRCS
+ecm_qt_declare_logging_category(KF5Parts
     HEADER kparts_logging.h
     IDENTIFIER KPARTSLOG
     CATEGORY_NAME kf.parts
@@ -84,8 +87,6 @@ ecm_qt_declare_logging_category(KParts_LIB_SRCS
     EXPORT KPARTSLOG
 )
 
-add_library(KF5Parts ${KParts_LIB_SRCS})
-add_library(KF5::Parts ALIAS KF5Parts)
 ecm_generate_export_header(KF5Parts
     EXPORT_FILE_NAME ${KParts_BINARY_DIR}/kparts/kparts_export.h
     BASE_NAME KParts
@@ -96,9 +97,10 @@ ecm_generate_export_header(KF5Parts
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
-set(KParts_BUILD_INCLUDE_DIRS ${KParts_BINARY_DIR} ${CMAKE_CURRENT_BINARY_DIR})
-target_include_directories(KF5Parts PUBLIC "$<BUILD_INTERFACE:${KParts_BUILD_INCLUDE_DIRS}>")
-target_include_directories(KF5Parts INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KParts>" )
+target_include_directories(KF5Parts
+    PUBLIC "$<BUILD_INTERFACE:${KParts_BINARY_DIR}>"
+    INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KParts>"
+)
 
 target_link_libraries(KF5Parts PUBLIC  KF5::KIOWidgets #browserrun.h uses krun.h
                                        KF5::XmlGui # essential to the technology
@@ -152,7 +154,8 @@ if(BUILD_QCH)
             KF5XmlGui_QCH
             KF5TextWidgets_QCH
         INCLUDE_DIRS
-            ${KParts_BUILD_INCLUDE_DIRS}
+            ${CMAKE_BINARY_DIR}
+            ${CMAKE_CURRENT_BINARY_DIR}
         BLANK_MACROS
             KPARTS_EXPORT
             KPARTS_DEPRECATED
