@@ -68,12 +68,7 @@ TestMainWindow::TestMainWindow()
 
     KStandardAction::configureToolbars(this, &KParts::MainWindow::configureToolbars, actionCollection());
 
-    // KXMLGUIFactory::configureShortcuts(bool bAllowLetterShortcuts = true, bool bSaveSettings = true)
-    // can't be connected directly to the QAction::triggered(bool) signal
-    auto configureShortcutsSlot = [this]() {
-        guiFactory()->configureShortcuts();
-    };
-    KStandardAction::keyBindings(guiFactory(), configureShortcutsSlot, actionCollection());
+    KStandardAction::keyBindings(guiFactory(), &KXMLGUIFactory::showConfigureShortcutsDialog, actionCollection());
 
     setCentralWidget(m_splitter);
     m_splitter->setMinimumSize(400, 300);
