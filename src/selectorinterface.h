@@ -43,7 +43,7 @@ public:
      * @see QueryMethods
      */
     enum QueryMethod {
-        None = 0x00, /*!< Quering is not possible. */
+        None = 0x00, /*!< Querying is not possible. */
         EntireContent = 0x01, /*!< Query or can query the entire content. */
         SelectedContent = 0x02, /*!< Query or can query only the user selected content, if any. */
     };
@@ -75,7 +75,7 @@ public:
      * Note that since the returned item is static snapshot, i.e. not live, it
      * will not be updated when the document changes.
      *
-     * If the quering method specified by @p method is not supported or cannot be
+     * If the querying method specified by @p method is not supported or cannot be
      * handled, then a null element is returned.
      *
      * @see supportedQueryMethods
@@ -90,7 +90,7 @@ public:
      * Note that since the returned list is static snapshot, i.e. not live, it
      * will not be updated when the document changes.
      *
-     * If the quering method specified by @p method is not supported or cannot be
+     * If the querying method specified by @p method is not supported or cannot be
      * handled, then an empty list is returned.
      *
      * @see supportedQueryMethods

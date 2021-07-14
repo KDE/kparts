@@ -19,7 +19,7 @@
 // Internal:
 // As KParts::PartBase is inherited by KParts::Part which also inheriting from QObject,
 // which already has a protected d_ptr member, the macro Q_DECLARE_PRIVATE cannot be used
-// as it references d_ptr without any class qualifier, which is ambigous then.
+// as it references d_ptr without any class qualifier, which is ambiguous then.
 #define KPARTS_DECLARE_PRIVATE(Class) Q_DECLARE_PRIVATE_D(PartBase::d_ptr, Class)
 
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)

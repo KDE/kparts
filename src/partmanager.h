@@ -247,7 +247,7 @@ Q_SIGNALS:
 
 protected:
     /**
-     * Sets whether the PartManager ignores explict set focus requests
+     * Sets whether the PartManager ignores explicit set focus requests
      * from the part.
      *
      * By default this option is set to false. Set it to true to prevent

@@ -258,7 +258,7 @@ protected:
      *
      * @since 5.77
      */
-    void setMetaData(const KPluginMetaData &metatData);
+    void setMetaData(const KPluginMetaData &metaData);
 
 protected Q_SLOTS:
     /**
