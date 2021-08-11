@@ -274,7 +274,9 @@ void ReadWritePartPrivate::slotUploadFinished(KJob *)
         }
         Q_EMIT q->canceled(error);
     } else {
+#ifndef Q_OS_ANDROID
         ::org::kde::KDirNotify::emitFilesAdded(m_url.adjusted(QUrl::RemoveFilename));
+#endif
 
         m_uploadJob = nullptr;
         q->setModified(false);
