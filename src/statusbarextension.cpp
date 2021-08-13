@@ -183,7 +183,7 @@ void StatusBarExtension::removeStatusBarItem(QWidget *widget)
 {
     QStatusBar *sb = statusBar();
     QList<StatusBarItem>::iterator it = d->m_statusBarItems.begin();
-    for (; it != d->m_statusBarItems.end(); ++it)
+    for (; it != d->m_statusBarItems.end(); ++it) {
         if ((*it).widget() == widget) {
             if (sb) {
                 (*it).ensureItemHidden(sb);
@@ -191,6 +191,7 @@ void StatusBarExtension::removeStatusBarItem(QWidget *widget)
             d->m_statusBarItems.erase(it);
             return;
         }
+    }
 
     qCWarning(KPARTSLOG) << "StatusBarExtension::removeStatusBarItem. Widget not found :" << widget;
 }

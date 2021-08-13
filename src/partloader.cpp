@@ -61,8 +61,9 @@ static int pluginDistanceToMimeType(const KPluginMetaData &md, const QString &pa
 {
     QMimeDatabase db;
     auto distanceToMimeType = [&](const QString &mime) {
-        if (mime == parent)
+        if (mime == parent) {
             return 0;
+        }
         const QStringList ancestors = db.mimeTypeForName(mime).allAncestors();
         const int dist = ancestors.indexOf(parent);
         return dist == -1 ? 50 : dist + 1;
@@ -112,10 +113,12 @@ QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mim
         // We filtered based on "supports mimetype", but this didn't order from most-specific to least-specific.
         const int leftDistance = pluginDistanceToMimeType(left, mimeType);
         const int rightDistance = pluginDistanceToMimeType(right, mimeType);
-        if (leftDistance < rightDistance)
+        if (leftDistance < rightDistance) {
             return true;
-        if (leftDistance > rightDistance)
+        }
+        if (leftDistance > rightDistance) {
             return false;
+        }
         // Plugins who support the same mimetype are then sorted by initial preference
         return left.initialPreference() > right.initialPreference();
     };

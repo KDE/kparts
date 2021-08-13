@@ -160,7 +160,8 @@ void BrowserExtension::saveState(QDataStream &stream)
 void BrowserExtension::restoreState(QDataStream &stream)
 {
     QUrl u;
-    qint32 xOfs, yOfs;
+    qint32 xOfs;
+    qint32 yOfs;
     stream >> u >> xOfs >> yOfs;
 
     OpenUrlArguments args;
