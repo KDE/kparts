@@ -33,7 +33,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX KPARTS
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PartsConfigVersion.cmake"
                         SOVERSION 5)
 
-set(REQUIRED_QT_VERSION 5.15.0)
+set(REQUIRED_QT_VERSION 5.15.2)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Widgets Xml)
 
 find_package(KF5Config ${KF_DEP_VERSION} REQUIRED)
@@ -54,7 +54,7 @@ if(BUILD_TESTING)
 endif()
 add_definitions(-DTRANSLATION_DOMAIN=\"kparts5\")
 ki18n_install(po)
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055100)
 add_definitions(-DKIOWIDGETS_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054600) # We need KRun for BrowserRun
 add_definitions(-DKCOREADDONS_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054000) # We need KAboutData::fromPluginMetaData
