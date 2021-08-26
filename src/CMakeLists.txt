@@ -1,4 +1,4 @@
-add_library(KF5Parts SHARED)
+add_library(KF5Parts)
 add_library(KF5::Parts ALIAS KF5Parts)
 
 target_sources(KF5Parts PRIVATE
