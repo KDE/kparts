@@ -22,8 +22,8 @@ class PartBasePrivate
 public:
     Q_DECLARE_PUBLIC(PartBase)
 
-    PartBasePrivate(PartBase *q)
-        : q_ptr(q)
+    PartBasePrivate(PartBase *qq)
+        : q_ptr(qq)
         , m_pluginLoadingMode(PartBase::LoadPlugins)
         , m_pluginInterfaceVersion(0)
         , m_obj(nullptr)

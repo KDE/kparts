@@ -27,8 +27,8 @@ class PartPrivate : public PartBasePrivate
 public:
     Q_DECLARE_PUBLIC(Part)
 
-    explicit PartPrivate(Part *q)
-        : PartBasePrivate(q)
+    explicit PartPrivate(Part *qq)
+        : PartBasePrivate(qq)
         , m_iconLoader(nullptr)
         ,
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)

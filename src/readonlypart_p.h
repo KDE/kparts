@@ -26,8 +26,8 @@ class ReadOnlyPartPrivate : public PartPrivate
 public:
     Q_DECLARE_PUBLIC(ReadOnlyPart)
 
-    explicit ReadOnlyPartPrivate(ReadOnlyPart *q)
-        : PartPrivate(q)
+    explicit ReadOnlyPartPrivate(ReadOnlyPart *qq)
+        : PartPrivate(qq)
     {
         m_job = nullptr;
         m_statJob = nullptr;

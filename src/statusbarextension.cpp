@@ -77,8 +77,8 @@ private:
 class KParts::StatusBarExtensionPrivate
 {
 public:
-    StatusBarExtensionPrivate(StatusBarExtension *q)
-        : q(q)
+    StatusBarExtensionPrivate(StatusBarExtension *qq)
+        : q(qq)
         , m_statusBar(nullptr)
         , m_activated(true)
     {
