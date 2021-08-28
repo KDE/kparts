@@ -127,11 +127,11 @@ PartManager::PartManager(QWidget *topLevel, QObject *parent)
 
 PartManager::~PartManager()
 {
-    for (const QWidget *w : qAsConst(d->m_managedTopLevelWidgets)) {
+    for (const QWidget *w : std::as_const(d->m_managedTopLevelWidgets)) {
         disconnect(w, &QWidget::destroyed, this, &PartManager::slotManagedTopLevelWidgetDestroyed);
     }
 
-    for (Part *it : qAsConst(d->m_parts)) {
+    for (Part *it : std::as_const(d->m_parts)) {
         it->setManager(nullptr);
     }
 
@@ -310,7 +310,7 @@ bool PartManager::eventFilter(QObject *obj, QEvent *ev)
 
 Part *PartManager::findPartFromWidget(QWidget *widget, const QPoint &pos)
 {
-    for (auto *p : qAsConst(d->m_parts)) {
+    for (auto *p : std::as_const(d->m_parts)) {
         Part *part = p->hitTest(widget, pos);
         if (part && d->m_parts.contains(part)) {
             return part;
@@ -321,7 +321,7 @@ Part *PartManager::findPartFromWidget(QWidget *widget, const QPoint &pos)
 
 Part *PartManager::findPartFromWidget(QWidget *widget)
 {
-    for (auto *part : qAsConst(d->m_parts)) {
+    for (auto *part : std::as_const(d->m_parts)) {
         if (widget == part->widget()) {
             return part;
         }
