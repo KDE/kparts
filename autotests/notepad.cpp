@@ -50,9 +50,9 @@ void NotepadPart::setReadWrite(bool rw)
 {
     m_edit->setReadOnly(!rw);
     if (rw) {
-        connect(m_edit, &QTextEdit::textChanged, this, QOverload<>::of(&KParts::ReadWritePart::setModified));
+        connect(m_edit, &QTextEdit::textChanged, this, qOverload<>(&KParts::ReadWritePart::setModified));
     } else {
-        disconnect(m_edit, &QTextEdit::textChanged, this, QOverload<>::of(&KParts::ReadWritePart::setModified));
+        disconnect(m_edit, &QTextEdit::textChanged, this, qOverload<>(&KParts::ReadWritePart::setModified));
     }
 
     ReadWritePart::setReadWrite(rw);
