@@ -1,0 +1,193 @@
+# Translation of kparts5.po to Brazilian Portuguese
+# Copyright (C) 2002-2020 This file is copyright:
+# This file is distributed under the same license as the kparts package.
+#
+# Lisiane Sztoltz <lisiane@conectiva.com.br>, 2002, 2003, 2004.
+# Lisiane Sztoltz Teixeira <lisiane@kdemail.net>, 2003, 2004, 2005.
+# Henrique Pinto <stampede@coltec.ufmg.br>, 2003.
+# Marcus Gama <marcus.gama@gmail.com>, 2006.
+# Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2007, 2008.
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2020.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2008, 2009, 2010, 2012.
+# Fernando Boaglio <boaglio@kde.org>, 2009.
+# Doutor Zero <doutor.zero@gmail.com>, 2007, 2009.
+# Marcus Vinícius de Andrade Gama <marcus.gama@gmail.com>, 2010, 2012.
+# Aracele Torres <araceletorres@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kparts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2020-03-22 22:04-0300\n"
+"Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Diniz Bortolotto, Lisiane Sztoltz Teixeira, André Marcelo Alvarenga, Luiz "
+"Fernando Ranghetti"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"diniz.bortolotto@gmail.com, lisiane@kdemail.net, alvarenga@kde.org, "
+"elchevive@opensuse.org"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Deseja pesquisar na Internet por <b>%1</b>?</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "Pesquisa na Internet"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "Pe&squisar"
+
+#: browseropenorsavequestion.cpp:89
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Tipo: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Lembrar da ação para este tipo de arquivo"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "Abrir c&om %1"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Abrir &com %1"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Abrir '%1'?"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "Abrir c&om..."
+
+#: browseropenorsavequestion.cpp:247
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "Abrir c&om"
+
+#: browseropenorsavequestion.cpp:316
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Abrir"
+
+#: browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Nome: %1"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Este é o nome do arquivo sugerido pelo servidor"
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Deseja realmente executar '%1'?"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "Executar o arquivo?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "Executar"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "O gerenciador de downloads (%1) não pôde ser encontrado no seu $PATH "
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Tente reinstalá-lo. \n"
+"\n"
+"A integração com o Konqueror será desabilitada."
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "Salvar como"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "Aceitar"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "Rejeitar"
+
+#: partloader.cpp:184
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "O plugin '%1' não oferece uma interface '%2' com a palavra-chave '%3'"
+
+#: partloader.cpp:201
+#, kde-format
+msgid "No part was found for mimeType %1"
+msgstr "Não foi encontrado nenhum componente para o tipo MIME %1"
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "Sem título"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"O documento \"%1\" foi modificado.\n"
+"Deseja salvar as alterações ou descartá-las?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "Fechar documento"

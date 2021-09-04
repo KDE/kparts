@@ -1,0 +1,190 @@
+# translation of kdelibs4.po to Persian
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# Mahdi Foladgar <foladgar@itland.ir>, 2006.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006, 2007.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
+# MaryamSadat Razavi <razavi@itland.ir>, 2007.
+# Nooshin Asiaie <asiaie@itland.ir>, 2007.
+# Mohamad Reza Mirdamadi <mohi@linuxshop.ir>, 2009, 2010, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2012-06-28 16:40+0430\n"
+"Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
+"Language-Team: Farsi (Persian) <kde-i18n-fa@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "محمدرضا میردامادی , نازنین کاظمی , محمد ابراهیم محمدی پناه , سعید تقوی"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"mohi@linuxshop.ir , kazemi@itland.ir , mebrahim@gmail.com , s.taghavi@gmail."
+"com"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>می‌خواهید اینترنت را برای <b>%1</b> جستجو کنید؟</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "جستجوی اینترنت"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "&جستجو‌"
+
+#: browseropenorsavequestion.cpp:89
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "نوع: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, fuzzy, kde-format
+#| msgid "Do not show this message again"
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "دوباره این پیام را نشان نده"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&باز کردن %1 با‌"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "&باز کردن %1 با"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "«%1» باز شود؟"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&باز کردن با...‌"
+
+#: browseropenorsavequestion.cpp:247
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&باز کردن با"
+
+#: browseropenorsavequestion.cpp:316
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&باز کردن‌"
+
+#: browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "نام: %1"
+
+#: browseropenorsavequestion.cpp:342
+#, fuzzy, kde-format
+#| msgid "This is the name to save the file as."
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "این نام برای ذخیره پرونده با نام است."
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "آیا واقعاً می‌خواهید  »%1« را اجرا کنید؟"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "پرونده اجرا شود؟"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "اجرا"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "مدیر بارگیری  )%1( در $PATH  شما یافت نشد"
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"سعی کنید آن را دوباره نصب کنید  \n"
+"\n"
+"مجتمع‌سازی توسط Konqueror غیرفعال می‌شود."
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "ذخیره به عنوان"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "پذیرفتن"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "رد کردن"
+
+# The service '%1' does not provide an interface '%2' with keyword '%3'
+#: partloader.cpp:184
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "خدمت '%1' هیچ واسط «%2» را با کلیدواژهٔ «%3» فراهم نمی‌کند"
+
+#: partloader.cpp:201
+#, fuzzy, kde-format
+#| msgid "No handler found for %1."
+msgid "No part was found for mimeType %1"
+msgstr "گرداننده‌ای برای %1 یافت نشد."
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "بدون عنوان"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"سند  »%1« اصلاح شده است.\n"
+"می‌خواهید تغییرات را ذخیره کنید یا آنها را دور بریزید؟"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "بستن سند"

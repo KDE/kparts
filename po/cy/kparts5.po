@@ -1,0 +1,202 @@
+# Cyfieithiad o kdelibs4.po i Cymraeg
+# translation of kdelibs4.po to Cymraeg
+# Translation of kdelibs4.po to Cymraeg
+# Translation of clearfuzzytest.po to Cymraeg
+# translation of clearfuzzytest.po to Cymraeg
+# translation of clearfuzzy.po to Cymraeg
+# KDE yn Gymraeg.
+# Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
+# www.kyfieithu.co.uk <kyfieithu@dotmon.com>, 2003.
+# Kgyfieithu <kyfieithu@dotmon.com>, 2003.
+# KGyfieithu <kyfieithu@dotmon.com>, 2003.
+# KD at KGyfieithu <kyfieithu@dotmon.com>, 2003, 2004.
+# Kyfieithu <kyfieithu@dotmon.com>, 2004.
+# Kevin Donnelly <kevin@dotmon.com>, 2005.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2005-01-28 17:54+0000\n"
+"Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
+"Language-Team: Cymraeg\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9\n"
+"\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KD wrth KGyfieithu"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kyfieithu@dotmon.com"
+
+#: browserextension.cpp:220
+#, fuzzy, kde-format
+#| msgid "<qt>Do you want to search the Internet for <b>%1</b>?"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Ydych eisiau chwilio'r Rhyngrwyd am <b>%1</b>?"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "Chwiliad Rhyngrwyd"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr " &Chwilio"
+
+#: browseropenorsavequestion.cpp:89
+#, fuzzy, kde-format
+#| msgid "Redo: %1"
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Ail-wneud: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, fuzzy, kde-format
+#| msgid "Do not show this message again"
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Peidiwch â dangos y neges yma eto"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, fuzzy, kde-format
+#| msgid "&Open with '%1'"
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "A&gor efo '%1'"
+
+#: browseropenorsavequestion.cpp:213
+#, fuzzy, kde-format
+#| msgid "&Open with '%1'"
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "A&gor efo '%1'"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, fuzzy, kde-format
+#| msgid "Open '%1'"
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Agor '%1'"
+
+#: browseropenorsavequestion.cpp:228
+#, fuzzy, kde-format
+#| msgid "&Open With..."
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Agor Gyda..."
+
+#: browseropenorsavequestion.cpp:247
+#, fuzzy, kde-format
+#| msgid "&Open With..."
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Agor Gyda..."
+
+#: browseropenorsavequestion.cpp:316
+#, fuzzy, kde-format
+#| msgid "&Open"
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Agor"
+
+#: browseropenorsavequestion.cpp:340
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Enw:"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr ""
+
+#: browserrun.cpp:334
+#, fuzzy, kde-format
+#| msgid "Do you really want to execute '%1'? "
+msgid "Do you really want to execute '%1'?"
+msgstr "Ydych wir eisiau gweithredu '%1'?"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "Gweithredu Ffeil?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "Gweithredu"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Methu canfod y Rheolydd Lawrlwytho (%1) yn eich $PATH"
+
+#: browserrun.cpp:399
+#, fuzzy, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Ceisiwch ei ail-arsefydlu.\n"
+"\n"
+" Analluogir yr integreiddio efo Konqueror!"
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "Cadw Fel"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "Derbyn"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "Gwrthod"
+
+#: partloader.cpp:184
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr ""
+
+#: partloader.cpp:201
+#, fuzzy, kde-format
+msgid "No part was found for mimeType %1"
+msgstr "Methu canfod trinydd i %1!"
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "Heb deitl"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Mae'r ddogfen \"%1\" wedi ei newid.\n"
+"Ydych eisiau cadw eich newidiadau, neu eu taflu?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "Cau Dogfen"

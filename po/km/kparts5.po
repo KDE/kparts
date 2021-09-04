@@ -1,0 +1,182 @@
+# translation of kdelibs4.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2008, 2009, 2010, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2012-06-27 10:04+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Language: km-KH\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr " ខឹម សុខែម, ម៉ន ម៉េត, សេង សុត្ថា​​, ចាន់ សម្បត្តិរតនៈ, សុខ សុភា"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"khoemsokhem@khmeros.info,​​mornmet@khmeros.info,sutha@khmeros.info,"
+"ratanak@khmeros.info,sophea@khmeros.info"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>តើអ្នក​ចង់​ស្វែងរក <b>%1</b> តាម​អ៊ីនធឺណិត​ឬ ?</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "ស្វែងរក​តាម​អ៊ីនធឺណិត"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "ស្វែង​រក"
+
+#: browseropenorsavequestion.cpp:89
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "វាយ ៖ %1"
+
+#: browseropenorsavequestion.cpp:97
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "ចងចាំ​សកម្មភាព​សម្រាប់​ឯកសារ​នៃ​ប្រភេទ​នេះ"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "បើក​ជា​មួយ %1"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "បើក​ជា​មួយ %1"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "បើក '%1'?"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "បើក​ជា​មួយ..."
+
+#: browseropenorsavequestion.cpp:247
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "បើក​ជា​មួយ"
+
+#: browseropenorsavequestion.cpp:316
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "បើក"
+
+#: browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "ឈ្មោះ ៖ %1"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "នេះជា​ឈ្មោះ​ឯកសារ​ដែលបាន​ស្នើ​ដោយ​ម៉ាស៊ីន​បម្រើ"
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "តើ​អ្នក​ពិត​ជា​ចង់​ប្រតិបត្តិ '%1' ឬ ?"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "ប្រតិបត្តិ​ឯកសារ​ឬ ?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "ប្រតិបត្តិ"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "រក​មិន​ឃើញ​កម្មវិធី​គ្រប់គ្រង​ការ​ទាញយក (%1) ក្នុង​ $PATH របស់អ្នក "
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"ព្យាយាម​ដំឡើង​​វា​ឡើង​វិញ \n"
+"\n"
+"សមាហរណកម្ម​ជាមួយ​នឹង Konqueror នឹង​មិន​ត្រូវ​អនុញ្ញាតទេ ។"
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "រក្សាទុក​ជា"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "ព្រម​ទទួល"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "បដិសេធ"
+
+#: partloader.cpp:184
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "សេវា '%1' មិនផ្ដល់​ចំណុចប្រទាក់​ '%2' ដែលមាន​ពាក្យ​គន្លឹះ '%3' ទេ"
+
+#: partloader.cpp:201
+#, fuzzy, kde-format
+#| msgid "No handler found for %1."
+msgid "No part was found for mimeType %1"
+msgstr "រក​មិន​ឃើញ​ដំណោះស្រាយ​សម្រាប់ %1 ឡើយ ។"
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "គ្មាន​ចំណងជើង"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"ឯកសារ \"%1\" ត្រូវ​បាន​កែប្រែ ។\n"
+"តើ​អ្នក​ចង់​រក្សាទុក​ការ​ផ្លាស់ប្តូរ​របស់​អ្នក ឬ​បោះ​​ពួកវា​ចោល ?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "បិទ​ឯកសារ"
