@@ -1,0 +1,11 @@
+Dependencies:
+- 'on': ['Linux', 'FreeBSD', 'Windows', 'macOS']
+  'require':
+    'frameworks/extra-cmake-modules': '@same'
+    'frameworks/kio' : '@same'
+    'frameworks/kxmlgui' : '@same'
+    'frameworks/ktextwidgets' : '@same'
+    'frameworks/knotifications' : '@same'
+
+Options:
+  test-before-installing: True
