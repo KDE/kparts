@@ -105,6 +105,95 @@ void MainWindow::createGUI(Part *part)
     d->m_activePart = part;
 }
 
+QStringList MainWindow::partActions() const
+{
+    if (!d->m_activePart) {
+        return {};
+    }
+
+    QStringList tmp_actions;
+    const QList<QAction *> lst = d->m_activePart->actionCollection()->actions();
+    for (QAction *it : lst) {
+        if (!it->associatedWidgets().isEmpty()) {
+            tmp_actions.append(it->objectName());
+        }
+    }
+    return tmp_actions;
+}
+
+bool MainWindow::activatePartAction(const QString &action)
+{
+    if (!d->m_activePart) {
+        return false;
+    }
+
+    QAction *tmp_Action = d->m_activePart->actionCollection()->action(action);
+    if (tmp_Action) {
+        tmp_Action->trigger();
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool MainWindow::disablePartAction(const QString &action)
+{
+    if (!d->m_activePart) {
+        return false;
+    }
+
+    QAction *tmp_Action = d->m_activePart->actionCollection()->action(action);
+    if (tmp_Action) {
+        tmp_Action->setEnabled(false);
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool MainWindow::enablePartAction(const QString &action)
+{
+    if (!d->m_activePart) {
+        return false;
+    }
+
+    QAction *tmp_Action = d->m_activePart->actionCollection()->action(action);
+    if (tmp_Action) {
+        tmp_Action->setEnabled(true);
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool MainWindow::partActionIsEnabled(const QString &action)
+{
+    if (!d->m_activePart) {
+        return false;
+    }
+
+    QAction *tmp_Action = d->m_activePart->actionCollection()->action(action);
+    if (tmp_Action) {
+        return tmp_Action->isEnabled();
+    } else {
+        return false;
+    }
+}
+
+QString MainWindow::partActionToolTip(const QString &action)
+{
+    if (!d->m_activePart) {
+        return QString();
+    }
+
+    QAction *tmp_Action = d->m_activePart->actionCollection()->action(action);
+    if (tmp_Action) {
+        return tmp_Action->toolTip();
+    } else {
+        return QStringLiteral("Error no such object!");
+    }
+}
+
 void MainWindow::slotSetStatusBarText(const QString &text)
 {
     statusBar()->showMessage(text);

@@ -63,6 +63,58 @@ public:
 public Q_SLOTS:
     void configureToolbars() override;
 
+    /**
+     * Return a list of actions available for the active part.
+     * @return A QStringList containing valid names actions.
+     * @since 5.87
+     */
+    QStringList partActions() const;
+
+    /**
+     * Activates the requested action.
+     * @param action The name of the action to activate.  The names of valid
+     * actions can be found by calling partActions().
+     * @return The success of the operation.
+     * @since 5.87
+     */
+    bool activatePartAction(const QString &action);
+
+    /**
+     * Disables the requested action.
+     * @param action The name of the action to disable.  The names of valid
+     * actions can be found by calling partActions().
+     * @return The success of the operation.
+     * @since 5.87
+     */
+    bool disablePartAction(const QString &action);
+
+    /**
+     * Enables the requested action.
+     * @param action The name of the action to enable.  The names of valid
+     * actions can be found by calling actions().
+     * @return The success of the operation.
+     * @since 5.87
+     */
+    bool enablePartAction(const QString &action);
+
+    /**
+     * Returns the status of the requested action.
+     * @param action The name of the action.  The names of valid
+     * actions can be found by calling actions().
+     * @returns The state of the action, true - enabled, false - disabled.
+     * @since 5.87
+     */
+    bool partActionIsEnabled(const QString &action);
+
+    /**
+     * Returns the tool tip text of the requested action.
+     * @param action The name of the action to activate.  The names of valid
+     * actions can be found by calling actions().
+     * @return A QString containing the text of the action's tool tip.
+     * @since 5.87
+     */
+    QString partActionToolTip(const QString &action);
+
 protected Q_SLOTS:
 
     /**
