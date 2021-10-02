@@ -1,0 +1,187 @@
+# translation of kdelibs4.po to marathi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2008, 2009.
+# Chetan Khona <chetan@kompkin.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2013-03-29 16:14+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"संदिप शेडमाके, \n"
+"चेतन खोना"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"sandeep.shedmake@gmail.com, \n"
+"chetan@kompkin.com"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>तुम्हाला <b>%1</b> शोधण्याकरिता महाजाळचा वापर करायचा?</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "महाजाळ वरील शोध"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "शोध (&S)"
+
+#: browseropenorsavequestion.cpp:89
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "टाइप करा: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "ह्या प्रकारच्या फाईल्स वरील क्रिया लक्षात ठेवा"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "%1 सह उघडा (&O)"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "%1 सह उघडा (&w)"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "'%1' उघडा?"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "सह उघडा (&O)..."
+
+#: browseropenorsavequestion.cpp:247
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "सह उघडा (&O)"
+
+#: browseropenorsavequestion.cpp:316
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "उघडा (&O)"
+
+#: browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "नाव: %1"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "सर्व्हरने हे फाईलनाव सुचविलेले आहे"
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "तुम्हाला नक्की '%1' कार्यान्वित करायचे?"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "फाईल चालवायची?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "कार्यान्वित करा"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "डाउनलोड व्यवस्थापक (%1) $PATH येथे आढळले नाही "
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"पुन्हा प्रतिष्ठापनचा प्रयत्न करा \n"
+"\n"
+"कॉन्कररशी एकत्र करणे अकार्यान्वित केले आहे."
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "असे साठवा"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "स्वीकार"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "नकारले"
+
+#: partloader.cpp:184
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "कळफलक '%3' सह सेवा '%1' दुवा '%2' पुरवित नाही"
+
+#: partloader.cpp:201
+#, fuzzy, kde-format
+#| msgid "No handler found for %1."
+msgid "No part was found for mimeType %1"
+msgstr "%1 करिता हॅन्डलर आढळला नाही."
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "शिर्षकहीन"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"दस्तऐवज \"%1\" संपादित केले गेले आहे.\n"
+"तुम्हाला बदल साठवायचे किंवा वगळायचे?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "दस्तऐवज बंद करा"

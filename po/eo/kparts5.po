@@ -1,0 +1,193 @@
+# translation of kdelibs4.po to Esperanto
+# Esperantaj mesaĝoj por "kdelibs"
+# Copyright (C) 1998,2002, 2003, 2004, 2005, 2007, 2008 Free Software Foundation, Inc.
+#
+# Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
+#
+# Wolfram Diestel <wolfram@steloj.de>, 1998.
+# Heiko Evermann <heiko@evermann.de>, 2002, 2003.
+# Matthias Peick <matthias@peick.de>, 2004, 2005.
+# Oliver Kellogg <okellogg@users.sourceforge.net>,2007.
+# Cindy McKee <cfmckee@gmail.com>, 2007, 2008.
+# Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Michael Moroni <michael.moroni@mailoo.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2012-05-22 12:30+0200\n"
+"Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Matthias Peick, Oliver Kellogg, Cindy McKee, Axel Rousseau, Michael Moroni"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"matthias@peick.de, okellogg@users.sourceforge.net, cfmckee@gmail.com, "
+"axel@esperanto-jeunes.org, michael.moroni@mailoo.org"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Ĉu vi volas serĉi interrete <b>%1</b>?</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "Interreta serĉo"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "&Serĉi"
+
+#: browseropenorsavequestion.cpp:89
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Speco: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Memori agon por dosieroj de ĉi tiu speco"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&Malfermi per %1"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "&Malfermi per %1"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Ĉu malfermi '%1'?"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Malfermi per..."
+
+#: browseropenorsavequestion.cpp:247
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Malfermi per"
+
+#: browseropenorsavequestion.cpp:316
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Malfermi"
+
+#: browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Nomo: %1"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Ĉi tio estas la dosiernomo sugestita de la servilo"
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Ĉu vi vere volas ruli '%1'?"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "Ĉu ruli dosieron?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "Ruli"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "La programo %1 ne troviĝis en via vojo (mediovariablo PATH)"
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Provu reinstali ĝin  \n"
+"\n"
+"La enligeco en Konkeranto neebliĝos."
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "Konservi kiel"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "Akcepti"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "Malakcepti"
+
+#: partloader.cpp:184
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "La servo '%1' ne provizas interfacon '%2' kun ŝlosilvorto '%3'"
+
+#: partloader.cpp:201
+#, fuzzy, kde-format
+#| msgid "No handler found for %1."
+msgid "No part was found for mimeType %1"
+msgstr "Ne trovis traktilon por %1."
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "Sentitola"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"La dokumento \"%1\" ŝanĝiĝis.\n"
+"Ĉu vi volas konservi viajn ŝanĝojn aŭ ignori ilin?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "Fermi dokumenton"

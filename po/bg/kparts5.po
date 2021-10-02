@@ -1,0 +1,183 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008, 2009.
+# Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010, 2011, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2013-07-23 01:52+0300\n"
+"Last-Translator: Yasen Pramatarov <yasen@lindeas.com>\n"
+"Language-Team: Bulgarian <dict@ludost.net>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Ясен Праматаров,Радостин Раднев,Златко Попов"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "yasen@lindeas.com,radnev@yahoo.com,zlatkopopov@fsa-bg.org"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Искате ли да търсите в Интернет за <b>%1</b>?</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "Търсене в Интернет"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "&Търсене"
+
+#: browseropenorsavequestion.cpp:89
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Вид: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Запомняне на действието за този вид файлове"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "О&тваряне с %1"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "От&варяне с %1"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Отваряне на \"%1\"?"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "О&тваряне с..."
+
+#: browseropenorsavequestion.cpp:247
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "О&тваряне с"
+
+#: browseropenorsavequestion.cpp:316
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Отваряне"
+
+#: browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Име: %1"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr ""
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Сигурни ли сте, че искате да изпълните \"%1\"?"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "Изпълнение на файл?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "Изпълнение"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr ""
+"Мениджърът за изтегляне (%1) не може да бъде намерен в променливата PATH "
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Опитайте се да го преинсталирате\n"
+"\n"
+"Интеграцията с Konqueror ще бъде изключена."
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "Запис като"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "Приемане"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "Отхвърляне"
+
+#: partloader.cpp:184
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "Услугата \"%1\" не предлага интерфейс \"%2\" с ключова дума \"%3\"."
+
+#: partloader.cpp:201
+#, fuzzy, kde-format
+#| msgid "No handler found for %1."
+msgid "No part was found for mimeType %1"
+msgstr "Не може да бъде намерена поддръжка за %1."
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "Неозаглавено"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Документът \"%1\" е променен.\n"
+"Искате ли промените да бъдат записани?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "Затваряне на документа"

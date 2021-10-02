@@ -1,0 +1,182 @@
+# translation of kdelibs4.po to
+# Malayalam translation of kdelibs4.
+# Copyright (C) 2007-2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdelibs package.
+# Anoop | അനൂപ് Panavalappil | പനവളപ്പില്‍ <gnuanu@gmail.com>, 2008.
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008.
+# Maxin B. John <maxinbjohn@gmail.com>, 2007.
+# Manu S Madhav | മനു എസ് മാധവ് <manusmad@gmail.com>, 2008.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2007, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2019-12-12 21:01+0000\n"
+"Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍, അനി പീറ്റര്‍, മാക്സിന്‍ ജോണ്‍, അനൂപ് പനവളപ്പില്‍, മനു എസ് മാധവ്"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>നിങ്ങള്‍ക്കു് <b>%1</b> തെരയുന്നതിനായി ഇന്റര്‍നെറ്റ് തെരയണമോ?</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "ഇന്റര്‍നെറ്റില്‍ തെരയുക"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "&തെരയുക"
+
+#: browseropenorsavequestion.cpp:89
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "തരം: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "ഈ തരം ഫയലുകള്‍ക്കുള്ള നടപടി ഓര്‍മ്മിയ്ക്കുക"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "%1 ഉപയോഗിച്ചു് &തുറക്കുക"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "%1 &ഉപയോഗിച്ചു് തുറക്കുക"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "'%1' തുറക്കണോ?"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&തുറക്കേണ്ട പ്രയോഗം..."
+
+#: browseropenorsavequestion.cpp:247
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&തുറക്കേണ്ട പ്രയോഗം"
+
+#: browseropenorsavequestion.cpp:316
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&തുറക്കുക"
+
+#: browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "പേരു്: %1"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "സെര്‍വര്‍ നിര്‍ദ്ദേശിച്ച ഫലയലിന്റെ പേരിതാണു്"
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "നിങ്ങള്‍ക്കു് '%1' പ്രവര്‍ത്തിപ്പിക്കണമോ?"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "ഫയല്‍ പ്രവര്‍ത്തിപ്പിക്കണമോ?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "പ്രവര്‍ത്തിപ്പിയ്ക്കുക"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr ""
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "പേരു് മാറ്റി സൂക്ഷിക്കുക"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "സ്വീകരിയ്ക്കുക"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "ഒഴിവാക്കുക"
+
+#: partloader.cpp:184
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "'%1' എന്ന സേവനം '%3' കീവേര്‍ഡുള്ള ഒരു '%2' സംയോജകഘടകം ലഭ്യമാക്കുന്നില്ല"
+
+#: partloader.cpp:201
+#, fuzzy, kde-format
+#| msgid "No handler found for %1."
+msgid "No part was found for mimeType %1"
+msgstr "%1 എന്നത് കൈകാര്യംചെയ്യാന്‍ ഒന്നും കണ്ടില്ല."
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "തലക്കെട്ടില്ലാത്ത"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"\"%1\" രേഖയില്‍ മാറ്റങ്ങള്‍ വരുത്തിയിരിക്കുന്നു.\n"
+"നിങ്ങള്‍ക്കവ സൂക്ഷിക്കണമോ വേണ്ടന്നു് വയ്ക്കണമോ?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "രേഖ അടയ്ക്കുക"

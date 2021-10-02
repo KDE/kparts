@@ -1,0 +1,179 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2013, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2020-05-10 18:55+0100\n"
+"Last-Translator: Giovanni Sora <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Giovanni Sora"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "g.sora@tiscali.it"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt> Tu vole cercar le internet pro <b>%1</b>?</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "Cerca de Internet"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "&Cerca"
+
+#: browseropenorsavequestion.cpp:89
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Typo: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Memora le action per files de iste typo"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "Aperi c&on %1"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Aperi &con %1"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Aperi '%1' ?"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "Aperi co&n ..."
+
+#: browseropenorsavequestion.cpp:247
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "Aperi c&on"
+
+#: browseropenorsavequestion.cpp:316
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Aperi"
+
+#: browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Nomine: %1"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Isto es le nomine de file suggestionate per le servitor"
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Tu realmente vole executar '%1'?"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "Tu executa le file?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "Executa"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr ""
+"Le gerente del discargamento (%1) poterea non trovar se in vostre $PATH"
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Essaya reinstallar lo\n"
+"\n"
+"Le integration con Konqueror essera inhabilitate"
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "Salva como"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "Da acceptation"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "Rejecta"
+
+#: partloader.cpp:184
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "Le servicio '%1' non provide un interfacie '%2' con parola clave '%3'"
+
+#: partloader.cpp:201
+#, kde-format
+msgid "No part was found for mimeType %1"
+msgstr "Nulle parte esseva trovate per Typomime %1"
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "Sin Titulo"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Le documento \"%1\" ha essite modificate.\n"
+"Tu vole salveguardar tu modificationes o abandonar los?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "Claude le documento"

@@ -1,0 +1,182 @@
+# translation of kdelibs4.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2007.
+# Ravishankar Shrivastava <raviratlami@aol.in>, 2008.
+# G Karunakar <karunakar@indlinux.org>, 2009, 2010, 2012.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2021-08-21 16:25+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 21.08.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "करुणाकर गुंटुपल्ली, राघवेंद्र कामत"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "karunakar@indlinux.org, raghu@raghukamath.com"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>क्या आप इंटरनेट की छानबीन <b>%1</b> के लिए करना चाहते हैं?</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "इंटरनेट में ढूंढें"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "ढूंढें (&S)"
+
+#: browseropenorsavequestion.cpp:89
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "प्रकार: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "इस प्रकार की फ़ाइलों के लिए क्रिया याद रखें"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "%1 के साथ खोलें (&O)"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr " %1 के साथ खोलें (&w)"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "'%1' खोलें ?"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "के साथ खोलें...(&O)"
+
+#: browseropenorsavequestion.cpp:247
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "के साथ खोलें...(&O)"
+
+#: browseropenorsavequestion.cpp:316
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "खोलें (&O)"
+
+#: browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "नामः %1"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "सर्वर द्वारा सुझाया फ़ाइल नाम यह है"
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "क्या आप '%1' को सचमुच चलाना चाहेंगे? "
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "फ़ाइल चलाएँ?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "चलाएँ"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "डाउनलोड प्रबंधक (%1) आपके पथ ($PATH ) पर ढूंढा नहीं जा सका"
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"इसे फिर से स्थापित करने की कोशिश करें \n"
+"\n"
+" के-कॉन्करर के साथ एकीकरण अक्षम रहेगा."
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "ऐसे सहेजें"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "स्वीकारें"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "नकारें"
+
+#: partloader.cpp:184
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "सेवा '%1' इंटरफ़ेस '%2' संकेतशब्द '%3' के साथ प्रदाय नहीं करता है"
+
+#: partloader.cpp:201
+#, kde-format
+msgid "No part was found for mimeType %1"
+msgstr "माइमटाइप %1 के लिए कोई भाग नहीं मिला।"
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "शीर्षकहीन"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"दस्तावेज़ \"%1\" परिवर्तित किया गया है।\n"
+"क्या आप इसे सहेजना चाहेंगे या परिवर्तनों को फेंक दें?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "दस्तावेज़ बन्द करें"

@@ -1,0 +1,193 @@
+# translation of kdelibs4.po to Kaszëbsczi
+#
+# Michôł Òstrowsczi <michol@linuxcsb.org>, 2006, 2007, 2008, 2009.
+# Mark Kwidzińsczi <mark@linuxcsb.org>, 2006, 2007, 2008, 2009.
+# Mark Kwidzińśczi <mark@linuxcsb.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2009-12-04 22:09+0100\n"
+"Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
+"Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
+"Language: csb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2)\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Michôł Òstrowsczi, Mark Kwidzińsczi"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "michol@linuxcsb.org, mark@linuxcsb.org"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Chcesz szëkac w internecé za <b>%1</b>?</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "Szëkba w internece"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "&Szëkba"
+
+#: browseropenorsavequestion.cpp:89
+#, fuzzy, kde-format
+#| msgid "Re: %1"
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Òdp.: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, fuzzy, kde-format
+#| msgid "Do &not store this time"
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Nie trzëmôj &terô"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, fuzzy, kde-format
+#| msgid "&Open with '%1'"
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "Òtemkni &w '%1'"
+
+#: browseropenorsavequestion.cpp:213
+#, fuzzy, kde-format
+#| msgid "&Open with '%1'"
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Òtemkni &w '%1'"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, fuzzy, kde-format
+#| msgid "Open '%1'"
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Òtemkni '%1'"
+
+#: browseropenorsavequestion.cpp:228
+#, fuzzy, kde-format
+#| msgid "&Open with..."
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "Òtemkni &w..."
+
+#: browseropenorsavequestion.cpp:247
+#, fuzzy, kde-format
+#| msgid "&Open with..."
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "Òtemkni &w..."
+
+#: browseropenorsavequestion.cpp:316
+#, fuzzy, kde-format
+#| msgid "&Open"
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "Ò&temkni"
+
+#: browseropenorsavequestion.cpp:340
+#, fuzzy, kde-format
+#| msgid "Name: "
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Miono:"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr ""
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Na gwës chcesz zrëszëc '%1'?"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "Zrëszëc lopk?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "Zrëszë"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Ni mòże nalezc menadżera zladënkù (%1) na stegnié."
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Spróbùjë przeinstalowac gò \n"
+"\n"
+"Integracëjô z Konquerorã je wëłączonô."
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "Zapiszë jaknò"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "Akceptujë"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "Òdrzucë"
+
+#: partloader.cpp:184
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr ""
+"Ùsłëżnota \"%1\"nie wspiérô interfejsu \"%2\" z kluczowim słowã \"%3\" "
+
+#: partloader.cpp:201
+#, fuzzy, kde-format
+#| msgid "No handler found for %1."
+msgid "No part was found for mimeType %1"
+msgstr "Felënk dopasowaniów dlô %1."
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "Bez miona"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Dokùment \"%1\" òstôł zmieniony.\n"
+"Zapisac gò czë pòrzucëc zmianë?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "Zamkni dokùment"

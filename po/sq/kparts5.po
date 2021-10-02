@@ -1,0 +1,184 @@
+# Agron Selimaj <as9902613@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kde4libs\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2012-01-19 00:20-0500\n"
+"Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
+"Language-Team: Albanian <sq@li.org>\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2010-11-24 03:19+0000\n"
+"X-Generator: Lokalize 1.2\n"
+
+#, fuzzy, kde-format
+#| msgid "without name"
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "pa emër"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: browserextension.cpp:220
+#, fuzzy, kde-format
+#| msgid "<qt>Are you sure you want to quit <b>%1</b>?</qt>"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Jeni i sigurtë që dëshironi të dilni <b>%1</b>?</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "Kërkim Interneti"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "&Kërko"
+
+#: browseropenorsavequestion.cpp:89
+#, fuzzy, kde-format
+#| msgid "Re: %1"
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Re: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr ""
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, fuzzy, kde-format
+#| msgid "Open '%1'"
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "Hape '%1'"
+
+#: browseropenorsavequestion.cpp:213
+#, fuzzy, kde-format
+#| msgid "Open '%1'"
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Hape '%1'"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, fuzzy, kde-format
+#| msgid "Open '%1'"
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Hape '%1'"
+
+#: browseropenorsavequestion.cpp:228
+#, fuzzy, kde-format
+#| msgid "&Open..."
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Hape..."
+
+#: browseropenorsavequestion.cpp:247
+#, fuzzy, kde-format
+#| msgid "Open Script"
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "Hap Skriptin"
+
+#: browseropenorsavequestion.cpp:316
+#, fuzzy, kde-format
+#| msgid "Open"
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "Hape"
+
+#: browseropenorsavequestion.cpp:340
+#, fuzzy, kde-format
+#| msgid "Name: "
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Emri: "
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr ""
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr ""
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "Ta Ekzekutojmë Skedarin?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "Ekzekuto"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Menaxhuesi i Shkarkimeve (%1) nuk mund të gjendet në $PATH "
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "Ruaje Si"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "Prano"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "Refuzo"
+
+#: partloader.cpp:184
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr ""
+
+#: partloader.cpp:201
+#, fuzzy, kde-format
+#| msgid "No matches found for '<b>%1</b>'."
+msgid "No part was found for mimeType %1"
+msgstr "Nuk u gjetën përputhje për '<b>%1</b>'."
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "Pa titull"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Dokumenti \"%1\" është modifikuar.\n"
+"Dëshironi t'i regjistroni ndryshimet apo t'i zhbëni ato?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "Mbylle Dokumentin"

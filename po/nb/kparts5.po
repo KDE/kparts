@@ -1,0 +1,187 @@
+# Translation of kparts5 to Norwegian Bokmål
+#
+# Knut Yrvin <knut.yrvin@gmail.com>, 2002, 2003, 2004, 2005.
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2002, 2003, 2004, 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+# Eskild Hustvedt <zerodogg@skolelinux.no>, 2004, 2005.
+# Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2004, 2005.
+# Axel Bojer <fri_programvare@bojer.no>, 2005, 2006.
+# Nils Kristian Tomren <slx@nilsk.net>, 2005, 2007.
+# Øyvind A. Holm <sunny@sunbase.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2014-11-05 13:40+0100\n"
+"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Knut Yrvin,Axel Bojer,Bjørn Steensrud"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"knut.yrvin@gmail.com,fri_programvare@bojer.no,bjornst@skogkatt.homelinux.org"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Vil du søke på Internett etter <b>%1</b>?</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "Internettsøk"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "&Søk"
+
+#: browseropenorsavequestion.cpp:89
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Type: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Husk handling for filer av denne typen"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&Åpne med %1"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Åpne &med %1"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Åpne «%1»?"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Åpne med …"
+
+#: browseropenorsavequestion.cpp:247
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Åpne med"
+
+#: browseropenorsavequestion.cpp:316
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Åpne"
+
+#: browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Navn: %1"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "Dette er filnavnet som tjeneren foreslår"
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Ønsker du å kjøre '%1'?"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "Kjør fila?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "Kjør"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Fant ikke nedlastingsbehandleren (%1) i søkestien "
+
+#: browserrun.cpp:399
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Forsøk å installere programmet på nytt \n"
+"\n"
+"Tilknytningen til Konqueror blir slått av."
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "Lagre som"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "Godta"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "Avvis"
+
+#: partloader.cpp:184
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr ""
+
+#: partloader.cpp:201
+#, kde-format
+msgid "No part was found for mimeType %1"
+msgstr ""
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "Uten tittel"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Dokumentet «%1» er blitt endret.\n"
+"Vil du lagre endringene eller forkaste dem?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "Lukk dokumentet"

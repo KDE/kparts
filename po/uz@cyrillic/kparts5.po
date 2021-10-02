@@ -1,0 +1,182 @@
+# translation of kdelibs4.po to Uzbek
+# translation of kdelibs4.po to
+# Copyright (C) 2003, 2004, 2005, 2006, 2008 Free Software Foundation, Inc.
+# Mashrab Kuvatov <kmashrab@uni-bremen.de>, 2003, 2004, 2005, 2006, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2009-10-17 00:34+0200\n"
+"Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
+"Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
+"Language: uz@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Машраб Қуватов"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kmashrab@uni-bremen.de"
+
+#: browserextension.cpp:220
+#, fuzzy, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Интернетдан <b>%1</b>'ни қидиришни истайсизми?"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "Интернетдан қидириш"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "Қ&идириш"
+
+#: browseropenorsavequestion.cpp:89
+#, fuzzy, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Қайтариш: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, fuzzy, kde-format
+#| msgid "Do not show this message again"
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Бу хабар бошқа кўрсатилмасин"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "%1 билан &очиш"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "%1 билан &очиш"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, fuzzy, kde-format
+#| msgid "Open '%1'"
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "'%1'ни очиш"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "...билан &очиш"
+
+#: browseropenorsavequestion.cpp:247
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "...билан &очиш"
+
+#: browseropenorsavequestion.cpp:316
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Очиш"
+
+#: browseropenorsavequestion.cpp:340
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Номи: %1"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr ""
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "Ростдан '%1'ни ишга туширишни истайсизми?"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "Файлни ишга тушириш"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "Ишга тушириш"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr ""
+"Ёзиб олиш дастури (%1) сизнинг $PATH муҳит ўзгарувчингизда кўрсатилган "
+"директорияларда топилмади."
+
+#: browserrun.cpp:399
+#, fuzzy, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Уни қайтадан ўрнатиб кўринг.\n"
+"\n"
+"Konqueror билан интеграция ўчирилади!"
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "Сақлаш"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "Қабул қилиш"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "Рад этиш"
+
+#: partloader.cpp:184
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr ""
+
+#: partloader.cpp:201
+#, fuzzy, kde-format
+msgid "No part was found for mimeType %1"
+msgstr "%1 учун дастур топилмади."
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "Сарлавҳасиз"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"'%1' ҳужжатига ўзгариш киритилди.\n"
+"Уни сақлашни истайсизми?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "Ҳужжатни ёпиш"

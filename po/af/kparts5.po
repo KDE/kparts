@@ -1,0 +1,185 @@
+# UTF-8 test:äëïöü
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4 stable\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-14 00:14+0000\n"
+"PO-Revision-Date: 2006-01-12 16:33+0200\n"
+"Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
+"Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Frikkie Thirion,Juanita Franz "
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "frix@expertron.co.za,juanita.franz@vr-web.de "
+
+#: browserextension.cpp:220
+#, fuzzy, kde-format
+#| msgid "<qt>Do you want to search the Internet for <b>%1</b>?"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Wil jy op die Internet soek vir <b>%1</b>?"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "Internet Soektog"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "Soek"
+
+#: browseropenorsavequestion.cpp:89
+#, fuzzy, kde-format
+#| msgid "Redo: %1"
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "Herstel herroep: %1"
+
+#: browseropenorsavequestion.cpp:97
+#, fuzzy, kde-format
+#| msgid "Do not show this message again"
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "Moet nie weer hierdie boodskap vertoon nie"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:238
+#, fuzzy, kde-format
+#| msgid "&Open with '%1'"
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "Maak oop met '%1'"
+
+#: browseropenorsavequestion.cpp:213
+#, fuzzy, kde-format
+#| msgid "&Open with '%1'"
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "Maak oop met '%1'"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:319
+#, fuzzy, kde-format
+#| msgid "Open '%1'"
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "Maak '%1' oop"
+
+#: browseropenorsavequestion.cpp:228
+#, fuzzy, kde-format
+#| msgid "&Open With..."
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "Maak oop met..."
+
+#: browseropenorsavequestion.cpp:247
+#, fuzzy, kde-format
+#| msgid "&Open With..."
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "Maak oop met..."
+
+#: browseropenorsavequestion.cpp:316
+#, fuzzy, kde-format
+#| msgid "&Open"
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "Maak oop"
+
+#: browseropenorsavequestion.cpp:340
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "Naam:"
+
+#: browseropenorsavequestion.cpp:342
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr ""
+
+#: browserrun.cpp:334
+#, fuzzy, kde-format
+#| msgid "Do you really want to execute '%1'? "
+msgid "Do you really want to execute '%1'?"
+msgstr "Doen jy rerig wil hê na uitvoer '%1'? "
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute File?"
+msgstr "Voer Lêer uit?"
+
+#: browserrun.cpp:336
+#, kde-format
+msgid "Execute"
+msgstr "Voer uit"
+
+#: browserrun.cpp:398
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "Die Aflaai Bestuurder (%1) kon nie wees gevind in jou $Gids soeklys "
+
+#: browserrun.cpp:399
+#, fuzzy, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"Probeer na herinstalleer dit  \n"
+"\n"
+"Die integrasie met Konqueror sal wees gestremde!"
+
+#: browserrun.cpp:426
+#, kde-format
+msgid "Save As"
+msgstr "Stoor As"
+
+#: htmlsettingsinterface.cpp:21
+#, kde-format
+msgid "Accept"
+msgstr "Aanvaar"
+
+#: htmlsettingsinterface.cpp:23
+#, kde-format
+msgid "Reject"
+msgstr "Verwerp"
+
+#: partloader.cpp:184
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr ""
+
+#: partloader.cpp:201
+#, fuzzy, kde-format
+msgid "No part was found for mimeType %1"
+msgstr "Geen handteerder gevind vir %1!"
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "Onbenoem"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"Die dokument \"%1\" het verander.\n"
+"Wil jy jou veranderinge stoor of weggooi?"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "Maak Dokument toe"
