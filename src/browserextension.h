@@ -414,16 +414,26 @@ Q_SIGNALS:
      * about those URLs, including size, permissions etc.)
      */
     void selectionInfo(const KFileItemList &items);
+
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 88)
     /**
      * Inform the hosting application about the current selection.
      * Used when some text is selected.
+     * @deprecated Since 5.88, deprecated for lack of usage
      */
+    KPARTS_DEPRECATED_VERSION(5, 88, "Deprecated for lack of usage")
     void selectionInfo(const QString &text);
+#endif
+
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 88)
     /**
      * Inform the hosting application about the current selection.
      * Used when a set of URLs is selected.
+     * @deprecated Since 5.88, use selectionInfo(KFileItemList) instead
      */
+    KPARTS_DEPRECATED_VERSION(5, 88, "Use selectionInfo(KFileItemList) instead")
     void selectionInfo(const QList<QUrl> &urls);
+#endif
 
     /**
      * Inform the hosting application that the user moved the mouse over an item.
