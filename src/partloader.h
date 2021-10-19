@@ -8,6 +8,8 @@
 #ifndef KPARTS_PARTLOADER_H
 #define KPARTS_PARTLOADER_H
 
+#include <KLocalizedString>
+#include <KPluginFactory>
 #include <KPluginMetaData>
 #include <QObject>
 #include <QVector>
@@ -83,12 +85,25 @@ KPARTS_EXPORT QVector<KPluginMetaData> partsForMimeType(const QString &mimeType)
 template<class T>
 static T *createPartInstanceForMimeType(const QString &mimeType, QWidget *parentWidget = nullptr, QObject *parent = nullptr, QString *error = nullptr)
 {
-    QObject *o = Private::createPartInstanceForMimeTypeHelper(T::staticMetaObject.className(), mimeType, parentWidget, parent, error);
-    T *part = qobject_cast<T *>(o);
-    if (!part) {
-        delete o;
+    const QVector<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
+    for (const auto &plugin : plugins) {
+        auto factory = KPluginFactory::loadFactory(plugin);
+        if (factory) {
+            if (T *part = factory.plugin->create<T>(parentWidget, parent, QString(), QVariantList())) {
+                    return part;
+            } else if (error) {
+                *error = i18n("The plugin '%1' does not provide an interface '%2'", //
+                              plugin.fileName(),
+                              QString::fromLatin1(T::staticMetaObject.className()));
+            }
+        } else if (error) {
+            *error = factory.errorString;
+        }
     }
-    return part;
+    if (error && error->isEmpty()) {
+        *error = i18n("No part was found for mimeType %1", mimeType);
+    }
+    return nullptr;
 }
 
 } // namespace
