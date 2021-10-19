@@ -152,7 +152,7 @@ QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mim
     return plugins;
 }
 
-// KF6 TODO: make create(const char* iface...) public in KPluginFactory, remove this hack
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 88)
 class KPluginFactoryHack : public KPluginFactory
 {
 public:
@@ -168,6 +168,9 @@ QObject *KParts::PartLoader::Private::createPartInstanceForMimeTypeHelper(const 
                                                                           QObject *parent,
                                                                           QString *error)
 {
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     const QVector<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
     for (const KPluginMetaData &plugin : plugins) {
         KPluginLoader pluginLoader(plugin.fileName());
@@ -197,4 +200,6 @@ QObject *KParts::PartLoader::Private::createPartInstanceForMimeTypeHelper(const 
         *error = i18n("No part was found for mimeType %1", mimeType);
     }
     return nullptr;
+    QT_WARNING_POP
 }
+#endif

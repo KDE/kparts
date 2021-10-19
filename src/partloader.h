@@ -26,6 +26,7 @@ namespace KParts
  */
 namespace PartLoader
 {
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 88)
 namespace Private
 {
 /**
@@ -34,6 +35,7 @@ namespace Private
  */
 KPARTS_EXPORT QObject *createPartInstanceForMimeTypeHelper(const char *iface, const QString &mimeType, QWidget *parentWidget, QObject *parent, QString *error);
 }
+#endif
 
 /**
  * Locate all available KParts for a mimetype.
@@ -90,11 +92,11 @@ static T *createPartInstanceForMimeType(const QString &mimeType, QWidget *parent
         auto factory = KPluginFactory::loadFactory(plugin);
         if (factory) {
             if (T *part = factory.plugin->create<T>(parentWidget, parent, QString(), QVariantList())) {
-                    return part;
+                return part;
             } else if (error) {
                 *error = i18n("The plugin '%1' does not provide an interface '%2'", //
                               plugin.fileName(),
-                              QString::fromLatin1(T::staticMetaObject.className()));
+                              QLatin1String(T::staticMetaObject.className()));
             }
         } else if (error) {
             *error = factory.errorString;
