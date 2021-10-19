@@ -171,10 +171,6 @@ QObject *KParts::PartLoader::Private::createPartInstanceForMimeTypeHelper(const 
     const QVector<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
     for (const KPluginMetaData &plugin : plugins) {
         KPluginLoader pluginLoader(plugin.fileName());
-        // ## How can the keyword feature work with JSON metadata?
-        // ## Several desktop files could point to the same .so file, but a .so file only has one metadata builtin.
-        // ## Unlikely to be a problem here (multiple KParts in the same .so file?), but to be solved for KCMs with an array of "KPlugin" in the JSON file...
-        // ## It would then be used by KPluginLoader::findPlugins, and we'd use plugin.keyword() here.
         const QString pluginKeyword;
         KPluginFactory *factory = pluginLoader.factory();
         if (factory) {
