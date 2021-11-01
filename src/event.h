@@ -28,7 +28,7 @@ class KPARTS_EXPORT Event : public QEvent
 {
 public:
     Event(const char *eventName);
-    virtual ~Event();
+    ~Event() override;
     virtual const char *eventName() const;
 
     static bool test(const QEvent *event);

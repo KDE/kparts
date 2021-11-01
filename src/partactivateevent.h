@@ -29,7 +29,7 @@ class KPARTS_EXPORT PartActivateEvent : public Event
 {
 public:
     PartActivateEvent(bool activated, Part *part, QWidget *widget);
-    virtual ~PartActivateEvent();
+    ~PartActivateEvent() override;
     bool activated() const;
 
     Part *part() const;

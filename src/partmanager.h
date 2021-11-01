@@ -68,7 +68,7 @@ public:
      * @param parent   The parent QObject.
      */
     PartManager(QWidget *topLevel, QObject *parent);
-    virtual ~PartManager();
+    ~PartManager() override;
 
     /**
      * Sets the selection policy of the partmanager.

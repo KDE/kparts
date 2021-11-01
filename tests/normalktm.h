@@ -19,7 +19,7 @@ class TestMainWindow : public KXmlGuiWindow
     Q_OBJECT
 public:
     TestMainWindow();
-    virtual ~TestMainWindow();
+    ~TestMainWindow() override;
 
 protected Q_SLOTS:
     void slotFileOpen();

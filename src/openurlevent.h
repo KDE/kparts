@@ -36,7 +36,7 @@ public:
                  const QUrl &url,
                  const OpenUrlArguments &args = OpenUrlArguments(),
                  const BrowserArguments &browserArgs = BrowserArguments());
-    virtual ~OpenUrlEvent();
+    ~OpenUrlEvent() override;
 
     ReadOnlyPart *part() const;
     QUrl url() const;

@@ -45,7 +45,7 @@ class KPARTS_EXPORT BrowserInterface : public QObject
     Q_OBJECT
 public:
     explicit BrowserInterface(QObject *parent);
-    virtual ~BrowserInterface();
+    ~BrowserInterface() override;
 
     /**
      * Perform a dynamic invocation of a method in the BrowserInterface

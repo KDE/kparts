@@ -21,7 +21,7 @@ class Part1 : public KParts::ReadOnlyPart
     Q_OBJECT
 public:
     Part1(QObject *parent, QWidget *parentWidget);
-    virtual ~Part1();
+    ~Part1() override;
 
 public Q_SLOTS:
     void slotBlah();
@@ -39,7 +39,7 @@ class Part2 : public KParts::Part
     Q_OBJECT
 public:
     Part2(QObject *parent, QWidget *parentWidget);
-    virtual ~Part2();
+    ~Part2() override;
 
 protected:
     // This is not mandatory - only if you care about setting the

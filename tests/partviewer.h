@@ -18,7 +18,7 @@ class PartViewer : public KParts::MainWindow
     Q_OBJECT
 public:
     PartViewer();
-    virtual ~PartViewer();
+    ~PartViewer() override;
 
     void openUrl(const QUrl &url);
 

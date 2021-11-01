@@ -23,7 +23,7 @@ class TestMainWindow : public KParts::MainWindow
     Q_OBJECT
 public:
     TestMainWindow();
-    virtual ~TestMainWindow();
+    ~TestMainWindow() override;
 
 protected Q_SLOTS:
     void slotFileOpen();

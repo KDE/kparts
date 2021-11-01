@@ -59,7 +59,7 @@ public:
     explicit FileInfoExtension(KParts::ReadOnlyPart *parent);
 
     /*! Destructor */
-    virtual ~FileInfoExtension();
+    ~FileInfoExtension() override;
 
     /**
      * Queries @p obj for a child object which inherits from this class.

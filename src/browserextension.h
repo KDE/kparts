@@ -99,7 +99,7 @@ public:
      */
     explicit BrowserExtension(KParts::ReadOnlyPart *parent);
 
-    virtual ~BrowserExtension();
+    ~BrowserExtension() override;
 
     /**
      * Set of flags passed via the popupMenu signal, to ask for some items in the popup menu.

@@ -57,7 +57,7 @@ public:
     ListingNotificationExtension(KParts::ReadOnlyPart *parent);
 
     /*! Destructor */
-    virtual ~ListingNotificationExtension();
+    ~ListingNotificationExtension() override;
 
     /**
      * Returns the OR'ed value of the notification types supported by the part

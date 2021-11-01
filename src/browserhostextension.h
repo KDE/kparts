@@ -43,7 +43,7 @@ public:
     KPARTS_DEPRECATED_VERSION(5, 78, "Deprecated for lack of usage")
     BrowserHostExtension(KParts::ReadOnlyPart *parent);
 
-    virtual ~BrowserHostExtension();
+    ~BrowserHostExtension() override;
 
     /**
      * Returns a list of the names of all hosted child objects.

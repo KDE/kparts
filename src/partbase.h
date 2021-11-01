@@ -48,7 +48,7 @@ public:
     /**
      *  Destructor.
      */
-    virtual ~PartBase();
+    ~PartBase() override;
 
     /**
      *  Internal method. Called by KParts::Part to specify the parent object for plugin objects.

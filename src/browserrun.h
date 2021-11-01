@@ -54,7 +54,7 @@ public:
                bool trustedSource,
                bool hideErrorDialog = false);
 
-    virtual ~BrowserRun();
+    ~BrowserRun() override;
 
     KParts::OpenUrlArguments &arguments();
     KParts::BrowserArguments &browserArguments();

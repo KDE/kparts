@@ -91,7 +91,7 @@ protected:
     /**
      * Destroys the provider.
      */
-    virtual ~HistoryProvider();
+    ~HistoryProvider() override;
 
 private:
     HistoryProviderPrivate *const d;

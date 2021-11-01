@@ -24,7 +24,7 @@ class NotepadPart : public KParts::ReadWritePart
     Q_OBJECT
 public:
     NotepadPart(QWidget *parentWidget, QObject *parent, const KPluginMetaData &metaData, const QVariantList &args = QVariantList());
-    virtual ~NotepadPart();
+    ~NotepadPart() override;
 
     void setReadWrite(bool rw) override;
 

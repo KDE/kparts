@@ -14,7 +14,7 @@ class PluginSpellCheck : public KParts::Plugin
     Q_OBJECT
 public:
     PluginSpellCheck(QObject *parent = nullptr, const QVariantList & = QVariantList());
-    virtual ~PluginSpellCheck();
+    ~PluginSpellCheck() override;
 
 public Q_SLOTS:
     void slotSpellCheck();

@@ -27,7 +27,7 @@ class KPARTS_EXPORT GUIActivateEvent : public Event
 {
 public:
     GUIActivateEvent(bool activated);
-    virtual ~GUIActivateEvent();
+    ~GUIActivateEvent() override;
 
     bool activated() const;
 

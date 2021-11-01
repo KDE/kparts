@@ -35,7 +35,7 @@ class KPARTS_EXPORT TextExtension : public QObject
     Q_OBJECT
 public:
     explicit TextExtension(KParts::ReadOnlyPart *parent);
-    ~TextExtension();
+    ~TextExtension() override;
 
     /**
      * Queries @p obj for a child object which inherits from this

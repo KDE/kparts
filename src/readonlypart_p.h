@@ -41,7 +41,7 @@ public:
         m_closeUrlFromOpenUrl = false;
     }
 
-    ~ReadOnlyPartPrivate()
+    ~ReadOnlyPartPrivate() override
     {
     }
 

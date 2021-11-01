@@ -41,7 +41,7 @@ public:
     {
     }
 
-    ~PartPrivate()
+    ~PartPrivate() override
     {
     }
 

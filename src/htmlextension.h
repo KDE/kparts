@@ -35,7 +35,7 @@ class KPARTS_EXPORT HtmlExtension : public QObject
     Q_OBJECT
 public:
     explicit HtmlExtension(KParts::ReadOnlyPart *parent);
-    ~HtmlExtension();
+    ~HtmlExtension() override;
 
     /**
      * Queries @p obj for a child object which inherits from this

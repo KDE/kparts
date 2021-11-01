@@ -24,7 +24,7 @@ public:
         , m_browserArgs(browserArgs)
     {
     }
-    ~OpenUrlEventPrivate()
+    ~OpenUrlEventPrivate() override
     {
     }
     static const char s_strOpenUrlEvent[];

@@ -136,7 +136,7 @@ protected:
     ScriptableExtension(QObject *parent);
 
 public:
-    virtual ~ScriptableExtension();
+    ~ScriptableExtension() override;
 
     /**
      * Queries @p obj for a child object which inherits from this

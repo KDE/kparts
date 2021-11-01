@@ -25,7 +25,7 @@ class KPARTS_EXPORT PartSelectEvent : public Event
 {
 public:
     PartSelectEvent(bool selected, Part *part, QWidget *widget);
-    virtual ~PartSelectEvent();
+    ~PartSelectEvent() override;
     bool selected() const;
 
     Part *part() const;

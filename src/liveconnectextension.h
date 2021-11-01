@@ -50,7 +50,7 @@ public:
 
     LiveConnectExtension(KParts::ReadOnlyPart *parent);
 
-    virtual ~LiveConnectExtension();
+    ~LiveConnectExtension() override;
     /**
      * get a field value from objid, return true on success
      */
