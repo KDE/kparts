@@ -10,8 +10,6 @@
 #include "kparts_logging.h"
 
 #include <KConfigGroup>
-#include <KLocalizedString>
-#include <KPluginFactory>
 #include <KPluginLoader>
 #include <KService>
 #include <KSharedConfig>
