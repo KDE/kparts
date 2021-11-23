@@ -7,20 +7,20 @@
 
 #include "htmlsettingsinterface.h"
 
-#include <KLocalizedString>
+#include <KLazyLocalizedString>
 
 using namespace KParts;
 
 const char *HtmlSettingsInterface::javascriptAdviceToText(HtmlSettingsInterface::JavaScriptAdvice advice)
 {
-    // NOTE: The use of I18N_NOOP below is intended to allow GUI code to call
+    // NOTE: The use of kli18n below is intended to allow GUI code to call
     // i18n on the returned text without affecting use of untranslated text in
     // config files.
     switch (advice) {
     case JavaScriptAccept:
-        return I18N_NOOP("Accept");
+        return kli18n("Accept").untranslatedText();
     case JavaScriptReject:
-        return I18N_NOOP("Reject");
+        return kli18n("Reject").untranslatedText();
     default:
         break;
     }
