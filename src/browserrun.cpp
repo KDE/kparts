@@ -315,7 +315,6 @@ BrowserRun::NonEmbeddableResult BrowserRun::handleNonEmbeddable(const QString &_
         return Handled;
     }
 
-    KIO::Scheduler::publishSlaveOnHold(); // publish any slave on hold so it can be reused.
     return NotHandled;
 }
 
@@ -408,8 +407,6 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
                 }
 
                 // qDebug() << "Calling command" << downloadManager << args;
-                // slave is already on hold (slotBrowserMimetype())
-                KIO::Scheduler::publishSlaveOnHold();
 
                 auto *job = new KIO::CommandLauncherJob(downloadManager, args);
                 job->setExecutable(downloadManager);
