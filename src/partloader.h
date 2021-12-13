@@ -43,7 +43,7 @@ KPARTS_EXPORT QObject *createPartInstanceForMimeTypeHelper(const char *iface, co
  * This takes care both of the builtin preference (set by developers)
  * and of user preference (stored in mimeapps.list).
  *
- * This uses KPluginLoader::findPlugins, i.e. it requires the parts to
+ * This uses KPluginMetaData::findPlugins, i.e. it requires the parts to
  * provide the metadata as JSON embedded into the plugin.
  * Until KF6, however, it also supports .desktop files as a fallback solution.
  *
