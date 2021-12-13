@@ -8,6 +8,8 @@
 
 #include "plugin.h"
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
+
 #include "part.h"
 
 #include <KConfigGroup>
@@ -300,3 +302,4 @@ void Plugin::loadPlugins(QObject *parent,
         }
     }
 }
+#endif

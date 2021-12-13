@@ -38,8 +38,10 @@ NotepadPart::NotepadPart(QWidget *parentWidget, QObject *parent, const KPluginMe
 
     setReadWrite(true);
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
     // Always write this as the last line of your constructor
     loadPlugins();
+#endif
 }
 
 NotepadPart::~NotepadPart()

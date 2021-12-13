@@ -100,6 +100,53 @@ protected:
     virtual void setComponentData(const KAboutData &pluginData, bool loadPlugins);
 #endif
 
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 77)
+    /**
+     * Load the Plugins honoring the PluginLoadingMode.
+     *
+     * If you call this method in an already constructed GUI (like when the user
+     * has changed which plugins are enabled) you need to add the new plugins to
+     * the KXMLGUIFactory:
+     * \code
+     * if( factory() )
+     * {
+     *   const QList<KParts::Plugin *> plugins = KParts::Plugin::pluginObjects(this);
+     *   for (auto *plugin : plugins) {
+     *      factory()->addClient(plugin);
+     *   }
+     * }
+     * \endcode
+     * @deprecated Since 5.77, use loadPlugins(QObject *parent, KXMLGUIClient *, const QString &) instead.
+     */
+    KPARTS_DEPRECATED_VERSION(5, 77, "Use loadPlugins(QObject *parent, KXMLGUIClient *, const QString &) instead")
+    void loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient, const KAboutData &aboutData);
+#endif
+
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 90)
+    /**
+     * Load the Plugins honoring the PluginLoadingMode.
+     *
+     * If you call this method in an already constructed GUI (like when the user
+     * has changed which plugins are enabled) you need to add the new plugins to
+     * the KXMLGUIFactory:
+     * \code
+     * if( factory() )
+     * {
+     *   const QList<KParts::Plugin *> plugins = KParts::Plugin::pluginObjects(this);
+     *   for (auto *plugin : plugins) {
+     *      factory()->addClient(plugin);
+     *   }
+     * }
+     * \endcode
+     *
+     * @since 5.77
+     * @deprecated Since 5.90, the concept of KPart plugins is deprecated, see docs of @ref KParts::Plugin class
+     */
+    KPARTS_DEPRECATED_VERSION(5, 90, "The concept of KPart plugins is deprecated, see docs of KParts::Plugin class")
+    void loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient, const QString &parentInstanceName);
+#endif
+
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 90)
     /**
      * We have three different policies, whether to load new plugins or not. The
      * value in the KConfig object of the KAboutData object always overrides
@@ -126,56 +173,17 @@ protected:
         LoadPluginsIfEnabled = 2,
     };
 
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 77)
-    /**
-     * Load the Plugins honoring the PluginLoadingMode.
-     *
-     * If you call this method in an already constructed GUI (like when the user
-     * has changed which plugins are enabled) you need to add the new plugins to
-     * the KXMLGUIFactory:
-     * \code
-     * if( factory() )
-     * {
-     *   const QList<KParts::Plugin *> plugins = KParts::Plugin::pluginObjects(this);
-     *   for (auto *plugin : plugins) {
-     *      factory()->addClient(plugin);
-     *   }
-     * }
-     * \endcode
-     * @deprecated Since 5.77, use loadPlugins(QObject *parent, KXMLGUIClient *, const QString &) instead.
-     */
-    KPARTS_DEPRECATED_VERSION(5, 77, "Use loadPlugins(QObject *parent, KXMLGUIClient *, const QString &) instead")
-    void loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient, const KAboutData &aboutData);
-#endif
-
-    /**
-     * Load the Plugins honoring the PluginLoadingMode.
-     *
-     * If you call this method in an already constructed GUI (like when the user
-     * has changed which plugins are enabled) you need to add the new plugins to
-     * the KXMLGUIFactory:
-     * \code
-     * if( factory() )
-     * {
-     *   const QList<KParts::Plugin *> plugins = KParts::Plugin::pluginObjects(this);
-     *   for (auto *plugin : plugins) {
-     *      factory()->addClient(plugin);
-     *   }
-     * }
-     * \endcode
-     *
-     * @since 5.77
-     */
-    void loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient, const QString &parentInstanceName);
-
     /**
      * Set how plugins should be loaded
      * @param loadingMode see PluginLoadingMode
      *
      * For a KParts::Part: call this before setComponentData.
      * For a KParts::MainWindow: call this before createGUI.
+     * @deprecated Since 5.90, the concept of KPart plugins is deprecated, see docs of @ref KParts::Plugin class
      */
+    KPARTS_DEPRECATED_VERSION(5, 90, "The concept of KPart plugins is deprecated, see docs of KParts::Plugin class")
     void setPluginLoadingMode(PluginLoadingMode loadingMode);
+#endif
 
     /**
      * If you change the binary interface offered by your part, you can avoid crashes

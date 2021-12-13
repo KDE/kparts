@@ -24,7 +24,6 @@ public:
 
     PartBasePrivate(PartBase *qq)
         : q_ptr(qq)
-        , m_pluginLoadingMode(PartBase::LoadPlugins)
         , m_pluginInterfaceVersion(0)
         , m_obj(nullptr)
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
@@ -51,7 +50,9 @@ public:
 #endif
 
     PartBase *q_ptr;
-    PartBase::PluginLoadingMode m_pluginLoadingMode;
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
+    PartBase::PluginLoadingMode m_pluginLoadingMode = PartBase::LoadPlugins;
+#endif
     int m_pluginInterfaceVersion;
     QObject *m_obj;
 

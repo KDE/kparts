@@ -58,7 +58,9 @@ Part1::Part1(QObject *parent, QWidget *parentWidget)
     actionCollection()->addAction(QStringLiteral("p1_foo_bar"), mailForward);
     menu->addAction(mailForward);
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
     loadPlugins();
+#endif
 }
 
 Part1::~Part1()

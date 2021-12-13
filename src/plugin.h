@@ -10,6 +10,8 @@
 
 #include <kparts/kparts_export.h>
 
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 90)
+
 #include <KXMLGUIClient>
 #include <QDomElement>
 #include <QObject>
@@ -42,6 +44,9 @@ class PluginPrivate;
  *
  * You should also install a "plugin info" .desktop file with the same name.
  * \see KPluginInfo
+ * @deprecated Since 5.90, the concept of KPart plugins is deprecated.
+ * In the Konqueror KF5Konq lib is a reimplementation of this class, which is not deprecated.
+ * Consider porting your usage to this class or import the plugin in Konqueror.
  */
 class KPARTS_EXPORT Plugin : public QObject, virtual public KXMLGUIClient
 {
@@ -57,6 +62,7 @@ public:
     /**
      * Construct a new KParts plugin.
      */
+    KPARTS_DEPRECATED_VERSION(5, 90, "See class API docs")
     explicit Plugin(QObject *parent = nullptr);
     /**
      * Destructor.
@@ -80,6 +86,7 @@ public:
      * It is recommended to use the last loadPlugins method instead,
      * to support enabling and disabling of plugins.
      */
+    KPARTS_DEPRECATED_VERSION(5, 90, "See class API docs")
     static void loadPlugins(QObject *parent, const QString &instance);
 
     /**
@@ -89,6 +96,7 @@ public:
      * It is recommended to use the last loadPlugins method instead,
      * to support enabling and disabling of plugins.
      */
+    KPARTS_DEPRECATED_VERSION(5, 90, "See class API docs")
     static void loadPlugins(QObject *parent, const QList<PluginInfo> &pluginInfos);
 
     /**
@@ -98,6 +106,7 @@ public:
      * It is recommended to use the last loadPlugins method instead,
      * to support enabling and disabling of plugins.
      */
+    KPARTS_DEPRECATED_VERSION(5, 90, "See class API docs")
     static void loadPlugins(QObject *parent, const QList<PluginInfo> &pluginInfos, const QString &instance);
 
     /**
@@ -137,6 +146,7 @@ public:
      * }
      * \endcode
      */
+    KPARTS_DEPRECATED_VERSION(5, 90, "See class API docs")
     static void loadPlugins(QObject *parent,
                             KXMLGUIClient *parentGUIClient,
                             const QString &instance,
@@ -148,6 +158,7 @@ public:
      * functions basically iterates over the children of the given object
      * and returns those that inherit from KParts::Plugin.
      **/
+    KPARTS_DEPRECATED_VERSION(5, 90, "See class API docs")
     static QList<Plugin *> pluginObjects(QObject *parent);
 
 protected:
@@ -170,12 +181,14 @@ private:
      *
      * @return A list of QDomDocument s, containing the parsed xml documents returned by plugins.
      */
+    KPARTS_DEPRECATED_VERSION(5, 90, "See class API docs")
     static QList<Plugin::PluginInfo> pluginInfos(const QString &instance);
 
     /**
      * @internal
      * @return The plugin created from the library @p libname
      */
+    KPARTS_DEPRECATED_VERSION(5, 90, "See class API docs")
     static Plugin *loadPlugin(QObject *parent, const QString &libname, const QString &keyword = QString());
 
 private:
@@ -185,4 +198,5 @@ private:
 
 }
 
+#endif
 #endif

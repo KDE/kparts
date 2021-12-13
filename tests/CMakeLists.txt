@@ -19,9 +19,12 @@ target_link_libraries(normalktmtest parts_test_interface)
 
 ########### next target ###############
 
-add_library(spellcheckplugin MODULE plugin_spellcheck.cpp)
-target_link_libraries(spellcheckplugin parts_test_interface )
-install(TARGETS spellcheckplugin  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+if(NOT EXCLUDE_DEPRECATED_BEFORE_AND_AT STREQUAL "CURRENT" AND
+   EXCLUDE_DEPRECATED_BEFORE_AND_AT VERSION_LESS 5.90.0)
+    add_library(spellcheckplugin MODULE plugin_spellcheck.cpp)
+    target_link_libraries(spellcheckplugin parts_test_interface )
+    install(TARGETS spellcheckplugin  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+endif()
 
 ########### unit tests ###############
 

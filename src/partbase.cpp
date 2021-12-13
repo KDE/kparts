@@ -85,6 +85,7 @@ void PartBase::loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient, cons
 }
 #endif
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
 void PartBase::loadPlugins(QObject *parent, KXMLGUIClient *parentGuiClient, const QString &parentInstanceName)
 {
     Q_D(PartBase);
@@ -100,6 +101,7 @@ void PartBase::setPluginLoadingMode(PluginLoadingMode loadingMode)
 
     d->m_pluginLoadingMode = loadingMode;
 }
+#endif
 
 void KParts::PartBase::setPluginInterfaceVersion(int version)
 {

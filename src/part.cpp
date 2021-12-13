@@ -214,12 +214,14 @@ void Part::slotWidgetDestroyed()
     }
 }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
 void Part::loadPlugins()
 {
     Q_D(Part);
 
     PartBase::loadPlugins(this, this, d->m_metaData.pluginId());
 }
+#endif
 
 void Part::setMetaData(const KPluginMetaData &metaData)
 {

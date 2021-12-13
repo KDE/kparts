@@ -242,14 +242,18 @@ protected:
      */
     QWidget *hostContainer(const QString &containerName);
 
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 90)
     /**
      * Load this part's plugins now.
      * Call this at the end of the part constructor, unless you are still using the
      * deprecated setComponentData(componentData, true)).
      * @since 4.1
+     * @deprecated Since 5.90, the concept of KPart plugins is deprecated, see docs of @ref KParts::Plugin class
      */
+    KPARTS_DEPRECATED_VERSION(5, 90, "The concept of KPart plugins is deprecated, see docs of KParts::Plugin class")
     void loadPlugins();
     using PartBase::loadPlugins;
+#endif
 
     /**
      * Set the meta data for this part.
