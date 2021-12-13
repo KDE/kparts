@@ -29,25 +29,8 @@
     // setup our actions
     setupActions();
 
-    // find and load the part
-    const auto plugins = KPluginLoader::findPlugins(QStringLiteral("kf5/parts"),
-                                                    [](const KPluginMetaData& metaData) {
-        return metaData.pluginId() == QLatin1String("%{APPNAMELC}part");
-    });
 
-    KPluginFactory *factory = plugins.isEmpty() ? nullptr : KPluginLoader(plugins.first().fileName()).factory();
-
-    if (!factory) {
-        // can't do anything useful without part, thus quit the app
-        KMessageBox::error(this, i18n("Could not find %{APPNAME} part!"));
-
-        qApp->quit();
-        // return here, because qApp->quit() only means "exit the
-        // next time we enter the event loop...
-        return;
-    }
-
-    m_part = factory->create<KParts::ReadWritePart>(this);
+    m_part = KPluginFactory::instantiatePlugin<KParts::ReadWritePart>(KPluginMetaData(QStringLiteral("kf5/parts/%{APPNAMELC}part")), this).plugin;
 
     if (m_part) {
         // integrate and setup
