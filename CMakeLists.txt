@@ -55,7 +55,7 @@ endif()
 add_definitions(-DTRANSLATION_DOMAIN=\"kparts5\")
 ki18n_install(po)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055800)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055900)
 add_definitions(-DKIOWIDGETS_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054600) # We need KRun for BrowserRun
 add_definitions(-DKCOREADDONS_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054000) # We need KAboutData::fromPluginMetaData
 add_definitions(-DKSERVICE_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055100) # We need KMimeTypeTrader and KPluginInfo(KService)
