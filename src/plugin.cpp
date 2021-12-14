@@ -10,6 +10,10 @@
 
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
 
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+
 #include "part.h"
 
 #include <KConfigGroup>
