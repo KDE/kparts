@@ -92,19 +92,19 @@ QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mim
         };
     };
 
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     const KService::List offers = KMimeTypeTrader::self()->query(mimeType, QStringLiteral("KParts/ReadOnlyPart"));
     for (const KService::Ptr &service : offers) {
-        QT_WARNING_PUSH
-        QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-        QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
         KPluginInfo info(service);
-        QT_WARNING_POP
         if (info.isValid()) {
             if (std::find_if(plugins.cbegin(), plugins.cend(), isPluginForName(info.name())) == plugins.cend()) {
                 plugins.append(info.toMetaData());
             }
         }
     }
+    QT_WARNING_POP
 #endif
 
     auto orderPredicate = [&](const KPluginMetaData &left, const KPluginMetaData &right) {
