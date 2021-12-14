@@ -229,8 +229,7 @@ BrowserOpenOrSaveQuestion::Result BrowserOpenOrSaveQuestion::askOpenOrSave()
 
     // I thought about using KFileItemActions, but we don't want a submenu, nor the slots....
     // and we want no menu at all if there's only one offer.
-    // TODO: we probably need a setTraderConstraint(), to exclude the current application?
-    const KService::List apps = KFileItemActions::associatedApplications(QStringList() << d->mimeType, QString() /* TODO trader constraint */);
+    const KService::List apps = KFileItemActions::associatedApplications(QStringList{d->mimeType});
     if (apps.isEmpty()) {
         KGuiItem::assign(d->openDefaultButton, openWithDialogItem);
     } else {
