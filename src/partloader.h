@@ -91,7 +91,7 @@ static T *createPartInstanceForMimeType(const QString &mimeType, QWidget *parent
     for (const auto &plugin : plugins) {
         auto factory = KPluginFactory::loadFactory(plugin);
         if (factory) {
-            if (T *part = factory.plugin->create<T>(parentWidget, parent, QString(), QVariantList())) {
+            if (T *part = factory.plugin->create<T>(parentWidget, parent, QVariantList())) {
                 return part;
             } else if (error) {
                 *error = i18n("The plugin '%1' does not provide an interface '%2'", //
