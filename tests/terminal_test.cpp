@@ -9,7 +9,7 @@ public:
 
 #include <QDir>
 
-#include <KService>
+#include <KPluginFactory>
 #include <QApplication>
 #include <kde_terminal_interface.h>
 #include <kparts/readonlypart.h>
@@ -18,10 +18,7 @@ Window::Window()
 {
     this->resize(800, 600);
 
-    KService::Ptr service = KService::serviceByDesktopName(QStringLiteral("konsolepart"));
-    Q_ASSERT(service);
-
-    KParts::ReadOnlyPart *part = service->createInstance<KParts::ReadOnlyPart>(this, this, QVariantList());
+    auto part = KPluginFactory::instantiatePlugin<KParts::ReadOnlyPart>(KPluginMetaData(QStringLiteral("konsolepart")), this).plugin;
     Q_ASSERT(part);
 
     setCentralWidget(part->widget());

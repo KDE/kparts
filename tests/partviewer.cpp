@@ -11,7 +11,6 @@
 #include <KActionMenu>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <partloader.h>
 
 #include <QAction>
@@ -100,8 +99,8 @@ void PartViewer::slotFileOpen()
 void PartViewer::loadPlugin(const KPluginMetaData &md, const QUrl &url)
 {
     delete m_part;
-    KPluginLoader loader(md.fileName());
-    m_part = loader.factory()->create<KParts::ReadOnlyPart>(this, this);
+    auto factory = KPluginFactory::loadFactory(md).plugin;
+    m_part = factory->create<KParts::ReadOnlyPart>(this, this, QVariantList());
     if (m_part) {
         switchToPart(url);
     }
