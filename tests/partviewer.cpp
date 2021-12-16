@@ -100,6 +100,7 @@ void PartViewer::loadPlugin(const KPluginMetaData &md, const QUrl &url)
 {
     delete m_part;
     auto factory = KPluginFactory::loadFactory(md).plugin;
+    Q_ASSERT(factory);
     m_part = factory->create<KParts::ReadOnlyPart>(this, this, QVariantList());
     if (m_part) {
         switchToPart(url);
