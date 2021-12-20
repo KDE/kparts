@@ -12,9 +12,9 @@
 
 #include <QObject>
 #include <QSharedDataPointer>
+#include <QStringList>
 
 class QString;
-class QStringList;
 template<typename T>
 class QList;
 

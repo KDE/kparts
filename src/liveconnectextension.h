@@ -12,13 +12,13 @@
 #include <kparts/kparts_export.h>
 
 #include <QObject>
+#include <QPair>
+#include <QStringList>
+
 #include <memory>
 
-template<class T1, class T2>
-struct QPair;
 template<typename T>
 class QList;
-class QStringList;
 class QString;
 
 namespace KParts

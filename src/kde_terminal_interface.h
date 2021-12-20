@@ -9,8 +9,7 @@
 #define KDELIBS_KDE_TERMINAL_INTERFACE_H
 
 #include <QObject>
-
-class QStringList;
+#include <QStringList>
 
 /**
  * TerminalInterface is an interface implemented by KonsolePart to

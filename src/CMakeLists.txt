@@ -76,7 +76,7 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
     PREFIX KParts
 )
 install(FILES ${KParts_CamelCase_HEADERS}
-        DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts/KParts
+        DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KParts/KParts
         COMPONENT Devel)
 
 ecm_qt_declare_logging_category(KF5Parts
@@ -99,7 +99,7 @@ ecm_generate_export_header(KF5Parts
 
 target_include_directories(KF5Parts
     PUBLIC "$<BUILD_INTERFACE:${KParts_BINARY_DIR}>"
-    INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KParts>"
+    INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KParts>"
 )
 
 target_link_libraries(KF5Parts PUBLIC  KF5::KIOWidgets #browserrun.h uses krun.h
@@ -122,15 +122,15 @@ install(FILES
    kparts-readwritepart.desktop
    # KF6 TODO; rename to browser-view.desktop to match pattern as expected by desktop2json
    browserview.desktop
-   DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR}
+   DESTINATION ${KDE_INSTALL_KSERVICETYPESDIR}
 )
 install(FILES
   ${KParts_BINARY_DIR}/kparts/kparts_export.h
   ${KParts_HEADERS}
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts/kparts COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KParts/kparts COMPONENT Devel
 )
 
-install(FILES kde_terminal_interface.h DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts )
+install(FILES kde_terminal_interface.h DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KParts )
 
 ecm_qt_install_logging_categories(
     EXPORT KPARTSLOG
@@ -173,5 +173,5 @@ if(BUILD_QCH)
 endif()
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KParts LIB_NAME KF5Parts DEPS "KIOWidgets KXmlGui KTextWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KParts)
+ecm_generate_pri_file(BASE_NAME KParts LIB_NAME KF5Parts DEPS "KIOWidgets KXmlGui KTextWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KParts)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})

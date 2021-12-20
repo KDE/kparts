@@ -13,7 +13,7 @@ include(ECMInstallIcons)
 include(FeatureSummary)
 
 set(QT_MIN_VERSION "5.15.0")
-find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Widgets
 )
 

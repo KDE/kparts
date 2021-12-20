@@ -1,5 +1,5 @@
-find_package(Qt5Test ${REQUIRED_QT_VERSION} REQUIRED)
-set_package_properties(Qt5Test PROPERTIES PURPOSE "Required for tests")
+find_package(Qt${QT_MAJOR_VERSION}Test ${REQUIRED_QT_VERSION} REQUIRED)
+set_package_properties(Qt${QT_MAJOR_VERSION}Test PROPERTIES PURPOSE "Required for tests")
 
 include(ECMAddTests)
 
@@ -19,5 +19,5 @@ ecm_add_tests(
   parttest.cpp
   partloadertest.cpp
   openorsavequestion_unittest.cpp
-  LINK_LIBRARIES KF5::Parts Qt5::Test KF5::XmlGui
+  LINK_LIBRARIES KF5::Parts Qt${QT_MAJOR_VERSION}::Test KF5::XmlGui
 )
