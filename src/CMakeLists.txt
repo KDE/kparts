@@ -100,6 +100,7 @@ ecm_generate_export_header(KF5Parts
 target_include_directories(KF5Parts
     PUBLIC "$<BUILD_INTERFACE:${KParts_BINARY_DIR}>"
     INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KParts>"
+    PRIVATE "shared"
 )
 
 target_link_libraries(KF5Parts PUBLIC  KF5::KIOWidgets #browserrun.h uses krun.h

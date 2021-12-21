@@ -23,6 +23,8 @@
 #include <QMimeType>
 #endif
 
+#include "mimeutils.h"
+
 // We still use desktop files for translated descriptions in keditfiletype,
 // and desktop file names then end up in mimeapps.list.
 // Alternatively, that KCM could be ported to read the descriptions from the JSON metadata?
@@ -51,27 +53,6 @@ static QStringList partsFromUserPreference(const QString &mimeType)
         }
     }
     return parts;
-}
-
-// A plugin can support N mimetypes. Pick the one that is closest to @parent in the inheritance tree
-// and return how far it is from that parent (0 = same mimetype, 1 = direct child, etc.)
-static int pluginDistanceToMimeType(const KPluginMetaData &md, const QString &parent)
-{
-    QMimeDatabase db;
-    auto distanceToMimeType = [&](const QString &mime) {
-        if (mime == parent) {
-            return 0;
-        }
-        const QStringList ancestors = db.mimeTypeForName(mime).allAncestors();
-        const int dist = ancestors.indexOf(parent);
-        return dist == -1 ? 50 : dist + 1;
-    };
-    const QStringList mimes = md.mimeTypes();
-    int minDistance = 50;
-    for (const QString &mime : mimes) {
-        minDistance = std::min(minDistance, distanceToMimeType(mime));
-    }
-    return minDistance;
 }
 
 QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mimeType)
@@ -107,19 +88,7 @@ QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mim
     QT_WARNING_POP
 #endif
 
-    auto orderPredicate = [&](const KPluginMetaData &left, const KPluginMetaData &right) {
-        // We filtered based on "supports mimetype", but this didn't order from most-specific to least-specific.
-        const int leftDistance = pluginDistanceToMimeType(left, mimeType);
-        const int rightDistance = pluginDistanceToMimeType(right, mimeType);
-        if (leftDistance < rightDistance) {
-            return true;
-        }
-        if (leftDistance > rightDistance) {
-            return false;
-        }
-        // Plugins who support the same mimetype are then sorted by initial preference
-        return left.initialPreference() > right.initialPreference();
-    };
+    auto orderPredicate = orderPredicateForMimetype(mimeType);
     std::sort(plugins.begin(), plugins.end(), orderPredicate);
 
     const QStringList userParts = partsFromUserPreference(mimeType);
