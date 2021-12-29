@@ -36,11 +36,6 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX KPARTS
 set(REQUIRED_QT_VERSION 5.15.2)
 find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Widgets Xml)
 
-# Needed for tests/ and autotests/, other targets they link against link against Qt6Core5Compat
-if (QT_MAJOR_VERSION STREQUAL "6")
-    find_package(Qt6Core5Compat)
-endif()
-
 find_package(KF5Config ${KF_DEP_VERSION} REQUIRED)
 find_package(KF5CoreAddons ${KF_DEP_VERSION} REQUIRED)
 find_package(KF5I18n ${KF_DEP_VERSION} REQUIRED)
