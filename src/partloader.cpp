@@ -79,7 +79,7 @@ QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mim
     auto supportsMime = [&](const KPluginMetaData &md) {
         return md.supportsMimeType(mimeType);
     };
-    QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("kf5/parts"), supportsMime);
+    QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("kf" QT_STRINGIFY(QT_VERSION_MAJOR) "/parts"), supportsMime);
 
 #if KSERVICE_BUILD_DEPRECATED_SINCE(5, 0)
     // KF5 compat code

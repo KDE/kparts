@@ -9,7 +9,7 @@ include(ECMAddTests)
 add_library(notepadpart MODULE)
 target_sources(notepadpart PRIVATE notepad.cpp notepad.qrc)
 # so we have to do the INSTALL_NAMESPACE thing by hand:
-set_target_properties(notepadpart PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/kf5/parts")
+set_target_properties(notepadpart PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/kf${QT_MAJOR_VERSION}/parts")
 kcoreaddons_desktop_to_json(notepadpart notepad.desktop)
 target_link_libraries(notepadpart KF5::Parts)
 
