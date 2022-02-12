@@ -208,6 +208,7 @@ void ReadOnlyPartPrivate::openRemoteFile()
     KIO::JobFlags flags = m_showProgressInfo ? KIO::DefaultFlags : KIO::HideProgressInfo;
     flags |= KIO::Overwrite;
     m_job = KIO::file_copy(m_url, destURL, 0600, flags);
+    m_job->setFinishedNotificationHidden(true);
     KJobWidgets::setWindow(m_job, q->widget());
     Q_EMIT q->started(m_job);
 
