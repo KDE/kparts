@@ -88,14 +88,32 @@ private Q_SLOTS:
         // can't use an unlikely mimetype here, okteta is associated with application/octet-stream :-)
         const QString mimeType = QStringLiteral("does/not/exist");
         QWidget parentWidget;
-        QString errorString;
 
         // WHEN
-        KParts::ReadOnlyPart *part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(mimeType, &parentWidget, this, &errorString);
+        const KPluginFactory::Result result = KParts::PartLoader::instantiatePartForMimeType<KParts::ReadOnlyPart>(mimeType, &parentWidget, this, {});
+        KParts::ReadOnlyPart *part = result.plugin;
+        QString errorString = result.errorString;
 
         // THEN
         QVERIFY2(!part, part ? part->metaObject()->className() : nullptr);
         QCOMPARE(errorString, QStringLiteral("No part was found for mimeType does/not/exist"));
+    }
+
+    void shouldInstantiatePart()
+    {
+        // GIVEN
+        const KPluginMetaData md(QStringLiteral("kf" QT_STRINGIFY(QT_VERSION_MAJOR) "/parts/notepadpart"));
+        QVERIFY(md.isValid());
+
+        QWidget parentWidget;
+
+        // WHEN
+        const KPluginFactory::Result result = KParts::PartLoader::instantiatePart<KParts::ReadOnlyPart>(md, &parentWidget, this, {});
+
+        // THEN
+        QVERIFY(result);
+        QVERIFY(result.plugin);
+        QCOMPARE(result.plugin->metaObject()->className(), "NotepadPart");
     }
 };
 
