@@ -8,7 +8,6 @@
 #include "selectorinterface.h"
 
 #include <QHash>
-#include <QStringList>
 
 using namespace KParts;
 
