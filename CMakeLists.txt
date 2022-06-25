@@ -22,6 +22,7 @@ include(ECMAddQch)
 include(ECMGenerateExportHeader)
 include(ECMQtDeclareLoggingCategory)
 include(ECMSetupVersion)
+include(ECMDeprecationSettings)
 
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control how much of deprecated API is build [default=0].")
 
@@ -47,6 +48,13 @@ find_package(KF5TextWidgets ${KF_DEP_VERSION} REQUIRED)
 find_package(KF5WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
 find_package(KF5XmlGui ${KF_DEP_VERSION} REQUIRED)
 
+ecm_set_disabled_deprecation_versions(
+  QT 5.15.2
+  KF 5.95
+  KIOWIDGETS 5.70 # We need KRun for BrowserRun
+  KCOREADDONS 5.64 # We need KAboutData::fromPluginMetaData
+  KSERVICE 5.81 # We need KMimeTypeTrader and KPluginInfo(KService)
+)
 
 if(BUILD_TESTING)
   add_subdirectory( tests )
@@ -54,11 +62,6 @@ if(BUILD_TESTING)
 endif()
 add_definitions(-DTRANSLATION_DOMAIN=\"kparts5\")
 ki18n_install(po)
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055900)
-add_definitions(-DKIOWIDGETS_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054600) # We need KRun for BrowserRun
-add_definitions(-DKCOREADDONS_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054000) # We need KAboutData::fromPluginMetaData
-add_definitions(-DKSERVICE_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055100) # We need KMimeTypeTrader and KPluginInfo(KService)
 
 add_subdirectory( src )
 add_subdirectory(templates)
