@@ -396,7 +396,7 @@ void KParts::BrowserRun::saveUrl(const QUrl &url, const QString &suggestedFileNa
             if (QStandardPaths::findExecutable(downloadManager).isEmpty()) {
                 QString errMsg = i18n("The Download Manager (%1) could not be found in your $PATH ", downloadManager);
                 QString errMsgEx = i18n("Try to reinstall it  \n\nThe integration with Konqueror will be disabled.");
-                KMessageBox::detailedSorry(nullptr, errMsg, errMsgEx);
+                KMessageBox::detailedError(nullptr, errMsg, errMsgEx);
                 cfg.writePathEntry("DownloadManager", QString());
                 cfg.sync();
             } else {

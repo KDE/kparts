@@ -210,7 +210,7 @@ void BrowserExtension::pasteRequest()
             slotOpenUrlRequest(filterData.uri());
             break;
         case KUriFilterData::Error:
-            KMessageBox::sorry(d->m_part->widget(), filterData.errorMsg());
+            KMessageBox::error(d->m_part->widget(), filterData.errorMsg());
             break;
         default:
             break;
