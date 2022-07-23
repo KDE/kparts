@@ -149,7 +149,7 @@ public:
     /**
      * KDE webbrowsing kparts support error urls to display errors in-line in the browser component.
      * This helper method creates the error URL from its parameters.
-     * @param error the KIO error code (or KIO::ERR_SLAVE_DEFINED if not from KIO)
+     * @param error the KIO error code (or KIO::ERR_WORKER_DEFINED if not from KIO)
      * @param errorText the text of the error message
      * @param initialUrl the URL that we were trying to open (as a string, so that this can
      *                   support invalid URLs as well) (changed from QString to QUrl in KF5)
