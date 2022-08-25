@@ -346,8 +346,8 @@ BrowserRun::AskSaveResult BrowserRun::askSave(const QUrl &url, KService::Ptr off
     const BrowserOpenOrSaveQuestion::Result result = question.askOpenOrSave();
     // clang-format off
     return result == BrowserOpenOrSaveQuestion::Save ? Save
-           : BrowserOpenOrSaveQuestion::Open ? Open
-           : Cancel;
+           : (result == BrowserOpenOrSaveQuestion::Open ? Open
+           : Cancel);
     // clang-format on
 }
 #endif
