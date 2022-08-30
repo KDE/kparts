@@ -50,7 +50,7 @@ find_package(KF5XmlGui ${KF_DEP_VERSION} REQUIRED)
 
 ecm_set_disabled_deprecation_versions(
   QT 5.15.2
-  KF 5.95
+  KF 5.97
   KIOWIDGETS 5.70 # We need KRun for BrowserRun
   KCOREADDONS 5.64 # We need KAboutData::fromPluginMetaData
   KSERVICE 5.81 # We need KMimeTypeTrader and KPluginInfo(KService)
