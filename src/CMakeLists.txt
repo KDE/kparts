@@ -114,7 +114,7 @@ set_target_properties(KF5Parts PROPERTIES VERSION   ${KPARTS_VERSION}
                                           EXPORT_NAME Parts
 )
 
-install(TARGETS KF5Parts EXPORT KF5PartsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5Parts EXPORT KF5PartsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
    kpart.desktop
