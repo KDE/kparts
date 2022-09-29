@@ -14,7 +14,6 @@
 #include <KActionCollection>
 #include <KStandardAction>
 #include <KLocalizedString>
-#include <KMessageBox>
 
 // Qt headers
 #include <QApplication>
