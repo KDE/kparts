@@ -85,19 +85,19 @@ bool ReadWritePart::queryClose()
         parentWidget = QApplication::activeWindow();
     }
 
-    int res = KMessageBox::warningYesNoCancel(parentWidget,
-                                              i18n("The document \"%1\" has been modified.\n"
-                                                   "Do you want to save your changes or discard them?",
-                                                   docName),
-                                              i18n("Close Document"),
-                                              KStandardGuiItem::save(),
-                                              KStandardGuiItem::discard());
+    int res = KMessageBox::warningTwoActionsCancel(parentWidget,
+                                                   i18n("The document \"%1\" has been modified.\n"
+                                                        "Do you want to save your changes or discard them?",
+                                                        docName),
+                                                   i18n("Close Document"),
+                                                   KStandardGuiItem::save(),
+                                                   KStandardGuiItem::discard());
 
     bool abortClose = false;
     bool handled = false;
 
     switch (res) {
-    case KMessageBox::Yes:
+    case KMessageBox::PrimaryAction:
         Q_EMIT sigQueryClose(&handled, &abortClose);
         if (!handled) {
             if (d->m_url.isEmpty()) {
@@ -114,7 +114,7 @@ bool ReadWritePart::queryClose()
             return false;
         }
         return waitSaveComplete();
-    case KMessageBox::No:
+    case KMessageBox::SecondaryAction:
         return true;
     default: // case KMessageBox::Cancel :
         return false;

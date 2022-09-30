@@ -216,13 +216,13 @@ void BrowserExtension::pasteRequest()
             break;
         }
     } else if (KUriFilter::self()->filterUri(filterData, QStringList(QStringLiteral("kuriikwsfilter"))) && url.length() < 250) {
-        if (KMessageBox::questionYesNo(d->m_part->widget(),
-                                       i18n("<qt>Do you want to search the Internet for <b>%1</b>?</qt>", url.toHtmlEscaped()),
-                                       i18n("Internet Search"),
-                                       KGuiItem(i18n("&Search"), QStringLiteral("edit-find")),
-                                       KStandardGuiItem::cancel(),
-                                       QStringLiteral("MiddleClickSearch"))
-            == KMessageBox::Yes) {
+        if (KMessageBox::questionTwoActions(d->m_part->widget(),
+                                            i18n("<qt>Do you want to search the Internet for <b>%1</b>?</qt>", url.toHtmlEscaped()),
+                                            i18n("Internet Search"),
+                                            KGuiItem(i18n("&Search"), QStringLiteral("edit-find")),
+                                            KStandardGuiItem::cancel(),
+                                            QStringLiteral("MiddleClickSearch"))
+            == KMessageBox::PrimaryAction) {
             slotOpenUrlRequest(filterData.uri());
         }
     }
