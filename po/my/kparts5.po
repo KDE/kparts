@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the kparts package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kparts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"PO-Revision-Date: 2021-09-15 21:00+0630\n"
+"Last-Translator: \n"
+"Language-Team: Burmese <kde-i18n-doc@kde.org>\n"
+"Language: my\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ဇေယျာလွင်"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "lw1nzayar@yandex.com"
+
+#: browserextension.cpp:220
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>အင်တာနက်တွင် <b>%1</b> ကို သင်ရှာချင်ပါသလား။</qt>"
+
+#: browserextension.cpp:221
+#, kde-format
+msgid "Internet Search"
+msgstr "အင်တာနက်ရှာဖွေမှု"
+
+#: browserextension.cpp:222
+#, kde-format
+msgid "&Search"
+msgstr "&Sရှာမည်"
+
+#: browseropenorsavequestion.cpp:89
+#, kde-format
+msgctxt "@label Type of file"
+msgid "Type: %1"
+msgstr "အမျိုးအစား - %1"
+
+#: browseropenorsavequestion.cpp:97
+#, kde-format
+msgctxt "@label:checkbox"
+msgid "Remember action for files of this type"
+msgstr "ဤအမျိုးအစားဖြစ်သောဖိုင်လ်များအတွက် လုပ်ဆောင်မှု မှတ်ထားမည်"
+
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with %1"
+msgstr "&O %1 ဖြင့်ဖွင့်ရန်"
+
+#: browseropenorsavequestion.cpp:213
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open &with %1"
+msgstr "&w %1 ဖြင့်ဖွင့်ရန်"
+
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
+#, kde-format
+msgctxt "@info"
+msgid "Open '%1'?"
+msgstr "'%1' ကို ဖွင့်မှာလား။"
+
+#: browseropenorsavequestion.cpp:228
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with..."
+msgstr "&Oဖြင့်ဖွင့်ရန်..."
+
+#: browseropenorsavequestion.cpp:246
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open with"
+msgstr "&Oဖြင့်ဖွင့်ရန်"
+
+#: browseropenorsavequestion.cpp:315
+#, kde-format
+msgctxt "@label:button"
+msgid "&Open"
+msgstr "&Oဖွင့်မည်"
+
+#: browseropenorsavequestion.cpp:339
+#, kde-format
+msgctxt "@label File name"
+msgid "Name: %1"
+msgstr "အမည် - %1"
+
+#: browseropenorsavequestion.cpp:341
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "This is the file name suggested by the server"
+msgstr "ယင်းသည် ဆာဗာမှ ဖိုင်လ်အတွက် အကြံပြုထားသည့် အမည် ဖြစ်သည်"
+
+#: browserrun.cpp:333
+#, kde-format
+msgid "Do you really want to execute '%1'?"
+msgstr "'%1' ကို သင်တကယ်ဆောင်ရွက်တော့မည်လား။"
+
+#: browserrun.cpp:334
+#, kde-format
+msgid "Execute File?"
+msgstr "ဖိုင်လ်ကို ဆောင်ရွက်မှာလား။"
+
+#: browserrun.cpp:335
+#, kde-format
+msgid "Execute"
+msgstr "ဆောင်ရွက်မည်"
+
+#: browserrun.cpp:397
+#, kde-format
+msgid "The Download Manager (%1) could not be found in your $PATH "
+msgstr "ဒေါင်းလုတ်မန်နေဂျာ (%1) ကို သင်၏ $PATH တွင် ရှာမတွေ့ခဲ့ပါ "
+
+#: browserrun.cpp:398
+#, kde-format
+msgid ""
+"Try to reinstall it  \n"
+"\n"
+"The integration with Konqueror will be disabled."
+msgstr ""
+"၎င်းကို ပြန်တပ်ဆင်ကြည့်ပါ  \n"
+"\n"
+"ကွန်ကွာရာနှင့် ပေါင်းစည်းမှု ပိတ်သွားလိမ့်မည်။"
+
+#: browserrun.cpp:423
+#, kde-format
+msgid "Save As"
+msgstr "အဖြစ်သိမ်းဆည်းမည်"
+
+#: htmlsettingsinterface.cpp:21
+msgid "Accept"
+msgstr "လက်ခံမည်"
+
+#: htmlsettingsinterface.cpp:23
+msgid "Reject"
+msgstr "ငြင်းပယ်မည်"
+
+#: partloader.cpp:181
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "ပလပ်ဂင် '%1' သည် သော့ချက်စာလုံး '%3' နှင့် အင်တာဖေ့စ် '%2' မပေးထားပါ"
+
+#: partloader.cpp:198 partloader.h:106
+#, kde-format
+msgid "No part was found for mimeType %1"
+msgstr "အမ်အိုင်အမ်အီးတိုက် %1 အတွက် အစိတ်အပိုင်းမတွေ့ခဲ့ပါ"
+
+#: partloader.h:97
+#, fuzzy, kde-format
+#| msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2'"
+msgstr "ပလပ်ဂင် '%1' သည် သော့ချက်စာလုံး '%3' နှင့် အင်တာဖေ့စ် '%2' မပေးထားပါ"
+
+#: readwritepart.cpp:80
+#, kde-format
+msgid "Untitled"
+msgstr "ခေါင်းစဥ်မဲ့"
+
+#: readwritepart.cpp:89
+#, kde-format
+msgid ""
+"The document \"%1\" has been modified.\n"
+"Do you want to save your changes or discard them?"
+msgstr ""
+"မှတ်တမ်းပုံနှိပ်မူ \"%1\" ကို မွမ်းမံခဲ့သည်။\n"
+"သင်၏ပြောင်းလဲမှုများကို သိမ်းဆည်းမှာလား၊ ပစ်ပယ်မှာလား။"
+
+#: readwritepart.cpp:92
+#, kde-format
+msgid "Close Document"
+msgstr "မှတ်တမ်းပုံနှိပ်မူ ပိတ်မည်"
