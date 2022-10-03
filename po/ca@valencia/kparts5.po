@@ -132,7 +132,7 @@ msgstr "Executa"
 #: browserrun.cpp:397
 #, kde-format
 msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "No s'ha trobat el gestor de baixades (%1) a la $PATH "
+msgstr "No s'ha trobat el gestor de baixades (%1) en la $PATH "
 
 #: browserrun.cpp:398
 #, kde-format
