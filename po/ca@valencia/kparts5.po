@@ -70,7 +70,7 @@ msgstr "Recorda l'acció per als fitxers d'este tipus"
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open with %1"
-msgstr "&Obri amb %1"
+msgstr "O&bri amb %1"
 
 #: browseropenorsavequestion.cpp:213
 #, kde-format
@@ -88,19 +88,19 @@ msgstr "Voleu obrir «%1»?"
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open with..."
-msgstr "&Obri amb..."
+msgstr "O&bri amb..."
 
 #: browseropenorsavequestion.cpp:246
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open with"
-msgstr "&Obri amb"
+msgstr "O&bri amb"
 
 #: browseropenorsavequestion.cpp:315
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open"
-msgstr "&Obri"
+msgstr "O&bri"
 
 #: browseropenorsavequestion.cpp:339
 #, kde-format
