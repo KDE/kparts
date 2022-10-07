@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2021-10-26 09:30+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -152,15 +152,16 @@ msgstr "Rejecta"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "Le servicio '%1' non provide un interfacie '%2' con parola clave '%3'"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Nulle parte esseva trovate per Typomime %1"
 
-#: partloader.h:97
-#, kde-format
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "Le plugin '%1' non provide un interfacie '%2' "
+#: partloader.h:159
+#, fuzzy, kde-format
+#| msgid "No part was found for mimeType %1"
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Nulle parte esseva trovate per Typomime %1"
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -180,6 +181,9 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Claude le documento"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr "Le plugin '%1' non provide un interfacie '%2' "
 
 #~ msgid "Name"
 #~ msgstr "Nomine"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde4libs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2012-01-19 00:20-0500\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -156,16 +156,17 @@ msgstr "Refuzo"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, fuzzy, kde-format
 #| msgid "No matches found for '<b>%1</b>'."
 msgid "No part was found for mimeType %1"
 msgstr "Nuk u gjetën përputhje për '<b>%1</b>'."
 
-#: partloader.h:97
-#, kde-format
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr ""
+#: partloader.h:159
+#, fuzzy, kde-format
+#| msgid "No matches found for '<b>%1</b>'."
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Nuk u gjetën përputhje për '<b>%1</b>'."
 
 #: readwritepart.cpp:80
 #, kde-format

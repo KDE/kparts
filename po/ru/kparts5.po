@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2022-02-16 15:34+0300\n"
 "Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -174,16 +174,16 @@ msgstr "Отклонить"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "Модуль «%1» не предоставляет интерфейс «%2» с ключевыми словами «%3»."
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Не найден модуль для обработки MIME-типа %1"
 
-# BUGME: ". " at the end is necessary, otherwise the next sentence goes without space or full stop. --aspotashev
-#: partloader.h:97
-#, kde-format
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "Модуль «%1» не предоставляет интерфейс «%2»"
+#: partloader.h:159
+#, fuzzy, kde-format
+#| msgid "No part was found for mimeType %1"
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Не найден модуль для обработки MIME-типа %1"
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -203,6 +203,10 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Закрыть документ"
+
+# BUGME: ". " at the end is necessary, otherwise the next sentence goes without space or full stop. --aspotashev
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr "Модуль «%1» не предоставляет интерфейс «%2»"
 
 #~ msgid "Name"
 #~ msgstr "Название"

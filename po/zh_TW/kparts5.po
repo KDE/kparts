@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2020-03-24 19:54+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -162,16 +162,16 @@ msgstr "拒絕"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "「%1」外掛程式未提供有「%3」關鍵字的「%2」介面"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "找不到用於 mimeType %1 的部份"
 
-#: partloader.h:97
+#: partloader.h:159
 #, fuzzy, kde-format
-#| msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "「%1」外掛程式未提供有「%3」關鍵字的「%2」介面"
+#| msgid "No part was found for mimeType %1"
+msgid "No part could be instantiated for mimeType %1"
+msgstr "找不到用於 mimeType %1 的部份"
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -191,3 +191,9 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "關閉文件"
+
+#, fuzzy
+#~| msgid ""
+#~| "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr "「%1」外掛程式未提供有「%3」關鍵字的「%2」介面"

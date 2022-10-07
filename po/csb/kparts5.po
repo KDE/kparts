@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2009-12-04 22:09+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -165,19 +165,17 @@ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr ""
 "Ùsłëżnota \"%1\"nie wspiérô interfejsu \"%2\" z kluczowim słowã \"%3\" "
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Felënk dopasowaniów dlô %1."
 
-#: partloader.h:97
+#: partloader.h:159
 #, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr ""
-"Ùsłëżnota \"%1\"nie wspiérô interfejsu \"%2\" z kluczowim słowã \"%3\" "
+#| msgid "No handler found for %1."
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Felënk dopasowaniów dlô %1."
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -197,6 +195,13 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Zamkni dokùment"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr ""
+#~ "Ùsłëżnota \"%1\"nie wspiérô interfejsu \"%2\" z kluczowim słowã \"%3\" "
 
 #~ msgid "Name"
 #~ msgstr "Miono"

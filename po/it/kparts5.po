@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2021-10-25 07:40+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -165,15 +165,16 @@ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr ""
 "L'estensione '%1' non fornisce un'interfaccia '%2' con la parola chiave '%3'"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Nessun parte è stata trovata per il tipo MIME %1"
 
-#: partloader.h:97
-#, kde-format
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "L'estensione «%1» non fornisce un'interfaccia «%2»"
+#: partloader.h:159
+#, fuzzy, kde-format
+#| msgid "No part was found for mimeType %1"
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Nessun parte è stata trovata per il tipo MIME %1"
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -193,6 +194,9 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Chiudi documento"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr "L'estensione «%1» non fornisce un'interfaccia «%2»"
 
 #~ msgid "Name"
 #~ msgstr "Nome"

@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2022-05-11 12:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -170,15 +170,16 @@ msgstr "Reddet"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "'%1' eklentisi, '%3' anahtar sözcüğü ile bir '%2' arayüzünü sağlamıyor"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "%1 MIME türü için bir kısım bulunamadı"
 
-#: partloader.h:97
-#, kde-format
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "'%1' eklentisi, bir '%2' arayüzünü sağlamıyor"
+#: partloader.h:159
+#, fuzzy, kde-format
+#| msgid "No part was found for mimeType %1"
+msgid "No part could be instantiated for mimeType %1"
+msgstr "%1 MIME türü için bir kısım bulunamadı"
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -198,3 +199,6 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Belgeyi Kapat"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr "'%1' eklentisi, bir '%2' arayüzünü sağlamıyor"

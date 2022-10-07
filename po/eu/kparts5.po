@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2021-12-29 08:03+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -157,15 +157,16 @@ msgstr "Ukatu"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "«%1» pluginak ez du eskaintzen «%2» interfaze bat «%3» gako-hitzarekin"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Ez da aurkitu %1 MIME-mota erabiltzeko «atalik»."
 
-#: partloader.h:97
-#, kde-format
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "«%1» pluginak ez du eskaintzen «%2» interfaze bat"
+#: partloader.h:159
+#, fuzzy, kde-format
+#| msgid "No part was found for mimeType %1"
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Ez da aurkitu %1 MIME-mota erabiltzeko «atalik»."
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -185,6 +186,9 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Itxi dokumentua"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr "«%1» pluginak ez du eskaintzen «%2» interfaze bat"
 
 #~ msgid "Name"
 #~ msgstr "Izena"

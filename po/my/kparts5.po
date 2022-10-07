@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2021-09-15 21:00+0630\n"
 "Last-Translator: \n"
 "Language-Team: Burmese <kde-i18n-doc@kde.org>\n"
@@ -152,16 +152,16 @@ msgstr "ငြင်းပယ်မည်"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "ပလပ်ဂင် '%1' သည် သော့ချက်စာလုံး '%3' နှင့် အင်တာဖေ့စ် '%2' မပေးထားပါ"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "အမ်အိုင်အမ်အီးတိုက် %1 အတွက် အစိတ်အပိုင်းမတွေ့ခဲ့ပါ"
 
-#: partloader.h:97
+#: partloader.h:159
 #, fuzzy, kde-format
-#| msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "ပလပ်ဂင် '%1' သည် သော့ချက်စာလုံး '%3' နှင့် အင်တာဖေ့စ် '%2' မပေးထားပါ"
+#| msgid "No part was found for mimeType %1"
+msgid "No part could be instantiated for mimeType %1"
+msgstr "အမ်အိုင်အမ်အီးတိုက် %1 အတွက် အစိတ်အပိုင်းမတွေ့ခဲ့ပါ"
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -181,3 +181,9 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "မှတ်တမ်းပုံနှိပ်မူ ပိတ်မည်"
+
+#, fuzzy
+#~| msgid ""
+#~| "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr "ပလပ်ဂင် '%1' သည် သော့ချက်စာလုံး '%3' နှင့် အင်တာဖေ့စ် '%2' မပေးထားပါ"

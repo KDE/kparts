@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2009-11-22 00:01+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <team@utkarsh.org>\n"
@@ -154,18 +154,17 @@ msgstr "નકારો"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "સેવા '%1' ઇન્ટરફેસ '%2' કીવર્ડ '%3' સાથે પૂરો પાડતી નથી"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1 માટે કોઇ સંભાળનાર ન મળ્યું."
 
-#: partloader.h:97
+#: partloader.h:159
 #, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "સેવા '%1' ઇન્ટરફેસ '%2' કીવર્ડ '%3' સાથે પૂરો પાડતી નથી"
+#| msgid "No handler found for %1."
+msgid "No part could be instantiated for mimeType %1"
+msgstr "%1 માટે કોઇ સંભાળનાર ન મળ્યું."
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -185,6 +184,12 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "દસ્તાવેજ બંધ કરો"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr "સેવા '%1' ઇન્ટરફેસ '%2' કીવર્ડ '%3' સાથે પૂરો પાડતી નથી"
 
 #~ msgid "Name"
 #~ msgstr "નામ"

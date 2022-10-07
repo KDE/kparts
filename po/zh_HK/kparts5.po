@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2006-01-04 13:32+0800\n"
 "Last-Translator: Abel Cheung <abel@oaka.org>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
@@ -188,15 +188,15 @@ msgstr "拒絕"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, fuzzy, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "找不到給 %1 用的處理器項目!"
 
-#: partloader.h:97
-#, kde-format
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr ""
+#: partloader.h:159
+#, fuzzy, kde-format
+msgid "No part could be instantiated for mimeType %1"
+msgstr "找不到給 %1 用的處理器項目!"
 
 #: readwritepart.cpp:80
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -154,18 +154,17 @@ msgstr "رەت قىل"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "'%1' مۇلازىمەت '%3' ھالقىلىق سۆزلۈك '%2' ئېغىزنى تەمىنلىمىگەن"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1 نىڭ تۇتقۇچىسى تېپىلمىدى"
 
-#: partloader.h:97
+#: partloader.h:159
 #, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "'%1' مۇلازىمەت '%3' ھالقىلىق سۆزلۈك '%2' ئېغىزنى تەمىنلىمىگەن"
+#| msgid "No handler found for %1."
+msgid "No part could be instantiated for mimeType %1"
+msgstr "%1 نىڭ تۇتقۇچىسى تېپىلمىدى"
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -185,6 +184,12 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "پۈتۈك ياپ"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr "'%1' مۇلازىمەت '%3' ھالقىلىق سۆزلۈك '%2' ئېغىزنى تەمىنلىمىگەن"
 
 #~ msgid "Name"
 #~ msgstr "ئاتى"

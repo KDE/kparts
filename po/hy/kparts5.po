@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2013-01-31 01:08+0400\n"
 "Last-Translator: Davit <nikdavnik@mail.ru>\n"
 "Language-Team: Armenian Language: hy\n"
@@ -158,19 +158,17 @@ msgstr "Խուսափել"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "«%1» ծառայությունը չի տրամադրում ինտերֆեյս «%2» բանալի բառերով «%3». "
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Հայտնաբերված չէ մշակող %1 համար։"
 
-# BUGME: ". " at the end is necessary, otherwise the next sentence goes without space or full stop. --aspotashev
-#: partloader.h:97
+#: partloader.h:159
 #, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "«%1» ծառայությունը չի տրամադրում ինտերֆեյս «%2» բանալի բառերով «%3». "
+#| msgid "No handler found for %1."
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Հայտնաբերված չէ մշակող %1 համար։"
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -190,6 +188,14 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Փակել նիշքը"
+
+# BUGME: ". " at the end is necessary, otherwise the next sentence goes without space or full stop. --aspotashev
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr ""
+#~ "«%1» ծառայությունը չի տրամադրում ինտերֆեյս «%2» բանալի բառերով «%3». "
 
 #~ msgid "Name"
 #~ msgstr "Անուն"

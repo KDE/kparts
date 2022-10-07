@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2012-05-22 12:30+0200\n"
 "Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -165,18 +165,17 @@ msgstr "Malakcepti"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "La servo '%1' ne provizas interfacon '%2' kun ŝlosilvorto '%3'"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Ne trovis traktilon por %1."
 
-#: partloader.h:97
+#: partloader.h:159
 #, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "La servo '%1' ne provizas interfacon '%2' kun ŝlosilvorto '%3'"
+#| msgid "No handler found for %1."
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Ne trovis traktilon por %1."
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -196,6 +195,12 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Fermi dokumenton"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr "La servo '%1' ne provizas interfacon '%2' kun ŝlosilvorto '%3'"
 
 #~ msgid "Name"
 #~ msgstr "Nomo"

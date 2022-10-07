@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -164,15 +164,15 @@ msgstr "Khuphela ngaphandle"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, fuzzy, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Akukho mphathi ufumanekayo we %1"
 
-#: partloader.h:97
-#, kde-format
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr ""
+#: partloader.h:159
+#, fuzzy, kde-format
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Akukho mphathi ufumanekayo we %1"
 
 #: readwritepart.cpp:80
 #, kde-format

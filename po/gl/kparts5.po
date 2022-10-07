@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2018-04-28 21:28+0100\n"
 "Last-Translator: Adrian Chaves <adrian@chaves.io>\n"
 "Language-Team: Galician <kde-i18n-doc@kde.org>\n"
@@ -160,18 +160,17 @@ msgstr "Rexeitar"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "O servizo «%1» non fornece unha interface «%2» coa palabra clave «%3»"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Non se atopou un xestor para %1."
 
-#: partloader.h:97
+#: partloader.h:159
 #, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "O servizo «%1» non fornece unha interface «%2» coa palabra clave «%3»"
+#| msgid "No handler found for %1."
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Non se atopou un xestor para %1."
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -191,6 +190,13 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Pechar o documento"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr ""
+#~ "O servizo «%1» non fornece unha interface «%2» coa palabra clave «%3»"
 
 #~ msgid "Name"
 #~ msgstr "Nome"

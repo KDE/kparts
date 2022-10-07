@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2012-07-04 17:33+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -159,18 +159,17 @@ msgstr "Rifuzer"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "Li siervice «%1» ni dene pont d' eterface «%2» avou l' mot clé «%3»"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Nou apougneu di trové po %1."
 
-#: partloader.h:97
+#: partloader.h:159
 #, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "Li siervice «%1» ni dene pont d' eterface «%2» avou l' mot clé «%3»"
+#| msgid "No handler found for %1."
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Nou apougneu di trové po %1."
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -190,6 +189,12 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Clôre li documint?"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2'"
+#~ msgstr "Li siervice «%1» ni dene pont d' eterface «%2» avou l' mot clé «%3»"
 
 #~ msgid "Name"
 #~ msgstr "No"
