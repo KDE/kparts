@@ -184,6 +184,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Zavřít dokument"
-
-#~ msgid "The plugin '%1' does not provide an interface '%2'"
-#~ msgstr "Modul '%1' neposkytuje rozhraní '%2'"
