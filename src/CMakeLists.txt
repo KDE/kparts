@@ -116,14 +116,16 @@ set_target_properties(KF5Parts PROPERTIES VERSION   ${KPARTS_VERSION}
 
 install(TARGETS KF5Parts EXPORT KF5PartsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
-install(FILES
-   kpart.desktop
-   kparts-readonlypart.desktop
-   kparts-readwritepart.desktop
-   # KF6 TODO; rename to browser-view.desktop to match pattern as expected by desktop2json
-   browserview.desktop
-   DESTINATION ${KDE_INSTALL_KSERVICETYPESDIR}
-)
+if(NOT EXCLUDE_DEPRECATED_BEFORE_AND_AT STREQUAL "CURRENT" AND EXCLUDE_DEPRECATED_BEFORE_AND_AT VERSION_LESS 5.100.0)
+    install(FILES
+      kpart.desktop
+      kparts-readonlypart.desktop
+      kparts-readwritepart.desktop
+      browserview.desktop
+      DESTINATION ${KDE_INSTALL_KSERVICETYPESDIR}
+    )
+endif()
+
 install(FILES
   ${KParts_BINARY_DIR}/kparts/kparts_export.h
   ${KParts_HEADERS}
