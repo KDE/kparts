@@ -10,13 +10,13 @@
 # Pino Toscano <toscano.pino@tiscali.it>, 2008.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2008, 2012, 2013, 2014, 2015.
 # Innocenzo Ventre <innocenzo.ventre@gmail.com>, 2012.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2014, 2020, 2021.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2014, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-07 00:41+0000\n"
-"PO-Revision-Date: 2021-10-25 07:40+0200\n"
+"PO-Revision-Date: 2022-10-08 01:10+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -171,10 +171,9 @@ msgid "No part was found for mimeType %1"
 msgstr "Nessun parte è stata trovata per il tipo MIME %1"
 
 #: partloader.h:159
-#, fuzzy, kde-format
-#| msgid "No part was found for mimeType %1"
+#, kde-format
 msgid "No part could be instantiated for mimeType %1"
-msgstr "Nessun parte è stata trovata per il tipo MIME %1"
+msgstr "Nessun parte può essere istanziata per il tipo MIME %1"
 
 #: readwritepart.cpp:80
 #, kde-format
