@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-17 00:40+0000\n"
+"POT-Creation-Date: 2022-10-07 00:41+0000\n"
 "PO-Revision-Date: 2022-06-19 14:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -157,15 +157,15 @@ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr ""
 "Programtillegget «%1» har ikkje noko grensesnitt «%2» med nøkkelord «%3»"
 
-#: partloader.cpp:198 partloader.h:106
+#: partloader.cpp:198 partloader.h:143
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Fann ingen del for MIME-typen %1"
 
-#: partloader.h:97
+#: partloader.h:159
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2'"
-msgstr "Programtillegget «%1» har ikkje noko grensesnitt «%2»"
+msgid "No part could be instantiated for mimeType %1"
+msgstr ""
 
 #: readwritepart.cpp:80
 #, kde-format
