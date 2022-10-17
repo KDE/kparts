@@ -182,6 +182,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Затваряне на документа"
-
-#~ msgid "The plugin '%1' does not provide an interface '%2'"
-#~ msgstr "Приставката \"%1\" не предлага интерфейс \"%2\""
