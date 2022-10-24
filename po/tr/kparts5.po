@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-07 00:41+0000\n"
-"PO-Revision-Date: 2022-10-07 08:34+0300\n"
+"PO-Revision-Date: 2022-10-23 12:19+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -101,7 +101,7 @@ msgstr "&Birlikte aç..."
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open with"
-msgstr "&Birlikte aç"
+msgstr "&Birlikte Aç"
 
 #: browseropenorsavequestion.cpp:315
 #, kde-format
