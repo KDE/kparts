@@ -19,7 +19,7 @@ namespace KParts
 {
 /**
  * Helper methods for locating and loading parts.
- * This is based upon KPluginLoader and KPluginFactory, but it takes
+ * This is based upon KPluginFactory, but it takes
  * care of querying by mimetype, sorting the available parts by builtin
  * preference and by user preference.
  * @since 5.69
@@ -48,11 +48,7 @@ KPARTS_EXPORT QObject *createPartInstanceForMimeTypeHelper(const char *iface, co
  * Until KF6, however, it also supports .desktop files as a fallback solution.
  *
  * To load a part from one of the KPluginMetaData instances returned here,
- * simply do
- * @code
- *     KPluginLoader loader(metaData.fileName());
- *     m_part = loader.factory()->create<KParts::ReadOnlyPart>(parentWidget, parent);
- * @endcode
+ * use \ref instantiatePart()
  *
  * @since 5.69
  */
