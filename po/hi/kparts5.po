@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-07 00:41+0000\n"
+"POT-Creation-Date: 2022-11-02 00:44+0000\n"
 "PO-Revision-Date: 2022-02-10 11:38+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -155,12 +155,12 @@ msgstr "नकारें"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "सेवा '%1' इंटरफ़ेस '%2' संकेतशब्द '%3' के साथ प्रदाय नहीं करता है"
 
-#: partloader.cpp:198 partloader.h:143
+#: partloader.cpp:198 partloader.h:139
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "माइमटाइप %1 के लिए कोई भाग नहीं मिला।"
 
-#: partloader.h:159
+#: partloader.h:155
 #, fuzzy, kde-format
 #| msgid "No part was found for mimeType %1"
 msgid "No part could be instantiated for mimeType %1"

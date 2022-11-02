@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4_as\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-07 00:41+0000\n"
+"POT-Creation-Date: 2022-11-02 00:44+0000\n"
 "PO-Revision-Date: 2008-12-26 15:19+0530\n"
 "Last-Translator: Amitakhya Phukan <অমিতাক্ষ ফুকন>\n"
 "Language-Team: Assamese <fedora-trans-as@redhat.com>\n"
@@ -162,13 +162,13 @@ msgstr ""
 "'%1' সেৱা দ্বাৰা '%3' প্ৰাসঙ্গিক শব্দ অৰ্থাৎ গুপ্তশব্দ সহ '%2' সংযোগক্ষেত্ৰ উপলব্ধ কৰা "
 "নহয় ।"
 
-#: partloader.cpp:198 partloader.h:143
+#: partloader.cpp:198 partloader.h:139
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1 ৰ বাবে হেন্ডলাৰ পোৱা নাযায় ।"
 
-#: partloader.h:159
+#: partloader.h:155
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"

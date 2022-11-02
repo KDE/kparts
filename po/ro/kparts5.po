@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-07 00:41+0000\n"
+"POT-Creation-Date: 2022-11-02 00:44+0000\n"
 "PO-Revision-Date: 2022-02-06 17:11+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -154,12 +154,12 @@ msgstr "Refuză"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "Extensia „%1” nu furnizează o interfață „%2” cu cuvântul-cheie „%3”"
 
-#: partloader.cpp:198 partloader.h:143
+#: partloader.cpp:198 partloader.h:139
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Nu a fost găsită nicio componentă pentru tipul MIME %1"
 
-#: partloader.h:159
+#: partloader.h:155
 #, fuzzy, kde-format
 #| msgid "No part was found for mimeType %1"
 msgid "No part could be instantiated for mimeType %1"

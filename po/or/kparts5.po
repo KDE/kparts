@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-07 00:41+0000\n"
+"POT-Creation-Date: 2022-11-02 00:44+0000\n"
 "PO-Revision-Date: 2009-01-02 17:37+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -168,13 +168,13 @@ msgstr "ତ୍ୟାଗ କରନ୍ତୁ"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "ସେବା '%1' ସୂଚକ ଶବ୍ଦ '%3' ସହିତ ଅନ୍ତରାପୃଷ୍ଠ '%2' ପ୍ରଦାନ କରେନାହିଁ"
 
-#: partloader.cpp:198 partloader.h:143
+#: partloader.cpp:198 partloader.h:139
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1 ପାଇଁ ଚାଳକ ମିଳିଲେ ନାହିଁ।"
 
-#: partloader.h:159
+#: partloader.h:155
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"

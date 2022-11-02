@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-07 00:41+0000\n"
+"POT-Creation-Date: 2022-11-02 00:44+0000\n"
 "PO-Revision-Date: 2008-08-30 01:10+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -167,12 +167,12 @@ msgstr "Adkiń"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "Słužba „%1” nie padaje interfejsu „%2” z klučavym słovam „%3”."
 
-#: partloader.cpp:198 partloader.h:143
+#: partloader.cpp:198 partloader.h:139
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr ""
 
-#: partloader.h:159
+#: partloader.h:155
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr ""

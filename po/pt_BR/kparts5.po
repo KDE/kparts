@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-07 00:41+0000\n"
+"POT-Creation-Date: 2022-11-02 00:44+0000\n"
 "PO-Revision-Date: 2022-10-19 15:38-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -166,12 +166,12 @@ msgstr "Rejeitar"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "O plugin '%1' não oferece uma interface '%2' com a palavra-chave '%3'"
 
-#: partloader.cpp:198 partloader.h:143
+#: partloader.cpp:198 partloader.h:139
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Não foi encontrado nenhum componente para o tipo MIME %1"
 
-#: partloader.h:159
+#: partloader.h:155
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Nenhum componente pode ser instanciado para o tipo MIME %1"

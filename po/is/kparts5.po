@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-07 00:41+0000\n"
+"POT-Creation-Date: 2022-11-02 00:44+0000\n"
 "PO-Revision-Date: 2022-10-14 13:57+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -166,12 +166,12 @@ msgstr "Hafna"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr "Íforritið '%1' byður ekki uppá viðmótið '%2' með stikkorðinu '%3'"
 
-#: partloader.cpp:198 partloader.h:143
+#: partloader.cpp:198 partloader.h:139
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Engin partur fannst fyrir %1."
 
-#: partloader.h:159
+#: partloader.h:155
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Gat ekki frumstillt neinn part fyrir MIME-tegund %1"
