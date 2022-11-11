@@ -116,7 +116,7 @@ void BrowserRun::scanFile()
 
     if (!KProtocolInfo::proxiedBy(protocol).isEmpty()) {
         QString dummy;
-        protocol = KProtocolManager::slaveProtocol(url, dummy);
+        protocol = KProtocolManager::workerProtocol(url, dummy);
     }
 
     if (!url.hasQuery() && !protocol.startsWith(QLatin1String("http")) && (!url.path().endsWith(QLatin1Char('/')) || KProtocolManager::supportsListing(url))) {
