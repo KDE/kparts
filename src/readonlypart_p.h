@@ -39,6 +39,7 @@ public:
         m_bTemp = false;
         m_bAutoDetectedMime = false;
         m_closeUrlFromOpenUrl = false;
+        m_closeUrlFromDestructor = false;
     }
 
     ~ReadOnlyPartPrivate() override
@@ -70,6 +71,8 @@ public:
     bool m_bAutoDetectedMime : 1;
     // Whether we are calling closeUrl() from openUrl().
     bool m_closeUrlFromOpenUrl;
+    // Whether we are calling closeUrl() from ~ReadOnlyPart().
+    bool m_closeUrlFromDestructor;
 
     /**
      * Remote (or local) url - the one displayed to the user.

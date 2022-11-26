@@ -38,6 +38,8 @@ ReadOnlyPart::ReadOnlyPart(ReadOnlyPartPrivate &dd, QObject *parent)
 
 ReadOnlyPart::~ReadOnlyPart()
 {
+    Q_D(ReadOnlyPart);
+    d->m_closeUrlFromDestructor = true;
     ReadOnlyPart::closeUrl();
 }
 
@@ -54,7 +56,9 @@ void ReadOnlyPart::setUrl(const QUrl &url)
 
     if (d->m_url != url) {
         d->m_url = url;
-        Q_EMIT urlChanged(url);
+        if (!d->m_closeUrlFromDestructor) {
+            Q_EMIT urlChanged(url);
+        }
     }
 }
 

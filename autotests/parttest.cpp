@@ -24,11 +24,17 @@ public:
         , m_openFileCalled(false)
     {
         setWidget(new QWidget(parentWidget));
+        connect(this, &KParts::ReadOnlyPart::urlChanged, this, &TestPart::logUrlChanged);
     }
 
     bool openFileCalled() const
     {
         return m_openFileCalled;
+    }
+
+    void logUrlChanged(const QUrl &url)
+    {
+        qDebug() << "url changed: " << url;
     }
 
 protected:
@@ -241,4 +247,12 @@ void PartTest::testToolbarVisibility()
     window.setAutoSaveSettings(cg.name());
     window.show();
     window.testToolbarVisibility();
+}
+
+void PartTest::testShouldNotCrashAfterDelete()
+{
+    TestPart *part = new TestPart(nullptr, nullptr);
+    QVERIFY(part->openUrl(QUrl::fromLocalFile(QFINDTESTDATA("notepad.desktop"))));
+    QVERIFY(part->openFileCalled());
+    delete part;
 }

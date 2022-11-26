@@ -23,6 +23,7 @@ private Q_SLOTS:
     void testEmptyUrlAfterCloseUrl();
 
     void testToolbarVisibility();
+    void testShouldNotCrashAfterDelete();
 };
 
 #endif /* PARTTEST_H */
