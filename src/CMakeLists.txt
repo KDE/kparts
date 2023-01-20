@@ -1,7 +1,7 @@
-add_library(KF5Parts)
-add_library(KF5::Parts ALIAS KF5Parts)
+add_library(KF6Parts)
+add_library(KF6::Parts ALIAS KF6Parts)
 
-target_sources(KF5Parts PRIVATE
+target_sources(KF6Parts PRIVATE
     partbase.cpp
     part.cpp
     partmetadatautil_p.cpp
@@ -79,7 +79,7 @@ install(FILES ${KParts_CamelCase_HEADERS}
         DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KParts/KParts
         COMPONENT Devel)
 
-ecm_qt_declare_logging_category(KF5Parts
+ecm_qt_declare_logging_category(KF6Parts
     HEADER kparts_logging.h
     IDENTIFIER KPARTSLOG
     CATEGORY_NAME kf.parts
@@ -87,7 +87,7 @@ ecm_qt_declare_logging_category(KF5Parts
     EXPORT KPARTSLOG
 )
 
-ecm_generate_export_header(KF5Parts
+ecm_generate_export_header(KF6Parts
     EXPORT_FILE_NAME ${KParts_BINARY_DIR}/kparts/kparts_export.h
     BASE_NAME KParts
     GROUP_BASE_NAME KF
@@ -97,24 +97,24 @@ ecm_generate_export_header(KF5Parts
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
-target_include_directories(KF5Parts
+target_include_directories(KF6Parts
     PUBLIC "$<BUILD_INTERFACE:${KParts_BINARY_DIR}>"
     INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KParts>"
 )
 
-target_link_libraries(KF5Parts PUBLIC  KF5::KIOWidgets #browserrun.h uses krun.h
-                                       KF5::XmlGui # essential to the technology
-                                       KF5::TextWidgets # needed for KFind, as interface
-                               PRIVATE KF5::I18n #few uses of i18n and i18nc, can be probably stripped down
-                                       KF5::IconThemes #only used by KPart::iconLoader()
+target_link_libraries(KF6Parts PUBLIC  KF6::KIOWidgets #browserrun.h uses krun.h
+                                       KF6::XmlGui # essential to the technology
+                                       KF6::TextWidgets # needed for KFind, as interface
+                               PRIVATE KF6::I18n #few uses of i18n and i18nc, can be probably stripped down
+                                       KF6::IconThemes #only used by KPart::iconLoader()
                       )
 
-set_target_properties(KF5Parts PROPERTIES VERSION   ${KPARTS_VERSION}
+set_target_properties(KF6Parts PROPERTIES VERSION   ${KPARTS_VERSION}
                                           SOVERSION ${KPARTS_SOVERSION}
                                           EXPORT_NAME Parts
 )
 
-install(TARGETS KF5Parts EXPORT KF5PartsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF6Parts EXPORT KF6PartsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(NOT EXCLUDE_DEPRECATED_BEFORE_AND_AT STREQUAL "CURRENT" AND EXCLUDE_DEPRECATED_BEFORE_AND_AT VERSION_LESS 5.100.0)
     install(FILES
@@ -142,9 +142,9 @@ ecm_qt_install_logging_categories(
 
 if(BUILD_QCH)
     ecm_add_qch(
-        KF5Parts_QCH
+        KF6Parts_QCH
         NAME KParts
-        BASE_NAME KF5Parts
+        BASE_NAME KF6Parts
         VERSION ${KF_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -152,9 +152,9 @@ if(BUILD_QCH)
             kde_terminal_interface.h
         MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         LINK_QCHS
-            KF5KIO_QCH
-            KF5XmlGui_QCH
-            KF5TextWidgets_QCH
+            KF6KIO_QCH
+            KF6XmlGui_QCH
+            KF6TextWidgets_QCH
         INCLUDE_DIRS
             ${CMAKE_BINARY_DIR}
             ${CMAKE_CURRENT_BINARY_DIR}
@@ -175,5 +175,5 @@ if(BUILD_QCH)
 endif()
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KParts LIB_NAME KF5Parts DEPS "KIOWidgets KXmlGui KTextWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KParts)
+ecm_generate_pri_file(BASE_NAME KParts LIB_NAME KF6Parts DEPS "KIOWidgets KXmlGui KTextWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KParts)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})

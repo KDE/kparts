@@ -13,9 +13,9 @@ elaborate widgets with a user-interface defined in terms of actions
 
 If you are using CMake, you need to have
 
-    find_package(KF5Parts NO_MODULE)
+    find_package(KF6Parts NO_MODULE)
 
-(or similar) in your CMakeLists.txt file, and you need to link to KF5::Parts.
+(or similar) in your CMakeLists.txt file, and you need to link to KF6::Parts.
 
 The main class is KParts::Part.  This, or one of its subclasses, is what authors
 of parts implement, and how users of parts interact with them.

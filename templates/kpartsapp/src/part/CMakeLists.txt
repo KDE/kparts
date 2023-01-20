@@ -11,8 +11,8 @@ target_sources(%{APPNAMELC}part PRIVATE
 kcoreaddons_desktop_to_json(%{APPNAMELC}part %{APPNAMELC}part.desktop)
 
 target_link_libraries(%{APPNAMELC}part
-    KF5::I18n
-    KF5::Parts
+    KF6::I18n
+    KF6::Parts
 )
 
 install(TARGETS %{APPNAMELC}part  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/parts)

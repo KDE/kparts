@@ -13,8 +13,8 @@ deprecated: false
 release: true
 libraries:
  - qmake: KParts
-   cmake: "KF5::Parts"
-cmakename: KF5Parts
+   cmake: "KF6::Parts"
+cmakename: KF6Parts
 
 public_lib: true
 group: Frameworks

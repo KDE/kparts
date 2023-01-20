@@ -5,7 +5,7 @@ include(ECMMarkAsTest)
 
 add_library(parts_test_interface INTERFACE)
 target_link_libraries(parts_test_interface INTERFACE
-    Qt${QT_MAJOR_VERSION}::Test KF5::Parts KF5::CoreAddons KF5::I18n KF5::XmlGui KF5::KIOCore
+    Qt${QT_MAJOR_VERSION}::Test KF6::Parts KF6::CoreAddons KF6::I18n KF6::XmlGui KF6::KIOCore
 )
 
 add_executable(kpartstest testmainwindow.cpp parts.cpp)
