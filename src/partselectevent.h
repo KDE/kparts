@@ -10,6 +10,7 @@
 
 #include <kparts/event.h>
 
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 103)
 namespace KParts
 {
 class Part;
@@ -20,10 +21,12 @@ class PartSelectEventPrivate;
  *
  * @short This event is sent when a part is selected or deselected.
  * @see KParts::PartManager::setSelectionPolicy
+ * @deprecated Since 5.72, for lack of usage.
  */
 class KPARTS_EXPORT PartSelectEvent : public Event
 {
 public:
+    KPARTS_DEPRECATED_VERSION_BELATED(5, 103, 5, 72, "For lack of usage.")
     PartSelectEvent(bool selected, Part *part, QWidget *widget);
     ~PartSelectEvent() override;
     bool selected() const;
@@ -31,6 +34,7 @@ public:
     Part *part() const;
     QWidget *widget() const;
 
+    KPARTS_DEPRECATED_VERSION_BELATED(5, 103, 5, 72, "For lack of usage.")
     static bool test(const QEvent *event);
 
 private:
@@ -43,4 +47,5 @@ private:
 
 } // namespace
 
+#endif
 #endif
