@@ -9,6 +9,8 @@
 #include "partselectevent.h"
 #include "event_p.h"
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 103)
+
 using namespace KParts;
 
 class KParts::PartSelectEventPrivate : public KParts::EventPrivate
@@ -61,3 +63,5 @@ bool PartSelectEvent::test(const QEvent *event)
 {
     return Event::test(event, PartSelectEventPrivate::s_strPartSelectEvent);
 }
+
+#endif
