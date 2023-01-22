@@ -10,7 +10,9 @@
 #include "kparts_logging.h"
 
 #include <KConfigGroup>
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 88)
 #include <KPluginLoader>
+#endif
 #include <KService>
 #include <KSharedConfig>
 #include <stack>
