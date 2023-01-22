@@ -185,6 +185,7 @@ protected:
     void setPluginLoadingMode(PluginLoadingMode loadingMode);
 #endif
 
+#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 103)
     /**
      * If you change the binary interface offered by your part, you can avoid crashes
      * from old plugins lying around by setting X-KDE-InterfaceVersion=2 in the
@@ -196,8 +197,11 @@ protected:
      *
      * For a KParts::Part: call this before setComponentData.
      * For a KParts::MainWindow: call this before createGUI.
+     * @deprecated Since 5.90, the concept of KPart plugins is deprecated, see docs of @ref KParts::Plugin class
      */
+    KPARTS_DEPRECATED_VERSION_BELATED(5, 103, 5, 90, "The concept of KPart plugins is deprecated, see docs of KParts::Plugin class")
     void setPluginInterfaceVersion(int version);
+#endif
 
 protected:
     PartBase(PartBasePrivate &dd);

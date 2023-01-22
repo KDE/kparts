@@ -103,9 +103,11 @@ void PartBase::setPluginLoadingMode(PluginLoadingMode loadingMode)
 }
 #endif
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 103)
 void KParts::PartBase::setPluginInterfaceVersion(int version)
 {
     Q_D(PartBase);
 
     d->m_pluginInterfaceVersion = version;
 }
+#endif
