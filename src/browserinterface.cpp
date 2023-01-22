@@ -24,30 +24,30 @@ BrowserInterface::~BrowserInterface()
 void BrowserInterface::callMethod(const char *name, const QVariant &argument)
 {
     // clang-format off
-    switch (argument.type()) {
-    case QVariant::Invalid:
+    switch (argument.typeId()) {
+    case QMetaType::UnknownType:
         break;
-    case QVariant::String:
+    case QMetaType::QString:
         QMetaObject::invokeMethod(this, name,
                                   Q_ARG(QString, argument.toString()));
         break;
-    case QVariant::StringList: {
+    case QMetaType::QStringList: {
         QStringList strLst = argument.toStringList();
         QMetaObject::invokeMethod(this, name,
                                   Q_ARG(QStringList*, &strLst));
         break;
     }
-    case QVariant::Int:
+    case QMetaType::Int:
         QMetaObject::invokeMethod(this, name,
                                   Q_ARG(int, argument.toInt()));
         break;
-    case QVariant::UInt: {
+    case QMetaType::UInt: {
         unsigned int i = argument.toUInt();
         QMetaObject::invokeMethod(this, name,
                                   Q_ARG(uint*, &i));
         break;
     }
-    case QVariant::Bool:
+    case QMetaType::Bool:
         QMetaObject::invokeMethod(this, name,
                                   Q_ARG(bool, argument.toBool()));
         break;

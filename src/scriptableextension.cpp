@@ -321,7 +321,7 @@ QString ScriptableLiveConnectExtension::toLC(const QVariant &in, bool *ok)
         return QStringLiteral("undefined");
     }
 
-    if (in.type() == QVariant::Bool) {
+    if (in.typeId() == QMetaType::Bool) {
         return in.toBool() ? QStringLiteral("true") : QStringLiteral("false");
     }
 

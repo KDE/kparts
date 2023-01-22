@@ -203,7 +203,7 @@ bool PartManager::eventFilter(QObject *obj, QEvent *ev)
         }
 
         if (mev) { // mouse press or mouse double-click event
-            pos = mev->globalPos();
+            pos = mev->globalPosition().toPoint();
             part = findPartFromWidget(w, pos);
         } else {
             part = findPartFromWidget(w);
@@ -457,7 +457,7 @@ const QList<Part *> PartManager::parts() const
 
 void PartManager::addManagedTopLevelWidget(const QWidget *topLevel)
 {
-    if (!topLevel->isTopLevel()) {
+    if (!topLevel->isWindow()) {
         return;
     }
 

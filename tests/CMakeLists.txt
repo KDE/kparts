@@ -1,11 +1,11 @@
-find_package(Qt${QT_MAJOR_VERSION}Test ${REQUIRED_QT_VERSION} REQUIRED)
-set_package_properties(Qt${QT_MAJOR_VERSION}Test PROPERTIES PURPOSE "Required for tests")
+find_package(Qt6Test ${REQUIRED_QT_VERSION} REQUIRED)
+set_package_properties(Qt6Test PROPERTIES PURPOSE "Required for tests")
 
 include(ECMMarkAsTest)
 
 add_library(parts_test_interface INTERFACE)
 target_link_libraries(parts_test_interface INTERFACE
-    Qt${QT_MAJOR_VERSION}::Test KF6::Parts KF6::CoreAddons KF6::I18n KF6::XmlGui KF6::KIOCore
+    Qt6::Test KF6::Parts KF6::CoreAddons KF6::I18n KF6::XmlGui KF6::KIOCore
 )
 
 add_executable(kpartstest testmainwindow.cpp parts.cpp)

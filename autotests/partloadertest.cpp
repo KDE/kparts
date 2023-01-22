@@ -102,7 +102,7 @@ private Q_SLOTS:
     void shouldInstantiatePart()
     {
         // GIVEN
-        const KPluginMetaData md(QStringLiteral("kf" QT_STRINGIFY(QT_VERSION_MAJOR) "/parts/notepadpart"));
+        const KPluginMetaData md(QStringLiteral("kf6/parts/notepadpart"));
         QVERIFY(md.isValid());
 
         QWidget parentWidget;

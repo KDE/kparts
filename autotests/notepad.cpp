@@ -63,9 +63,6 @@ bool NotepadPart::openFile()
     if (f.open(QIODevice::ReadOnly)) {
         QTextStream t(&f);
         // The default with Qt6 is UTF-8
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        t.setCodec("UTF-8");
-#endif
         s = t.readAll();
         f.close();
     }
@@ -84,9 +81,6 @@ bool NotepadPart::saveFile()
     QFile f(localFilePath());
     if (f.open(QIODevice::WriteOnly)) {
         QTextStream t(&f);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        t.setCodec("UTF-8");
-#endif
         t << m_edit->toPlainText();
         f.close();
         return true;
