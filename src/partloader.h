@@ -26,16 +26,6 @@ namespace KParts
  */
 namespace PartLoader
 {
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 88)
-namespace Private
-{
-/**
- * Helper for PartLoader::createPartInstanceForMimeType<T>
- * @internal
- */
-KPARTS_EXPORT QObject *createPartInstanceForMimeTypeHelper(const char *iface, const QString &mimeType, QWidget *parentWidget, QObject *parent, QString *error);
-}
-#endif
 
 /**
  * Locate all available KParts for a mimetype.

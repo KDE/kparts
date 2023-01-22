@@ -16,16 +16,6 @@ add_executable(normalktmtest normalktm.cpp parts.cpp)
 ecm_mark_as_test(normalktmtest)
 target_link_libraries(normalktmtest parts_test_interface)
 
-
-########### next target ###############
-
-if(NOT EXCLUDE_DEPRECATED_BEFORE_AND_AT STREQUAL "CURRENT" AND
-   EXCLUDE_DEPRECATED_BEFORE_AND_AT VERSION_LESS 5.90.0)
-    add_library(spellcheckplugin MODULE plugin_spellcheck.cpp)
-    target_link_libraries(spellcheckplugin parts_test_interface )
-    install(TARGETS spellcheckplugin  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-endif()
-
 ########### unit tests ###############
 
 MACRO(KPARTS_EXECUTABLE_TESTS)
@@ -41,14 +31,3 @@ KPARTS_EXECUTABLE_TESTS(
     openorsavequestion
     terminal_test
 )
-
-########### install files ###############
-
-# Normally this would be needed. For the test programs we can avoid that, see addResourceDir.
-#install( FILES notepadpart.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/notepadpart )
-#install( FILES partviewer_shell.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/partviewer )
-#install( FILES kpartstest_shell.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/kpartstest )
-#install( FILES kpartstest_part1.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/kpartstestpart )
-
-# To test plugins without installing them, try "ln -s kpartplugins <srcdir>"
-#install( FILES plugin_foobar.rc plugin_spellcheck.rc  DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/notepadpart/kpartplugins )

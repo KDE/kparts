@@ -10,20 +10,11 @@
 #include "kparts_logging.h"
 
 #include <KConfigGroup>
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 88)
-#include <KPluginLoader>
-#endif
 #include <KService>
 #include <KSharedConfig>
-#include <stack>
 
-#include <kparts_version.h> // TODO KF6 REMOVE
-#if KPARTS_VERSION <= QT_VERSION_CHECK(5, 900, 0)
-#include <KMimeTypeTrader>
-#include <KPluginInfo>
 #include <QMimeDatabase>
 #include <QMimeType>
-#endif
 
 // We still use desktop files for translated descriptions in keditfiletype,
 // and desktop file names then end up in mimeapps.list.
@@ -83,32 +74,6 @@ QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mim
     };
     QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("kf" QT_STRINGIFY(QT_VERSION_MAJOR) "/parts"), supportsMime);
 
-#if KSERVICE_BUILD_DEPRECATED_SINCE(5, 0)
-    // KF5 compat code
-
-    // I would compare library filenames, but KPluginMetaData::fileName looks like kf5/kparts/okteta and KService::library() is a full path
-    // The user actually sees translated names, let's ensure those don't look duplicated in the list.
-    auto isPluginForName = [](const QString &name) {
-        return [name](const KPluginMetaData &plugin) {
-            return plugin.name() == name;
-        };
-    };
-
-    QT_WARNING_PUSH
-    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
-    const KService::List offers = KMimeTypeTrader::self()->query(mimeType, QStringLiteral("KParts/ReadOnlyPart"));
-    for (const KService::Ptr &service : offers) {
-        KPluginInfo info(service);
-        if (info.isValid()) {
-            if (std::find_if(plugins.cbegin(), plugins.cend(), isPluginForName(info.name())) == plugins.cend()) {
-                plugins.append(info.toMetaData());
-            }
-        }
-    }
-    QT_WARNING_POP
-#endif
-
     auto orderPredicate = [&](const KPluginMetaData &left, const KPluginMetaData &right) {
         // We filtered based on "supports mimetype", but this didn't order from most-specific to least-specific.
         const int leftDistance = pluginDistanceToMimeType(left, mimeType);
@@ -151,55 +116,3 @@ QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mim
     //}
     return plugins;
 }
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 88)
-class KPluginFactoryHack : public KPluginFactory
-{
-public:
-    QObject *create(const char *iface, QWidget *parentWidget, QObject *parent, const QVariantList &args, const QString &keyword) override
-    {
-        return KPluginFactory::create(iface, parentWidget, parent, args, keyword);
-    }
-};
-
-QObject *KParts::PartLoader::Private::createPartInstanceForMimeTypeHelper(const char *iface,
-                                                                          const QString &mimeType,
-                                                                          QWidget *parentWidget,
-                                                                          QObject *parent,
-                                                                          QString *error)
-{
-    QT_WARNING_PUSH
-    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
-    const QVector<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
-    for (const KPluginMetaData &plugin : plugins) {
-        KPluginLoader pluginLoader(plugin.fileName());
-        const QString pluginKeyword;
-        KPluginFactory *factory = pluginLoader.factory();
-        if (factory) {
-            QObject *obj = static_cast<KPluginFactoryHack *>(factory)->create(iface, parentWidget, parent, QVariantList(), pluginKeyword);
-            if (error) {
-                if (!obj) {
-                    *error = i18n("The plugin '%1' does not provide an interface '%2' with keyword '%3'",
-                                  plugin.fileName(),
-                                  QString::fromLatin1(iface),
-                                  pluginKeyword);
-                } else {
-                    error->clear();
-                }
-            }
-            if (obj) {
-                return obj;
-            }
-        } else if (error) {
-            *error = pluginLoader.errorString();
-        }
-        pluginLoader.unload();
-    }
-    if (error) {
-        *error = i18n("No part was found for mimeType %1", mimeType);
-    }
-    return nullptr;
-    QT_WARNING_POP
-}
-#endif

@@ -168,41 +168,6 @@ public:
      */
     virtual QWidget *activeWidget() const;
 
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
-    /**
-     * Sets the selected part.
-     *
-     * The selected part receives selection events.
-     *
-     * @p widget can be used to specify which widget was responsible for the selection.
-     * This is important if you have multiple views for a document/part , like in KOffice .
-     *
-     * @deprecated Since 5.72, for lack of usage.
-     */
-    KPARTS_DEPRECATED_VERSION(5, 72, "Deprecated for lack of usage")
-    virtual void setSelectedPart(Part *part, QWidget *widget = nullptr);
-#endif
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
-    /**
-     * Returns the current selected part.
-     *
-     * @deprecated Since 5.72, for lack of usage.
-     */
-    KPARTS_DEPRECATED_VERSION(5, 72, "Deprecated for lack of usage")
-    virtual Part *selectedPart() const;
-#endif
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
-    /**
-     * Returns the selected widget of the current selected part (see selectedPart ).
-     *
-     * @deprecated Since 5.72, for lack of usage.
-     */
-    KPARTS_DEPRECATED_VERSION(5, 72, "Deprecated for lack of usage")
-    virtual QWidget *selectedWidget() const;
-#endif
-
     /**
      * Returns the list of parts being managed by the partmanager.
      */

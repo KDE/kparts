@@ -7,7 +7,6 @@
 #ifndef BROWSEROPENORSAVEQUESTION_H
 #define BROWSEROPENORSAVEQUESTION_H
 
-#include <kparts/browserrun.h>
 #include <kparts/kparts_export.h>
 
 #include <KService>

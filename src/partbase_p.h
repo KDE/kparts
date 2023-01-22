@@ -11,10 +11,6 @@
 
 #include "partbase.h"
 
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-#include <KAboutData>
-#endif
-
 namespace KParts
 {
 class PartBasePrivate
@@ -26,9 +22,6 @@ public:
         : q_ptr(qq)
         , m_pluginInterfaceVersion(0)
         , m_obj(nullptr)
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-        , m_componentData(KAboutData::applicationData())
-#endif
     {
     }
 
@@ -36,30 +29,9 @@ public:
     {
     }
 
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-    // allows the KPart-subclasses to catch in its overridden method
-    // the deprecated setting of KAboutData and update its KPluginMetaData to that
-    virtual void setComponentData(const KAboutData &componentData)
-    {
-        m_componentData = componentData;
-    }
-    const KAboutData &componentData() const
-    {
-        return m_componentData;
-    }
-#endif
-
     PartBase *q_ptr;
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
-    PartBase::PluginLoadingMode m_pluginLoadingMode = PartBase::LoadPlugins;
-#endif
     int m_pluginInterfaceVersion;
     QObject *m_obj;
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-private:
-    KAboutData m_componentData;
-#endif
 };
 
 } // namespace

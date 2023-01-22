@@ -76,24 +76,6 @@ void ReadOnlyPart::setLocalFilePath(const QString &localFilePath)
     d->m_file = localFilePath;
 }
 
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 0)
-bool ReadOnlyPart::isLocalFileTemporary() const
-{
-    Q_D(const ReadOnlyPart);
-
-    return d->m_bTemp;
-}
-#endif
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 0)
-void ReadOnlyPart::setLocalFileTemporary(bool temp)
-{
-    Q_D(ReadOnlyPart);
-
-    d->m_bTemp = temp;
-}
-#endif
-
 void ReadOnlyPart::setProgressInfoEnabled(bool show)
 {
     Q_D(ReadOnlyPart);
@@ -107,15 +89,6 @@ bool ReadOnlyPart::isProgressInfoEnabled() const
 
     return d->m_showProgressInfo;
 }
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(3, 0)
-void ReadOnlyPart::showProgressInfo(bool show)
-{
-    Q_D(ReadOnlyPart);
-
-    d->m_showProgressInfo = show;
-}
-#endif
 
 bool ReadOnlyPart::openUrl(const QUrl &url)
 {

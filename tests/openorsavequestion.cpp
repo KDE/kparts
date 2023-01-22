@@ -6,6 +6,7 @@
 
 #include <QApplication>
 #include <QDebug>
+#include <QUrl>
 #include <browseropenorsavequestion.h>
 
 using namespace KParts;

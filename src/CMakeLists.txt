@@ -4,12 +4,10 @@ add_library(KF6::Parts ALIAS KF6Parts)
 target_sources(KF6Parts PRIVATE
     partbase.cpp
     part.cpp
-    partmetadatautil_p.cpp
     partloader.cpp
     openurlarguments.cpp
     readonlypart.cpp
     readwritepart.cpp
-    plugin.cpp
     partmanager.cpp
     mainwindow.cpp
     event.cpp
@@ -17,14 +15,12 @@ target_sources(KF6Parts PRIVATE
     partactivateevent.cpp
     partselectevent.cpp
     browserextension.cpp
-    browserhostextension.cpp
     browserarguments.cpp
     liveconnectextension.cpp
     openurlevent.cpp
     windowargs.cpp
     historyprovider.cpp
     browserinterface.cpp
-    browserrun.cpp
     browseropenorsavequestion.cpp
     statusbarextension.cpp
     scriptableextension.cpp
@@ -42,10 +38,8 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
     HEADER_NAMES
         BrowserArguments
         BrowserExtension
-        BrowserHostExtension
         BrowserInterface
         BrowserOpenOrSaveQuestion
-        BrowserRun
         Event
         FileInfoExtension
         GUIActivateEvent
@@ -64,7 +58,6 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
         PartLoader
         PartManager
         PartSelectEvent
-        Plugin
         ReadOnlyPart
         ReadWritePart
         ScriptableExtension
@@ -93,7 +86,7 @@ ecm_generate_export_header(KF6Parts
     GROUP_BASE_NAME KF
     VERSION ${KF_VERSION}
     DEPRECATED_BASE_VERSION 0
-    DEPRECATION_VERSIONS 3.0 4.4 5.0 5.72 5.77 5.78 5.80 5.81 5.82 5.83 5.88 5.90
+    DEPRECATION_VERSIONS
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
@@ -102,12 +95,16 @@ target_include_directories(KF6Parts
     INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KParts>"
 )
 
-target_link_libraries(KF6Parts PUBLIC  KF6::KIOWidgets #browserrun.h uses krun.h
-                                       KF6::XmlGui # essential to the technology
-                                       KF6::TextWidgets # needed for KFind, as interface
-                               PRIVATE KF6::I18n #few uses of i18n and i18nc, can be probably stripped down
-                                       KF6::IconThemes #only used by KPart::iconLoader()
-                      )
+target_link_libraries(KF6Parts
+    PUBLIC
+        KF6::KIOCore # KFileItem used in FileInfoExtension API
+        KF6::XmlGui # essential to the technology
+        KF6::TextWidgets # needed for KFind, as interface
+        KF6::I18n # TODO; accidentally introduced KLocalizedString into partloader.h, make private again
+    PRIVATE
+        KF6::JobWidgets
+        KF6::KIOWidgets
+)
 
 set_target_properties(KF6Parts PROPERTIES VERSION   ${KPARTS_VERSION}
                                           SOVERSION ${KPARTS_SOVERSION}
@@ -115,16 +112,6 @@ set_target_properties(KF6Parts PROPERTIES VERSION   ${KPARTS_VERSION}
 )
 
 install(TARGETS KF6Parts EXPORT KF6PartsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
-
-if(NOT EXCLUDE_DEPRECATED_BEFORE_AND_AT STREQUAL "CURRENT" AND EXCLUDE_DEPRECATED_BEFORE_AND_AT VERSION_LESS 5.100.0)
-    install(FILES
-      kpart.desktop
-      kparts-readonlypart.desktop
-      kparts-readwritepart.desktop
-      browserview.desktop
-      DESTINATION ${KDE_INSTALL_KSERVICETYPESDIR}
-    )
-endif()
 
 install(FILES
   ${KParts_BINARY_DIR}/kparts/kparts_export.h
@@ -166,8 +153,6 @@ if(BUILD_QCH)
             "KPARTS_DEPRECATED_VERSION_BELATED(x, y, xt, yt, t)"
             "KPARTS_DEPRECATED_VERSION(x, y, t)"
             "KPARTS_ENUMERATOR_DEPRECATED_VERSION_BELATED(x, y, xt, yt, t)"
-        PREDEFINED_MACROS
-            "KIOWIDGETS_ENABLE_DEPRECATED_SINCE(x, y)=1"
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel

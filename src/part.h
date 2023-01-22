@@ -12,7 +12,6 @@
 #include <kparts/partbase.h>
 
 class KPluginMetaData;
-class KIconLoader;
 class QWidget;
 class QEvent;
 class QPoint;
@@ -25,11 +24,6 @@ namespace KParts
 class PartManager;
 class PartPrivate;
 class PartActivateEvent;
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
-class PartSelectEvent;
-#endif
-
 class GUIActivateEvent;
 
 /**
@@ -78,24 +72,6 @@ public:
      */
     ~Part() override;
 
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-    /**
-     * Embed this part into a host widget.
-     *
-     * You don't need to do this if you created the widget with the
-     * correct parent widget - this is just a QWidget::reparent().
-     * Note that the Part is still the holder
-     * of the QWidget, meaning that if you delete the Part,
-     * then the widget gets destroyed as well, and vice-versa.
-     * This method is not recommended since creating the widget with the correct
-     * parent is simpler anyway.
-     *
-     * @deprecated Since 5.77, for lack of usage.
-     */
-    KPARTS_DEPRECATED_VERSION(5, 77, "Deprecated for lack of usage")
-    virtual void embed(QWidget *parentWidget);
-#endif
-
     /**
      * @return The widget defined by this part, set by setWidget().
      */
@@ -142,44 +118,10 @@ public:
      */
     virtual Part *hitTest(QWidget *widget, const QPoint &globalPos);
 
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
-    /**
-     *  @param selectable Indicates whether the part is selectable or not.
-     *
-     * @deprecated Since 5.72, for lack of usage.
-     */
-    KPARTS_DEPRECATED_VERSION(5, 72, "Deprecated for lack of usage")
-    virtual void setSelectable(bool selectable);
-#endif
-
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 72)
-    /**
-     *  Returns whether the part is selectable or not.
-     *
-     * @deprecated Since 5.72, for lack of usage.
-     */
-    KPARTS_DEPRECATED_VERSION(5, 72, "Deprecated for lack of usage")
-    bool isSelectable() const;
-#endif
-
     /**
      * @since 5.77
      */
     KPluginMetaData metaData() const;
-
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 82)
-    /**
-     * Use this icon loader to load any icons that are specific to this part,
-     * i.e. icons installed into this part's own directories as opposed to standard
-     * kde icons.
-     *
-     * Make sure to call setMetaData (or deprecated setComponentData) before calling iconLoader.
-     * @deprecated since 5.82, use QIcon::fromTheme() and set QIcon::setThemeSearchPaths()
-     * or QIcon::setFallbackSearchPaths appropriately.
-     */
-    KPARTS_DEPRECATED_VERSION(5, 82, "See API docs.")
-    KIconLoader *iconLoader();
-#endif
 
 Q_SIGNALS:
     /**
@@ -216,18 +158,6 @@ protected:
      */
     virtual void partActivateEvent(PartActivateEvent *event);
 
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
-    /**
-     * Convenience method which is called when the Part received a
-     * PartSelectEvent .
-     * Reimplement this if you don't want to reimplement event and
-     * test for the event yourself or even install an event filter.
-     *
-     * @deprecated Since 5.72, for lack of usage.
-     */
-    virtual void partSelectEvent(PartSelectEvent *event);
-#endif
-
     /**
      * Convenience method which is called when the Part received a
      * GUIActivateEvent .
@@ -241,19 +171,6 @@ protected:
      * @return a container widget owned by the Part's GUI.
      */
     QWidget *hostContainer(const QString &containerName);
-
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 90)
-    /**
-     * Load this part's plugins now.
-     * Call this at the end of the part constructor, unless you are still using the
-     * deprecated setComponentData(componentData, true)).
-     * @since 4.1
-     * @deprecated Since 5.90, the concept of KPart plugins is deprecated, see docs of @ref KParts::Plugin class
-     */
-    KPARTS_DEPRECATED_VERSION(5, 90, "The concept of KPart plugins is deprecated, see docs of KParts::Plugin class")
-    void loadPlugins();
-    using PartBase::loadPlugins;
-#endif
 
     /**
      * Set the meta data for this part.

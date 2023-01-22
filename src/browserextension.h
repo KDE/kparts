@@ -107,12 +107,6 @@ public:
      */
     enum PopupFlag {
         DefaultPopupItems = 0x0000, /**< default value, no additional menu item */
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 27)
-        ShowNavigationItems KPARTS_ENUMERATOR_DEPRECATED_VERSION_BELATED(5, 82, 5, 27, "No effect anymore") =
-            0x0001, /**< @deprecated since 5.27, no effect anymore */
-        ShowUp KPARTS_ENUMERATOR_DEPRECATED_VERSION_BELATED(5, 82, 5, 27, "No effect anymore") = 0x0002, /**< @deprecated since 5.27, no effect anymore */
-        ShowReload KPARTS_ENUMERATOR_DEPRECATED_VERSION_BELATED(5, 82, 5, 27, "No effect anymore") = 0x0004, /**< @deprecated since 5.27, no effect anymore */
-#endif
         ShowBookmark = 0x0008, /**< show "add to bookmarks" (usually not done on the local filesystem) */
         ShowCreateDirectory = 0x0010, /**<  show "create directory" (usually only done on the background of the view, or
                                        *                      in hierarchical views like directory trees, where the new dir would be visible) */
@@ -214,10 +208,10 @@ public:
 
     typedef QMap<QByteArray, QByteArray> ActionSlotMap;
 
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 83)
     /**
-     * Returns a map containing the action names as keys and corresponding
+     * Returns a pointer to the static map containing the action names as keys and corresponding
      * SLOT()'ified method names as data entries.
+     * The map is created if it doesn't exist yet.
      *
      * This is very useful for
      * the host component, when connecting the own signals with the
@@ -243,15 +237,7 @@ public:
      *
      * (where "mapIterator" is your ActionSlotMap iterator)
      */
-    KPARTS_DEPRECATED_VERSION(5, 83, "Use actionSlotMapPtr instead")
-    static ActionSlotMap actionSlotMap();
-#endif
-
-    /**
-     * @return a pointer to the static action-slot map. Preferred method to get it.
-     * The map is created if it doesn't exist yet
-     */
-    static ActionSlotMap *actionSlotMapPtr(); // TODO KF6 Rename to actionSlotMap
+    static ActionSlotMap *actionSlotMap();
 
     /**
      * Queries @p obj for a child object which inherits from this
@@ -414,26 +400,6 @@ Q_SIGNALS:
      * about those URLs, including size, permissions etc.)
      */
     void selectionInfo(const KFileItemList &items);
-
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 88)
-    /**
-     * Inform the hosting application about the current selection.
-     * Used when some text is selected.
-     * @deprecated Since 5.88, deprecated for lack of usage
-     */
-    KPARTS_DEPRECATED_VERSION(5, 88, "Deprecated for lack of usage")
-    void selectionInfo(const QString &text);
-#endif
-
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 88)
-    /**
-     * Inform the hosting application about the current selection.
-     * Used when a set of URLs is selected.
-     * @deprecated Since 5.88, use selectionInfo(KFileItemList) instead
-     */
-    KPARTS_DEPRECATED_VERSION(5, 88, "Use selectionInfo(KFileItemList) instead")
-    void selectionInfo(const QList<QUrl> &urls);
-#endif
 
     /**
      * Inform the hosting application that the user moved the mouse over an item.

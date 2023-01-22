@@ -57,10 +57,6 @@ Part1::Part1(QObject *parent, QWidget *parentWidget)
     connect(mailForward, &QAction::triggered, this, &Part1::slotFooBar);
     actionCollection()->addAction(QStringLiteral("p1_foo_bar"), mailForward);
     menu->addAction(mailForward);
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
-    loadPlugins();
-#endif
 }
 
 Part1::~Part1()
@@ -125,8 +121,6 @@ Part2::Part2(QObject *parent, QWidget *parentWidget)
     // strong focus for it, otherwise we get the
     // the famous activating-file-menu-switches-part bug.
     w->setFocusPolicy(Qt::ClickFocus);
-
-    // loadPlugins(); // in case we want to allow plugins for this part.
 }
 
 Part2::~Part2()

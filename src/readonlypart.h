@@ -83,14 +83,6 @@ public:
      */
     bool isProgressInfoEnabled() const;
 
-#if KPARTS_ENABLE_DEPRECATED_SINCE(3, 0)
-    /**
-     * @deprecated Since 3.0, use setProgressInfoEnabled(bool)
-     */
-    KPARTS_DEPRECATED_VERSION(3, 0, "Use ReadOnlyPart::setProgressInfoEnabled(bool)")
-    void showProgressInfo(bool show);
-#endif
-
 public Q_SLOTS:
     /**
      * Only reimplement this if you don't want the network transparency support
@@ -224,23 +216,7 @@ Q_SIGNALS:
      * Hosting applications will want to know when the process of loading the data
      * is finished, so that they can access the data when everything is loaded.
      **/
-    void completed(); // clazy:exclude=overloaded-signal
-
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 80)
-    /**
-     * Same as the above signal except it indicates whether there is
-     * a pending action to be executed on a delay timer. An example of
-     * this is the meta-refresh tags on web pages used to reload/redirect
-     * after a certain period of time. This signal is useful if you want
-     * to give the user the ability to cancel such pending actions.
-     *
-     * @p pendingAction true if a pending action exists, false otherwise.
-     *
-     * @deprecated since 5.80, use the KParts::ReadOnlyPart::completedWithPendingAction() signal
-     */
-    KPARTS_DEPRECATED_VERSION(5, 81, "Use the KParts::ReadOnlyPart::completedWithPendingAction() signal")
-    void completed(bool pendingAction); // clazy:exclude=overloaded-signal
-#endif
+    void completed();
 
     /**
      * This signal is similar to the @c KParts::ReadOnlyPart::completed() signal
@@ -296,20 +272,6 @@ protected:
      * (which gets the event after the PartActivateEvent events have been sent).
      */
     void guiActivateEvent(GUIActivateEvent *event) override;
-
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * @internal
-     */
-    KPARTS_DEPRECATED_VERSION(5, 0, "Do not use feature")
-    bool isLocalFileTemporary() const;
-
-    /**
-     * @internal
-     */
-    KPARTS_DEPRECATED_VERSION(5, 0, "Do not use feature")
-    void setLocalFileTemporary(bool temp);
-#endif
 
     /**
      * Sets the URL associated with this part.

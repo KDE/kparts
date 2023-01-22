@@ -9,8 +9,6 @@
 #include "partbase.h"
 #include "partbase_p.h"
 
-#include "plugin.h"
-
 using namespace KParts;
 
 PartBase::PartBase()
@@ -38,70 +36,6 @@ QObject *PartBase::partObject() const
 
     return d->m_obj;
 }
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-KAboutData PartBase::componentData() const
-{
-    Q_D(const PartBase);
-
-    return d->componentData();
-}
-#endif
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-void PartBase::setComponentData(const KAboutData &componentData)
-{
-    setComponentData(componentData, true);
-}
-#endif
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-void PartBase::setComponentData(const KAboutData &pluginData, bool bLoadPlugins)
-{
-    Q_D(PartBase);
-
-    d->setComponentData(pluginData);
-
-    // backward-compatible registration, usage deprecated
-#if KCOREADDONS_BUILD_DEPRECATED_SINCE(5, 76)
-    QT_WARNING_PUSH
-    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
-    KAboutData::registerPluginData(pluginData);
-    QT_WARNING_POP
-#endif
-
-    KXMLGUIClient::setComponentName(pluginData.componentName(), pluginData.displayName());
-    if (bLoadPlugins) {
-        loadPlugins(d->m_obj, this, pluginData.componentName());
-    }
-}
-#endif
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-void PartBase::loadPlugins(QObject *parent, KXMLGUIClient *parentGUIClient, const KAboutData &instance)
-{
-    loadPlugins(parent, parentGUIClient, instance.componentName());
-}
-#endif
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
-void PartBase::loadPlugins(QObject *parent, KXMLGUIClient *parentGuiClient, const QString &parentInstanceName)
-{
-    Q_D(PartBase);
-
-    if (d->m_pluginLoadingMode != DoNotLoadPlugins) {
-        Plugin::loadPlugins(parent, parentGuiClient, parentInstanceName, d->m_pluginLoadingMode == LoadPlugins, d->m_pluginInterfaceVersion);
-    }
-}
-
-void PartBase::setPluginLoadingMode(PluginLoadingMode loadingMode)
-{
-    Q_D(PartBase);
-
-    d->m_pluginLoadingMode = loadingMode;
-}
-#endif
 
 void KParts::PartBase::setPluginInterfaceVersion(int version)
 {

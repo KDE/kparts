@@ -11,9 +11,6 @@
 
 #include "part.h"
 #include "partbase_p.h"
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-#include "partmetadatautil_p.h"
-#endif
 // KF
 #include <KPluginMetaData>
 // Qt
@@ -29,13 +26,7 @@ public:
 
     explicit PartPrivate(Part *qq)
         : PartBasePrivate(qq)
-        , m_iconLoader(nullptr)
-        ,
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
-        m_bSelectable(true)
-        ,
-#endif
-        m_autoDeleteWidget(true)
+        , m_autoDeleteWidget(true)
         , m_autoDeletePart(true)
         , m_manager(nullptr)
     {
@@ -45,19 +36,7 @@ public:
     {
     }
 
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 77)
-    void setComponentData(const KAboutData &componentData) override
-    {
-        m_metaData = PartMetaDataUtil::fromKAboutData(componentData);
-        PartBasePrivate::setComponentData(componentData);
-    }
-#endif
-
     KPluginMetaData m_metaData;
-    KIconLoader *m_iconLoader;
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 72)
-    bool m_bSelectable;
-#endif
     bool m_autoDeleteWidget;
     bool m_autoDeletePart;
     PartManager *m_manager;

@@ -40,7 +40,6 @@ find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core W
 find_package(KF6Config ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6CoreAddons ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6I18n ${KF_DEP_VERSION} REQUIRED)
-find_package(KF6IconThemes ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6KIO ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6JobWidgets ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6Service ${KF_DEP_VERSION} REQUIRED)
@@ -50,10 +49,7 @@ find_package(KF6XmlGui ${KF_DEP_VERSION} REQUIRED)
 
 ecm_set_disabled_deprecation_versions(
   QT 5.15.2
-  KF 5.97
-  KIOWIDGETS 5.70 # We need KRun for BrowserRun
-  KCOREADDONS 5.64 # We need KAboutData::fromPluginMetaData
-  KSERVICE 5.81 # We need KMimeTypeTrader and KPluginInfo(KService)
+    KF 5.240.0
 )
 
 if(BUILD_TESTING)

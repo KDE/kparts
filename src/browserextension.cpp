@@ -299,14 +299,7 @@ QString BrowserExtension::actionText(const char *name) const
     return QString();
 }
 
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 83)
-BrowserExtension::ActionSlotMap BrowserExtension::actionSlotMap()
-{
-    return *actionSlotMapPtr();
-}
-#endif
-
-BrowserExtension::ActionSlotMap *BrowserExtension::actionSlotMapPtr()
+BrowserExtension::ActionSlotMap *BrowserExtension::actionSlotMap()
 {
     if (s_actionSlotMap()->isEmpty()) {
         BrowserExtensionPrivate::createActionSlotMap();

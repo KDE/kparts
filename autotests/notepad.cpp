@@ -37,11 +37,6 @@ NotepadPart::NotepadPart(QWidget *parentWidget, QObject *parent, const KPluginMe
     setXMLFile(QStringLiteral("notepadpart.rc")); // will be found in the qrc resource
 
     setReadWrite(true);
-
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
-    // Always write this as the last line of your constructor
-    loadPlugins();
-#endif
 }
 
 NotepadPart::~NotepadPart()

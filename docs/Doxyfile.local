@@ -2,7 +2,6 @@
 
 # define so that deprecated API is not skipped
 PREDEFINED += \
-    "KIOWIDGETS_ENABLE_DEPRECATED_SINCE(x, y)=1" \
     "KPARTS_ENABLE_DEPRECATED_SINCE(x, y)=1" \
     "KPARTS_BUILD_DEPRECATED_SINCE(x, y)=1" \
     "KPARTS_DEPRECATED_VERSION(x, y, t)=" \

@@ -10,7 +10,6 @@
 
 #include "guiactivateevent.h"
 #include "part.h"
-#include "plugin.h"
 
 #include <KAboutData>
 #include <KActionCollection>
@@ -84,9 +83,6 @@ void MainWindow::createGUI(Part *part)
     }
 
     if (!d->m_bShellGUIActivated) {
-#if KPARTS_BUILD_DEPRECATED_SINCE(5, 90)
-        loadPlugins(this, this, KAboutData::applicationData().componentName());
-#endif
         createShellGUI();
         d->m_bShellGUIActivated = true;
     }
