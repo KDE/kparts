@@ -20,7 +20,9 @@ public:
 
     PartBasePrivate(PartBase *qq)
         : q_ptr(qq)
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 103)
         , m_pluginInterfaceVersion(0)
+#endif
         , m_obj(nullptr)
     {
     }
@@ -30,7 +32,9 @@ public:
     }
 
     PartBase *q_ptr;
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 103)
     int m_pluginInterfaceVersion;
+#endif
     QObject *m_obj;
 };
 

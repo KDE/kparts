@@ -37,9 +37,11 @@ QObject *PartBase::partObject() const
     return d->m_obj;
 }
 
+#if KPARTS_BUILD_DEPRECATED_SINCE(5, 103)
 void KParts::PartBase::setPluginInterfaceVersion(int version)
 {
     Q_D(PartBase);
 
     d->m_pluginInterfaceVersion = version;
 }
+#endif
