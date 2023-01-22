@@ -10,6 +10,7 @@
 #include "kparts_logging.h"
 
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KPluginLoader>
 #include <KService>
 #include <KSharedConfig>
@@ -149,6 +150,27 @@ QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mim
     //}
     return plugins;
 }
+
+void KParts::PartLoader::Private::getErrorStrings(QString *errorString, QString *errorText, const QString &argument, ErrorType type)
+{
+    switch (type) {
+    case CouldNotLoadPlugin:
+        *errorString = i18n("KPluginFactory could not load the plugin: %1", argument);
+        *errorText = QStringLiteral("KPluginFactory could not load the plugin: %1").arg(argument);
+        break;
+    case NoPartFoundForMimeType:
+        *errorString = i18n("No part was found for mimeType %1", argument);
+        *errorText = QStringLiteral("No part was found for mimeType %1").arg(argument);
+        break;
+    case NoPartInstantiatedForMimeType:
+        *errorString = i18n("No part could be instantiated for mimeType %1", argument);
+        *errorText = QStringLiteral("No part could be instantiated for mimeType %1").arg(argument);
+        break;
+    default:
+        qCWarning(KPARTSLOG) << "PartLoader::Private::getErrorStrings got unexpected error type" << type;
+        break;
+    }
+};
 
 #if KPARTS_BUILD_DEPRECATED_SINCE(5, 88)
 class KPluginFactoryHack : public KPluginFactory
