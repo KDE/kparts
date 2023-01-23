@@ -8,7 +8,6 @@
 #ifndef KPARTS_PARTLOADER_H
 #define KPARTS_PARTLOADER_H
 
-#include <KLocalizedString>
 #include <KPluginFactory>
 #include <KPluginMetaData>
 #include <QObject>
@@ -26,6 +25,24 @@ namespace KParts
  */
 namespace PartLoader
 {
+namespace Private
+{
+
+enum ErrorType {
+    CouldNotLoadPlugin,
+    NoPartFoundForMimeType,
+    NoPartInstantiatedForMimeType,
+};
+
+/**
+ * @internal
+ * @param errorString translated, user-visible error string
+ * @param errorText untranslated error text
+ * @param argument argument for the text
+ */
+KPARTS_EXPORT void getErrorStrings(QString *errorString, QString *errorText, const QString &argument, ErrorType type);
+
+}
 
 /**
  * Locate all available KParts for a mimetype.
@@ -82,8 +99,7 @@ instantiatePart(const KPluginMetaData &data, QWidget *parentWidget = nullptr, QO
     T *instance = factoryResult.plugin->create<T>(parentWidget, parent, args);
     if (!instance) {
         const QString fileName = data.fileName();
-        result.errorString = QObject::tr("KPluginFactory could not load the plugin: %1").arg(fileName);
-        result.errorText = QStringLiteral("KPluginFactory could not load the plugin: %1").arg(fileName);
+        Private::getErrorStrings(&result.errorString, &result.errorText, fileName, Private::CouldNotLoadPlugin);
         result.errorReason = KPluginFactory::INVALID_KPLUGINFACTORY_INSTANTIATION;
     } else {
         result.plugin = instance;
@@ -126,8 +142,7 @@ instantiatePartForMimeType(const QString &mimeType, QWidget *parentWidget = null
     if (plugins.isEmpty()) {
         KPluginFactory::Result<T> errorResult;
         errorResult.errorReason = KPluginFactory::ResultErrorReason::INVALID_PLUGIN;
-        errorResult.errorString = i18n("No part was found for mimeType %1", mimeType);
-        errorResult.errorText = QStringLiteral("No part was found for mimeType %1").arg(mimeType);
+        Private::getErrorStrings(&errorResult.errorString, &errorResult.errorText, mimeType, Private::NoPartFoundForMimeType);
 
         return errorResult;
     }
@@ -142,8 +157,7 @@ instantiatePartForMimeType(const QString &mimeType, QWidget *parentWidget = null
 
     KPluginFactory::Result<T> errorResult;
     errorResult.errorReason = KPluginFactory::ResultErrorReason::INVALID_PLUGIN;
-    errorResult.errorString = i18n("No part could be instantiated for mimeType %1", mimeType);
-    errorResult.errorText = QStringLiteral("No part could be instantiated for mimeType %1").arg(mimeType);
+    Private::getErrorStrings(&errorResult.errorString, &errorResult.errorText, mimeType, Private::NoPartInstantiatedForMimeType);
 
     return errorResult;
 }

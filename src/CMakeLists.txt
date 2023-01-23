@@ -100,8 +100,8 @@ target_link_libraries(KF6Parts
         KF6::KIOCore # KFileItem used in FileInfoExtension API
         KF6::XmlGui # essential to the technology
         KF6::TextWidgets # needed for KFind, as interface
-        KF6::I18n # TODO; accidentally introduced KLocalizedString into partloader.h, make private again
     PRIVATE
+        KF6::I18n
         KF6::JobWidgets
         KF6::KIOWidgets
 )
