@@ -54,24 +54,6 @@ public:
     void setPartObject(QObject *object);
     QObject *partObject() const;
 
-#if KPARTS_ENABLE_DEPRECATED_SINCE(5, 103)
-    /**
-     * If you change the binary interface offered by your part, you can avoid crashes
-     * from old plugins lying around by setting X-KDE-InterfaceVersion=2 in the
-     * .desktop files of the plugins, and calling setPluginInterfaceVersion( 2 ), so that
-     * the old plugins are not loaded. Increase both numbers every time a
-     * binary incompatible change in the application's plugin interface is made.
-     *
-     * @param version the interface version that plugins must have in order to be loaded.
-     *
-     * For a KParts::Part: call this before setComponentData.
-     * For a KParts::MainWindow: call this before createGUI.
-     * @deprecated Since 5.90, the concept of KPart plugins is deprecated, see docs of @ref KParts::Plugin class
-     */
-    KPARTS_DEPRECATED_VERSION_BELATED(5, 103, 5, 90, "The concept of KPart plugins is deprecated, see docs of KParts::Plugin class")
-    void setPluginInterfaceVersion(int version);
-#endif
-
 protected:
     PartBase(PartBasePrivate &dd);
 

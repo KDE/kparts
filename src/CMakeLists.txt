@@ -13,7 +13,6 @@ target_sources(KF6Parts PRIVATE
     event.cpp
     guiactivateevent.cpp
     partactivateevent.cpp
-    partselectevent.cpp
     browserextension.cpp
     browserarguments.cpp
     liveconnectextension.cpp
@@ -57,7 +56,6 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
         PartBase
         PartLoader
         PartManager
-        PartSelectEvent
         ReadOnlyPart
         ReadWritePart
         ScriptableExtension
@@ -86,7 +84,7 @@ ecm_generate_export_header(KF6Parts
     GROUP_BASE_NAME KF
     VERSION ${KF_VERSION}
     DEPRECATED_BASE_VERSION 0
-    DEPRECATION_VERSIONS 5.103
+    DEPRECATION_VERSIONS
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
