@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-01-24 00:54+0000\n"
 "PO-Revision-Date: 2020-03-25 17:44+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -156,21 +156,26 @@ msgstr "Sutinku"
 msgid "Reject"
 msgstr "Atmetu"
 
-#: partloader.cpp:181
+#: partloader.cpp:158
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Papildinys \"%1\" nepateikia sąsajos \"%2\" su raktažodžiu \"%3\""
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:162 partloader.cpp:220
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Nerasta jokios dalies, skirtos mimeType %1"
 
-#: partloader.h:155
+#: partloader.cpp:166
 #, fuzzy, kde-format
 #| msgid "No part was found for mimeType %1"
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Nerasta jokios dalies, skirtos mimeType %1"
+
+#: partloader.cpp:203
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "Papildinys \"%1\" nepateikia sąsajos \"%2\" su raktažodžiu \"%3\""
 
 #: readwritepart.cpp:80
 #, kde-format

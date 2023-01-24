@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-01-24 00:54+0000\n"
 "PO-Revision-Date: 2022-12-30 19:13+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -158,20 +158,25 @@ msgstr "接受"
 msgid "Reject"
 msgstr "拒絕"
 
-#: partloader.cpp:181
+#: partloader.cpp:158
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "「%1」外掛程式未提供有「%3」關鍵字的「%2」介面"
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:162 partloader.cpp:220
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "找不到用於 mimeType %1 的部件"
 
-#: partloader.h:155
+#: partloader.cpp:166
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "找不到能夠為 mimeType %1 進行初始化的部件"
+
+#: partloader.cpp:203
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "「%1」外掛程式未提供有「%3」關鍵字的「%2」介面"
 
 #: readwritepart.cpp:80
 #, kde-format

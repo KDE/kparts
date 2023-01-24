@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-01-24 00:54+0000\n"
 "PO-Revision-Date: 2022-10-07 10:51+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -165,20 +165,25 @@ msgstr "Accepteren"
 msgid "Reject"
 msgstr "Verwerpen"
 
-#: partloader.cpp:181
+#: partloader.cpp:158
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "De plug-in '%1 biedt geen interface '%2' met steekwoord '%3'"
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:162 partloader.cpp:220
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Geen onderdeel gevonden voor mimeType %1."
 
-#: partloader.h:155
+#: partloader.cpp:166
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Geen onderdeel kon bekrachtigd worden voor mimeType %1"
+
+#: partloader.cpp:203
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "De plug-in '%1 biedt geen interface '%2' met steekwoord '%3'"
 
 #: readwritepart.cpp:80
 #, kde-format

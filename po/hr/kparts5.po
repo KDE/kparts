@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-01-24 00:54+0000\n"
 "PO-Revision-Date: 2011-07-22 16:08+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -160,24 +160,29 @@ msgstr "Prihvati"
 msgid "Reject"
 msgstr "Odbaci"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Usluga '%1' ne nudi sučelje '%2' s ključnom riječju '%3'"
+#: partloader.cpp:158
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:162 partloader.cpp:220
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Rukovatelj za %1 nije pronađen."
 
-#: partloader.h:155
+#: partloader.cpp:166
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Rukovatelj za %1 nije pronađen."
+
+#: partloader.cpp:203
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "Usluga '%1' ne nudi sučelje '%2' s ključnom riječju '%3'"
 
 #: readwritepart.cpp:80
 #, kde-format

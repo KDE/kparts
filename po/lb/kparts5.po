@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-01-24 00:54+0000\n"
 "PO-Revision-Date: 2006-06-22 16:29+0200\n"
 "Last-Translator: Michel Ludwig <michel.ludwig@kdemail.net>\n"
 "Language-Team: Luxembourgish <kde-i18n-lb@kde.org>\n"
@@ -156,20 +156,25 @@ msgstr "Unhuelen"
 msgid "Reject"
 msgstr "Zeréckweisen"
 
-#: partloader.cpp:181
+#: partloader.cpp:158
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:162 partloader.cpp:220
 #, fuzzy, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Keen Handler fir \"%1\" fonnt!"
 
-#: partloader.h:155
+#: partloader.cpp:166
 #, fuzzy, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Keen Handler fir \"%1\" fonnt!"
+
+#: partloader.cpp:203
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr ""
 
 #: readwritepart.cpp:80
 #, kde-format

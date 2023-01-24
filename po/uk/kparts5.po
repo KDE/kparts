@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-01-24 00:54+0000\n"
 "PO-Revision-Date: 2022-10-07 07:24+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -152,20 +152,25 @@ msgstr "Прийняти"
 msgid "Reject"
 msgstr "Відкинути"
 
-#: partloader.cpp:181
+#: partloader.cpp:158
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Додаток «%1» не надає інтерфейсу «%2» із ключовим словом «%3»"
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:162 partloader.cpp:220
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Не знайдено модуля для типу MIME %1"
 
-#: partloader.h:155
+#: partloader.cpp:166
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Не вдалося створити екземпляр модуля обробки для типу MIME %1"
+
+#: partloader.cpp:203
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "Додаток «%1» не надає інтерфейсу «%2» із ключовим словом «%3»"
 
 #: readwritepart.cpp:80
 #, kde-format

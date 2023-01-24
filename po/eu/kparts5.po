@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-01-24 00:54+0000\n"
 "PO-Revision-Date: 2022-10-07 05:23+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -153,20 +153,25 @@ msgstr "Onartu"
 msgid "Reject"
 msgstr "Ukatu"
 
-#: partloader.cpp:181
+#: partloader.cpp:158
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "«%1» pluginak ez du eskaintzen «%2» interfaze bat «%3» gako-hitzarekin"
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:162 partloader.cpp:220
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Ez da aurkitu %1 MIME-motarako atalik."
 
-#: partloader.h:155
+#: partloader.cpp:166
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Ez dago %1 MIME-motarako instantziatu daitekeen atalik"
+
+#: partloader.cpp:203
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "«%1» pluginak ez du eskaintzen «%2» interfaze bat «%3» gako-hitzarekin"
 
 #: readwritepart.cpp:80
 #, kde-format

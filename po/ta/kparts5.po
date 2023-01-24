@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-01-24 00:54+0000\n"
 "PO-Revision-Date: 2021-01-18 19:35+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -149,24 +149,29 @@ msgstr "ஏற்றுக்கொள்"
 msgid "Reject"
 msgstr "மறு"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "சேவை '%1' '%3' துருப்புச் சொல்லுடனான '%2' இடைமுகப்பினைத் தருவதில்லை"
+#: partloader.cpp:158
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:162 partloader.cpp:220
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1 தனை கையாள எதுவும் கிடைக்கவில்லை."
 
-#: partloader.h:155
+#: partloader.cpp:166
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
 msgstr "%1 தனை கையாள எதுவும் கிடைக்கவில்லை."
+
+#: partloader.cpp:203
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "சேவை '%1' '%3' துருப்புச் சொல்லுடனான '%2' இடைமுகப்பினைத் தருவதில்லை"
 
 #: readwritepart.cpp:80
 #, kde-format

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-01-24 00:54+0000\n"
 "PO-Revision-Date: 2010-08-13 15:45+0200\n"
 "Last-Translator: Erdal Ronahî <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish Team http://pckurd.net\n"
@@ -155,25 +155,30 @@ msgstr "Bipejirîne"
 msgid "Reject"
 msgstr "Nepejirîne"
 
-#: partloader.cpp:181
+#: partloader.cpp:158
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:162 partloader.cpp:220
+#, fuzzy, kde-format
+#| msgid "No handler found for %1."
+msgid "No part was found for mimeType %1"
+msgstr "Ji bo %1 tu fermana guncav nehate dîtin."
+
+#: partloader.cpp:166
+#, fuzzy, kde-format
+#| msgid "No handler found for %1."
+msgid "No part could be instantiated for mimeType %1"
+msgstr "Ji bo %1 tu fermana guncav nehate dîtin."
+
+#: partloader.cpp:203
 #, fuzzy, kde-format
 #| msgid ""
 #| "The service '%1' does not provide an interface '%2' with keyword '%3'"
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 msgstr ""
 "Servîsa '%1'ê nikare bi peyva kilît a  '%3' înterface'ekê '%2'ê pêşkêş bike"
-
-#: partloader.cpp:198 partloader.h:139
-#, fuzzy, kde-format
-#| msgid "No handler found for %1."
-msgid "No part was found for mimeType %1"
-msgstr "Ji bo %1 tu fermana guncav nehate dîtin."
-
-#: partloader.h:155
-#, fuzzy, kde-format
-#| msgid "No handler found for %1."
-msgid "No part could be instantiated for mimeType %1"
-msgstr "Ji bo %1 tu fermana guncav nehate dîtin."
 
 #: readwritepart.cpp:80
 #, kde-format

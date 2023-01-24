@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-01-24 00:54+0000\n"
 "PO-Revision-Date: 2020-04-29 20:22+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -147,21 +147,26 @@ msgstr "Setujui"
 msgid "Reject"
 msgstr "Apkir"
 
-#: partloader.cpp:181
+#: partloader.cpp:158
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Plugin '%1' tidak menyediakan antarmuka '%2' dengan kata kunci '%3'"
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:162 partloader.cpp:220
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Tidak ada part yang ditemukan untuk mimeType %1"
 
-#: partloader.h:155
+#: partloader.cpp:166
 #, fuzzy, kde-format
 #| msgid "No part was found for mimeType %1"
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Tidak ada part yang ditemukan untuk mimeType %1"
+
+#: partloader.cpp:203
+#, kde-format
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "Plugin '%1' tidak menyediakan antarmuka '%2' dengan kata kunci '%3'"
 
 #: readwritepart.cpp:80
 #, kde-format

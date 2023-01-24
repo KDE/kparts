@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-01-24 00:54+0000\n"
 "PO-Revision-Date: 2009-02-10 20:44+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -158,24 +158,29 @@ msgstr "स्वीकृत"
 msgid "Reject"
 msgstr "अस्वीकृत"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "सेवा '%1' इंटरफेस '%2' कुंजीसब्द '%3' के साथ प्रदाय नइ करथे "
+#: partloader.cpp:158
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:162 partloader.cpp:220
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr " %1 बर कोनो हेंडलर नइ मिलिस."
 
-#: partloader.h:155
+#: partloader.cpp:166
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
 msgstr " %1 बर कोनो हेंडलर नइ मिलिस."
+
+#: partloader.cpp:203
+#, fuzzy, kde-format
+#| msgid ""
+#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgstr "सेवा '%1' इंटरफेस '%2' कुंजीसब्द '%3' के साथ प्रदाय नइ करथे "
 
 #: readwritepart.cpp:80
 #, kde-format
