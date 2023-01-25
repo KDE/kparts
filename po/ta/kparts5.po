@@ -4,13 +4,13 @@
 # Sivakumar Shanmugasundaram <sshanmu@yahoo.com>, 2000.
 # Thuraiappah Vaseeharan <t_vasee@yahoo.com>, 2000-2001.
 # ம. ஸ்ரீ ராமதாஸ் | Sri Ramadoss M <amachu@yavarkkum.org>, 2007-2012.
-# Kishore G <kishore96@gmail.com>, 2021.
+# Kishore G <kishore96@gmail.com>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-24 00:54+0000\n"
-"PO-Revision-Date: 2021-01-18 19:35+0530\n"
+"PO-Revision-Date: 2023-01-24 21:51+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -155,23 +155,20 @@ msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
 #: partloader.cpp:162 partloader.cpp:220
-#, fuzzy, kde-format
-#| msgid "No handler found for %1."
+#, kde-format
 msgid "No part was found for mimeType %1"
-msgstr "%1 தனை கையாள எதுவும் கிடைக்கவில்லை."
+msgstr "%1 மைம்வகையை கையாளக்கூடியது எதுவும் கிடைக்கவில்லை."
 
 #: partloader.cpp:166
-#, fuzzy, kde-format
-#| msgid "No handler found for %1."
+#, kde-format
 msgid "No part could be instantiated for mimeType %1"
-msgstr "%1 தனை கையாள எதுவும் கிடைக்கவில்லை."
+msgstr "%1 மைம்வகையை கையாளக்கூடியது எதையும் துவக்க முடியவில்லை"
 
 #: partloader.cpp:203
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#, kde-format
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "சேவை '%1' '%3' துருப்புச் சொல்லுடனான '%2' இடைமுகப்பினைத் தருவதில்லை"
+msgstr ""
+"'%3' எனும் குறிச்சொல்லுடையை '%2' எனும் இடைமுகப்பை '%1' எனும் செருகுநிரல் வழங்குவதில்லை"
 
 #: readwritepart.cpp:80
 #, kde-format
