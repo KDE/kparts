@@ -21,7 +21,7 @@ Event::Event(const char *eventName)
 
 Event::Event(EventPrivate &dd)
     : QEvent((QEvent::Type)(QEvent::User + KPARTS_EVENT_MAGIC))
-    , d(&dd)
+    , d_ptr(&dd)
 {
 }
 

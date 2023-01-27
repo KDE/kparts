@@ -38,7 +38,7 @@ public:
     static bool test(const QEvent *event);
 
 private:
-    Q_DECLARE_PRIVATE_D(Event::d, PartActivateEvent)
+    Q_DECLARE_PRIVATE(PartActivateEvent)
 };
 
 } // namespace

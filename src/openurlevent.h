@@ -46,7 +46,7 @@ public:
     static bool test(const QEvent *event);
 
 private:
-    Q_DECLARE_PRIVATE_D(Event::d, OpenUrlEvent)
+    Q_DECLARE_PRIVATE(OpenUrlEvent)
 };
 
 }

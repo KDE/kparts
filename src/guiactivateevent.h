@@ -34,7 +34,7 @@ public:
     static bool test(const QEvent *event);
 
 private:
-    Q_DECLARE_PRIVATE_D(Event::d, GUIActivateEvent)
+    Q_DECLARE_PRIVATE(GUIActivateEvent)
 };
 
 } // namespace
