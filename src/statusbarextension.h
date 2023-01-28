@@ -96,7 +96,7 @@ public:
 
     /**
      * Queries @p obj for a child object which inherits from this
-     * BrowserExtension class. Convenience method.
+     * StatusBarExtension class. Convenience method.
      */
     static StatusBarExtension *childObject(QObject *obj);
 
