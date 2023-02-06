@@ -9,9 +9,10 @@
 #ifndef __kparts_openurlevent_h__
 #define __kparts_openurlevent_h__
 
+#include <QEvent>
 #include <kparts/browserarguments.h>
-#include <kparts/event.h>
 #include <kparts/openurlarguments.h>
+#include <memory>
 
 class QUrl;
 
@@ -29,7 +30,7 @@ class OpenUrlEventPrivate;
  * The event should be sent before opening the URL in the part, so that the plugins
  * can use part()->url() to get the old URL.
  */
-class KPARTS_EXPORT OpenUrlEvent : public Event
+class KPARTS_EXPORT OpenUrlEvent : public QEvent
 {
 public:
     OpenUrlEvent(ReadOnlyPart *part,
@@ -46,7 +47,7 @@ public:
     static bool test(const QEvent *event);
 
 private:
-    Q_DECLARE_PRIVATE(OpenUrlEvent)
+    const std::unique_ptr<OpenUrlEventPrivate> d;
 };
 
 }

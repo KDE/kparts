@@ -9,7 +9,10 @@
 #ifndef __kparts_guiactivateevent_h__
 #define __kparts_guiactivateevent_h__
 
-#include <kparts/event.h>
+#include <QEvent>
+#include <memory>
+
+#include <kparts/kparts_export.h>
 
 namespace KParts
 {
@@ -23,7 +26,7 @@ class GUIActivateEventPrivate;
  * only for parts that have GUI elements, and only if using KParts::MainWindow.
  * @see KParts::Part::guiActivateEvent()
  */
-class KPARTS_EXPORT GUIActivateEvent : public Event
+class KPARTS_EXPORT GUIActivateEvent : public QEvent
 {
 public:
     GUIActivateEvent(bool activated);
@@ -34,7 +37,7 @@ public:
     static bool test(const QEvent *event);
 
 private:
-    Q_DECLARE_PRIVATE(GUIActivateEvent)
+    const std::unique_ptr<GUIActivateEventPrivate> d;
 };
 
 } // namespace

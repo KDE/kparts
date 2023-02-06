@@ -8,7 +8,11 @@
 #ifndef __kparts_partactivateevent_h__
 #define __kparts_partactivateevent_h__
 
-#include <kparts/event.h>
+#include <QEvent>
+#include <kparts/kparts_export.h>
+#include <memory>
+
+class QWidget;
 
 namespace KParts
 {
@@ -25,7 +29,7 @@ class PartActivateEventPrivate;
  * with activated=true, part=newPart, widget=newWidget.
  * @see KParts::Part::partActivateEvent
  */
-class KPARTS_EXPORT PartActivateEvent : public Event
+class KPARTS_EXPORT PartActivateEvent : public QEvent
 {
 public:
     PartActivateEvent(bool activated, Part *part, QWidget *widget);
@@ -38,7 +42,7 @@ public:
     static bool test(const QEvent *event);
 
 private:
-    Q_DECLARE_PRIVATE(PartActivateEvent)
+    const std::unique_ptr<PartActivateEventPrivate> d;
 };
 
 } // namespace

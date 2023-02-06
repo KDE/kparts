@@ -10,7 +10,6 @@ target_sources(KF6Parts PRIVATE
     readwritepart.cpp
     partmanager.cpp
     mainwindow.cpp
-    event.cpp
     guiactivateevent.cpp
     partactivateevent.cpp
     browserextension.cpp
@@ -39,7 +38,6 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
         BrowserExtension
         BrowserInterface
         BrowserOpenOrSaveQuestion
-        Event
         FileInfoExtension
         GUIActivateEvent
         HistoryProvider
