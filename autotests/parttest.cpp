@@ -11,6 +11,7 @@
 #include <QSignalSpy>
 #include <QTest>
 #include <QWidget>
+#include <kparts/guiactivateevent.h>
 #include <kparts/openurlarguments.h>
 #include <kparts/readonlypart.h>
 
@@ -37,11 +38,17 @@ public:
         qDebug() << "url changed: " << url;
     }
 
+    bool m_guiActivationEventTriggered = false;
+
 protected:
     bool openFile() override
     {
         m_openFileCalled = true;
         return true;
+    }
+    void guiActivateEvent(KParts::GUIActivateEvent * /*event*/) override
+    {
+        m_guiActivationEventTriggered = true;
     }
 
 private:
@@ -254,5 +261,16 @@ void PartTest::testShouldNotCrashAfterDelete()
     TestPart *part = new TestPart(nullptr, nullptr);
     QVERIFY(part->openUrl(QUrl::fromLocalFile(QFINDTESTDATA("notepad.desktop"))));
     QVERIFY(part->openFileCalled());
+    delete part;
+}
+
+void PartTest::testActivationEvent()
+{
+    TestPart *part = new TestPart(nullptr, nullptr);
+    QVERIFY(!part->m_guiActivationEventTriggered);
+    part->event(new QEvent(QEvent::MouseButtonPress));
+    QVERIFY(!part->m_guiActivationEventTriggered);
+    part->event(new KParts::GUIActivateEvent(true));
+    QVERIFY(part->m_guiActivationEventTriggered);
     delete part;
 }

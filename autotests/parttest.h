@@ -24,6 +24,7 @@ private Q_SLOTS:
 
     void testToolbarVisibility();
     void testShouldNotCrashAfterDelete();
+    void testActivationEvent();
 };
 
 #endif /* PARTTEST_H */

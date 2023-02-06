@@ -9,10 +9,12 @@
 #include "part.h"
 #include "part_p.h"
 
-#include "guiactivateevent.h"
 #include "kparts_logging.h"
-#include "partactivateevent.h"
 #include "partmanager.h"
+
+// The events have randomely generated numbers using `shuf -i1000-65535 -n 1`
+#include "guiactivateevent.h"
+#include "partactivateevent.h"
 
 #include <KXMLGUIFactory>
 
