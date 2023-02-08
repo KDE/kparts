@@ -1,0 +1,25 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "%{EMAIL}",
+                "Name": "%{AUTHOR}"
+            }
+        ],
+        "Description": "A %{APPNAME} KPart",
+        "Icon": "%{APPNAMELC}",
+        "Id": "%{APPNAMELC}part",
+        "License": "GPLv2+",
+        "MimeTypes": [
+            "text/plain"
+        ],
+        "Name": "%{APPNAME}Part",
+        "ServiceTypes": [
+            "KParts/ReadOnlyPart",
+            "KParts/ReadWritePart"
+        ],
+        "Version": "%{VERSION}",
+        "Website": ""
+    },
+    "MimeType": "text/plain;"
+}
