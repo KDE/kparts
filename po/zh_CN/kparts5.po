@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-24 00:54+0000\n"
-"PO-Revision-Date: 2023-01-12 10:30\n"
+"PO-Revision-Date: 2023-02-07 11:02\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -151,7 +151,7 @@ msgstr "拒绝"
 #: partloader.cpp:158
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
-msgstr ""
+msgstr "KPluginFactory 组件无法加载插件：%1"
 
 #: partloader.cpp:162 partloader.cpp:220
 #, kde-format
