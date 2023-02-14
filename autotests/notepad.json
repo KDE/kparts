@@ -17,6 +17,7 @@
             "text/x-c",
             "text/x-c++"
         ],
-        "Name": "Notepad (example)"
+        "Name": "Notepad (example)",
+        "InitialPreference": 9
     }
 }
