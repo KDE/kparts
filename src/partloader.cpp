@@ -86,7 +86,10 @@ QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mim
             return false;
         }
         // Plugins who support the same mimetype are then sorted by initial preference
-        return left.initialPreference() > right.initialPreference();
+        const auto getInitialPreference = [](const KPluginMetaData &data) {
+            return data.rawData().value(QLatin1String("KPlugin")).toObject().value(QLatin1String("InitialPreference")).toInt();
+        };
+        return getInitialPreference(left) > getInitialPreference(right);
     };
     std::sort(plugins.begin(), plugins.end(), orderPredicate);
 
