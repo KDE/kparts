@@ -11,8 +11,8 @@
 
 #include "kparts_logging.h"
 
-#include "browserextension.h"
 #include "guiactivateevent.h"
+#include "navigationextension.h"
 
 #include <KIO/FileCopyJob>
 #include <KIO/StatJob>
@@ -320,9 +320,9 @@ bool ReadOnlyPart::closeStream()
     return doCloseStream();
 }
 
-BrowserExtension *ReadOnlyPart::browserExtension() const
+NavigationExtension *ReadOnlyPart::browserExtension() const
 {
-    return findChild<KParts::BrowserExtension *>();
+    return findChild<KParts::NavigationExtension *>();
 }
 
 void KParts::ReadOnlyPart::setArguments(const OpenUrlArguments &arguments)

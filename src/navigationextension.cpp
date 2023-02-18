@@ -6,7 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "browserextension.h"
+#include "navigationextension.h"
 
 #include "kparts_logging.h"
 
@@ -43,10 +43,10 @@ public:
     }
 };
 
-class BrowserExtensionPrivate
+class NavigationExtensionPrivate
 {
 public:
-    BrowserExtensionPrivate(KParts::ReadOnlyPart *parent)
+    NavigationExtensionPrivate(KParts::ReadOnlyPart *parent)
         : m_urlDropHandlingEnabled(false)
         , m_browserInterface(nullptr)
         , m_part(parent)
@@ -72,10 +72,10 @@ public:
     BrowserArguments m_browserArgs;
 };
 
-Q_GLOBAL_STATIC(BrowserExtension::ActionSlotMap, s_actionSlotMap)
-Q_GLOBAL_STATIC(BrowserExtension::ActionNumberMap, s_actionNumberMap)
+Q_GLOBAL_STATIC(NavigationExtension::ActionSlotMap, s_actionSlotMap)
+Q_GLOBAL_STATIC(NavigationExtension::ActionNumberMap, s_actionNumberMap)
 
-void BrowserExtensionPrivate::createActionSlotMap()
+void NavigationExtensionPrivate::createActionSlotMap()
 {
     s_actionSlotMap()->insert("cut", SLOT(cut()));
     s_actionSlotMap()->insert("copy", SLOT(copy()));
@@ -87,8 +87,8 @@ void BrowserExtensionPrivate::createActionSlotMap()
     // s_actionSlotMap()->insert( "refreshMimeTypes", SLOT(refreshMimeTypes()) );
 
     // Create the action-number map
-    BrowserExtension::ActionSlotMap::ConstIterator it = s_actionSlotMap()->constBegin();
-    BrowserExtension::ActionSlotMap::ConstIterator itEnd = s_actionSlotMap()->constEnd();
+    NavigationExtension::ActionSlotMap::ConstIterator it = s_actionSlotMap()->constBegin();
+    NavigationExtension::ActionSlotMap::ConstIterator itEnd = s_actionSlotMap()->constEnd();
     for (int i = 0; it != itEnd; ++it, ++i) {
         // qDebug() << " action " << it.key() << " number " << i;
         s_actionNumberMap()->insert(it.key(), i);
@@ -97,16 +97,14 @@ void BrowserExtensionPrivate::createActionSlotMap()
 
 }
 
-BrowserExtension::BrowserExtension(KParts::ReadOnlyPart *parent)
+NavigationExtension::NavigationExtension(KParts::ReadOnlyPart *parent)
     : QObject(parent)
-    , d(new BrowserExtensionPrivate(parent))
+    , d(new NavigationExtensionPrivate(parent))
 {
-    // qDebug() << "BrowserExtension::BrowserExtension() " << this;
-
     if (s_actionSlotMap()->isEmpty())
     // Create the action-slot map
     {
-        BrowserExtensionPrivate::createActionSlotMap();
+        NavigationExtensionPrivate::createActionSlotMap();
     }
 
     // Set the initial status of the actions depending on whether
@@ -120,44 +118,44 @@ BrowserExtension::BrowserExtension(KParts::ReadOnlyPart *parent)
         d->m_actionStatus.setBit(i, metaobj->indexOfMethod(slotSig.constData()) != -1);
     }
 
-    connect(d->m_part, static_cast<void (KParts::ReadOnlyPart::*)()>(&KParts::ReadOnlyPart::completed), this, &BrowserExtension::slotCompleted);
-    connect(this, &BrowserExtension::openUrlRequest, this, &BrowserExtension::slotOpenUrlRequest);
-    connect(this, &BrowserExtension::enableAction, this, &BrowserExtension::slotEnableAction);
-    connect(this, &BrowserExtension::setActionText, this, &BrowserExtension::slotSetActionText);
+    connect(d->m_part, static_cast<void (KParts::ReadOnlyPart::*)()>(&KParts::ReadOnlyPart::completed), this, &NavigationExtension::slotCompleted);
+    connect(this, &NavigationExtension::openUrlRequest, this, &NavigationExtension::slotOpenUrlRequest);
+    connect(this, &NavigationExtension::enableAction, this, &NavigationExtension::slotEnableAction);
+    connect(this, &NavigationExtension::setActionText, this, &NavigationExtension::slotSetActionText);
 }
 
-BrowserExtension::~BrowserExtension()
+NavigationExtension::~NavigationExtension()
 {
     // qDebug() << "BrowserExtension::~BrowserExtension() " << this;
 }
 
-void BrowserExtension::setBrowserArguments(const BrowserArguments &args)
+void NavigationExtension::setBrowserArguments(const BrowserArguments &args)
 {
     d->m_browserArgs = args;
 }
 
-BrowserArguments BrowserExtension::browserArguments() const
+BrowserArguments NavigationExtension::browserArguments() const
 {
     return d->m_browserArgs;
 }
 
-int BrowserExtension::xOffset()
+int NavigationExtension::xOffset()
 {
     return 0;
 }
 
-int BrowserExtension::yOffset()
+int NavigationExtension::yOffset()
 {
     return 0;
 }
 
-void BrowserExtension::saveState(QDataStream &stream)
+void NavigationExtension::saveState(QDataStream &stream)
 {
     // TODO add d->m_part->mimeType()
     stream << d->m_part->url() << static_cast<qint32>(xOffset()) << static_cast<qint32>(yOffset());
 }
 
-void BrowserExtension::restoreState(QDataStream &stream)
+void NavigationExtension::restoreState(QDataStream &stream)
 {
     QUrl u;
     qint32 xOfs;
@@ -172,23 +170,23 @@ void BrowserExtension::restoreState(QDataStream &stream)
     d->m_part->openUrl(u);
 }
 
-bool BrowserExtension::isURLDropHandlingEnabled() const
+bool NavigationExtension::isURLDropHandlingEnabled() const
 {
     return d->m_urlDropHandlingEnabled;
 }
 
-void BrowserExtension::setURLDropHandlingEnabled(bool enable)
+void NavigationExtension::setURLDropHandlingEnabled(bool enable)
 {
     d->m_urlDropHandlingEnabled = enable;
 }
 
-void BrowserExtension::slotCompleted()
+void NavigationExtension::slotCompleted()
 {
     // empty the argument stuff, to avoid bogus/invalid values when opening a new url
     setBrowserArguments(BrowserArguments());
 }
 
-void BrowserExtension::pasteRequest()
+void NavigationExtension::pasteRequest()
 {
     QString plain(QStringLiteral("plain"));
     QString url = QApplication::clipboard()->text(plain, QClipboard::Selection).trimmed();
@@ -228,39 +226,39 @@ void BrowserExtension::pasteRequest()
     }
 }
 
-void BrowserExtension::slotOpenUrlRequest(const QUrl &url, const KParts::OpenUrlArguments &args, const KParts::BrowserArguments &browserArgs)
+void NavigationExtension::slotOpenUrlRequest(const QUrl &url, const KParts::OpenUrlArguments &args, const KParts::BrowserArguments &browserArgs)
 {
     // qDebug() << this << " BrowserExtension::slotOpenURLRequest(): url=" << url.url();
-    BrowserExtensionPrivate::DelayedRequest req;
+    NavigationExtensionPrivate::DelayedRequest req;
     req.m_delayedURL = url;
     req.m_delayedArgs = args;
     req.m_delayedBrowserArgs = browserArgs;
     d->m_requests.append(req);
-    QTimer::singleShot(0, this, &BrowserExtension::slotEmitOpenUrlRequestDelayed);
+    QTimer::singleShot(0, this, &NavigationExtension::slotEmitOpenUrlRequestDelayed);
 }
 
-void BrowserExtension::slotEmitOpenUrlRequestDelayed()
+void NavigationExtension::slotEmitOpenUrlRequestDelayed()
 {
     if (d->m_requests.isEmpty()) {
         return;
     }
-    BrowserExtensionPrivate::DelayedRequest req = d->m_requests.front();
+    NavigationExtensionPrivate::DelayedRequest req = d->m_requests.front();
     d->m_requests.pop_front();
     Q_EMIT openUrlRequestDelayed(req.m_delayedURL, req.m_delayedArgs, req.m_delayedBrowserArgs);
     // tricky: do not do anything here! (no access to member variables, etc.)
 }
 
-void BrowserExtension::setBrowserInterface(BrowserInterface *impl)
+void NavigationExtension::setBrowserInterface(BrowserInterface *impl)
 {
     d->m_browserInterface = impl;
 }
 
-BrowserInterface *BrowserExtension::browserInterface() const
+BrowserInterface *NavigationExtension::browserInterface() const
 {
     return d->m_browserInterface;
 }
 
-void BrowserExtension::slotEnableAction(const char *name, bool enabled)
+void NavigationExtension::slotEnableAction(const char *name, bool enabled)
 {
     // qDebug() << "BrowserExtension::slotEnableAction " << name << " " << enabled;
     ActionNumberMap::ConstIterator it = s_actionNumberMap()->constFind(name);
@@ -272,13 +270,13 @@ void BrowserExtension::slotEnableAction(const char *name, bool enabled)
     }
 }
 
-bool BrowserExtension::isActionEnabled(const char *name) const
+bool NavigationExtension::isActionEnabled(const char *name) const
 {
     int actionNumber = (*s_actionNumberMap())[name];
     return d->m_actionStatus[actionNumber];
 }
 
-void BrowserExtension::slotSetActionText(const char *name, const QString &text)
+void NavigationExtension::slotSetActionText(const char *name, const QString &text)
 {
     // qDebug() << "BrowserExtension::slotSetActionText " << name << " " << text;
     ActionNumberMap::ConstIterator it = s_actionNumberMap()->constFind(name);
@@ -289,7 +287,7 @@ void BrowserExtension::slotSetActionText(const char *name, const QString &text)
     }
 }
 
-QString BrowserExtension::actionText(const char *name) const
+QString NavigationExtension::actionText(const char *name) const
 {
     int actionNumber = (*s_actionNumberMap())[name];
     QMap<int, QString>::ConstIterator it = d->m_actionText.constFind(actionNumber);
@@ -299,15 +297,15 @@ QString BrowserExtension::actionText(const char *name) const
     return QString();
 }
 
-BrowserExtension::ActionSlotMap *BrowserExtension::actionSlotMap()
+NavigationExtension::ActionSlotMap *NavigationExtension::actionSlotMap()
 {
     if (s_actionSlotMap()->isEmpty()) {
-        BrowserExtensionPrivate::createActionSlotMap();
+        NavigationExtensionPrivate::createActionSlotMap();
     }
     return s_actionSlotMap();
 }
 
-BrowserExtension *BrowserExtension::childObject(QObject *obj)
+NavigationExtension *NavigationExtension::childObject(QObject *obj)
 {
-    return obj->findChild<KParts::BrowserExtension *>(QString(), Qt::FindDirectChildrenOnly);
+    return obj->findChild<KParts::NavigationExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }

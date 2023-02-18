@@ -22,7 +22,7 @@ class Job;
 namespace KParts
 {
 class ReadOnlyPartPrivate;
-class BrowserExtension;
+class NavigationExtension;
 class OpenUrlArguments;
 
 /**
@@ -123,7 +123,7 @@ public:
      * This convenience method returns the BrowserExtension for this part,
      * or @c nullptr if there isn't one.
      */
-    BrowserExtension *browserExtension() const;
+    NavigationExtension *browserExtension() const;
 
     /**
      * Sets the arguments to use for the next openUrl() call.

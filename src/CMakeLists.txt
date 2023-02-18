@@ -12,7 +12,7 @@ target_sources(KF6Parts PRIVATE
     mainwindow.cpp
     guiactivateevent.cpp
     partactivateevent.cpp
-    browserextension.cpp
+    navigationextension.cpp
     browserarguments.cpp
     liveconnectextension.cpp
     openurlevent.cpp
@@ -35,7 +35,6 @@ include(ECMGenerateHeaders)
 ecm_generate_headers(KParts_CamelCase_HEADERS
     HEADER_NAMES
         BrowserArguments
-        BrowserExtension
         BrowserInterface
         BrowserOpenOrSaveQuestion
         FileInfoExtension
@@ -47,6 +46,7 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
         ListingNotificationExtension
         LiveConnectExtension
         MainWindow
+        NavigationExtension
         OpenUrlArguments
         OpenUrlEvent
         Part

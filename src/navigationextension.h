@@ -6,8 +6,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef __kparts_browserextension_h__
-#define __kparts_browserextension_h__
+#ifndef KPARTS_NAVIGATIONEXTENSION
+#define KPARTS_NAVIGATIONEXTENSION
 
 #include <kparts/browserarguments.h>
 #include <kparts/openurlarguments.h>
@@ -32,13 +32,12 @@ class QPoint;
 namespace KParts
 {
 class BrowserInterface;
-class BrowserExtensionPrivate;
+class NavigationExtensionPrivate;
 
 /**
- * @class BrowserExtension browserextension.h <KParts/BrowserExtension>
+ * @class NavigationExtension navigationextension.h <KParts/NavigationExtension>
  *
- * @short The Browser Extension is an extension (yes, no kidding) to
- * KParts::ReadOnlyPart, which allows a better integration of parts
+ * @short An extension to  KParts::ReadOnlyPart, which allows a better integration of parts
  * with browsers (in particular Konqueror).
  *
  * Remember that ReadOnlyPart only has openUrl(QUrl) and a few arguments() but not much more.
@@ -88,7 +87,7 @@ class BrowserExtensionPrivate;
  * @li @p reparseConfiguration : Re-read configuration and apply it.
  * @li @p disableScrolling: no scrollbars
  */
-class KPARTS_EXPORT BrowserExtension : public QObject // TODO KF6, rename class and header to NavigationExtension. See https://phabricator.kde.org/T12224
+class KPARTS_EXPORT NavigationExtension : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool urlDropHandling READ isURLDropHandlingEnabled WRITE setURLDropHandlingEnabled)
@@ -98,9 +97,9 @@ public:
      *
      * @param parent The KParts::ReadOnlyPart that this extension ... "extends" :)
      */
-    explicit BrowserExtension(KParts::ReadOnlyPart *parent);
+    explicit NavigationExtension(KParts::ReadOnlyPart *parent);
 
-    ~BrowserExtension() override;
+    ~NavigationExtension() override;
 
     /**
      * Set of flags passed via the popupMenu signal, to ask for some items in the popup menu.
@@ -244,7 +243,7 @@ public:
      * Queries @p obj for a child object which inherits from this
      * BrowserExtension class. Convenience method.
      */
-    static BrowserExtension *childObject(QObject *obj);
+    static NavigationExtension *childObject(QObject *obj);
 
     /**
      * Asks the hosting browser to perform a paste (using openUrlRequestDelayed())
@@ -370,8 +369,8 @@ Q_SIGNALS:
                    const KFileItemList &items,
                    const KParts::OpenUrlArguments &args = KParts::OpenUrlArguments(),
                    const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments(),
-                   KParts::BrowserExtension::PopupFlags flags = KParts::BrowserExtension::DefaultPopupItems,
-                   const KParts::BrowserExtension::ActionGroupMap &actionGroups = ActionGroupMap());
+                   KParts::NavigationExtension::PopupFlags flags = KParts::NavigationExtension::DefaultPopupItems,
+                   const KParts::NavigationExtension::ActionGroupMap &actionGroups = ActionGroupMap());
 
     /**
      * Emit this to make the browser show a standard popup menu for the given @p url.
@@ -392,8 +391,8 @@ Q_SIGNALS:
                    mode_t mode = static_cast<mode_t>(-1),
                    const KParts::OpenUrlArguments &args = KParts::OpenUrlArguments(),
                    const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments(),
-                   KParts::BrowserExtension::PopupFlags flags = KParts::BrowserExtension::DefaultPopupItems,
-                   const KParts::BrowserExtension::ActionGroupMap &actionGroups = ActionGroupMap());
+                   KParts::NavigationExtension::PopupFlags flags = KParts::NavigationExtension::DefaultPopupItems,
+                   const KParts::NavigationExtension::ActionGroupMap &actionGroups = ActionGroupMap());
 
     /**
      * Inform the hosting application about the current selection.
@@ -454,10 +453,10 @@ public:
     typedef QMap<QByteArray, int> ActionNumberMap;
 
 private:
-    std::unique_ptr<BrowserExtensionPrivate> const d;
+    std::unique_ptr<NavigationExtensionPrivate> const d;
 };
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(BrowserExtension::PopupFlags)
+Q_DECLARE_OPERATORS_FOR_FLAGS(NavigationExtension::PopupFlags)
 
 }
 
