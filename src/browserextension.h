@@ -32,6 +32,7 @@ class QPoint;
 namespace KParts
 {
 class BrowserInterface;
+class BrowserExtensionPrivate;
 
 /**
  * @class BrowserExtension browserextension.h <KParts/BrowserExtension>
@@ -453,7 +454,7 @@ public:
     typedef QMap<QByteArray, int> ActionNumberMap;
 
 private:
-    std::unique_ptr<class BrowserExtensionPrivate> const d;
+    std::unique_ptr<BrowserExtensionPrivate> const d;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(BrowserExtension::PopupFlags)
