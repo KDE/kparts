@@ -320,7 +320,7 @@ bool ReadOnlyPart::closeStream()
     return doCloseStream();
 }
 
-NavigationExtension *ReadOnlyPart::browserExtension() const
+NavigationExtension *ReadOnlyPart::navigationExtension() const
 {
     return findChild<KParts::NavigationExtension *>();
 }

@@ -120,10 +120,10 @@ public:
     virtual bool closeUrl();
 
     /**
-     * This convenience method returns the BrowserExtension for this part,
+     * This convenience method returns the NavigationExtension for this part,
      * or @c nullptr if there isn't one.
      */
-    NavigationExtension *browserExtension() const;
+    NavigationExtension *navigationExtension() const;
 
     /**
      * Sets the arguments to use for the next openUrl() call.
