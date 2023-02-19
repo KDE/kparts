@@ -17,34 +17,18 @@
 #include <QMimeDatabase>
 #include <QMimeType>
 
-// We still use desktop files for translated descriptions in keditfiletype,
-// and desktop file names then end up in mimeapps.list.
-// Alternatively, that KCM could be ported to read the descriptions from the JSON metadata?
-// KF6 TODO: at least make the KCM write out library names (into a different config file)
-// so we don't need to do the lookup here every time.
-static QString pluginForDesktopFile(const QString &desktopFile)
-{
-    KService::Ptr service = KService::serviceByStorageId(desktopFile);
-    if (!service) {
-        qCDebug(KPARTSLOG) << "mimeapps.list specifies unknown service" << desktopFile;
-        return {};
-    }
-    return service->library();
-}
-
-static QStringList partsFromUserPreference(const QString &mimeType)
+static QList<KPluginMetaData> partsFromUserPreference(const QString &mimeType)
 {
     auto config = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"));
-    const QStringList desktopFiles = config->group(QStringLiteral("Added KDE Service Associations")).readXdgListEntry(mimeType);
-    QStringList parts;
-    parts.reserve(desktopFiles.count());
-    for (const QString &desktopFile : desktopFiles) {
-        const QString part = pluginForDesktopFile(desktopFile);
-        if (!part.isEmpty()) {
-            parts.append(part);
+    const QStringList pluginIds = config->group(QStringLiteral("Added KDE Part Associations")).readXdgListEntry(mimeType);
+    QList<KPluginMetaData> plugins;
+    plugins.reserve(pluginIds.size());
+    for (const QString &pluginId : pluginIds) {
+        if (KPluginMetaData data(QLatin1String("kf6/parts/") + pluginId); data.isValid()) {
+            plugins << data;
         }
     }
-    return parts;
+    return plugins;
 }
 
 // A plugin can support N mimetypes. Pick the one that is closest to @parent in the inheritance tree
@@ -93,26 +77,9 @@ QList<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mimeT
     };
     std::sort(plugins.begin(), plugins.end(), orderPredicate);
 
-    const QStringList userParts = partsFromUserPreference(mimeType);
+    const QList<KPluginMetaData> userParts = partsFromUserPreference(mimeType);
     if (!userParts.isEmpty()) {
-        // for (const KPluginMetaData &plugin : plugins) {
-        //    qDebug() << "unsorted:" << plugin.fileName() << plugin.initialPreference();
-        //}
-        const auto defaultPlugins = plugins;
-        plugins.clear();
-        for (const QString &userPart : userParts) { // e.g. kf5/parts/gvpart
-            auto matchesLibrary = [&](const KPluginMetaData &plugin) {
-                return plugin.fileName().contains(userPart);
-            };
-            auto it = std::find_if(defaultPlugins.begin(), defaultPlugins.end(), matchesLibrary);
-            if (it != defaultPlugins.end()) {
-                plugins.push_back(*it);
-            } else {
-                qCDebug(KPARTSLOG) << "Part not found" << userPart;
-            }
-        }
-        // In case mimeapps.list lists "nothing good", append the default set to the end as fallback
-        plugins += defaultPlugins;
+        plugins = userParts;
     }
 
     // for (const KPluginMetaData &plugin : plugins) {
