@@ -68,12 +68,12 @@ static int pluginDistanceToMimeType(const KPluginMetaData &md, const QString &pa
     return minDistance;
 }
 
-QVector<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mimeType)
+QList<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mimeType)
 {
     auto supportsMime = [&](const KPluginMetaData &md) {
         return md.supportsMimeType(mimeType);
     };
-    QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("kf6/parts"), supportsMime);
+    QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("kf6/parts"), supportsMime);
 
     auto orderPredicate = [&](const KPluginMetaData &left, const KPluginMetaData &right) {
         // We filtered based on "supports mimetype", but this didn't order from most-specific to least-specific.

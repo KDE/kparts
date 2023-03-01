@@ -72,7 +72,7 @@ void PartViewer::openUrl(const QUrl &url)
 
     qDeleteAll(m_openWithActions);
     m_openWithActions.clear();
-    const QVector<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
+    const QList<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
     for (const KPluginMetaData &plugin : plugins) {
         QAction *action = new QAction(plugin.name(), this);
         connect(action, &QAction::triggered, this, [=] {

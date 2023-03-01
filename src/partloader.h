@@ -10,8 +10,8 @@
 
 #include <KPluginFactory>
 #include <KPluginMetaData>
+#include <QList>
 #include <QObject>
-#include <QVector>
 #include <kparts/kparts_export.h>
 
 namespace KParts
@@ -59,7 +59,7 @@ KPARTS_EXPORT void getErrorStrings(QString *errorString, QString *errorText, con
  *
  * @since 5.69
  */
-KPARTS_EXPORT QVector<KPluginMetaData> partsForMimeType(const QString &mimeType);
+KPARTS_EXPORT QList<KPluginMetaData> partsForMimeType(const QString &mimeType);
 
 /**
  * Attempts to create a KPart from the given metadata.
@@ -137,7 +137,7 @@ template<class T>
 static KPluginFactory::Result<T>
 instantiatePartForMimeType(const QString &mimeType, QWidget *parentWidget = nullptr, QObject *parent = nullptr, const QVariantList &args = {})
 {
-    const QVector<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
+    const QList<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
 
     if (plugins.isEmpty()) {
         KPluginFactory::Result<T> errorResult;

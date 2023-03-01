@@ -39,7 +39,7 @@ private Q_SLOTS:
         const QString mimeType = QStringLiteral("text/plain");
 
         // WHEN
-        const QVector<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
+        const QList<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
 
         // THEN
         QVERIFY(!plugins.isEmpty());
