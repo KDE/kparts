@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2022-12-30 19:13+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -37,21 +37,6 @@ msgstr "Frank Weng (a.k.a. Franklin)"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>您要在網際網路上搜尋 <b>%1</b> 嗎？</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "網路搜尋"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "搜尋(&S)"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -113,43 +98,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "這是伺服器建議的檔案名稱"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "您真的要執行‘%1’？"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "執行檔案嗎？"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "執行"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr ""
-"找不到下載管理程式 (%1)，請檢查您的安裝是否正確，包含 PATH 路徑有設定正確。"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"試著重新安裝\n"
-"\n"
-"Konqueror 整合將被關閉。"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "另存新檔"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "接受"
@@ -158,17 +106,32 @@ msgstr "接受"
 msgid "Reject"
 msgstr "拒絕"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "「%1」外掛程式未提供有「%3」關鍵字的「%2」介面"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>您要在網際網路上搜尋 <b>%1</b> 嗎？</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "網路搜尋"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "搜尋(&S)"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "找不到用於 mimeType %1 的部件"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "找不到能夠為 mimeType %1 進行初始化的部件"
@@ -191,6 +154,35 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "關閉文件"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "您真的要執行‘%1’？"
+
+#~ msgid "Execute File?"
+#~ msgstr "執行檔案嗎？"
+
+#~ msgid "Execute"
+#~ msgstr "執行"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr ""
+#~ "找不到下載管理程式 (%1)，請檢查您的安裝是否正確，包含 PATH 路徑有設定正"
+#~ "確。"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "試著重新安裝\n"
+#~ "\n"
+#~ "Konqueror 整合將被關閉。"
+
+#~ msgid "Save As"
+#~ msgstr "另存新檔"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "「%1」外掛程式未提供有「%3」關鍵字的「%2」介面"
 
 #, fuzzy
 #~| msgid ""

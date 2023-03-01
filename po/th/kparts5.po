@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2010-12-31 22:47+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -30,21 +30,6 @@ msgstr "ถนอมทรัพย์ นพบูรณ์, สหชาติ
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "donga.nb@gmail.com, drrider@gmail.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>คุณต้องการที่จะค้นหา <b>%1</b> บนอินเทอร์เน็ตหรือไม่ ?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "ค้นหาบนอินเทอร์เน็ต"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&ค้นหา"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -106,42 +91,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "นี่เป็นชื่อแฟ้มที่ได้รับการแนะนำมาจากเซิร์ฟเวอร์"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "คุณต้องการจะประมวลผล '%1' จริงหรือไม่ ?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "ประมวลผลแฟ้มหรือไม่ ?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "ประมวลผล"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "ไม่พบตัวจัดการดาวน์โหลด (%1) ในเส้นทางพาธของคุณ"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"ลองติดตั้งมันใหม่อีกครั้ง  \n"
-"\n"
-"ส่วนที่รวมกับ Konqueror จะถูกปิดการใช้งาน"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "บันทึกเป็น"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "ยอมรับ"
@@ -150,20 +99,33 @@ msgstr "ยอมรับ"
 msgid "Reject"
 msgstr "ปฏิเสธ"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "บริการ '%1' ไม่มีส่วนสำหรับเชื่อมต่อ '%2' ด้วยคำค้น '%3'"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>คุณต้องการที่จะค้นหา <b>%1</b> บนอินเทอร์เน็ตหรือไม่ ?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "ค้นหาบนอินเทอร์เน็ต"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&ค้นหา"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "ไม่พบตัวจัดการสำหรับ %1"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -188,6 +150,36 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "ปิดเอกสาร"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "คุณต้องการจะประมวลผล '%1' จริงหรือไม่ ?"
+
+#~ msgid "Execute File?"
+#~ msgstr "ประมวลผลแฟ้มหรือไม่ ?"
+
+#~ msgid "Execute"
+#~ msgstr "ประมวลผล"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "ไม่พบตัวจัดการดาวน์โหลด (%1) ในเส้นทางพาธของคุณ"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "ลองติดตั้งมันใหม่อีกครั้ง  \n"
+#~ "\n"
+#~ "ส่วนที่รวมกับ Konqueror จะถูกปิดการใช้งาน"
+
+#~ msgid "Save As"
+#~ msgstr "บันทึกเป็น"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "บริการ '%1' ไม่มีส่วนสำหรับเชื่อมต่อ '%2' ด้วยคำค้น '%3'"
 
 #, fuzzy
 #~| msgid ""

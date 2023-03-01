@@ -1,6 +1,5 @@
 # Translation for kparts5.po to Euskara/Basque (eu).
-# Copyright (C) 1999-2011, Free Software Foundation, Inc.
-# Copyright (C) 2012-2022 This file is copyright:
+# Copyright (C) 1999-2023 This file is copyright:
 # This file is distributed under the same license as the kparts package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
@@ -8,20 +7,20 @@
 # Marcos <marcos@euskalgnu.org>, 2002,2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
 # Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
 # Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2012, 2013, 2014, 2020, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2012, 2013, 2014, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
-"PO-Revision-Date: 2022-10-07 05:23+0200\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"PO-Revision-Date: 2023-01-27 21:09+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -33,21 +32,6 @@ msgstr "Iñigo Salvador Azurmendi,Marcos,Ion Gaztañaga"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus,marcos@euskalgnu.org,igaztanaga@gmail.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Interneten <b>%1</b> bilatu nahi duzu?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Interneteko bilaketa"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Bilatu"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -109,42 +93,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Hau da zerbitzariak iradokitako fitxategi izena"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Benetan '%1' exekutatu nahi duzu? "
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Exekutatu fitxategia?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Exekutatu"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Deskarga kudeatzailea (%1) ez da aurkitu zure $PATH-ean"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Saiatu berriro instalatzen  \n"
-"\n"
-"Konqueror-ekin integrazioa desgaitu egingo da."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Gorde honela"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Onartu"
@@ -153,17 +101,32 @@ msgstr "Onartu"
 msgid "Reject"
 msgstr "Ukatu"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "«%1» pluginak ez du eskaintzen «%2» interfaze bat «%3» gako-hitzarekin"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Interneten <b>%1</b> bilatu nahi duzu?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Interneteko bilaketa"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Bilatu"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr "«KPluginFactory»k ezin izan du plugina zamatu. %1"
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Ez da aurkitu %1 MIME-motarako atalik."
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Ez dago %1 MIME-motarako instantziatu daitekeen atalik"
@@ -186,6 +149,34 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Itxi dokumentua"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Benetan '%1' exekutatu nahi duzu? "
+
+#~ msgid "Execute File?"
+#~ msgstr "Exekutatu fitxategia?"
+
+#~ msgid "Execute"
+#~ msgstr "Exekutatu"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Deskarga kudeatzailea (%1) ez da aurkitu zure $PATH-ean"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Saiatu berriro instalatzen  \n"
+#~ "\n"
+#~ "Konqueror-ekin integrazioa desgaitu egingo da."
+
+#~ msgid "Save As"
+#~ msgstr "Gorde honela"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "«%1» pluginak ez du eskaintzen «%2» interfaze bat «%3» gako-hitzarekin"
 
 #~ msgid "The plugin '%1' does not provide an interface '%2'"
 #~ msgstr "«%1» pluginak ez du eskaintzen «%2» interfaze bat"

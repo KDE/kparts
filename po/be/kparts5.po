@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2009-09-06 15:21+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
@@ -36,21 +36,6 @@ msgstr "Дарафей Праляскоўскі"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "komzpa@gmail.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Ці вы хочаце шукаць у інтэрнэце <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Пошук у Інтэрнэце"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Шукаць"
 
 #: browseropenorsavequestion.cpp:89
 #, fuzzy, kde-format
@@ -122,42 +107,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Гэта назва, з якой трэба захаваць файл."
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Вы сапраўды хочаце выканаць \"%1\"?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Выканаць файл?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Выканаць"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Немагчыма знайсці Кіраўнік спампоўванняў (%1) у $PATH "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Паспрабуйце пераўстанавіць яго  \n"
-"\n"
-"Інтэграцыя з Konqueror выключаная!"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Запісаць як"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Дазволіць"
@@ -166,18 +115,33 @@ msgstr "Дазволіць"
 msgid "Reject"
 msgstr "Адмовіць"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Ці вы хочаце шукаць у інтэрнэце <b>%1</b>?</qt>"
+
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Пошук у Інтэрнэце"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Шукаць"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Не знойдзены апрацоўшчык для %1."
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -201,6 +165,30 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Закрыць дакумент"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Вы сапраўды хочаце выканаць \"%1\"?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Выканаць файл?"
+
+#~ msgid "Execute"
+#~ msgstr "Выканаць"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Немагчыма знайсці Кіраўнік спампоўванняў (%1) у $PATH "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Паспрабуйце пераўстанавіць яго  \n"
+#~ "\n"
+#~ "Інтэграцыя з Konqueror выключаная!"
+
+#~ msgid "Save As"
+#~ msgstr "Запісаць як"
 
 #, fuzzy
 #~| msgid "The plugin '%1' uses an incompatible KDE library (%2)."

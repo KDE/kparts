@@ -11,13 +11,13 @@
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
 # Michal Rudolf <michal@rudolf.waw.pl>, 2010.
 # Artur Chłond <eugenewolfe@o2.pl>, 2010.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012, 2013, 2014, 2021, 2022.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012, 2013, 2014, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
-"PO-Revision-Date: 2022-10-18 18:03+0200\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"PO-Revision-Date: 2023-02-11 08:45+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -108,7 +108,7 @@ msgstr ""
 ">\n"
 ">\n"
 ">\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -121,21 +121,6 @@ msgstr "Michał Rudolf, Artur Chłond, Łukasz Wojniłowicz"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mrudolf@kdewebdev.org, eugenewolfe@o2.pl, lukasz.wojnilowicz@gmail.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Znaleźć w Internecie <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Wyszukiwanie w Internecie"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Wyszukaj"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -197,43 +182,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "To jest nazwa pliku zaproponowana przez serwer"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Na pewno wykonać '%1'?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Wykonać plik?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Wykonaj"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr ""
-"Nie można znaleźć programu do zarządzania pobieraniem (%1) w ścieżce $PATH"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Spróbuj wgrać ponownie\n"
-"\n"
-"Integracja z Konquerorem została wyłączona."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Zapisz jako"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Przyjmij"
@@ -242,17 +190,32 @@ msgstr "Przyjmij"
 msgid "Reject"
 msgstr "Odrzuć"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Wtyczka '%1' nie udostępnia interfejsu '%2' ze słowem kluczowym '%3'"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Znaleźć w Internecie <b>%1</b>?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Wyszukiwanie w Internecie"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Wyszukaj"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr "KPluginFactory nie udało się wczytać wtyczki: %1"
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Nie znaleziono części dla typu mime %1"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Nie można utworzyć żadnego wystąpienia dla mimeType %1"
@@ -275,6 +238,35 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Zamknij dokument"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Na pewno wykonać '%1'?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Wykonać plik?"
+
+#~ msgid "Execute"
+#~ msgstr "Wykonaj"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr ""
+#~ "Nie można znaleźć programu do zarządzania pobieraniem (%1) w ścieżce $PATH"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Spróbuj wgrać ponownie\n"
+#~ "\n"
+#~ "Integracja z Konquerorem została wyłączona."
+
+#~ msgid "Save As"
+#~ msgstr "Zapisz jako"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "Wtyczka '%1' nie udostępnia interfejsu '%2' ze słowem kluczowym '%3'"
 
 #~ msgid "The plugin '%1' does not provide an interface '%2'"
 #~ msgstr "Wtyczka '%1' nie udostępnia interfejsu '%2'"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2009-10-17 00:34+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -26,21 +26,6 @@ msgstr "Машраб Қуватов"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kmashrab@uni-bremen.de"
-
-#: browserextension.cpp:220
-#, fuzzy, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Интернетдан <b>%1</b>'ни қидиришни истайсизми?"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Интернетдан қидириш"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "Қ&идириш"
 
 #: browseropenorsavequestion.cpp:89
 #, fuzzy, kde-format
@@ -104,44 +89,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr ""
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Ростдан '%1'ни ишга туширишни истайсизми?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Файлни ишга тушириш"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Ишга тушириш"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr ""
-"Ёзиб олиш дастури (%1) сизнинг $PATH муҳит ўзгарувчингизда кўрсатилган "
-"директорияларда топилмади."
-
-#: browserrun.cpp:398
-#, fuzzy, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Уни қайтадан ўрнатиб кўринг.\n"
-"\n"
-"Konqueror билан интеграция ўчирилади!"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Сақлаш"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Қабул қилиш"
@@ -150,17 +97,32 @@ msgstr "Қабул қилиш"
 msgid "Reject"
 msgstr "Рад этиш"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
+#, fuzzy, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Интернетдан <b>%1</b>'ни қидиришни истайсизми?"
+
+#: navigationextension.cpp:219
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "Internet Search"
+msgstr "Интернетдан қидириш"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "Қ&идириш"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:132
 #, fuzzy, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "%1 учун дастур топилмади."
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "%1 учун дастур топилмади."
@@ -183,6 +145,33 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Ҳужжатни ёпиш"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Ростдан '%1'ни ишга туширишни истайсизми?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Файлни ишга тушириш"
+
+#~ msgid "Execute"
+#~ msgstr "Ишга тушириш"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr ""
+#~ "Ёзиб олиш дастури (%1) сизнинг $PATH муҳит ўзгарувчингизда кўрсатилган "
+#~ "директорияларда топилмади."
+
+#, fuzzy
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Уни қайтадан ўрнатиб кўринг.\n"
+#~ "\n"
+#~ "Konqueror билан интеграция ўчирилади!"
+
+#~ msgid "Save As"
+#~ msgstr "Сақлаш"
 
 #~ msgid "Name"
 #~ msgstr "Номи"

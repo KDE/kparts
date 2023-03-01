@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2012-06-27 10:04+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -27,21 +27,6 @@ msgid "Your emails"
 msgstr ""
 "khoemsokhem@khmeros.info,​​mornmet@khmeros.info,sutha@khmeros.info,"
 "ratanak@khmeros.info,sophea@khmeros.info"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>តើអ្នក​ចង់​ស្វែងរក <b>%1</b> តាម​អ៊ីនធឺណិត​ឬ ?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "ស្វែងរក​តាម​អ៊ីនធឺណិត"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "ស្វែង​រក"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -103,42 +88,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "នេះជា​ឈ្មោះ​ឯកសារ​ដែលបាន​ស្នើ​ដោយ​ម៉ាស៊ីន​បម្រើ"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "តើ​អ្នក​ពិត​ជា​ចង់​ប្រតិបត្តិ '%1' ឬ ?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "ប្រតិបត្តិ​ឯកសារ​ឬ ?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "ប្រតិបត្តិ"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "រក​មិន​ឃើញ​កម្មវិធី​គ្រប់គ្រង​ការ​ទាញយក (%1) ក្នុង​ $PATH របស់អ្នក "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"ព្យាយាម​ដំឡើង​​វា​ឡើង​វិញ \n"
-"\n"
-"សមាហរណកម្ម​ជាមួយ​នឹង Konqueror នឹង​មិន​ត្រូវ​អនុញ្ញាតទេ ។"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "រក្សាទុក​ជា"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "ព្រម​ទទួល"
@@ -147,20 +96,33 @@ msgstr "ព្រម​ទទួល"
 msgid "Reject"
 msgstr "បដិសេធ"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "សេវា '%1' មិនផ្ដល់​ចំណុចប្រទាក់​ '%2' ដែលមាន​ពាក្យ​គន្លឹះ '%3' ទេ"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>តើអ្នក​ចង់​ស្វែងរក <b>%1</b> តាម​អ៊ីនធឺណិត​ឬ ?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "ស្វែងរក​តាម​អ៊ីនធឺណិត"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "ស្វែង​រក"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "រក​មិន​ឃើញ​ដំណោះស្រាយ​សម្រាប់ %1 ឡើយ ។"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -184,6 +146,36 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "បិទ​ឯកសារ"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "តើ​អ្នក​ពិត​ជា​ចង់​ប្រតិបត្តិ '%1' ឬ ?"
+
+#~ msgid "Execute File?"
+#~ msgstr "ប្រតិបត្តិ​ឯកសារ​ឬ ?"
+
+#~ msgid "Execute"
+#~ msgstr "ប្រតិបត្តិ"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "រក​មិន​ឃើញ​កម្មវិធី​គ្រប់គ្រង​ការ​ទាញយក (%1) ក្នុង​ $PATH របស់អ្នក "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "ព្យាយាម​ដំឡើង​​វា​ឡើង​វិញ \n"
+#~ "\n"
+#~ "សមាហរណកម្ម​ជាមួយ​នឹង Konqueror នឹង​មិន​ត្រូវ​អនុញ្ញាតទេ ។"
+
+#~ msgid "Save As"
+#~ msgstr "រក្សាទុក​ជា"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "សេវា '%1' មិនផ្ដល់​ចំណុចប្រទាក់​ '%2' ដែលមាន​ពាក្យ​គន្លឹះ '%3' ទេ"
 
 #, fuzzy
 #~| msgid ""

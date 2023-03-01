@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2007-10-15 22:19+0200\n"
 "Last-Translator: Jañ-Mai Drapier <jan-mai.drapier@mail.dotcom.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -27,22 +27,6 @@ msgstr "Thierry Vignaud, Jañ-Mai Drapier"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tvignaud@mandriva.com, jdrapier@club-internet.fr"
-
-#: browserextension.cpp:220
-#, fuzzy, kde-format
-#| msgid "<qt>Do you want to search the Internet for <b>%1</b>?"
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>C'hoant ho peus klask ouzh Internet evit <b>%1</b> ?"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Kasl ouzh ar genrouedad"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Klask"
 
 #: browseropenorsavequestion.cpp:89
 #, fuzzy, kde-format
@@ -113,40 +97,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr ""
 
-#: browserrun.cpp:333
-#, fuzzy, kde-format
-#| msgid "Do you really want to execute '%1'? "
-msgid "Do you really want to execute '%1'?"
-msgstr "Ha fellout a ra deoc'h da seveniñ '%1' ?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Seveniñ ar restr ?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Seveniñ"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr ""
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Enrollañ e"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Aotren"
@@ -155,17 +105,33 @@ msgstr "Aotren"
 msgid "Reject"
 msgstr "Nac'h"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
+#, fuzzy, kde-format
+#| msgid "<qt>Do you want to search the Internet for <b>%1</b>?"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>C'hoant ho peus klask ouzh Internet evit <b>%1</b> ?"
+
+#: navigationextension.cpp:219
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "Internet Search"
+msgstr "Kasl ouzh ar genrouedad"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Klask"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:132
 #, fuzzy, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Krouiñ ur renkell nevez e :"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Krouiñ ur renkell nevez e :"
@@ -188,6 +154,20 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Serriñ an teul"
+
+#, fuzzy
+#~| msgid "Do you really want to execute '%1'? "
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Ha fellout a ra deoc'h da seveniñ '%1' ?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Seveniñ ar restr ?"
+
+#~ msgid "Execute"
+#~ msgstr "Seveniñ"
+
+#~ msgid "Save As"
+#~ msgstr "Enrollañ e"
 
 #~ msgid "Name"
 #~ msgstr "Anv"

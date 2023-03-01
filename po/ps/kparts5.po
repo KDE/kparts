@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2008-08-16 16:01-0800\n"
 "Last-Translator: Zabeeh Khan <zabeehkhan@gmail.com>\n"
 "Language-Team: Pashto <pathanisation@googlegroups.com>\n"
@@ -28,21 +28,6 @@ msgstr "ستاسو نومونه"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zabeehkhan@gmail.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>لپاره اېنټرنېټ وپلټﺉ؟ <b>%1</b> تاسو غواړﺉ چې د</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "اېنټرنېټ پلټون"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "پلټون"
 
 #: browseropenorsavequestion.cpp:89
 #, fuzzy, kde-format
@@ -114,42 +99,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "دا هغه نوم دی چې دوتنه پرې وساتل شي."
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "په رښتيا چلول غواړﺉ؟ '%1'"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "دوتنه چلول غواړﺉ؟"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "چلول"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "کې ونه موندل شو $يونلور ستاسو په (%1) د رالېښنې سمبالګر"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"  د بيا لګولو هڅه يې وکړﺉ\n"
-"\n"
-"د کانکويرر سره به يې ټينګوالی وناتوانول شي."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "ساتل په"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "منل"
@@ -158,18 +107,33 @@ msgstr "منل"
 msgid "Reject"
 msgstr "نه منل"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>لپاره اېنټرنېټ وپلټﺉ؟ <b>%1</b> تاسو غواړﺉ چې د</qt>"
+
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "اېنټرنېټ پلټون"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "پلټون"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr ".د %1 لپاره کوم سمبالوونکی ونه مونل شو"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -193,6 +157,30 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "لاسوند بندول"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "په رښتيا چلول غواړﺉ؟ '%1'"
+
+#~ msgid "Execute File?"
+#~ msgstr "دوتنه چلول غواړﺉ؟"
+
+#~ msgid "Execute"
+#~ msgstr "چلول"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "کې ونه موندل شو $يونلور ستاسو په (%1) د رالېښنې سمبالګر"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "  د بيا لګولو هڅه يې وکړﺉ\n"
+#~ "\n"
+#~ "د کانکويرر سره به يې ټينګوالی وناتوانول شي."
+
+#~ msgid "Save As"
+#~ msgstr "ساتل په"
 
 #, fuzzy
 #~| msgid "The plugin '%1' uses an incompatible KDE library (%2)."

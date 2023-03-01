@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
-"PO-Revision-Date: 2022-10-07 09:15+0100\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"PO-Revision-Date: 2023-02-15 16:13+0000\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -116,21 +116,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zepires@gmail.com"
 
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Deseja procurar na Internet pelo <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Pesquisa na Internet"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Procurar"
-
 #: browseropenorsavequestion.cpp:89
 #, kde-format
 msgctxt "@label Type of file"
@@ -191,42 +176,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Este é o nome do ficheiro sugerido pelo servidor"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Deseja mesmo executar o '%1'?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Executar o Ficheiro?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Executar"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "O Gestor de Transferências (%1) não foi encontrado no seu $PATH "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Tente reinstalá-lo  \n"
-"\n"
-"A integração com o Konqueror irá ficar desactivada."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Gravar Como"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Aceitar"
@@ -235,18 +184,32 @@ msgstr "Aceitar"
 msgid "Reject"
 msgstr "Rejeitar"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr ""
-"O 'plugin' '%1' não oferece uma interface '%2' com a palavra-chave '%3'"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Deseja procurar na Internet pelo <b>%1</b>?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Pesquisa na Internet"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Procurar"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr "Não foi possível ao KPluginFactory carregar o 'plugin': %1"
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Não foi encontrada nenhuma componente para o tipo MIME %1"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Não foi possível instanciar nenhum componente para o tipo MIME %1"
@@ -269,3 +232,31 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Fechar o Documento"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Deseja mesmo executar o '%1'?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Executar o Ficheiro?"
+
+#~ msgid "Execute"
+#~ msgstr "Executar"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "O Gestor de Transferências (%1) não foi encontrado no seu $PATH "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Tente reinstalá-lo  \n"
+#~ "\n"
+#~ "A integração com o Konqueror irá ficar desactivada."
+
+#~ msgid "Save As"
+#~ msgstr "Gravar Como"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "O 'plugin' '%1' não oferece uma interface '%2' com a palavra-chave '%3'"

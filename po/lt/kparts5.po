@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2020-03-25 17:44+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -36,21 +36,6 @@ msgid "Your emails"
 msgstr ""
 "rch@richard.eu.org, dgvirtual@akl.lt, gintautas@miselis.lt, stikonas@gmail."
 "com, liudas@akmc.lt, <>"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Ar norite ieškoti internete <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Paieška internete"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Ieškoti"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -112,42 +97,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Tai yra serverio pasiūlytas failo pavadinimas"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Ar jūs tikrai norite vykdyti „%1“?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Vykdyti failą?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Vykdyti"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Atsiuntimų tvarkytuvė (%1) nerasta jūsų kelyje $PATH "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Pabandykite įdiegti iš naujo \n"
-"\n"
-"Integracija su Konqueror bus išjungta."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Įrašyti kaip"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Sutinku"
@@ -156,17 +105,32 @@ msgstr "Sutinku"
 msgid "Reject"
 msgstr "Atmetu"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Papildinys \"%1\" nepateikia sąsajos \"%2\" su raktažodžiu \"%3\""
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Ar norite ieškoti internete <b>%1</b>?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Paieška internete"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Ieškoti"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Nerasta jokios dalies, skirtos mimeType %1"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No part was found for mimeType %1"
 msgid "No part could be instantiated for mimeType %1"
@@ -190,6 +154,33 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Užverti dokumentą"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Ar jūs tikrai norite vykdyti „%1“?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Vykdyti failą?"
+
+#~ msgid "Execute"
+#~ msgstr "Vykdyti"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Atsiuntimų tvarkytuvė (%1) nerasta jūsų kelyje $PATH "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Pabandykite įdiegti iš naujo \n"
+#~ "\n"
+#~ "Integracija su Konqueror bus išjungta."
+
+#~ msgid "Save As"
+#~ msgstr "Įrašyti kaip"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "Papildinys \"%1\" nepateikia sąsajos \"%2\" su raktažodžiu \"%3\""
 
 #, fuzzy
 #~| msgid ""

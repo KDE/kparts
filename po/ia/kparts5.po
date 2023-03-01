@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2013, 2020, 2021, 2022.
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2013, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
-"PO-Revision-Date: 2022-12-18 22:55+0100\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"PO-Revision-Date: 2023-02-03 11:44+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -26,21 +26,6 @@ msgstr "Giovanni Sora"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "g.sora@tiscali.it"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt> Tu vole cercar le internet pro <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Cerca de Internet"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Cerca"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -102,43 +87,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Isto es le nomine de file suggestionate per le servitor"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Tu realmente vole executar '%1'?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Tu executa le file?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Executa"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr ""
-"Le gerente del discargamento (%1) poterea non trovar se in vostre $PATH"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Essaya reinstallar lo\n"
-"\n"
-"Le integration con Konqueror essera inhabilitate"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Salva como"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Da acceptation"
@@ -147,17 +95,32 @@ msgstr "Da acceptation"
 msgid "Reject"
 msgstr "Rejecta"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Le servicio '%1' non provide un interfacie '%2' con parola clave '%3'"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt> Tu vole cercar le internet pro <b>%1</b>?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Cerca de Internet"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Cerca"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr "KPluginFactory non poteva cargar le plugin: %1"
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Nulle parte esseva trovate per Typomime %1"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Nulle parte esseva instantiate  per Typomime %1"
@@ -180,6 +143,35 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Claude le documento"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Tu realmente vole executar '%1'?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Tu executa le file?"
+
+#~ msgid "Execute"
+#~ msgstr "Executa"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr ""
+#~ "Le gerente del discargamento (%1) poterea non trovar se in vostre $PATH"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Essaya reinstallar lo\n"
+#~ "\n"
+#~ "Le integration con Konqueror essera inhabilitate"
+
+#~ msgid "Save As"
+#~ msgstr "Salva como"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "Le servicio '%1' non provide un interfacie '%2' con parola clave '%3'"
 
 #~ msgid "The plugin '%1' does not provide an interface '%2'"
 #~ msgstr "Le plugin '%1' non provide un interfacie '%2' "

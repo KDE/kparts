@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2006-01-04 13:32+0800\n"
 "Last-Translator: Abel Cheung <abel@oaka.org>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
@@ -51,22 +51,6 @@ msgstr ""
 "kenduest@i18n.linux.org.tw,lark@linux.net.cn,anthony@thizlinux.com,"
 "ycheng@slat.org,lark@linux.ustc.edu.cn,fundawang@en2china.com,sarahs@redhat."
 "com,jxiong@offtopic.org,acelan@linux.org.tw,stanley18fan0k@yahoo.com.hk"
-
-#: browserextension.cpp:220
-#, fuzzy, kde-format
-#| msgid "<qt>Do you want to search the Internet for <b>%1</b>?"
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>你要在 Internet 上搜尋 <b>%1</b> 嗎？"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "網絡搜尋"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "搜尋(&S)"
 
 #: browseropenorsavequestion.cpp:89
 #, fuzzy, kde-format
@@ -137,44 +121,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr ""
 
-#: browserrun.cpp:333
-#, fuzzy, kde-format
-#| msgid "Do you really want to execute '%1'? "
-msgid "Do you really want to execute '%1'?"
-msgstr "你真的要執行‘%1’？"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "執行檔案嗎？"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "執行"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr ""
-"找不到下載管理程式 (%1)，請檢查你的安裝是否正確，包含 PATH 路徑有設定正確。"
-
-#: browserrun.cpp:398
-#, fuzzy, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"試著重新安裝  \n"
-"\n"
-"與 Konqueror 的整合將被停用！"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "另存新檔"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "接受"
@@ -183,17 +129,33 @@ msgstr "接受"
 msgid "Reject"
 msgstr "拒絕"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
+#, fuzzy, kde-format
+#| msgid "<qt>Do you want to search the Internet for <b>%1</b>?"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>你要在 Internet 上搜尋 <b>%1</b> 嗎？"
+
+#: navigationextension.cpp:219
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "Internet Search"
+msgstr "網絡搜尋"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "搜尋(&S)"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:132
 #, fuzzy, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "找不到給 %1 用的處理器項目!"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "找不到給 %1 用的處理器項目!"
@@ -216,6 +178,35 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "關閉文件"
+
+#, fuzzy
+#~| msgid "Do you really want to execute '%1'? "
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "你真的要執行‘%1’？"
+
+#~ msgid "Execute File?"
+#~ msgstr "執行檔案嗎？"
+
+#~ msgid "Execute"
+#~ msgstr "執行"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr ""
+#~ "找不到下載管理程式 (%1)，請檢查你的安裝是否正確，包含 PATH 路徑有設定正"
+#~ "確。"
+
+#, fuzzy
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "試著重新安裝  \n"
+#~ "\n"
+#~ "與 Konqueror 的整合將被停用！"
+
+#~ msgid "Save As"
+#~ msgstr "另存新檔"
 
 #~ msgid "Name"
 #~ msgstr "名稱"

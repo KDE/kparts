@@ -13,13 +13,13 @@
 # Kristof Bal <kristof.bal@gmail.com>, 2008, 2009.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2010.
 # Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2012.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2013, 2020, 2021, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2011, 2013, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
-"PO-Revision-Date: 2022-10-07 10:51+0200\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"PO-Revision-Date: 2023-01-24 16:51+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Files: kfarch.cpp kfdird.cpp kfind.cpp kfindtop.cpp kfoptions.cpp kfsave.cpp "
 "kftabdlg.cpp kftypes.cpp kfwin.cpp main.cpp mkfdird.cpp mkfind.cpp\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -37,7 +37,7 @@ msgid "Your names"
 msgstr ""
 "Rinse de Vries - 2000 t/m 2008,Wilbert Berendsen - 2003; 2004,Bram "
 "Schoenmakers - 2004 t/m 2007,Tom Albers - 2004,Tijmen Baarda - 2005,Sander "
-"Koning - 2005, Freek de Kruijf - 2009 t/m 2012; 2020 t/m 2021"
+"Koning - 2005, Freek de Kruijf - 2009 t/m 2012; 2020 t/m 2023"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -45,21 +45,6 @@ msgid "Your emails"
 msgstr ""
 "rinsedevries@kde.nl,wbsoft@xs4all.nl,bramschoenmakers@kde.nl,tomalbers@kde."
 "nl,tijmenbaarda@kde.nl,,freekdekruijf@kde.nl"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Wilt u op internet zoeken naar <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Internet zoekactie"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Zoeken"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -121,42 +106,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Dit is de door de server gesuggereerde bestandsnaam"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Wilt u '%1' uitvoeren?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Bestand uitvoeren?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Uitvoeren"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "De downloadmanager (%1) werd niet in uw zoekpad ($PATH) gevonden"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Probeer deze opnieuw te installeren.  \n"
-"\n"
-"De integratie met Konqueror wordt nu uitgeschakeld."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Opslaan als"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Accepteren"
@@ -165,17 +114,32 @@ msgstr "Accepteren"
 msgid "Reject"
 msgstr "Verwerpen"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "De plug-in '%1 biedt geen interface '%2' met steekwoord '%3'"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Wilt u op internet zoeken naar <b>%1</b>?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Internet zoekactie"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Zoeken"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr "KPluginFactory kon de plug-in '%1' niet laden"
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Geen onderdeel gevonden voor mimeType %1."
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Geen onderdeel kon bekrachtigd worden voor mimeType %1"
@@ -198,6 +162,33 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Document sluiten"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Wilt u '%1' uitvoeren?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Bestand uitvoeren?"
+
+#~ msgid "Execute"
+#~ msgstr "Uitvoeren"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "De downloadmanager (%1) werd niet in uw zoekpad ($PATH) gevonden"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Probeer deze opnieuw te installeren.  \n"
+#~ "\n"
+#~ "De integratie met Konqueror wordt nu uitgeschakeld."
+
+#~ msgid "Save As"
+#~ msgstr "Opslaan als"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "De plug-in '%1 biedt geen interface '%2' met steekwoord '%3'"
 
 #~ msgid "The plugin '%1' does not provide an interface '%2'"
 #~ msgstr "De plug-in '%1 biedt geen interface '%2'"

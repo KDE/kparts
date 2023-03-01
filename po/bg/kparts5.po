@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008, 2009.
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010, 2011, 2012, 2013.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
-"PO-Revision-Date: 2022-10-09 07:20+0200\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"PO-Revision-Date: 2023-01-27 19:16+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -28,21 +28,6 @@ msgstr "Ясен Праматаров,Радостин Раднев,Златко
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yasen@lindeas.com,radnev@yahoo.com,zlatkopopov@fsa-bg.org"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Искате ли да търсите в Интернет за <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Търсене в Интернет"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Търсене"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -104,43 +89,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Това е името на файла, предложено от сървъра"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Сигурни ли сте, че искате да изпълните \"%1\"?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Изпълнение на файл?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Изпълнение"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr ""
-"Мениджърът за изтегляне (%1) не може да бъде намерен в променливата PATH "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Опит за преинсталиране\n"
-"\n"
-"Интеграцията с Konqueror ще бъде изключена."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Запис като"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Приемане"
@@ -149,17 +97,32 @@ msgstr "Приемане"
 msgid "Reject"
 msgstr "Отхвърляне"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Приставката \"%1\" не предлага интерфейс \"%2\" с ключова дума \"%3\"."
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Искате ли да търсите в Интернет за <b>%1</b>?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Търсене в Интернет"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Търсене"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr "KPluginFactory не може да зареди приставка: %1"
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Не е намерена част за MIME тип %1"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Не е намерена част за MIME тип %1"
@@ -182,3 +145,32 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Затваряне на документа"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Сигурни ли сте, че искате да изпълните \"%1\"?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Изпълнение на файл?"
+
+#~ msgid "Execute"
+#~ msgstr "Изпълнение"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr ""
+#~ "Мениджърът за изтегляне (%1) не може да бъде намерен в променливата PATH "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Опит за преинсталиране\n"
+#~ "\n"
+#~ "Интеграцията с Konqueror ще бъде изключена."
+
+#~ msgid "Save As"
+#~ msgstr "Запис като"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "Приставката \"%1\" не предлага интерфейс \"%2\" с ключова дума \"%3\"."

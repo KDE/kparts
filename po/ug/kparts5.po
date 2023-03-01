@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -27,21 +27,6 @@ msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>ئىنتېرنېتتىن «%1» نى ئىزدەمسىز؟</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "ئىنتېرنېتتا ئىزدەش"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "ئىزدە(&S)"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -103,42 +88,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "بۇ دەل مۇلازىمېتىر تەۋسىيە قىلغان ھۆججەت ئاتى."
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "راستلا '%1' نى ئىجرا قىلامسىز؟"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "ھۆججەتنى ئىجرا قىلامدۇ؟"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "ئىجرا قىل"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "ئىزدەش يولى $PATH دىن چۈشۈرۈش باشقۇرغۇچ (%1)نى تاپالمىدى. "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"ئۇنى قايتا ئورنىتىشنى سىناڭ\n"
-"\n"
-"Konqueror بىلەن باغلاش چەكلىنىدۇ."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "باشقا ئاتتا ساقلا"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "قوشۇل"
@@ -147,20 +96,33 @@ msgstr "قوشۇل"
 msgid "Reject"
 msgstr "رەت قىل"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "'%1' مۇلازىمەت '%3' ھالقىلىق سۆزلۈك '%2' ئېغىزنى تەمىنلىمىگەن"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>ئىنتېرنېتتىن «%1» نى ئىزدەمسىز؟</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "ئىنتېرنېتتا ئىزدەش"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "ئىزدە(&S)"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1 نىڭ تۇتقۇچىسى تېپىلمىدى"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -184,6 +146,36 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "پۈتۈك ياپ"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "راستلا '%1' نى ئىجرا قىلامسىز؟"
+
+#~ msgid "Execute File?"
+#~ msgstr "ھۆججەتنى ئىجرا قىلامدۇ؟"
+
+#~ msgid "Execute"
+#~ msgstr "ئىجرا قىل"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "ئىزدەش يولى $PATH دىن چۈشۈرۈش باشقۇرغۇچ (%1)نى تاپالمىدى. "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "ئۇنى قايتا ئورنىتىشنى سىناڭ\n"
+#~ "\n"
+#~ "Konqueror بىلەن باغلاش چەكلىنىدۇ."
+
+#~ msgid "Save As"
+#~ msgstr "باشقا ئاتتا ساقلا"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "'%1' مۇلازىمەت '%3' ھالقىلىق سۆزلۈك '%2' ئېغىزنى تەمىنلىمىگەن"
 
 #, fuzzy
 #~| msgid ""

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2010-01-27 10:39+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -38,21 +38,6 @@ msgstr "Божидар Проевски"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "bobibobi@freemail.com.mk"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Дали сакате да пребарувате на Интернет за <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Интернет-барање"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Барај"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -114,42 +99,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Ова е името на датотека што се предлага од серверот"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Дали навистина сакате да го извршите „%1“?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Изврши датотека?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Изврши"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Менаџерот за симнувања (%1) не можеше да се најде во Вашиот $PATH "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Обидете се да го реинсталирате  \n"
-"\n"
-"Интеграцијата со Konqueror ќе биде оневозможена!"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Зачувај како"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Прифати"
@@ -158,20 +107,33 @@ msgstr "Прифати"
 msgid "Reject"
 msgstr "Одбиј"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Сервисот „%1“ не обезбедува интерфејс „%2“ со клучен збор „%3“"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Дали сакате да пребарувате на Интернет за <b>%1</b>?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Интернет-барање"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Барај"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Не е најден ракувач за %1."
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -195,6 +157,36 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Затвори документ"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Дали навистина сакате да го извршите „%1“?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Изврши датотека?"
+
+#~ msgid "Execute"
+#~ msgstr "Изврши"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Менаџерот за симнувања (%1) не можеше да се најде во Вашиот $PATH "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Обидете се да го реинсталирате  \n"
+#~ "\n"
+#~ "Интеграцијата со Konqueror ќе биде оневозможена!"
+
+#~ msgid "Save As"
+#~ msgstr "Зачувај како"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "Сервисот „%1“ не обезбедува интерфејс „%2“ со клучен збор „%3“"
 
 #, fuzzy
 #~| msgid ""

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2022-11-10 20:51+0100\n"
 "Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -34,21 +34,6 @@ msgstr "Thomas Reitelbach, Stephan Johach, Thomas Diehl"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tr@erdfunkstelle.de, hunsum@gmx.de, thd@kde.org"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Möchten Sie das Internet nach <b>%1</b> durchsuchen?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Internet-Suche"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Suchen"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -110,42 +95,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Dies ist der Dateiname, der vom Server vorgeschlagen wird."
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Möchten Sie „%1“ wirklich ausführen?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Datei ausführen?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Ausführen"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Die Download-Verwaltung %1 wurde in Ihrem $PATH nicht gefunden "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Installieren Sie ihn neu.\n"
-"\n"
-"Die Einbindung in Konqueror wird deaktiviert."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Speichern unter"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Annehmen"
@@ -154,19 +103,32 @@ msgstr "Annehmen"
 msgid "Reject"
 msgstr "Ablehnen"
 
-# Interface -> Schnittstelle?
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr ""
-"Das Modul „%1“ stellt kein Interface „%2“ mit dem Schlüsselwort „%3“ bereit"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Möchten Sie das Internet nach <b>%1</b> durchsuchen?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Internet-Suche"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Suchen"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Es wurde kein „Part“ für den MIME-Typ %1 gefunden"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Es konnte kein „Part“ für den MIME-Typ %1 erzeugt werden"
@@ -189,6 +151,36 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Dokument schließen"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Möchten Sie „%1“ wirklich ausführen?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Datei ausführen?"
+
+#~ msgid "Execute"
+#~ msgstr "Ausführen"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Die Download-Verwaltung %1 wurde in Ihrem $PATH nicht gefunden "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Installieren Sie ihn neu.\n"
+#~ "\n"
+#~ "Die Einbindung in Konqueror wird deaktiviert."
+
+#~ msgid "Save As"
+#~ msgstr "Speichern unter"
+
+# Interface -> Schnittstelle?
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "Das Modul „%1“ stellt kein Interface „%2“ mit dem Schlüsselwort „%3“ "
+#~ "bereit"
 
 # Interface -> Schnittstelle?
 #~ msgid "The plugin '%1' does not provide an interface '%2'"

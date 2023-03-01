@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-07 02:02+0200\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -31,143 +31,110 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
 
-#: browserextension.cpp:240
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Желите ли да потражите <b>%1</b> на Интернету?</qt>"
-
-#: browserextension.cpp:241
-#, kde-format
-msgid "Internet Search"
-msgstr "Претрага на Интернету"
-
-#: browserextension.cpp:241
-#, kde-format
-msgid "&Search"
-msgstr "&Тражи"
-
-#: browseropenorsavequestion.cpp:102
+#: browseropenorsavequestion.cpp:89
 #, kde-format
 msgctxt "@label Type of file"
 msgid "Type: %1"
 msgstr "Тип: %1"
 
-#: browseropenorsavequestion.cpp:110
+#: browseropenorsavequestion.cpp:97
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Remember action for files of this type"
 msgstr "Запамти радњу за фајлове овог типа"
 
-#: browseropenorsavequestion.cpp:162 browseropenorsavequestion.cpp:255
+#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open with %1"
 msgstr "&Отвори помоћу %1|/|&Отвори $[инс-п %1]"
 
-#: browseropenorsavequestion.cpp:229
+#: browseropenorsavequestion.cpp:213
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open &with %1"
 msgstr "&Отвори помоћу %1|/|&Отвори $[инс-п %1]"
 
-#: browseropenorsavequestion.cpp:240 browseropenorsavequestion.cpp:335
+#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
 #, kde-format
 msgctxt "@info"
 msgid "Open '%1'?"
 msgstr "Отворити „%1“"
 
-#: browseropenorsavequestion.cpp:244
+#: browseropenorsavequestion.cpp:228
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open with..."
 msgstr "&Отвори помоћу..."
 
-#: browseropenorsavequestion.cpp:264
+#: browseropenorsavequestion.cpp:246
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open with"
 msgstr "&Отвори помоћу"
 
-#: browseropenorsavequestion.cpp:332
+#: browseropenorsavequestion.cpp:315
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open"
 msgstr "&Отвори"
 
-#: browseropenorsavequestion.cpp:357
+#: browseropenorsavequestion.cpp:339
 #, kde-format
 msgctxt "@label File name"
 msgid "Name: %1"
 msgstr "Име: %1"
 
-#: browseropenorsavequestion.cpp:359
+#: browseropenorsavequestion.cpp:341
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Име фајла које предлаже сервер."
 
-#: browserrun.cpp:350
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Желите ли заиста да извршите ‘%1’?"
-
-#: browserrun.cpp:351
-#, kde-format
-msgid "Execute File?"
-msgstr "Извршити фајл?"
-
-#: browserrun.cpp:351
-#, kde-format
-msgid "Execute"
-msgstr "Изврши"
-
-#: browserrun.cpp:410
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Менаџер преузимања (%1) није пронађен у путањи ($PATH) "
-
-#: browserrun.cpp:411
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Покушајте да га реинсталирате. \n"
-"\n"
-"Интеграција са К‑освајачем ће бити искључена."
-
-#: browserrun.cpp:438
-#, kde-format
-msgid "Save As"
-msgstr "Сачувај као"
-
-#: htmlsettingsinterface.cpp:34
-#, kde-format
+#: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Прихвати"
 
-#: htmlsettingsinterface.cpp:36
-#, kde-format
+#: htmlsettingsinterface.cpp:23
 msgid "Reject"
 msgstr "Одбаци"
 
-#: partloader.cpp:182
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Желите ли да потражите <b>%1</b> на Интернету?</qt>"
+
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Претрага на Интернету"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Тражи"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:197
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr ""
 
-#: readwritepart.cpp:93
+#: partloader.cpp:136
+#, kde-format
+msgid "No part could be instantiated for mimeType %1"
+msgstr ""
+
+#: readwritepart.cpp:80
 #, kde-format
 msgid "Untitled"
 msgstr "неименовано"
 
-#: readwritepart.cpp:102
+#: readwritepart.cpp:89
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -176,7 +143,31 @@ msgstr ""
 "Документ „%1“ је измијењен.\n"
 "Желите ли да сачувате измјене?"
 
-#: readwritepart.cpp:104
+#: readwritepart.cpp:92
 #, kde-format
 msgid "Close Document"
 msgstr "Затвори документ"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Желите ли заиста да извршите ‘%1’?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Извршити фајл?"
+
+#~ msgid "Execute"
+#~ msgstr "Изврши"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Менаџер преузимања (%1) није пронађен у путањи ($PATH) "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Покушајте да га реинсталирате. \n"
+#~ "\n"
+#~ "Интеграција са К‑освајачем ће бити искључена."
+
+#~ msgid "Save As"
+#~ msgstr "Сачувај као"

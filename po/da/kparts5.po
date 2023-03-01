@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2020-07-27 18:18+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -28,21 +28,6 @@ msgstr "Erik Kjær Pedersen,Martin Schlander,Keld Simonsen"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "erik@binghamton.edu,mschlander@opensuse.org,keld@keldix.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Vil du søge på internettet efter <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Internet-søgning"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Søg"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -104,42 +89,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Dette er filnavnet som serveren foreslog"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Vil du virkelig køre \"%1\"?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Kør fil?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Kør"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Download-håndteringen (%1) kunne ikke findes i din sti ($PATH)."
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Prøv at geninstallere den  \n"
-"\n"
-"Integrationen med Konqueror vil blive deaktiveret."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Gem som"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Acceptér"
@@ -148,17 +97,32 @@ msgstr "Acceptér"
 msgid "Reject"
 msgstr "Afslå"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Pluginet \"%1\" leverer ikke grænsefladen \"%2\" med nøgleordet \"%3\""
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Vil du søge på internettet efter <b>%1</b>?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Internet-søgning"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Søg"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Der blev ikke fundet en part for MIME-typen %1"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No part was found for mimeType %1"
 msgid "No part could be instantiated for mimeType %1"
@@ -182,6 +146,34 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Luk dokument"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Vil du virkelig køre \"%1\"?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Kør fil?"
+
+#~ msgid "Execute"
+#~ msgstr "Kør"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Download-håndteringen (%1) kunne ikke findes i din sti ($PATH)."
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Prøv at geninstallere den  \n"
+#~ "\n"
+#~ "Integrationen med Konqueror vil blive deaktiveret."
+
+#~ msgid "Save As"
+#~ msgstr "Gem som"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "Pluginet \"%1\" leverer ikke grænsefladen \"%2\" med nøgleordet \"%3\""
 
 #, fuzzy
 #~| msgid ""

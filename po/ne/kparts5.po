@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2007-11-05 15:41+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -31,21 +31,6 @@ msgstr "Mahesh Subedi, श्यामकृष्ण बल, Nabin Gautam"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "submanesh@gmail.com, shyamkrishna_bal@yahoo.com, Nabin@mpp.org.np"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>तपाईँ <b>%1</b> का लागि इन्टरनेट खोजी गर्न चाहनुहुन्छ ?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "इन्टरनेट खोजी"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "खोजी गर्नुहोस्"
 
 #: browseropenorsavequestion.cpp:89
 #, fuzzy, kde-format
@@ -117,42 +102,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "यो यस रूपमा बचत गरिने फाइलको नाम हो ।"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "तपाईँ साँच्चिकै '%1' कार्यान्वयन गर्न चाहनुहुन्छ ?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "फाइल कार्यान्वयन गर्नुहुन्छ ?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "कार्यान्वयन गर्नुहोस्"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "(%1) डाउनलोड प्रबन्धक तपाईँको $PATH मा फेला पार्न सक्दैन"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"यसलाई फेरि स्थापना गर्ने प्रयास गर्नुहोस्  \n"
-"\n"
-"कन्क्वेररसँगको एकिकरण अक्षम पारिनेछ ।"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "यस रूपमा बचत गर्नुहोस्"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "स्वीकार गर्नुहोस्"
@@ -161,20 +110,33 @@ msgstr "स्वीकार गर्नुहोस्"
 msgid "Reject"
 msgstr "अस्वीकार गर्नुहोस्"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "सेवा '%1' ले शब्दकुञ्जी '%3' सँग एउटा इन्टरफेस '%2' उपलब्ध गर्न सक्दैन"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>तपाईँ <b>%1</b> का लागि इन्टरनेट खोजी गर्न चाहनुहुन्छ ?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "इन्टरनेट खोजी"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "खोजी गर्नुहोस्"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1 का लागि ह्यान्डलर फेला परेन ।"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -198,6 +160,36 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "कागजात बन्द गर्नुहोस्"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "तपाईँ साँच्चिकै '%1' कार्यान्वयन गर्न चाहनुहुन्छ ?"
+
+#~ msgid "Execute File?"
+#~ msgstr "फाइल कार्यान्वयन गर्नुहुन्छ ?"
+
+#~ msgid "Execute"
+#~ msgstr "कार्यान्वयन गर्नुहोस्"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "(%1) डाउनलोड प्रबन्धक तपाईँको $PATH मा फेला पार्न सक्दैन"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "यसलाई फेरि स्थापना गर्ने प्रयास गर्नुहोस्  \n"
+#~ "\n"
+#~ "कन्क्वेररसँगको एकिकरण अक्षम पारिनेछ ।"
+
+#~ msgid "Save As"
+#~ msgstr "यस रूपमा बचत गर्नुहोस्"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "सेवा '%1' ले शब्दकुञ्जी '%3' सँग एउटा इन्टरफेस '%2' उपलब्ध गर्न सक्दैन"
 
 #, fuzzy
 #~| msgid ""

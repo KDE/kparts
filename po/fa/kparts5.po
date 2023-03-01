@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2012-06-28 16:40+0430\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <kde-i18n-fa@kde.org>\n"
@@ -32,21 +32,6 @@ msgid "Your emails"
 msgstr ""
 "mohi@linuxshop.ir , kazemi@itland.ir , mebrahim@gmail.com , s.taghavi@gmail."
 "com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>می‌خواهید اینترنت را برای <b>%1</b> جستجو کنید؟</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "جستجوی اینترنت"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&جستجو‌"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -110,42 +95,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "این نام برای ذخیره پرونده با نام است."
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "آیا واقعاً می‌خواهید  »%1« را اجرا کنید؟"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "پرونده اجرا شود؟"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "اجرا"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "مدیر بارگیری  )%1( در $PATH  شما یافت نشد"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"سعی کنید آن را دوباره نصب کنید  \n"
-"\n"
-"مجتمع‌سازی توسط Konqueror غیرفعال می‌شود."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "ذخیره به عنوان"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "پذیرفتن"
@@ -154,21 +103,33 @@ msgstr "پذیرفتن"
 msgid "Reject"
 msgstr "رد کردن"
 
-# The service '%1' does not provide an interface '%2' with keyword '%3'
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "خدمت '%1' هیچ واسط «%2» را با کلیدواژهٔ «%3» فراهم نمی‌کند"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>می‌خواهید اینترنت را برای <b>%1</b> جستجو کنید؟</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "جستجوی اینترنت"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&جستجو‌"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "گرداننده‌ای برای %1 یافت نشد."
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -192,6 +153,37 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "بستن سند"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "آیا واقعاً می‌خواهید  »%1« را اجرا کنید؟"
+
+#~ msgid "Execute File?"
+#~ msgstr "پرونده اجرا شود؟"
+
+#~ msgid "Execute"
+#~ msgstr "اجرا"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "مدیر بارگیری  )%1( در $PATH  شما یافت نشد"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "سعی کنید آن را دوباره نصب کنید  \n"
+#~ "\n"
+#~ "مجتمع‌سازی توسط Konqueror غیرفعال می‌شود."
+
+#~ msgid "Save As"
+#~ msgstr "ذخیره به عنوان"
+
+# The service '%1' does not provide an interface '%2' with keyword '%3'
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "خدمت '%1' هیچ واسط «%2» را با کلیدواژهٔ «%3» فراهم نمی‌کند"
 
 # The service '%1' does not provide an interface '%2' with keyword '%3'
 #, fuzzy

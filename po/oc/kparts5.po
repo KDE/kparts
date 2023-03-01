@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2008-08-06 00:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: Occitan <oc@li.org>\n"
@@ -27,21 +27,6 @@ msgstr "Yannig Marchegay (Kokoyaya)"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yannig@marchegay.org"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr ""
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Recèrca sus internet"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Recercar"
 
 #: browseropenorsavequestion.cpp:89
 #, fuzzy, kde-format
@@ -112,41 +97,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr ""
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr ""
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Executar lo fichièr ?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Executar"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr ""
-"Impossible de trobar lo gestionari de telecargament (%1) dins vòstra "
-"variabla $PATH. "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Enregistrar coma"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Acceptar"
@@ -155,17 +105,32 @@ msgstr "Acceptar"
 msgid "Reject"
 msgstr ""
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Recèrca sus internet"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Recercar"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr ""
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr ""
@@ -188,6 +153,20 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Tampar lo document"
+
+#~ msgid "Execute File?"
+#~ msgstr "Executar lo fichièr ?"
+
+#~ msgid "Execute"
+#~ msgstr "Executar"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr ""
+#~ "Impossible de trobar lo gestionari de telecargament (%1) dins vòstra "
+#~ "variabla $PATH. "
+
+#~ msgid "Save As"
+#~ msgstr "Enregistrar coma"
 
 #~ msgid "Name"
 #~ msgstr "Nom"

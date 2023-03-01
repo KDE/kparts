@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2013-01-31 01:08+0400\n"
 "Last-Translator: Davit <nikdavnik@mail.ru>\n"
 "Language-Team: Armenian Language: hy\n"
@@ -30,21 +30,6 @@ msgstr "Դավիթ Նիկողոսյան"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "nikdavnik@mail.ru"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Կատարե՞լ որոնում <b>%1</b> ինտերնետում</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "փնտրել ինտերնետում"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Որոնում"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -106,42 +91,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Նիշքի անունը, տրամադրված սերվերի կողմից։"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Կատարե՞լ «%1»"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Կատարե՞լ նիշքը"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Կատարել"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Հնարավոր չէ հայտնաբերել ներբեռնման մենեջերի ծրագիրը  (%1)  $PATH."
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Փորձեք վերատեղադրել ծրագիրը։\n"
-"\n"
-"Konqueror ինտեգրումը կանջատվի։"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Պահպանել ինչպես"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Ընդունել"
@@ -150,21 +99,33 @@ msgstr "Ընդունել"
 msgid "Reject"
 msgstr "Խուսափել"
 
-# BUGME: ". " at the end is necessary, otherwise the next sentence goes without space or full stop. --aspotashev
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "«%1» ծառայությունը չի տրամադրում ինտերֆեյս «%2» բանալի բառերով «%3». "
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Կատարե՞լ որոնում <b>%1</b> ինտերնետում</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "փնտրել ինտերնետում"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Որոնում"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Հայտնաբերված չէ մշակող %1 համար։"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -188,6 +149,38 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Փակել նիշքը"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Կատարե՞լ «%1»"
+
+#~ msgid "Execute File?"
+#~ msgstr "Կատարե՞լ նիշքը"
+
+#~ msgid "Execute"
+#~ msgstr "Կատարել"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Հնարավոր չէ հայտնաբերել ներբեռնման մենեջերի ծրագիրը  (%1)  $PATH."
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Փորձեք վերատեղադրել ծրագիրը։\n"
+#~ "\n"
+#~ "Konqueror ինտեգրումը կանջատվի։"
+
+#~ msgid "Save As"
+#~ msgstr "Պահպանել ինչպես"
+
+# BUGME: ". " at the end is necessary, otherwise the next sentence goes without space or full stop. --aspotashev
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "«%1» ծառայությունը չի տրամադրում ինտերֆեյս «%2» բանալի բառերով «%3». "
 
 # BUGME: ". " at the end is necessary, otherwise the next sentence goes without space or full stop. --aspotashev
 #, fuzzy

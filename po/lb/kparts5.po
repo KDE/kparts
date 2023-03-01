@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2006-06-22 16:29+0200\n"
 "Last-Translator: Michel Ludwig <michel.ludwig@kdemail.net>\n"
 "Language-Team: Luxembourgish <kde-i18n-lb@kde.org>\n"
@@ -25,22 +25,6 @@ msgstr "Kevin Claude Everard,Michel Ludwig"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kevin@math.uni-sb.de,miclud@studcs.uni-sb.de"
-
-#: browserextension.cpp:220
-#, fuzzy, kde-format
-#| msgid "<qt>Do you want to search the Internet for <b>%1</b>?"
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Wëllt dir am Internet no <b>%1</b> sichen?"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Sicht am Internet"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Sichen"
 
 #: browseropenorsavequestion.cpp:89
 #, fuzzy, kde-format
@@ -111,43 +95,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr ""
 
-#: browserrun.cpp:333
-#, fuzzy, kde-format
-#| msgid "Do you really want to execute '%1'? "
-msgid "Do you really want to execute '%1'?"
-msgstr "Wëllt dir '%1' wiirklech lafe loossen? "
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Datei ausféieren?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Ausféieren"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Den Download-Manager (%1) konnt an ärem PATH net fonnt ginn "
-
-#: browserrun.cpp:398
-#, fuzzy, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Probéiert, et nach eng Kéier z'installéieren  \n"
-"\n"
-"D'Integratioun an de Konqueror gëtt ofgeschalt!"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Späicheren als"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Unhuelen"
@@ -156,17 +103,33 @@ msgstr "Unhuelen"
 msgid "Reject"
 msgstr "Zeréckweisen"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
+#, fuzzy, kde-format
+#| msgid "<qt>Do you want to search the Internet for <b>%1</b>?"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Wëllt dir am Internet no <b>%1</b> sichen?"
+
+#: navigationextension.cpp:219
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "Internet Search"
+msgstr "Sicht am Internet"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Sichen"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:132
 #, fuzzy, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Keen Handler fir \"%1\" fonnt!"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Keen Handler fir \"%1\" fonnt!"
@@ -189,6 +152,33 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Dokument zoumaachen"
+
+#, fuzzy
+#~| msgid "Do you really want to execute '%1'? "
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Wëllt dir '%1' wiirklech lafe loossen? "
+
+#~ msgid "Execute File?"
+#~ msgstr "Datei ausféieren?"
+
+#~ msgid "Execute"
+#~ msgstr "Ausféieren"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Den Download-Manager (%1) konnt an ärem PATH net fonnt ginn "
+
+#, fuzzy
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Probéiert, et nach eng Kéier z'installéieren  \n"
+#~ "\n"
+#~ "D'Integratioun an de Konqueror gëtt ofgeschalt!"
+
+#~ msgid "Save As"
+#~ msgstr "Späicheren als"
 
 #~ msgid "Name"
 #~ msgstr "Numm"

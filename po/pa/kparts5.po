@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2014-03-16 23:21-0500\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -35,21 +35,6 @@ msgstr ""
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "aalam@users.sf.net"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>ਕੀ ਤੁਸੀਂ <b>%1</b> ਦੀ ਇੰਟਰਨੈੱਟ ਤੇ ਖੋਜ ਕਰਨੀ ਚਾਹੁੰਦੇ ਹੋ?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "ਇੰਟਰਨੈੱਟ ਖੋਜ"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "ਖੋਜ(&S)"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -111,42 +96,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "ਇਹ ਸਰਵਰ ਵਲੋਂ ਸੁਝਾਇਆ ਫਾਈਲ ਨਾਂ ਹੈ"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "ਕੀ ਤੁਸੀਂ '%1' ਨੂੰ ਚਲਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? "
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "ਕੀ ਫਾਈਲ ਚਲਾਉਣੀ ਹੈ?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "ਚਲਾਓ"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "ਡਾਊਨਲੋਡ ਮੈਨੇਜਰ (%1) ਤੁਹਾਡੇ $PATH ਵਿੱਚ ਨਹੀ ਖੋਜਿਆ ਗਿਆ ਹੈ"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"ਇਸ ਨੂੰ ਮੁੜ ਇੰਸਟਾਲ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ ਕਰੋ।\n"
-"\n"
-"ਕੋਨਕਿਊਰਰ ਨਾਲ ਐਂਟੀਗਰੇਸ਼ਨ ਅਯੋਗ ਹੋ ਜਾਵੇਗੀ!"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "ਇੰਝ ਸੰਭਾਲੋ"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "ਮਨਜ਼ੂਰ"
@@ -155,20 +104,33 @@ msgstr "ਮਨਜ਼ੂਰ"
 msgid "Reject"
 msgstr "ਇਨਕਾਰ"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "ਸਰਵਿਸ '%1' ਸ਼ਬਦ '%3' ਨਾਲ ਕੋਈ ਇੰਟਰਫੇਸ '%2' ਨਹੀਂ ਦਿੰਦੀ ਹੈ।"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>ਕੀ ਤੁਸੀਂ <b>%1</b> ਦੀ ਇੰਟਰਨੈੱਟ ਤੇ ਖੋਜ ਕਰਨੀ ਚਾਹੁੰਦੇ ਹੋ?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "ਇੰਟਰਨੈੱਟ ਖੋਜ"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "ਖੋਜ(&S)"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1 ਲਈ ਕੋਈ ਹੈਂਡਲਰ ਨਹੀ ਲੱਭਾ।"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -192,6 +154,36 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "ਡੌਕੂਮੈਂਟ ਬੰਦ ਕਰੋ"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "ਕੀ ਤੁਸੀਂ '%1' ਨੂੰ ਚਲਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? "
+
+#~ msgid "Execute File?"
+#~ msgstr "ਕੀ ਫਾਈਲ ਚਲਾਉਣੀ ਹੈ?"
+
+#~ msgid "Execute"
+#~ msgstr "ਚਲਾਓ"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "ਡਾਊਨਲੋਡ ਮੈਨੇਜਰ (%1) ਤੁਹਾਡੇ $PATH ਵਿੱਚ ਨਹੀ ਖੋਜਿਆ ਗਿਆ ਹੈ"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "ਇਸ ਨੂੰ ਮੁੜ ਇੰਸਟਾਲ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ ਕਰੋ।\n"
+#~ "\n"
+#~ "ਕੋਨਕਿਊਰਰ ਨਾਲ ਐਂਟੀਗਰੇਸ਼ਨ ਅਯੋਗ ਹੋ ਜਾਵੇਗੀ!"
+
+#~ msgid "Save As"
+#~ msgstr "ਇੰਝ ਸੰਭਾਲੋ"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "ਸਰਵਿਸ '%1' ਸ਼ਬਦ '%3' ਨਾਲ ਕੋਈ ਇੰਟਰਫੇਸ '%2' ਨਹੀਂ ਦਿੰਦੀ ਹੈ।"
 
 #, fuzzy
 #~| msgid ""

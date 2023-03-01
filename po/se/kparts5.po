@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2012-05-30 23:19+0200\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -28,21 +28,6 @@ msgstr "Børre Gaup"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "boerre@skolelinux.no"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Háliidatgo ohcat <b>%1</b> interneahtas?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Oza interneahtas"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "O&za"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -104,42 +89,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Dát lea fiilanamma maid bálvá evttoha"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Háliidatgo duođaid vuodjit «%1»? "
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Vuoje fiila?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Vuoje"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Ii gávdnan viežžangieđahalli (%1) du bálgás (PATH)."
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Geahččal prográmma ođđasit sajáiduhttit.\n"
-"\n"
-"Ovttaidus Konqueroriin bidjo eret."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Vurke nugo"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Dohkket"
@@ -148,17 +97,32 @@ msgstr "Dohkket"
 msgid "Reject"
 msgstr "Hilggo"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Háliidatgo ohcat <b>%1</b> interneahtas?</qt>"
+
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Oza interneahtas"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "O&za"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:198 partloader.h:139
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr ""
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr ""
@@ -181,3 +145,27 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Gidde dokumeantta"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Háliidatgo duođaid vuodjit «%1»? "
+
+#~ msgid "Execute File?"
+#~ msgstr "Vuoje fiila?"
+
+#~ msgid "Execute"
+#~ msgstr "Vuoje"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Ii gávdnan viežžangieđahalli (%1) du bálgás (PATH)."
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Geahččal prográmma ođđasit sajáiduhttit.\n"
+#~ "\n"
+#~ "Ovttaidus Konqueroriin bidjo eret."
+
+#~ msgid "Save As"
+#~ msgstr "Vurke nugo"

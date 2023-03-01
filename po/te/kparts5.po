@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2013-11-04 23:55+0630\n"
 "Last-Translator: Bhuvan Krishna <bhuvan@swecha.org>\n"
 "Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
@@ -35,21 +35,6 @@ msgid "Your emails"
 msgstr ""
 "infyquest@gmail.com,kkrothap@redhat.com,bhuvan@swecha.org,gvs.giri@swecha."
 "net,sreekalyan3@gmail.com,naveen@swecha.net"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt><b>%1</b> కోసం ఇంటర్నెట్ లో అన్వేషించనా?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "ఇంటర్ నెట్ అన్వెషణ"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "(&S) అన్వెషణ"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -111,39 +96,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "ఈ సర్వర్నుండి   ఈ దస్త్రం పేరుని సూచించారు  "
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "'%1' ను నిజంగా నడపమంటారా?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "దస్త్రాన్ని నడపమంటారా?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "నడుపు"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "మీ $PATH లో డౌన్ లోడ్ అభికర్త (%1) లో కనపడుటలేదు "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr "మరలా నిక్షిప్తం చేయుటకు ప్రయత్నించండి"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "ఇలా దాచు"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "అంగీకరించు"
@@ -152,20 +104,33 @@ msgstr "అంగీకరించు"
 msgid "Reject"
 msgstr "తిరస్కరించు"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "ఈ సేవ '%1' సంవిదానాన్ని యార్పాటు చెయ్యలేదు '%2' తొ పదము '%3'"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt><b>%1</b> కోసం ఇంటర్నెట్ లో అన్వేషించనా?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "ఇంటర్ నెట్ అన్వెషణ"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "(&S) అన్వెషణ"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1 కొరకు హెండ్లర్ కనపడలేదు."
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -189,6 +154,33 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "పత్రం మూసివేయి"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "'%1' ను నిజంగా నడపమంటారా?"
+
+#~ msgid "Execute File?"
+#~ msgstr "దస్త్రాన్ని నడపమంటారా?"
+
+#~ msgid "Execute"
+#~ msgstr "నడుపు"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "మీ $PATH లో డౌన్ లోడ్ అభికర్త (%1) లో కనపడుటలేదు "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr "మరలా నిక్షిప్తం చేయుటకు ప్రయత్నించండి"
+
+#~ msgid "Save As"
+#~ msgstr "ఇలా దాచు"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "ఈ సేవ '%1' సంవిదానాన్ని యార్పాటు చెయ్యలేదు '%2' తొ పదము '%3'"
 
 #, fuzzy
 #~| msgid ""

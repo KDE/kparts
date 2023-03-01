@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2023-01-05 10:00+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -37,21 +37,6 @@ msgid "Your emails"
 msgstr ""
 "matthias@peick.de, okellogg@users.sourceforge.net, cfmckee@gmail.com, "
 "axel@esperanto-jeunes.org, michael.moroni@mailoo.org"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Ĉu vi volas serĉi interrete <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Interreta serĉo"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Serĉi"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -113,42 +98,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Ĉi tio estas la dosiernomo sugestita de la servilo"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Ĉu vi vere volas ruli '%1'?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Ĉu ruli dosieron?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Ruli"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "La programo %1 ne troviĝis en via vojo (mediovariablo PATH)"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Provu reinstali ĝin  \n"
-"\n"
-"La enligeco en Konkeranto neebliĝos."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Konservi kiel"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Akcepti"
@@ -157,17 +106,32 @@ msgstr "Akcepti"
 msgid "Reject"
 msgstr "Malakcepti"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "La kromprogramo '%1' ne provizas interfacon '%2' kun ŝlosilvorto '%3'"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Ĉu vi volas serĉi interrete <b>%1</b>?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Interreta serĉo"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Serĉi"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Ne trovis parton por MIME-tipo %1."
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Neniu parto povis esti instancigita por MIME-tipo %1."
@@ -190,3 +154,31 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Fermi dokumenton"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Ĉu vi vere volas ruli '%1'?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Ĉu ruli dosieron?"
+
+#~ msgid "Execute"
+#~ msgstr "Ruli"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "La programo %1 ne troviĝis en via vojo (mediovariablo PATH)"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Provu reinstali ĝin  \n"
+#~ "\n"
+#~ "La enligeco en Konkeranto neebliĝos."
+
+#~ msgid "Save As"
+#~ msgstr "Konservi kiel"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "La kromprogramo '%1' ne provizas interfacon '%2' kun ŝlosilvorto '%3'"

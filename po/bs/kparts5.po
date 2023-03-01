@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2013-12-21 17:26+0000\n"
 "Last-Translator: Ademovic Saudin <sademovic1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -37,21 +37,6 @@ msgstr "Samir Ribić,Ademovic Saudin,Vedran Ljubovic"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "samir.ribic@etf.unsa.ba,sademovic1@etf.unsa.ba,vljubovic@smartnet.ba"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Želite li da potražite <b>%1</b> na Internetu?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Pretraga na Internetu"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Traži"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -113,42 +98,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Ime datoteke koje predlaže server."
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Želite li zaista da izvršite %1?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Izvršiti datoteku?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Izvrši"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Menadžer preuzimanja (%1) nije pronađen u putanji ($PATH) "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Pokušajte da ga reinstalirate. \n"
-"\n"
-"Integracija sa Konquerorem će biti isključena."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Snimi kao"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Prihvati"
@@ -157,20 +106,33 @@ msgstr "Prihvati"
 msgid "Reject"
 msgstr "Odbaci"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Servis „%1“ ne pruža sučelje „%2“ s ključnom riječi „%3“"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Želite li da potražite <b>%1</b> na Internetu?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Pretraga na Internetu"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Traži"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Nije nađen rukovalac za %1."
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -194,6 +156,36 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Zatvori dokument"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Želite li zaista da izvršite %1?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Izvršiti datoteku?"
+
+#~ msgid "Execute"
+#~ msgstr "Izvrši"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Menadžer preuzimanja (%1) nije pronađen u putanji ($PATH) "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Pokušajte da ga reinstalirate. \n"
+#~ "\n"
+#~ "Integracija sa Konquerorem će biti isključena."
+
+#~ msgid "Save As"
+#~ msgstr "Snimi kao"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "Servis „%1“ ne pruža sučelje „%2“ s ključnom riječi „%3“"
 
 #, fuzzy
 #~| msgid ""

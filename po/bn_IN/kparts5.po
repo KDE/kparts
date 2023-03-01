@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2009-12-28 14:35+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
@@ -29,21 +29,6 @@ msgstr "রুণা ভট্টাচার্য্য"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "runabh@gmail.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt><b>%1</b> সম্বন্ধে ইন্টারনেটে অনুসন্ধান করা হবে কি?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "ইন্টারনেটে অনুসন্ধান"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "অনুসন্ধান (&S)"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -105,39 +90,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "সার্ভার দ্বারা এই ফাইলের নাম প্রস্তাবিত হয়েছে"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "আপনি কি নিশ্চিতরূপে '%1' সঞ্চালন করতে ইচ্ছুক?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "ফাইল সঞ্চালিত হবে কি?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "সঞ্চালন"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "$PATH-র মধ্যে Download Manager (%1) পাওয়া যায়নি "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "নতুন রূপে সংরক্ষণ"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "গ্রহণ করা হবে"
@@ -146,22 +98,33 @@ msgstr "গ্রহণ করা হবে"
 msgid "Reject"
 msgstr "প্রত্যাখ্যান করা হবে"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr ""
-"'%1' পরিসেবা দ্বারা '%3' প্রাসঙ্গিক শব্দ অর্থাৎ কি-ওয়ার্ড সহ '%2' ইন্টারফেস উপলব্ধ "
-"করা হয় না।"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt><b>%1</b> সম্বন্ধে ইন্টারনেটে অনুসন্ধান করা হবে কি?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "ইন্টারনেটে অনুসন্ধান"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "অনুসন্ধান (&S)"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1-র জন্য হ্যান্ডলার পাওয়া যায়নি।"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -185,6 +148,29 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "ডকুমেন্ট বন্ধ করুন"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "আপনি কি নিশ্চিতরূপে '%1' সঞ্চালন করতে ইচ্ছুক?"
+
+#~ msgid "Execute File?"
+#~ msgstr "ফাইল সঞ্চালিত হবে কি?"
+
+#~ msgid "Execute"
+#~ msgstr "সঞ্চালন"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "$PATH-র মধ্যে Download Manager (%1) পাওয়া যায়নি "
+
+#~ msgid "Save As"
+#~ msgstr "নতুন রূপে সংরক্ষণ"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "'%1' পরিসেবা দ্বারা '%3' প্রাসঙ্গিক শব্দ অর্থাৎ কি-ওয়ার্ড সহ '%2' ইন্টারফেস "
+#~ "উপলব্ধ করা হয় না।"
 
 #, fuzzy
 #~| msgid ""

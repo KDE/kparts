@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2021-10-25 16:12+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -26,21 +26,6 @@ msgstr "Xəyyam Qocayev"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt> <b>%1</b>İnternetdə axtarılsın?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "İnternetdə Axtarış"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Axtar"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -102,42 +87,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Bu server tərəfindən təklif olunan fayl adıdır"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "'%1' başladılsın?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Fayl icra edilsin?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "İcra etmək"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Yükləmə meneceri (%1) sizin $PATH -da tapılmadı "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Onu yenidən qurmağa cəhd edin  \n"
-"\n"
-"Konqueror ilə inteqrasiya ləğv söndürələcək."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Belə saxla"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Qəbul etmək"
@@ -146,17 +95,32 @@ msgstr "Qəbul etmək"
 msgid "Reject"
 msgstr "İntina etmək"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "Modul '%1' '%3' aşar sözü ilə '%2' interfeysini təqdim etmir"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt> <b>%1</b>İnternetdə axtarılsın?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "İnternetdə Axtarış"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Axtar"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "MimeType%1 emalı üçün heç bir modul tapılmadı"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No part was found for mimeType %1"
 msgid "No part could be instantiated for mimeType %1"
@@ -180,6 +144,33 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Sənədi Seçin"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "'%1' başladılsın?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Fayl icra edilsin?"
+
+#~ msgid "Execute"
+#~ msgstr "İcra etmək"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Yükləmə meneceri (%1) sizin $PATH -da tapılmadı "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Onu yenidən qurmağa cəhd edin  \n"
+#~ "\n"
+#~ "Konqueror ilə inteqrasiya ləğv söndürələcək."
+
+#~ msgid "Save As"
+#~ msgstr "Belə saxla"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "Modul '%1' '%3' aşar sözü ilə '%2' interfeysini təqdim etmir"
 
 #~ msgid "The plugin '%1' does not provide an interface '%2'"
 #~ msgstr "\"%1\" plaqini \"%2\" interfeysini təmin etmir"

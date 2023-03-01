@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2011-07-25 07:45+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -27,21 +27,6 @@ msgstr "ඩනිෂ්ක නවින්"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "danishka@gmail.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt><b>%1</b> සඳහා ඔබට අන්තර්ජාලයේ සෙවීමට අවශ්‍ය ද?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "අන්තර්ජාලයේ සෙවීම"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "සොයන්න (&S)"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -105,42 +90,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr ""
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "ඔබට '%1' ගොනුව ක්‍රියාත්මක කිරීමට අවශ්‍යම ද?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "ගොනුව ක්‍රියාත්මක කරන්න ද?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "ක්‍රියාත්මක කරන්න"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "ඔබගේ $PATH හි බාගත කිරීමේ කළමණාකරු (%1) සොයා ගැනීමට නොහැකි විය"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"එය නැවත ස්ථාපනය කිරීමට උත්සහ කරන්න \n"
-"\n"
-"Konqueror සමඟ ඒකාබද්ඳ වීම අක්‍රිය වනු ඇත."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "සුරකින අයුර"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "අනුමත කරන්න"
@@ -149,20 +98,33 @@ msgstr "අනුමත කරන්න"
 msgid "Reject"
 msgstr "ප්‍රතික්‍ෂේප කරන්න"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "'%1' සේවාව '%2' '%3' යතුරු පුවරුව සමඟ අතුරුමුහුණතත් ලබා නොදේ"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt><b>%1</b> සඳහා ඔබට අන්තර්ජාලයේ සෙවීමට අවශ්‍ය ද?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "අන්තර්ජාලයේ සෙවීම"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "සොයන්න (&S)"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1 සඳහා හසුරුවනයක් හමු නොවුනි."
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -186,6 +148,36 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "ලේඛනය වසන්න"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "ඔබට '%1' ගොනුව ක්‍රියාත්මක කිරීමට අවශ්‍යම ද?"
+
+#~ msgid "Execute File?"
+#~ msgstr "ගොනුව ක්‍රියාත්මක කරන්න ද?"
+
+#~ msgid "Execute"
+#~ msgstr "ක්‍රියාත්මක කරන්න"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "ඔබගේ $PATH හි බාගත කිරීමේ කළමණාකරු (%1) සොයා ගැනීමට නොහැකි විය"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "එය නැවත ස්ථාපනය කිරීමට උත්සහ කරන්න \n"
+#~ "\n"
+#~ "Konqueror සමඟ ඒකාබද්ඳ වීම අක්‍රිය වනු ඇත."
+
+#~ msgid "Save As"
+#~ msgstr "සුරකින අයුර"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "'%1' සේවාව '%2' '%3' යතුරු පුවරුව සමඟ අතුරුමුහුණතත් ලබා නොදේ"
 
 #, fuzzy
 #~| msgid ""

@@ -2,15 +2,15 @@
 # Malcolm Hunter <malcolm.hunter@gmx.co.uk>, 2002,2003,2004, 2005, 2006, 2007, 2008, 2009.
 # Jonathan Riddell <kde-en-gb@jriddell.org>, 2003.
 # Andrew Coles <andrew_coles@yahoo.co.uk>, 2004, 2005, 2009, 2010.
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2020, 2022.
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
-"PO-Revision-Date: 2022-12-31 15:16+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"PO-Revision-Date: 2023-02-26 19:52+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: English <kde-i18n-doc@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,21 +27,6 @@ msgstr "Andrew Cole, Steve Allewell"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "andrew_coles@yahoo.co.uk, steve.allewell@gmail.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Internet Search"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Search"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -103,42 +88,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "This is the file name suggested by the server"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Do you really want to execute '%1'?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Execute File?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Execute"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "The Download Manager (%1) could not be found in your $PATH "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Save As"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Accept"
@@ -147,17 +96,32 @@ msgstr "Accept"
 msgid "Reject"
 msgstr "Reject"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Internet Search"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Search"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr "KPluginFactory could not load the plugin: %1"
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "No part was found for mimeType %1"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "No part could be instantiated for MIME type %1"
@@ -180,6 +144,34 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Close Document"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Do you really want to execute '%1'?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Execute File?"
+
+#~ msgid "Execute"
+#~ msgstr "Execute"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "The Download Manager (%1) could not be found in your $PATH "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+
+#~ msgid "Save As"
+#~ msgstr "Save As"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
 
 #~ msgid "The plugin '%1' does not provide an interface '%2'"
 #~ msgstr "The plugin '%1' does not provide an interface '%2'"

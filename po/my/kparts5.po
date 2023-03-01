@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2021-09-15 21:00+0630\n"
 "Last-Translator: \n"
 "Language-Team: Burmese <kde-i18n-doc@kde.org>\n"
@@ -27,21 +27,6 @@ msgstr "ဇေယျာလွင်"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lw1nzayar@yandex.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>အင်တာနက်တွင် <b>%1</b> ကို သင်ရှာချင်ပါသလား။</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "အင်တာနက်ရှာဖွေမှု"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Sရှာမည်"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -103,42 +88,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "ယင်းသည် ဆာဗာမှ ဖိုင်လ်အတွက် အကြံပြုထားသည့် အမည် ဖြစ်သည်"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "'%1' ကို သင်တကယ်ဆောင်ရွက်တော့မည်လား။"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "ဖိုင်လ်ကို ဆောင်ရွက်မှာလား။"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "ဆောင်ရွက်မည်"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "ဒေါင်းလုတ်မန်နေဂျာ (%1) ကို သင်၏ $PATH တွင် ရှာမတွေ့ခဲ့ပါ "
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"၎င်းကို ပြန်တပ်ဆင်ကြည့်ပါ  \n"
-"\n"
-"ကွန်ကွာရာနှင့် ပေါင်းစည်းမှု ပိတ်သွားလိမ့်မည်။"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "အဖြစ်သိမ်းဆည်းမည်"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "လက်ခံမည်"
@@ -147,17 +96,32 @@ msgstr "လက်ခံမည်"
 msgid "Reject"
 msgstr "ငြင်းပယ်မည်"
 
-#: partloader.cpp:181
+#: navigationextension.cpp:218
 #, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "ပလပ်ဂင် '%1' သည် သော့ချက်စာလုံး '%3' နှင့် အင်တာဖေ့စ် '%2' မပေးထားပါ"
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>အင်တာနက်တွင် <b>%1</b> ကို သင်ရှာချင်ပါသလား။</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "အင်တာနက်ရှာဖွေမှု"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Sရှာမည်"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "အမ်အိုင်အမ်အီးတိုက် %1 အတွက် အစိတ်အပိုင်းမတွေ့ခဲ့ပါ"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No part was found for mimeType %1"
 msgid "No part could be instantiated for mimeType %1"
@@ -181,6 +145,33 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "မှတ်တမ်းပုံနှိပ်မူ ပိတ်မည်"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "'%1' ကို သင်တကယ်ဆောင်ရွက်တော့မည်လား။"
+
+#~ msgid "Execute File?"
+#~ msgstr "ဖိုင်လ်ကို ဆောင်ရွက်မှာလား။"
+
+#~ msgid "Execute"
+#~ msgstr "ဆောင်ရွက်မည်"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "ဒေါင်းလုတ်မန်နေဂျာ (%1) ကို သင်၏ $PATH တွင် ရှာမတွေ့ခဲ့ပါ "
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "၎င်းကို ပြန်တပ်ဆင်ကြည့်ပါ  \n"
+#~ "\n"
+#~ "ကွန်ကွာရာနှင့် ပေါင်းစည်းမှု ပိတ်သွားလိမ့်မည်။"
+
+#~ msgid "Save As"
+#~ msgstr "အဖြစ်သိမ်းဆည်းမည်"
+
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "ပလပ်ဂင် '%1' သည် သော့ချက်စာလုံး '%3' နှင့် အင်တာဖေ့စ် '%2' မပေးထားပါ"
 
 #, fuzzy
 #~| msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2009-12-04 22:09+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -28,21 +28,6 @@ msgstr "Michôł Òstrowsczi, Mark Kwidzińsczi"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "michol@linuxcsb.org, mark@linuxcsb.org"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Chcesz szëkac w internecé za <b>%1</b>?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "Szëkba w internece"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Szëkba"
 
 #: browseropenorsavequestion.cpp:89
 #, fuzzy, kde-format
@@ -113,42 +98,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr ""
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Na gwës chcesz zrëszëc '%1'?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Zrëszëc lopk?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Zrëszë"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "Ni mòże nalezc menadżera zladënkù (%1) na stegnié."
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Spróbùjë przeinstalowac gò \n"
-"\n"
-"Integracëjô z Konquerorã je wëłączonô."
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Zapiszë jaknò"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Akceptujë"
@@ -157,21 +106,33 @@ msgstr "Akceptujë"
 msgid "Reject"
 msgstr "Òdrzucë"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr ""
-"Ùsłëżnota \"%1\"nie wspiérô interfejsu \"%2\" z kluczowim słowã \"%3\" "
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Chcesz szëkac w internecé za <b>%1</b>?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "Szëkba w internece"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Szëkba"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Felënk dopasowaniów dlô %1."
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -195,6 +156,37 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Zamkni dokùment"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Na gwës chcesz zrëszëc '%1'?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Zrëszëc lopk?"
+
+#~ msgid "Execute"
+#~ msgstr "Zrëszë"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "Ni mòże nalezc menadżera zladënkù (%1) na stegnié."
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Spróbùjë przeinstalowac gò \n"
+#~ "\n"
+#~ "Integracëjô z Konquerorã je wëłączonô."
+
+#~ msgid "Save As"
+#~ msgstr "Zapiszë jaknò"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "Ùsłëżnota \"%1\"nie wspiérô interfejsu \"%2\" z kluczowim słowã \"%3\" "
 
 #, fuzzy
 #~| msgid ""

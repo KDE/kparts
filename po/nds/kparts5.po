@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2014-05-11 00:55+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -28,21 +28,6 @@ msgstr "Sönke Dibbern, Manfred Wiese"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "s_dibbern@web.de, m.j.wiese@web.de"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>Wullt Du in't Internet na <b>%1</b> söken?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "In't Internet söken"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&Söken"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -104,42 +89,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "Dit is de Dateinaam, as de Server em vörslaan hett."
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "Wullt Du „%1“ redig opropen?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "Datei utföhren?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "Utföhren"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "De Daallaadpleger (%1) lett sik nich över Dien $PATH-Variable finnen"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"Versöök, dat Du em nochmaal installeerst\n"
-"\n"
-"De Inbetten na Konqueror warrt utmaakt!"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "Sekern as"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "Annehmen"
@@ -148,22 +97,33 @@ msgstr "Annehmen"
 msgid "Reject"
 msgstr "Afwiesen"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-#| msgid ""
-#| "The service '%1' does not provide an interface '%2' with keyword '%3'"
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr ""
-"De Deenst \"%1\" stellt keen Koppelsteed \"%2\" mit dat Slötelwoort \"%3\" "
-"praat."
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>Wullt Du in't Internet na <b>%1</b> söken?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "In't Internet söken"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&Söken"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Dat gifft keen Hanterer för \"%1\"!"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -187,6 +147,39 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Dokment tomaken"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "Wullt Du „%1“ redig opropen?"
+
+#~ msgid "Execute File?"
+#~ msgstr "Datei utföhren?"
+
+#~ msgid "Execute"
+#~ msgstr "Utföhren"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr ""
+#~ "De Daallaadpleger (%1) lett sik nich över Dien $PATH-Variable finnen"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "Versöök, dat Du em nochmaal installeerst\n"
+#~ "\n"
+#~ "De Inbetten na Konqueror warrt utmaakt!"
+
+#~ msgid "Save As"
+#~ msgstr "Sekern as"
+
+#, fuzzy
+#~| msgid ""
+#~| "The service '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr ""
+#~ "De Deenst \"%1\" stellt keen Koppelsteed \"%2\" mit dat Slötelwoort "
+#~ "\"%3\" praat."
 
 #, fuzzy
 #~| msgid ""

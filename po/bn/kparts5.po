@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-02 00:44+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2012-07-16 14:27+0530\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: American English <kde-translation@bengalinux.org>\n"
@@ -30,21 +30,6 @@ msgstr "দীপায়ন সরকার"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "deepayan.sarkar@gmail.com"
-
-#: browserextension.cpp:220
-#, kde-format
-msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt>আপনি কি ইন্টারনেটে <b>%1</b> পংক্তিটি সন্ধান করতে চান?</qt>"
-
-#: browserextension.cpp:221
-#, kde-format
-msgid "Internet Search"
-msgstr "ইন্টারনেটে সন্ধান"
-
-#: browserextension.cpp:222
-#, kde-format
-msgid "&Search"
-msgstr "&সন্ধান"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
@@ -106,42 +91,6 @@ msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
 msgstr "সার্ভার এই নামটি প্রস্তাব করেছে"
 
-#: browserrun.cpp:333
-#, kde-format
-msgid "Do you really want to execute '%1'?"
-msgstr "আপনি কি সত্যিই '%1' চালাতে চান?"
-
-#: browserrun.cpp:334
-#, kde-format
-msgid "Execute File?"
-msgstr "ফাইল চালাব?"
-
-#: browserrun.cpp:335
-#, kde-format
-msgid "Execute"
-msgstr "চালাও"
-
-#: browserrun.cpp:397
-#, kde-format
-msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "আপনার $PATH-এ ডাউনলোড ম্যানেজার (%1) পাওয়া যায়নি"
-
-#: browserrun.cpp:398
-#, kde-format
-msgid ""
-"Try to reinstall it  \n"
-"\n"
-"The integration with Konqueror will be disabled."
-msgstr ""
-"আবার ইনস্টল করার চেষ্টা করুন \n"
-"\n"
-"কনকরার-এর সঙ্গে যোগাযোগ নিষ্ক্রিয় করা হবে।"
-
-#: browserrun.cpp:423
-#, kde-format
-msgid "Save As"
-msgstr "নতুন নামে সংরক্ষণ করো"
-
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
 msgstr "স্বীকার করো"
@@ -150,18 +99,33 @@ msgstr "স্বীকার করো"
 msgid "Reject"
 msgstr "অস্বীকার করো"
 
-#: partloader.cpp:181
-#, fuzzy, kde-format
-msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr "সার্ভিস '%1' মূলশব্দ '%3'এর সঙ্গে একটি ইন্টারফেস '%2' জোগান দাও না"
+#: navigationextension.cpp:218
+#, kde-format
+msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
+msgstr "<qt>আপনি কি ইন্টারনেটে <b>%1</b> পংক্তিটি সন্ধান করতে চান?</qt>"
 
-#: partloader.cpp:198 partloader.h:139
+#: navigationextension.cpp:219
+#, kde-format
+msgid "Internet Search"
+msgstr "ইন্টারনেটে সন্ধান"
+
+#: navigationextension.cpp:220
+#, kde-format
+msgid "&Search"
+msgstr "&সন্ধান"
+
+#: partloader.cpp:128
+#, kde-format
+msgid "KPluginFactory could not load the plugin: %1"
+msgstr ""
+
+#: partloader.cpp:132
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1-এর জন্য কোন হ্যাণ্ডলার খুঁজে পাওয়া যায়নি।"
 
-#: partloader.h:155
+#: partloader.cpp:136
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -185,6 +149,34 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "নথী বন্ধ করো"
+
+#~ msgid "Do you really want to execute '%1'?"
+#~ msgstr "আপনি কি সত্যিই '%1' চালাতে চান?"
+
+#~ msgid "Execute File?"
+#~ msgstr "ফাইল চালাব?"
+
+#~ msgid "Execute"
+#~ msgstr "চালাও"
+
+#~ msgid "The Download Manager (%1) could not be found in your $PATH "
+#~ msgstr "আপনার $PATH-এ ডাউনলোড ম্যানেজার (%1) পাওয়া যায়নি"
+
+#~ msgid ""
+#~ "Try to reinstall it  \n"
+#~ "\n"
+#~ "The integration with Konqueror will be disabled."
+#~ msgstr ""
+#~ "আবার ইনস্টল করার চেষ্টা করুন \n"
+#~ "\n"
+#~ "কনকরার-এর সঙ্গে যোগাযোগ নিষ্ক্রিয় করা হবে।"
+
+#~ msgid "Save As"
+#~ msgstr "নতুন নামে সংরক্ষণ করো"
+
+#, fuzzy
+#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
+#~ msgstr "সার্ভিস '%1' মূলশব্দ '%3'এর সঙ্গে একটি ইন্টারফেস '%2' জোগান দাও না"
 
 #, fuzzy
 #~ msgid "The plugin '%1' does not provide an interface '%2'"
