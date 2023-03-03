@@ -148,31 +148,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Lukk dokument"
-
-#~ msgid "Do you really want to execute '%1'?"
-#~ msgstr "Er du sikker på at du vil køyra «%1»?"
-
-#~ msgid "Execute File?"
-#~ msgstr "Køyr fil?"
-
-#~ msgid "Execute"
-#~ msgstr "Køyr"
-
-#~ msgid "The Download Manager (%1) could not be found in your $PATH "
-#~ msgstr "Fann ikkje nedlastingshandteraren (%1) i søkjestien (PATH)."
-
-#~ msgid ""
-#~ "Try to reinstall it  \n"
-#~ "\n"
-#~ "The integration with Konqueror will be disabled."
-#~ msgstr ""
-#~ "Prøv å installera programmet på nytt.\n"
-#~ "\n"
-#~ "Integrasjonen med Konqueror vert slått av."
-
-#~ msgid "Save As"
-#~ msgstr "Lagra som"
-
-#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-#~ msgstr ""
-#~ "Programtillegget «%1» har ikkje noko grensesnitt «%2» med nøkkelord «%3»"
