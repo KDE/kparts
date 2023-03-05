@@ -145,27 +145,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Gidde dokumeantta"
-
-#~ msgid "Do you really want to execute '%1'?"
-#~ msgstr "Háliidatgo duođaid vuodjit «%1»? "
-
-#~ msgid "Execute File?"
-#~ msgstr "Vuoje fiila?"
-
-#~ msgid "Execute"
-#~ msgstr "Vuoje"
-
-#~ msgid "The Download Manager (%1) could not be found in your $PATH "
-#~ msgstr "Ii gávdnan viežžangieđahalli (%1) du bálgás (PATH)."
-
-#~ msgid ""
-#~ "Try to reinstall it  \n"
-#~ "\n"
-#~ "The integration with Konqueror will be disabled."
-#~ msgstr ""
-#~ "Geahččal prográmma ođđasit sajáiduhttit.\n"
-#~ "\n"
-#~ "Ovttaidus Konqueroriin bidjo eret."
-
-#~ msgid "Save As"
-#~ msgstr "Vurke nugo"
