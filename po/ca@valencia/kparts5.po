@@ -155,32 +155,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Tanca el document"
-
-#~ msgid "Do you really want to execute '%1'?"
-#~ msgstr "Segur que voleu executar «%1»?"
-
-#~ msgid "Execute File?"
-#~ msgstr "Voleu executar el fitxer?"
-
-#~ msgid "Execute"
-#~ msgstr "Executa"
-
-#~ msgid "The Download Manager (%1) could not be found in your $PATH "
-#~ msgstr "No s'ha trobat el gestor de baixades (%1) en la $PATH "
-
-#~ msgid ""
-#~ "Try to reinstall it  \n"
-#~ "\n"
-#~ "The integration with Konqueror will be disabled."
-#~ msgstr ""
-#~ "Proveu de reinstal·lar-lo \n"
-#~ "\n"
-#~ "Es desactivarà la integració amb Konqueror."
-
-#~ msgid "Save As"
-#~ msgstr "Anomena i guarda"
-
-#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-#~ msgstr ""
-#~ "El connector «%1» no proporciona la interfície «%2» amb la paraula clau "
-#~ "«%3»"
