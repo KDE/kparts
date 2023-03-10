@@ -148,30 +148,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Zavřít dokument"
-
-#~ msgid "Do you really want to execute '%1'?"
-#~ msgstr "Opravdu si přejete spustit '%1'?"
-
-#~ msgid "Execute File?"
-#~ msgstr "Spustit soubor?"
-
-#~ msgid "Execute"
-#~ msgstr "Spustit"
-
-#~ msgid "The Download Manager (%1) could not be found in your $PATH "
-#~ msgstr "Správce stahování %1 nebyl ve vaší cestě nalezen (proměnná $PATH) "
-
-#~ msgid ""
-#~ "Try to reinstall it  \n"
-#~ "\n"
-#~ "The integration with Konqueror will be disabled."
-#~ msgstr ""
-#~ "Zkuste přeinstalovat\n"
-#~ "\n"
-#~ "Integrace s Konquerorem bude vypnuta."
-
-#~ msgid "Save As"
-#~ msgstr "Uložit jako"
-
-#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-#~ msgstr "Modul '%1' neposkytuje rozhraní '%2' s klíčovým slovem '%3'"
