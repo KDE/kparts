@@ -11,7 +11,7 @@
 # Joonas Niilola <juippis@roskakori.org>, 2006.
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
 # Teemu Rytilahti <tpr@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2011, 2020, 2021.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2011, 2020, 2021, 2022, 2023.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2006, 2010, 2011, 2012, 2013, 2014, 2015.
 #
@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-24 00:54+0000\n"
-"PO-Revision-Date: 2021-11-23 16:45+0200\n"
+"PO-Revision-Date: 2023-03-05 18:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -34,7 +34,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-POT-Import-Date: 2013-01-13 20:43:21+0000\n"
 
 #, kde-format
@@ -176,7 +176,7 @@ msgstr "Hylkää"
 #: partloader.cpp:158
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
-msgstr ""
+msgstr "KPluginFactory ei voinut ladata liitännäistä: %1"
 
 #: partloader.cpp:162 partloader.cpp:220
 #, kde-format
@@ -184,10 +184,9 @@ msgid "No part was found for mimeType %1"
 msgstr "Osaa ei löytynyt MIME-tyypille %1"
 
 #: partloader.cpp:166
-#, fuzzy, kde-format
-#| msgid "No part was found for mimeType %1"
+#, kde-format
 msgid "No part could be instantiated for mimeType %1"
-msgstr "Osaa ei löytynyt MIME-tyypille %1"
+msgstr "Osasta ei voitu luoda instanssia MIME-tyypille %1"
 
 #: partloader.cpp:203
 #, kde-format
