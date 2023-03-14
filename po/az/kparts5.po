@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the kparts package.
 #
-# Xəyyam <xxmn77@gmail.com>, 2020, 2021.
+# Xəyyam <xxmn77@gmail.com>, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-24 00:54+0000\n"
-"PO-Revision-Date: 2021-10-25 16:12+0400\n"
-"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2023-03-12 18:35+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -149,7 +149,7 @@ msgstr "İntina etmək"
 #: partloader.cpp:158
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
-msgstr ""
+msgstr "KPluginFactory, bu qoşmanı yükləyə bilmədi: %1"
 
 #: partloader.cpp:162 partloader.cpp:220
 #, kde-format
@@ -157,10 +157,9 @@ msgid "No part was found for mimeType %1"
 msgstr "MimeType%1 emalı üçün heç bir modul tapılmadı"
 
 #: partloader.cpp:166
-#, fuzzy, kde-format
-#| msgid "No part was found for mimeType %1"
+#, kde-format
 msgid "No part could be instantiated for mimeType %1"
-msgstr "MimeType%1 emalı üçün heç bir modul tapılmadı"
+msgstr "%1 MİME növü üçün heç bir hissəni quraşdırmaq mümkün olmadı"
 
 #: partloader.cpp:203
 #, kde-format
