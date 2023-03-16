@@ -204,7 +204,7 @@ protected:
 #endif
 
 protected:
-    PartBase(PartBasePrivate &dd);
+    KPARTS_NO_EXPORT explicit PartBase(PartBasePrivate &dd);
 
     std::unique_ptr<PartBasePrivate> const d_ptr;
 

@@ -271,7 +271,7 @@ protected Q_SLOTS:
     void slotWidgetDestroyed();
 
 protected:
-    Part(PartPrivate &dd, QObject *parent);
+    KPARTS_NO_EXPORT Part(PartPrivate &dd, QObject *parent);
 
 private:
     Q_DISABLE_COPY(Part)
