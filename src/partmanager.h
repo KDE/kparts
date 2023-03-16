@@ -275,8 +275,8 @@ protected Q_SLOTS:
     void slotManagedTopLevelWidgetDestroyed();
 
 private:
-    Part *findPartFromWidget(QWidget *widget, const QPoint &pos);
-    Part *findPartFromWidget(QWidget *widget);
+    KPARTS_NO_EXPORT Part *findPartFromWidget(QWidget *widget, const QPoint &pos);
+    KPARTS_NO_EXPORT Part *findPartFromWidget(QWidget *widget);
 
 private:
     std::unique_ptr<PartManagerPrivate> const d;
