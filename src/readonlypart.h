@@ -292,7 +292,7 @@ protected:
     void setLocalFilePath(const QString &localFilePath);
 
 protected:
-    ReadOnlyPart(ReadOnlyPartPrivate &dd, QObject *parent);
+    KPARTS_NO_EXPORT ReadOnlyPart(ReadOnlyPartPrivate &dd, QObject *parent);
 
 private:
     Q_DISABLE_COPY(ReadOnlyPart)
