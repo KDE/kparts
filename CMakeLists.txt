@@ -56,7 +56,7 @@ if(BUILD_TESTING)
   add_subdirectory( tests )
   add_subdirectory( autotests )
 endif()
-add_definitions(-DTRANSLATION_DOMAIN=\"kparts5\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kparts6\")
 ki18n_install(po)
 
 add_subdirectory( src )
