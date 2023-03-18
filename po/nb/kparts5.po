@@ -152,27 +152,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Lukk dokumentet"
-
-#~ msgid "Do you really want to execute '%1'?"
-#~ msgstr "Ønsker du å kjøre '%1'?"
-
-#~ msgid "Execute File?"
-#~ msgstr "Kjør fila?"
-
-#~ msgid "Execute"
-#~ msgstr "Kjør"
-
-#~ msgid "The Download Manager (%1) could not be found in your $PATH "
-#~ msgstr "Fant ikke nedlastingsbehandleren (%1) i søkestien "
-
-#~ msgid ""
-#~ "Try to reinstall it  \n"
-#~ "\n"
-#~ "The integration with Konqueror will be disabled."
-#~ msgstr ""
-#~ "Forsøk å installere programmet på nytt \n"
-#~ "\n"
-#~ "Tilknytningen til Konqueror blir slått av."
-
-#~ msgid "Save As"
-#~ msgstr "Lagre som"
