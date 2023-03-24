@@ -21,8 +21,8 @@ class ReadWritePartPrivate : public ReadOnlyPartPrivate
 public:
     Q_DECLARE_PUBLIC(ReadWritePart)
 
-    explicit ReadWritePartPrivate(ReadWritePart *qq)
-        : ReadOnlyPartPrivate(qq)
+    explicit ReadWritePartPrivate(ReadWritePart *qq, const KPluginMetaData &data)
+        : ReadOnlyPartPrivate(qq, data)
     {
         m_bModified = false;
         m_bReadWrite = true;

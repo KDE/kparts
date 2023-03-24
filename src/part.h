@@ -9,9 +9,9 @@
 #ifndef _KPARTS_PART_H
 #define _KPARTS_PART_H
 
+#include <KPluginMetaData>
 #include <kparts/partbase.h>
 
-class KPluginMetaData;
 class QWidget;
 class QEvent;
 class QPoint;
@@ -64,8 +64,9 @@ public:
      *  Constructor.
      *
      *  @param parent Parent object of the part.
+     *  @param data KPluginMetaData associated with this part, see Part::metaData()
      */
-    explicit Part(QObject *parent = nullptr);
+    explicit Part(QObject *parent = nullptr, const KPluginMetaData &data = {});
 
     /**
      *  Destructor.
@@ -171,15 +172,6 @@ protected:
      * @return a container widget owned by the Part's GUI.
      */
     QWidget *hostContainer(const QString &containerName);
-
-    /**
-     * Set the meta data for this part.
-     *
-     * Call this at the begin of the part constructor.
-     *
-     * @since 5.77
-     */
-    void setMetaData(const KPluginMetaData &metaData);
 
 protected Q_SLOTS:
     /**

@@ -43,7 +43,7 @@ public:
      * Constructor
      * See parent constructor for instructions.
      */
-    explicit ReadWritePart(QObject *parent = nullptr);
+    explicit ReadWritePart(QObject *parent = nullptr, const KPluginMetaData &data = {});
     /**
      * Destructor
      * Applications using a ReadWritePart should make sure, before

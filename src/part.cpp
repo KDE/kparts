@@ -20,11 +20,14 @@
 
 using namespace KParts;
 
-Part::Part(QObject *parent)
+Part::Part(QObject *parent, const KPluginMetaData &data)
     : QObject(parent)
-    , PartBase(*new PartPrivate(this))
+    , PartBase(*new PartPrivate(this, data))
 {
     PartBase::setPartObject(this);
+    if (data.isValid()) {
+        KXMLGUIClient::setComponentName(data.pluginId(), data.name());
+    }
 }
 
 Part::Part(PartPrivate &dd, QObject *parent)
@@ -154,15 +157,6 @@ void Part::slotWidgetDestroyed()
         // qCDebug(KPARTSLOG) << "deleting part" << objectName();
         this->deleteLater();
     }
-}
-
-void Part::setMetaData(const KPluginMetaData &metaData)
-{
-    Q_D(Part);
-
-    d->m_metaData = metaData;
-
-    KXMLGUIClient::setComponentName(metaData.pluginId(), metaData.name());
 }
 
 #include "moc_part.cpp"

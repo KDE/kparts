@@ -24,8 +24,9 @@ class PartPrivate : public PartBasePrivate
 public:
     Q_DECLARE_PUBLIC(Part)
 
-    explicit PartPrivate(Part *qq)
+    explicit PartPrivate(Part *qq, const KPluginMetaData &data)
         : PartBasePrivate(qq)
+        , m_metaData(data)
         , m_autoDeleteWidget(true)
         , m_autoDeletePart(true)
         , m_manager(nullptr)
@@ -36,7 +37,7 @@ public:
     {
     }
 
-    KPluginMetaData m_metaData;
+    const KPluginMetaData m_metaData;
     bool m_autoDeleteWidget;
     bool m_autoDeletePart;
     PartManager *m_manager;

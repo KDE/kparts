@@ -26,8 +26,8 @@ class ReadOnlyPartPrivate : public PartPrivate
 public:
     Q_DECLARE_PUBLIC(ReadOnlyPart)
 
-    explicit ReadOnlyPartPrivate(ReadOnlyPart *qq)
-        : PartPrivate(qq)
+    explicit ReadOnlyPartPrivate(ReadOnlyPart *qq, const KPluginMetaData &data)
+        : PartPrivate(qq, data)
     {
         m_job = nullptr;
         m_statJob = nullptr;

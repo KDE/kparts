@@ -24,19 +24,23 @@
 
 #include <KLocalizedString>
 #include <QDebug>
+#include <qstringliteral.h>
+
+KPluginMetaData fakeMetadata(const QString &id, const QString &name)
+{
+    const QString json = QLatin1String(
+                             "{ \"KPlugin\": {\n"
+                             " \"Name\": \"%1\",\n"
+                             " \"Version\": \"0.1\"\n"
+                             "}\n}")
+                             .arg(name);
+    QJsonObject jo = QJsonDocument::fromJson(json.toLocal8Bit()).object();
+    return KPluginMetaData(jo, id);
+}
 
 Part1::Part1(QObject *parent, QWidget *parentWidget)
-    : KParts::ReadOnlyPart(parent)
+    : KParts::ReadOnlyPart(parent, fakeMetadata(QStringLiteral("kpartstestpart"), QStringLiteral("KPart test part")))
 {
-    QJsonObject jo = QJsonDocument::fromJson(
-                         "{ \"KPlugin\": {\n"
-                         " \"Id\": \"kpartstestpart\",\n"
-                         " \"Name\": \"KParts test part\",\n"
-                         " \"Version\": \"0.1\"\n"
-                         "}\n}")
-                         .object();
-    setMetaData(KPluginMetaData(jo, QString()));
-
     m_edit = new QTextEdit(parentWidget);
     setWidget(m_edit);
 
@@ -96,17 +100,8 @@ bool Part1::openFile()
 }
 
 Part2::Part2(QObject *parent, QWidget *parentWidget)
-    : KParts::Part(parent)
+    : KParts::Part(parent, fakeMetadata(QStringLiteral("part2"), QStringLiteral("Part2")))
 {
-    QJsonObject jo = QJsonDocument::fromJson(
-                         "{ \"KPlugin\": {\n"
-                         " \"Id\": \"part2\",\n"
-                         " \"Name\": \"Part 2\",\n"
-                         " \"Version\": \"0.2\"\n"
-                         "}\n}")
-                         .object();
-    setMetaData(KPluginMetaData(jo, QString()));
-
     QWidget *w = new QWidget(parentWidget);
     w->setObjectName(QStringLiteral("Part2Widget"));
     setWidget(w);

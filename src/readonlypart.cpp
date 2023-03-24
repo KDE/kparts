@@ -26,8 +26,8 @@
 
 using namespace KParts;
 
-ReadOnlyPart::ReadOnlyPart(QObject *parent)
-    : Part(*new ReadOnlyPartPrivate(this), parent)
+ReadOnlyPart::ReadOnlyPart(QObject *parent, const KPluginMetaData &data)
+    : Part(*new ReadOnlyPartPrivate(this, data), parent)
 {
 }
 

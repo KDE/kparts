@@ -61,7 +61,7 @@ public:
      * Constructor.
      * See also Part for the setXXX methods to call.
      */
-    explicit ReadOnlyPart(QObject *parent = nullptr);
+    explicit ReadOnlyPart(QObject *parent = nullptr, const KPluginMetaData &data = {});
 
     /**
      * Destructor.
