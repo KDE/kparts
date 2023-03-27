@@ -25,11 +25,8 @@ K_PLUGIN_CLASS_WITH_JSON(%{APPNAME}Part, "%{APPNAMELC}part.json")
 
 %{APPNAME}Part::%{APPNAME}Part(QWidget* parentWidget, QObject* parent,
                                const KPluginMetaData &metaData, const QVariantList& /*args*/)
-    : KParts::ReadWritePart(parent)
+    : KParts::ReadWritePart(parent, metaData)
 {
-    // set component data
-    setMetaData(metaData);
-
     // set internal UI
     // TODO: replace with your custom UI
     m_textEditWidget = new QTextEdit(parentWidget);
