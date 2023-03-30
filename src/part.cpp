@@ -12,7 +12,7 @@
 #include "kparts_logging.h"
 #include "partmanager.h"
 
-// The events have randomely generated numbers using `shuf -i1000-65535 -n 1`
+// The events have randomly generated numbers using `shuf -i1000-65535 -n 1`
 #include "guiactivateevent.h"
 #include "partactivateevent.h"
 
