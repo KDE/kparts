@@ -440,14 +440,14 @@ Q_SIGNALS:
     void itemsRemoved(const KFileItemList &items);
 
 private Q_SLOTS:
-    void slotCompleted();
-    void slotOpenUrlRequest(const QUrl &url,
-                            const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments(),
-                            const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments());
+    KPARTS_NO_EXPORT void slotCompleted();
+    KPARTS_NO_EXPORT void slotOpenUrlRequest(const QUrl &url,
+                                             const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments(),
+                                             const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments());
 
-    void slotEmitOpenUrlRequestDelayed();
-    void slotEnableAction(const char *, bool);
-    void slotSetActionText(const char *, const QString &);
+    KPARTS_NO_EXPORT void slotEmitOpenUrlRequestDelayed();
+    KPARTS_NO_EXPORT void slotEnableAction(const char *, bool);
+    KPARTS_NO_EXPORT void slotSetActionText(const char *, const QString &);
 
 public:
     typedef QMap<QByteArray, int> ActionNumberMap;
