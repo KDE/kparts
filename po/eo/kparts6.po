@@ -1,4 +1,4 @@
-# translation of kparts5.pot to Esperanto
+# translation of kparts6.pot to Esperanto
 # Copyright (C) 1998,2002, 2003, 2004, 2005, 2007, 2008 Free Software Foundation, Inc.
 # Wolfram Diestel <wolfram@steloj.de>, 1998.
 # Heiko Evermann <heiko@evermann.de>, 2002, 2003.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-01 21:29+0000\n"
-"PO-Revision-Date: 2023-01-05 10:00+0100\n"
+"PO-Revision-Date: 2023-04-04 22:48+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -60,7 +60,7 @@ msgstr "&Malfermi per %1"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open &with %1"
-msgstr "&Malfermi per %1"
+msgstr "Malfermi &per %1"
 
 #: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
 #, kde-format
@@ -124,7 +124,7 @@ msgstr "&Serĉi"
 #: partloader.cpp:128
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
-msgstr ""
+msgstr "KPluginFactory ne povis ŝargi la kromprogramon: %1"
 
 #: partloader.cpp:132
 #, kde-format
@@ -154,31 +154,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Fermi dokumenton"
-
-#~ msgid "Do you really want to execute '%1'?"
-#~ msgstr "Ĉu vi vere volas ruli '%1'?"
-
-#~ msgid "Execute File?"
-#~ msgstr "Ĉu ruli dosieron?"
-
-#~ msgid "Execute"
-#~ msgstr "Ruli"
-
-#~ msgid "The Download Manager (%1) could not be found in your $PATH "
-#~ msgstr "La programo %1 ne troviĝis en via vojo (mediovariablo PATH)"
-
-#~ msgid ""
-#~ "Try to reinstall it  \n"
-#~ "\n"
-#~ "The integration with Konqueror will be disabled."
-#~ msgstr ""
-#~ "Provu reinstali ĝin  \n"
-#~ "\n"
-#~ "La enligeco en Konkeranto neebliĝos."
-
-#~ msgid "Save As"
-#~ msgstr "Konservi kiel"
-
-#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-#~ msgstr ""
-#~ "La kromprogramo '%1' ne provizas interfacon '%2' kun ŝlosilvorto '%3'"
