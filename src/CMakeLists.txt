@@ -1,6 +1,12 @@
 add_library(KF6Parts)
 add_library(KF6::Parts ALIAS KF6Parts)
 
+set_target_properties(KF6Parts PROPERTIES
+    VERSION     ${KPARTS_VERSION}
+    SOVERSION   ${KPARTS_SOVERSION}
+    EXPORT_NAME Parts
+)
+
 target_sources(KF6Parts PRIVATE
     partbase.cpp
     part.cpp
@@ -101,11 +107,6 @@ target_link_libraries(KF6Parts
         KF6::I18n
         KF6::JobWidgets
         KF6::KIOWidgets
-)
-
-set_target_properties(KF6Parts PROPERTIES VERSION   ${KPARTS_VERSION}
-                                          SOVERSION ${KPARTS_SOVERSION}
-                                          EXPORT_NAME Parts
 )
 
 install(TARGETS KF6Parts EXPORT KF6PartsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
