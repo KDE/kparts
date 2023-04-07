@@ -145,32 +145,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Затваряне на документа"
-
-#~ msgid "Do you really want to execute '%1'?"
-#~ msgstr "Сигурни ли сте, че искате да изпълните \"%1\"?"
-
-#~ msgid "Execute File?"
-#~ msgstr "Изпълнение на файл?"
-
-#~ msgid "Execute"
-#~ msgstr "Изпълнение"
-
-#~ msgid "The Download Manager (%1) could not be found in your $PATH "
-#~ msgstr ""
-#~ "Мениджърът за изтегляне (%1) не може да бъде намерен в променливата PATH "
-
-#~ msgid ""
-#~ "Try to reinstall it  \n"
-#~ "\n"
-#~ "The integration with Konqueror will be disabled."
-#~ msgstr ""
-#~ "Опит за преинсталиране\n"
-#~ "\n"
-#~ "Интеграцията с Konqueror ще бъде изключена."
-
-#~ msgid "Save As"
-#~ msgstr "Запис като"
-
-#~ msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-#~ msgstr ""
-#~ "Приставката \"%1\" не предлага интерфейс \"%2\" с ключова дума \"%3\"."
