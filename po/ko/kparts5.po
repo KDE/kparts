@@ -1,14 +1,14 @@
 # Korean messages for kdelibs.
 # Copyright (C) Free Software Foundation, Inc.
 # Cho Sung Jae <cho.sungjae@gmail.com>, 2007.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-24 00:54+0000\n"
-"PO-Revision-Date: 2022-04-16 21:30+0200\n"
+"PO-Revision-Date: 2023-04-22 00:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -150,7 +150,7 @@ msgstr "거부"
 #: partloader.cpp:158
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
-msgstr ""
+msgstr "KPluginFactory에서 플러그인을 불러올 수 없음: %1"
 
 #: partloader.cpp:162 partloader.cpp:220
 #, kde-format
@@ -158,10 +158,9 @@ msgid "No part was found for mimeType %1"
 msgstr "MIME 형식 %1의 부분을 찾을 수 없음"
 
 #: partloader.cpp:166
-#, fuzzy, kde-format
-#| msgid "No part was found for mimeType %1"
+#, kde-format
 msgid "No part could be instantiated for mimeType %1"
-msgstr "MIME 형식 %1의 부분을 찾을 수 없음"
+msgstr "MIME 형식 %1의 부분을 인스턴스화할 수 없음"
 
 #: partloader.cpp:203
 #, kde-format
