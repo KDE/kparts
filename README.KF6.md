@@ -8,6 +8,9 @@ You should adjust your constructors accordingly and pass in the `KPluginMetaData
 
 Also, you are allowed to remove the `const QVariantList &args` constructor parameter, in case your part does not have any logic using it.
 
+### Part::setMetaData
+This method was removed in favor of passing the KPluginMetaData object directly into the constructor of the KParts baseclass.
+
 ### BrowserExtension
 
 This class was renamed to NavigationExtension, because it is not limited to web browsing.
