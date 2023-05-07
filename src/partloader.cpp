@@ -19,7 +19,7 @@
 
 static QList<KPluginMetaData> partsFromUserPreference(const QString &mimeType)
 {
-    auto config = KSharedConfig::openConfig(QStringLiteral("mimeapps.list"));
+    auto config = KSharedConfig::openConfig(QStringLiteral("kpartsrc"), KConfig::NoGlobals);
     const QStringList pluginIds = config->group(QStringLiteral("Added KDE Part Associations")).readXdgListEntry(mimeType);
     QList<KPluginMetaData> plugins;
     plugins.reserve(pluginIds.size());
