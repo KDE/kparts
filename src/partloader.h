@@ -198,7 +198,9 @@ static T *createPartInstanceForMimeType(const QString &mimeType, QWidget *parent
         return result.plugin;
     }
 
-    *error = result.errorString;
+    if (error) {
+        *error = result.errorString;
+    }
 
     return nullptr;
 }
