@@ -109,7 +109,7 @@ instantiatePart(const KPluginMetaData &data, QWidget *parentWidget = nullptr, QO
 
 /**
  * Use this method to create a KParts part. It will try to create an object which inherits
- * @param T.
+ * @p T.
  *
  * @code
  * KPluginFactory::Result<KParts::ReadOnlyPart> result = KParts::PartLoader::instantiatePartForMimeType<KParts::ReadOnlyPart>(mimeType, parentWidget, parent,
@@ -125,8 +125,9 @@ instantiatePart(const KPluginMetaData &data, QWidget *parentWidget = nullptr, QO
  * if (auto plugin = KParts::PartLoader::instantiatePartForMimeType<KParts::ReadOnlyPart>(mimeType, parentWidget, parent, args).plugin) {
  *     // The plugin is valid and can be accessed
  * }
+ * @endcode
  *
- * @tparam T The interface for which an object should be created. The object will inherit @param T.
+ * @tparam T The interface for which an object should be created. The object will inherit @p T.
  * @param mimeType The mimetype for which we need a KParts.
  * @param parentWidget The parent widget for the part's widget.
  * @param parent The parent of the part.
