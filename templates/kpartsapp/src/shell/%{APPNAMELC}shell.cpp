@@ -8,7 +8,6 @@
 
 // KF headers
 #include <KParts/ReadWritePart>
-#include <KPluginLoader>
 #include <KPluginFactory>
 #include <KPluginMetaData>
 #include <KActionCollection>
@@ -29,7 +28,7 @@
     setupActions();
 
 
-    m_part = KPluginFactory::instantiatePlugin<KParts::ReadWritePart>(KPluginMetaData(QStringLiteral("kf5/parts/%{APPNAMELC}part")), this).plugin;
+    m_part = KPluginFactory::instantiatePlugin<KParts::ReadWritePart>(KPluginMetaData(QStringLiteral("kf6/parts/%{APPNAMELC}part")), this).plugin;
 
     if (m_part) {
         // integrate and setup
