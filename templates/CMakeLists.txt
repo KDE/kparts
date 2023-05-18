@@ -1,5 +1,5 @@
-set(apptemplate_DIRS
-    kpartsapp
+kde_package_app_templates(
+    TEMPLATES
+        kparts6-app
+    INSTALL_DIR ${KDE_INSTALL_KAPPTEMPLATESDIR}
 )
-
-kde_package_app_templates(TEMPLATES ${apptemplate_DIRS} INSTALL_DIR ${KDE_INSTALL_KAPPTEMPLATESDIR})
