@@ -1,11 +1,17 @@
 [General]
 Name=KParts Application (KF6)
+Name[ar]=تطبيق «أجزاءك» (KF6)
 Name[ca]=Aplicació de les KParts (KF6)
 Name[ca@valencia]=Aplicació de KParts (KF6)
+Name[en_GB]=KParts Application (KF6)
 Name[es]=Aplicación de KParts (KF6)
+Name[gl]=Aplicación de KParts (KF6)
 Name[ia]=Application de KParts (KF6)
+Name[ka]=KParts აპლიკაცია (KF6)
 Name[nl]=KParts-toepassing (KF6)
 Name[pl]=Aplikacja KParts (KF6)
+Name[sl]=Program KParts (KF6)
+Name[ta]=KParts செயலி (KF6)
 Name[tr]=KParts Uygulaması (KF6)
 Name[uk]=Програма KParts (KF6)
 Name[x-test]=xxKParts Application (KF6)xx
@@ -51,6 +57,7 @@ Comment[sr@ijekavian]=Генерише програм над радним окв
 Comment[sr@ijekavianlatin]=Generiše program nad radnim okvirom K‑dijelova, koristeći CMake
 Comment[sr@latin]=Generiše program nad radnim okvirom K‑delova, koristeći CMake
 Comment[sv]=Skapa ett program byggt på KParts-ramverket, med användning av CMake.
+Comment[ta]=CMake-ஐ கோண்டு, KParts செயலி ஒன்றை உருவாக்கும்
 Comment[tg]=Барномаеро, ки дар асоси низоми KParts ба воситаи CMake сохта шудааст, эҷод менамояд.
 Comment[tr]=CMake kullanarak, KParts çatısı üstüne kurulu bir uygulama oluşturun.
 Comment[uk]=Створити програму на основі бібліотек KParts з використанням CMake.
