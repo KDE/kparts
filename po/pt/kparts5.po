@@ -103,7 +103,7 @@ msgstr ""
 "X-POFile-SpellExtra: KVTML USD Colaborativos Hunspell Jovie AM PM mails\n"
 "X-POFile-SpellExtra: mbuttonGroup Blog blog np cp nc UTC Mandaico Batak\n"
 "X-POFile-SpellExtra: DQTDECLARATIVEDEBUG QML slot pedro mantê Pocinhas\n"
-"X-POFile-SpellExtra: Reconstrói ii Del iii querê\n"
+"X-POFile-SpellExtra: Reconstrói ii Del iii querê KPluginFactory\n"
 "X-POFile-IgnoreConsistency: Update\n"
 
 #, kde-format
