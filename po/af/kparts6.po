@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4 stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-06-12 02:34+0000\n"
 "PO-Revision-Date: 2006-01-12 16:33+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -116,17 +116,17 @@ msgstr "Internet Soektog"
 msgid "&Search"
 msgstr "Soek"
 
-#: partloader.cpp:128
+#: partloader.cpp:95
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:132
+#: partloader.cpp:99
 #, fuzzy, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Geen handteerder gevind vir %1!"
 
-#: partloader.cpp:136
+#: partloader.cpp:103
 #, fuzzy, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Geen handteerder gevind vir %1!"

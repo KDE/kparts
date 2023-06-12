@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-06-12 02:34+0000\n"
 "PO-Revision-Date: 2023-01-27 21:09+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -116,17 +116,17 @@ msgstr "Interneteko bilaketa"
 msgid "&Search"
 msgstr "&Bilatu"
 
-#: partloader.cpp:128
+#: partloader.cpp:95
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "«KPluginFactory»k ezin izan du plugina zamatu. %1"
 
-#: partloader.cpp:132
+#: partloader.cpp:99
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Ez da aurkitu %1 MIME-motarako atalik."
 
-#: partloader.cpp:136
+#: partloader.cpp:103
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Ez dago %1 MIME-motarako instantziatu daitekeen atalik"

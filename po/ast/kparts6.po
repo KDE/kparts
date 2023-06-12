@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-06-12 02:34+0000\n"
 "PO-Revision-Date: 2023-05-03 23:40+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -110,17 +110,17 @@ msgstr ""
 msgid "&Search"
 msgstr ""
 
-#: partloader.cpp:128
+#: partloader.cpp:95
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:132
+#: partloader.cpp:99
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr ""
 
-#: partloader.cpp:136
+#: partloader.cpp:103
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr ""
