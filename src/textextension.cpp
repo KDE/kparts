@@ -62,3 +62,5 @@ bool KParts::TextExtension::findText(const QString &, KFind::SearchOptions) cons
 {
     return false;
 }
+
+#include "moc_textextension.cpp"

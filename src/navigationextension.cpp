@@ -309,3 +309,5 @@ NavigationExtension *NavigationExtension::childObject(QObject *obj)
 {
     return obj->findChild<KParts::NavigationExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }
+
+#include "moc_navigationextension.cpp"

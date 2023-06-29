@@ -147,3 +147,4 @@ void %{APPNAME}Part::fileSaveAs()
 
 // needed for K_PLUGIN_CLASS
 #include <%{APPNAMELC}part.moc>
+#include "moc_%{APPNAMELC}part.cpp"

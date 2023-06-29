@@ -195,3 +195,5 @@ void StatusBarExtension::removeStatusBarItem(QWidget *widget)
 
     qCWarning(KPARTSLOG) << "StatusBarExtension::removeStatusBarItem. Widget not found :" << widget;
 }
+
+#include "moc_statusbarextension.cpp"

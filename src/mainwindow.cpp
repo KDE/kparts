@@ -188,3 +188,5 @@ void KParts::MainWindow::configureToolbars()
     // No difference with base class anymore.
     KXmlGuiWindow::configureToolbars();
 }
+
+#include "moc_mainwindow.cpp"

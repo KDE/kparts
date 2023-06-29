@@ -274,3 +274,5 @@ void PartTest::testActivationEvent()
     QVERIFY(part->m_guiActivationEventTriggered);
     delete part;
 }
+
+#include "moc_parttest.cpp"

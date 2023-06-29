@@ -80,3 +80,5 @@ void %{APPNAME}Shell::fileOpen()
         }
     }
 }
+
+#include "moc_%{APPNAMELC}shell.cpp"

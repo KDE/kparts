@@ -122,3 +122,5 @@ int main(int argc, char **argv)
     shell->show();
     return app.exec();
 }
+
+#include "moc_partviewer.cpp"

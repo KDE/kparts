@@ -56,3 +56,5 @@ void BrowserInterface::callMethod(const char *name, const QVariant &argument)
     }
     // clang-format on
 }
+
+#include "moc_browserinterface.cpp"

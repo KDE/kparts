@@ -37,3 +37,5 @@ bool KParts::ListingFilterExtension::supportsMultipleFilters(KParts::ListingFilt
 {
     return false;
 }
+
+#include "moc_listingfilterextension.cpp"

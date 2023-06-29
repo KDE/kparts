@@ -128,3 +128,5 @@ void Part2::guiActivateEvent(KParts::GUIActivateEvent *event)
         Q_EMIT setWindowCaption(QStringLiteral("[part2 activated]"));
     }
 }
+
+#include "moc_parts.cpp"
