@@ -34,3 +34,5 @@ HtmlExtension *KParts::HtmlExtension::childObject(QObject *obj)
 {
     return obj->findChild<KParts::HtmlExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }
+
+#include "moc_htmlextension.cpp"

@@ -306,4 +306,7 @@ void Plugin::loadPlugins(QObject *parent,
         }
     }
 }
+
+#include "moc_plugin.cpp"
+
 #endif

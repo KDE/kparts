@@ -67,4 +67,6 @@ BrowserHostExtension *BrowserHostExtension::findFrameParent(KParts::ReadOnlyPart
     return nullptr;
 }
 
+#include "moc_browserhostextension.cpp"
+
 #endif

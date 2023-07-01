@@ -256,3 +256,5 @@ void PartTest::testShouldNotCrashAfterDelete()
     QVERIFY(part->openFileCalled());
     delete part;
 }
+
+#include "moc_parttest.cpp"

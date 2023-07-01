@@ -38,3 +38,5 @@ bool KParts::FileInfoExtension::hasSelection() const
 {
     return false;
 }
+
+#include "moc_fileinfoextension.cpp"

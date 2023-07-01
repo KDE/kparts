@@ -32,3 +32,5 @@ KParts::ListingNotificationExtension::NotificationEventTypes KParts::ListingNoti
 {
     return None;
 }
+
+#include "moc_listingnotificationextension.cpp"

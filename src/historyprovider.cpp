@@ -81,3 +81,5 @@ void HistoryProvider::clear()
     d->dict.clear();
     Q_EMIT cleared();
 }
+
+#include "moc_historyprovider.cpp"

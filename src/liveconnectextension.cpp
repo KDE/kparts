@@ -49,3 +49,5 @@ LiveConnectExtension *LiveConnectExtension::childObject(QObject *obj)
 {
     return obj->findChild<KParts::LiveConnectExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }
+
+#include "moc_liveconnectextension.cpp"

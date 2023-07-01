@@ -318,3 +318,5 @@ BrowserExtension *BrowserExtension::childObject(QObject *obj)
 {
     return obj->findChild<KParts::BrowserExtension *>(QString(), Qt::FindDirectChildrenOnly);
 }
+
+#include "moc_browserextension.cpp"
