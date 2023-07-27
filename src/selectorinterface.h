@@ -188,7 +188,7 @@ inline void qSwap(KParts::SelectorInterface::Element &lhs, KParts::SelectorInter
     lhs.swap(rhs);
 }
 
-Q_DECLARE_TYPEINFO(KParts::SelectorInterface::Element, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(KParts::SelectorInterface::Element, Q_RELOCATABLE_TYPE);
 
 Q_DECLARE_INTERFACE(KParts::SelectorInterface, "org.kde.KParts.SelectorInterface")
 
