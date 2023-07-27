@@ -20,18 +20,10 @@ target_sources(KF6Parts PRIVATE
     partactivateevent.cpp
     navigationextension.cpp
     browserarguments.cpp
-    liveconnectextension.cpp
     openurlevent.cpp
     windowargs.cpp
-    historyprovider.cpp
     browserinterface.cpp
-    browseropenorsavequestion.cpp
     statusbarextension.cpp
-    scriptableextension.cpp
-    textextension.cpp
-    htmlextension.cpp
-    htmlsettingsinterface.cpp
-    selectorinterface.cpp
     fileinfoextension.cpp
     listingfilterextension.cpp
     listingnotificationextension.cpp
@@ -42,15 +34,10 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
     HEADER_NAMES
         BrowserArguments
         BrowserInterface
-        BrowserOpenOrSaveQuestion
         FileInfoExtension
         GUIActivateEvent
-        HistoryProvider
-        HtmlExtension
-        HtmlSettingsInterface
         ListingFilterExtension
         ListingNotificationExtension
-        LiveConnectExtension
         MainWindow
         NavigationExtension
         OpenUrlArguments
@@ -62,10 +49,7 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
         PartManager
         ReadOnlyPart
         ReadWritePart
-        ScriptableExtension
-        SelectorInterface
         StatusBarExtension
-        TextExtension
         WindowArgs
     REQUIRED_HEADERS KParts_HEADERS
     PREFIX KParts
@@ -102,9 +86,8 @@ target_link_libraries(KF6Parts
     PUBLIC
         KF6::KIOCore # KFileItem used in FileInfoExtension API
         KF6::XmlGui # essential to the technology
-        KF6::TextWidgets # needed for KFind, as interface
-        KF6::Service # used for BrowserOpenOrSaveQuestion
     PRIVATE
+        KF6::Service
         KF6::I18n
         KF6::JobWidgets
         KF6::KIOWidgets
@@ -140,7 +123,6 @@ if(BUILD_QCH)
         LINK_QCHS
             KF6KIO_QCH
             KF6XmlGui_QCH
-            KF6TextWidgets_QCH
         INCLUDE_DIRS
             ${CMAKE_BINARY_DIR}
             ${CMAKE_CURRENT_BINARY_DIR}
@@ -159,5 +141,5 @@ if(BUILD_QCH)
 endif()
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KParts LIB_NAME KF6Parts DEPS "KIOWidgets KXmlGui KTextWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KParts)
+ecm_generate_pri_file(BASE_NAME KParts LIB_NAME KF6Parts DEPS "KIOWidgets KXmlGui" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KParts)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})

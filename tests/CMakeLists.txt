@@ -28,6 +28,5 @@ ENDMACRO(KPARTS_EXECUTABLE_TESTS)
 
 KPARTS_EXECUTABLE_TESTS(
     partviewer
-    openorsavequestion
     terminal_test
 )

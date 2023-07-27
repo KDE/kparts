@@ -44,7 +44,6 @@ find_package(KF6I18n ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6KIO ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6JobWidgets ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6Service ${KF_DEP_VERSION} REQUIRED)
-find_package(KF6TextWidgets ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6XmlGui ${KF_DEP_VERSION} REQUIRED)
 

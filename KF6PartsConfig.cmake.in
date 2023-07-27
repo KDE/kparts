@@ -2,7 +2,6 @@
 
 include(CMakeFindDependencyMacro)
 find_dependency(KF6KIO "@KF_DEP_VERSION@")
-find_dependency(KF6TextWidgets "@KF_DEP_VERSION@")
 find_dependency(KF6XmlGui "@KF_DEP_VERSION@")
 find_dependency(KF6Service "@KF_DEP_VERSION@")
 

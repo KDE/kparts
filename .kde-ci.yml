@@ -4,7 +4,6 @@ Dependencies:
     'frameworks/extra-cmake-modules': '@same'
     'frameworks/kio' : '@same'
     'frameworks/kxmlgui' : '@same'
-    'frameworks/ktextwidgets' : '@same'
     'frameworks/knotifications' : '@same'
 
 Options:
