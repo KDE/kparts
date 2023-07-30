@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2023-01-25 13:22+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -36,77 +36,6 @@ msgstr ""
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "federico.zenith@member.fsf.org,,,,"
-
-# È il soggetto di un'email. Usiamo l'intestazione internazionale
-# «Re:», non quelle della Microsoft («SV:», «AW:» e così via; no,
-# non mi ricordo com'era in italiano).
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "Tipo: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "Ricorda l'azione per file di questo tipo"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "&Apri con %1"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "Apri &con %1"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "Aprire con «%1»?"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "&Apri con..."
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "&Apri con"
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "&Apri"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "Nome: %1"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "Questo è il nome del file suggerito dal server"
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "Accetta"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "Rifiuta"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -156,6 +85,55 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Chiudi documento"
+
+# È il soggetto di un'email. Usiamo l'intestazione internazionale
+# «Re:», non quelle della Microsoft («SV:», «AW:» e così via; no,
+# non mi ricordo com'era in italiano).
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "Tipo: %1"
+
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "Ricorda l'azione per file di questo tipo"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "&Apri con %1"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "Apri &con %1"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "Aprire con «%1»?"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "&Apri con..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "&Apri con"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "&Apri"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "Nome: %1"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "Questo è il nome del file suggerito dal server"
+
+#~ msgid "Accept"
+#~ msgstr "Accetta"
+
+#~ msgid "Reject"
+#~ msgstr "Rifiuta"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "Vuoi veramente eseguire «%1»?"

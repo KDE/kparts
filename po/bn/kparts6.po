@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2012-07-16 14:27+0530\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: American English <kde-translation@bengalinux.org>\n"
@@ -30,74 +30,6 @@ msgstr "দীপায়ন সরকার"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "deepayan.sarkar@gmail.com"
-
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "টাইপ: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "এই ধরণের ফাইলের জন্য এই নিয়মটি মনে রাখো"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "%1 দিয়ে খো&ল"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "%1 দিয়ে খো&ল"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "'%1' খুলব?"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "খুলতে ব্যবহা&র করো..."
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "খুলতে ব্যবহা&র করো"
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "খো&ল"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "নাম: %1"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "সার্ভার এই নামটি প্রস্তাব করেছে"
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "স্বীকার করো"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "অস্বীকার করো"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -149,6 +81,52 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "নথী বন্ধ করো"
+
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "টাইপ: %1"
+
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "এই ধরণের ফাইলের জন্য এই নিয়মটি মনে রাখো"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "%1 দিয়ে খো&ল"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "%1 দিয়ে খো&ল"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "'%1' খুলব?"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "খুলতে ব্যবহা&র করো..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "খুলতে ব্যবহা&র করো"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "খো&ল"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "নাম: %1"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "সার্ভার এই নামটি প্রস্তাব করেছে"
+
+#~ msgid "Accept"
+#~ msgstr "স্বীকার করো"
+
+#~ msgid "Reject"
+#~ msgstr "অস্বীকার করো"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "আপনি কি সত্যিই '%1' চালাতে চান?"

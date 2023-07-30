@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde4libs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2012-01-19 00:20-0500\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -25,82 +25,6 @@ msgstr "pa emër"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-
-#: browseropenorsavequestion.cpp:89
-#, fuzzy, kde-format
-#| msgid "Re: %1"
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "Re: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr ""
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, fuzzy, kde-format
-#| msgid "Open '%1'"
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "Hape '%1'"
-
-#: browseropenorsavequestion.cpp:213
-#, fuzzy, kde-format
-#| msgid "Open '%1'"
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "Hape '%1'"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, fuzzy, kde-format
-#| msgid "Open '%1'"
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "Hape '%1'"
-
-#: browseropenorsavequestion.cpp:228
-#, fuzzy, kde-format
-#| msgid "&Open..."
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "&Hape..."
-
-#: browseropenorsavequestion.cpp:246
-#, fuzzy, kde-format
-#| msgid "Open Script"
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "Hap Skriptin"
-
-#: browseropenorsavequestion.cpp:315
-#, fuzzy, kde-format
-#| msgid "Open"
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "Hape"
-
-#: browseropenorsavequestion.cpp:339
-#, fuzzy, kde-format
-#| msgid "Name: "
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "Emri: "
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr ""
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "Prano"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "Refuzo"
 
 #: navigationextension.cpp:218
 #, fuzzy, kde-format
@@ -153,6 +77,60 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Mbylle Dokumentin"
+
+#, fuzzy
+#~| msgid "Re: %1"
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "Re: %1"
+
+#, fuzzy
+#~| msgid "Open '%1'"
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "Hape '%1'"
+
+#, fuzzy
+#~| msgid "Open '%1'"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "Hape '%1'"
+
+#, fuzzy
+#~| msgid "Open '%1'"
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "Hape '%1'"
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "&Hape..."
+
+#, fuzzy
+#~| msgid "Open Script"
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "Hap Skriptin"
+
+#, fuzzy
+#~| msgid "Open"
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "Hape"
+
+#, fuzzy
+#~| msgid "Name: "
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "Emri: "
+
+#~ msgid "Accept"
+#~ msgstr "Prano"
+
+#~ msgid "Reject"
+#~ msgstr "Refuzo"
 
 #~ msgid "Execute File?"
 #~ msgstr "Ta Ekzekutojmë Skedarin?"

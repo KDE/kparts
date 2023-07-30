@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2008-08-16 16:01-0800\n"
 "Last-Translator: Zabeeh Khan <zabeehkhan@gmail.com>\n"
 "Language-Team: Pashto <pathanisation@googlegroups.com>\n"
@@ -28,84 +28,6 @@ msgstr "ستاسو نومونه"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zabeehkhan@gmail.com"
-
-#: browseropenorsavequestion.cpp:89
-#, fuzzy, kde-format
-#| msgid "Re: %1"
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "%1 بيا:"
-
-#: browseropenorsavequestion.cpp:97
-#, fuzzy, kde-format
-#| msgid "Do not show this message again"
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "دا استوزه بيا نه ښودل"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "پرانيستل '%1' په&"
-
-#: browseropenorsavequestion.cpp:213
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "پرانيستل '%1' په&"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, fuzzy, kde-format
-#| msgid "Open '%1'"
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "پرانيستل '%1'"
-
-#: browseropenorsavequestion.cpp:228
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "...پرانيستل په&"
-
-#: browseropenorsavequestion.cpp:246
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "...پرانيستل په&"
-
-#: browseropenorsavequestion.cpp:315
-#, fuzzy, kde-format
-#| msgid "&Open"
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "پرانيستل&"
-
-#: browseropenorsavequestion.cpp:339
-#, fuzzy, kde-format
-#| msgid "Name: "
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr ":نوم"
-
-#: browseropenorsavequestion.cpp:341
-#, fuzzy, kde-format
-#| msgid "This is the name to save the file as."
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "دا هغه نوم دی چې دوتنه پرې وساتل شي."
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "منل"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "نه منل"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -157,6 +79,72 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "لاسوند بندول"
+
+#, fuzzy
+#~| msgid "Re: %1"
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "%1 بيا:"
+
+#, fuzzy
+#~| msgid "Do not show this message again"
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "دا استوزه بيا نه ښودل"
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "پرانيستل '%1' په&"
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "پرانيستل '%1' په&"
+
+#, fuzzy
+#~| msgid "Open '%1'"
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "پرانيستل '%1'"
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "...پرانيستل په&"
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "...پرانيستل په&"
+
+#, fuzzy
+#~| msgid "&Open"
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "پرانيستل&"
+
+#, fuzzy
+#~| msgid "Name: "
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr ":نوم"
+
+#, fuzzy
+#~| msgid "This is the name to save the file as."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "دا هغه نوم دی چې دوتنه پرې وساتل شي."
+
+#~ msgid "Accept"
+#~ msgstr "منل"
+
+#~ msgid "Reject"
+#~ msgstr "نه منل"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "په رښتيا چلول غواړﺉ؟ '%1'"

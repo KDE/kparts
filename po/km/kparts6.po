@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2012-06-27 10:04+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -27,74 +27,6 @@ msgid "Your emails"
 msgstr ""
 "khoemsokhem@khmeros.info,​​mornmet@khmeros.info,sutha@khmeros.info,"
 "ratanak@khmeros.info,sophea@khmeros.info"
-
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "វាយ ៖ %1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "ចងចាំ​សកម្មភាព​សម្រាប់​ឯកសារ​នៃ​ប្រភេទ​នេះ"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "បើក​ជា​មួយ %1"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "បើក​ជា​មួយ %1"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "បើក '%1'?"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "បើក​ជា​មួយ..."
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "បើក​ជា​មួយ"
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "បើក"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "ឈ្មោះ ៖ %1"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "នេះជា​ឈ្មោះ​ឯកសារ​ដែលបាន​ស្នើ​ដោយ​ម៉ាស៊ីន​បម្រើ"
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "ព្រម​ទទួល"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "បដិសេធ"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -146,6 +78,52 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "បិទ​ឯកសារ"
+
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "វាយ ៖ %1"
+
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "ចងចាំ​សកម្មភាព​សម្រាប់​ឯកសារ​នៃ​ប្រភេទ​នេះ"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "បើក​ជា​មួយ %1"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "បើក​ជា​មួយ %1"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "បើក '%1'?"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "បើក​ជា​មួយ..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "បើក​ជា​មួយ"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "បើក"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "ឈ្មោះ ៖ %1"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "នេះជា​ឈ្មោះ​ឯកសារ​ដែលបាន​ស្នើ​ដោយ​ម៉ាស៊ីន​បម្រើ"
+
+#~ msgid "Accept"
+#~ msgstr "ព្រម​ទទួល"
+
+#~ msgid "Reject"
+#~ msgstr "បដិសេធ"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "តើ​អ្នក​ពិត​ជា​ចង់​ប្រតិបត្តិ '%1' ឬ ?"

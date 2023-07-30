@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2023-03-21 20:01+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -34,74 +34,6 @@ msgstr "Thomas Reitelbach, Stephan Johach, Thomas Diehl"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tr@erdfunkstelle.de, hunsum@gmx.de, thd@kde.org"
-
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "Typ: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "Aktion für Dateien dieses Typs fest zuordnen"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "&Mit %1 öffnen"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "&Mit %1 öffnen"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "„%1“ öffnen"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "Öffnen &mit ..."
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "Öffnen &mit"
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "Öff&nen"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "Name: %1"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "Dies ist der Dateiname, der vom Server vorgeschlagen wird."
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "Annehmen"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "Ablehnen"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -151,6 +83,52 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Dokument schließen"
+
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "Typ: %1"
+
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "Aktion für Dateien dieses Typs fest zuordnen"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "&Mit %1 öffnen"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "&Mit %1 öffnen"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "„%1“ öffnen"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "Öffnen &mit ..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "Öffnen &mit"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "Öff&nen"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "Name: %1"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "Dies ist der Dateiname, der vom Server vorgeschlagen wird."
+
+#~ msgid "Accept"
+#~ msgstr "Annehmen"
+
+#~ msgid "Reject"
+#~ msgstr "Ablehnen"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "Möchten Sie „%1“ wirklich ausführen?"

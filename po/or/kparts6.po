@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2009-01-02 17:37+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -32,83 +32,6 @@ msgstr "ମନୋଜ କୁମାର ଗିରି"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mgiri@redhat.com"
-
-#: browseropenorsavequestion.cpp:89
-#, fuzzy, kde-format
-#| msgid "Re: %1"
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "Re: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, fuzzy, kde-format
-#| msgid "Do not show this message again"
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "ଏହି ସନ୍ଦେଶକୁ ପୁଣିଥରେ ଦର୍ଶାନ୍ତୁ ନାହିଁ"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "'%1' ସହିତ ଖୋଲନ୍ତୁ (&O)..."
-
-#: browseropenorsavequestion.cpp:213
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "'%1' ସହିତ ଖୋଲନ୍ତୁ (&O)..."
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, fuzzy, kde-format
-#| msgid "Open '%1'"
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "'%1' ଖୋଲନ୍ତୁ"
-
-#: browseropenorsavequestion.cpp:228
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "ସହିତ ଖୋଲନ୍ତୁ (&O)..."
-
-#: browseropenorsavequestion.cpp:246
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "ସହିତ ଖୋଲନ୍ତୁ (&O)..."
-
-#: browseropenorsavequestion.cpp:315
-#, fuzzy, kde-format
-#| msgid "&Open"
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "ଖୋଲନ୍ତୁ (&O)"
-
-#: browseropenorsavequestion.cpp:339
-#, fuzzy, kde-format
-#| msgid "Name: "
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "ନାମ: "
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr ""
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "ଗ୍ରହଣ କରନ୍ତୁ"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "ତ୍ୟାଗ କରନ୍ତୁ"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -160,6 +83,66 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "ଦଲିଲ ବନ୍ଦ କରନ୍ତୁ"
+
+#, fuzzy
+#~| msgid "Re: %1"
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "Re: %1"
+
+#, fuzzy
+#~| msgid "Do not show this message again"
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "ଏହି ସନ୍ଦେଶକୁ ପୁଣିଥରେ ଦର୍ଶାନ୍ତୁ ନାହିଁ"
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "'%1' ସହିତ ଖୋଲନ୍ତୁ (&O)..."
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "'%1' ସହିତ ଖୋଲନ୍ତୁ (&O)..."
+
+#, fuzzy
+#~| msgid "Open '%1'"
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "'%1' ଖୋଲନ୍ତୁ"
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "ସହିତ ଖୋଲନ୍ତୁ (&O)..."
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "ସହିତ ଖୋଲନ୍ତୁ (&O)..."
+
+#, fuzzy
+#~| msgid "&Open"
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "ଖୋଲନ୍ତୁ (&O)"
+
+#, fuzzy
+#~| msgid "Name: "
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "ନାମ: "
+
+#~ msgid "Accept"
+#~ msgstr "ଗ୍ରହଣ କରନ୍ତୁ"
+
+#~ msgid "Reject"
+#~ msgstr "ତ୍ୟାଗ କରନ୍ତୁ"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "କଣ ଆପଣ ପ୍ରକୃତରେ '%1'କୁ ନିଷ୍ପାଦନ କରିବାକୁ ଚାହୁଁଛନ୍ତି? "

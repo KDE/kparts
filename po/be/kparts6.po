@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2009-09-06 15:21+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
@@ -36,84 +36,6 @@ msgstr "Дарафей Праляскоўскі"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "komzpa@gmail.com"
-
-#: browseropenorsavequestion.cpp:89
-#, fuzzy, kde-format
-#| msgid "Redo: %1"
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "Паўтарыць: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, fuzzy, kde-format
-#| msgid "Do not show this message again"
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "Больш не паказваць гэтае паведамленне"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "&Адкрыць у '%1'"
-
-#: browseropenorsavequestion.cpp:213
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "&Адкрыць у '%1'"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, fuzzy, kde-format
-#| msgid "Open '%1'"
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "Адкрыць '%1'"
-
-#: browseropenorsavequestion.cpp:228
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "&Адкрыць у..."
-
-#: browseropenorsavequestion.cpp:246
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "&Адкрыць у..."
-
-#: browseropenorsavequestion.cpp:315
-#, fuzzy, kde-format
-#| msgid "&Open"
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "&Адкрыць"
-
-#: browseropenorsavequestion.cpp:339
-#, fuzzy, kde-format
-#| msgid "Name:"
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "Назва:"
-
-#: browseropenorsavequestion.cpp:341
-#, fuzzy, kde-format
-#| msgid "This is the name to save the file as."
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "Гэта назва, з якой трэба захаваць файл."
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "Дазволіць"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "Адмовіць"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -165,6 +87,72 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Закрыць дакумент"
+
+#, fuzzy
+#~| msgid "Redo: %1"
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "Паўтарыць: %1"
+
+#, fuzzy
+#~| msgid "Do not show this message again"
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "Больш не паказваць гэтае паведамленне"
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "&Адкрыць у '%1'"
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "&Адкрыць у '%1'"
+
+#, fuzzy
+#~| msgid "Open '%1'"
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "Адкрыць '%1'"
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "&Адкрыць у..."
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "&Адкрыць у..."
+
+#, fuzzy
+#~| msgid "&Open"
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "&Адкрыць"
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "Назва:"
+
+#, fuzzy
+#~| msgid "This is the name to save the file as."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "Гэта назва, з якой трэба захаваць файл."
+
+#~ msgid "Accept"
+#~ msgstr "Дазволіць"
+
+#~ msgid "Reject"
+#~ msgstr "Адмовіць"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "Вы сапраўды хочаце выканаць \"%1\"?"

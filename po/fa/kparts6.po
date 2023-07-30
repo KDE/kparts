@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2012-06-28 16:40+0430\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <kde-i18n-fa@kde.org>\n"
@@ -32,76 +32,6 @@ msgid "Your emails"
 msgstr ""
 "mohi@linuxshop.ir , kazemi@itland.ir , mebrahim@gmail.com , s.taghavi@gmail."
 "com"
-
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "نوع: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, fuzzy, kde-format
-#| msgid "Do not show this message again"
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "دوباره این پیام را نشان نده"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "&باز کردن %1 با‌"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "&باز کردن %1 با"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "«%1» باز شود؟"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "&باز کردن با...‌"
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "&باز کردن با"
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "&باز کردن‌"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "نام: %1"
-
-#: browseropenorsavequestion.cpp:341
-#, fuzzy, kde-format
-#| msgid "This is the name to save the file as."
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "این نام برای ذخیره پرونده با نام است."
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "پذیرفتن"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "رد کردن"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -153,6 +83,56 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "بستن سند"
+
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "نوع: %1"
+
+#, fuzzy
+#~| msgid "Do not show this message again"
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "دوباره این پیام را نشان نده"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "&باز کردن %1 با‌"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "&باز کردن %1 با"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "«%1» باز شود؟"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "&باز کردن با...‌"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "&باز کردن با"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "&باز کردن‌"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "نام: %1"
+
+#, fuzzy
+#~| msgid "This is the name to save the file as."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "این نام برای ذخیره پرونده با نام است."
+
+#~ msgid "Accept"
+#~ msgstr "پذیرفتن"
+
+#~ msgid "Reject"
+#~ msgstr "رد کردن"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "آیا واقعاً می‌خواهید  »%1« را اجرا کنید؟"

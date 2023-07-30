@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2008-12-19 22:49+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -30,83 +30,6 @@ msgstr "Edward Wornar"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "edi.werner@gmx.de"
-
-#: browseropenorsavequestion.cpp:89
-#, fuzzy, kde-format
-#| msgid "Re: %1"
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "Wotmołwa: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, fuzzy, kde-format
-#| msgid "Do not show this message again"
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "Njepokaž tutu zdźělenku přichodny raz"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "&Z '%1' wočinić?"
-
-#: browseropenorsavequestion.cpp:213
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "&Z '%1' wočinić?"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, fuzzy, kde-format
-#| msgid "Open '%1'"
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "Wočinjam '%1'"
-
-#: browseropenorsavequestion.cpp:228
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "&Wočinić z ..."
-
-#: browseropenorsavequestion.cpp:246
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "&Wočinić z ..."
-
-#: browseropenorsavequestion.cpp:315
-#, fuzzy, kde-format
-#| msgid "&Open"
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "W&očinić"
-
-#: browseropenorsavequestion.cpp:339
-#, fuzzy, kde-format
-#| msgid "Name: "
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "Mjeno:"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr ""
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "Přiwzać"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "Wotpokazać"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -158,6 +81,66 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Dokument začinić"
+
+#, fuzzy
+#~| msgid "Re: %1"
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "Wotmołwa: %1"
+
+#, fuzzy
+#~| msgid "Do not show this message again"
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "Njepokaž tutu zdźělenku přichodny raz"
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "&Z '%1' wočinić?"
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "&Z '%1' wočinić?"
+
+#, fuzzy
+#~| msgid "Open '%1'"
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "Wočinjam '%1'"
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "&Wočinić z ..."
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "&Wočinić z ..."
+
+#, fuzzy
+#~| msgid "&Open"
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "W&očinić"
+
+#, fuzzy
+#~| msgid "Name: "
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "Mjeno:"
+
+#~ msgid "Accept"
+#~ msgstr "Přiwzać"
+
+#~ msgid "Reject"
+#~ msgstr "Wotpokazać"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "Chceće woprawdźe '%1' startować?"

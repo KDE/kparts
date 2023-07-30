@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2007-11-05 15:41+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -31,84 +31,6 @@ msgstr "Mahesh Subedi, श्यामकृष्ण बल, Nabin Gautam"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "submanesh@gmail.com, shyamkrishna_bal@yahoo.com, Nabin@mpp.org.np"
-
-#: browseropenorsavequestion.cpp:89
-#, fuzzy, kde-format
-#| msgid "Redo: %1"
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "रिडु गर्नुहोस्: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, fuzzy, kde-format
-#| msgid "Do not show this message again"
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "यो सन्देश फेरि नदेखाउनुहोस्"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "'%1' सँग खोल्नुहोस्"
-
-#: browseropenorsavequestion.cpp:213
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "'%1' सँग खोल्नुहोस्"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, fuzzy, kde-format
-#| msgid "Open '%1'"
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "'%1' खोल्नुहोस्"
-
-#: browseropenorsavequestion.cpp:228
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "यससँग खोल्नुहोस्..."
-
-#: browseropenorsavequestion.cpp:246
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "यससँग खोल्नुहोस्..."
-
-#: browseropenorsavequestion.cpp:315
-#, fuzzy, kde-format
-#| msgid "&Open"
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "खोल्नुहोस्"
-
-#: browseropenorsavequestion.cpp:339
-#, fuzzy, kde-format
-#| msgid "Name:"
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "नाम:"
-
-#: browseropenorsavequestion.cpp:341
-#, fuzzy, kde-format
-#| msgid "This is the name to save the file as."
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "यो यस रूपमा बचत गरिने फाइलको नाम हो ।"
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "स्वीकार गर्नुहोस्"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "अस्वीकार गर्नुहोस्"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -160,6 +82,72 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "कागजात बन्द गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Redo: %1"
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "रिडु गर्नुहोस्: %1"
+
+#, fuzzy
+#~| msgid "Do not show this message again"
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "यो सन्देश फेरि नदेखाउनुहोस्"
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "'%1' सँग खोल्नुहोस्"
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "'%1' सँग खोल्नुहोस्"
+
+#, fuzzy
+#~| msgid "Open '%1'"
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "'%1' खोल्नुहोस्"
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "यससँग खोल्नुहोस्..."
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "यससँग खोल्नुहोस्..."
+
+#, fuzzy
+#~| msgid "&Open"
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "खोल्नुहोस्"
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "नाम:"
+
+#, fuzzy
+#~| msgid "This is the name to save the file as."
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "यो यस रूपमा बचत गरिने फाइलको नाम हो ।"
+
+#~ msgid "Accept"
+#~ msgstr "स्वीकार गर्नुहोस्"
+
+#~ msgid "Reject"
+#~ msgstr "अस्वीकार गर्नुहोस्"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "तपाईँ साँच्चिकै '%1' कार्यान्वयन गर्न चाहनुहुन्छ ?"

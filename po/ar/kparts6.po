@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2023-01-25 20:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -43,74 +43,6 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "zayed.alsaidi@gmail.com,hannysabbagh@hotmail.com,safa1996alfulaij@gmail.com"
-
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "النوع: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "تذكّر الإجراء لهذا النوع من الملفات"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "ا&فتح في %1"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "افتح &في %1"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "أأ&فتح ”%1“؟"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "ا&فتح في…"
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "ا&فتح في"
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "ا&فتح"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "الاسم: %1"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "هذا هو الاسم الذي اقترحه الخادوم"
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "اقبل"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "ارفض"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -160,6 +92,52 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "إغلاق المستند"
+
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "النوع: %1"
+
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "تذكّر الإجراء لهذا النوع من الملفات"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "ا&فتح في %1"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "افتح &في %1"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "أأ&فتح ”%1“؟"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "ا&فتح في…"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "ا&فتح في"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "ا&فتح"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "الاسم: %1"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "هذا هو الاسم الذي اقترحه الخادوم"
+
+#~ msgid "Accept"
+#~ msgstr "اقبل"
+
+#~ msgid "Reject"
+#~ msgstr "ارفض"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "أمتأكّد من تنفيذ ”%1“؟"

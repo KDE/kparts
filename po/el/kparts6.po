@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2021-11-06 11:14+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -39,74 +39,6 @@ msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης, Πέτρο
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sng@hellug.gr, manolis@koppermind.homelinux.org, p_vidalis@hotmail.com"
-
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "Τύπος: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "Απομνημόνευση συσχετισμού ενέργειας για αυτόν τον τύπο"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "Ά&νοιγμα με %1"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "Άνοιγμα &με %1"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "Άνοιγμα '%1';"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "Ά&νοιγμα με..."
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "Άνοιγμα &με..."
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "Άν&οιγμα"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "Όνομα: %1"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "Αυτό είναι το όνομα αρχείου το οποίο συνέστησε ο διακομιστής"
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "Αποδοχή"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "Απόρριψη"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -157,6 +89,52 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Κλείσιμο εγγράφου"
+
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "Τύπος: %1"
+
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "Απομνημόνευση συσχετισμού ενέργειας για αυτόν τον τύπο"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "Ά&νοιγμα με %1"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "Άνοιγμα &με %1"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "Άνοιγμα '%1';"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "Ά&νοιγμα με..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "Άνοιγμα &με..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "Άν&οιγμα"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "Όνομα: %1"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "Αυτό είναι το όνομα αρχείου το οποίο συνέστησε ο διακομιστής"
+
+#~ msgid "Accept"
+#~ msgstr "Αποδοχή"
+
+#~ msgid "Reject"
+#~ msgstr "Απόρριψη"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "Επιθυμείτε πραγματικά την εκτέλεση του '%1';"

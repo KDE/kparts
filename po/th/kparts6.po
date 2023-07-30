@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2010-12-31 22:47+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -30,74 +30,6 @@ msgstr "ถนอมทรัพย์ นพบูรณ์, สหชาติ
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "donga.nb@gmail.com, drrider@gmail.com"
-
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "ประเภท: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "จดจำการกระทำสำหรับแฟ้มต่าง ๆ ที่เป็นประเภทนี้"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "เปิ&ดด้วย %1"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "เปิ&ดด้วย %1"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "เปิด '%1' หรือไม่ ?"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "เ&ปิดด้วย..."
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "เ&ปิดด้วย"
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "เ&ปิด"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "ชื่อ: %1"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "นี่เป็นชื่อแฟ้มที่ได้รับการแนะนำมาจากเซิร์ฟเวอร์"
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "ยอมรับ"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "ปฏิเสธ"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -150,6 +82,52 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "ปิดเอกสาร"
+
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "ประเภท: %1"
+
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "จดจำการกระทำสำหรับแฟ้มต่าง ๆ ที่เป็นประเภทนี้"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "เปิ&ดด้วย %1"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "เปิ&ดด้วย %1"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "เปิด '%1' หรือไม่ ?"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "เ&ปิดด้วย..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "เ&ปิดด้วย"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "เ&ปิด"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "ชื่อ: %1"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "นี่เป็นชื่อแฟ้มที่ได้รับการแนะนำมาจากเซิร์ฟเวอร์"
+
+#~ msgid "Accept"
+#~ msgstr "ยอมรับ"
+
+#~ msgid "Reject"
+#~ msgstr "ปฏิเสธ"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "คุณต้องการจะประมวลผล '%1' จริงหรือไม่ ?"

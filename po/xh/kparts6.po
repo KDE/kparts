@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -32,78 +32,6 @@ msgstr "Igama elitsha lenginginya."
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Igama elitsha lenginginya."
-
-#: browseropenorsavequestion.cpp:89
-#, fuzzy, kde-format
-#| msgid "Redo: %1"
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "Yenza kwakhona: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, fuzzy, kde-format
-#| msgid "Do not show this message again"
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "Sukubonisa lomyalezo kwakhona"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, fuzzy, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "Vula '%1'?"
-
-#: browseropenorsavequestion.cpp:213
-#, fuzzy, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "Vula '%1'?"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, fuzzy, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "Vula '%1'?"
-
-#: browseropenorsavequestion.cpp:228
-#, fuzzy, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "Vula nge:"
-
-#: browseropenorsavequestion.cpp:246
-#, fuzzy, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "Vula nge:"
-
-#: browseropenorsavequestion.cpp:315
-#, fuzzy, kde-format
-#| msgid "&Open"
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "&Vula"
-
-#: browseropenorsavequestion.cpp:339
-#, fuzzy, kde-format
-#| msgid "Name:"
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "Igama:"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr ""
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "Yamkela"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "Khuphela ngaphandle"
 
 #: navigationextension.cpp:218
 #, fuzzy, kde-format
@@ -155,6 +83,61 @@ msgstr ""
 #, fuzzy, kde-format
 msgid "Close Document"
 msgstr "Gcina Uxwebhu?"
+
+#, fuzzy
+#~| msgid "Redo: %1"
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "Yenza kwakhona: %1"
+
+#, fuzzy
+#~| msgid "Do not show this message again"
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "Sukubonisa lomyalezo kwakhona"
+
+#, fuzzy
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "Vula '%1'?"
+
+#, fuzzy
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "Vula '%1'?"
+
+#, fuzzy
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "Vula '%1'?"
+
+#, fuzzy
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "Vula nge:"
+
+#, fuzzy
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "Vula nge:"
+
+#, fuzzy
+#~| msgid "&Open"
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "&Vula"
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "Igama:"
+
+#~ msgid "Accept"
+#~ msgstr "Yamkela"
+
+#~ msgid "Reject"
+#~ msgstr "Khuphela ngaphandle"
 
 #, fuzzy
 #~| msgid "Do you really want to execute '%1'? "

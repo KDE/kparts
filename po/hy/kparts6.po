@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2013-01-31 01:08+0400\n"
 "Last-Translator: Davit <nikdavnik@mail.ru>\n"
 "Language-Team: Armenian Language: hy\n"
@@ -30,74 +30,6 @@ msgstr "Դավիթ Նիկողոսյան"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "nikdavnik@mail.ru"
-
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "Տեսակ: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "Հետագայում նմանատիպ նիշքերի հետ վերաբերվել նունյ կերպ"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "&Բացել ըստ... «%1»"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "&Բացել ըստ...«%1»"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "Բացե՞լ «%1»"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "&Բացել ըստ..."
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "&Բացել ըստ..."
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "&Բացել"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "Նիշքի անուն: %1"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "Նիշքի անունը, տրամադրված սերվերի կողմից։"
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "Ընդունել"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "Խուսափել"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -149,6 +81,52 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Փակել նիշքը"
+
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "Տեսակ: %1"
+
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "Հետագայում նմանատիպ նիշքերի հետ վերաբերվել նունյ կերպ"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "&Բացել ըստ... «%1»"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "&Բացել ըստ...«%1»"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "Բացե՞լ «%1»"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "&Բացել ըստ..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "&Բացել ըստ..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "&Բացել"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "Նիշքի անուն: %1"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "Նիշքի անունը, տրամադրված սերվերի կողմից։"
+
+#~ msgid "Accept"
+#~ msgstr "Ընդունել"
+
+#~ msgid "Reject"
+#~ msgstr "Խուսափել"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "Կատարե՞լ «%1»"

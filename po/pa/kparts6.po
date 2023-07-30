@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2014-03-16 23:21-0500\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -35,74 +35,6 @@ msgstr ""
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "aalam@users.sf.net"
-
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "ਕਿਸਮ: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "ਇਸ ਕਿਸਮ ਦੀ ਫਾਈਲਾਂ ਲਈ ਐਕਸ਼ਨ ਯਾਦ ਰੱਖੋ"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "%1 ਨਾਲ ਖੋਲ੍ਹੋ(&O)"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "%1 ਨਾਲ ਖੋਲ੍ਹੋ(&w)"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "'%1' ਖੋਲ੍ਹਣਾ?"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "...ਨਾਲ ਖੋਲ੍ਹੋ(&O)"
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "ਇਸ ਨਾਲ ਖੋਲ੍ਹੋ(&O)"
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "ਖੋਲ੍ਹੋ(&O)"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "ਨਾਂ: %1"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "ਇਹ ਸਰਵਰ ਵਲੋਂ ਸੁਝਾਇਆ ਫਾਈਲ ਨਾਂ ਹੈ"
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "ਮਨਜ਼ੂਰ"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "ਇਨਕਾਰ"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -154,6 +86,52 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "ਡੌਕੂਮੈਂਟ ਬੰਦ ਕਰੋ"
+
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "ਕਿਸਮ: %1"
+
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "ਇਸ ਕਿਸਮ ਦੀ ਫਾਈਲਾਂ ਲਈ ਐਕਸ਼ਨ ਯਾਦ ਰੱਖੋ"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "%1 ਨਾਲ ਖੋਲ੍ਹੋ(&O)"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "%1 ਨਾਲ ਖੋਲ੍ਹੋ(&w)"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "'%1' ਖੋਲ੍ਹਣਾ?"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "...ਨਾਲ ਖੋਲ੍ਹੋ(&O)"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "ਇਸ ਨਾਲ ਖੋਲ੍ਹੋ(&O)"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "ਖੋਲ੍ਹੋ(&O)"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "ਨਾਂ: %1"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "ਇਹ ਸਰਵਰ ਵਲੋਂ ਸੁਝਾਇਆ ਫਾਈਲ ਨਾਂ ਹੈ"
+
+#~ msgid "Accept"
+#~ msgstr "ਮਨਜ਼ੂਰ"
+
+#~ msgid "Reject"
+#~ msgstr "ਇਨਕਾਰ"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "ਕੀ ਤੁਸੀਂ '%1' ਨੂੰ ਚਲਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? "

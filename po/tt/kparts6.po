@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2011-11-26 15:12+0400\n"
 "Last-Translator: Ainur Shakirov <ainur.shakirov.tt@gmail.com>\n"
 "Language-Team: Tatar <>\n"
@@ -26,74 +26,6 @@ msgstr "Ainur Shakirov"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ainur.shakirov.tt@gmail.com"
-
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "Төр: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "Файлның бу төре өчен гамәлне саклау"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "«%1» кушымтасы аша &ачу"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "«%1» кушымтасы &аша ачу"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "«%1» файлын ачаргамы?"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "Кушымта аша &ачу..."
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "Кушымта аша &ачу..."
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "&Ачу"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "Файлның исеме: %1"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "Сервер белән тәкъдим ителгән файлның исеме."
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "Рөхсәт итү"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "Кире кагу"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -145,6 +77,52 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Документны ябу"
+
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "Төр: %1"
+
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "Файлның бу төре өчен гамәлне саклау"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "«%1» кушымтасы аша &ачу"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "«%1» кушымтасы &аша ачу"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "«%1» файлын ачаргамы?"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "Кушымта аша &ачу..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "Кушымта аша &ачу..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "&Ачу"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "Файлның исеме: %1"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "Сервер белән тәкъдим ителгән файлның исеме."
+
+#~ msgid "Accept"
+#~ msgstr "Рөхсәт итү"
+
+#~ msgid "Reject"
+#~ msgstr "Кире кагу"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "«%1» объектын башкарырга телисезме?"

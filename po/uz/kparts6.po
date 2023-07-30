@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2008-05-30 17:29+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -26,81 +26,6 @@ msgstr "Mashrab Quvatov"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kmashrab@uni-bremen.de"
-
-#: browseropenorsavequestion.cpp:89
-#, fuzzy, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "Qaytarish: %1"
-
-#: browseropenorsavequestion.cpp:97
-#, fuzzy, kde-format
-#| msgid "Do not show this message again"
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "Bu xabar boshqa koʻrsatilmasin"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "\"%1\" bilan &ochish"
-
-#: browseropenorsavequestion.cpp:213
-#, fuzzy, kde-format
-#| msgid "&Open with '%1'"
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "\"%1\" bilan &ochish"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, fuzzy, kde-format
-#| msgid "Open '%1'"
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "'%1'ni ochish"
-
-#: browseropenorsavequestion.cpp:228
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "...bilan &ochish"
-
-#: browseropenorsavequestion.cpp:246
-#, fuzzy, kde-format
-#| msgid "&Open With..."
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "...bilan &ochish"
-
-#: browseropenorsavequestion.cpp:315
-#, fuzzy, kde-format
-#| msgid "&Open"
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "&Ochish"
-
-#: browseropenorsavequestion.cpp:339
-#, fuzzy, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "Nomi:"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr ""
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "Qabul qilish"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "Rad etish"
 
 #: navigationextension.cpp:218
 #, fuzzy, kde-format
@@ -150,6 +75,64 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Hujjatni yopish"
+
+#, fuzzy
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "Qaytarish: %1"
+
+#, fuzzy
+#~| msgid "Do not show this message again"
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "Bu xabar boshqa koʻrsatilmasin"
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "\"%1\" bilan &ochish"
+
+#, fuzzy
+#~| msgid "&Open with '%1'"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "\"%1\" bilan &ochish"
+
+#, fuzzy
+#~| msgid "Open '%1'"
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "'%1'ni ochish"
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "...bilan &ochish"
+
+#, fuzzy
+#~| msgid "&Open With..."
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "...bilan &ochish"
+
+#, fuzzy
+#~| msgid "&Open"
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "&Ochish"
+
+#, fuzzy
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "Nomi:"
+
+#~ msgid "Accept"
+#~ msgstr "Qabul qilish"
+
+#~ msgid "Reject"
+#~ msgstr "Rad etish"
 
 #, fuzzy
 #~ msgid "Do you really want to execute '%1'?"

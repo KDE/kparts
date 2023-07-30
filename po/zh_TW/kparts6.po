@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-12 02:34+0000\n"
+"POT-Creation-Date: 2023-07-30 02:02+0000\n"
 "PO-Revision-Date: 2023-03-06 22:02+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -37,74 +37,6 @@ msgstr "Frank Weng (a.k.a. Franklin)"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "franklin@goodhorse.idv.tw"
-
-#: browseropenorsavequestion.cpp:89
-#, kde-format
-msgctxt "@label Type of file"
-msgid "Type: %1"
-msgstr "型態：%1"
-
-#: browseropenorsavequestion.cpp:97
-#, kde-format
-msgctxt "@label:checkbox"
-msgid "Remember action for files of this type"
-msgstr "記住對此檔案型態要做的動作"
-
-#: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with %1"
-msgstr "用 %1 開啟(&O)"
-
-#: browseropenorsavequestion.cpp:213
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Open &with %1"
-msgstr "用 %1 開啟(&W)"
-
-#: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
-#, kde-format
-msgctxt "@info"
-msgid "Open '%1'?"
-msgstr "要開啟 '%1' 嗎？"
-
-#: browseropenorsavequestion.cpp:228
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with..."
-msgstr "開啟方式(&O)..."
-
-#: browseropenorsavequestion.cpp:246
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open with"
-msgstr "開啟方式(&O)"
-
-#: browseropenorsavequestion.cpp:315
-#, kde-format
-msgctxt "@label:button"
-msgid "&Open"
-msgstr "開啟(&O)"
-
-#: browseropenorsavequestion.cpp:339
-#, kde-format
-msgctxt "@label File name"
-msgid "Name: %1"
-msgstr "名稱：%1"
-
-#: browseropenorsavequestion.cpp:341
-#, kde-format
-msgctxt "@info:whatsthis"
-msgid "This is the file name suggested by the server"
-msgstr "這是伺服器建議的檔案名稱"
-
-#: htmlsettingsinterface.cpp:21
-msgid "Accept"
-msgstr "接受"
-
-#: htmlsettingsinterface.cpp:23
-msgid "Reject"
-msgstr "拒絕"
 
 #: navigationextension.cpp:218
 #, kde-format
@@ -154,6 +86,52 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "關閉文件"
+
+#~ msgctxt "@label Type of file"
+#~ msgid "Type: %1"
+#~ msgstr "型態：%1"
+
+#~ msgctxt "@label:checkbox"
+#~ msgid "Remember action for files of this type"
+#~ msgstr "記住對此檔案型態要做的動作"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with %1"
+#~ msgstr "用 %1 開啟(&O)"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Open &with %1"
+#~ msgstr "用 %1 開啟(&W)"
+
+#~ msgctxt "@info"
+#~ msgid "Open '%1'?"
+#~ msgstr "要開啟 '%1' 嗎？"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with..."
+#~ msgstr "開啟方式(&O)..."
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open with"
+#~ msgstr "開啟方式(&O)"
+
+#~ msgctxt "@label:button"
+#~ msgid "&Open"
+#~ msgstr "開啟(&O)"
+
+#~ msgctxt "@label File name"
+#~ msgid "Name: %1"
+#~ msgstr "名稱：%1"
+
+#~ msgctxt "@info:whatsthis"
+#~ msgid "This is the file name suggested by the server"
+#~ msgstr "這是伺服器建議的檔案名稱"
+
+#~ msgid "Accept"
+#~ msgstr "接受"
+
+#~ msgid "Reject"
+#~ msgstr "拒絕"
 
 #~ msgid "Do you really want to execute '%1'?"
 #~ msgstr "您真的要執行‘%1’？"
