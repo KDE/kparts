@@ -10,7 +10,6 @@
 #define __kparts_openurlevent_h__
 
 #include <QEvent>
-#include <kparts/browserarguments.h>
 #include <kparts/openurlarguments.h>
 #include <memory>
 
@@ -33,16 +32,12 @@ class OpenUrlEventPrivate;
 class KPARTS_EXPORT OpenUrlEvent : public QEvent
 {
 public:
-    OpenUrlEvent(ReadOnlyPart *part,
-                 const QUrl &url,
-                 const OpenUrlArguments &args = OpenUrlArguments(),
-                 const BrowserArguments &browserArgs = BrowserArguments());
+    OpenUrlEvent(ReadOnlyPart *part, const QUrl &url, const OpenUrlArguments &args = OpenUrlArguments());
     ~OpenUrlEvent() override;
 
     ReadOnlyPart *part() const;
     QUrl url() const;
     OpenUrlArguments arguments() const;
-    BrowserArguments browserArguments() const;
 
     static bool test(const QEvent *event);
 

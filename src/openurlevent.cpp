@@ -15,23 +15,21 @@ using namespace KParts;
 class KParts::OpenUrlEventPrivate
 {
 public:
-    OpenUrlEventPrivate(ReadOnlyPart *part, const QUrl &url, const OpenUrlArguments &args, const BrowserArguments &browserArgs)
+    OpenUrlEventPrivate(ReadOnlyPart *part, const QUrl &url, const OpenUrlArguments &args)
         : m_part(part)
         , m_url(url)
         , m_args(args)
-        , m_browserArgs(browserArgs)
     {
     }
     ReadOnlyPart *const m_part;
     const QUrl m_url;
     const OpenUrlArguments m_args;
-    const BrowserArguments m_browserArgs;
 };
 
 const QEvent::Type openUrlEventType = (QEvent::Type)8958;
-OpenUrlEvent::OpenUrlEvent(ReadOnlyPart *part, const QUrl &url, const OpenUrlArguments &args, const BrowserArguments &browserArgs)
+OpenUrlEvent::OpenUrlEvent(ReadOnlyPart *part, const QUrl &url, const OpenUrlArguments &args)
     : QEvent(openUrlEventType)
-    , d(new OpenUrlEventPrivate(part, url, args, browserArgs))
+    , d(new OpenUrlEventPrivate(part, url, args))
 {
 }
 
@@ -50,11 +48,6 @@ QUrl OpenUrlEvent::url() const
 OpenUrlArguments OpenUrlEvent::arguments() const
 {
     return d->m_args;
-}
-
-BrowserArguments OpenUrlEvent::browserArguments() const
-{
-    return d->m_browserArgs;
 }
 
 bool OpenUrlEvent::test(const QEvent *event)

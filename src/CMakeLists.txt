@@ -19,10 +19,7 @@ target_sources(KF6Parts PRIVATE
     guiactivateevent.cpp
     partactivateevent.cpp
     navigationextension.cpp
-    browserarguments.cpp
     openurlevent.cpp
-    windowargs.cpp
-    browserinterface.cpp
     statusbarextension.cpp
     fileinfoextension.cpp
     listingfilterextension.cpp
@@ -32,8 +29,6 @@ target_sources(KF6Parts PRIVATE
 include(ECMGenerateHeaders)
 ecm_generate_headers(KParts_CamelCase_HEADERS
     HEADER_NAMES
-        BrowserArguments
-        BrowserInterface
         FileInfoExtension
         GUIActivateEvent
         ListingFilterExtension
@@ -50,7 +45,6 @@ ecm_generate_headers(KParts_CamelCase_HEADERS
         ReadOnlyPart
         ReadWritePart
         StatusBarExtension
-        WindowArgs
     REQUIRED_HEADERS KParts_HEADERS
     PREFIX KParts
 )

@@ -48,7 +48,6 @@ class NavigationExtensionPrivate
 public:
     NavigationExtensionPrivate(KParts::ReadOnlyPart *parent)
         : m_urlDropHandlingEnabled(false)
-        , m_browserInterface(nullptr)
         , m_part(parent)
     {
     }
@@ -56,20 +55,16 @@ public:
     struct DelayedRequest {
         QUrl m_delayedURL;
         KParts::OpenUrlArguments m_delayedArgs;
-        KParts::BrowserArguments m_delayedBrowserArgs;
     };
 
     QList<DelayedRequest> m_requests;
     bool m_urlDropHandlingEnabled;
     KBitArray m_actionStatus;
     QMap<int, QString> m_actionText;
-    BrowserInterface *m_browserInterface;
 
     static void createActionSlotMap();
 
     KParts::ReadOnlyPart *m_part;
-    OpenUrlArguments m_args;
-    BrowserArguments m_browserArgs;
 };
 
 Q_GLOBAL_STATIC(NavigationExtension::ActionSlotMap, s_actionSlotMap)
@@ -118,7 +113,6 @@ NavigationExtension::NavigationExtension(KParts::ReadOnlyPart *parent)
         d->m_actionStatus.setBit(i, metaobj->indexOfMethod(slotSig.constData()) != -1);
     }
 
-    connect(d->m_part, static_cast<void (KParts::ReadOnlyPart::*)()>(&KParts::ReadOnlyPart::completed), this, &NavigationExtension::slotCompleted);
     connect(this, &NavigationExtension::openUrlRequest, this, &NavigationExtension::slotOpenUrlRequest);
     connect(this, &NavigationExtension::enableAction, this, &NavigationExtension::slotEnableAction);
     connect(this, &NavigationExtension::setActionText, this, &NavigationExtension::slotSetActionText);
@@ -127,16 +121,6 @@ NavigationExtension::NavigationExtension(KParts::ReadOnlyPart *parent)
 NavigationExtension::~NavigationExtension()
 {
     // qDebug() << "BrowserExtension::~BrowserExtension() " << this;
-}
-
-void NavigationExtension::setBrowserArguments(const BrowserArguments &args)
-{
-    d->m_browserArgs = args;
-}
-
-BrowserArguments NavigationExtension::browserArguments() const
-{
-    return d->m_browserArgs;
 }
 
 int NavigationExtension::xOffset()
@@ -180,12 +164,6 @@ void NavigationExtension::setURLDropHandlingEnabled(bool enable)
     d->m_urlDropHandlingEnabled = enable;
 }
 
-void NavigationExtension::slotCompleted()
-{
-    // empty the argument stuff, to avoid bogus/invalid values when opening a new url
-    setBrowserArguments(BrowserArguments());
-}
-
 void NavigationExtension::pasteRequest()
 {
     QString plain(QStringLiteral("plain"));
@@ -226,13 +204,12 @@ void NavigationExtension::pasteRequest()
     }
 }
 
-void NavigationExtension::slotOpenUrlRequest(const QUrl &url, const KParts::OpenUrlArguments &args, const KParts::BrowserArguments &browserArgs)
+void NavigationExtension::slotOpenUrlRequest(const QUrl &url, const KParts::OpenUrlArguments &args)
 {
     // qDebug() << this << " BrowserExtension::slotOpenURLRequest(): url=" << url.url();
     NavigationExtensionPrivate::DelayedRequest req;
     req.m_delayedURL = url;
     req.m_delayedArgs = args;
-    req.m_delayedBrowserArgs = browserArgs;
     d->m_requests.append(req);
     QTimer::singleShot(0, this, &NavigationExtension::slotEmitOpenUrlRequestDelayed);
 }
@@ -244,18 +221,8 @@ void NavigationExtension::slotEmitOpenUrlRequestDelayed()
     }
     NavigationExtensionPrivate::DelayedRequest req = d->m_requests.front();
     d->m_requests.pop_front();
-    Q_EMIT openUrlRequestDelayed(req.m_delayedURL, req.m_delayedArgs, req.m_delayedBrowserArgs);
+    Q_EMIT openUrlRequestDelayed(req.m_delayedURL, req.m_delayedArgs);
     // tricky: do not do anything here! (no access to member variables, etc.)
-}
-
-void NavigationExtension::setBrowserInterface(BrowserInterface *impl)
-{
-    d->m_browserInterface = impl;
-}
-
-BrowserInterface *NavigationExtension::browserInterface() const
-{
-    return d->m_browserInterface;
 }
 
 void NavigationExtension::slotEnableAction(const char *name, bool enabled)

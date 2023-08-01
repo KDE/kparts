@@ -9,10 +9,8 @@
 #ifndef KPARTS_NAVIGATIONEXTENSION
 #define KPARTS_NAVIGATIONEXTENSION
 
-#include <kparts/browserarguments.h>
 #include <kparts/openurlarguments.h>
 #include <kparts/readonlypart.h>
-#include <kparts/windowargs.h>
 
 #include <memory>
 
@@ -31,7 +29,6 @@ class QPoint;
 
 namespace KParts
 {
-class BrowserInterface;
 class NavigationExtensionPrivate;
 
 /**
@@ -124,20 +121,6 @@ public:
     Q_DECLARE_FLAGS(PopupFlags, PopupFlag)
 
     /**
-     * Set the parameters to use for opening the next URL.
-     * This is called by the "hosting" application, to pass parameters to the part.
-     * @see BrowserArguments
-     */
-    virtual void setBrowserArguments(const BrowserArguments &args);
-
-    /**
-     * Retrieve the set of parameters to use for opening the URL
-     * (this must be called from openUrl() in the part).
-     * @see BrowserArguments
-     */
-    BrowserArguments browserArguments() const;
-
-    /**
      * Returns the current x offset.
      *
      * For a scrollview, implement this using contentsX().
@@ -186,9 +169,6 @@ public:
      * widget itself, not on child widgets.
      */
     void setURLDropHandlingEnabled(bool enable);
-
-    void setBrowserInterface(BrowserInterface *impl);
-    BrowserInterface *browserInterface() const;
 
     /**
      * @return the status (enabled/disabled) of an action.
@@ -280,9 +260,7 @@ Q_SIGNALS:
      * appropriate fields in the @p args structure.
      * Hosts should not connect to this signal but to openUrlRequestDelayed().
      */
-    void openUrlRequest(const QUrl &url,
-                        const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments(),
-                        const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments());
+    void openUrlRequest(const QUrl &url, const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments());
 
     /**
      * This signal is emitted when openUrlRequest() is called, after a 0-seconds timer.
@@ -290,7 +268,7 @@ Q_SIGNALS:
      * being destroyed. Parts should never use this signal, hosts should only connect
      * to this signal.
      */
-    void openUrlRequestDelayed(const QUrl &url, const KParts::OpenUrlArguments &arguments, const KParts::BrowserArguments &browserArguments);
+    void openUrlRequestDelayed(const QUrl &url, const KParts::OpenUrlArguments &arguments);
 
     /**
      * Tells the hosting browser that the part opened a new URL (which can be
@@ -322,22 +300,8 @@ Q_SIGNALS:
     /**
      * Asks the hosting browser to open a new window for the given @p url
      * and return a reference to the content part.
-     *
-     * @p arguments is optional additional information about how to open the url,
-     * @see KParts::OpenUrlArguments
-     *
-     * @p browserArguments is optional additional information for web browsers,
-     * @see KParts::BrowserArguments
-     *
-     * The request for a pointer to the part is only fulfilled/processed
-     * if the mimeType is set in the @p browserArguments.
-     * (otherwise the request cannot be processed synchronously).
      */
-    void createNewWindow(const QUrl &url,
-                         const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments(),
-                         const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments(),
-                         const KParts::WindowArgs &windowArgs = KParts::WindowArgs(),
-                         KParts::ReadOnlyPart **part = nullptr); // TODO consider moving to BrowserHostExtension?
+    void createNewWindow(const QUrl &url);
 
     /**
      * Since the part emits the jobid in the started() signal,
@@ -361,14 +325,12 @@ Q_SIGNALS:
      * @param global global coordinates where the popup should be shown
      * @param items list of file items which the popup applies to
      * @param args OpenUrlArguments, mostly for metadata here
-     * @param browserArguments BrowserArguments, mostly for referrer
      * @param flags enables/disables certain builtin actions in the popupmenu
      * @param actionGroups named groups of actions which should be inserted into the popup, see ActionGroupMap
      */
     void popupMenu(const QPoint &global,
                    const KFileItemList &items,
-                   const KParts::OpenUrlArguments &args = KParts::OpenUrlArguments(),
-                   const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments(),
+                   const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments(),
                    KParts::NavigationExtension::PopupFlags flags = KParts::NavigationExtension::DefaultPopupItems,
                    const KParts::NavigationExtension::ActionGroupMap &actionGroups = ActionGroupMap());
 
@@ -382,15 +344,13 @@ Q_SIGNALS:
      * @param url the URL this popup applies to
      * @param mode the file type of the url (S_IFREG, S_IFDIR...)
      * @param args OpenUrlArguments, set the mimetype of the URL using setMimeType()
-     * @param browserArguments BrowserArguments, mostly for referrer
      * @param flags enables/disables certain builtin actions in the popupmenu
      * @param actionGroups named groups of actions which should be inserted into the popup, see ActionGroupMap
      */
     void popupMenu(const QPoint &global,
                    const QUrl &url,
                    mode_t mode = static_cast<mode_t>(-1),
-                   const KParts::OpenUrlArguments &args = KParts::OpenUrlArguments(),
-                   const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments(),
+                   const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments(),
                    KParts::NavigationExtension::PopupFlags flags = KParts::NavigationExtension::DefaultPopupItems,
                    const KParts::NavigationExtension::ActionGroupMap &actionGroups = ActionGroupMap());
 
@@ -440,10 +400,7 @@ Q_SIGNALS:
     void itemsRemoved(const KFileItemList &items);
 
 private Q_SLOTS:
-    KPARTS_NO_EXPORT void slotCompleted();
-    KPARTS_NO_EXPORT void slotOpenUrlRequest(const QUrl &url,
-                                             const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments(),
-                                             const KParts::BrowserArguments &browserArguments = KParts::BrowserArguments());
+    KPARTS_NO_EXPORT void slotOpenUrlRequest(const QUrl &url, const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments());
 
     KPARTS_NO_EXPORT void slotEmitOpenUrlRequestDelayed();
     KPARTS_NO_EXPORT void slotEnableAction(const char *, bool);
