@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-30 02:02+0000\n"
-"PO-Revision-Date: 2023-07-30 07:07\n"
+"PO-Revision-Date: 2023-08-02 12:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -77,49 +77,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "关闭文档"
-
-#~ msgctxt "@label Type of file"
-#~ msgid "Type: %1"
-#~ msgstr "类型：%1"
-
-#~ msgctxt "@label:checkbox"
-#~ msgid "Remember action for files of this type"
-#~ msgstr "记住用于此类型文件的操作"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open with %1"
-#~ msgstr "用 %1 打开(&O)"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Open &with %1"
-#~ msgstr "用 %1 打开(&W)"
-
-#~ msgctxt "@info"
-#~ msgid "Open '%1'?"
-#~ msgstr "打开“%1”吗？"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open with..."
-#~ msgstr "打开方式(&O)..."
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open with"
-#~ msgstr "打开方式(&O)"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "打开(&O)"
-
-#~ msgctxt "@label File name"
-#~ msgid "Name: %1"
-#~ msgstr "名称：%1"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid "This is the file name suggested by the server"
-#~ msgstr "这是服务器建议的文件名"
-
-#~ msgid "Accept"
-#~ msgstr "接受"
-
-#~ msgid "Reject"
-#~ msgstr "拒绝"
