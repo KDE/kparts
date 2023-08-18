@@ -27,6 +27,7 @@ Name[tr]=KParts Uygulaması (KF6)
 Name[uk]=Програма KParts (KF6)
 Name[x-test]=xxKParts Application (KF6)xx
 Name[zh_CN]=KParts 应用程序 (KF6)
+Name[zh_TW]=KParts 應用程式 (KF6)
 Comment=Generate an application built on the KParts framework, using CMake.
 Comment[ar]=ولّد تطبيقًا يعتمد على إطار عمل «أجزاءك» باستخدام CMake.
 Comment[az]=CMake istifadə edərək, KParts çərçivəsində qurulmuş bir proqram yaradın.
