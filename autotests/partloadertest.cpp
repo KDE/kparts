@@ -61,13 +61,13 @@ private Q_SLOTS:
         QString errorString;
 
         // WHEN
-        KParts::ReadOnlyPart *part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(mimeType, &parentWidget, this, &errorString);
+        auto res = KParts::PartLoader::instantiatePartForMimeType<KParts::ReadOnlyPart>(mimeType, &parentWidget, this);
 
         // THEN
-        QVERIFY(part);
+        QVERIFY(res);
         QCOMPARE(errorString, QString());
-        QCOMPARE(part->metaObject()->className(), "NotepadPart");
-        QVERIFY(part->openUrl(QUrl::fromLocalFile(testFile)));
+        QCOMPARE(res.plugin->metaObject()->className(), "NotepadPart");
+        QVERIFY(res.plugin->openUrl(QUrl::fromLocalFile(testFile)));
     }
 
     void shouldHandleNoPartError()

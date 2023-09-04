@@ -59,13 +59,12 @@ void PartViewer::openUrl(const QUrl &url)
     delete m_part;
     QMimeDatabase db;
     const QString mimeType = db.mimeTypeForUrl(url).name();
-    QString errorString;
-    m_part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(mimeType, this, this, &errorString);
 
-    if (m_part) {
+    if (auto res = KParts::PartLoader::instantiatePartForMimeType<KParts::ReadOnlyPart>(mimeType, this, this)) {
+        m_part = res.plugin;
         switchToPart(url);
     } else {
-        qWarning() << errorString;
+        qWarning() << res.errorString;
     }
 
     // Show available parts in the GUI

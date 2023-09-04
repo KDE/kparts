@@ -120,7 +120,6 @@ static KPluginFactory::Result<T>
 instantiatePartForMimeType(const QString &mimeType, QWidget *parentWidget = nullptr, QObject *parent = nullptr, const QVariantList &args = {})
 {
     const QList<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
-
     if (plugins.isEmpty()) {
         KPluginFactory::Result<T> errorResult;
         errorResult.errorReason = KPluginFactory::ResultErrorReason::INVALID_PLUGIN;
@@ -130,9 +129,7 @@ instantiatePartForMimeType(const QString &mimeType, QWidget *parentWidget = null
     }
 
     for (const KPluginMetaData &plugin : plugins) {
-        const KPluginFactory::Result<T> result = instantiatePart<T>(plugin, parentWidget, parent, args);
-
-        if (result) {
+        if (const auto result = instantiatePart<T>(plugin, parentWidget, parent, args)) {
             return result;
         }
     }
@@ -142,48 +139,6 @@ instantiatePartForMimeType(const QString &mimeType, QWidget *parentWidget = null
     Private::getErrorStrings(&errorResult.errorString, &errorResult.errorText, mimeType, Private::NoPartInstantiatedForMimeType);
 
     return errorResult;
-}
-
-/**
- * Use this method to create a KParts part. It will try to create an object which inherits
- * \p T.
- *
- * Example:
- * \code
- *     QString errorString;
- *     m_part = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadOnlyPart>(
- *                   mimeType, this, this, &errorString);
- *     if (m_part) {
- *         layout->addWidget(m_part->widget()); // Integrate the widget
- *         createGUI(m_part); // Integrate the actions
- *         m_part->openUrl(url);
- *     } else {
- *         qWarning() << errorString;
- *     }
- * \endcode
- *
- * \tparam T The interface for which an object should be created. The object will inherit \p T.
- * \param mimeType The mimetype for which we need a KParts.
- * \param parentWidget The parent widget for the part's widget.
- * \param parent The parent of the part.
- * \param error Optional output parameter, it will be set to the error string, if any.
- * \returns A pointer to the created object is returned, or @c nullptr if an error occurred.
- * @since 5.69
- */
-template<class T>
-static T *createPartInstanceForMimeType(const QString &mimeType, QWidget *parentWidget = nullptr, QObject *parent = nullptr, QString *error = nullptr)
-{
-    const KPluginFactory::Result<T> result = instantiatePartForMimeType<T>(mimeType, parentWidget, parent, {});
-
-    if (result) {
-        return result.plugin;
-    }
-
-    if (error) {
-        *error = result.errorString;
-    }
-
-    return nullptr;
 }
 
 } // namespace

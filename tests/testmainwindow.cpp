@@ -111,15 +111,14 @@ void TestMainWindow::embedEditor()
     // replace part2 with the editor part
     delete m_part2;
     m_part2 = nullptr;
-    QString errorString;
-    m_editorpart = KParts::PartLoader::createPartInstanceForMimeType<KParts::ReadWritePart>(QStringLiteral("text/plain"), m_splitter, this, &errorString);
-    if (!m_editorpart) {
-        qWarning() << errorString;
-    } else {
+    if (auto res = KParts::PartLoader::instantiatePartForMimeType<KParts::ReadWritePart>(QStringLiteral("text/plain"), m_splitter, this)) {
+        m_editorpart = res.plugin;
         m_editorpart->setReadWrite(); // read-write mode
         m_manager->addPart(m_editorpart);
         m_paEditFile->setEnabled(false);
         m_paCloseEditor->setEnabled(true);
+    } else {
+        qWarning() << res.errorString;
     }
 }
 
