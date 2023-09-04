@@ -5,10 +5,8 @@
     SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-#ifndef notepad_h
-#define notepad_h
+#pragma once
 
-#include <KPluginFactory>
 #include <kparts/readwritepart.h>
 
 class KPluginMetaData;
@@ -23,7 +21,7 @@ class NotepadPart : public KParts::ReadWritePart
 {
     Q_OBJECT
 public:
-    NotepadPart(QWidget *parentWidget, QObject *parent, const KPluginMetaData &metaData, const QVariantList &);
+    NotepadPart(QWidget *parentWidget, QObject *parent, const KPluginMetaData &metaData);
     ~NotepadPart() override;
 
     void setReadWrite(bool rw) override;
@@ -32,11 +30,6 @@ protected:
     bool openFile() override;
     bool saveFile() override;
 
-protected Q_SLOTS:
-    void slotSearchReplace();
-
 protected:
     QTextEdit *m_edit;
 };
-
-#endif

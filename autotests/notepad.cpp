@@ -10,6 +10,7 @@
 #include <kparts/partmanager.h>
 
 #include <QAction>
+#include <QDebug>
 #include <QFile>
 #include <QTextEdit>
 #include <QTextStream>
@@ -17,11 +18,11 @@
 #include <KAboutData>
 #include <KActionCollection>
 #include <KLocalizedString>
-#include <QDebug>
+#include <KPluginFactory>
 
-K_PLUGIN_FACTORY_WITH_JSON(NotepadFactory, "notepad.json", registerPlugin<NotepadPart>();)
+K_PLUGIN_CLASS_WITH_JSON(NotepadPart, "notepad.json")
 
-NotepadPart::NotepadPart(QWidget *parentWidget, QObject *parent, const KPluginMetaData &metaData, const QVariantList &)
+NotepadPart::NotepadPart(QWidget *parentWidget, QObject *parent, const KPluginMetaData &metaData)
     : KParts::ReadWritePart(parent, metaData)
 {
     m_edit = new QTextEdit(parentWidget);
@@ -30,7 +31,6 @@ NotepadPart::NotepadPart(QWidget *parentWidget, QObject *parent, const KPluginMe
 
     QAction *searchReplace = new QAction(QStringLiteral("Search and replace"), this);
     actionCollection()->addAction(QStringLiteral("searchreplace"), searchReplace);
-    connect(searchReplace, &QAction::triggered, this, &NotepadPart::slotSearchReplace);
 
     setXMLFile(QStringLiteral("notepadpart.rc")); // will be found in the qrc resource
 
@@ -85,10 +85,6 @@ bool NotepadPart::saveFile()
     } else {
         return false;
     }
-}
-
-void NotepadPart::slotSearchReplace()
-{
 }
 
 #include "moc_notepad.cpp"
