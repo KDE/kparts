@@ -21,20 +21,20 @@
 using namespace KParts;
 
 Part::Part(QObject *parent, const KPluginMetaData &data)
-    : QObject(parent)
-    , PartBase(*new PartPrivate(this, data))
+    : Part(*new PartPrivate(this, data), parent)
 {
-    PartBase::setPartObject(this);
-    if (data.isValid()) {
-        KXMLGUIClient::setComponentName(data.pluginId(), data.name());
-    }
 }
 
 Part::Part(PartPrivate &dd, QObject *parent)
     : QObject(parent)
     , PartBase(dd)
 {
+    Q_D(Part);
+
     PartBase::setPartObject(this);
+    if (d->m_metaData.isValid()) {
+        KXMLGUIClient::setComponentName(d->m_metaData.pluginId(), d->m_metaData.name());
+    }
 }
 
 Part::~Part()
