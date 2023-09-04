@@ -45,14 +45,10 @@ KPARTS_EXPORT void getErrorStrings(QString *errorString, QString *errorText, con
 }
 
 /**
- * Locate all available KParts for a mimetype.
+ * Locate all available KParts using KPluginMetaData::findPlugins for a mimetype.
  * @return a list of plugin metadata, sorted by preference.
  * This takes care both of the builtin preference (set by developers)
  * and of user preference (stored in mimeapps.list).
- *
- * This uses KPluginMetaData::findPlugins, i.e. it requires the parts to
- * provide the metadata as JSON embedded into the plugin.
- * Until KF6, however, it also supports .desktop files as a fallback solution.
  *
  * To load a part from one of the KPluginMetaData instances returned here,
  * use \ref instantiatePart()
@@ -65,17 +61,10 @@ KPARTS_EXPORT QList<KPluginMetaData> partsForMimeType(const QString &mimeType);
  * Attempts to create a KPart from the given metadata.
  *
  * @code
- * KPluginFactory::Result<MyPart> result = KParts::PartLoader::instantiatePart<MyPart>(metaData, parentWidget, parent, args);
- * if (result) {
+ * if (auto result = KParts::PartLoader::instantiatePart<MyPart>(metaData, parentWidget, parent, args)) {
  *     // result.plugin is valid and can be accessed
  * } else {
  *     // result contains information about the error
- * }
- * @endcode
- * If there is no extra error handling needed the plugin can be directly accessed and checked if it is a nullptr
- * @code
- * if (auto plugin = KParts::PartLoader::instantiatePart<MyPart>(metaData, parentWidget, parent, args).plugin) {
- *     // The plugin is valid and can be accessed
  * }
  * @endcode
  * @param data KPluginMetaData from which the plugin should be loaded
@@ -112,18 +101,10 @@ instantiatePart(const KPluginMetaData &data, QWidget *parentWidget = nullptr, QO
  * @p T.
  *
  * @code
- * KPluginFactory::Result<KParts::ReadOnlyPart> result = KParts::PartLoader::instantiatePartForMimeType<KParts::ReadOnlyPart>(mimeType, parentWidget, parent,
- * args);
- * if (result) {
+ * if (auto result = KParts::PartLoader::instantiatePartForMimeType<KParts::ReadOnlyPart>(mimeType, parentWidget, parent, args)) {
  *     // result.plugin is valid and can be accessed
  * } else {
  *     // result contains information about the error
- * }
- * @endcode
- * If there is no extra error handling needed the plugin can be directly accessed and checked if it is a nullptr
- * @code
- * if (auto plugin = KParts::PartLoader::instantiatePartForMimeType<KParts::ReadOnlyPart>(mimeType, parentWidget, parent, args).plugin) {
- *     // The plugin is valid and can be accessed
  * }
  * @endcode
  *
