@@ -63,7 +63,7 @@ msgstr "Non se atopou ningunha parte para o tipo MIME %1"
 #: partloader.cpp:103
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
-msgstr "Non se puido crear ningunha parte para o tipo MIME %1"
+msgstr "Non foi posíbel crear ningunha parte para o tipo MIME %1"
 
 #: readwritepart.cpp:80
 #, kde-format
