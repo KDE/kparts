@@ -110,11 +110,7 @@ public:
      * Returns the current working directory
      */
     virtual QString currentWorkingDirectory() const = 0;
-};
 
-class TerminalInterfaceV2 : public TerminalInterface
-{
-public:
     /**
      * Returns the names of available profiles.
      */
@@ -137,7 +133,6 @@ public:
     virtual QVariant profileProperty(const QString &profileProperty) const = 0;
 };
 
-Q_DECLARE_INTERFACE(TerminalInterfaceV2, "org.kde.TerminalInterfaceV2")
 Q_DECLARE_INTERFACE(TerminalInterface, "org.kde.TerminalInterface")
 
 #endif
