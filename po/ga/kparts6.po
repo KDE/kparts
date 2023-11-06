@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-30 02:02+0000\n"
+"POT-Creation-Date: 2023-11-06 01:35+0000\n"
 "PO-Revision-Date: 2004-12-14 09:11-0600\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -30,17 +30,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com,s_oceallaigh@yahoo.com"
 
-#: navigationextension.cpp:218
+#: navigationextension.cpp:196
 #, kde-format
 msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
 msgstr "<qt>An bhfuil fonn ort an tIdirlíon a chuardach ar <b>%1</b>?</qt>"
 
-#: navigationextension.cpp:219
+#: navigationextension.cpp:197
 #, kde-format
 msgid "Internet Search"
 msgstr "Cuardach Idirlín"
 
-#: navigationextension.cpp:220
+#: navigationextension.cpp:198
 #, kde-format
 msgid "&Search"
 msgstr "&Cuardach"

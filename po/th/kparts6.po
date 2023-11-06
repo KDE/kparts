@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-30 02:02+0000\n"
+"POT-Creation-Date: 2023-11-06 01:35+0000\n"
 "PO-Revision-Date: 2010-12-31 22:47+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -31,17 +31,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "donga.nb@gmail.com, drrider@gmail.com"
 
-#: navigationextension.cpp:218
+#: navigationextension.cpp:196
 #, kde-format
 msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
 msgstr "<qt>คุณต้องการที่จะค้นหา <b>%1</b> บนอินเทอร์เน็ตหรือไม่ ?</qt>"
 
-#: navigationextension.cpp:219
+#: navigationextension.cpp:197
 #, kde-format
 msgid "Internet Search"
 msgstr "ค้นหาบนอินเทอร์เน็ต"
 
-#: navigationextension.cpp:220
+#: navigationextension.cpp:198
 #, kde-format
 msgid "&Search"
 msgstr "&ค้นหา"

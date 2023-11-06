@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-30 02:02+0000\n"
+"POT-Creation-Date: 2023-11-06 01:35+0000\n"
 "PO-Revision-Date: 2021-09-15 21:00+0630\n"
 "Last-Translator: \n"
 "Language-Team: Burmese <kde-i18n-doc@kde.org>\n"
@@ -28,17 +28,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lw1nzayar@yandex.com"
 
-#: navigationextension.cpp:218
+#: navigationextension.cpp:196
 #, kde-format
 msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
 msgstr "<qt>အင်တာနက်တွင် <b>%1</b> ကို သင်ရှာချင်ပါသလား။</qt>"
 
-#: navigationextension.cpp:219
+#: navigationextension.cpp:197
 #, kde-format
 msgid "Internet Search"
 msgstr "အင်တာနက်ရှာဖွေမှု"
 
-#: navigationextension.cpp:220
+#: navigationextension.cpp:198
 #, kde-format
 msgid "&Search"
 msgstr "&Sရှာမည်"

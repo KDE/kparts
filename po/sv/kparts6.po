@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-30 02:02+0000\n"
+"POT-Creation-Date: 2023-11-06 01:35+0000\n"
 "PO-Revision-Date: 2021-10-24 13:45+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -38,17 +38,17 @@ msgstr ""
 "d96reftl@dtek.chalmers.se,awl@hem.passagen.se,pelinstr@algonet.se,"
 "newzella@linux.nu,stefan.asserhall@telia.com"
 
-#: navigationextension.cpp:218
+#: navigationextension.cpp:196
 #, kde-format
 msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
 msgstr "<qt>Vill du söka på Internet efter <b>%1</b>?</qt>"
 
-#: navigationextension.cpp:219
+#: navigationextension.cpp:197
 #, kde-format
 msgid "Internet Search"
 msgstr "Internetsökning"
 
-#: navigationextension.cpp:220
+#: navigationextension.cpp:198
 #, kde-format
 msgid "&Search"
 msgstr "&Sök"

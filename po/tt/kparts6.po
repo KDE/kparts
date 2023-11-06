@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-30 02:02+0000\n"
+"POT-Creation-Date: 2023-11-06 01:35+0000\n"
 "PO-Revision-Date: 2011-11-26 15:12+0400\n"
 "Last-Translator: Ainur Shakirov <ainur.shakirov.tt@gmail.com>\n"
 "Language-Team: Tatar <>\n"
@@ -27,17 +27,17 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ainur.shakirov.tt@gmail.com"
 
-#: navigationextension.cpp:218
+#: navigationextension.cpp:196
 #, kde-format
 msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
 msgstr "<qt> <b>%1</b> соравын Интернетта эзләргәме?</qt>"
 
-#: navigationextension.cpp:219
+#: navigationextension.cpp:197
 #, kde-format
 msgid "Internet Search"
 msgstr "Интернетта эзләү"
 
-#: navigationextension.cpp:220
+#: navigationextension.cpp:198
 #, kde-format
 msgid "&Search"
 msgstr "&Эзләү"

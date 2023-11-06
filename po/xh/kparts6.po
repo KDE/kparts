@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-30 02:02+0000\n"
+"POT-Creation-Date: 2023-11-06 01:35+0000\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -33,19 +33,19 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Igama elitsha lenginginya."
 
-#: navigationextension.cpp:218
+#: navigationextension.cpp:196
 #, fuzzy, kde-format
 msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
 msgstr ""
 "<qt>Ufuna ngokwenene ukucima\n"
 "<b>i '%1'</b>?</qt>"
 
-#: navigationextension.cpp:219
+#: navigationextension.cpp:197
 #, fuzzy, kde-format
 msgid "Internet Search"
 msgstr "inkonzo ye telnet"
 
-#: navigationextension.cpp:220
+#: navigationextension.cpp:198
 #, fuzzy, kde-format
 msgid "&Search"
 msgstr "(phendla)"
