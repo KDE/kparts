@@ -250,7 +250,7 @@ void PartTest::testToolbarVisibility()
     // then switch tabs -> the toolbar shows again
     // (unless you waited for the autosave timer to kick in)
     MyMainWindow window;
-    KConfigGroup cg(KSharedConfig::openConfig(), "kxmlgui_unittest");
+    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("kxmlgui_unittest"));
     window.setAutoSaveSettings(cg.name());
     window.show();
     window.testToolbarVisibility();
