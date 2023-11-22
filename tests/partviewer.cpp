@@ -74,7 +74,7 @@ void PartViewer::openUrl(const QUrl &url)
     const QList<KPluginMetaData> plugins = KParts::PartLoader::partsForMimeType(mimeType);
     for (const KPluginMetaData &plugin : plugins) {
         QAction *action = new QAction(plugin.name(), this);
-        connect(action, &QAction::triggered, this, [=] {
+        connect(action, &QAction::triggered, this, [this, plugin, url] {
             loadPlugin(plugin, url);
         });
         m_openWithActions.append(action);
