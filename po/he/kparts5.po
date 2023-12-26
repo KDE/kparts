@@ -17,20 +17,21 @@
 # Meni Livne <livne@kde.org>, 2007.
 # tahmar1900 <tahmar1900@gmail.com>, 2008, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kparts5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:25+0000\n"
-"PO-Revision-Date: 2017-05-16 06:50-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-12-25 08:47+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -45,7 +46,7 @@ msgstr "kde-l10n-he@kde.org"
 #: browserextension.cpp:220
 #, kde-format
 msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
-msgstr "<qt> האם ברצונך לחפש באינטרנט אחר <b>\"%1\"</b>?</qt>"
+msgstr "<qt> לחפש באינטרנט אחר <b>”%1„</b>?</qt>"
 
 #: browserextension.cpp:221
 #, kde-format
@@ -55,55 +56,55 @@ msgstr "חיפוש באינטרנט"
 #: browserextension.cpp:222
 #, kde-format
 msgid "&Search"
-msgstr "&חפש"
+msgstr "&חיפוש"
 
 #: browseropenorsavequestion.cpp:89
 #, kde-format
 msgctxt "@label Type of file"
 msgid "Type: %1"
-msgstr "הקלד: %1"
+msgstr "סוג: %1"
 
 #: browseropenorsavequestion.cpp:97
 #, kde-format
 msgctxt "@label:checkbox"
 msgid "Remember action for files of this type"
-msgstr "זכור פעולה לקבצים מסוג זה"
+msgstr "לזכור את הפעולה לקבצים מסוג זה"
 
 #: browseropenorsavequestion.cpp:149 browseropenorsavequestion.cpp:237
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open with %1"
-msgstr "&פתח באמצעות %1"
+msgstr "&פתיחה עם %1"
 
 #: browseropenorsavequestion.cpp:213
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open &with %1"
-msgstr "פתח &באמצעות %1"
+msgstr "פתיחה &עם %1"
 
 #: browseropenorsavequestion.cpp:224 browseropenorsavequestion.cpp:318
 #, kde-format
 msgctxt "@info"
 msgid "Open '%1'?"
-msgstr "פתח את \"%1\"?"
+msgstr "לפתוח את ‚%1’?"
 
 #: browseropenorsavequestion.cpp:228
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open with..."
-msgstr "&פתח באמצעות..."
+msgstr "&פתיחה עם…"
 
 #: browseropenorsavequestion.cpp:246
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open with"
-msgstr "&פתח באמצעות"
+msgstr "&פתיחה עם"
 
 #: browseropenorsavequestion.cpp:315
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open"
-msgstr "&פתח"
+msgstr "&פתיחה"
 
 #: browseropenorsavequestion.cpp:339
 #, kde-format
@@ -120,22 +121,22 @@ msgstr "זה שם הקובץ שהוצע על ידי השרת"
 #: browserrun.cpp:333
 #, kde-format
 msgid "Do you really want to execute '%1'?"
-msgstr "האם אתה בטוח שברצונך להפעיל את \"%1\"? "
+msgstr "להפעיל את ‚%1’?"
 
 #: browserrun.cpp:334
 #, kde-format
 msgid "Execute File?"
-msgstr "האם להפעיל את הקובץ?"
+msgstr "להפעיל את הקובץ?"
 
 #: browserrun.cpp:335
 #, kde-format
 msgid "Execute"
-msgstr "הפעל"
+msgstr "הפעלה"
 
 #: browserrun.cpp:397
 #, kde-format
 msgid "The Download Manager (%1) could not be found in your $PATH "
-msgstr "אין אפשרות למצוא את מנהל ההורדה (%1) בנתיב שלך, PATH$"
+msgstr "אי אפשר למצוא את מנהל ההורדה (%1) ב־‎$PATH שלך"
 
 #: browserrun.cpp:398
 #, kde-format
@@ -144,9 +145,9 @@ msgid ""
 "\n"
 "The integration with Konqueror will be disabled."
 msgstr ""
-"נסה להתקין אותו מחדש  \n"
+"נא לנסות להתקין אותו מחדש  \n"
 "\n"
-"השילוב עם Konqueror לא יהיה זמין."
+"השילוב מול Konqueror יושבת."
 
 #: browserrun.cpp:423
 #, kde-format
@@ -155,31 +156,31 @@ msgstr "שמירה בשם"
 
 #: htmlsettingsinterface.cpp:21
 msgid "Accept"
-msgstr "אשר"
+msgstr "הסכמה"
 
 #: htmlsettingsinterface.cpp:23
 msgid "Reject"
-msgstr "דחה"
+msgstr "דחייה"
 
 #: partloader.cpp:158
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
-msgstr ""
+msgstr "KPluginFactory לא הצליח לטעון את התוסף: %1"
 
 #: partloader.cpp:162 partloader.cpp:220
 #, kde-format
 msgid "No part was found for mimeType %1"
-msgstr ""
+msgstr "לא נמצא חלק ל־mimeType %1"
 
 #: partloader.cpp:166
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
-msgstr ""
+msgstr "אי אפשר להרים רכיב ל־mimeType %1"
 
 #: partloader.cpp:203
 #, kde-format
 msgid "The plugin '%1' does not provide an interface '%2' with keyword '%3'"
-msgstr ""
+msgstr "התוסף ‚%1’ לא מספק ממשק ‚%2’ עם מילת המפתח ‚%3’"
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -192,10 +193,10 @@ msgid ""
 "The document \"%1\" has been modified.\n"
 "Do you want to save your changes or discard them?"
 msgstr ""
-"המסמך \"%1\" שונה.\n"
-"האם ברצונך לשמור את השינויים או לבטל אותם?"
+"המסמך „%1” נערך.\n"
+"לשמור את השינויים או להתעלם מהם?"
 
 #: readwritepart.cpp:92
 #, kde-format
 msgid "Close Document"
-msgstr "סגור את המסמך"
+msgstr "סגירת המסמך"
