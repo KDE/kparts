@@ -47,7 +47,7 @@ msgstr "<qt>Voleu buscar a Internet <b>«%1»</b>?</qt>"
 #: browserextension.cpp:221
 #, kde-format
 msgid "Internet Search"
-msgstr "Busca a Internet"
+msgstr "Busca en Internet"
 
 #: browserextension.cpp:222
 #, kde-format
