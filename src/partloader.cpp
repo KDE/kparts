@@ -54,11 +54,21 @@ static int pluginDistanceToMimeType(const KPluginMetaData &md, const QString &pa
 
 QList<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mimeType)
 {
-    auto supportsMime = [&](const KPluginMetaData &md) {
-        return md.supportsMimeType(mimeType);
+    auto supportsMime = [&mimeType](const KPluginMetaData &md) {
+        if (md.supportsMimeType(mimeType)) {
+            return true;
+        }
+        auto pluginJson = md.rawData();
+        auto pluginNamespace = pluginJson.value(QLatin1String("KPlugin")).toObject().value(QLatin1String("PluginNamespace")).toString();
+        if (pluginNamespace.isEmpty()) {
+            return false;
+        }
+        auto plugins = KPluginMetaData::findPlugins(pluginNamespace, [&mimeType](const KPluginMetaData &pluginMd) {
+            return pluginMd.supportsMimeType(mimeType);
+        });
+        return !plugins.isEmpty();
     };
     QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("kf6/parts"), supportsMime);
-
     auto orderPredicate = [&](const KPluginMetaData &left, const KPluginMetaData &right) {
         // We filtered based on "supports mimetype", but this didn't order from most-specific to least-specific.
         const int leftDistance = pluginDistanceToMimeType(left, mimeType);
