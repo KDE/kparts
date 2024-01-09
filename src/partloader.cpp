@@ -59,7 +59,7 @@ QList<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mimeT
             return true;
         }
         auto pluginJson = md.rawData();
-        auto pluginNamespace = pluginJson.value(QLatin1String("KPlugin")).toObject().value(QLatin1String("PluginNamespace")).toString();
+        auto pluginNamespace = pluginJson.value(QLatin1String("KParts")).toObject().value(QLatin1String("PluginNamespace")).toString();
         if (pluginNamespace.isEmpty()) {
             return false;
         }
