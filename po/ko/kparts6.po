@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:35+0000\n"
+"POT-Creation-Date: 2024-01-10 01:33+0000\n"
 "PO-Revision-Date: 2023-04-22 00:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -43,17 +43,17 @@ msgstr "인터넷 검색"
 msgid "&Search"
 msgstr "찾기(&S)"
 
-#: partloader.cpp:95
+#: partloader.cpp:105
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "KPluginFactory에서 플러그인을 불러올 수 없음: %1"
 
-#: partloader.cpp:99
+#: partloader.cpp:109
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "MIME 형식 %1의 부분을 찾을 수 없음"
 
-#: partloader.cpp:103
+#: partloader.cpp:113
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "MIME 형식 %1의 부분을 인스턴스화할 수 없음"

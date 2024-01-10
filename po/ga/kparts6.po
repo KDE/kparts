@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:35+0000\n"
+"POT-Creation-Date: 2024-01-10 01:33+0000\n"
 "PO-Revision-Date: 2004-12-14 09:11-0600\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -45,18 +45,18 @@ msgstr "Cuardach Idirlín"
 msgid "&Search"
 msgstr "&Cuardach"
 
-#: partloader.cpp:95
+#: partloader.cpp:105
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:99
+#: partloader.cpp:109
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "Ní bhfuarthas láimhseálaí do %1."
 
-#: partloader.cpp:103
+#: partloader.cpp:113
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"

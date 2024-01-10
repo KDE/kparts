@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:35+0000\n"
+"POT-Creation-Date: 2024-01-10 01:33+0000\n"
 "PO-Revision-Date: 2009-12-28 14:35+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
@@ -45,18 +45,18 @@ msgstr "ইন্টারনেটে অনুসন্ধান"
 msgid "&Search"
 msgstr "অনুসন্ধান (&S)"
 
-#: partloader.cpp:95
+#: partloader.cpp:105
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:99
+#: partloader.cpp:109
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1-র জন্য হ্যান্ডলার পাওয়া যায়নি।"
 
-#: partloader.cpp:103
+#: partloader.cpp:113
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:35+0000\n"
+"POT-Creation-Date: 2024-01-10 01:33+0000\n"
 "PO-Revision-Date: 2023-02-02 14:39+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -57,17 +57,17 @@ msgstr "Leita á Internetinu"
 msgid "&Search"
 msgstr "&Leita"
 
-#: partloader.cpp:95
+#: partloader.cpp:105
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "KPluginFactory gat ekki hlaðið inn íforritinu: %1"
 
-#: partloader.cpp:99
+#: partloader.cpp:109
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Engin partur fannst fyrir %1."
 
-#: partloader.cpp:103
+#: partloader.cpp:113
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Gat ekki frumstillt neinn part fyrir MIME-tegund %1"

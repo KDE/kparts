@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:35+0000\n"
+"POT-Creation-Date: 2024-01-10 01:33+0000\n"
 "PO-Revision-Date: 2023-03-19 12:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -45,17 +45,17 @@ msgstr "இணையத் தேடல்"
 msgid "&Search"
 msgstr "&தேடல்"
 
-#: partloader.cpp:95
+#: partloader.cpp:105
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "KPluginFactory-யால் செருகுநிரலை ஏற்ற முடியவில்லை: %1"
 
-#: partloader.cpp:99
+#: partloader.cpp:109
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "%1 மைம்வகையை கையாளக்கூடியது எதுவும் கிடைக்கவில்லை."
 
-#: partloader.cpp:103
+#: partloader.cpp:113
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "%1 மைம்வகையை கையாளக்கூடியது எதையும் துவக்க முடியவில்லை"

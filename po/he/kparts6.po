@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:35+0000\n"
+"POT-Creation-Date: 2024-01-10 01:33+0000\n"
 "PO-Revision-Date: 2023-10-02 11:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -59,17 +59,17 @@ msgstr "חיפוש באינטרנט"
 msgid "&Search"
 msgstr "&חיפוש"
 
-#: partloader.cpp:95
+#: partloader.cpp:105
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "KPluginFactory לא הצליח לטעון את התוסף: %1"
 
-#: partloader.cpp:99
+#: partloader.cpp:109
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "לא נמצא חלק לטיפוס ה־MIME‏ %1"
 
-#: partloader.cpp:103
+#: partloader.cpp:113
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "לא ניתן לאתחל חלק לטיפוס MIME‏ %1"
