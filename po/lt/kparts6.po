@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-10 01:33+0000\n"
-"PO-Revision-Date: 2020-03-25 17:44+0200\n"
+"PO-Revision-Date: 2024-02-02 23:10+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -55,7 +55,7 @@ msgstr "&Ieškoti"
 #: partloader.cpp:105
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
-msgstr ""
+msgstr "KPluginFactory nepavyko įkelti įskiepio: %1"
 
 #: partloader.cpp:109
 #, kde-format
@@ -63,10 +63,9 @@ msgid "No part was found for mimeType %1"
 msgstr "Nerasta jokios dalies, skirtos mimeType %1"
 
 #: partloader.cpp:113
-#, fuzzy, kde-format
-#| msgid "No part was found for mimeType %1"
+#, kde-format
 msgid "No part could be instantiated for mimeType %1"
-msgstr "Nerasta jokios dalies, skirtos mimeType %1"
+msgstr "Nepavyko iliustruoti jokios dalies, skirtos mimeType %1"
 
 #: readwritepart.cpp:80
 #, kde-format
@@ -79,7 +78,7 @@ msgid ""
 "The document \"%1\" has been modified.\n"
 "Do you want to save your changes or discard them?"
 msgstr ""
-"Dokumentas „%1“ buvo pakeistas.\n"
+"Dokumentas „%1“ buvo modifikuotas.\n"
 "Ar norite pakeitimus įrašyti, ar juos atmesti?"
 
 #: readwritepart.cpp:92
