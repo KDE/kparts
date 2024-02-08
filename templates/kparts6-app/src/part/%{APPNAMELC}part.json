@@ -8,7 +8,6 @@
         ],
         "Description": "A %{APPNAME} KPart",
         "Icon": "%{APPNAMELC}",
-        "Id": "%{APPNAMELC}part",
         "License": "GPLv2+",
         "MimeTypes": [
             "text/plain"
