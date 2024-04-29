@@ -156,7 +156,7 @@ bool ReadOnlyPartPrivate::openLocalFile()
     }
     const bool ret = q->openFile();
     if (ret) {
-        Q_EMIT q->setWindowCaption(m_url.toDisplayString());
+        Q_EMIT q->setWindowCaption(m_url.toDisplayString(QUrl::PreferLocalFile));
         Q_EMIT q->completed();
     } else {
         Q_EMIT q->canceled(QString());
@@ -263,7 +263,7 @@ void ReadOnlyPartPrivate::slotJobFinished(KJob *job)
         Q_EMIT q->canceled(job->errorString());
     } else {
         if (q->openFile()) {
-            Q_EMIT q->setWindowCaption(m_url.toDisplayString());
+            Q_EMIT q->setWindowCaption(m_url.toDisplayString(QUrl::PreferLocalFile));
             Q_EMIT q->completed();
         } else {
             Q_EMIT q->canceled(QString());
@@ -290,7 +290,7 @@ void ReadOnlyPart::guiActivateEvent(GUIActivateEvent *event)
     if (event->activated()) {
         if (!d->m_url.isEmpty()) {
             // qDebug() << d->m_url;
-            Q_EMIT setWindowCaption(d->m_url.toDisplayString());
+            Q_EMIT setWindowCaption(d->m_url.toDisplayString(QUrl::PreferLocalFile));
         } else {
             Q_EMIT setWindowCaption(QString());
         }

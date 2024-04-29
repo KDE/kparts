@@ -91,7 +91,7 @@ public Q_SLOTS:
      *
      * If you reimplement it, don't forget to set the caption, usually with
      * @code
-     * Q_EMIT setWindowCaption( url.toDisplayString() );
+     * Q_EMIT setWindowCaption( url.toDisplayString(QUrl::PreferLocalFile) );
      * @endcode
      * and also, if the URL refers to a local file, resolve it to a
      * local path and call setLocalFilePath().

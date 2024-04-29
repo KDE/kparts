@@ -173,7 +173,7 @@ bool ReadWritePart::saveAs(const QUrl &url)
             Q_EMIT urlChanged(d->m_url);
         }
 
-        Q_EMIT setWindowCaption(d->m_url.toDisplayString());
+        Q_EMIT setWindowCaption(d->m_url.toDisplayString(QUrl::PreferLocalFile));
     } else {
         d->m_url = d->m_originalURL;
         d->m_file = d->m_originalFilePath;
