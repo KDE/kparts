@@ -88,7 +88,7 @@ msgstr "Voleu obrir «%1»?"
 #, kde-format
 msgctxt "@label:button"
 msgid "&Open with..."
-msgstr "O&bri amb..."
+msgstr "O&bri amb…"
 
 #: browseropenorsavequestion.cpp:246
 #, kde-format
