@@ -11,7 +11,11 @@
 
 #include "kparts_logging.h"
 
+#define HAVE_KDIRNOTIFY __has_include(<KDirNotify>)
+#if HAVE_KDIRNOTIFY
 #include <KDirNotify>
+#endif
+
 #include <KIO/FileCopyJob>
 #include <KJobWidgets>
 #include <KLocalizedString>
@@ -274,7 +278,7 @@ void ReadWritePartPrivate::slotUploadFinished(KJob *)
         }
         Q_EMIT q->canceled(error);
     } else {
-#ifndef Q_OS_ANDROID
+#if HAVE_KDIRNOTIFY
         ::org::kde::KDirNotify::emitFilesAdded(m_url.adjusted(QUrl::RemoveFilename));
 #endif
 
