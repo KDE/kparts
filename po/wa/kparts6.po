@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2012-07-04 17:33+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -64,12 +64,12 @@ msgstr "Nou apougneu di trové po %1."
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Nou apougneu di trové po %1."
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "Sins no"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -78,7 +78,7 @@ msgstr ""
 "Li documint «%1» a candjî.\n"
 "Voloz vs schaper vos candjmints oudonbén ls abandner?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "Clôre li documint?"

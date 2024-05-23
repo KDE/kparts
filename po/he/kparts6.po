@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2023-10-02 11:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -74,12 +74,12 @@ msgstr "לא נמצא חלק לטיפוס ה־MIME‏ %1"
 msgid "No part could be instantiated for mimeType %1"
 msgstr "לא ניתן לאתחל חלק לטיפוס MIME‏ %1"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "ללא שם"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -88,7 +88,7 @@ msgstr ""
 "המסמך „%1” נערך.\n"
 "לשמור את השינויים או לבטל אותם?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "סגירת המסמך"

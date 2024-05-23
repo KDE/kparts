@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2020-03-23 11:04+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -61,12 +61,12 @@ msgstr "MIME tüübile %1 ei leitud komponenti"
 msgid "No part could be instantiated for mimeType %1"
 msgstr "MIME tüübile %1 ei leitud komponenti"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "Nimetu"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -75,7 +75,7 @@ msgstr ""
 "Dokumenti \"%1\" on muudetud.\n"
 "Kas soovid selle salvestada või muudatused unustada?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "Dokumendi sulgemine"

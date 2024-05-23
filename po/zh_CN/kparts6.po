@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -57,12 +57,12 @@ msgstr "没有找到 MIME 类型 %1 的组件"
 msgid "No part could be instantiated for mimeType %1"
 msgstr "无法为 mimeType %1 实例化任何组件"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "无标题"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -71,7 +71,7 @@ msgstr ""
 "文档“%1”已被修改。\n"
 "您想要保存更改，还是丢弃更改？"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "关闭文档"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2023-01-24 08:10+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -63,12 +63,12 @@ msgstr "Не знайдено модуля для типу MIME %1"
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Не вдалося створити екземпляр модуля обробки для типу MIME %1"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "Без назви"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -77,7 +77,7 @@ msgstr ""
 "Документ «%1» було змінено.\n"
 "Хочете зберегти зміни?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "Закрити документ"

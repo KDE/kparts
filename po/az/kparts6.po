@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2021-10-25 16:12+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -58,12 +58,12 @@ msgstr "MimeType%1 emalı üçün heç bir modul tapılmadı"
 msgid "No part could be instantiated for mimeType %1"
 msgstr "MimeType%1 emalı üçün heç bir modul tapılmadı"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "Adsız"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -72,7 +72,7 @@ msgstr ""
 "Sənəd \"%1\" dəyişdirildi.\n"
 "Siz bu dəyişikliyi saxlamaq yoxsa ləğv etmək istəyirsiniz?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "Sənədi Seçin"

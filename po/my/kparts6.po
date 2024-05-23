@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2021-09-15 21:00+0630\n"
 "Last-Translator: \n"
 "Language-Team: Burmese <kde-i18n-doc@kde.org>\n"
@@ -59,12 +59,12 @@ msgstr "အမ်အိုင်အမ်အီးတိုက် %1 အတွ�
 msgid "No part could be instantiated for mimeType %1"
 msgstr "အမ်အိုင်အမ်အီးတိုက် %1 အတွက် အစိတ်အပိုင်းမတွေ့ခဲ့ပါ"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "ခေါင်းစဥ်မဲ့"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -73,7 +73,7 @@ msgstr ""
 "မှတ်တမ်းပုံနှိပ်မူ \"%1\" ကို မွမ်းမံခဲ့သည်။\n"
 "သင်၏ပြောင်းလဲမှုများကို သိမ်းဆည်းမှာလား၊ ပစ်ပယ်မှာလား။"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "မှတ်တမ်းပုံနှိပ်မူ ပိတ်မည်"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -65,12 +65,12 @@ msgstr "Akukho mphathi ufumanekayo we %1"
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Akukho mphathi ufumanekayo we %1"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "Engenasihloko"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, fuzzy, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -79,7 +79,7 @@ msgstr ""
 "Uxwebhu \"%1\" luguqulelwe kancinane.\n"
 "Ufuna ukuligcina?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, fuzzy, kde-format
 msgid "Close Document"
 msgstr "Gcina Uxwebhu?"

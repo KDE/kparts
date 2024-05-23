@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2009-12-28 14:35+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
@@ -62,12 +62,12 @@ msgstr "%1-র জন্য হ্যান্ডলার পাওয়া য�
 msgid "No part could be instantiated for mimeType %1"
 msgstr "%1-র জন্য হ্যান্ডলার পাওয়া যায়নি।"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "শিরোনামবিহীন"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -76,7 +76,7 @@ msgstr ""
 "\"%1\" ডকুমেন্টে কিছু পরিবর্তন করা হয়েছে।\n"
 "পরিবর্তনগুলি সংরক্ষণ করা হবে কি বর্জন করা হবে?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "ডকুমেন্ট বন্ধ করুন"

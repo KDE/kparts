@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2010-06-24 18:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn_IN <kde-i18n-doc@kde.org>\n"
@@ -63,12 +63,12 @@ msgstr "%1 ಗೆ ಯಾವುದೂ ನಿಭಾರಕ (ಹ್ಯಾಂಡಲ�
 msgid "No part could be instantiated for mimeType %1"
 msgstr "%1 ಗೆ ಯಾವುದೂ ನಿಭಾರಕ (ಹ್ಯಾಂಡಲರ್) ಕಾಣಬರಲಿಲ್ಲ."
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "ಹೆಸರಿಲ್ಲದ"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -77,7 +77,7 @@ msgstr ""
 "ದಸ್ತಾವೇಜು \"%1\" ಬದಲಾಗಿದೆ.\n"
 "ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಬೇಕೇ ಅಥವಾ ತಿರಸ್ಕರಿಸಬೇಕೇ?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "ದಸ್ತವೇಜನ್ನು ಮುಚ್ಚು"

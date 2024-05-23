@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2024-03-04 17:53+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -66,12 +66,12 @@ msgstr "MIME tipam „%1“ nav atrasta neviena daļa"
 msgid "No part could be instantiated for mimeType %1"
 msgstr "MIME tipam „%1“ nevarēja attiecināt nevienu daļu"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "Nenosaukts"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -80,7 +80,7 @@ msgstr ""
 "Dokuments „%1“ ir mainīts.\n"
 "Vai vēlaties saglabāt izmaiņas?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "Aizvērt dokumentu"

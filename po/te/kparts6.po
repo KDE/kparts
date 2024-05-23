@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2013-11-04 23:55+0630\n"
 "Last-Translator: Bhuvan Krishna <bhuvan@swecha.org>\n"
 "Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
@@ -68,12 +68,12 @@ msgstr "%1 కొరకు హెండ్లర్ కనపడలేదు."
 msgid "No part could be instantiated for mimeType %1"
 msgstr "%1 కొరకు హెండ్లర్ కనపడలేదు."
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "పేరులేనిది"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -82,7 +82,7 @@ msgstr ""
 "\"%1\" పత్రం మార్చడినది\n"
 "మార్పులను దాచనా లేక విస్మరించనా?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "పత్రం మూసివేయి"

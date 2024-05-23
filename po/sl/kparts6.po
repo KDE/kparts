@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2023-01-25 08:15+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -72,12 +72,12 @@ msgstr "Za vrsto mime %1 ni bilo najdenega nobenega dela"
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Za vrsto MIME %1 ni bilo mogoče ustvariti instance nobenega dela"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "Brez naslova"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -86,7 +86,7 @@ msgstr ""
 "Dokument »%1« je bil spremenjen.\n"
 "Ali želite shraniti spremembe ali jih zavreči?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "Zapri dokument"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2019-08-16 14:56+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -63,12 +63,12 @@ msgstr "Не найден обработчик для %1."
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Не найден обработчик для %1."
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "Бе сарлавҳа"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -77,7 +77,7 @@ msgstr ""
 "Ҳуҷҷати \"%1\" тағйир ёфт.\n"
 "Шумо мехоҳед, ки тағйиротро татбиқ намоед ё онҳоро рад кунед?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "Пӯшидани ҳуҷҷат"

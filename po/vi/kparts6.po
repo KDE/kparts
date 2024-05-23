@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2023-02-20 11:10+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -62,12 +62,12 @@ msgstr "Không tìm thấy bộ phận nào cho kiểu MIME %1"
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Không khởi tạo được bộ phận nào cho kiểu MIME %1"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "Không tên"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -76,7 +76,7 @@ msgstr ""
 "Tài liệu \"%1\" đã bị chỉnh sửa.\n"
 "Bạn muốn lưu các thay đổi hay loại bỏ chúng?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "Đóng tài liệu"

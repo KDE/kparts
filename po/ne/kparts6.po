@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2007-11-05 15:41+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -64,12 +64,12 @@ msgstr "%1 का लागि ह्यान्डलर फेला पर�
 msgid "No part could be instantiated for mimeType %1"
 msgstr "%1 का लागि ह्यान्डलर फेला परेन ।"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "शीर्षक विहिन"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -78,7 +78,7 @@ msgstr ""
 "\"%1\" कागजात परिमार्जन गरिएकोछ ।\n"
 "तपाईँका परिवर्तन बचत गर्न वा तिनीहरूलाई छोड्न चाहनुहुन्छ ?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "कागजात बन्द गर्नुहोस्"

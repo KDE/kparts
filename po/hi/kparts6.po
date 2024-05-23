@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-10 01:33+0000\n"
+"POT-Creation-Date: 2024-05-23 00:36+0000\n"
 "PO-Revision-Date: 2022-02-10 11:38+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -62,12 +62,12 @@ msgstr "माइमटाइप %1 के लिए कोई भाग नह�
 msgid "No part could be instantiated for mimeType %1"
 msgstr "माइमटाइप %1 के लिए कोई भाग नहीं मिला।"
 
-#: readwritepart.cpp:80
+#: readwritepart.cpp:84
 #, kde-format
 msgid "Untitled"
 msgstr "शीर्षकहीन"
 
-#: readwritepart.cpp:89
+#: readwritepart.cpp:93
 #, kde-format
 msgid ""
 "The document \"%1\" has been modified.\n"
@@ -76,7 +76,7 @@ msgstr ""
 "दस्तावेज़ \"%1\" परिवर्तित किया गया है।\n"
 "क्या आप इसे सहेजना चाहेंगे या परिवर्तनों को फेंक दें?"
 
-#: readwritepart.cpp:92
+#: readwritepart.cpp:96
 #, kde-format
 msgid "Close Document"
 msgstr "दस्तावेज़ बन्द करें"
