@@ -14,6 +14,8 @@
 #include <KService>
 #include <KSharedConfig>
 
+#include <QJsonArray>
+#include <QMetaEnum>
 #include <QMimeDatabase>
 #include <QMimeType>
 
@@ -50,6 +52,50 @@ static int pluginDistanceToMimeType(const KPluginMetaData &md, const QString &pa
         minDistance = std::min(minDistance, distanceToMimeType(mime));
     }
     return minDistance;
+}
+
+KParts::PartCapabilities KParts::PartLoader::partCapabilities(const KPluginMetaData &data)
+{
+    QJsonValue capsArrayRaw = data.rawData().value(QLatin1String("KParts")).toObject().value(QLatin1String("Capabilities"));
+    KParts::PartCapabilities parsedCapabilties = {};
+    const static QMetaEnum metaEnum = QMetaEnum::fromType<KParts::PartCapability>();
+    QJsonArray capabilities = capsArrayRaw.toArray();
+    for (const QJsonValue &capability : capabilities) {
+        bool ok = true;
+        PartCapability parsedCapability = (PartCapability)metaEnum.keyToValue(capability.toString().toLocal8Bit().constData(), &ok);
+        if (ok) {
+            parsedCapabilties |= parsedCapability;
+        } else {
+            qCWarning(KPARTSLOG) << "Could not find capability value" << capability.toString().toLocal8Bit().constData();
+        }
+    }
+
+    // Don't bother looking at fallback API
+    if (!capsArrayRaw.isUndefined()) {
+        return parsedCapabilties;
+    }
+
+    static QMap<QString, KParts::PartCapability> capabilityMapping = {
+        {QStringLiteral("KParts/ReadOnlyPart"), PartCapability::ReadOnly},
+        {QStringLiteral("KParts/ReadWritePart"), PartCapability::ReadWrite},
+        {QStringLiteral("Browser/View"), PartCapability::BrowserView},
+    };
+    const auto serviceTypes = data.rawData().value(QLatin1String("KPlugin")).toObject().value(QLatin1String("ServiceTypes")).toVariant().toStringList();
+    if (!serviceTypes.isEmpty()) {
+        qCWarning(KPARTSLOG) << data
+                             << "still defined ServiceTypes - this is deprecated in favor of providing a "
+                                " \"Capabilities\" list in the \"KParts\" object in the root of the metadata";
+        for (const QString &serviceType : serviceTypes) {
+            auto it = capabilityMapping.find(serviceType);
+            if (it == capabilityMapping.cend()) {
+                qCWarning(KPARTSLOG) << "ServiceType" << serviceType << "from" << data
+                                     << "is not a known value that can be mapped to new Capability enum values";
+            } else {
+                parsedCapabilties |= *it;
+            }
+        }
+    }
+    return parsedCapabilties;
 }
 
 QList<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mimeType)
@@ -118,3 +164,5 @@ void KParts::PartLoader::Private::getErrorStrings(QString *errorString, QString 
         break;
     }
 };
+
+#include "moc_partloader.cpp"

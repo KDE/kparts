@@ -4,12 +4,14 @@
     SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
+#include "partloader.h"
 #include <KParts/PartLoader>
 #include <KParts/ReadOnlyPart>
 #include <QTest>
 
 #include <KPluginMetaData>
 #include <QDebug>
+#include <QJsonArray>
 #include <QStandardPaths>
 
 class PartLoaderTest : public QObject
@@ -81,6 +83,27 @@ private Q_SLOTS:
 
         QVERIFY(result);
         QCOMPARE(result.plugin->metaObject()->className(), "NotepadPart");
+    }
+
+    void testPartCapabilities()
+    {
+        const KPluginMetaData md(QStringLiteral("kf6/parts/notepadpart"));
+        QVERIFY(md.isValid());
+
+        QCOMPARE(KParts::PartLoader::partCapabilities(md), KParts::PartCapability::BrowserView | KParts::PartCapability::ReadWrite);
+    }
+
+    void testPartCapabilitiesCompat()
+    {
+        const KPluginMetaData md(QStringLiteral("kf6/parts/notepadpart"));
+        QJsonObject obj = md.rawData();
+        QJsonObject kplugin = obj[QLatin1String("KPlugin")].toObject();
+        kplugin[QLatin1String("ServiceTypes")] = QJsonValue::fromVariant(QStringList{QStringLiteral("Browser/View")});
+        obj[QLatin1String("KPlugin")] = kplugin;
+        obj.remove(QLatin1String("KParts"));
+
+        const auto caps = KParts::PartLoader::partCapabilities(KPluginMetaData(obj, md.fileName()));
+        QCOMPARE(caps, QFlags(KParts::PartCapability::BrowserView));
     }
 };
 

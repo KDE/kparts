@@ -19,5 +19,11 @@
         ],
         "Name": "Notepad (example)",
         "InitialPreference": 9
+    },
+    "KParts": {
+        "Capabilities": [
+            "BrowserView",
+            "ReadWrite"
+        ]
     }
 }

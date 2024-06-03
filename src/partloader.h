@@ -16,6 +16,22 @@
 
 namespace KParts
 {
+Q_NAMESPACE_EXPORT(KPARTS_EXPORT)
+
+/**
+ * Enum for standardized capabilities of KParts
+ * @since 6.4
+ */
+enum class PartCapability {
+    ReadOnly = 1,
+    ReadWrite = 2,
+    BrowserView = 4,
+};
+Q_ENUM_NS(PartCapability)
+Q_DECLARE_FLAGS(PartCapabilities, PartCapability)
+Q_FLAG_NS(PartCapabilities)
+Q_DECLARE_OPERATORS_FOR_FLAGS(PartCapabilities)
+
 /**
  * Helper methods for locating and loading parts.
  * This is based upon KPluginFactory, but it takes
@@ -43,6 +59,13 @@ enum ErrorType {
 KPARTS_EXPORT void getErrorStrings(QString *errorString, QString *errorText, const QString &argument, ErrorType type);
 
 }
+
+/**
+ * Parses the associated capabilities from the KPart. This parses the deprecated "ServiceTypes" array of the "KPlugin" object
+ *
+ * @since 6.4
+ */
+KPARTS_EXPORT PartCapabilities partCapabilities(const KPluginMetaData &data);
 
 /**
  * Locate all available KParts using KPluginMetaData::findPlugins for a mimetype.
@@ -143,5 +166,7 @@ instantiatePartForMimeType(const QString &mimeType, QWidget *parentWidget = null
 
 } // namespace
 } // namespace
+
+Q_DECLARE_METATYPE(KParts::PartCapabilities)
 
 #endif
