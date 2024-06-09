@@ -127,6 +127,10 @@ QList<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mimeT
         }
         // Plugins who support the same mimetype are then sorted by initial preference
         const auto getInitialPreference = [](const KPluginMetaData &data) {
+            const QJsonObject obj = data.rawData();
+            if (const QJsonValue initialPref = obj.value(QLatin1String("KParts")).toObject().value(QLatin1String("InitialPreference")); !initialPref.isNull()) {
+                return initialPref.toInt();
+            }
             return data.rawData().value(QLatin1String("KPlugin")).toObject().value(QLatin1String("InitialPreference")).toInt();
         };
         return getInitialPreference(left) > getInitialPreference(right);
@@ -137,10 +141,6 @@ QList<KPluginMetaData> KParts::PartLoader::partsForMimeType(const QString &mimeT
     if (!userParts.isEmpty()) {
         plugins = userParts;
     }
-
-    // for (const KPluginMetaData &plugin : plugins) {
-    //    qDebug() << plugin.fileName() << plugin.initialPreference();
-    //}
     return plugins;
 }
 

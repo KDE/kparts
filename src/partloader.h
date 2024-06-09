@@ -20,6 +20,19 @@ Q_NAMESPACE_EXPORT(KPARTS_EXPORT)
 
 /**
  * Enum for standardized capabilities of KParts
+ *
+ * @code
+ * {
+ *  "KPlugin": {...},
+ *  "KParts": {
+ *      "Capabilities": [
+ *          "ReadOnly"
+ *      ],
+ *      "InitialPreference": 42
+ *  }
+ * }
+ * @endcode
+ *
  * @since 6.4
  */
 enum class PartCapability {

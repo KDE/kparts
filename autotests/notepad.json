@@ -17,10 +17,10 @@
             "text/x-c",
             "text/x-c++"
         ],
-        "Name": "Notepad (example)",
-        "InitialPreference": 9
+        "Name": "Notepad (example)"
     },
     "KParts": {
+        "InitialPreference": 9,
         "Capabilities": [
             "BrowserView",
             "ReadWrite"
