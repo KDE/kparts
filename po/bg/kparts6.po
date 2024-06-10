@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:36+0000\n"
+"POT-Creation-Date: 2024-06-10 00:37+0000\n"
 "PO-Revision-Date: 2023-01-27 19:16+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -44,17 +44,17 @@ msgstr "Търсене в Интернет"
 msgid "&Search"
 msgstr "&Търсене"
 
-#: partloader.cpp:105
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "KPluginFactory не може да зареди приставка: %1"
 
-#: partloader.cpp:109
+#: partloader.cpp:155
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Не е намерена част за MIME тип %1"
 
-#: partloader.cpp:113
+#: partloader.cpp:159
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Не е намерена част за MIME тип %1"

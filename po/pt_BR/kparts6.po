@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:36+0000\n"
+"POT-Creation-Date: 2024-06-10 00:37+0000\n"
 "PO-Revision-Date: 2023-02-07 10:46-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -57,17 +57,17 @@ msgstr "Pesquisa na Internet"
 msgid "&Search"
 msgstr "Pe&squisar"
 
-#: partloader.cpp:105
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "O KPluginFactory não pode carregar o plugin: %1"
 
-#: partloader.cpp:109
+#: partloader.cpp:155
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Não foi encontrado nenhum componente para o tipo MIME %1"
 
-#: partloader.cpp:113
+#: partloader.cpp:159
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Nenhum componente pode ser instanciado para o tipo MIME %1"

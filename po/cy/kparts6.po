@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:36+0000\n"
+"POT-Creation-Date: 2024-06-10 00:37+0000\n"
 "PO-Revision-Date: 2005-01-28 17:54+0000\n"
 "Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
 "Language-Team: Cymraeg\n"
@@ -56,17 +56,17 @@ msgstr "Chwiliad Rhyngrwyd"
 msgid "&Search"
 msgstr " &Chwilio"
 
-#: partloader.cpp:105
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:109
+#: partloader.cpp:155
 #, fuzzy, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Methu canfod trinydd i %1!"
 
-#: partloader.cpp:113
+#: partloader.cpp:159
 #, fuzzy, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Methu canfod trinydd i %1!"
