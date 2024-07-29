@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde4libs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:37+0000\n"
+"POT-Creation-Date: 2024-07-29 00:37+0000\n"
 "PO-Revision-Date: 2024-07-24 23:07-0400\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
 "Language-Team: sq\n"
@@ -40,17 +40,17 @@ msgstr "Kërkim Interneti"
 msgid "&Search"
 msgstr "&Kërko"
 
-#: partloader.cpp:151
+#: partloader.cpp:152
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:155
+#: partloader.cpp:156
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Asnjë pjesë nuk u gjet për mimeType %1"
 
-#: partloader.cpp:159
+#: partloader.cpp:160
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Asnjë pjesë nuk u jetësua për mimeType %1"

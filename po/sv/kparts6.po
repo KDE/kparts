@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:37+0000\n"
+"POT-Creation-Date: 2024-07-29 00:37+0000\n"
 "PO-Revision-Date: 2024-06-18 00:42+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -53,17 +53,17 @@ msgstr "Internetsökning"
 msgid "&Search"
 msgstr "&Sök"
 
-#: partloader.cpp:151
+#: partloader.cpp:152
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "KPluginFactory kunde inte ladda insticksprogrammet: %1"
 
-#: partloader.cpp:155
+#: partloader.cpp:156
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Inget delprogram hittades för Mime-typen %1"
 
-#: partloader.cpp:159
+#: partloader.cpp:160
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Inget delprogram kunde instansieras för Mime-typen %1"

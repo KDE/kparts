@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:37+0000\n"
+"POT-Creation-Date: 2024-07-29 00:37+0000\n"
 "PO-Revision-Date: 2020-03-23 11:04+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -45,17 +45,17 @@ msgstr "Internetiotsing"
 msgid "&Search"
 msgstr "&Otsi"
 
-#: partloader.cpp:151
+#: partloader.cpp:152
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:155
+#: partloader.cpp:156
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "MIME tüübile %1 ei leitud komponenti"
 
-#: partloader.cpp:159
+#: partloader.cpp:160
 #, fuzzy, kde-format
 #| msgid "No part was found for mimeType %1"
 msgid "No part could be instantiated for mimeType %1"

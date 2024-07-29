@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:37+0000\n"
+"POT-Creation-Date: 2024-07-29 00:37+0000\n"
 "PO-Revision-Date: 2024-03-04 17:53+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -51,17 +51,17 @@ msgstr "Meklēšana internetā"
 msgid "&Search"
 msgstr "&Meklēt"
 
-#: partloader.cpp:151
+#: partloader.cpp:152
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "„KPluginFactory“ nevarēja ielādēt spraudni: %1"
 
-#: partloader.cpp:155
+#: partloader.cpp:156
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "MIME tipam „%1“ nav atrasta neviena daļa"
 
-#: partloader.cpp:159
+#: partloader.cpp:160
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "MIME tipam „%1“ nevarēja attiecināt nevienu daļu"

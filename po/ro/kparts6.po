@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:37+0000\n"
+"POT-Creation-Date: 2024-07-29 00:37+0000\n"
 "PO-Revision-Date: 2024-02-24 14:38+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -44,17 +44,17 @@ msgstr "Căutare Internet"
 msgid "&Search"
 msgstr "&Caută"
 
-#: partloader.cpp:151
+#: partloader.cpp:152
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "KPluginFactory nu a putut încărca extensia: %1"
 
-#: partloader.cpp:155
+#: partloader.cpp:156
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Nu a fost găsită nicio componentă pentru tipul MIME %1"
 
-#: partloader.cpp:159
+#: partloader.cpp:160
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Nu a putut fi instanțiată nicio componentă pentru tipul MIME %1"

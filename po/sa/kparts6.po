@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-10 00:37+0000\n"
+"POT-Creation-Date: 2024-07-29 00:37+0000\n"
 "PO-Revision-Date: 2023-09-27 19:19+0530\n"
 "Last-Translator: \n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -43,17 +43,17 @@ msgstr "Internet Search"
 msgid "&Search"
 msgstr "&अन्वेषण"
 
-#: partloader.cpp:151
+#: partloader.cpp:152
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "KPluginFactory प्लगिन् आरोपयत कर्तुं न शक्तवान्: %1"
 
-#: partloader.cpp:155
+#: partloader.cpp:156
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "mimeType %1 कृते कोऽपि भागः न प्राप्तः"
 
-#: partloader.cpp:159
+#: partloader.cpp:160
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "mimeType %1 कृते कोऽपि भागः उदाहरणं कर्तुं न शक्यते स्म"
