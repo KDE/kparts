@@ -1,0 +1,33 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KParts
+description = Plugin framework for user interface components
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += \
+    qtcore \
+    qtgui \
+    qtwidgets \
+    kcoreaddons \
+    kxmlgui \
+    kiocore
+
+qhp.projects            = KParts
+
+qhp.KParts.file                = kparts.qhp
+qhp.KParts.namespace           = org.kde.kparts.$QT_VERSION_TAG
+qhp.KParts.virtualFolder       = kparts
+qhp.KParts.indexTitle          = KParts
+qhp.KParts.indexRoot           =
+
+qhp.KParts.subprojects         = classes
+qhp.KParts.subprojects.classes.title = C++ Classes
+qhp.KParts.subprojects.classes.indexTitle = KParts C++ Classes
+qhp.KParts.subprojects.classes.selectors = class fake:headerfile
+qhp.KParts.subprojects.classes.sortPages = true

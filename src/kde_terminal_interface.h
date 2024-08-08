@@ -11,8 +11,12 @@
 #include <QObject>
 #include <QStringList>
 
-/**
- * TerminalInterface is an interface implemented by KonsolePart to
+/*!
+ * \class TerminalInterface
+ * \inheaderfile kde_terminal_interface.h
+ * \inmodule KParts
+ *
+ * \brief TerminalInterface is an interface implemented by KonsolePart to
  * allow developers access to the KonsolePart in ways that are not
  * possible through the normal KPart interface.
  *
@@ -65,8 +69,6 @@
  *  // etc.
  *
  * \endcode
- *
- * @author Dominique Devriese <devriese@kde.org>
  */
 class TerminalInterface
 {
@@ -74,61 +76,61 @@ public:
     virtual ~TerminalInterface()
     {
     }
-    /**
-     * This starts @p program, with arguments @p args
+    /*!
+     * This starts \a program, with arguments \a args
      */
     virtual void startProgram(const QString &program, const QStringList &args) = 0;
-    /**
-     * If no shell is running, this starts a shell with the
-     * @dir as the starting directory.
+    /*!
+     * If no shell is running, this starts a shell with
+     * \a dir as the starting directory.
      * If a shell is already running, nothing is done.
      */
     virtual void showShellInDir(const QString &dir) = 0;
 
-    /**
-     * This sends @param text as input to the currently running
+    /*!
+     * This sends \a text as input to the currently running
      * program..
      */
     virtual void sendInput(const QString &text) = 0;
 
-    /**
+    /*!
      * Return terminal PID.  If no process is currently running, returns 0.
      */
     virtual int terminalProcessId() = 0;
 
-    /**
+    /*!
      * Return foregound PID, If there is no foreground process running, returns -1
      */
     virtual int foregroundProcessId() = 0;
 
-    /**
+    /*!
      * Returns sub process name. If there is no sub process running, returns empty QString
      */
     virtual QString foregroundProcessName() = 0;
 
-    /**
+    /*!
      * Returns the current working directory
      */
     virtual QString currentWorkingDirectory() const = 0;
 
-    /**
+    /*!
      * Returns the names of available profiles.
      */
     virtual QStringList availableProfiles() const = 0;
 
-    /**
+    /*!
      * Returns the name of the currently active profile.
      */
     virtual QString currentProfileName() const = 0;
 
-    /**
-     * Changes the currently active profile to @p profileName.
-     * @returns Returns true if setting the profile was successful
+    /*!
+     * Changes the currently active profile to \a profileName.
+     * Returns true if setting the profile was successful
      */
     virtual bool setCurrentProfile(const QString &profileName) = 0;
 
-    /**
-     * Returns the property @p profileProperty of the currently active profile.
+    /*!
+     * Returns the property \a profileProperty of the currently active profile.
      */
     virtual QVariant profileProperty(const QString &profileProperty) const = 0;
 };

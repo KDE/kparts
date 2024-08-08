@@ -20,10 +20,12 @@ namespace KParts
 class ReadOnlyPart;
 class ListingFilterExtensionPrivate;
 
-/**
- * @class ListingFilterExtension listingfilterextension.h <KParts/ListingFilterExtension>
+/*!
+ * \class KParts::ListingFilterExtension
+ * \inheaderfile KParts/ListingFilterExtension
+ * \inmodule KParts
  *
- * @short An extension for filtering listings.
+ * \brief An extension for filtering listings.
  *
  * This extension is intended to be implemented by parts that provide listing
  * services, e.g. file management parts and is intended to provide a generic
@@ -69,41 +71,41 @@ class ListingFilterExtensionPrivate;
  *    }
  * \endcode
  *
- * @since 4.9.2
+ * \since 4.9.2
  */
 class KPARTS_EXPORT ListingFilterExtension : public QObject
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Supported file filtering modes modes.
-     * @FilterModes
+     *
+     * \value None
+     * \value MimeType Filter by mime type, e.g. "text/plain"
+     * \value SubString Filter by matching any part of a file or directory name, e.g. "Documents"
+     * \value WildCard Filter by using wildcard matches, e.g. "*.txt"
      */
     enum FilterMode {
         None = 0x00,
-        MimeType = 0x01, /*!< Filter by mime type, e.g. "text/plain". */
-        SubString = 0x02, /*!< Filter by matching any part of a file or directory name, e.g. "Documents" */
-        WildCard = 0x04, /*!< Filter by using wildcard matches, e.g. "*.txt" */
+        MimeType = 0x01,
+        SubString = 0x02,
+        WildCard = 0x04,
     };
 
-    /**
-     * Stores a combination of #FilterMode values.
-     */
     Q_DECLARE_FLAGS(FilterModes, FilterMode)
 
     /*! Constructor */
     explicit ListingFilterExtension(KParts::ReadOnlyPart *parent);
 
-    /*! Destructor */
     ~ListingFilterExtension() override;
 
-    /**
-     * Queries @p obj for a child object which inherits from this class.
+    /*!
+     * Queries \a obj for a child object which inherits from this class.
      */
     static ListingFilterExtension *childObject(QObject *obj);
 
-    /**
+    /*!
      * Returns the OR'ed value of the file filter modes supported by the part
      * that implements this extension.
      *
@@ -111,32 +113,33 @@ public:
      */
     virtual FilterModes supportedFilterModes() const;
 
-    /**
+    /*!
      * Returns true if the part that implements this extension allows
-     * the use of multiple filters for the given filtering @p mode.
+     * the use of multiple filters for the given filtering \a mode.
      *
-     * By default this function returns false.
+     * By default this function returns \c false.
      */
     virtual bool supportsMultipleFilters(FilterMode mode) const;
 
-    /**
-     * Returns the currently set filters for the given @p mode.
+    /*!
+     * Returns the currently set filters for the given \a mode.
      *
-     * @param mode the desired filter mode as specified in @ref FilterMode.
+     * \a mode the desired filter mode as specified in FilterMode.
      */
     virtual QVariant filter(FilterMode mode) const = 0;
 
-    /**
-     * Sets the file @p filter that should be applied by the part that
-     * implements this extension for the given filtering @p mode.
+    /*!
+     * Sets the file \a filter that should be applied by the part that
+     * implements this extension for the given filtering \a mode.
      *
      * To remove a filter for a given filter mode, simply call this function with
-     * the desired mode and the @p filter parameter set to a NULL variant.
+     * the desired mode and the \a filter parameter set to a NULL variant.
      *
      * The second parameter can be
      *
-     * @param mode the desired filter mode as specified in @ref FilterMode.
-     * @param filter a list of filter texts based on the selected mode.
+     * \a mode the desired filter mode as specified in FilterMode.
+     *
+     * \a filter a list of filter texts based on the selected mode.
      */
     virtual void setFilter(FilterMode mode, const QVariant &filter) = 0;
 

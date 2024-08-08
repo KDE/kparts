@@ -20,46 +20,48 @@ namespace KParts
 class ReadOnlyPart;
 class ListingNotificationExtensionPrivate;
 
-/**
- * @class ListingNotificationExtension listingnotificationextension.h <KParts/ListingNotificationExtension>
+/*!
+ * \class KParts::ListingNotificationExtension
+ * \inheaderfile KParts/ListingNotificationExtension
+ * \inmodule KParts
  *
- * @short An extension for receiving listing change notification.
+ * \brief An extension for receiving listing change notification.
  *
  * This extension is intended for implementation by parts that provide listing
  * services, e.g. file management and is intended to notify about changes to
  * a given listing. For example, if file management part implemented this extension
- * it would emit @ref itemsDeleted and @ref itemsAdded signal whenever new files
+ * it would emit itemsDeleted and itemsAdded signal whenever new files
  * or folders are deleted and added to a directory respectively.
  *
- * @since 4.9.2
+ * \since 4.9.2
  */
 class KPARTS_EXPORT ListingNotificationExtension : public QObject
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Supported notification event types.
-     * @see NotificationEventTypes
+     *
+     * \value None
+     * \value ItemsAdded New items added to the listing.
+     * \value ItemsDeleted Items deleted from the listing.
+     *
      */
     enum NotificationEventType {
         None = 0x00,
-        ItemsAdded = 0x01, /*!< New items added to the listing. */
-        ItemsDeleted = 0x02, /*!< Items deleted from the listing. */
+        ItemsAdded = 0x01,
+        ItemsDeleted = 0x02,
     };
 
-    /**
-     * Stores a combination of #NotificationEventType values.
-     */
     Q_DECLARE_FLAGS(NotificationEventTypes, NotificationEventType)
 
     /*! Constructor */
     ListingNotificationExtension(KParts::ReadOnlyPart *parent);
 
-    /*! Destructor */
     ~ListingNotificationExtension() override;
 
-    /**
+    /*!
      * Returns the OR'ed value of the notification types supported by the part
      * that implements this extension.
      *
@@ -67,15 +69,15 @@ public:
      */
     virtual NotificationEventTypes supportedNotificationEventTypes() const;
 
-    /**
-     * Queries @p obj for a child object which inherits from this class.
+    /*!
+     * Queries \a obj for a child object which inherits from this class.
      */
     static ListingNotificationExtension *childObject(QObject *obj);
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted when one of the notification events listed
-     * in @ref NotificationEventType occur.
+     * in NotificationEventType occur.
      */
     void listingEvent(KParts::ListingNotificationExtension::NotificationEventType, const KFileItemList &);
 
