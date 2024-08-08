@@ -21,10 +21,12 @@ namespace KParts
 class ReadOnlyPart;
 class FileInfoExtensionPrivate;
 
-/**
- * @class FileInfoExtension fileinfoextension.h <KParts/FileInfoExtension>
+/*!
+ * \class KParts::FileInfoExtension
+ * \inheaderfile KParts/FileInfoExtension
+ * \inmodule KParts
  *
- * @short An extension for obtaining file information from the part.
+ * \brief An extension for obtaining file information from the part.
  *
  * This extension provides information about file and directory resources
  * that are present in the part the implements it.
@@ -33,40 +35,37 @@ class FileInfoExtensionPrivate;
  * files and directories located on remote servers so that download managers
  * such as kget can easily retrieve these resources.
  *
- * @since 4.6
+ * \since KParts 4.6
  */
 class KPARTS_EXPORT FileInfoExtension : public QObject
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Supported file information retrieval modes.
-     * @see QueryModes
+     * \sa QueryModes
+     * \value None Querying for file information is NOT possible
+     * \value AllItems Retrieve or can retrieve file information for all items
+     * \value SelectedItems Retrieve or can retrieve file information for selected items
      */
     enum QueryMode {
-        None = 0x00, /*!< Querying for file information is NOT possible */
-        AllItems = 0x01, /*!< Retrieve or can retrieve file information for all items.*/
-        SelectedItems = 0x02, /*!< Retrieve or can retrieve file information for selected items.*/
+        None = 0x00,
+        AllItems = 0x01,
+        SelectedItems = 0x02,
     };
-
-    /**
-     * Stores a combination of #QueryMode values.
-     */
     Q_DECLARE_FLAGS(QueryModes, QueryMode)
 
-    /*! Constructor */
     explicit FileInfoExtension(KParts::ReadOnlyPart *parent);
 
-    /*! Destructor */
     ~FileInfoExtension() override;
 
-    /**
-     * Queries @p obj for a child object which inherits from this class.
+    /*!
+     * Queries \a obj for a child object which inherits from this class.
      */
     static FileInfoExtension *childObject(QObject *obj);
 
-    /**
+    /*!
      * Returns true if any of the items in the current view of the part that
      * implements this extension are selected.
      *
@@ -74,7 +73,7 @@ public:
      */
     virtual bool hasSelection() const;
 
-    /**
+    /*!
      * Returns the file information retrieve modes supported by the part
      * that implements this extension.
      *
@@ -82,10 +81,10 @@ public:
      */
     virtual QueryModes supportedQueryModes() const;
 
-    /**
-     * Returns a information for files that match the specified query @p mode.
+    /*!
+     * Returns a information for files that match the specified query \a mode.
      *
-     * If the mode specified by @p mode is not supported or cannot be
+     * If the mode specified by \a mode is not supported or cannot be
      * handled, then an empty list is returned.
      */
     virtual KFileItemList queryFor(QueryMode mode) const = 0;

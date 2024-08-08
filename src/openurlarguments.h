@@ -19,7 +19,7 @@ namespace KParts
 {
 class OpenUrlArgumentsPrivate;
 
-/**
+/*!
  * @class OpenUrlArguments openurlarguments.h <KParts/OpenUrlArguments>
  *
  * @short OpenUrlArguments is the set of arguments that specify
@@ -39,18 +39,18 @@ public:
     OpenUrlArguments &operator=(const OpenUrlArguments &other);
     ~OpenUrlArguments();
 
-    /**
+    /*!
      * @return true to indicate that the part should reload the URL,
      * i.e. the cache shouldn't be used (forced reload).
      */
     bool reload() const;
-    /**
+    /*!
      * Indicates that the url should be loaded
      * from the network even if it matches the current url of the part.
      */
     void setReload(bool b);
 
-    /**
+    /*!
      * xOffset is the horizontal scrolling of the part's widget
      * (in case it's a scrollview). This is saved into the history
      * and restored when going back in the history.
@@ -58,7 +58,7 @@ public:
     int xOffset() const;
     void setXOffset(int x);
 
-    /**
+    /*!
      * yOffset is the vertical scrolling of the part's widget
      * (in case it's a scrollview). This is saved into the history
      * and restored when going back in the history.
@@ -66,13 +66,13 @@ public:
     int yOffset() const;
     void setYOffset(int y);
 
-    /**
+    /*!
      * The mimetype to use when opening the url, when known by the calling application.
      */
     QString mimeType() const;
     void setMimeType(const QString &mime);
 
-    /**
+    /*!
      * True if the user requested that the URL be opened.
      * False if the URL should be opened due to an external event, like javascript popups
      * or automatic redirections.
@@ -82,7 +82,7 @@ public:
     bool actionRequestedByUser() const;
     void setActionRequestedByUser(bool userRequested);
 
-    /**
+    /*!
      * Meta-data to associate with the KIO operation that will be used to open the URL.
      * This method can be used to add or retrieve metadata.
      * @see KIO::TransferJob etc.
