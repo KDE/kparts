@@ -23,6 +23,7 @@ include(ECMGenerateExportHeader)
 include(ECMQtDeclareLoggingCategory)
 include(ECMSetupVersion)
 include(ECMDeprecationSettings)
+include(ECMGenerateQDoc)
 
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control how much of deprecated API is build [default=0].")
 
@@ -74,6 +75,8 @@ if (BUILD_QCH)
     )
     set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF6PartsQchTargets.cmake\")")
 endif()
+
+ecm_generate_qdoc(KF6Parts kparts.qdocconf)
 
 include(CMakePackageConfigHelpers)
 
