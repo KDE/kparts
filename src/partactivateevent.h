@@ -19,7 +19,7 @@ namespace KParts
 class Part;
 
 class PartActivateEventPrivate;
-/**
+/*!
  * @class PartActivateEvent partactivateevent.h <KParts/PartActivateEvent>
  *
  * @short This event is sent by the part manager when the active part changes.

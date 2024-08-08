@@ -15,7 +15,7 @@ namespace KParts
 {
 class ReadWritePartPrivate;
 
-/**
+/*!
  * @class ReadWritePart readwritepart.h <KParts/ReadWritePart>
  *
  * @short Base class for an "editor" part.
@@ -39,12 +39,12 @@ class KPARTS_EXPORT ReadWritePart : public ReadOnlyPart
     KPARTS_DECLARE_PRIVATE(ReadWritePart)
 
 public:
-    /**
+    /*!
      * Constructor
      * See parent constructor for instructions.
      */
     explicit ReadWritePart(QObject *parent = nullptr, const KPluginMetaData &data = {});
-    /**
+    /*!
      * Destructor
      * Applications using a ReadWritePart should make sure, before
      * destroying it, to call closeUrl().
@@ -54,23 +54,23 @@ public:
      */
     ~ReadWritePart() override;
 
-    /**
+    /*!
      * @return true if the part is in read-write mode
      */
     bool isReadWrite() const;
 
-    /**
+    /*!
      * Changes the behavior of this part to readonly or readwrite.
      * @param readwrite set to true to enable readwrite mode
      */
     virtual void setReadWrite(bool readwrite = true);
 
-    /**
+    /*!
      * @return true if the document has been modified.
      */
     bool isModified() const;
 
-    /**
+    /*!
      * If the document has been modified, ask the user to save changes.
      * This method is meant to be called from KMainWindow::queryClose().
      * It will also be called from closeUrl().
@@ -80,7 +80,7 @@ public:
      */
     virtual bool queryClose();
 
-    /**
+    /*!
      * Called when closing the current url (e.g. document), for instance
      * when switching to another url (note that openUrl() calls it
      * automatically in this case).
@@ -93,7 +93,7 @@ public:
      */
     bool closeUrl() override;
 
-    /**
+    /*!
      * Call this method instead of the above if you need control if
      * the save prompt is shown. For example, if you call queryClose()
      * from KMainWindow::queryClose(), you would not want to prompt
@@ -103,20 +103,20 @@ public:
      */
     virtual bool closeUrl(bool promptToSave);
 
-    /**
+    /*!
      * Save the file to a new location.
      *
      * Calls save(), no need to reimplement
      */
     virtual bool saveAs(const QUrl &url);
 
-    /**
+    /*!
      *  Sets the modified flag of the part.
      */
     virtual void setModified(bool modified);
 
 Q_SIGNALS:
-    /**
+    /*!
      * set handled to true, if you don't want the default handling
      * set abortClosing to true, if you handled the request,
      * but for any reason don't  want to allow closing the document
@@ -124,28 +124,28 @@ Q_SIGNALS:
     void sigQueryClose(bool *handled, bool *abortClosing);
 
 public Q_SLOTS:
-    /**
+    /*!
      * Call setModified() whenever the contents get modified.
      * This is a slot for convenience, since it simply calls setModified(true),
      * so that you can connect it to a signal, like textChanged().
      */
     void setModified();
 
-    /**
+    /*!
      * Save the file in the location from which it was opened.
      * You can connect this to the "save" action.
      * Calls saveFile() and saveToUrl(), no need to reimplement.
      */
     virtual bool save();
 
-    /**
+    /*!
      * Waits for any pending upload job to finish and returns whether the
      * last save() action was successful.
      */
     bool waitSaveComplete();
 
 protected:
-    /**
+    /*!
      * Save to a local file.
      * You need to implement it, to save to the local file.
      * The framework takes care of re-uploading afterwards.
@@ -158,7 +158,7 @@ protected:
      */
     virtual bool saveFile() = 0;
 
-    /**
+    /*!
      * Save the file.
      *
      * Uploads the file, if @p url is remote.

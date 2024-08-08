@@ -20,7 +20,7 @@ namespace KParts
 class ReadOnlyPart;
 class ListingFilterExtensionPrivate;
 
-/**
+/*!
  * @class ListingFilterExtension listingfilterextension.h <KParts/ListingFilterExtension>
  *
  * @short An extension for filtering listings.
@@ -76,7 +76,7 @@ class KPARTS_EXPORT ListingFilterExtension : public QObject
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Supported file filtering modes modes.
      * @FilterModes
      */
@@ -87,7 +87,7 @@ public:
         WildCard = 0x04, /*!< Filter by using wildcard matches, e.g. "*.txt" */
     };
 
-    /**
+    /*!
      * Stores a combination of #FilterMode values.
      */
     Q_DECLARE_FLAGS(FilterModes, FilterMode)
@@ -98,12 +98,12 @@ public:
     /*! Destructor */
     ~ListingFilterExtension() override;
 
-    /**
+    /*!
      * Queries @p obj for a child object which inherits from this class.
      */
     static ListingFilterExtension *childObject(QObject *obj);
 
-    /**
+    /*!
      * Returns the OR'ed value of the file filter modes supported by the part
      * that implements this extension.
      *
@@ -111,7 +111,7 @@ public:
      */
     virtual FilterModes supportedFilterModes() const;
 
-    /**
+    /*!
      * Returns true if the part that implements this extension allows
      * the use of multiple filters for the given filtering @p mode.
      *
@@ -119,14 +119,14 @@ public:
      */
     virtual bool supportsMultipleFilters(FilterMode mode) const;
 
-    /**
+    /*!
      * Returns the currently set filters for the given @p mode.
      *
      * @param mode the desired filter mode as specified in @ref FilterMode.
      */
     virtual QVariant filter(FilterMode mode) const = 0;
 
-    /**
+    /*!
      * Sets the file @p filter that should be applied by the part that
      * implements this extension for the given filtering @p mode.
      *

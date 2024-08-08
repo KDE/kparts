@@ -27,7 +27,7 @@ class ReadOnlyPart;
 class StatusBarItem;
 class StatusBarExtensionPrivate;
 
-/**
+/*!
  * @class StatusBarExtension statusbarextension.h <KParts/StatusBarExtension>
  *
  * @short An extension for KParts that allows more sophisticated statusbar handling
@@ -47,7 +47,7 @@ public:
     explicit StatusBarExtension(KParts::ReadOnlyPart *parent); // KF6: REMOVE
     ~StatusBarExtension() override;
 
-    /**
+    /*!
      * This adds a widget to the statusbar for this part.
      * If you use this method instead of using statusBar() directly,
      * this extension will take care of removing the items when the parts GUI
@@ -74,18 +74,18 @@ public:
      */
     void addStatusBarItem(QWidget *widget, int stretch, bool permanent);
 
-    /**
+    /*!
      * Remove a widget from the statusbar for this part.
      */
     void removeStatusBarItem(QWidget *widget);
 
-    /**
+    /*!
      * @return the statusbar of the KMainWindow in which this part is currently embedded.
      * WARNING: this could return 0L
      */
     QStatusBar *statusBar() const;
 
-    /**
+    /*!
      * This allows the hosting application to set a particular QStatusBar
      * for this part. If it doesn't do this, the statusbar used will be
      * the one of the KMainWindow in which the part is embedded.
@@ -94,13 +94,13 @@ public:
      */
     void setStatusBar(QStatusBar *status);
 
-    /**
+    /*!
      * Queries @p obj for a child object which inherits from this
      * StatusBarExtension class. Convenience method.
      */
     static StatusBarExtension *childObject(QObject *obj);
 
-    /** @internal */
+    /*! @internal */
     bool eventFilter(QObject *watched, QEvent *ev) override;
 
 private:

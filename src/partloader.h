@@ -18,7 +18,7 @@ namespace KParts
 {
 Q_NAMESPACE_EXPORT(KPARTS_EXPORT)
 
-/**
+/*!
  * Enum for standardized capabilities of KParts
  *
  * @code
@@ -33,7 +33,7 @@ Q_NAMESPACE_EXPORT(KPARTS_EXPORT)
  * }
  * @endcode
  *
- * @since 6.4
+ * \since KParts 6.4
  */
 enum class PartCapability {
     ReadOnly = 1,
@@ -45,12 +45,14 @@ Q_DECLARE_FLAGS(PartCapabilities, PartCapability)
 Q_FLAG_NS(PartCapabilities)
 Q_DECLARE_OPERATORS_FOR_FLAGS(PartCapabilities)
 
-/**
+/*!
+ * \namespace KParts::PartLoader
+ *
  * Helper methods for locating and loading parts.
  * This is based upon KPluginFactory, but it takes
  * care of querying by mimetype, sorting the available parts by builtin
  * preference and by user preference.
- * @since 5.69
+ * \since KParts 5.69
  */
 namespace PartLoader
 {
@@ -63,52 +65,58 @@ enum ErrorType {
     NoPartInstantiatedForMimeType,
 };
 
-/**
- * @internal
- * @param errorString translated, user-visible error string
- * @param errorText untranslated error text
- * @param argument argument for the text
+/*!
+ * \internal
+ * \a errorString translated, user-visible error string
+ * \a errorText untranslated error text
+ * \a argument argument for the text
  */
 KPARTS_EXPORT void getErrorStrings(QString *errorString, QString *errorText, const QString &argument, ErrorType type);
 
 }
 
-/**
+/*!
  * Parses the associated capabilities from the KPart. This parses the deprecated "ServiceTypes" array of the "KPlugin" object
  *
- * @since 6.4
+ * \since KParts 6.4
  */
 KPARTS_EXPORT PartCapabilities partCapabilities(const KPluginMetaData &data);
 
-/**
+/*!
  * Locate all available KParts using KPluginMetaData::findPlugins for a mimetype.
- * @return a list of plugin metadata, sorted by preference.
+ * Returns a list of plugin metadata, sorted by preference.
  * This takes care both of the builtin preference (set by developers)
  * and of user preference (stored in mimeapps.list).
  *
  * To load a part from one of the KPluginMetaData instances returned here,
  * use \ref instantiatePart()
  *
- * @since 5.69
+ * \since KParts 5.69
  */
 KPARTS_EXPORT QList<KPluginMetaData> partsForMimeType(const QString &mimeType);
 
-/**
+/*!
  * Attempts to create a KPart from the given metadata.
  *
- * @code
+ * \code
  * if (auto result = KParts::PartLoader::instantiatePart<MyPart>(metaData, parentWidget, parent, args)) {
  *     // result.plugin is valid and can be accessed
  * } else {
  *     // result contains information about the error
  * }
- * @endcode
- * @param data KPluginMetaData from which the plugin should be loaded
- * @param parentWidget The parent widget
- * @param parent The parent object
- * @param args A list of arguments to be passed to the part
- * @return Result object which contains the plugin instance and potentially error information
- * @since 5.100
+ * \endcode
+ *
+ * \a data KPluginMetaData from which the plugin should be loaded
+ *
+ * \a parentWidget The parent widget
+ *
+ * \a parent The parent object
+ *
+ * \a args A list of arguments to be passed to the part
+ *
+ * Returns a Result object which contains the plugin instance and potentially error information
+ *
+ * \since KParts 5.100
  */
 template<typename T>
 static KPluginFactory::Result<T>
@@ -132,24 +140,24 @@ instantiatePart(const KPluginMetaData &data, QWidget *parentWidget = nullptr, QO
     return result;
 }
 
-/**
+/*!
  * Use this method to create a KParts part. It will try to create an object which inherits
- * @p T.
+ * \a T.
  *
- * @code
+ * \code
  * if (auto result = KParts::PartLoader::instantiatePartForMimeType<KParts::ReadOnlyPart>(mimeType, parentWidget, parent, args)) {
  *     // result.plugin is valid and can be accessed
  * } else {
  *     // result contains information about the error
  * }
- * @endcode
+ * \endcode
  *
- * @tparam T The interface for which an object should be created. The object will inherit @p T.
- * @param mimeType The mimetype for which we need a KParts.
- * @param parentWidget The parent widget for the part's widget.
- * @param parent The parent of the part.
- * @return Result object which contains the plugin instance and potentially error information
- * @since 5.100
+ * \a T The interface for which an object should be created. The object will inherit @p T.
+ * \a mimeType The mimetype for which we need a KParts.
+ * \a parentWidget The parent widget for the part's widget.
+ * \a parent The parent of the part.
+ * Returns a Result object which contains the plugin instance and potentially error information
+ * \since KParts 5.100
  */
 template<class T>
 static KPluginFactory::Result<T>

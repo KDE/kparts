@@ -20,7 +20,7 @@ namespace KParts
 class ReadOnlyPart;
 class ListingNotificationExtensionPrivate;
 
-/**
+/*!
  * @class ListingNotificationExtension listingnotificationextension.h <KParts/ListingNotificationExtension>
  *
  * @short An extension for receiving listing change notification.
@@ -38,7 +38,7 @@ class KPARTS_EXPORT ListingNotificationExtension : public QObject
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Supported notification event types.
      * @see NotificationEventTypes
      */
@@ -48,7 +48,7 @@ public:
         ItemsDeleted = 0x02, /*!< Items deleted from the listing. */
     };
 
-    /**
+    /*!
      * Stores a combination of #NotificationEventType values.
      */
     Q_DECLARE_FLAGS(NotificationEventTypes, NotificationEventType)
@@ -59,7 +59,7 @@ public:
     /*! Destructor */
     ~ListingNotificationExtension() override;
 
-    /**
+    /*!
      * Returns the OR'ed value of the notification types supported by the part
      * that implements this extension.
      *
@@ -67,13 +67,13 @@ public:
      */
     virtual NotificationEventTypes supportedNotificationEventTypes() const;
 
-    /**
+    /*!
      * Queries @p obj for a child object which inherits from this class.
      */
     static ListingNotificationExtension *childObject(QObject *obj);
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted when one of the notification events listed
      * in @ref NotificationEventType occur.
      */

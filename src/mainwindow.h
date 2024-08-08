@@ -20,7 +20,7 @@ namespace KParts
 {
 class MainWindowPrivate;
 
-/**
+/*!
  * @class MainWindow mainwindow.h <KParts/MainWindow>
  *
  * @short A KPart-aware main window, whose user interface is described in XML.
@@ -51,11 +51,11 @@ class KPARTS_EXPORT MainWindow : public KXmlGuiWindow, virtual public PartBase
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Constructor, same signature as KMainWindow.
      */
     explicit MainWindow(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
-    /**
+    /*!
      * Destructor.
      */
     ~MainWindow() override;
@@ -65,7 +65,7 @@ public Q_SLOTS:
 
 protected Q_SLOTS:
 
-    /**
+    /*!
      * Create the GUI (by merging the host's and the active part's)
      * You _must_ call this in order to see any GUI being created.
      *
@@ -77,7 +77,7 @@ protected Q_SLOTS:
      */
     void createGUI(KParts::Part *part);
 
-    /**
+    /*!
      * Enable or disable the automatic setting of window titles by the part's document title.
      * By default, a part always changes the window title when the document changes.
      * @note This value must be set before calling createGUI().
@@ -87,14 +87,14 @@ protected Q_SLOTS:
      */
     void setWindowTitleHandling(bool enabled);
 
-    /**
+    /*!
      * Called when the active part wants to change the statusbar message
      * Reimplement if your mainwindow has a complex statusbar
      * (with several items)
      */
     virtual void slotSetStatusBarText(const QString &);
 
-    /**
+    /*!
      * Rebuilds the GUI after KEditToolBar changed the toolbar layout.
      * @see configureToolbars()
      */
