@@ -17,14 +17,18 @@
 namespace KParts
 {
 class GUIActivateEventPrivate;
-/**
- * @class GUIActivateEvent guiactivateevent.h <KParts/GUIActivateEvent>
+/*!
+ * \class KParts::GUIActivateEvent
+ * \inmodule KParts
+ * \inheaderfile KParts/GUIActivateEvent
  *
- * @short This event is sent to a Part when its GUI has been activated or deactivated.
+ * \brief This event is sent to a Part when its GUI has been activated or deactivated.
+ *
  * This is related to PartActivateEvent, but the difference is that
  * GUIActivateEvent happens later (when the GUI is actually built),
  * only for parts that have GUI elements, and only if using KParts::MainWindow.
- * @see KParts::Part::guiActivateEvent()
+ *
+ * \sa KParts::Part::guiActivateEvent()
  */
 class KPARTS_EXPORT GUIActivateEvent : public QEvent
 {
@@ -32,8 +36,14 @@ public:
     GUIActivateEvent(bool activated);
     ~GUIActivateEvent() override;
 
+    /*!
+     * ?
+     */
     bool activated() const;
 
+    /*!
+     * ?
+     */
     static bool test(const QEvent *event);
 
 private:
