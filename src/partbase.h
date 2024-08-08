@@ -26,30 +26,29 @@ namespace KParts
 {
 class PartBasePrivate;
 
-/**
- * @class PartBase partbase.h <KParts/PartBase>
+/*!
+ * \class KParts::PartBase
+ * \inmodule KParts
+ * \inheaderfile KParts/PartBase
  *
- * @short Base class for all parts.
+ * \brief Base class for all parts.
  */
 class KPARTS_EXPORT PartBase : virtual public KXMLGUIClient
 {
     KPARTS_DECLARE_PRIVATE(PartBase)
 
 public:
-    /**
+    /*!
      *  Constructor.
      */
     PartBase();
 
-    /**
-     *  Destructor.
-     */
     ~PartBase() override;
 
-    /**
-     *  Internal method. Called by KParts::Part to specify the parent object for plugin objects.
+    /*!
+     * Internal method. Called by KParts::Part to specify the parent object for plugin objects.
      *
-     * @internal
+     * \internal
      */
     void setPartObject(QObject *object);
     QObject *partObject() const;

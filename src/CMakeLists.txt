@@ -103,34 +103,4 @@ ecm_qt_install_logging_categories(
     DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
 )
 
-if(BUILD_QCH)
-    ecm_add_qch(
-        KF6Parts_QCH
-        NAME KParts
-        BASE_NAME KF6Parts
-        VERSION ${KF_VERSION}
-        ORG_DOMAIN org.kde
-        SOURCES # using only public headers, to cover only public API
-            ${KParts_HEADERS}
-            kde_terminal_interface.h
-        MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-        LINK_QCHS
-            KF6KIO_QCH
-            KF6XmlGui_QCH
-        INCLUDE_DIRS
-            ${CMAKE_BINARY_DIR}
-            ${CMAKE_CURRENT_BINARY_DIR}
-        BLANK_MACROS
-            KPARTS_EXPORT
-            KPARTS_DEPRECATED
-            KPARTS_DEPRECATED_EXPORT
-            "KPARTS_DEPRECATED_VERSION(x, y, t)"
-            "KPARTS_DEPRECATED_VERSION_BELATED(x, y, xt, yt, t)"
-            "KPARTS_DEPRECATED_VERSION(x, y, t)"
-            "KPARTS_ENUMERATOR_DEPRECATED_VERSION_BELATED(x, y, xt, yt, t)"
-        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        COMPONENT Devel
-    )
-endif()
-
+ecm_generate_qdoc(KF6Parts kparts.qdocconf)

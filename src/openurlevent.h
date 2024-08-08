@@ -20,10 +20,13 @@ namespace KParts
 class ReadOnlyPart;
 class OpenUrlEventPrivate;
 
-/**
- * @class OpenUrlEvent openurlevent.h <KParts/OpenUrlEvent>
+/*!
+ * \class KParts::OpenUrlEvent
+ * \inheaderfile KParts/OpenUrlEvent
+ * \inmodule KParts
  *
- * @short The KParts::OpenUrlEvent event informs that a given part has opened a given URL.
+ * \brief The KParts::OpenUrlEvent event informs that a given part has opened a given URL.
+ *
  * Applications can use this event to send this information to interested plugins.
  *
  * The event should be sent before opening the URL in the part, so that the plugins
@@ -32,13 +35,30 @@ class OpenUrlEventPrivate;
 class KPARTS_EXPORT OpenUrlEvent : public QEvent
 {
 public:
+    /*!
+     *
+     */
     OpenUrlEvent(ReadOnlyPart *part, const QUrl &url, const OpenUrlArguments &args = OpenUrlArguments());
     ~OpenUrlEvent() override;
 
+    /*!
+     *
+     */
     ReadOnlyPart *part() const;
+
+    /*!
+     *
+     */
     QUrl url() const;
+
+    /*!
+     *
+     */
     OpenUrlArguments arguments() const;
 
+    /*!
+     *
+     */
     static bool test(const QEvent *event);
 
 private:

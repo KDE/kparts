@@ -62,8 +62,8 @@ public:
     bool m_waitForSave : 1;
     bool m_duringSaveAs : 1;
 
-    /**
-     * If @p true, @p m_file is a temporary file that needs to be deleted later.
+    /*
+     * If true, m_file is a temporary file that needs to be deleted later.
      */
     bool m_bTemp : 1;
 
@@ -74,12 +74,12 @@ public:
     // Whether we are calling closeUrl() from ~ReadOnlyPart().
     bool m_closeUrlFromDestructor;
 
-    /**
+    /*
      * Remote (or local) url - the one displayed to the user.
      */
     QUrl m_url;
 
-    /**
+    /*
      * Local file - the only one the part implementation should deal with.
      */
     QString m_file;

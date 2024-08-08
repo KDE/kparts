@@ -17,17 +17,14 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(KDEGitCommitHooks)
 include(KDEPackageAppTemplates)
-include(ECMAddQch)
 
 include(ECMGenerateExportHeader)
 include(ECMQtDeclareLoggingCategory)
 include(ECMSetupVersion)
 include(ECMDeprecationSettings)
+include(ECMGenerateQDoc)
 
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control how much of deprecated API is build [default=0].")
-
-option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
-add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 set(kparts_version_header "${CMAKE_CURRENT_BINARY_DIR}/src/kparts_version.h")
 ecm_setup_version(PROJECT VARIABLE_PREFIX KPARTS
@@ -64,16 +61,6 @@ add_subdirectory(templates)
 
 # create a Config.cmake and a ConfigVersion.cmake file and install them
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6Parts")
-
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KF6Parts_QCH
-        FILE KF6PartsQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF6PartsQchTargets.cmake\")")
-endif()
 
 include(CMakePackageConfigHelpers)
 

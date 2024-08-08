@@ -19,26 +19,46 @@ namespace KParts
 class Part;
 
 class PartActivateEventPrivate;
-/**
- * @class PartActivateEvent partactivateevent.h <KParts/PartActivateEvent>
+/*!
+ * \class KParts::PartActivateEvent
+ * \inheaderfile KParts/PartActivateEvent
+ * \inmodule KParts
  *
- * @short This event is sent by the part manager when the active part changes.
+ * \brief This event is sent by the part manager when the active part changes.
+ *
  * Each time the active part changes, it will send first a PartActivateEvent
  * with activated=false, part=oldActivePart, widget=oldActiveWidget
  * and then another PartActivateEvent
  * with activated=true, part=newPart, widget=newWidget.
- * @see KParts::Part::partActivateEvent
+ * \sa KParts::Part::partActivateEvent
  */
 class KPARTS_EXPORT PartActivateEvent : public QEvent
 {
 public:
+    /*!
+     *
+     */
     PartActivateEvent(bool activated, Part *part, QWidget *widget);
     ~PartActivateEvent() override;
+
+    /*!
+     *
+     */
     bool activated() const;
 
+    /*!
+     *
+     */
     Part *part() const;
+
+    /*!
+     *
+     */
     QWidget *widget() const;
 
+    /*!
+     *
+     */
     static bool test(const QEvent *event);
 
 private:

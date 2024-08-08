@@ -1,0 +1,9 @@
+/*!
+    \module KParts
+    \title KParts C++ Classes
+    \ingroup modules
+    \cmakepackage KF6
+    \cmakecomponent Parts
+
+    \brief Plugin framework for user interface components.
+*/
