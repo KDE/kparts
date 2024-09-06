@@ -12,7 +12,7 @@
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: kdelibs4\n"
+"Project-Id-Version: kparts6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-29 00:37+0000\n"
 "PO-Revision-Date: 2023-03-21 20:01+0100\n"
