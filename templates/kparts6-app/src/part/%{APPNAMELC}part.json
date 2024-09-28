@@ -1,4 +1,5 @@
 {
+    "$schema": "https://autoconfig.kde.org/jsonschemas/kparts.schema.json",
     "KPlugin": {
         "Authors": [
             {
@@ -13,12 +14,13 @@
             "text/plain"
         ],
         "Name": "%{APPNAME}Part",
-        "ServiceTypes": [
-            "KParts/ReadOnlyPart",
-            "KParts/ReadWritePart"
-        ],
         "Version": "%{VERSION}",
         "Website": ""
     },
-    "MimeType": "text/plain;"
+    "KParts": {
+        "Capabilities": [
+            "ReadOnly",
+            "ReadWrite"
+        ]
+    }
 }
