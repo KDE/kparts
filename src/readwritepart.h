@@ -16,9 +16,11 @@ namespace KParts
 class ReadWritePartPrivate;
 
 /*!
- * @class ReadWritePart readwritepart.h <KParts/ReadWritePart>
+ * \class KParts::ReadWritePart
+ * \inheaderfile KParts/ReadWritePart
+ * \inmodule KParts
  *
- * @short Base class for an "editor" part.
+ * \brief Base class for an "editor" part.
  *
  * This class handles network transparency for you.
  * Anything that can open a URL, allow modifications, and save
@@ -26,7 +28,7 @@ class ReadWritePartPrivate;
  *
  * A read-write part can be set to read-only mode, using setReadWrite().
  *
- * Part writers :
+ * Part writers:
  * Any part inheriting ReadWritePart should check isReadWrite
  * before allowing any action that modifies the part.
  * The part probably wants to reimplement setReadWrite, disable those
@@ -55,18 +57,19 @@ public:
     ~ReadWritePart() override;
 
     /*!
-     * @return true if the part is in read-write mode
+     * Returns true if the part is in read-write mode
      */
     bool isReadWrite() const;
 
     /*!
      * Changes the behavior of this part to readonly or readwrite.
-     * @param readwrite set to true to enable readwrite mode
+     *
+     * \a readwrite set to true to enable readwrite mode
      */
     virtual void setReadWrite(bool readwrite = true);
 
     /*!
-     * @return true if the document has been modified.
+     * Returns true if the document has been modified.
      */
     bool isModified() const;
 
@@ -75,7 +78,7 @@ public:
      * This method is meant to be called from KMainWindow::queryClose().
      * It will also be called from closeUrl().
      *
-     * @return true if closeUrl() can be called without the user losing
+     * Returns true if closeUrl() can be called without the user losing
      * important data, false if the user chooses to cancel.
      */
     virtual bool queryClose();
@@ -89,7 +92,7 @@ public:
      *
      * If isModified(), queryClose() will be called.
      *
-     * @return false on cancel
+     * Returns false on cancel
      */
     bool closeUrl() override;
 
@@ -150,7 +153,7 @@ protected:
      * You need to implement it, to save to the local file.
      * The framework takes care of re-uploading afterwards.
      *
-     * @return true on success, false on failure.
+     * Returns true on success, false on failure.
      * On failure the function should inform the user about the
      * problem with an appropriate message box. Standard error
      * messages can be constructed using KIO::buildErrorString()
@@ -161,10 +164,11 @@ protected:
     /*!
      * Save the file.
      *
-     * Uploads the file, if @p url is remote.
+     * Uploads the file, if \a url is remote.
      * This will emit started(), and either completed() or canceled(),
      * in case you want to provide feedback.
-     * @return true on success, false on failure.
+     *
+     * Returns true on success, false on failure.
      */
     virtual bool saveToUrl();
 

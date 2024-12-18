@@ -62,8 +62,8 @@ public:
     bool m_waitForSave : 1;
     bool m_duringSaveAs : 1;
 
-    /*!
-     * If @p true, @p m_file is a temporary file that needs to be deleted later.
+    /*
+     * If true, m_file is a temporary file that needs to be deleted later.
      */
     bool m_bTemp : 1;
 

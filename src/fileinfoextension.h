@@ -35,7 +35,7 @@ class FileInfoExtensionPrivate;
  * files and directories located on remote servers so that download managers
  * such as kget can easily retrieve these resources.
  *
- * \since KParts 4.6
+ * \since 4.6
  */
 class KPARTS_EXPORT FileInfoExtension : public QObject
 {
@@ -44,7 +44,7 @@ class KPARTS_EXPORT FileInfoExtension : public QObject
 public:
     /*!
      * Supported file information retrieval modes.
-     * \sa QueryModes
+     *
      * \value None Querying for file information is NOT possible
      * \value AllItems Retrieve or can retrieve file information for all items
      * \value SelectedItems Retrieve or can retrieve file information for selected items
@@ -56,6 +56,9 @@ public:
     };
     Q_DECLARE_FLAGS(QueryModes, QueryMode)
 
+    /*!
+     *
+     */
     explicit FileInfoExtension(KParts::ReadOnlyPart *parent);
 
     ~FileInfoExtension() override;

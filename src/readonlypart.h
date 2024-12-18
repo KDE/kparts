@@ -26,9 +26,11 @@ class NavigationExtension;
 class OpenUrlArguments;
 
 /*!
- * @class ReadOnlyPart readonlypart.h <KParts/ReadOnlyPart>
+ * \class KParts::ReadOnlyPart
+ * \inheaderfile KParts/ReadOnlyPart
+ * \inmodule KParts
  *
- * @short Base class for any "viewer" part.
+ * \brief Base class for any "viewer" part.
  *
  * This class takes care of network transparency for you,
  * in the simplest way (downloading to a temporary file, then letting the part
@@ -52,6 +54,9 @@ class KPARTS_EXPORT ReadOnlyPart : public Part
 {
     Q_OBJECT
 
+    /*!
+     * \property KParts::ReadOnlyPart::url
+     */
     Q_PROPERTY(QUrl url READ url)
 
     KPARTS_DECLARE_PRIVATE(ReadOnlyPart)
@@ -63,9 +68,6 @@ public:
      */
     explicit ReadOnlyPart(QObject *parent = nullptr, const KPluginMetaData &data = {});
 
-    /*!
-     * Destructor.
-     */
     ~ReadOnlyPart() override;
 
     /*!
@@ -90,9 +92,9 @@ public Q_SLOTS:
      * Otherwise, reimplement openFile() only.
      *
      * If you reimplement it, don't forget to set the caption, usually with
-     * @code
+     * \code
      * Q_EMIT setWindowCaption( url.toDisplayString(QUrl::PreferLocalFile) );
-     * @endcode
+     * \endcode
      * and also, if the URL refers to a local file, resolve it to a
      * local path and call setLocalFilePath().
      */
@@ -101,10 +103,10 @@ public Q_SLOTS:
 public:
     /*!
      * Returns the URL currently opened in (or being opened by) this part.
-     * @note The URL is not cleared if openUrl() fails to load the URL.
+     * \note The URL is not cleared if openUrl() fails to load the URL.
      *       Call closeUrl() if you need to explicitly reset it.
      *
-     *  @return The current URL.
+     * Returns the current URL.
      */
     QUrl url() const;
 
@@ -112,16 +114,20 @@ public:
      * Called when closing the current URL (for example, a document), for instance
      * when switching to another URL (note that openUrl() calls it
      * automatically in this case).
+     *
      * If the current URL is not fully loaded yet, aborts loading.
+     *
      * Deletes the temporary file used when the URL is remote.
+     *
      * Resets the current url() to QUrl().
-     * @return always true, but the return value exists for reimplementations
+     *
+     * Returns always true, but the return value exists for reimplementations
      */
     virtual bool closeUrl();
 
     /*!
      * This convenience method returns the NavigationExtension for this part,
-     * or @c nullptr if there isn't one.
+     * or \c nullptr if there isn't one.
      */
     NavigationExtension *navigationExtension() const;
 
@@ -134,7 +140,7 @@ public:
     // Well, maybe we should have setArguments (affects next openurl call) and updateArguments?
 
     /*!
-     * @return the arguments that were used to open this URL.
+     * Returns the arguments that were used to open this URL.
      */
     OpenUrlArguments arguments() const;
 
@@ -144,17 +150,20 @@ public:
      * This is an alternative to openUrl(), which allows the user of the part
      * to load the data itself, and send it progressively to the part.
      *
-     * @param mimeType the type of data that is going to be sent to this part.
-     * @param url the URL representing this data. Although not directly used,
+     * \a mimeType the type of data that is going to be sent to this part.
+     *
+     * \a url the URL representing this data. Although not directly used,
      * every ReadOnlyPart has a URL (see url()), so this simply sets it.
-     * @return true if the part supports progressive loading and accepts data, false otherwise.
+     *
+     * Returns true if the part supports progressive loading and accepts data, false otherwise.
      */
     bool openStream(const QString &mimeType, const QUrl &url);
 
     /*!
      * Send some data to the part. openStream must have been called previously,
      * and must have returned true.
-     * @return true if the data was accepted by the part. If false is returned,
+     *
+     * Returns true if the data was accepted by the part. If false is returned,
      * the application should stop sending data, and doesn't have to call closeStream.
      */
     bool writeStream(const QByteArray &data);
@@ -166,15 +175,10 @@ public:
      */
     bool closeStream();
 
-#ifdef K_DOXYGEN
-protected: // are parsed by doxygen (kapidox/ecm_add_qch): unhide for doxygen configured to skip private methods
-#else
-private: // Makes no sense for inherited classes to call those. But make it protected there.
-#endif // K_DOXYGEN
-
+private:
     /*!
      * Called by openStream to initiate sending of data.
-     * Parts which implement progress loading should check the @p mimeType
+     * Parts which implement progress loading should check the \a mimeType
      * parameter, and return true if they can accept a data stream of that type.
      */
     virtual bool doOpenStream(const QString &mimeType)
@@ -196,7 +200,7 @@ private: // Makes no sense for inherited classes to call those. But make it prot
     /*!
      * This is called by closeStream(), to indicate that all the data has been sent.
      * Parts should ensure that all of the data is displayed at this point.
-     * @return whether the data could be displayed correctly.
+     * Returns whether the data could be displayed correctly.
      */
     virtual bool doCloseStream()
     {
@@ -206,8 +210,8 @@ private: // Makes no sense for inherited classes to call those. But make it prot
 Q_SIGNALS:
     /*!
      * The part emits this when starting to load data.
-     * If using a KIO::Job, it provides the @p job so that
-     * progress information can be shown. Otherwise, @p job is @c nullptr.
+     * If using a KIO::Job, it provides the \a job so that
+     * progress information can be shown. Otherwise, \a job is \c nullptr.
      **/
     void started(KIO::Job *job);
 
@@ -219,7 +223,7 @@ Q_SIGNALS:
     void completed();
 
     /*!
-     * This signal is similar to the @c KParts::ReadOnlyPart::completed() signal
+     * This signal is similar to the \c KParts::ReadOnlyPart::completed() signal
      * except it is only emitted if there is still a pending action to be executed
      * on a delayed timer.
      *
@@ -227,19 +231,19 @@ Q_SIGNALS:
      * after a certain period of time. This signal is useful if you want to give the
      * user the ability to cancel such pending actions.
      *
-     * @since 5.81
+     * \since 5.81
      */
     void completedWithPendingAction();
 
     /*!
      * Emit this if loading is canceled by the user or by an error.
-     * @param errMsg the error message, empty if the user canceled the loading voluntarily.
+     * \a errMsg the error message, empty if the user canceled the loading voluntarily.
      */
     void canceled(const QString &errMsg);
 
     /*!
      * Emitted by the part when url() changes
-     * @since 4.10
+     * \since 4.10
      */
     void urlChanged(const QUrl &url);
 
@@ -252,13 +256,10 @@ protected:
      * If this method returns true the part emits completed(),
      * otherwise it emits canceled().
      *
-     * @see completed(), canceled()
+     * \sa completed(), canceled()
      */
     virtual bool openFile();
 
-    /*!
-     * @internal
-     */
     void abortLoad();
 
     /*!
@@ -267,7 +268,7 @@ protected:
      * This is the usual behavior in 99% of applications.
      * Reimplement if you don't like it - test for event->activated()!
      *
-     * @note This is done with GUIActivateEvent and not with
+     * \note This is done with GUIActivateEvent and not with
      * PartActivateEvent because it's handled by the main window
      * (which gets the event after the PartActivateEvent events have been sent).
      */
@@ -281,7 +282,7 @@ protected:
     /*!
      * Returns the local file path associated with this part.
      *
-     * @note The result will only be valid if openUrl() or
+     * \note The result will only be valid if openUrl() or
      * setLocalFilePath() has previously been called.
      */
     QString localFilePath() const;

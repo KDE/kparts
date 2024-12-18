@@ -28,9 +28,11 @@ class StatusBarItem;
 class StatusBarExtensionPrivate;
 
 /*!
- * @class StatusBarExtension statusbarextension.h <KParts/StatusBarExtension>
+ * \class KParts::StatusBarExtension
+ * \inheaderfile KParts/StatusBarExtension
+ * \inmodule KParts
  *
- * @short An extension for KParts that allows more sophisticated statusbar handling
+ * \brief An extension for KParts that allows more sophisticated statusbar handling.
  *
  * Every part can use this class to customize the statusbar as long as it is active.
  * Add items via addStatusBarItem and remove an item with removeStatusBarItem.
@@ -43,7 +45,14 @@ class KPARTS_EXPORT StatusBarExtension : public QObject
     Q_OBJECT
 
 public:
+    /*!
+     *
+     */
     explicit StatusBarExtension(KParts::Part *parent);
+
+    /*!
+     *
+     */
     explicit StatusBarExtension(KParts::ReadOnlyPart *parent); // KF6: REMOVE
     ~StatusBarExtension() override;
 
@@ -58,15 +67,18 @@ public:
      * but you can create a KStatusBarLabel with a dummy id instead, and use
      * it directly in order to get the same look and feel.
      *
-     * @param widget the widget to add
-     * @param stretch the stretch factor. 0 for a minimum size.
-     * @param permanent passed to QStatusBar::addWidget as the "permanent" bool.
+     * \a widget the widget to add
+     *
+     * \a stretch the stretch factor. 0 for a minimum size.
+     *
+     * \a permanent passed to QStatusBar::addWidget as the "permanent" bool.
+     *
      * Note that the item isn't really permanent though, it goes away when
      * the part is unactivated. This simply controls whether temporary messages
-     * hide the @p widget, and whether it's added to the left or to the right side.
+     * hide the \a widget, and whether it's added to the left or to the right side.
      *
-     * @Note that the widget does not technically become a child of the
-     *       StatusBarExtension in a QObject sense. However, it @em will be deleted
+     * \note that the widget does not technically become a child of the
+     *       StatusBarExtension in a QObject sense. However, it will be deleted
      *       when the StatusBarExtension is deleted.
      *
      * IMPORTANT: do NOT add any items immediately after constructing the extension.
@@ -80,8 +92,8 @@ public:
     void removeStatusBarItem(QWidget *widget);
 
     /*!
-     * @return the statusbar of the KMainWindow in which this part is currently embedded.
-     * WARNING: this could return 0L
+     * Returns the statusbar of the KMainWindow in which this part is currently embedded.
+     * This can return \c nullptr
      */
     QStatusBar *statusBar() const;
 
@@ -95,12 +107,11 @@ public:
     void setStatusBar(QStatusBar *status);
 
     /*!
-     * Queries @p obj for a child object which inherits from this
+     * Queries \a obj for a child object which inherits from this
      * StatusBarExtension class. Convenience method.
      */
     static StatusBarExtension *childObject(QObject *obj);
 
-    /*! @internal */
     bool eventFilter(QObject *watched, QEvent *ev) override;
 
 private:

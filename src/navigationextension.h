@@ -32,9 +32,11 @@ namespace KParts
 class NavigationExtensionPrivate;
 
 /*!
- * @class NavigationExtension navigationextension.h <KParts/NavigationExtension>
+ * \class KParts::NavigationExtension
+ * \inheaderfile KParts/NavigationExtension
+ * \inmodule KParts
  *
- * @short An extension to  KParts::ReadOnlyPart, which allows a better integration of parts
+ * \brief An extension to  KParts::ReadOnlyPart, which allows a better integration of parts
  * with browsers (in particular Konqueror).
  *
  * Remember that ReadOnlyPart only has openUrl(QUrl) and a few arguments() but not much more.
@@ -58,14 +60,18 @@ class NavigationExtensionPrivate;
  * The following standard actions are defined by the host of the view:
  *
  * [selection-dependent actions]
- * @li @p cut : Copy selected items to clipboard and store 'not cut' in clipboard.
- * @li @p copy : Copy selected items to clipboard and store 'cut' in clipboard.
- * @li @p paste : Paste clipboard into view URL.
- * @li @p pasteTo(const QUrl &) : Paste clipboard into given URL.
- * @li @p searchProvider : Lookup selected text at default search provider
+ * \list
+ * \li cut : Copy selected items to clipboard and store 'not cut' in clipboard.
+ * \li copy : Copy selected items to clipboard and store 'cut' in clipboard.
+ * \li paste : Paste clipboard into view URL.
+ * \li pasteTo(const QUrl &) : Paste clipboard into given URL.
+ * \li searchProvider : Lookup selected text at default search provider
+ * \endlist
  *
  * [normal actions]
- * @li None anymore.
+ * \list
+ * \li None anymore.
+ * \endlist
  *
  *
  * The view defines a slot with the name of the action in order to implement the action.
@@ -81,18 +87,23 @@ class NavigationExtensionPrivate;
  * A special case is the configuration slots, not connected to any action directly.
  *
  * [configuration slot]
- * @li @p reparseConfiguration : Re-read configuration and apply it.
- * @li @p disableScrolling: no scrollbars
+ * \list
+ * \li reparseConfiguration : Re-read configuration and apply it.
+ * \li disableScrolling: no scrollbars
+ * \endlist
  */
 class KPARTS_EXPORT NavigationExtension : public QObject
 {
     Q_OBJECT
+    /*!
+     * \property KParts::NavigationExtension::urlDropHandling
+     */
     Q_PROPERTY(bool urlDropHandling READ isURLDropHandlingEnabled WRITE setURLDropHandlingEnabled)
 public:
     /*!
      * Constructor
      *
-     * @param parent The KParts::ReadOnlyPart that this extension ... "extends" :)
+     * \a parent The KParts::ReadOnlyPart that this extension ... "extends" :)
      */
     explicit NavigationExtension(KParts::ReadOnlyPart *parent);
 
@@ -100,24 +111,29 @@ public:
 
     /*!
      * Set of flags passed via the popupMenu signal, to ask for some items in the popup menu.
-     * @see PopupFlags
+     *
+     * \value DefaultPopupItems default value, no additional menu item
+     * \value ShowBookmark show "add to bookmarks" (usually not done on the local filesystem)
+     * \value ShowCreateDirectory show "create directory" (usually only done on the background of the view, or in hierarchical views like directory trees, where
+     * the new dir would be visible)
+     * \value ShowTextSelectionItems set when selecting text, for a popup that only contains text-related items.
+     * \value NoDeletion deletion, trashing and renaming not allowed (e.g. parent dir not writeable). (this is only needed if the protocol itself supports
+     * deletion, unlike e.g. HTTP)
+     * \value IsLink show "Bookmark This Link" and other link-related actions (linkactions merging group)
+     * \value ShowUrlOperations show copy, paste, as well as cut if NoDeletion is not set.
+     * \value ShowPropertiesshow "Properties" action (usually done by directory views)
      */
     enum PopupFlag {
-        DefaultPopupItems = 0x0000, /*!< default value, no additional menu item */
-        ShowBookmark = 0x0008, /*!< show "add to bookmarks" (usually not done on the local filesystem) */
-        ShowCreateDirectory = 0x0010, /*!<  show "create directory" (usually only done on the background of the view, or
-                                       *                      in hierarchical views like directory trees, where the new dir would be visible) */
-        ShowTextSelectionItems = 0x0020, /*!< set when selecting text, for a popup that only contains text-related items. */
-        NoDeletion = 0x0040, /*!< deletion, trashing and renaming not allowed (e.g. parent dir not writeable).
-                              *            (this is only needed if the protocol itself supports deletion, unlike e.g. HTTP) */
-        IsLink = 0x0080, /*!< show "Bookmark This Link" and other link-related actions (linkactions merging group) */
-        ShowUrlOperations = 0x0100, /*!< show copy, paste, as well as cut if NoDeletion is not set. */
-        ShowProperties = 0x200, /*!< show "Properties" action (usually done by directory views) */
+        DefaultPopupItems = 0x0000,
+        ShowBookmark = 0x0008,
+        ShowCreateDirectory = 0x0010,
+        ShowTextSelectionItems = 0x0020,
+        NoDeletion = 0x0040,
+        IsLink = 0x0080,
+        ShowUrlOperations = 0x0100,
+        ShowProperties = 0x200,
     };
 
-    /*!
-     * Stores a combination of #PopupFlag values.
-     */
     Q_DECLARE_FLAGS(PopupFlags, PopupFlag)
 
     /*!
@@ -171,7 +187,7 @@ public:
     void setURLDropHandlingEnabled(bool enable);
 
     /*!
-     * @return the status (enabled/disabled) of an action.
+     * Returns the status (enabled/disabled) of an action.
      * When the enableAction signal is emitted, the browserextension
      * stores the status of the action internally, so that it's possible
      * to query later for the status of the action, using this method.
@@ -179,13 +195,16 @@ public:
     bool isActionEnabled(const char *name) const;
 
     /*!
-     * @return the text of an action, if it was set explicitly by the part.
+     * Returns the text of an action, if it was set explicitly by the part.
      * When the setActionText signal is emitted, the browserextension
      * stores the text of the action internally, so that it's possible
      * to query later for the text of the action, using this method.
      */
     QString actionText(const char *name) const;
 
+    /*!
+     *
+     */
     typedef QMap<QByteArray, QByteArray> ActionSlotMap;
 
     /*!
@@ -205,7 +224,7 @@ public:
      *   extension->metaObject()->slotNames().contains( actionName + "()" )
      * \endcode
      *
-     * (note that @p actionName is the iterator's key value if already
+     * (note that \a actionName is the iterator's key value if already
      *  iterating over the action slot map, returned by this method)
      *
      * Connecting to the slot can be done like this:
@@ -220,7 +239,7 @@ public:
     static ActionSlotMap *actionSlotMap();
 
     /*!
-     * Queries @p obj for a child object which inherits from this
+     * Queries \a obj for a child object which inherits from this
      * BrowserExtension class. Convenience method.
      */
     static NavigationExtension *childObject(QObject *obj);
@@ -255,9 +274,10 @@ Q_SIGNALS:
     void setActionText(const char *name, const QString &text);
 
     /*!
-     * Asks the host (browser) to open @p url.
+     * Asks the host (browser) to open \a url.
+     *
      * To set a reload, the x and y offsets, the service type etc., fill in the
-     * appropriate fields in the @p args structure.
+     * appropriate fields in the \a args structure.
      * Hosts should not connect to this signal but to openUrlRequestDelayed().
      */
     void openUrlRequest(const QUrl &url, const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments());
@@ -275,7 +295,7 @@ Q_SIGNALS:
      * queried via KParts::Part::url().
      *
      * This helps the browser to update/create an entry in the history.
-     * The part may @em not emit this signal together with openUrlRequest().
+     * The part may not emit this signal together with openUrlRequest().
      * Emit openUrlRequest() if you want the browser to handle a URL the user
      * asked to open (from within your part/document). This signal however is
      * useful if you want to handle URLs all yourself internally, while still
@@ -288,7 +308,7 @@ Q_SIGNALS:
     void openUrlNotify();
 
     /*!
-     * Updates the URL shown in the browser's location bar to @p url.
+     * Updates the URL shown in the browser's location bar to \a url.
      */
     void setLocationBarUrl(const QString &url);
 
@@ -298,7 +318,7 @@ Q_SIGNALS:
     void setIconUrl(const QUrl &url);
 
     /*!
-     * Asks the hosting browser to open a new window for the given @p url
+     * Asks the hosting browser to open a new window for the given \a url
      * and return a reference to the content part.
      */
     void createNewWindow(const QUrl &url);
@@ -313,20 +333,24 @@ Q_SIGNALS:
      */
     void loadingProgress(int percent);
     /*!
-     * @see loadingProgress
+     * \sa loadingProgress
      */
     void speedProgress(int bytesPerSecond);
 
     void infoMessage(const QString &);
 
     /*!
-     * Emit this to make the browser show a standard popup menu for the files @p items.
+     * Emit this to make the browser show a standard popup menu for the files \a items.
      *
-     * @param global global coordinates where the popup should be shown
-     * @param items list of file items which the popup applies to
-     * @param args OpenUrlArguments, mostly for metadata here
-     * @param flags enables/disables certain builtin actions in the popupmenu
-     * @param actionGroups named groups of actions which should be inserted into the popup, see ActionGroupMap
+     * \a global global coordinates where the popup should be shown
+     *
+     * \a items list of file items which the popup applies to
+     *
+     * \a args OpenUrlArguments, mostly for metadata here
+     *
+     * \a flags enables/disables certain builtin actions in the popupmenu
+     *
+     * \a actionGroups named groups of actions which should be inserted into the popup, see ActionGroupMap
      */
     void popupMenu(const QPoint &global,
                    const KFileItemList &items,
@@ -335,17 +359,22 @@ Q_SIGNALS:
                    const KParts::NavigationExtension::ActionGroupMap &actionGroups = ActionGroupMap());
 
     /*!
-     * Emit this to make the browser show a standard popup menu for the given @p url.
+     * Emit this to make the browser show a standard popup menu for the given \a url.
      *
      * Give as much information about this URL as possible,
-     * like @p args.mimeType and the file type @p mode
+     * like \a args.mimeType and the file type \a mode
      *
-     * @param global global coordinates where the popup should be shown
-     * @param url the URL this popup applies to
-     * @param mode the file type of the url (S_IFREG, S_IFDIR...)
-     * @param args OpenUrlArguments, set the mimetype of the URL using setMimeType()
-     * @param flags enables/disables certain builtin actions in the popupmenu
-     * @param actionGroups named groups of actions which should be inserted into the popup, see ActionGroupMap
+     * \a global global coordinates where the popup should be shown
+     *
+     * \a url the URL this popup applies to
+     *
+     * \a mode the file type of the url (S_IFREG, S_IFDIR...)
+     *
+     * \a args OpenUrlArguments, set the mimetype of the URL using setMimeType()
+     *
+     * \a flags enables/disables certain builtin actions in the popupmenu
+     *
+     * \a actionGroups named groups of actions which should be inserted into the popup, see ActionGroupMap
      */
     void popupMenu(const QPoint &global,
                    const QUrl &url,
@@ -384,7 +413,7 @@ Q_SIGNALS:
     void resizeTopLevelWidget(int w, int h);
 
     /*!
-     * Ask the hosting application to focus @p part.
+     * Ask the hosting application to focus \a part.
      */
     void requestFocus(KParts::ReadOnlyPart *part);
 
