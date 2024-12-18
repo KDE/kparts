@@ -1,13 +1,12 @@
-include($KDE_DOCS/global/qt-module-defaults-online.qdocconf)
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = KParts
-description = I am root
+description = Additions to Qt Core
 
 documentationinheaders = true
 
 headerdirs = .
-
-headers.fileextensions = "*.qdoc *.h"
+sourcedirs = .
 
 outputformats = HTML
 
@@ -17,4 +16,18 @@ depends += \
     qtwidgets \
     kcoreaddons \
     kxmlgui \
-    kio
+    kiocore \
+
+qhp.projects            = KParts
+
+qhp.KParts.file                = kcontacts.qhp
+qhp.KParts.namespace           = org.kde.kcontacts.$QT_VERSION_TAG
+qhp.KParts.virtualFolder       = kcontacts
+qhp.KParts.indexTitle          = KParts
+qhp.KParts.indexRoot           =
+
+qhp.KParts.subprojects         = classes
+qhp.KParts.subprojects.classes.title = C++ Classes
+qhp.KParts.subprojects.classes.indexTitle = KParts C++ Classes
+qhp.KParts.subprojects.classes.selectors = class fake:headerfile
+qhp.KParts.subprojects.classes.sortPages = true

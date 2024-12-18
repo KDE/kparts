@@ -21,7 +21,7 @@ Q_NAMESPACE_EXPORT(KPARTS_EXPORT)
 /*!
  * Enum for standardized capabilities of KParts
  *
- * @code
+ * \code
  * {
  *  "KPlugin": {...},
  *  "KParts": {
@@ -31,9 +31,11 @@ Q_NAMESPACE_EXPORT(KPARTS_EXPORT)
  *      "InitialPreference": 42
  *  }
  * }
- * @endcode
+ * \endcode
  *
- * \since KParts 6.4
+ * \value ReadOnly
+ * \value ReadWrite
+ * \value BrowserView
  */
 enum class PartCapability {
     ReadOnly = 1,
@@ -89,9 +91,9 @@ KPARTS_EXPORT PartCapabilities partCapabilities(const KPluginMetaData &data);
  * and of user preference (stored in mimeapps.list).
  *
  * To load a part from one of the KPluginMetaData instances returned here,
- * use \ref instantiatePart()
+ * use instantiatePart()
  *
- * \since KParts 5.69
+ * \since 5.69
  */
 KPARTS_EXPORT QList<KPluginMetaData> partsForMimeType(const QString &mimeType);
 
@@ -116,7 +118,7 @@ KPARTS_EXPORT QList<KPluginMetaData> partsForMimeType(const QString &mimeType);
  *
  * Returns a Result object which contains the plugin instance and potentially error information
  *
- * \since KParts 5.100
+ * \since 5.100
  */
 template<typename T>
 static KPluginFactory::Result<T>
@@ -152,12 +154,17 @@ instantiatePart(const KPluginMetaData &data, QWidget *parentWidget = nullptr, QO
  * }
  * \endcode
  *
- * \a T The interface for which an object should be created. The object will inherit @p T.
+ * \a T The interface for which an object should be created. The object will inherit \a T.
+ *
  * \a mimeType The mimetype for which we need a KParts.
+ *
  * \a parentWidget The parent widget for the part's widget.
+ *
  * \a parent The parent of the part.
+ *
  * Returns a Result object which contains the plugin instance and potentially error information
- * \since KParts 5.100
+ *
+ * \since 5.100
  */
 template<class T>
 static KPluginFactory::Result<T>

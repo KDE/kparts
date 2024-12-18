@@ -37,12 +37,12 @@ public:
     ~GUIActivateEvent() override;
 
     /*!
-     * ?
+     *
      */
     bool activated() const;
 
     /*!
-     * ?
+     *
      */
     static bool test(const QEvent *event);
 

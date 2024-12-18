@@ -31,11 +31,13 @@ class GUIActivateEvent;
  * \brief Base class for parts.
  *
  * A "part" is a GUI component, featuring:
- * @li A widget embeddedable in any application.
- * @li GUI elements that will be merged in the "host" user interface
+ * \list
+ * \li A widget embeddedable in any application.
+ * \li GUI elements that will be merged in the "host" user interface
  * (menubars, toolbars... ).
+ * \endlist
  *
- * <b>About the widget:</b>\n
+ * \section1 About the widget:
  *
  * Note that KParts::Part does not inherit QWidget.
  * This is due to the fact that the "visual representation"
@@ -43,7 +45,7 @@ class GUIActivateEvent;
  * That's why when implementing your KParts::Part (or derived)
  * you should call KParts::Part::setWidget() in your constructor.
  *
- * <b>About the GUI elements:</b>\n
+ * \section1 About the GUI elements:
  *
  * Those elements trigger actions, defined by the part ( action()).
  * The layout of the actions in the GUI is defined by an XML file ( setXMLFile()).
@@ -60,25 +62,23 @@ class KPARTS_EXPORT Part : public QObject, public PartBase
 
 public:
     /*!
-     *  Constructor.
+     * Constructor.
      *
-     *  @param parent Parent object of the part.
-     *  @param data KPluginMetaData associated with this part, see Part::metaData()
+     * \a parent Parent object of the part.
+     *
+     * \a data KPluginMetaData associated with this part, see Part::metaData()
      */
     explicit Part(QObject *parent = nullptr, const KPluginMetaData &data = {});
 
-    /*!
-     *  Destructor.
-     */
     ~Part() override;
 
     /*!
-     * @return The widget defined by this part, set by setWidget().
+     * Returns the widget defined by this part, set by setWidget().
      */
     virtual QWidget *widget();
 
     /*!
-     * @internal
+     * \internal
      * Used by the part manager.
      */
     virtual void setManager(PartManager *manager);
@@ -113,13 +113,15 @@ public:
      * This is called by the part manager to ask whether a part should be activated
      * when clicking somewhere. In most cases the default implementation is enough.
      * Reimplement this if your part has child parts in some areas (like in khtml or koffice)
-     * @param widget the part widget being clicked - usually the same as widget(), except in koffice.
-     * @param globalPos the mouse coordinates in global coordinates
+     *
+     * \a widget the part widget being clicked - usually the same as widget(), except in koffice.
+     *
+     * \a globalPos the mouse coordinates in global coordinates
      */
     virtual Part *hitTest(QWidget *widget, const QPoint &globalPos);
 
     /*!
-     * @since 5.77
+     * \since 5.77
      */
     KPluginMetaData metaData() const;
 
@@ -128,8 +130,8 @@ Q_SIGNALS:
      * Emitted by the part, to set the caption of the window(s)
      * hosting this part
      *
-     * @note this signal has only an effect on the window title if window title
-     *       handling is enabled @see KParts::MainWindow::setWindowTitleHandling
+     * \note this signal has only an effect on the window title if window title
+     *       handling is enabled, see KParts::MainWindow::setWindowTitleHandling
      */
     void setWindowCaption(const QString &caption);
     /*!
@@ -147,7 +149,7 @@ protected:
     virtual void setWidget(QWidget *widget);
 
     /*!
-     * @internal
+     * \internal
      */
     void customEvent(QEvent *event) override;
 
@@ -168,14 +170,12 @@ protected:
 
     /*!
      * Convenience method for KXMLGUIFactory::container.
-     * @return a container widget owned by the Part's GUI.
+     *
+     * Returns a container widget owned by the Part's GUI.
      */
     QWidget *hostContainer(const QString &containerName);
 
 protected Q_SLOTS:
-    /*!
-     * @internal
-     */
     void slotWidgetDestroyed();
 
 protected:

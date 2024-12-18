@@ -20,9 +20,11 @@ namespace KParts
 class OpenUrlArgumentsPrivate;
 
 /*!
- * @class OpenUrlArguments openurlarguments.h <KParts/OpenUrlArguments>
+ * \class KParts::OpenUrlArguments
+ * \inheaderfile KParts/OpenUrlArguments
+ * \inmodule KParts
  *
- * @short OpenUrlArguments is the set of arguments that specify
+ * \brief OpenUrlArguments is the set of arguments that specify
  * how a URL should be opened by KParts::ReadOnlyPart::openUrl().
  *
  * For instance reload() indicates that the url should be loaded
@@ -34,13 +36,16 @@ class OpenUrlArgumentsPrivate;
 class KPARTS_EXPORT OpenUrlArguments
 {
 public:
+    /*!
+     *
+     */
     OpenUrlArguments();
     OpenUrlArguments(const OpenUrlArguments &other);
     OpenUrlArguments &operator=(const OpenUrlArguments &other);
     ~OpenUrlArguments();
 
     /*!
-     * @return true to indicate that the part should reload the URL,
+     * Returns true to indicate that the part should reload the URL,
      * i.e. the cache shouldn't be used (forced reload).
      */
     bool reload() const;
@@ -56,6 +61,10 @@ public:
      * and restored when going back in the history.
      */
     int xOffset() const;
+
+    /*!
+     *
+     */
     void setXOffset(int x);
 
     /*!
@@ -64,12 +73,20 @@ public:
      * and restored when going back in the history.
      */
     int yOffset() const;
+
+    /*!
+     *
+     */
     void setYOffset(int y);
 
     /*!
      * The mimetype to use when opening the url, when known by the calling application.
      */
     QString mimeType() const;
+
+    /*!
+     *
+     */
     void setMimeType(const QString &mime);
 
     /*!
@@ -77,17 +94,26 @@ public:
      * False if the URL should be opened due to an external event, like javascript popups
      * or automatic redirections.
      * This is true by default
-     * @since 4.1
+     * \since 4.1
      */
     bool actionRequestedByUser() const;
+
+    /*!
+     *
+     */
     void setActionRequestedByUser(bool userRequested);
 
     /*!
      * Meta-data to associate with the KIO operation that will be used to open the URL.
+     *
      * This method can be used to add or retrieve metadata.
-     * @see KIO::TransferJob etc.
+     * \sa KIO::TransferJob etc.
      */
     QMap<QString, QString> &metaData();
+
+    /*!
+     *
+     */
     const QMap<QString, QString> &metaData() const;
 
 private:

@@ -43,15 +43,12 @@ public:
      */
     PartBase();
 
-    /*!
-     *  Destructor.
-     */
     ~PartBase() override;
 
     /*!
-     *  Internal method. Called by KParts::Part to specify the parent object for plugin objects.
+     * Internal method. Called by KParts::Part to specify the parent object for plugin objects.
      *
-     * @internal
+     * \internal
      */
     void setPartObject(QObject *object);
     QObject *partObject() const;

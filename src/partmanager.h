@@ -21,9 +21,11 @@ class Part;
 class PartManagerPrivate;
 
 /*!
- * @class PartManager partmanager.h <KParts/PartManager>
+ * \class KParts::PartManager
+ * \inheaderfile KParts/PartManager
+ * \inmodule KParts
  *
- * @short The part manager is an object which knows about a collection of parts
+ * \brief The part manager is an object which knows about a collection of parts
  * (even nested ones) and handles activation/deactivation.
  *
  * Applications that want to embed parts without merging GUIs
@@ -36,25 +38,47 @@ class PartManagerPrivate;
 class KPARTS_EXPORT PartManager : public QObject
 {
     Q_OBJECT
+
+    /*!
+     * \property KParts::PartManager::selectionPolicy
+     */
     Q_PROPERTY(SelectionPolicy selectionPolicy READ selectionPolicy WRITE setSelectionPolicy)
+
+    /*!
+     * \property KParts::PartManager::allowNestedParts
+     */
     Q_PROPERTY(bool allowNestedParts READ allowNestedParts WRITE setAllowNestedParts)
+
+    /*!
+     * \property KParts::PartManager::ignoreScrollBars
+     */
     Q_PROPERTY(bool ignoreScrollBars READ ignoreScrollBars WRITE setIgnoreScrollBars)
 public:
-    /// Selection policy. The default policy of a PartManager is Direct.
+    /*!
+     * Selection policy. The default policy of a PartManager is Direct.
+     *
+     * \value Direct
+     * \value TriState
+     */
     enum SelectionPolicy { Direct, TriState };
     Q_ENUM(SelectionPolicy)
 
     /*!
      * This extends QFocusEvent::Reason with the non-focus-event reasons for partmanager to activate a part.
      * To test for "any focusin reason", use < ReasonLeftClick
-     * NoReason usually means: explicit activation with @ref setActivePart.
+     * NoReason usually means: explicit activation with setActivePart.
+     *
+     * \value ReasonLeftClick
+     * \value ReasonMidClick
+     * \value ReasonRightClick
+     * \value NoReason
      */
     enum Reason { ReasonLeftClick = 100, ReasonMidClick, ReasonRightClick, NoReason };
 
     /*!
      * Constructs a part manager.
      *
-     * @param parent The toplevel widget (window / dialog) the
+     * \a parent The toplevel widget (window / dialog) the
      *               partmanager should monitor for activation/selection
      *               events
      */
@@ -62,10 +86,10 @@ public:
     /*!
      * Constructs a part manager.
      *
-     * @param topLevel The toplevel widget (window / dialog ) the
+     * \a topLevel The toplevel widget (window / dialog ) the
      *                 partmanager should monitor for activation/selection
      *                 events
-     * @param parent   The parent QObject.
+     * \a parent   The parent QObject.
      */
     PartManager(QWidget *topLevel, QObject *parent);
     ~PartManager() override;
@@ -83,7 +107,7 @@ public:
      * Specifies whether the partmanager should handle/allow nested parts
      * or not.
      *
-     *  This is a property the shell has to set/specify. Per
+     * This is a property the shell has to set/specify. Per
      * default we assume that the shell cannot handle nested
      * parts. However in case of a KOffice shell for example we allow
      * nested parts.  A Part is nested (a child part) if its parent
@@ -93,7 +117,7 @@ public:
      */
     void setAllowNestedParts(bool allow);
     /*!
-     * @see setAllowNestedParts
+     * \sa setAllowNestedParts
      */
     bool allowNestedParts() const;
 
@@ -107,43 +131,44 @@ public:
      */
     void setIgnoreScrollBars(bool ignore);
     /*!
-     * @see setIgnoreScrollBars
+     * \sa setIgnoreScrollBars
      */
     bool ignoreScrollBars() const;
 
     /*!
      * Specifies which mouse buttons the partmanager should react upon.
      * By default it reacts on all mouse buttons (LMB/MMB/RMB).
-     * @param buttonMask a combination of Qt::ButtonState values e.g. Qt::LeftButton | Qt::MiddleButton
+     *
+     * \a buttonMask a combination of Qt::ButtonState values e.g. Qt::LeftButton | Qt::MiddleButton
      */
     void setActivationButtonMask(short int buttonMask);
     /*!
-     * @see setActivationButtonMask
+     * \sa setActivationButtonMask
      */
     short int activationButtonMask() const;
 
     /*!
-     * @internal
+     * \internal
      */
     bool eventFilter(QObject *obj, QEvent *ev) override;
 
     /*!
      * Adds a part to the manager.
      *
-     * Sets it to the active part automatically if @p setActive is true (default).
+     * Sets it to the active part automatically if \a setActive is true (default).
      */
     virtual void addPart(Part *part, bool setActive = true);
 
     /*!
      * Removes a part from the manager (this does not delete the object) .
      *
-     * Sets the active part to 0 if @p part is the activePart() .
+     * Sets the active part to 0 if \a part is the activePart() .
      */
     virtual void removePart(Part *part);
 
     /*!
-     * Replaces @p oldPart with @p newPart, and sets @p newPart as active if
-     * @p setActive is true.
+     * Replaces \a oldPart with \a newPart, and sets \a newPart as active if
+     * \a setActive is true.
      * This is an optimised version of removePart + addPart
      */
     virtual void replacePart(Part *oldPart, Part *newPart, bool setActive = true);
@@ -153,7 +178,7 @@ public:
      *
      * The active part receives activation events.
      *
-     * @p widget can be used to specify which widget was responsible for the activation.
+     * \a widget can be used to specify which widget was responsible for the activation.
      * This is important if you have multiple views for a document/part , like in KOffice .
      */
     virtual void setActivePart(Part *part, QWidget *widget = nullptr);
@@ -174,7 +199,7 @@ public:
     const QList<Part *> parts() const;
 
     /*!
-     * Adds the @p topLevel widget to the list of managed toplevel widgets.
+     * Adds the \a topLevel widget to the list of managed toplevel widgets.
      * Usually a PartManager only listens for events (for activation/selection)
      * for one toplevel widget (and its children) , the one specified in the
      * constructor. Sometimes however (like for example when using the KDE dockwidget
@@ -182,31 +207,31 @@ public:
      */
     void addManagedTopLevelWidget(const QWidget *topLevel);
     /*!
-     * Removes the @p topLevel widget from the list of managed toplevel widgets.
-     * @see addManagedTopLevelWidget
+     * Removes the \a topLevel widget from the list of managed toplevel widgets.
+     * \sa addManagedTopLevelWidget
      */
     void removeManagedTopLevelWidget(const QWidget *topLevel);
 
     /*!
-     * @return the reason for the last activePartChanged signal emitted.
-     * @see Reason
+     * Returns the reason for the last activePartChanged signal emitted.
+     * \sa Reason
      */
     int reason() const;
 
 Q_SIGNALS:
     /*!
      * Emitted when a new part has been added.
-     * @see addPart()
+     * \sa addPart()
      **/
     void partAdded(KParts::Part *part);
     /*!
      * Emitted when a part has been removed.
-     * @see removePart()
+     * \sa removePart()
      **/
     void partRemoved(KParts::Part *part);
     /*!
      * Emitted when the active part has changed.
-     * @see setActivePart()
+     * \sa setActivePart()
      **/
     void activePartChanged(KParts::Part *newPart);
 
@@ -219,7 +244,7 @@ protected:
      * the part from sending explicit set focus requests to the client
      * application.
      *
-     * @since 4.10
+     * \since 4.10
      */
     void setIgnoreExplictFocusRequests(bool);
 
@@ -229,14 +254,8 @@ protected Q_SLOTS:
      **/
     void slotObjectDestroyed();
 
-    /*!
-     * @internal
-     */
     void slotWidgetDestroyed();
 
-    /*!
-     * @internal
-     */
     void slotManagedTopLevelWidgetDestroyed();
 
 private:
