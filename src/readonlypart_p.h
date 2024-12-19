@@ -74,12 +74,12 @@ public:
     // Whether we are calling closeUrl() from ~ReadOnlyPart().
     bool m_closeUrlFromDestructor;
 
-    /*!
+    /*
      * Remote (or local) url - the one displayed to the user.
      */
     QUrl m_url;
 
-    /*!
+    /*
      * Local file - the only one the part implementation should deal with.
      */
     QString m_file;

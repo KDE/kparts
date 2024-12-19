@@ -137,6 +137,7 @@ public:
 
     /*!
      * Specifies which mouse buttons the partmanager should react upon.
+     *
      * By default it reacts on all mouse buttons (LMB/MMB/RMB).
      *
      * \a buttonMask a combination of Qt::ButtonState values e.g. Qt::LeftButton | Qt::MiddleButton
@@ -147,9 +148,6 @@ public:
      */
     short int activationButtonMask() const;
 
-    /*!
-     * \internal
-     */
     bool eventFilter(QObject *obj, QEvent *ev) override;
 
     /*!
@@ -200,6 +198,7 @@ public:
 
     /*!
      * Adds the \a topLevel widget to the list of managed toplevel widgets.
+     *
      * Usually a PartManager only listens for events (for activation/selection)
      * for one toplevel widget (and its children) , the one specified in the
      * constructor. Sometimes however (like for example when using the KDE dockwidget

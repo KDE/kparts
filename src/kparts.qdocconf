@@ -16,13 +16,13 @@ depends += \
     qtwidgets \
     kcoreaddons \
     kxmlgui \
-    kiocore \
+    kiocore
 
 qhp.projects            = KParts
 
-qhp.KParts.file                = kcontacts.qhp
-qhp.KParts.namespace           = org.kde.kcontacts.$QT_VERSION_TAG
-qhp.KParts.virtualFolder       = kcontacts
+qhp.KParts.file                = kparts.qhp
+qhp.KParts.namespace           = org.kde.kparts.$QT_VERSION_TAG
+qhp.KParts.virtualFolder       = kparts
 qhp.KParts.indexTitle          = KParts
 qhp.KParts.indexRoot           =
 

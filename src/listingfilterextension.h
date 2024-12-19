@@ -21,7 +21,7 @@ class ReadOnlyPart;
 class ListingFilterExtensionPrivate;
 
 /*!
- * \class KParts/ListingFilterExtension
+ * \class KParts::ListingFilterExtension
  * \inheaderfile KParts/ListingFilterExtension
  *
  * \brief An extension for filtering listings.
@@ -116,7 +116,7 @@ public:
      * Returns true if the part that implements this extension allows
      * the use of multiple filters for the given filtering \a mode.
      *
-     * By default this function returns false.
+     * By default this function returns \c false.
      */
     virtual bool supportsMultipleFilters(FilterMode mode) const;
 

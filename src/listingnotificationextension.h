@@ -23,6 +23,7 @@ class ListingNotificationExtensionPrivate;
 /*!
  * \class KParts::ListingNotificationExtension
  * \inheaderfile KParts/ListingNotificationExtension
+ * \inmodule KParts
  *
  * \brief An extension for receiving listing change notification.
  *

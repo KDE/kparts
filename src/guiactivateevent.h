@@ -33,6 +33,9 @@ class GUIActivateEventPrivate;
 class KPARTS_EXPORT GUIActivateEvent : public QEvent
 {
 public:
+    /*!
+     *
+     */
     GUIActivateEvent(bool activated);
     ~GUIActivateEvent() override;
 

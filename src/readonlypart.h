@@ -64,6 +64,7 @@ class KPARTS_EXPORT ReadOnlyPart : public Part
 public:
     /*!
      * Constructor.
+     *
      * See also Part for the setXXX methods to call.
      */
     explicit ReadOnlyPart(QObject *parent = nullptr, const KPluginMetaData &data = {});
@@ -103,10 +104,9 @@ public Q_SLOTS:
 public:
     /*!
      * Returns the URL currently opened in (or being opened by) this part.
+     *
      * \note The URL is not cleared if openUrl() fails to load the URL.
      *       Call closeUrl() if you need to explicitly reset it.
-     *
-     * Returns the current URL.
      */
     QUrl url() const;
 
@@ -121,7 +121,7 @@ public:
      *
      * Resets the current url() to QUrl().
      *
-     * Returns always true, but the return value exists for reimplementations
+     * Returns always \c true, but the return value exists for reimplementations
      */
     virtual bool closeUrl();
 
@@ -155,15 +155,15 @@ public:
      * \a url the URL representing this data. Although not directly used,
      * every ReadOnlyPart has a URL (see url()), so this simply sets it.
      *
-     * Returns true if the part supports progressive loading and accepts data, false otherwise.
+     * Returns \c true if the part supports progressive loading and accepts data, \c false otherwise.
      */
     bool openStream(const QString &mimeType, const QUrl &url);
 
     /*!
      * Send some data to the part. openStream must have been called previously,
-     * and must have returned true.
+     * and must have returned \c true.
      *
-     * Returns true if the data was accepted by the part. If false is returned,
+     * Returns \c true if the data was accepted by the part. If false is returned,
      * the application should stop sending data, and doesn't have to call closeStream.
      */
     bool writeStream(const QByteArray &data);
@@ -210,6 +210,7 @@ private:
 Q_SIGNALS:
     /*!
      * The part emits this when starting to load data.
+     *
      * If using a KIO::Job, it provides the \a job so that
      * progress information can be shown. Otherwise, \a job is \c nullptr.
      **/
@@ -217,6 +218,7 @@ Q_SIGNALS:
 
     /*!
      * Emit this when you have completed loading data.
+     *
      * Hosting applications will want to know when the process of loading the data
      * is finished, so that they can access the data when everything is loaded.
      **/
@@ -265,6 +267,7 @@ protected:
     /*!
      * Reimplemented from Part, so that the window caption is set to
      * the current URL (decoded) when the part is activated.
+     *
      * This is the usual behavior in 99% of applications.
      * Reimplement if you don't like it - test for event->activated()!
      *

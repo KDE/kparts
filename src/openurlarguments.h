@@ -107,7 +107,7 @@ public:
      * Meta-data to associate with the KIO operation that will be used to open the URL.
      *
      * This method can be used to add or retrieve metadata.
-     * \sa KIO::TransferJob etc.
+     * \sa KIO::TransferJob
      */
     QMap<QString, QString> &metaData();
 

@@ -69,10 +69,10 @@ public:
     static FileInfoExtension *childObject(QObject *obj);
 
     /*!
-     * Returns true if any of the items in the current view of the part that
+     * Returns \c true if any of the items in the current view of the part that
      * implements this extension are selected.
      *
-     * By default this function returns false.
+     * By default this function returns \c false.
      */
     virtual bool hasSelection() const;
 

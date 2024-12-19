@@ -16,6 +16,10 @@ class QWidget;
 class QEvent;
 class QPoint;
 
+/*!
+ * \namespace KParts
+ * \inmodule KParts
+ */
 namespace KParts
 {
 class PartManager;
@@ -148,9 +152,6 @@ protected:
      */
     virtual void setWidget(QWidget *widget);
 
-    /*!
-     * \internal
-     */
     void customEvent(QEvent *event) override;
 
     /*!

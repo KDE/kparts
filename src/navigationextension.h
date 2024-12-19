@@ -203,7 +203,7 @@ public:
     QString actionText(const char *name) const;
 
     /*!
-     *
+     * \typedef KParts::NavigationExtension::ActionSlotMap
      */
     typedef QMap<QByteArray, QByteArray> ActionSlotMap;
 
@@ -251,8 +251,11 @@ public:
 
     /*!
      * Associates a list of actions with a predefined name known by the host's popupmenu:
+     *
      * "editactions" for actions related text editing,
+     *
      * "linkactions" for actions related to hyperlinks,
+     *
      * "partactions" for any other actions provided by the part
      */
     typedef QMap<QString, QList<QAction *>> ActionGroupMap;
@@ -296,13 +299,16 @@ Q_SIGNALS:
      *
      * This helps the browser to update/create an entry in the history.
      * The part may not emit this signal together with openUrlRequest().
+     *
      * Emit openUrlRequest() if you want the browser to handle a URL the user
      * asked to open (from within your part/document). This signal however is
      * useful if you want to handle URLs all yourself internally, while still
      * telling the hosting browser about new opened URLs, in order to provide
      * a proper history functionality to the user.
+     *
      * An example of usage is a html rendering component which wants to emit
      * this signal when a child frame document changed its URL.
+     *
      * Conclusion: you probably want to use openUrlRequest() instead.
      */
     void openUrlNotify();
@@ -337,6 +343,9 @@ Q_SIGNALS:
      */
     void speedProgress(int bytesPerSecond);
 
+    /*!
+     *
+     */
     void infoMessage(const QString &);
 
     /*!
