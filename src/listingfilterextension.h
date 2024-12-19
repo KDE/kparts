@@ -21,7 +21,7 @@ class ReadOnlyPart;
 class ListingFilterExtensionPrivate;
 
 /*!
- * \class KParts/ListingFilterExtension
+ * \class KParts::ListingFilterExtension
  * \inheaderfile KParts/ListingFilterExtension
  *
  * \brief An extension for filtering listings.

@@ -16,6 +16,10 @@ class QWidget;
 class QEvent;
 class QPoint;
 
+/*!
+ * \namespace KParts
+ * \inmodule KParts
+ */
 namespace KParts
 {
 class PartManager;

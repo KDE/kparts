@@ -5,7 +5,7 @@
     \cmakepackage KF6
     \cmakecomponent Parts
 
-    \brief Provides parts
+    \brief Provides parts.
 
     Stuff
 */

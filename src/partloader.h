@@ -49,8 +49,11 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(PartCapabilities)
 
 /*!
  * \namespace KParts::PartLoader
+ * \inheaderfile KParts/PartLoader
+ * \inmodule KParts
  *
- * Helper methods for locating and loading parts.
+ * \brief Helper methods for locating and loading parts.
+ *
  * This is based upon KPluginFactory, but it takes
  * care of querying by mimetype, sorting the available parts by builtin
  * preference and by user preference.

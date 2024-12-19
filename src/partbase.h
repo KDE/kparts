@@ -31,7 +31,7 @@ class PartBasePrivate;
  * \inmodule KParts
  * \inheaderfile KParts/PartBase
  *
- * \short Base class for all parts.
+ * \brief Base class for all parts.
  */
 class KPARTS_EXPORT PartBase : virtual public KXMLGUIClient
 {
