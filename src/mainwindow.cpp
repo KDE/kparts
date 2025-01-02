@@ -114,7 +114,7 @@ void MainWindow::createShellGUI(bool create)
     d->m_bShellGUIActivated = create;
     if (create) {
         if (isHelpMenuEnabled() && !d->m_helpMenu) {
-            d->m_helpMenu = new KHelpMenu(this, KAboutData::applicationData(), true);
+            d->m_helpMenu = new KHelpMenu(this, KAboutData::applicationData());
 
             KActionCollection *actions = actionCollection();
             QAction *helpContentsAction = d->m_helpMenu->action(KHelpMenu::menuHelpContents);
