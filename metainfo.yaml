@@ -12,7 +12,7 @@ portingAid: false
 deprecated: false
 release: true
 libraries:
- - cmake: "KF6::Parts"
+    - cmake: "KF6::Parts"
 cmakename: KF6Parts
 
 public_lib: true
