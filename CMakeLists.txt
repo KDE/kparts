@@ -35,7 +35,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX KPARTS
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6PartsConfigVersion.cmake"
                         SOVERSION 6)
 
-set(REQUIRED_QT_VERSION 6.6.0)
+set(REQUIRED_QT_VERSION 6.7.0)
 find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Widgets Xml)
 
 find_package(KF6Config ${KF_DEP_VERSION} REQUIRED)
