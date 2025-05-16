@@ -10,6 +10,8 @@ sourcedirs += .
 
 outputformats = HTML
 
+navigation.landingpage = "KParts"
+
 depends += \
     qtcore \
     qtgui \
