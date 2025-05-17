@@ -112,16 +112,16 @@ public:
     /*!
      * Set of flags passed via the popupMenu signal, to ask for some items in the popup menu.
      *
-     * \value DefaultPopupItems default value, no additional menu item
-     * \value ShowBookmark show "add to bookmarks" (usually not done on the local filesystem)
-     * \value ShowCreateDirectory show "create directory" (usually only done on the background of the view, or in hierarchical views like directory trees, where
+     * \value DefaultPopupItems Default value, no additional menu item
+     * \value ShowBookmark Show "add to bookmarks" (usually not done on the local filesystem)
+     * \value ShowCreateDirectory Show "create directory" (usually only done on the background of the view, or in hierarchical views like directory trees, where
      * the new dir would be visible)
-     * \value ShowTextSelectionItems set when selecting text, for a popup that only contains text-related items.
-     * \value NoDeletion deletion, trashing and renaming not allowed (e.g. parent dir not writeable). (this is only needed if the protocol itself supports
+     * \value ShowTextSelectionItems Set when selecting text, for a popup that only contains text-related items.
+     * \value NoDeletion Deletion, trashing and renaming not allowed (e.g. parent dir not writeable). (this is only needed if the protocol itself supports
      * deletion, unlike e.g. HTTP)
-     * \value IsLink show "Bookmark This Link" and other link-related actions (linkactions merging group)
-     * \value ShowUrlOperations show copy, paste, as well as cut if NoDeletion is not set.
-     * \value ShowPropertiesshow "Properties" action (usually done by directory views)
+     * \value IsLink Show "Bookmark This Link" and other link-related actions (linkactions merging group)
+     * \value ShowUrlOperations Show copy, paste, as well as cut if NoDeletion is not set.
+     * \value ShowProperties Show "Properties" action (usually done by directory views)
      */
     enum PopupFlag {
         DefaultPopupItems = 0x0000,
@@ -280,7 +280,7 @@ Q_SIGNALS:
      * Asks the host (browser) to open \a url.
      *
      * To set a reload, the x and y offsets, the service type etc., fill in the
-     * appropriate fields in the \a args structure.
+     * appropriate fields in the \a arguments structure.
      * Hosts should not connect to this signal but to openUrlRequestDelayed().
      */
     void openUrlRequest(const QUrl &url, const KParts::OpenUrlArguments &arguments = KParts::OpenUrlArguments());
@@ -371,7 +371,7 @@ Q_SIGNALS:
      * Emit this to make the browser show a standard popup menu for the given \a url.
      *
      * Give as much information about this URL as possible,
-     * like \a args.mimeType and the file type \a mode
+     * like \a arguments.mimeType and the file type \a mode
      *
      * \a global global coordinates where the popup should be shown
      *
@@ -379,7 +379,7 @@ Q_SIGNALS:
      *
      * \a mode the file type of the url (S_IFREG, S_IFDIR...)
      *
-     * \a args OpenUrlArguments, set the mimetype of the URL using setMimeType()
+     * \a arguments OpenUrlArguments, set the mimetype of the URL using setMimeType()
      *
      * \a flags enables/disables certain builtin actions in the popupmenu
      *
