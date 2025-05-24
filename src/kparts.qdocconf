@@ -33,3 +33,5 @@ qhp.KParts.subprojects.classes.title = C++ Classes
 qhp.KParts.subprojects.classes.indexTitle = KParts C++ Classes
 qhp.KParts.subprojects.classes.selectors = class fake:headerfile
 qhp.KParts.subprojects.classes.sortPages = true
+
+tagfile = kparts.tags
