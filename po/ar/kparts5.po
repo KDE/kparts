@@ -116,7 +116,7 @@ msgstr "الاسم: %1"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "This is the file name suggested by the server"
-msgstr "هذا هو الاسم الذي اقترحه الخادوم"
+msgstr "هذا هو الاسم الذي اقترحه الخادم"
 
 #: browserrun.cpp:333
 #, kde-format
