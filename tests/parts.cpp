@@ -24,7 +24,7 @@
 
 #include <KLocalizedString>
 #include <QDebug>
-#include <qstringliteral.h>
+#include <QStringLiteral>
 
 KPluginMetaData fakeMetadata(const QString &id, const QString &name)
 {
