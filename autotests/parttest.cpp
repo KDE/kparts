@@ -268,9 +268,11 @@ void PartTest::testActivationEvent()
 {
     TestPart *part = new TestPart(nullptr, nullptr);
     QVERIFY(!part->m_guiActivationEventTriggered);
-    part->event(new QEvent(QEvent::MouseButtonPress));
+    QEvent pressEvent(QEvent::MouseButtonPress);
+    part->event(&pressEvent);
     QVERIFY(!part->m_guiActivationEventTriggered);
-    part->event(new KParts::GUIActivateEvent(true));
+    KParts::GUIActivateEvent activateEvent(true);
+    part->event(&activateEvent);
     QVERIFY(part->m_guiActivationEventTriggered);
     delete part;
 }
