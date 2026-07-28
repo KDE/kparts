@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 09:00+0000\n"
-"PO-Revision-Date: 2026-07-26 12:06+0200\n"
+"PO-Revision-Date: 2026-07-27 23:52+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Poedit 3.9\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -160,12 +160,12 @@ msgstr "KPluginFactory nemohla načíst modul: %1"
 #: partloader.cpp:162 partloader.cpp:220
 #, kde-format
 msgid "No part was found for mimeType %1"
-msgstr "Pro typ MIME %1 nebyla nalezena žádná část."
+msgstr "Pro typ MIME %1 nebyla nalezena žádná část"
 
 #: partloader.cpp:166
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
-msgstr "Pro typ MIME %1 nebylo možné vytvořit žádnou část."
+msgstr "Pro typ MIME %1 nebylo možné vytvořit žádnou část"
 
 #: partloader.cpp:203
 #, kde-format
