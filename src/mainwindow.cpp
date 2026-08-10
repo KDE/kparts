@@ -11,10 +11,8 @@
 #include "guiactivateevent.h"
 #include "part.h"
 
-#include <KAboutData>
 #include <KActionCollection>
 #include <KConfigGroup>
-#include <KEditToolBar>
 #include <KHelpMenu>
 #include <KSharedConfig>
 #include <KXMLGUIFactory>

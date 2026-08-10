@@ -8,7 +8,6 @@
 
 #include "partmanager.h"
 
-#include "guiactivateevent.h"
 #include "kparts_logging.h"
 #include "part.h"
 #include "partactivateevent.h"

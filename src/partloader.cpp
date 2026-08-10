@@ -11,7 +11,6 @@
 
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <KService>
 #include <KSharedConfig>
 
 #include <QJsonArray>

@@ -15,7 +15,6 @@
 #include <QTextEdit>
 #include <QTextStream>
 
-#include <KAboutData>
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KPluginFactory>

@@ -8,7 +8,6 @@
 #include "partviewer.h"
 
 #include <KActionCollection>
-#include <KActionMenu>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <partloader.h>
