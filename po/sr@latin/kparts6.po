@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kparts5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2026-08-12 00:42+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -20,16 +20,6 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Toplica Tanasković,Časlav Ilić"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
 
 #: navigationextension.cpp:196
 #, kde-format
@@ -46,17 +36,17 @@ msgstr "Pretraga na Internetu"
 msgid "&Search"
 msgstr "&Traži"
 
-#: partloader.cpp:152
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:156
+#: partloader.cpp:155
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr ""
 
-#: partloader.cpp:160
+#: partloader.cpp:159
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr ""
@@ -79,6 +69,14 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Zatvori dokument"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Toplica Tanasković,Časlav Ilić"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
 
 #~ msgctxt "@label Type of file"
 #~ msgid "Type: %1"

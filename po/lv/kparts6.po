@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2026-08-12 00:42+0000\n"
 "PO-Revision-Date: 2024-03-04 17:53+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -25,16 +25,6 @@ msgstr ""
 "2);\n"
 "X-Launchpad-Export-Date: 2007-11-22 17:44+0000\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Viesturs Zariņš, Māris Nartišs, Toms Trasūns"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "viesturs.zarins@mi.lu.lv, maris.kde@gmail.com, toms.trasuns@posteo.net"
 
 #: navigationextension.cpp:196
 #, kde-format
@@ -51,17 +41,17 @@ msgstr "Meklēšana internetā"
 msgid "&Search"
 msgstr "&Meklēt"
 
-#: partloader.cpp:152
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "„KPluginFactory“ nevarēja ielādēt spraudni: %1"
 
-#: partloader.cpp:156
+#: partloader.cpp:155
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "MIME tipam „%1“ nav atrasta neviena daļa"
 
-#: partloader.cpp:160
+#: partloader.cpp:159
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "MIME tipam „%1“ nevarēja attiecināt nevienu daļu"
@@ -84,6 +74,15 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Aizvērt dokumentu"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Viesturs Zariņš, Māris Nartišs, Toms Trasūns"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "viesturs.zarins@mi.lu.lv, maris.kde@gmail.com, toms.trasuns@posteo.net"
 
 #~ msgctxt "@label Type of file"
 #~ msgid "Type: %1"

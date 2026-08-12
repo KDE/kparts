@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2026-08-12 00:42+0000\n"
 "PO-Revision-Date: 2023-02-15 16:13+0000\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -106,16 +106,6 @@ msgstr ""
 "X-POFile-SpellExtra: Reconstrói ii Del iii querê\n"
 "X-POFile-IgnoreConsistency: Update\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "José Nuno Pires"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "zepires@gmail.com"
-
 #: navigationextension.cpp:196
 #, kde-format
 msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
@@ -131,17 +121,17 @@ msgstr "Pesquisa na Internet"
 msgid "&Search"
 msgstr "&Procurar"
 
-#: partloader.cpp:152
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "Não foi possível ao KPluginFactory carregar o 'plugin': %1"
 
-#: partloader.cpp:156
+#: partloader.cpp:155
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Não foi encontrada nenhuma componente para o tipo MIME %1"
 
-#: partloader.cpp:160
+#: partloader.cpp:159
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Não foi possível instanciar nenhum componente para o tipo MIME %1"
@@ -164,6 +154,14 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Fechar o Documento"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "José Nuno Pires"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "zepires@gmail.com"
 
 #~ msgctxt "@label Type of file"
 #~ msgid "Type: %1"

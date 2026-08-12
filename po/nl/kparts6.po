@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2026-08-12 00:42+0000\n"
 "PO-Revision-Date: 2023-01-24 16:51+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -30,21 +30,6 @@ msgstr ""
 "kftabdlg.cpp kftypes.cpp kfwin.cpp main.cpp mkfdird.cpp mkfind.cpp\n"
 "X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-"Rinse de Vries - 2000 t/m 2008,Wilbert Berendsen - 2003; 2004,Bram "
-"Schoenmakers - 2004 t/m 2007,Tom Albers - 2004,Tijmen Baarda - 2005,Sander "
-"Koning - 2005, Freek de Kruijf - 2009 t/m 2012; 2020 t/m 2023"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"rinsedevries@kde.nl,wbsoft@xs4all.nl,bramschoenmakers@kde.nl,tomalbers@kde."
-"nl,tijmenbaarda@kde.nl,,freekdekruijf@kde.nl"
 
 #: navigationextension.cpp:196
 #, kde-format
@@ -61,17 +46,17 @@ msgstr "Internet zoekactie"
 msgid "&Search"
 msgstr "&Zoeken"
 
-#: partloader.cpp:152
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "KPluginFactory kon de plug-in '%1' niet laden"
 
-#: partloader.cpp:156
+#: partloader.cpp:155
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Geen onderdeel gevonden voor mimeType %1."
 
-#: partloader.cpp:160
+#: partloader.cpp:159
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Geen onderdeel kon bekrachtigd worden voor mimeType %1"
@@ -94,6 +79,19 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Document sluiten"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Rinse de Vries - 2000 t/m 2008,Wilbert Berendsen - 2003; 2004,Bram "
+#~ "Schoenmakers - 2004 t/m 2007,Tom Albers - 2004,Tijmen Baarda - 2005,"
+#~ "Sander Koning - 2005, Freek de Kruijf - 2009 t/m 2012; 2020 t/m 2023"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "rinsedevries@kde.nl,wbsoft@xs4all.nl,bramschoenmakers@kde.nl,"
+#~ "tomalbers@kde.nl,tijmenbaarda@kde.nl,,freekdekruijf@kde.nl"
 
 #~ msgctxt "@label Type of file"
 #~ msgid "Type: %1"

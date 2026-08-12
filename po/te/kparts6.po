@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2026-08-12 00:42+0000\n"
 "PO-Revision-Date: 2013-11-04 23:55+0630\n"
 "Last-Translator: Bhuvan Krishna <bhuvan@swecha.org>\n"
 "Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
@@ -23,18 +23,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "విజయ్ కిరణ్ కముజు,కృష్ణబాబు కె, భువన్ కృష్ణ, జి వి యస్ గిరి, శ్రీ కళ్యన్న్, ననిన్"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"infyquest@gmail.com,kkrothap@redhat.com,bhuvan@swecha.org,gvs.giri@swecha."
-"net,sreekalyan3@gmail.com,naveen@swecha.net"
 
 #: navigationextension.cpp:196
 #, kde-format
@@ -51,18 +39,18 @@ msgstr "ఇంటర్ నెట్ అన్వెషణ"
 msgid "&Search"
 msgstr "(&S) అన్వెషణ"
 
-#: partloader.cpp:152
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:156
+#: partloader.cpp:155
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part was found for mimeType %1"
 msgstr "%1 కొరకు హెండ్లర్ కనపడలేదు."
 
-#: partloader.cpp:160
+#: partloader.cpp:159
 #, fuzzy, kde-format
 #| msgid "No handler found for %1."
 msgid "No part could be instantiated for mimeType %1"
@@ -86,6 +74,16 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "పత్రం మూసివేయి"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "విజయ్ కిరణ్ కముజు,కృష్ణబాబు కె, భువన్ కృష్ణ, జి వి యస్ గిరి, శ్రీ కళ్యన్న్, ననిన్"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "infyquest@gmail.com,kkrothap@redhat.com,bhuvan@swecha.org,gvs.giri@swecha."
+#~ "net,sreekalyan3@gmail.com,naveen@swecha.net"
 
 #~ msgctxt "@label Type of file"
 #~ msgid "Type: %1"

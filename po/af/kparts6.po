@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4 stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2026-08-12 00:42+0000\n"
 "PO-Revision-Date: 2006-01-12 16:33+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -12,16 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Frikkie Thirion,Juanita Franz "
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "frix@expertron.co.za,juanita.franz@vr-web.de "
 
 #: navigationextension.cpp:196
 #, fuzzy, kde-format
@@ -39,17 +29,17 @@ msgstr "Internet Soektog"
 msgid "&Search"
 msgstr "Soek"
 
-#: partloader.cpp:152
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:156
+#: partloader.cpp:155
 #, fuzzy, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Geen handteerder gevind vir %1!"
 
-#: partloader.cpp:160
+#: partloader.cpp:159
 #, fuzzy, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Geen handteerder gevind vir %1!"
@@ -72,6 +62,14 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Maak Dokument toe"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Frikkie Thirion,Juanita Franz "
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "frix@expertron.co.za,juanita.franz@vr-web.de "
 
 #, fuzzy
 #~| msgid "Redo: %1"

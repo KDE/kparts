@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2026-08-12 00:42+0000\n"
 "PO-Revision-Date: 2024-05-25 23:53\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -29,18 +29,6 @@ msgstr ""
 "X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/kparts/kparts6.po\n"
 "X-Crowdin-File-ID: 10314\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Дарафей Праляскоўскі, Андрэйчанка Анастасія, Сталярчук Іван, Antikruk"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"komzpa@licei2.com, bashybuzuk@tut.by, ivan.telkontar@gmail.com, "
-"nashtlumach@gmail.com"
-
 #: navigationextension.cpp:196
 #, kde-format
 msgid "<qt>Do you want to search the Internet for <b>%1</b>?</qt>"
@@ -56,17 +44,17 @@ msgstr "Пошук у інтэрнэце"
 msgid "&Search"
 msgstr "&Пошук"
 
-#: partloader.cpp:152
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "KPluginFactory не ўдалося загрузіць убудову: %1"
 
-#: partloader.cpp:156
+#: partloader.cpp:155
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Не ўдалося знайсці part для mimeType %1"
 
-#: partloader.cpp:160
+#: partloader.cpp:159
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Немагчыма стварыць part для mimeType %1"
@@ -87,6 +75,17 @@ msgstr "Дакумент \"%1\" быў зменены. Захаваць змен
 #, kde-format
 msgid "Close Document"
 msgstr "Закрыць дакумент"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Дарафей Праляскоўскі, Андрэйчанка Анастасія, Сталярчук Іван, Antikruk"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "komzpa@licei2.com, bashybuzuk@tut.by, ivan.telkontar@gmail.com, "
+#~ "nashtlumach@gmail.com"
 
 #, fuzzy
 #~| msgid "Redo: %1"

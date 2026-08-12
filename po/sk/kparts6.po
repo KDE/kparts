@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2026-08-12 00:42+0000\n"
 "PO-Revision-Date: 2023-03-11 16:31+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -22,19 +22,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 22.12.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr ""
-"Stanislav Višňovský,Richard Frič,Michal Gašpar,Jakub Vatrt,Michal Šulek"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ""
-"visnovsky@kde.org,Richard.Fric@kdemail.net,miguel@portugal.sk,vatrtj@gmail."
-"com,misurel@gmail.com"
 
 #: navigationextension.cpp:196
 #, kde-format
@@ -51,17 +38,17 @@ msgstr "Hľadanie na Internete"
 msgid "&Search"
 msgstr "&Hľadať"
 
-#: partloader.cpp:152
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr "Nástroju KPluginFactory sa nepodarilo načítať zásuvný modul: %1"
 
-#: partloader.cpp:156
+#: partloader.cpp:155
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "Nenašla sa žiadna časť pre mimeType %1"
 
-#: partloader.cpp:160
+#: partloader.cpp:159
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
 msgstr "Nenašla sa žiadna časť pre mimeType %1"
@@ -84,6 +71,17 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Zavrieť dokument"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Stanislav Višňovský,Richard Frič,Michal Gašpar,Jakub Vatrt,Michal Šulek"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "visnovsky@kde.org,Richard.Fric@kdemail.net,miguel@portugal.sk,"
+#~ "vatrtj@gmail.com,misurel@gmail.com"
 
 #~ msgctxt "@label Type of file"
 #~ msgid "Type: %1"

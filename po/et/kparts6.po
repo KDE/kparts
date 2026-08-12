@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:49+0000\n"
+"POT-Creation-Date: 2026-08-12 00:42+0000\n"
 "PO-Revision-Date: 2020-03-23 11:04+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -19,16 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 19.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Marek Laane"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "bald@smail.ee"
 
 #: navigationextension.cpp:196
 #, kde-format
@@ -45,17 +35,17 @@ msgstr "Internetiotsing"
 msgid "&Search"
 msgstr "&Otsi"
 
-#: partloader.cpp:152
+#: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
 msgstr ""
 
-#: partloader.cpp:156
+#: partloader.cpp:155
 #, kde-format
 msgid "No part was found for mimeType %1"
 msgstr "MIME tüübile %1 ei leitud komponenti"
 
-#: partloader.cpp:160
+#: partloader.cpp:159
 #, fuzzy, kde-format
 #| msgid "No part was found for mimeType %1"
 msgid "No part could be instantiated for mimeType %1"
@@ -79,6 +69,14 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Dokumendi sulgemine"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "bald@smail.ee"
 
 #~ msgctxt "@label Type of file"
 #~ msgid "Type: %1"
