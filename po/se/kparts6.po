@@ -67,11 +67,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Gidde dokumeantta"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Børre Gaup"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "boerre@skolelinux.no"
