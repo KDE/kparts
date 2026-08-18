@@ -67,11 +67,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Затваряне на документа"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Ясен Праматаров,Радостин Раднев,Златко Попов"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "yasen@lindeas.com,radnev@yahoo.com,zlatkopopov@fsa-bg.org"
