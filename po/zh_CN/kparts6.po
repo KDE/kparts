@@ -65,12 +65,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "关闭文档"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "KDE 中国, Feng Chao, Guo Yunhe, Tyson Tan"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr ""
-#~ "kde-china@kde.org, chaofeng111@gmail.com, i@guoyunhe.me, tds00@qq.com"
