@@ -209,13 +209,13 @@ public:
     {
         QVERIFY(tb->isVisible());
 
-        TestPart *part = new TestPart(nullptr, nullptr);
+        auto part = std::make_unique<TestPart>(nullptr, nullptr);
         // TODO define xml with a toolbar for the part
         // and put some saved settings into qttestrc in order to test
         // r347935+r348051, i.e. the fact that KParts::MainWindow::createGUI
         // will apply the toolbar settings (and that they won't have been
         // erased by the previous call to saveMainWindowSettings...)
-        this->createGUI(part);
+        this->createGUI(part.get());
 
         QVERIFY(tb->isVisible());
         this->saveAutoSaveSettings();
@@ -230,7 +230,7 @@ public:
         // as it did when createGUI was calling applyMainWindowSettings
         this->createGUI(nullptr);
         QVERIFY(!tb->isVisible());
-        this->createGUI(part);
+        this->createGUI(part.get());
         QVERIFY(!tb->isVisible());
 
         // All ok, show it again so that test can be run again :)
