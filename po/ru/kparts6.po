@@ -43,7 +43,7 @@ msgstr "<qt>Выполнить поиск <b>%1</b> в Интернете?</qt>"
 #: navigationextension.cpp:197
 #, kde-format
 msgid "Internet Search"
-msgstr "Поиск в Интернет"
+msgstr "Поиск в Интернете"
 
 #: navigationextension.cpp:198
 #, kde-format
@@ -58,12 +58,12 @@ msgstr "KPluginFactory не удалось загрузить модуль: %1"
 #: partloader.cpp:155
 #, kde-format
 msgid "No part was found for mimeType %1"
-msgstr "Не найден модуль для обработки типа MIME %1"
+msgstr "Не найден компонент для обработки типа MIME %1"
 
 #: partloader.cpp:159
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
-msgstr "Не удалось создать экземпляр модуля для обработки типа MIME %1"
+msgstr "Не удалось создать экземпляр компонента для обработки типа MIME %1"
 
 #: readwritepart.cpp:84
 #, kde-format
