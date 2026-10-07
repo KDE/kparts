@@ -3,13 +3,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004, 2005.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kparts5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:42+0000\n"
-"PO-Revision-Date: 2017-09-28 17:58+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-06 08:03+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -39,17 +40,17 @@ msgstr "&Traži"
 #: partloader.cpp:151
 #, kde-format
 msgid "KPluginFactory could not load the plugin: %1"
-msgstr ""
+msgstr "KPluginFactory ne može da učita priključak: %1"
 
 #: partloader.cpp:155
 #, kde-format
 msgid "No part was found for mimeType %1"
-msgstr ""
+msgstr "Nije nađen nijedan K‑deo za MIME tip %1"
 
 #: partloader.cpp:159
 #, kde-format
 msgid "No part could be instantiated for mimeType %1"
-msgstr ""
+msgstr "Ne mogu da napravim nijedan K‑deo za MIME tip %1"
 
 #: readwritepart.cpp:84
 #, kde-format
@@ -69,81 +70,3 @@ msgstr ""
 #, kde-format
 msgid "Close Document"
 msgstr "Zatvori dokument"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Toplica Tanasković,Časlav Ilić"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
-
-#~ msgctxt "@label Type of file"
-#~ msgid "Type: %1"
-#~ msgstr "Tip: %1"
-
-#~ msgctxt "@label:checkbox"
-#~ msgid "Remember action for files of this type"
-#~ msgstr "Zapamti radnju za fajlove ovog tipa"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open with %1"
-#~ msgstr "&Otvori pomoću %1|/|&Otvori $[ins-p %1]"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Open &with %1"
-#~ msgstr "&Otvori pomoću %1|/|&Otvori $[ins-p %1]"
-
-#~ msgctxt "@info"
-#~ msgid "Open '%1'?"
-#~ msgstr "Otvoriti „%1“"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open with..."
-#~ msgstr "&Otvori pomoću..."
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open with"
-#~ msgstr "&Otvori pomoću"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Otvori"
-
-#~ msgctxt "@label File name"
-#~ msgid "Name: %1"
-#~ msgstr "Ime: %1"
-
-#~ msgctxt "@info:whatsthis"
-#~ msgid "This is the file name suggested by the server"
-#~ msgstr "Ime fajla koje predlaže server."
-
-#~ msgid "Accept"
-#~ msgstr "Prihvati"
-
-#~ msgid "Reject"
-#~ msgstr "Odbaci"
-
-#~ msgid "Do you really want to execute '%1'?"
-#~ msgstr "Želite li zaista da izvršite ‘%1’?"
-
-#~ msgid "Execute File?"
-#~ msgstr "Izvršiti fajl?"
-
-#~ msgid "Execute"
-#~ msgstr "Izvrši"
-
-#~ msgid "The Download Manager (%1) could not be found in your $PATH "
-#~ msgstr "Menadžer preuzimanja (%1) nije pronađen u putanji ($PATH) "
-
-#~ msgid ""
-#~ "Try to reinstall it  \n"
-#~ "\n"
-#~ "The integration with Konqueror will be disabled."
-#~ msgstr ""
-#~ "Pokušajte da ga reinstalirate. \n"
-#~ "\n"
-#~ "Integracija sa K‑osvajačem će biti isključena."
-
-#~ msgid "Save As"
-#~ msgstr "Sačuvaj kao"
