@@ -9,7 +9,6 @@
 #include "part.h"
 #include "part_p.h"
 
-#include "kparts_logging.h"
 #include "partmanager.h"
 
 // The events have randomly generated numbers using `shuf -i1000-65535 -n 1`
