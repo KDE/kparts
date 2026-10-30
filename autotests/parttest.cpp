@@ -5,7 +5,6 @@
 */
 
 #include "parttest.h"
-#include <qtest_widgets.h>
 
 #include <KSharedConfig>
 #include <QSignalSpy>
